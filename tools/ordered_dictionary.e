@@ -28,7 +28,7 @@ class ORDERED_DICTIONARY[V, K->HASHABLE]
    -- key set in the order in which they were added.
    --
 inherit
-   DICTIONARY[V, K]
+   HASHED_DICTIONARY[V, K]
       redefine
          put, add,
          get_new_iterator_on_keys,
@@ -76,7 +76,7 @@ feature {NONE}
          create ordered_keys.with_capacity(medium_size)
       end
 
-   ordered_keys: FIXED_ARRAY[K]
+   ordered_keys: FAST_ARRAY[K]
 
 invariant
 

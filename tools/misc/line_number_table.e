@@ -44,12 +44,12 @@ feature {LINE_NUMBER_TABLE_VISITOR}
 
 feature {NONE}
 
-   start_pc: FIXED_ARRAY[INTEGER] is
+   start_pc: FAST_ARRAY[INTEGER] is
       once
          !!Result.with_capacity(4)
       end
 
-   line_number: FIXED_ARRAY[INTEGER] is
+   line_number: FAST_ARRAY[INTEGER] is
       once
          !!Result.with_capacity(4)
       end
@@ -107,7 +107,7 @@ feature {CODE_ATTRIBUTE,COMPOUND}
          line_number.clear
          idx_line_number_table := -1
          idx_filename := -1
-         filename.clear
+         filename.clear_count
       end
 
    add( a_start_pc: INTEGER; a_position: POSITION) is
@@ -115,7 +115,7 @@ feature {CODE_ATTRIBUTE,COMPOUND}
          start_pc.add_last(a_start_pc)
          line_number.add_last(a_position.line)
          idx_line_number_table := constant_pool.idx_utf8( "LineNumberTable" )
-         filename.clear
+         filename.clear_count
          filename.append( a_position.base_class_name.to_string )
          filename.append( ".e" )
          idx_filename := constant_pool.idx_utf8( filename )
@@ -181,7 +181,7 @@ feature {CODE_ATTRIBUTE,COMPOUND}
                append_u2(storage, code_attribute.program_counter)
                idx := constant_pool.idx_utf8( jvm.current_frame.arguments.name(i).to_string )
                append_u2(storage, idx)
-               descriptor.clear
+               descriptor.clear_count
                if jvm.current_frame.arguments.name(i).result_type.is_basic_eiffel_expanded or
                      jvm.current_frame.arguments.name(i).result_type.base_class.is_deferred then
                   jvm.current_frame.arguments.name(i).result_type.jvm_descriptor_in( descriptor )
@@ -206,7 +206,7 @@ feature {CODE_ATTRIBUTE,COMPOUND}
                append_u2(storage, code_attribute.program_counter)
                idx := constant_pool.idx_utf8( jvm.current_frame.local_vars.name(i).to_string )
                append_u2(storage, idx)
-               descriptor.clear
+               descriptor.clear_count
                if jvm.current_frame.local_vars.name(i).result_type.is_basic_eiffel_expanded or
                      jvm.current_frame.local_vars.name(i).result_type.base_class.is_deferred then
                   jvm.current_frame.local_vars.name(i).result_type.jvm_descriptor_in( descriptor )

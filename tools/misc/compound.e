@@ -446,7 +446,7 @@ feature {INSTRUCTION}
 	 until
 	    i < 1
 	 loop
-	    Current.insert_instruction(compound.item(i), index)
+	    insert_instruction(compound.item(i), index)
 	    i := i - 1
 	 end
       ensure
@@ -499,7 +499,7 @@ feature {COMPOUND}
    first_one: INSTRUCTION
          -- The `first_one' if any.
 
-   remainder: FIXED_ARRAY[INSTRUCTION]
+   remainder: FAST_ARRAY[INSTRUCTION]
          -- Non Void when the list has more than one element.
 
 feature {COMPOUND_VISITOR}

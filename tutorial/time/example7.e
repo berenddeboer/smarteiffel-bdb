@@ -24,9 +24,9 @@ feature {NONE}
       local
 	 time_in_english: TIME_IN_ENGLISH;
       do
-	 time_in_english.set_short_mode(true);
-	 time_in_english.set_time(mt.to_time);
-	 print(time_in_english.to_string  + " " + mt.second.to_string +
+	 time_in_english.set_short_mode(True);
+	 time_in_english.set_time(mt.time);
+	 print(time_in_english.to_string  + " " + mt.time.second.to_string +
 	       " seconds and " + mt.microsecond.to_string + " microseconds%N");
       end;
 

@@ -39,7 +39,7 @@ feature
 
    is_array,
    is_generic,
-   is_reference: BOOLEAN is true
+   is_reference: BOOLEAN is True
 
    is_none,
    is_any,
@@ -59,11 +59,11 @@ feature
    is_character,
    is_pointer,
    is_bit,
-   is_boolean: BOOLEAN is false
+   is_boolean: BOOLEAN is False
 
    jvm_method_flags: INTEGER is 17
 
-   need_c_struct: BOOLEAN is true
+   need_c_struct: BOOLEAN is True
 
    base_class_name: CLASS_NAME
          -- Is always "ARRAY" but with the good `start_position'.
@@ -105,7 +105,7 @@ feature
 
    local_from_separate: E_TYPE is
       do
-	 check false end
+	 check False end
       end
 
    actual_reference(destination: E_TYPE): E_TYPE is
@@ -258,7 +258,7 @@ feature
    jvm_expanded_from_reference(other: E_TYPE): INTEGER is
       do
          check
-            false
+            False
          end
       end
 
@@ -329,7 +329,7 @@ feature
                if other.is_generic then
                   Result := base_class.is_a_vncg(Current,other)
                else
-                  Result := true
+                  Result := True
                end
             end
          end
@@ -382,7 +382,7 @@ feature
 
 feature {RUN_CLASS,E_TYPE}
 
-   need_gc_mark_function: BOOLEAN is true
+   need_gc_mark_function: BOOLEAN is True
 
    just_before_gc_mark_in(str: STRING) is
       do

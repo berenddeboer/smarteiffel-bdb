@@ -41,7 +41,7 @@ feature {TYPE_THREAD_VISITOR}
 
 feature
 
-   is_anchored: BOOLEAN is false
+   is_anchored: BOOLEAN is False
    
    c_header_pass1 is
       do
@@ -84,7 +84,7 @@ feature
          str.append(fz_t0_star)
       end
 
-   need_c_struct: BOOLEAN is true
+   need_c_struct: BOOLEAN is True
 
    c_sizeof: INTEGER is
       do
@@ -103,7 +103,7 @@ feature
 
 feature {RUN_CLASS,E_TYPE}
 
-   need_gc_mark_function: BOOLEAN is true
+   need_gc_mark_function: BOOLEAN is True
 
    just_before_gc_mark_in(str: STRING) is
       do
@@ -174,7 +174,7 @@ feature {NONE}
       do
          rc := run_class
          mem_id := rc.id
-         tmp_string.clear
+         tmp_string.clear_count
          tmp_string.extend('T')
          mem_id.append_in(tmp_string)
          tmp_string.extend(' ')
@@ -182,7 +182,7 @@ feature {NONE}
          mem_id.append_in(tmp_string)
          cpp.put_extern7(tmp_string)
          cpp.swap_on_c
-         tmp_string.clear
+         tmp_string.clear_count
          tmp_string.extend('{')
          id.append_in(tmp_string)
          tmp_string.append(once ",NULL,NULL}")

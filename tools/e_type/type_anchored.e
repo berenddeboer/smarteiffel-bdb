@@ -30,16 +30,13 @@ deferred class TYPE_ANCHORED
 
 inherit
    E_TYPE
-      redefine is_anchored, is_boolean, is_character, is_integer, is_real,
-         is_double, is_string, is_bit, is_pointer
-      end
 
 feature
 
    start_position: POSITION
          -- Of first letter of `like'.
 
-   is_anchored: BOOLEAN is true
+   is_anchored: BOOLEAN is True
 
    frozen id: INTEGER is
       do
@@ -250,7 +247,7 @@ feature
    frozen jvm_expanded_from_reference(other: E_TYPE): INTEGER is
       do
          check
-            false
+            False
          end
       end
 
@@ -403,7 +400,7 @@ feature {NONE}
          end
       end
 
-   visited: FIXED_ARRAY[POSITION] is
+   visited: FAST_ARRAY[POSITION] is
          -- Cycle detection.
       once
          !!Result.with_capacity(4)

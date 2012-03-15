@@ -81,7 +81,7 @@ feature
    afd_check is
       local
          rf2: RUN_FEATURE_2; i: INTEGER; st: E_TYPE
-         fd: DICTIONARY[RUN_FEATURE,FEATURE_NAME]
+         fd: HASHED_DICTIONARY[RUN_FEATURE,FEATURE_NAME]
       do
          fd := current_type.run_class.feature_dictionary
          from
@@ -198,7 +198,7 @@ feature
             -- pile = array storage
             ca.opcode_dup2
             -- pile = array storage array storage
-            tmp_string.clear
+            tmp_string.clear_count
             tmp_string.extend('[')
             tmp_string.append(jvm_root_descriptor)
             idx := cp.idx_fieldref4(idx_array,as_storage,tmp_string)

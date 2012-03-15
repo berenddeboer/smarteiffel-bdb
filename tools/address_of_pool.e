@@ -40,12 +40,12 @@ feature {ADDRESS_OF_POOL_VISITOR}
 
 feature {NONE}
 
-   registered: FIXED_ARRAY[RUN_FEATURE] is
+   registered: FAST_ARRAY[RUN_FEATURE] is
       once
          !!Result.with_capacity(64)
       end
 
-   caller_memory: FIXED_ARRAY[ADDRESS_OF] is
+   caller_memory: FAST_ARRAY[ADDRESS_OF] is
       once
          !!Result.with_capacity(64)
       end

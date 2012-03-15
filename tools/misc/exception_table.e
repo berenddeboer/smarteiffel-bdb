@@ -43,22 +43,22 @@ feature {EXCEPTION_TABLE_VISITOR}
 
 feature {NONE}
 
-   from_pc: FIXED_ARRAY[INTEGER] is
+   from_pc: FAST_ARRAY[INTEGER] is
       once
          !!Result.with_capacity(4)
       end
 
-   to_pc: FIXED_ARRAY[INTEGER] is
+   to_pc: FAST_ARRAY[INTEGER] is
       once
          !!Result.with_capacity(4)
       end
 
-   handler_pc: FIXED_ARRAY[INTEGER] is
+   handler_pc: FAST_ARRAY[INTEGER] is
       once
          !!Result.with_capacity(4)
       end
 
-   type_idx: FIXED_ARRAY[INTEGER] is
+   type_idx: FAST_ARRAY[INTEGER] is
       once
          !!Result.with_capacity(4)
       end

@@ -27,12 +27,12 @@ deferred class TYPE_BIT
    -- Handling of "BIT ..." type mark (see TYPE_BIT_1 and TYPE_BIT_2).
    --
 
-inherit E_TYPE redefine is_bit end
+inherit E_TYPE
 
 feature
 
    is_bit,
-   is_expanded: BOOLEAN is true
+   is_expanded: BOOLEAN is True
 
    is_separate,
    is_basic_eiffel_expanded,
@@ -53,7 +53,7 @@ feature
    is_anchored,
    is_like_current,
    is_like_argument,
-   is_like_feature: BOOLEAN is false
+   is_like_feature: BOOLEAN is False
 
    jvm_method_flags: INTEGER is 9
 
@@ -125,7 +125,7 @@ feature
 
    frozen stupid_switch(run_time_set: RUN_TIME_SET): BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    frozen generic_list: ARRAY[E_TYPE] is
@@ -135,7 +135,7 @@ feature
 
    frozen local_from_separate: E_TYPE is
       do
-	 check false end
+	 check False end
       end
 
    frozen jvm_target_descriptor_in, jvm_descriptor_in(str: STRING) is
@@ -243,7 +243,7 @@ feature
 
    frozen jvm_expanded_from_reference(other: E_TYPE): INTEGER is
       do
-         check false end
+         check False end
       end
 
    frozen jvm_convert_to(destination: E_TYPE): INTEGER is
@@ -409,13 +409,13 @@ feature
 	 if other.is_bit then
 	    other_bit ?= other.run_type
 	    if nb <= other_bit.nb then
-	       Result := true
+	       Result := True
 	    end
 	 else
 	    ref_type ?= other.run_type
 	    if ref_type /= Void then
 	       if Current.is_a(ref_type.expanded_type) then
-		  Result := true
+		  Result := True
 	       else
 		  error_handler.cancel
 	       end
@@ -434,7 +434,7 @@ feature
          i: INTEGER
       do
          if mapping_code = Cuptr then
-            tmp_string.clear
+            tmp_string.clear_count
             tmp_string.extend('{')
             from
                i := nb_unsigned
@@ -479,7 +479,7 @@ feature
 
 feature {RUN_CLASS,E_TYPE}
 
-   need_gc_mark_function: BOOLEAN is false
+   need_gc_mark_function: BOOLEAN is False
 
    frozen just_before_gc_mark_in(str: STRING) is
       do

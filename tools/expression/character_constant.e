@@ -62,7 +62,7 @@ feature
             cpp.put_character('n')
          else
             cpp.put_character('\')
-	    tmp_string.clear
+	    tmp_string.clear_count
 	    value.code.low_8.to_octal_in(tmp_string)
             cpp.put_string(tmp_string)
          end

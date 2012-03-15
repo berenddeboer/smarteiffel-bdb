@@ -66,7 +66,7 @@ feature
 
    frozen to_string: STRING is
       do
-         to_string_buffer.clear
+         to_string_buffer.clear_count
          append_in(to_string_buffer)
          Result := to_string_buffer.twin
       end

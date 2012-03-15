@@ -37,7 +37,7 @@ feature {EFFECTIVE_ROUTINE_VISITOR}
 
 feature
 
-   is_deferred: BOOLEAN is false
+   is_deferred: BOOLEAN is False
 
    local_vars: LOCAL_VAR_LIST
 

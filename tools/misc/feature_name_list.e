@@ -232,7 +232,7 @@ feature {CREATION_CLAUSE}
             Result or else i = 0
          loop
             if item(i).to_string = as_make then
-	       Result := true
+	       Result := True
 	    end
 	    i := i - 1
          end
@@ -271,7 +271,7 @@ feature {CREATION_CLAUSE}
 
 feature {NONE}
 
-   remainder: FIXED_ARRAY[FEATURE_NAME]
+   remainder: FAST_ARRAY[FEATURE_NAME]
          -- Non Void when the list has more than one element.
 
    make_1(fn: FEATURE_NAME) is
@@ -284,7 +284,7 @@ feature {NONE}
          item(1) = fn
       end
 
-   make_n(list: FIXED_ARRAY[FEATURE_NAME]) is
+   make_n(list: FAST_ARRAY[FEATURE_NAME]) is
          -- Note: also check for multiple occurrences.
       require
          not list.is_empty

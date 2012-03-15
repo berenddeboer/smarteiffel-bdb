@@ -5,8 +5,11 @@ class EXAMPLE3
 -- directory.
 --
    
-creation make
+inherit
+    ARGUMENTS
    
+creation make
+
 feature {NONE}
 
    basic_directory: BASIC_DIRECTORY;
@@ -43,7 +46,7 @@ feature {NONE}
             io.put_string("%"%N");
             basic_directory.compute_parent_directory_of(some_path);
             if basic_directory.last_entry.is_empty then
-               stop := true;
+               stop := True;
             else
                some_path.copy(basic_directory.last_entry);
             end;

@@ -29,9 +29,9 @@ class BASE_CLASS
 
 inherit
    HASHABLE redefine is_equal end
-   GLOBALS
-   ASSERTION_LEVEL_NUMBERING
-   VISITABLE
+   GLOBALS redefine is_equal end
+   ASSERTION_LEVEL_NUMBERING redefine is_equal end
+   VISITABLE redefine is_equal end
 
 creation
    {EIFFEL_PARSER} make
@@ -507,7 +507,7 @@ feature {CLASS_CHECKER, EIFFEL_PARSER}
 
 feature {CLASS_CHECKER, PARENT_LIST}
 
-   up_to_any_in(pl: FIXED_ARRAY[BASE_CLASS]) is
+   up_to_any_in(pl: FAST_ARRAY[BASE_CLASS]) is
       do
 	 if not is_general then
 	    if not pl.fast_has(Current) then
@@ -617,7 +617,7 @@ feature {BASE_CLASS,PARENT}
 	 top_fn /= Void
 	 Current = bottom or else bottom.is_subclass_of(Current)
       local
-	 dico: DICTIONARY[FEATURE_NAME,BASE_CLASS]
+	 dico: HASHED_DICTIONARY[FEATURE_NAME,BASE_CLASS]
       do
 	 if ace.high_memory_compiler then
 	    dico := up_to_original_memory.reference_at(top_fn)
@@ -638,7 +638,7 @@ feature {BASE_CLASS,PARENT}
 feature {NONE}
 
    up_to_original_memory:
-      DICTIONARY[DICTIONARY[FEATURE_NAME,BASE_CLASS],FEATURE_NAME]
+      HASHED_DICTIONARY[HASHED_DICTIONARY[FEATURE_NAME,BASE_CLASS],FEATURE_NAME]
 
    up_to_original_(bottom: BASE_CLASS; top_fn: FEATURE_NAME): FEATURE_NAME is
       require
@@ -729,7 +729,7 @@ feature {BASE_CLASS}
 
 feature {BASE_CLASS,PARENT_LIST,PARENT}
 
-   going_up(trace: FIXED_ARRAY[PARENT]; top: BASE_CLASS
+   going_up(trace: FAST_ARRAY[PARENT]; top: BASE_CLASS
 	    top_fn: FEATURE_NAME;): FEATURE_NAME is
       require
 	 Current /= top
@@ -840,7 +840,7 @@ feature {EIFFEL_PARSER}
 	 heading_comment1 := hc
       end
 
-   set_parent_list(sp: POSITION; c: COMMENT; l: FIXED_ARRAY[PARENT]) is
+   set_parent_list(sp: POSITION; c: COMMENT; l: FAST_ARRAY[PARENT]) is
       require
 	 not sp.is_unknown
 	 c /= Void or else l /= Void
@@ -859,7 +859,7 @@ feature {EIFFEL_PARSER}
 	 obsolete_type_string := ots
       end
 
-   set_invariant(sp: POSITION; hc: COMMENT; al: FIXED_ARRAY[ASSERTION]) is
+   set_invariant(sp: POSITION; hc: COMMENT; al: FAST_ARRAY[ASSERTION]) is
       do
 	 if hc /= Void or else al /= Void then
 	    create class_invariant.make(sp,hc,al)
@@ -1053,7 +1053,7 @@ feature {CALL_PROC_CALL, E_AGENT}
       local
 	 top_bc, bc: BASE_CLASS; lfn, nfn: FEATURE_NAME; bcn: CLASS_NAME
 	 target_type: E_TYPE; lf: E_FEATURE; tlf: TYPE_LIKE_FEATURE
-	 cl: CLIENT_LIST
+	 cl: CLIENT_LIST; t_current: ABSTRACT_CURRENT
       do
 	 check
 	    fn.to_string /= as_eq
@@ -1102,7 +1102,9 @@ feature {CALL_PROC_CALL, E_AGENT}
 	    error_handler.print_as_fatal_error
 	 end
 	 -- Check export rules:
-	 if not target.is_current then
+	 t_current ?= target
+	 if t_current = Void or else t_current.is_written then
+	    -- Target is not current or is explicit current, check...
 	    bcn := ct.base_class.name
 	    cl := Result.clients
 	    if not cl.gives_permission_to(bcn) then
@@ -1113,17 +1115,28 @@ feature {CALL_PROC_CALL, E_AGENT}
 	       error_handler.append(ct.run_time_mark)
 	       error_handler.append(
                   ". (See the next error report for details.)")
-	       error_handler.print_as_error
+	       if t_current = Void then
+	          error_handler.print_as_error
+	       else
+	          error_handler.print_as_warning -- Keeping compatibility with broken 1.1
+	       end
 	       error_handler.add_position(Result.start_position)
 	       error_handler.append("This feature is only exported to ")
 	       error_handler.append(cl.eiffel_view)
 	       cl.locate_in_error_handler
 	       error_handler.extend('.')
-	       error_handler.print_as_fatal_error
+	       if t_current = Void then
+	          error_handler.print_as_fatal_error
+	       else
+	          error_handler.append (" An explicit `Current' target is accepted, but %
+	             %you should remove it for SE2.x compatibility.")
+	          error_handler.print_as_warning -- Keeping compatibility with broken 1.1
+	       end
 	    end
 	 end
 	 -- Finally, check for obsolete usage:
 	 Result.base_feature.check_obsolete(fn.start_position)
+	 transitional_check (Result, fn.start_position)
       ensure
 	 Result.run_class = rc
       end
@@ -1378,7 +1391,7 @@ feature {TYPE_FUNCTION}
 	    create n.simple_feature_name(as_item, sp)
 	    create er.make(create {FEATURE_NAME_LIST}.make_1(n),
 			   fal, rt, Void, Void, Void,
-			   create {NATIVE_SMART_EIFFEL}.default_create,
+			   create {NATIVE_SMART_EIFFEL}.default_creation,
 			   Void)
 	    rf := er.to_run_feature(toa, n)
 	    rf.set_clients_with_any
@@ -1412,7 +1425,7 @@ feature {TYPE_OF_AGENT}
 	    create n.simple_feature_name(as_call, sp)
 	    create er.make(create {FEATURE_NAME_LIST}.make_1(n),
 			   fal,Void,Void,Void,
-			   create {NATIVE_SMART_EIFFEL}.default_create,
+			   create {NATIVE_SMART_EIFFEL}.default_creation,
 			   Void)
 	    rf := er.to_run_feature(toa, n)
 	    rf.set_clients_with_any
@@ -1455,11 +1468,11 @@ feature {NONE}
 	 f.add_into(feature_dictionary)
       end
 
-   once_mark_list: FIXED_ARRAY[STRING]
+   once_mark_list: FAST_ARRAY[STRING]
 	 -- When the tag is in the list, the corresponding routine
 	 -- does not use Current and C code is already written.
 
-   going_up_trace: FIXED_ARRAY[PARENT] is
+   going_up_trace: FAST_ARRAY[PARENT] is
       once
 	 !!Result.with_capacity(8)
       end
@@ -1492,14 +1505,49 @@ feature {NONE}
 	       once "A class cannot be expanded and deferred (VTEC.1).")
       end
 
-   feature_dictionary: DICTIONARY[E_FEATURE,FEATURE_NAME]
+   feature_dictionary: HASHED_DICTIONARY[E_FEATURE,FEATURE_NAME]
 	 -- All features really defined in the current class. Thus, it is
 	 -- the same features contained in `feature_clause_list' (this
 	 -- dictionary speed up feature look up).
 
-   is_subclass_of_memory: DICTIONARY[BOOLEAN,BASE_CLASS]
+   is_subclass_of_memory: HASHED_DICTIONARY[BOOLEAN,BASE_CLASS]
 	 -- This is a memory cache to avoid many recomputation of
 	 -- `is_subclass_of'. This is also why the `hash_code' is cached too.
+
+   transitional_check (rf: RUN_FEATURE; call_site: POSITION) is
+      -- Various checks for features that changed location from SE 1.1 to 2.x
+   local
+      fname: STRING
+   do
+      -- Check for ARGUMENTS features
+      if rf.base_feature.base_class.is_general then
+         fname := rf.base_feature.names.first.to_string
+         if
+            (fname.is_equal (once "argument_count") or else
+            fname.is_equal (once "argument") or else
+            fname.is_equal (once "command_arguments")) and then
+            not is_subclass_of (smart_eiffel.base_class (arguments_name)) and then
+            call_site.base_class_name.to_string /= as_general and then
+            call_site.base_class_name.to_string /= as_any and then
+            call_site.base_class_name.to_string /= as_platform
+         then
+            error_handler.add_position (call_site)
+            error_handler.append (once "The feature ")
+            error_handler.append (fname)
+            error_handler.append (once " has been moved from ANY to ARGUMENTS in SE2.2. ")
+            error_handler.append (once "You should inherit ARGUMENTS in ")
+            error_handler.append (name.to_string)
+            error_handler.append (once " to avoid problems when upgrading.")
+            error_handler.print_as_warning
+         end
+      end
+   end
+
+   arguments_name: CLASS_NAME is
+      -- Name of ARGUMENTS class for lookup purposes
+   once
+      create Result.unknown_position (as_arguments)
+   end
 
    make(p: like path;  my_name: STRING; c: like cluster; i: like id) is
       require
@@ -1535,7 +1583,7 @@ feature {NONE}
 	 name.to_string = n
       end
 
-   visited: FIXED_ARRAY[BASE_CLASS] is
+   visited: FAST_ARRAY[BASE_CLASS] is
 	 -- List of all visited classes for the `inherit_cycle_check'.
       once
 	 !!Result.with_capacity(32)

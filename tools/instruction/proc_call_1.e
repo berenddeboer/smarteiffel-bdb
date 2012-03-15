@@ -63,7 +63,7 @@ feature
 	       create {AGENT_INSTRUCTION} Result.make(Current)
 	    else
 	       run_feature_match
-	       Result := Current.set_item_special
+	       Result := set_item_special
 	    end
 	 else
 	    create {PROC_CALL_1} Result.make(target,feature_name,arguments)

@@ -18,7 +18,7 @@
 --
 deferred class ARRAYED_COLLECTION[E]
    --
-   -- Common root for ARRAY[E] and FIXED_ARRAY[E].
+   -- Common root for ARRAY[E] and FAST_ARRAY[E].
    --
 
 inherit COLLECTION[E]

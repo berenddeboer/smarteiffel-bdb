@@ -133,7 +133,7 @@ feature {RUN_FEATURE}
 	       rf.c_set_dump_stack_top(once "&ds", fz_link);
             end
 	    if rfrt /= Void then
-               buffer.clear
+               buffer.clear_count
                buffer.extend('{')
                rfrt.c_type_for_external_in(buffer)
                buffer.append(once " R=")
@@ -188,7 +188,7 @@ feature {CECIL_FILE}
          rfargs := rf.arguments
 	 echo_for(rf)
          -- (1) ------------------------- Define Cecil heading :
-         buffer.clear
+         buffer.clear_count
          if rfrt /= Void then
             rfrt.c_type_for_external_in(buffer)
          else
@@ -221,7 +221,7 @@ feature {NONE}
 
    effective_arg_list(rf: RUN_FEATURE): EFFECTIVE_ARG_LIST is
       local
-	 first: FAKE_ARGUMENT; remainder: FIXED_ARRAY[EXPRESSION]
+	 first: FAKE_ARGUMENT; remainder: FAST_ARRAY[EXPRESSION]
 	 fake_argument: FAKE_ARGUMENT; fal: FORMAL_ARG_LIST
 	 i: INTEGER
       do
@@ -244,7 +244,7 @@ feature {NONE}
 	 end
       end
 
-   cecil_files: DICTIONARY[CECIL_FILE, STRING]
+   cecil_files: HASHED_DICTIONARY[CECIL_FILE, STRING]
 	 -- Non Void if some -cecil option is used.
 
    buffer: STRING is

@@ -475,7 +475,7 @@ feature {MANIFEST_ARRAY_VISITOR}
 
 feature {NONE}
 
-   list: FIXED_ARRAY[EXPRESSION]
+   list: FAST_ARRAY[EXPRESSION]
          -- Void or elements in the manifest array.
 
    current_type: E_TYPE
@@ -495,7 +495,7 @@ feature {NONE}
    sd(elt_type: E_TYPE): STRING is
          -- The JVM descriptor for `storage'.
       do
-         sd_buffer.clear
+         sd_buffer.clear_count
          sd_buffer.extend('[')
          elt_type.jvm_descriptor_in(sd_buffer)
          Result := sd_buffer

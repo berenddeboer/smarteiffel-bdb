@@ -430,11 +430,11 @@ feature  -- Working with the run E_TYPE:
          error_handler.is_empty
       do
          if is_a(other) then
-            Result := true
+            Result := True
          else
             error_handler.cancel
             if other.is_a(Current) then
-               Result := true
+               Result := True
             else
                error_handler.cancel
             end
@@ -746,7 +746,7 @@ feature
          is_run_type
          run_type.run_class.at_run_time
       do
-         mapping_cast_buffer.clear
+         mapping_cast_buffer.clear_count
          mapping_cast_buffer.extend('(')
          c_type_for_target_in(mapping_cast_buffer)
          mapping_cast_buffer.extend(')')
@@ -1228,14 +1228,14 @@ feature {NONE}
          header.append(once "(T")
          rcid.append_in(header)
          header.append(once "*o)")
-         body.clear
+         body.clear_count
          gc_check_id := rc.is_tagged and then ace.no_check
          if gc_check_id then
             body.append(once "se_gc_check_id(o,")
             rcid.append_in(body)
             body.append(once ");%N{")
          end
-         rc.gc_mark_fixed_size(false,body)
+         rc.gc_mark_fixed_size(False,body)
          if gc_check_id then
             body.append(once "%N}")
          end
@@ -1247,7 +1247,7 @@ feature {NONE}
          header.append(once "(fsoc*c,gc")
          rcid.append_in(header)
          header.append(once "*p)")
-         body.clear
+         body.clear_count
          rc.gc_align_mark_fixed_size(body)
          cpp.put_c_function(header,body)
          -- ------------------------ Definiton of chunk model HXXX :
@@ -1267,7 +1267,7 @@ feature {NONE}
          body.append(once "))-1)}")
          cpp.put_extern5(header,body)
          -- --------------------------------- Definiton for newXXX :
-         header.clear
+         header.clear_count
          header.extend('T')
          rcid.append_in(header)
          header.extend('*')
@@ -1368,8 +1368,8 @@ feature {NONE}
             header.append(once "(T")
             rcid.append_in(header)
             header.append(once "*o)")
-            body.clear
-            rc.gc_mark_fixed_size(true,body)
+            body.clear_count
+            rc.gc_mark_fixed_size(True,body)
             cpp.put_c_function(header,body)
          end
       end
@@ -1434,7 +1434,7 @@ feature {NONE}
          mem_id: INTEGER
       do
          mem_id := id
-         tmp_string.clear
+         tmp_string.clear_count
          if need_c_struct then
             tmp_string.append(fz_typedef)
             tmp_string.append(fz_struct)
@@ -1538,7 +1538,7 @@ feature {NONE}
       do
          rc := run_class
          mem_id := rc.id
-         tmp_string.clear
+         tmp_string.clear_count
          tmp_string.extend('T')
          mem_id.append_in(tmp_string)
          tmp_string.extend(' ')
@@ -1546,7 +1546,7 @@ feature {NONE}
          mem_id.append_in(tmp_string)
          cpp.put_extern7(tmp_string)
          cpp.swap_on_c
-         tmp_string.clear
+         tmp_string.clear_count
          rc.c_object_model_in(tmp_string)
          tmp_string.append(fz_00)
          cpp.put_string(tmp_string)
@@ -1580,7 +1580,7 @@ feature {NONE}
 	    i := 1
 	    rt1 := to_runnable(run_time_set.item(i).current_type)
 	    rtm1 := rt1.run_time_mark
-	    Result := true
+	    Result := True
 	    i := i + 1
 	 until
 	    not Result or else i > run_time_set.count

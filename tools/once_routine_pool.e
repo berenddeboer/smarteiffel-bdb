@@ -75,7 +75,7 @@ feature {GC_HANDLER}
 	 -- To mark results of once functions because they are part of the root.
       local
          i: INTEGER; rf: RUN_FEATURE; of: ONCE_FUNCTION
-         mem: FIXED_ARRAY[ONCE_FUNCTION]; rt: E_TYPE; oresult: STRING
+         mem: FAST_ARRAY[ONCE_FUNCTION]; rt: E_TYPE; oresult: STRING
       do
          if function_list.count > 0 then
             from
@@ -111,7 +111,7 @@ feature {JVM}
    jvm_define_fields is
       local
          byte_idx, idx_flag, i: INTEGER; rf: RUN_FEATURE
-         bf: E_FEATURE; name_list: FIXED_ARRAY[INTEGER]
+         bf: E_FEATURE; name_list: FAST_ARRAY[INTEGER]
       do
          create name_list.with_capacity(fields_count)
          if function_list.count > 0 then
@@ -206,13 +206,13 @@ feature {NONE} -- For `compile_to_c' as well as `compile_to_jvm':
 				    jvm_descriptor(rt))
       end
 
-   procedure_list: FIXED_ARRAY[RUN_FEATURE] is
+   procedure_list: FAST_ARRAY[RUN_FEATURE] is
 	 -- Live set of once procedures.
       once
          create Result.with_capacity(32)
       end
 
-   function_list: FIXED_ARRAY[RUN_FEATURE] is
+   function_list: FAST_ARRAY[RUN_FEATURE] is
 	 -- Live set of once functions.
       once
          create Result.with_capacity(32)
@@ -225,7 +225,7 @@ feature {NONE} -- For `compile_to_c' as well as `compile_to_jvm':
 	 bf /= Void
       do
 	 Result := o_flag_buffer
-         Result.clear
+         Result.clear_count
          Result.append(once "fBC")
          bf.base_class.id.append_in(Result)
          Result.append(bf.first_name.to_key)
@@ -266,7 +266,7 @@ feature {E_RESULT, RUN_FEATURE, RUN_CLASS}
 	 bf /= Void
       do
 	 Result := o_result_buffer
-         Result.clear
+         Result.clear_count
          Result.append(once "oBC")
          bf.base_class.id.append_in(Result)
          Result.append(bf.first_name.to_key)
@@ -309,7 +309,7 @@ feature {C_PRETTY_PRINTER} -- For `compile_to_c':
    c_pre_compute is
 	 -- Generate C code to pre_compute some functions.
       local
-	 i: INTEGER; memory: FIXED_ARRAY[E_FEATURE]
+	 i: INTEGER; memory: FAST_ARRAY[E_FEATURE]
 	 rf: RUN_FEATURE; bf: E_FEATURE
       do
 	 echo.put_string(fz_04)
@@ -408,7 +408,7 @@ feature {RUN_FEATURE} -- For `compile_to_c':
             bcbf := bf.base_class
             oresult := o_result(bf)
             if not bcbf.once_flag(oresult) then
-               buffer.clear
+               buffer.clear_count
                rt := rf.result_type
                if rt.is_separate then
                   buffer.extend('s')
@@ -422,7 +422,7 @@ feature {RUN_FEATURE} -- For `compile_to_c':
                   buffer.extend('*')
                end
                buffer.append(oresult)
-               c_define_o_result_buffer.clear
+               c_define_o_result_buffer.clear_count
                rt.c_initialize_in(c_define_o_result_buffer)
                cpp.put_extern5(buffer,c_define_o_result_buffer)
             end
@@ -444,7 +444,7 @@ feature {RUN_FEATURE} -- For `compile_to_c':
             cpp.put_string(once "=1;{%N")
          else
             rt := rf.result_type
-            buffer.clear
+            buffer.clear_count
             buffer.extend('T')
             if rt.is_expanded then
                rt.id.append_in(buffer)
@@ -482,7 +482,7 @@ feature {RUN_FEATURE} -- For `compile_to_c':
             cpp.put_string(once "!=0){%N")
          else
             rt := rf.result_type
-            buffer.clear
+            buffer.clear_count
             buffer.extend('T')
             if rt.is_expanded then
                rt.id.append_in(buffer)
@@ -565,7 +565,7 @@ feature {RUN_FEATURE} -- For `compile_to_c':
 
 feature {NONE} -- For `compile_to_jvm':
 
-   jvm_flag_list: FIXED_ARRAY[INTEGER] is
+   jvm_flag_list: FAST_ARRAY[INTEGER] is
       once
          create Result.with_capacity(32)
       end
@@ -594,7 +594,7 @@ feature {NONE} -- For `compile_to_jvm':
    jvm_descriptor(rt: E_TYPE): STRING is
       do
 	 Result := jvm_descriptor_buffer
-         Result.clear
+         Result.clear_count
          if rt.is_reference then
             Result.append(jvm_root_descriptor)
          else

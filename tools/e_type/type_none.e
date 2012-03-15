@@ -36,7 +36,7 @@ feature
    id: INTEGER is 0
 
    is_none,
-   is_reference: BOOLEAN is true
+   is_reference: BOOLEAN is True
 
    is_expanded,
    is_separate,
@@ -57,7 +57,7 @@ feature
    is_real,
    is_double,
    is_character,
-   is_boolean: BOOLEAN is false
+   is_boolean: BOOLEAN is False
 
    jvm_method_flags: INTEGER is 17
 
@@ -88,12 +88,12 @@ feature
 
    local_from_separate: E_TYPE is
       do
-	 check false end
+	 check False end
       end
 
    stupid_switch(run_time_set: RUN_TIME_SET): BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    c_header_pass1 is
@@ -142,9 +142,9 @@ feature
          Result := c_sizeof_pointer
       end
 
-   need_c_struct: BOOLEAN is false
+   need_c_struct: BOOLEAN is False
 
-   is_run_type: BOOLEAN is true
+   is_run_type: BOOLEAN is True
 
    start_position: POSITION is
       do
@@ -168,7 +168,7 @@ feature
 
    is_a(other: E_TYPE): BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    run_type: E_TYPE is
@@ -245,7 +245,7 @@ feature
    jvm_expanded_from_reference(other: E_TYPE): INTEGER is
       do
          check
-            false
+            False
          end
       end
 
@@ -260,7 +260,7 @@ feature
 
 feature {RUN_CLASS,E_TYPE}
 
-   need_gc_mark_function: BOOLEAN is false
+   need_gc_mark_function: BOOLEAN is False
 
    just_before_gc_mark_in(str: STRING) is
       do

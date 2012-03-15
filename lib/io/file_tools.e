@@ -75,7 +75,7 @@ feature
       local
          p1, p2: POINTER
       do
-         if file_exists(new_path) then
+         if is_readable(new_path) then
             delete(new_path)
          end
          p1 := old_path.to_external
@@ -97,7 +97,7 @@ feature
    size_of(path: STRING): INTEGER is
 	 -- Total size of file `path' in number of bytes.
       require
-	 file_exists(path)
+	 is_readable(path)
       local
 	 p: POINTER
       do
@@ -108,7 +108,7 @@ feature
    last_change_of(path: STRING): TIME is
 	 -- Of the last modification of `path'.
       require
-	 file_exists(path)
+	 is_readable(path)
       local
 	 p: POINTER; time_memory: INTEGER_64
       do

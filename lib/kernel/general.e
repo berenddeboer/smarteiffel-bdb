@@ -91,22 +91,23 @@ feature -- Comparison:
          -- Are `some' and `other' both Void or attached to objects 
          -- considered equal ?
       local
-	 some_ref_integer, other_ref_integer: reference INTEGER_64
+--	 some_ref_integer, other_ref_integer: reference INTEGER_64
       do
          if some = other then
             Result := True
          elseif some = Void then
          elseif other = Void then
          else
-	    some_ref_integer ?= some
-	    if some_ref_integer /= Void then
-	       other_ref_integer ?= other
-	       if other_ref_integer /= Void then
-		  Result := some_ref_integer.item = other_ref_integer.item
-	       end
-	    else
-	       Result := some.is_equal(other)
-	    end
+-- I'm not sure why INTEGER_64s were special cases here. But they shouldn't (dmoisset, July 22nd 2005)
+--	    some_ref_integer ?= some
+--	    if some_ref_integer /= Void then
+--	       other_ref_integer ?= other
+--	       if other_ref_integer /= Void then
+--		  Result := some_ref_integer.item = other_ref_integer.item
+--	       end
+--	    else
+            Result := some.is_equal(other)
+--	    end
          end
       ensure
          symmetric: Result implies equal(other, some)
@@ -239,6 +240,13 @@ feature -- Duplication:
          standard_is_equal(other)
       end
 
+   frozen box: REFERENCE [like Current] is
+          -- Create a REFERENCe object referring to Current 
+      do
+          create Result
+          Result.set_item (Current)
+      end
+
 feature -- Deep Duplication:
 
    frozen deep_clone(other: ANY): like other is
@@ -295,6 +303,7 @@ feature -- Basic operations:
 
    frozen do_nothing is
          -- Execute a null action.
+      obsolete "This feature will not be exported in SE2. Avoid qualified calls."
       do
       end
 
@@ -352,7 +361,7 @@ feature -- Object Printing:
          -- `print_on'.
          --
       do
-         tagged_out_memory.clear
+         tagged_out_memory.clear_count
          out_in_tagged_out_memory
          file.put_string(tagged_out_memory)
       end
@@ -362,7 +371,7 @@ feature -- Object Printing:
          -- object, each field preceded by its attribute name, a
          -- colon and a space.
       do
-         tagged_out_memory.clear
+         tagged_out_memory.clear_count
          fill_tagged_out_memory
          Result := tagged_out_memory.twin
       end
@@ -371,7 +380,7 @@ feature -- Object Printing:
          -- Create a new string containing terse printable
          -- representation of current object.
       do
-         tagged_out_memory.clear
+         tagged_out_memory.clear_count
          out_in_tagged_out_memory
          Result := tagged_out_memory.twin
       end
@@ -409,30 +418,43 @@ feature -- Object Printing:
 feature -- Basic named file handling:
 
    frozen file_tools: FILE_TOOLS is
+      obsolete "This feature will be removed, use a local `file_tools' feature."
       once
       end
 
    file_exists(path: STRING): BOOLEAN is
          -- True if `path' is an existing readable file.
+      obsolete
+         "This feature will be removed, use a local `file_tools'.is_readable feature."
       require
          not path.is_empty
+      local
+         ftools: FILE_TOOLS
       do
-         Result := file_tools.is_readable(path)
+         Result := ftools.is_readable(path)
       end
 
    remove_file(path: STRING) is
+      obsolete
+         "This feature will be removed, use a local `file_tools'.delete feature."
       require
          path /= Void
+      local
+         ftools: FILE_TOOLS
       do
-         file_tools.delete(path)
+         ftools.delete(path)
       end
 
    rename_file(old_path, new_path: STRING) is
+      obsolete
+         "This feature will be removed, use a local `file_tools'.rename_to feature."
       require
          old_path /= Void
          new_path /= Void
+      local
+         ftools: FILE_TOOLS
       do
-         file_tools.rename_to(old_path,new_path)
+         ftools.rename_to(old_path,new_path)
       end
 
 feature -- Access to command-line arguments:
@@ -458,7 +480,7 @@ feature -- Access to command-line arguments:
          Result /= Void
       end
 
-   frozen command_arguments: FIXED_ARRAY[STRING] is
+   frozen command_arguments: FAST_ARRAY[STRING] is
          -- Give acces to arguments command line including the
          -- command name at index 0.
       local
@@ -718,10 +740,10 @@ feature -- Should not exist:
             know the `not_yet_implemented' caller. If this is a feature of the
             SmartEiffel library, you may consider to post your
             implementation on the SmartEiffel mailing list.
-                                                e-mail: SmartEiffel@loria.fr
+                                           e-mail: smarteiffel@except.com.ar
                                           Happy debug and thanks in advance.
-                                                 http://SmartEiffel.loria.fr
-                                                            Dominique Colnet
+                               http://opensvn.csie.org/traccgi/smarteiffel12
+                                                            Daniel F Moisset
 
             ]")
          crash

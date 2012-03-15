@@ -50,7 +50,7 @@ feature {NONE}
 
    first_value: MANIFEST_STRING
 
-   remainder: FIXED_ARRAY[MANIFEST_STRING]
+   remainder: FAST_ARRAY[MANIFEST_STRING]
 
    make(n: like names; t: like result_type; v: like value) is
       require

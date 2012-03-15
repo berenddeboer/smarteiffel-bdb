@@ -13,6 +13,7 @@ feature {NONE}
          directory_path, file_path: STRING;
          basic_directory: BASIC_DIRECTORY;
          text_file_write: TEXT_FILE_WRITE;
+         ftools: FILE_TOOLS
       do
          basic_directory.connect_to_current_working_directory;
          directory_path := basic_directory.last_entry.twin;
@@ -49,7 +50,7 @@ feature {NONE}
          io.put_string("Removing file %"");
          io.put_string(file_path);
          io.put_string("%".%N");
-         remove_file(file_path);
+         ftools.delete(file_path);
          if basic_directory.remove_directory(directory_path) then
             io.put_string("Directory %"");
             io.put_string(directory_path);

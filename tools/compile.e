@@ -172,7 +172,7 @@ feature {NONE}
          make_file.disconnect
 	 system_tools.remove_make_script_and_other_extra_files
          if ace.clean then
-            command.clear
+            command.clear_count
             system_tools.command_path_in(command,once "clean")
 	    if echo.verbose then
 	       command.append(once " -verbose")
@@ -286,7 +286,7 @@ feature {NONE}
 	     or else
 	     is_clean_flag(arg))
 	  then
-	    Result := true
+	    Result := True
 	 end
       end
 

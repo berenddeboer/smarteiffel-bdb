@@ -19,7 +19,8 @@
 deferred class HASHABLE
    --
    -- Ancestor class for all hashable objects.
-   -- For example, the `hash_code' is needed for DICTIONARY and for SET.
+   -- For example, the `hash_code' is needed for HASHED_DICTIONARY
+   -- and for HASHED_SET.
    -- Thus, most standard objects are HASHABLE (STRING, DOUBLE, REAL, 
    -- INTEGER_8, INTEGER_16, INTEGER_32, INTEGER_64, POINTER, NUMBER,
    -- MUTABLE_BIG_INTEGER, etc.). 

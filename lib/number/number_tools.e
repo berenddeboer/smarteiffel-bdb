@@ -123,14 +123,14 @@ feature {NUMBER_TOOLS}
 	 -- So if Maximum_number is 2147483647 :
 	 -- The Base is :           1000000000.
 	 -- A number has a value between 0-9 so a number in a
-	 -- item of a FIXED_ARRAY[INTEGER] must be a succession
+	 -- item of a FAST_ARRAY[INTEGER] must be a succession
 	 -- of 9 so the value of the greater item is 999999999.
          -- And the Base is the greater value of a item + 1.
       local
 	 exponent: INTEGER
       once
 	 exponent := (Maximum_integer.log10).truncated_to_integer
-	 Result := (10 ^ exponent).to_integer_32
+	 Result := ((10).to_integer ^ exponent).to_integer_32
       end; -- Base
 
 feature {NONE}
@@ -243,11 +243,11 @@ feature {NONE}
 	       stop
 	    loop
 	       if parser_buffer.end_reached then
-		  stop := true
+		  stop := True
 	       elseif parser_buffer.current_character.is_digit then
 		  parser_buffer.next
 	       else
-		  stop := true
+		  stop := True
 	       end
 	    end
 	    parser_buffer.skip_separators

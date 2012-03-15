@@ -1,9 +1,10 @@
-   The compile Command
 
-   The  compile  command  is  the  SmartEiffel  compiler.  There  are two
-   invocation  modes: traditional and ACE. In traditional mode, a variety
+                            The compile Command
+
+   The compile command is the SmartEiffel compiler. There are two
+   invocation modes: traditional and ACE. In traditional mode, a variety
    of compiler options can be specified on the command line. In ACE mode,
-   these  options  are  not  permitted;  it is presumed that the required
+   these options are not permitted; it is presumed that the required
    compiler options are listed in the ACE file.
 
    Usage
@@ -15,8 +16,8 @@
    ACE mode
    compile [general_options] <ACEfile.ace>
 
-   In  ACE  mode, the name of the ACE file must end with the .ace suffix.
-   For   examples   of  how  to  use  ACE  files,  have  a  look  in  the
+   In ACE mode, the name of the ACE file must end with the .ace suffix.
+   For examples of how to use ACE files, have a look in the
    SmartEiffel/tutorial/ace directory.
 
    Source code is in Eiffel and target code is in ANSI C.
@@ -24,56 +25,56 @@
    The compile command executes in two major steps:
 
    Step 1 - the compile_to_c command is called to produce various C files
-            (*.h and *.c). A script file is also produced by compile_to_c. The
-            name of the script file is also printed by compile_to_c (*.make on
-            Unix or *.BAT on DOS, for example).
+   (*.h and *.c). A script file is also produced by compile_to_c. The
+   name of the script file is also printed by compile_to_c (*.make on
+   Unix or *.BAT on DOS, for example).
    Step 2 - The script file produced during step 1 is run, launching the
-            C compilation(s) and linking of all the C files produced during the
-            previous step.
+   C compilation(s) and linking of all the C files produced during the
+   previous step.
 
-   Thus,  the  compile  command  is  a  simple  launcher used to call the
+   Thus, the compile command is a simple launcher used to call the
    [2]compile_to_c command, the C compiler, and the linker in sequence.
 
-   Like  the compile_to_c command, the compile command must have at least
-   one  argument  to indicate the starting execution point of the system.
-   Thus  execution  will  start  in  <RootProcedure>  of <RootClass>. The
+   Like the compile_to_c command, the compile command must have at least
+   one argument to indicate the starting execution point of the system.
+   Thus execution will start in <RootProcedure> of <RootClass>. The
    default <RootProcedure> is make.
 
    General Options
 
    -clean:
           By default, the generated C files and object files are retained
-          from  one  invocation  of  the compile command to another. This
+          from one invocation of the compile command to another. This
           enables incremental C compilation, since only the C files which
-          have  been  modified  since  the last invocation of the compile
+          have been modified since the last invocation of the compile
           command will be recompiled. Because the Eiffel to C compilation
-          performed  by  SmartEiffel  is generally much faster than the C
-          compilation  itself,  incremental  C  compilation  saves  time.
-          However,  there are situations where you want to get rid of all
+          performed by SmartEiffel is generally much faster than the C
+          compilation itself, incremental C compilation saves time.
+          However, there are situations where you want to get rid of all
           the previously generated C and object files, to start afresh.
-          The  -clean  option  removes the C files, object files and some
+          The -clean option removes the C files, object files and some
           other previously generated files, by invoking the clean command
           at the end of the compilation.
    -help:
-          Display  a  brief  summary  of  the  command-line  syntax and a
+          Display a brief summary of the command-line syntax and a
           complete list of compiler options.
    -verbose:
-          Displays  (a  lot of) useful information during the compilation
-          (full  path  of  loaded  files, type inference score, generated
+          Displays (a lot of) useful information during the compilation
+          (full path of loaded files, type inference score, generated
           files, etc.).
    -version:
-          Display  the  version  number of the SmartEiffel release you're
+          Display the version number of the SmartEiffel release you're
           using.
 
    Examples of Traditional Mode
 
    Example 1
-   When  SmartEiffel  is  correctly installed, you can type the following
+   When SmartEiffel is correctly installed, you can type the following
    command to test the "hello world" program:
           compile hello_world
 
-   The  compiler  should  tell  you what's wrong or should compile Eiffel
-   source  files telling you the full path used to load the Eiffel source
+   The compiler should tell you what's wrong or should compile Eiffel
+   source files telling you the full path used to load the Eiffel source
    code.
    Under UNIX, the executable file is named "a.out" by default.
 
@@ -81,31 +82,32 @@
    Type the following command to finalise the hello_world simple program:
           compile -boost -no_split -O3 hello_world
 
-   Note  that  the -O3 option is passed to the C compiler (see the manual
-   of  your  C  compiler). The -boost and -no_split options are passed to
-   the  [3]compile_to_c command. This is usually the best way to finalise
+   Note that the -O3 option is passed to the C compiler (see the manual
+   of your C compiler). The -boost and -no_split options are passed to
+   the [3]compile_to_c command. This is usually the best way to finalise
    your application.
    Only one C file is produced (option -no_split).
 
    Example 3
-   To  compile  a  big  project (class PROJECT) with C file splitting and
+   To compile a big project (class PROJECT) with C file splitting and
    require assertions checked:
           compile -require_check project
 
-   The  very  first time, all C files are produced and compiled. Then, if
-   you  type  the  same  command  after some changes in the Eiffel source
-   files,  all  C files are also produced from scratch. If there are only
-   minor  changes in the generated C files, only modified ones are passed
+   The very first time, all C files are produced and compiled. Then, if
+   you type the same command after some changes in the Eiffel source
+   files, all C files are also produced from scratch. If there are only
+   minor changes in the generated C files, only modified ones are passed
    to the C compiler (previous object files have been saved).
 
                                    [Line]
              Copyright © Dominique COLNET and Suzanne COLLIN -
                          [4]<SmartEiffel@loria.fr>
                 Last modified: Tue Feb 11 12:12:27 CET 2003
+                                      
 
 References
 
-   1. file://localhost/users/miro/colnet/SmartEiffel/man/compile_to_c.html
-   2. file://localhost/users/miro/colnet/SmartEiffel/man/compile_to_c.html
-   3. file://localhost/users/miro/colnet/SmartEiffel/man/compile_to_c.html
+   1. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/compile_to_c.html
+   2. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/compile_to_c.html
+   3. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/compile_to_c.html
    4. mailto:SmartEiffel@loria.fr

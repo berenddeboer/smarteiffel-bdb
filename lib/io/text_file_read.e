@@ -50,7 +50,7 @@ feature
          p := new_path.to_external
          input_stream := basic_io_text_file_read_open(p)
          if input_stream.is_not_null then
-            push_back_flag := false
+            push_back_flag := False
 	    end_of_input := False
             path := new_path
 	    if capacity = 0 then

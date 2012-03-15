@@ -70,7 +70,7 @@ feature {CLASS_CHECKER}
 
    do_sorted_print is
       local
-	 i: INTEGER; key_map: FIXED_ARRAY[FEATURE_NAME]
+	 i: INTEGER; key_map: FAST_ARRAY[FEATURE_NAME]
 	 sorter: COLLECTION_SORTER[FEATURE_NAME]; run_feature: RUN_FEATURE
       do
 	 create key_map.with_capacity(memory.count)
@@ -89,7 +89,7 @@ feature {CLASS_CHECKER}
 
 feature {NONE}
 
-   memory: DICTIONARY[RUN_FEATURE, FEATURE_NAME]
+   memory: HASHED_DICTIONARY[RUN_FEATURE, FEATURE_NAME]
 	 -- Already memorized RUN_FEATURE to be printed if the `short' "-sort"
 	 -- flag is used.
 

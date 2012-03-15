@@ -126,7 +126,7 @@ feature
 
          if tokens.count = new_class_count and then tokens.item(member_index).is_equal( once "new" ) then
             is_class_new := True
-            tmp_name.clear
+            tmp_name.clear_count
             from
                i := new_descriptor_index
             until
@@ -159,7 +159,7 @@ feature
 
             jvm_field_or_return_type := tokens.item(next_index)
 
-            tmp_name.clear
+            tmp_name.clear_count
             from
                i := next_index + 1
             until
@@ -839,12 +839,12 @@ feature
 
    frozen stupid_switch_function(run_time_set: RUN_TIME_SET; name: STRING): BOOLEAN is
       do
-         check false end;
+         check False end;
       end;
 
    frozen stupid_switch_procedure(run_time_set: RUN_TIME_SET; name: STRING): BOOLEAN is
       do
-         check false end;
+         check False end;
       end;
 
    frozen c_define_procedure(rf7: RUN_FEATURE_7; bcn, name: STRING) is
@@ -871,7 +871,7 @@ feature {NONE}
 
    idx_fieldref(er: EXTERNAL_ROUTINE): INTEGER is
       local
-         i: integer;
+         i: INTEGER;
          alias_string: STRING;
          cp: like constant_pool;
       do
@@ -931,7 +931,7 @@ feature {NONE}
 
    idx_interface_methodref(er: EXTERNAL_ROUTINE): INTEGER is
       local
-         i: integer;
+         i: INTEGER;
          alias_string: STRING;
          cp: like constant_pool;
       do
@@ -1041,7 +1041,7 @@ feature {NONE}
                c := s.item(i);
                if state = 0 then
                   if c /= ',' and c /= ')' then
-                     string_buffer.clear;
+                     string_buffer.clear_count;
                      string_buffer.append_character(c);
                      state := 1;
                   end;

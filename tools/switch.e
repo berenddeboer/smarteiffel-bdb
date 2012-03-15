@@ -45,7 +45,7 @@ feature
          boost := ace.boost
          arguments := up_rf.arguments
          result_type := up_rf.result_type
-         c_code.clear
+         c_code.clear_count
          if result_type = Void then
             c_code.append(fz_void)
          else
@@ -82,7 +82,7 @@ feature
 	    cpp.put_string(once "se_subsystem_t* self=se_current_subsystem_thread();%N")
 	 end
          if result_type /= Void then
-            c_code.clear
+            c_code.clear_count
             result_type.c_type_for_result_in(c_code)
             c_code.extend(' ')
             c_code.extend('R')
@@ -207,7 +207,7 @@ feature {C_PRETTY_PRINTER,SWITCH,E_AGENT}
 
    name(up_rf: RUN_FEATURE): STRING is
       do
-         c_code.clear
+         c_code.clear_count
          c_code.extend('X')
          up_rf.run_class.id.append_in(c_code)
          c_code.append(up_rf.name.to_key)
@@ -222,7 +222,7 @@ feature
          rt: E_TYPE
       do
          arguments := up_rf.arguments
-         tmp_jvmd.clear
+         tmp_jvmd.clear_count
          tmp_jvmd.extend('(')
          tmp_jvmd.append(jvm_root_descriptor)
          if arguments /= Void then

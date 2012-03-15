@@ -34,7 +34,7 @@ feature
 
    result_type: E_TYPE
 
-   is_deferred: BOOLEAN is false
+   is_deferred: BOOLEAN is False
 
    obsolete_mark: MANIFEST_STRING is
       do

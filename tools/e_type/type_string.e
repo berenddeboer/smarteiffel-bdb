@@ -38,7 +38,7 @@ feature
    is_string,
    is_reference,
    need_c_struct,
-   is_run_type: BOOLEAN is true
+   is_run_type: BOOLEAN is True
 
    is_none,
    is_bit,
@@ -59,7 +59,7 @@ feature
    is_anchored,
    is_like_current,
    is_like_argument,
-   is_like_feature: BOOLEAN is false
+   is_like_feature: BOOLEAN is False
 
    jvm_method_flags: INTEGER is 17
 
@@ -95,7 +95,7 @@ feature
 
    local_from_separate: E_TYPE is
       do
-	 check false end
+	 check False end
       end
 
    set_at_run_time is
@@ -217,7 +217,7 @@ feature
    jvm_expanded_from_reference(other: E_TYPE): INTEGER is
       do
          check
-            false
+            False
          end
       end
 
@@ -247,7 +247,7 @@ feature
             fatal_error(fz_sc1)
          elseif not Result then
             if other.is_string then
-               Result := true
+               Result := True
             else
                Result := base_class.is_subclass_of(other.base_class)
             end
@@ -316,12 +316,12 @@ feature
 
    stupid_switch(run_time_set: RUN_TIME_SET): BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
 feature {RUN_CLASS,E_TYPE}
 
-   need_gc_mark_function: BOOLEAN is true
+   need_gc_mark_function: BOOLEAN is True
 
    just_before_gc_mark_in(str: STRING) is
       do

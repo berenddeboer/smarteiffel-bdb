@@ -128,6 +128,9 @@ feature
 	 is_connected
          not end_of_input
       do
+	 if buffer_position >= buffer_size then
+	    fill_buffer
+	 end
 	 last_integer_16 := buffer.item(buffer_position).code
 	 buffer_position := buffer_position + 1
 

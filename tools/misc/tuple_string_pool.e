@@ -127,7 +127,7 @@ feature {MANIFEST_STRING_INSPECTOR}
 
 feature {NONE}
 
-   transitions: FIXED_ARRAY[LINKED_LIST[TUPLE[CHARACTER, INTEGER]]]
+   transitions: FAST_ARRAY[LINKED_LIST[TUPLE[CHARACTER, INTEGER]]]
          -- dim: old index
          -- tuples: character, new index
 

@@ -375,7 +375,7 @@ feature -- For `compile_to_jvm':
 
    conversion_check(dest, rt: E_TYPE): BOOLEAN is
       do
-         Result := true
+         Result := True
          if rt.is_a(dest) then
          else
             error_handler.cancel

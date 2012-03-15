@@ -384,7 +384,7 @@ feature {COLLECTION2} -- For `same_as' implementation:
          elseif upper2 /= other.upper2 then
          else
             from
-               Result := true
+               Result := True
                line := upper1
             until
                not Result or else line < lower1

@@ -33,6 +33,9 @@ inherit
          is_equal
       end
    HASHABLE
+      redefine
+         is_equal
+      end
 
 creation make, unknown_position
 
@@ -61,9 +64,9 @@ feature
 	 other_base_class: BASE_CLASS
       do
          if as_none = to_string then
-            Result := true
+            Result := True
          elseif as_any = other.to_string then
-            Result := true
+            Result := True
          elseif as_none = other.to_string then
          else
 	    other_base_class := other.base_class_memory
@@ -96,6 +99,8 @@ feature
                     as_none = to_string or else
                     as_pointer = to_string or else
                     as_real = to_string or else
+                    as_real_32 = to_string or else
+                    as_real_64 = to_string or else
                     as_string = to_string)
       end
 
@@ -117,9 +122,9 @@ feature
       do
          to_string2 := other.to_string
          if as_any = to_string2 then
-            Result := true
+            Result := True
          elseif to_string = to_string2 then
-            Result := true
+            Result := True
          elseif as_none = to_string2 then
          else
             bc1 := base_class

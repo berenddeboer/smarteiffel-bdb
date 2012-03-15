@@ -278,6 +278,7 @@ feature {NONE}
 		     or else
 		  feature_name.to_string = as_neq
 	       end
+	       Result := target.stupid_switch(run_time_set)
 	    elseif target.is_current then
 	       if smart_eiffel.same_base_feature(run_feature,run_time_set) then
 		  Result := run_feature.stupid_switch(run_time_set) /= Void

@@ -37,7 +37,7 @@ feature
 
    comment : COMMENT
 
-   end_mark_comment: BOOLEAN is false
+   end_mark_comment: BOOLEAN is False
 
    side_effect_free: BOOLEAN is
       do

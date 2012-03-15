@@ -32,7 +32,7 @@ feature
 
    base_class_name: CLASS_NAME
 
-   is_run_type: BOOLEAN is true
+   is_run_type: BOOLEAN is True
 
    is_bit,
    is_pointer,
@@ -50,7 +50,7 @@ feature
    is_anchored,
    is_like_current,
    is_like_argument,
-   is_like_feature: BOOLEAN is false
+   is_like_feature: BOOLEAN is False
 
    jvm_method_flags: INTEGER is 17
 
@@ -119,7 +119,7 @@ feature
 
    stupid_switch(run_time_set: RUN_TIME_SET): BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    id: INTEGER is
@@ -272,7 +272,7 @@ feature
    jvm_expanded_from_reference(other: E_TYPE): INTEGER is
       do
          check
-            false
+            False
          end
       end
 
@@ -317,13 +317,13 @@ feature
             bcn := base_class_name
             obcn := other.base_class_name
             if bcn.to_string = obcn.to_string then
-               Result := true
+               Result := True
             elseif is_reference and then other.is_expanded then
             elseif bcn.is_subclass_of(obcn) then
                if other.is_generic then
                   Result := bcn.base_class.is_a_vncg(Current,other)
                else
-                  Result := true
+                  Result := True
                end
             end
          end
@@ -405,9 +405,9 @@ feature
       do
          if is_dummy_expanded then
          elseif is_expanded then
-            Result := true
+            Result := True
          elseif run_class.is_tagged then
-            Result := true
+            Result := True
          else
             Result := run_class.writable_attributes /= Void
          end
@@ -467,7 +467,7 @@ feature {RUN_CLASS,E_TYPE}
    need_gc_mark_function: BOOLEAN is
       do
          if is_reference then
-            Result := true
+            Result := True
          else
             Result := run_class.gc_mark_to_follow
          end
@@ -533,7 +533,7 @@ feature {NONE}
 
    debug_info: STRING; -- To view more under sedb.
 
-   check_memory: FIXED_ARRAY[BASE_CLASS] is
+   check_memory: FAST_ARRAY[BASE_CLASS] is
       once
          !!Result.with_capacity(16)
       end

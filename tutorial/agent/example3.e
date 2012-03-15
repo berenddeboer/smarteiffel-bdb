@@ -1,6 +1,6 @@
 class EXAMPLE3
 --
--- In the DICTIONARY class, the `do_all' feature has an agent argument wich is
+-- In the HASHED_DICTIONARY class, the `do_all' feature has an agent argument wich is
 -- a routine with two arguments, one for the value (type `V') and one for
 -- the key (type `K').
 --
@@ -26,7 +26,7 @@ feature
 
 feature {NONE}
 
-   my_dictionary: DICTIONARY[INTEGER,STRING]
+   my_dictionary: HASHED_DICTIONARY[INTEGER,STRING]
 
    fill_it(value: STRING) is
       do

@@ -8,10 +8,152 @@
 </TABLE>
 <BR>&nbsp;
 Latest version first. 
-<BR>&nbsp;
-<BR>&nbsp;
 
+<A NAME="1.2r7"></A>
+<P><B>Release 1.2r7 (transitional) - Sunday April 2<SUP>nd</SUP>, 2006</B></P>
+<UL TYPE="circle">
+ <LI>Added export checks for calls of the form Current.r
+ </LI>
+ <LI>Detection of usage of some features in GENERAL that have been removed in
+ 2.x
+ </LI>
+ <LI>Detection of case sensitivity problems that may appear when migrating
+ to 2.2</LI>
+ <LI>Several features marked as obsolete (to be removed or renamed in 2.x)
+ </LI>
+ <LI>Some C code generation modified to work with MSVC++ 2005
+ </LI>
+ <LI>Other minor bugfixes (at the parser, and false warnings)
+ </LI>
+</UL>
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
 
+<A NAME="1.2r6"></A>
+<P><B>Release 1.2r6 (transitional) - Wednesday March 1<SUP>st</SUP>, 2006</B></P>
+<UL TYPE="circle">
+ <LI>The optimization for once routines that was disabled in previous
+     release to avoid a bug has been reenabled with the bug fixed.
+ </LI>
+ <LI>Detection of conformance problems related to new INTEGER/REAL conversion rules.
+ </LI>
+ <LI>Small code cleanups (to make the compiler code itself more 2.x compatible)
+ </LI>
+ <LI>FIXED_ARRAY is now called FAST_ARRAY (FIXED_ARRAY still there for compatibility)
+ </LI>
+ <LI>STRING.clear is now obsolete (replaced by clear_count, clear_count_and_capacity)
+ </LI>
+ <LI>A warning is emitted when using features from ARGUMENTS without inheriting ARGUMENTS
+ </LI>
+ <LI>Small library bugfixes
+ </LI>
+</UL>
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
+
+<A NAME="1.2r5"></A>
+<P><B>Release 1.2r5 (transitional) - Thursday December 1<SUP>st</SUP>, 2005</B></P>
+<UL TYPE="circle">
+ <LI>Bugfix in the warning about use of INTEGER and REAL types in external calls.
+ </LI>
+ <LI>Bugfix to allow inheriting REFERENCE
+ </LI>
+ <LI>Lots of bugfixes in BIT_STRING (it was very broken in r4)
+ </LI>
+ <LI>Added a "box" feature to GENERAL to make explicit boxing easier
+ </LI>
+ <LI>An optimization bug present in 1.1 was fixed; code generation is even more stable now.
+ </LI>
+</UL>
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
+
+<A NAME="1.2r4"></A>
+<P><B>Release 1.2r4 (transitional) - Thursday November 3<SUP>rd</SUP>, 2005</B></P>
+<UL TYPE="circle">
+ <LI>Some fixes for windows. A precompiled windows installer
+ will be provided soon
+ </LI>
+ <LI>Automatic boxing (not supported in SE2) generates a warning.
+ </LI>
+ <LI>Other code generation, library fixes
+ </LI>
+ <LI>Tested also with FreeBSD
+ </LI>
+</UL>
+
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
+<A NAME="1.2r3"></A>
+<P><B>Release 1.2r3 (transitional) - Saturday October 1<SUP>st</SUP>, 2005</B></P>
+<UL TYPE="circle">
+ <LI>Minor fixes: Some library updates to avoid some of the new warnings and removed used
+       of some obsolete features/classes
+ </LI>
+ <LI>The class BIT was marked as obsolete, and related features from other
+     classes were obsoleted too.
+ </LI>
+ <LI>Uses of the balancing rule that will change the semantic in SE2 now
+     emit a warning.
+ </LI>
+</UL>
+
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
+<A NAME="1.2r2"></A>
+<P><B>Release 1.2r2 (transitional) - Thursday September 1<SUP>st</SUP>, 2005</B></P>
+<UL TYPE="circle">
+ <LI>Lots of code generation fixes:
+  <UL>
+   <LI>Several fixes related to the optimizer (boost mode)
+   <LI>Fixed an issue that generated bad code in some programs with agents.
+  </UL> 
+ </LI>
+ <LI>The classes REAL_32 and REAL_64 were added. Code using REAL or DOUBLE in external
+     routines is marked with a warning.
+ </LI>
+ <LI>Some library routines not available in SE2 were marked as obsolete, and the new routines
+     added.
+ </LI>
+ <LI>The compiler got a lot of polish, removing redundant code, or fixed some pieces of
+     invalid code that were not being marked as errors
+ </LI>
+</UL>
+
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
+<A NAME="1.2r1"></A>
+<P><B>Release 1.2r1 (transitional) - Monday August 1<SUP>st</SUP>, 2005</B></P>
+<UL TYPE="circle">
+ <LI>New replacement classes (obsoleting or emitting warnings for old ones):
+  <UL>
+   <LI>HASHED_DICTIONARY and HASHED_SET (replacing DICTIONARY and SET). Note
+       that this generates a special warning message (old ones are not obsolete,
+       because they still exist in 2.1)
+   <LI>REFERENCE (replacing MEMO). Note that some slight grammar changes where
+       made to accomodate the REFERENCE class name and the reference keyword.
+       <A href="https://opensvn.csie.org/traccgi/smarteiffel12/trac.cgi/wiki/ReferenceClass">Details...</A>
+   <LI>MICROSECOND_TIME was modified to improve compatibility with SmartEiffel
+       2.x</LI>
+  </UL> 
+ </LI>
+ <LI>The reverse assignment rule was relaxed for compatibility with other compilers:
+     <A href="https://opensvn.csie.org/traccgi/smarteiffel12/trac.cgi/wiki/ReverseAssignmentRule">Details...</A>
+ </LI>
+ <LI>Parallel installation with other SmartEiffel versions is now easier
+     (The configuration file is renamed).
+ </LI>
+ <LI>Warnings for obsolete <tt>expanded X</tt> and <tt>reference X</tt>
+     Notation</LI>
+ <LI>Some installer and library fixes that came from 1.1</LI>
+</UL>
+
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
+
+<A NAME="1.2r0"></A>
+<P><B>Release 1.2r0 (transitional) - Friday July 1<SUP>st</SUP>, 2005</B></P>
+<UL TYPE="circle">
+ <LI>Updated documentation to note that this is a non-official branch</LI>
+ <LI>Public revision control repository, including release scripts and test suite
+     (not included inside the package, check documentation for links)
+ <LI>Otherwise, identical to 1.1</LI>
+</UL>
+
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
 
 <A NAME="1.1"></A>
 <B>Release 1.1 [Charlemagne] - Monday June 16<SUP>th</SUP>, 2003</B>

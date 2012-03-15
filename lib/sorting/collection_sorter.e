@@ -265,7 +265,7 @@ feature
             not modified or else imin >= imax
          loop
             from
-               modified := false
+               modified := False
                i := imax
                imin := imin + 1
             until
@@ -279,7 +279,7 @@ feature
             end
             if modified then
                from
-                  modified := false
+                  modified := False
                   i := imin
                   imax := imax - 1
                until

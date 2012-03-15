@@ -32,7 +32,7 @@ class MANIFEST_STRING
    --
 
 inherit
-   EXPRESSION;
+   EXPRESSION redefine is_equal end
    HASHABLE redefine is_equal end
    
 creation {PARSER} make
@@ -116,7 +116,7 @@ feature
 
    compile_to_c is
       do
-	 c_code.clear
+	 c_code.clear_count
 	 if once_flag then
 	    once_c_mapping
 	 elseif unicode_flag then
@@ -422,7 +422,7 @@ feature {NONE}
 	 run_class.set_at_run_time
       end
    
-   source_view: FIXED_ARRAY[STRING]
+   source_view: FAST_ARRAY[STRING]
 	 -- The manifest string as it appear in the Eiffel source file (see
 	 -- also `to_string'). This information is only computed for
 	 -- formatting tools (`pretty' or `short' for example).

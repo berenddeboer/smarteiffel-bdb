@@ -162,23 +162,23 @@ feature {SHORT_VISITOR}
    is_sort_flag(flag: STRING): BOOLEAN is
       do
 	 if flag_match(once "sort",flag) then
-	    Result := true
-	    sort := true
+	    Result := True
+	    sort := True
 	 end
       end
 
    is_short_flag(flag: STRING): BOOLEAN is
       do
 	 if flag_match(once "short",flag) then
-	    Result := true
-	    short := true
+	    Result := True
+	    short := True
 	 end
       end
 
    is_client_flag(flag: STRING): BOOLEAN is
       do
 	 if flag_match(once "client",flag) then
-	    Result := true
+	    Result := True
 	 end
       end
 

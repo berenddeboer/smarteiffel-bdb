@@ -109,7 +109,7 @@ feature
                   state := 2
                   Result := previous
                else
-                  previous := list.item(i).compile_to_c(false)
+                  previous := list.item(i).compile_to_c(False)
                   inspect
                      previous
                   when Always_here then
@@ -131,7 +131,7 @@ feature
                      Result := Always_here
                   end
                else
-                  previous := list.item(i).compile_to_c(true)
+                  previous := list.item(i).compile_to_c(True)
                   inspect
                      previous
                   when Always_here then
@@ -195,7 +195,7 @@ feature
          i: INTEGER
       do
          from
-            Result := true
+            Result := True
             i := list.upper
          until
             not Result or else i < list.lower
@@ -334,7 +334,7 @@ feature {IFTHENLIST_VISITOR}
 
 feature {NONE}
 
-   list: FIXED_ARRAY[IFTHEN]
+   list: FAST_ARRAY[IFTHEN]
 
    current_type: E_TYPE
 

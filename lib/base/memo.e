@@ -17,6 +17,7 @@
 -- http://SmartEiffel.loria.fr - SmartEiffel@loria.fr
 --
 class MEMO[E]
+    obsolete "Use REFERENCE instead of MEMO"
    -- This strange tiny class is useful to share a common volatile
    -- expanded value between different objects or as the result of 
    -- a once function.

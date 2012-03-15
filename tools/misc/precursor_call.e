@@ -41,7 +41,7 @@ feature {PRECURSOR_CALL_VISITOR}
 
 feature
 
-   use_current: BOOLEAN is true
+   use_current: BOOLEAN is True
 
    start_position: POSITION
 

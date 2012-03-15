@@ -42,7 +42,7 @@ feature {NONE}
 
    cp_up: INTEGER
 
-   cp: FIXED_ARRAY[CP_INFO] is
+   cp: FAST_ARRAY[CP_INFO] is
          -- Range [1.. `cp_up'] has no Void elements.
          -- By the way, index 0 is not used and elements
          -- are recycled.
@@ -246,7 +246,7 @@ feature -- Update and search :
             Result := Result - 1
          end
          if Result = 0 then
-            tmp_info.clear
+            tmp_info.clear_count
             tmp_info_append_u2(utf8)
             add_last.set_class(tmp_info)
             Result := cp_up
@@ -292,7 +292,7 @@ feature -- Update and search :
             Result := Result - 1
          end
          if Result = 0 then
-            tmp_info.clear
+            tmp_info.clear_count
             tmp_info_append_u2(c)
             tmp_info_append_u2(nt)
             add_last.set_fieldref(tmp_info)
@@ -369,7 +369,7 @@ feature -- Update and search :
             Result := Result - 1
          end
          if Result = 0 then
-            tmp_info.clear
+            tmp_info.clear_count
             tmp_info_append_u2(c)
             tmp_info_append_u2(nt)
             add_last.set_methodref(tmp_info)
@@ -431,7 +431,7 @@ feature -- Update and search :
             Result := Result - 1
          end
          if Result = 0 then
-            tmp_info.clear
+            tmp_info.clear_count
             tmp_info_append_u2(c)
             tmp_info_append_u2(nt)
             add_last.set_interface_methodref(tmp_info)
@@ -468,7 +468,7 @@ feature -- Update and search :
             Result := Result - 1
          end
          if Result = 0 then
-            tmp_info.clear
+            tmp_info.clear_count
             tmp_info_append_u2(utf8)
             add_last.set_string(tmp_info)
             Result := cp_up
@@ -482,7 +482,7 @@ feature -- Update and search :
          c: CHARACTER
       do
          from
-            tmp_utf8.clear
+            tmp_utf8.clear_count
             i := 1
          until
             i > str.count
@@ -527,7 +527,7 @@ feature -- Update and search :
             Result := Result - 1
          end
          if Result = 0 then
-            tmp_info.clear
+            tmp_info.clear_count
             tmp_info_append_u2(n)
             tmp_info_append_u2(d)
             add_last.set_name_and_type(tmp_info)

@@ -35,13 +35,13 @@ feature
 
    id: INTEGER is 3
 
-   is_character: BOOLEAN is true
+   is_character: BOOLEAN is True
 
    is_boolean,
    is_integer,
    is_real,
    is_double,
-   is_pointer: BOOLEAN is false
+   is_pointer: BOOLEAN is False
    
    c_sizeof: INTEGER is 1
 
@@ -60,7 +60,7 @@ feature
    is_a(other: E_TYPE): BOOLEAN is
       do
          if other.is_character then
-            Result := true
+            Result := True
          else
 	    Result := is_a_end_hook(other.run_type)
          end
@@ -190,7 +190,7 @@ feature {NONE}
       once
          if base_class /= Void then
 	    if run_class = Void then
-	       check false end
+	       check False end
 	    end
 	 end
       end

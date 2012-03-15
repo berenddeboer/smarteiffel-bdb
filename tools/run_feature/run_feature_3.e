@@ -344,7 +344,7 @@ feature {RUN_FEATURE_3}
             end
             cpp.put_character('{')
             if use_current then
-               tmp_string.clear
+               tmp_string.clear_count
                current_type.c_type_for_target_in(tmp_string)
                tmp_string.extend(' ')
                cpp.put_string(tmp_string)

@@ -1,3 +1,22 @@
+-- This is the READ_ME file of SmartEiffel (transitional) --
+
+1. - What is SmartEiffel (transitional)
+
+SmartEiffel (transitional) is a branch of the SmartEiffel 1.1 compiler. It's
+not developed by the SmartEiffel team (more details about the official release
+are below), but it's a cooperative branch (developed with their approval). 
+
+Its goal is mainly to provide developers means to migrate their applications/
+libraries written with older compilers, specially SmartEiffel 1.1, towards
+compatibility with SmartEiffel 2.x
+
+You can reach the page of the SmartEiffel (transitional) project at:
+
+  https://opensvn.csie.org/traccgi/smarteiffel12/
+
+Below, you can read the original READ_ME from the official SmartEiffel
+distribution.
+
 -- This is the READ_ME file of SmartEiffel --
 
 1. - What is SmartEiffel ? -
@@ -197,29 +216,29 @@ programs with any optimization you like if you use -boost (that is, if
 you do *not* want to have any checks enabled). If you need to run
 with checks, or run in the debugger, compile with -O0 only. The
 default configuration (compiler.se in the pre-build Elate binary of
-SmartEiffel 1.1) ships with -O0 as the default.
+SmartEiffel 1.2) ships with -O0 as the default.
 
 4.5.1. - How do I install the pre-built SmartEiffel from the
          AmigaDev.net, KindSoftware.com, or SmartEiffel web sites? -
 
 Change directory to the root of your Amiga file-system and unpack the
 full gzipped tar file. E.g.
-   cd /; tar xzf SmartEiffel-1.1-Elate-1.3.tgz
+   cd /; tar xzf SmartEiffel-1.2-Elate-1.3.tgz
 You can set a shell variable called "SmartEiffel" to location of
 "system.se" file in the install (default location for Elate system is
-/lang/eiffel/.serc). Thus, typically, the following line
+/lang/eiffel/.serc12). Thus, typically, the following line
 goes in your shell startup file (/etc/shell.rc):
-   set SmartEiffel /lang/SmartEiffel-1.1/sys/system.se
+   set SmartEiffel /lang/SmartEiffel-1.2/sys/system.se
 If you are going to leave the Eiffel executables where they sit after
-the build, you should add /lang/SmartEiffel-1.1/bin to shell.path in
+the build, you should add /lang/SmartEiffel-1.2/bin to shell.path in
 your shell startup. E.g.: New contents for /etc/shell.rc:
    # Pathnames
-   set shell.path $shell.path /lang/SmartEiffel-1.1/bin
+   set shell.path $shell.path /lang/SmartEiffel-1.2/bin
    # SmartEiffel
-   set SmartEiffel /lang/SmartEiffel-1.1/sys/system.se
+   set SmartEiffel /lang/SmartEiffel-1.2/sys/system.se
 
 Otherwise, consider using the "cpt" tool to move all binaries in
-/lang/SmartEiffel-1.1/bin to /app/stdio or /lang/eiffel.
+/lang/SmartEiffel-1.2/bin to /app/stdio or /lang/eiffel.
 
 The new naming convention for the install has been chosen so that
 multiple version of the SmartEiffel compiler can be easily supported.

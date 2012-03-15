@@ -149,7 +149,7 @@ feature -- Values in sections:
 
    section_key_iterator(section: STRING): ITERATOR[STRING] is
       local
-         sec: DICTIONARY[STRING, STRING]
+         sec: HASHED_DICTIONARY[STRING, STRING]
       do
          if sections /= Void then
             sec := sections.reference_at(section)
@@ -411,7 +411,7 @@ feature {NONE}
                   state := 2
                else
                   tmp_name.append(buffer)
-                  buffer.clear
+                  buffer.clear_count
                   tmp_name.extend(cc)
                   state := 0
                end
@@ -424,14 +424,14 @@ feature {NONE}
                when ' ', '%T' then
                   tmp_name.append(buffer)
                   tmp_name.extend('-')
-                  buffer.clear
+                  buffer.clear_count
                   buffer.extend(cc)
                   state := 1
                else
                   tmp_name.append(buffer)
                   tmp_name.extend('-')
                   tmp_name.extend(cc)
-                  buffer.clear
+                  buffer.clear_count
                   state := 0
                end
             when 3 then
@@ -478,7 +478,7 @@ feature {NONE}
 	 if char = cc then
 	    start_line := line
 	    start_column := column
-	    Result := true
+	    Result := True
 	    next_char
 	 end
       end
@@ -521,7 +521,7 @@ feature {NONE}
 	    if smart_eiffel.short_flag or else smart_eiffel.pretty_flag then
 	       create line_view.make(32)
 	    end
-	    from buffer.clear until
+	    from buffer.clear_count until
 	       state > 9
 	    loop
 	       next_char
@@ -543,7 +543,7 @@ feature {NONE}
 			      wcp(em42)
 			   when '{', '[' then
 			      multi_line_end := once "]foo%""
-			      multi_line_end.clear
+			      multi_line_end.clear_count
 			      if buffer.last = '{' then
 				 multi_line_end.extend('}')
 				 left_alignment := 1
@@ -556,7 +556,7 @@ feature {NONE}
 			      current_alignment := 1
 			      multi_line_end.remove_last(1)
 			      multi_line_end.extend('%"')
-			      buffer.clear
+			      buffer.clear_count
 			   else
 			      fcp(em8)
 			   end
@@ -669,7 +669,7 @@ feature {NONE}
 		  if cc.is_hexadecimal_digit then
 		     ascii_code := ascii_code * 16 + cc.hexadecimal_value
 		     digit_count := digit_count + 1
-		     if digit_count.even then
+		     if digit_count.is_even then
 			buffer.extend(ascii_code.to_character)
 			ascii_code := 0
 		     end

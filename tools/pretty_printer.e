@@ -499,7 +499,7 @@ feature {NONE}
 	 text_file_write.put_character('%N')
 	 flushed_memory_2.copy(flushed_memory_1)
 	 flushed_memory_1.copy(line_buffer)
-	 line_buffer.clear
+	 line_buffer.clear_count
       end
       
    singleton_memory: PRETTY_PRINTER is

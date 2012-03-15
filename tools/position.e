@@ -110,7 +110,7 @@ feature
    is_unknown: BOOLEAN is
          -- True when the `eiffel_parser' as called `set'.
       do
-         Result := mangling.to_integer = 0
+         Result := mangling = 0
       end
 
    before(other: like Current): BOOLEAN is
@@ -124,7 +124,7 @@ feature
          li := line
          other_li := other.line
          if li < other_li then
-            Result := true
+            Result := True
          elseif li = other_li then
             Result := column < other.column
          end

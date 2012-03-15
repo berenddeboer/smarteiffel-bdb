@@ -108,7 +108,7 @@ feature -- Bits:
       external "SmartEiffel"
       ensure
          meaningful: Result >= 1
-         large_enough: (2^Result) >= Maximum_character_code
+         large_enough: ((2).to_integer_32^Result) >= Maximum_character_code
       end
 
    Integer_bits: INTEGER is

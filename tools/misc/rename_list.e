@@ -88,7 +88,7 @@ feature {PARENT}
             if rp.old_name.to_key = fn_to_key then
                Result := rp.new_name
             elseif rp.new_name.to_key = fn_to_key then
-               no_longer_exists := true
+               no_longer_exists := True
             end
             i := i - 1
          end
@@ -117,7 +117,7 @@ feature {PARENT}
                Result := rp.old_name
 	       i := list.lower - 1
             elseif rp.old_name.to_key = fn_to_key then
-               no_longer_exists := true
+               no_longer_exists := True
             end
             i := i - 1
          end
@@ -197,7 +197,7 @@ feature {PARENT}
 
 feature {NONE}
 
-   list: FIXED_ARRAY[RENAME_PAIR]
+   list: FAST_ARRAY[RENAME_PAIR]
 
    make(first: RENAME_PAIR) is
       require

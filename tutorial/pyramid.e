@@ -15,7 +15,8 @@ class PYRAMID
    --
    -- See also pyramid2, which run faster than this first solution.
 
-inherit ANY redefine out_in_tagged_out_memory end;
+inherit
+    ARGUMENTS redefine out_in_tagged_out_memory end;
 
 creation make
 
@@ -110,27 +111,27 @@ feature
          val: INTEGER;
       do
          if belongs_to(val_column_1) then
-            Result := false ;
+            Result := False ;
          else
             from
                elem.put(val_column_1,indice(1,col));
                lig := 1;
                val := val_column_1;
-               stop := false;
-               Result := true;
+               stop := False;
+               Result := True;
             until
                stop
             loop
                lig := lig + 1;
                if lig > col then
-                  stop := true;
+                  stop := True;
                else
                   val := val - elem.item(indice(lig-1,col-lig+1));
 		  val := val.abs;
                   if belongs_to(val) then
                      clear_column(col);
-                     stop := true;
-                     Result := false;
+                     stop := True;
+                     Result := False;
                   else
                      elem.put(val,indice(lig,col-lig+1));
                   end;
@@ -147,10 +148,10 @@ feature
          nb: INTEGER;
       do
          if col > size then
-            Result := true;
+            Result := True;
          else
             from
-               stop := false;
+               stop := False;
                nb := max;
             until
                stop
@@ -160,7 +161,7 @@ feature
                   stop := (nb = 0);
                elseif propagate(col,nb) then
                   if  fill_up(col + 1) then
-                     stop := true;
+                     stop := True;
                   else
                      clear_column(col);
                      nb := nb - 1;

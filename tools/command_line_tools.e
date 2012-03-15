@@ -33,6 +33,10 @@ deferred class COMMAND_LINE_TOOLS
 inherit
    GLOBALS
    VISITABLE
+   ARGUMENTS
+      rename command_name as arguments_command_name
+      end
+
 
 feature {COMMAND_LINE_TOOLS_VISITOR}
 
@@ -88,7 +92,7 @@ feature {NONE}
 		  i_arg := i_arg - 1
 		  i_flag := i_flag - 1
 	       else
-		  Result := false
+		  Result := False
 	       end
 	    end
 	 end
@@ -129,8 +133,8 @@ feature {NONE}
 	       end
 	    else
 	    end
-	    help_flag := true
-            Result := true
+	    help_flag := True
+            Result := True
          end
       end
 
@@ -192,7 +196,7 @@ feature {NONE}
       do
          -- Be sure system_tools is intanciated before reading the ACE file
          -- (otherwise we have a buffer conflict)
-         system_tools.do_nothing
+         system_tools.init_singleton
 
 	 -- First, search for some *.ace or *.ACE file name:
 	 from
@@ -242,7 +246,7 @@ feature {NONE}
    is_case_insensitive_flag(flag: STRING): BOOLEAN is
       do
          if flag_match(fz_case_insensitive,flag) then
-            Result := true
+            Result := True
             eiffel_parser.set_case_insensitive
          end
       end
@@ -250,7 +254,7 @@ feature {NONE}
    is_no_style_warning_flag(flag: STRING): BOOLEAN is
       do
          if flag_match(fz_no_style_warning,flag) then
-            Result := true
+            Result := True
             eiffel_parser.set_no_style_warning
          end
       end
@@ -258,7 +262,7 @@ feature {NONE}
    is_no_warning_flag(flag: STRING): BOOLEAN is
       do
          if flag_match(fz_no_warning,flag) then
-            Result := true
+            Result := True
             error_handler.set_no_warning
          end
       end
@@ -266,13 +270,13 @@ feature {NONE}
    is_trace_flag(flag: STRING): BOOLEAN is
       do
          if flag_match(fz_sedb,flag) then
-            Result := true
+            Result := True
          end
          if flag_match(fz_trace,flag) then
 	    std_output.put_string(command_name)
 	    std_output.put_string(once
 	    ": the new name of the %"-trace%" flag is now %"-sedb%".%N")
-            Result := true
+            Result := True
          end
          if Result then
             ace.set_default_trace
@@ -283,15 +287,15 @@ feature {NONE}
       do
          if flag_match(fz_verbose,flag) then
 	    echo.set_verbose
-            Result := true
+            Result := True
          end
       end
 
    is_clean_flag(flag: STRING): BOOLEAN is
       do
          if flag_match(fz_clean,flag) then
-	    ace.set_clean(true)
-            Result := true
+	    ace.set_clean(True)
+            Result := True
          end
       end
 
@@ -314,8 +318,8 @@ feature {NONE}
 	       end
 	    else
 	    end
-	    version_flag := true
-            Result := true
+	    version_flag := True
+            Result := True
          end
       end
 
@@ -328,28 +332,28 @@ feature {NONE}
 	 -- "-loop_check", "-all_check", or "-debug_check" ?
       do
          if flag_match(fz_boost,flag) then
-            Result := true
+            Result := True
             ace.set_boost
 	 elseif flag_match(fz_no_check,flag) then
-            Result := true
+            Result := True
             ace.set_no_check
 	 elseif flag_match(fz_conf_require_check,flag) then
-            Result := true
+            Result := True
             ace.set_require_check
 	 elseif flag_match(fz_conf_ensure_check,flag) then
-            Result := true
+            Result := True
             ace.set_ensure_check
 	 elseif flag_match(fz_conf_invariant_check,flag) then
-            Result := true
+            Result := True
             ace.set_invariant_check
 	 elseif flag_match(fz_conf_loop_check,flag) then
-            Result := true
+            Result := True
             ace.set_loop_check
 	 elseif flag_match(fz_conf_all_check,flag) then
-            Result := true
+            Result := True
             ace.set_all_check
 	 elseif flag_match(fz_conf_debug_check,flag) then
-            Result := true
+            Result := True
             ace.set_debug_check
          end
 	 if Result then
@@ -360,7 +364,7 @@ feature {NONE}
    is_cecil_flag(flag: STRING; argi, argc: INTEGER): BOOLEAN is
       do
          if flag_match(fz_cecil,flag) then
-            Result := true
+            Result := True
             if argi < argc then
                cecil_pool.add_file(argument(argi + 1))
             else
@@ -376,7 +380,7 @@ feature {NONE}
          executable_name: STRING
       do
          if fz_o.is_equal(flag) then
-            Result := true
+            Result := True
             if argi < argc then
                executable_name := argument(argi + 1)
                if executable_name.has_suffix(eiffel_suffix) then
@@ -400,7 +404,7 @@ feature {NONE}
       do
          if flag_match(fz_safety_check,flag) then
 	    ace.set_safety_check
-            Result := true
+            Result := True
          end
       end
 
@@ -408,7 +412,7 @@ feature {NONE}
       do
          if flag_match(fz_manifest_string_trace,flag) then
 	    ace.set_manifest_string_trace
-            Result := true
+            Result := True
          end
       end
 
@@ -416,7 +420,7 @@ feature {NONE}
       do
          if flag_match(fz_high_memory_compiler,flag) then
 	    ace.set_high_memory_compiler
-            Result := true
+            Result := True
          end
       end
 

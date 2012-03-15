@@ -1,10 +1,11 @@
-   The clean Command
+
+                             The clean Command
 
    Usage
 
    clean [options] <Root-class> ...
 
-   Command  clean  removes  all  intermediate  files produced by previous
+   Command clean removes all intermediate files produced by previous
    compile or compile_to_c.
    Names (<Root-class> ...) can have the Eiffel suffix, no suffix at all,
    or the suffix used for SmartEiffel command files on your system (.make
@@ -13,10 +14,10 @@
    Options
 
    -help:
-          Display  a  brief  summary  of  the  command-line  syntax and a
+          Display a brief summary of the command-line syntax and a
           complete list of finder options.
    -verbose:
-          Print  system  information during the compilation (full path of
+          Print system information during the compilation (full path of
           loaded files, type inference score, removed files, etc.).
    -version:
           Show the number of the version of SmartEiffel you're using.
@@ -33,9 +34,9 @@
    on DOS, you can do:    clean hello_world.BAT
 
    Example 2
-   Under  Unix  or  DOS,  remove  all  intermediates files in the current
+   Under Unix or DOS, remove all intermediates files in the current
    directory : clean *.e
-   If  the  root class file is not in the current directory, you can type
+   If the root class file is not in the current directory, you can type
    (for Unix) : clean *.make
 
    Option -verbose can be used to see which files are removed.
@@ -44,6 +45,7 @@
              Copyright © Dominique COLNET and Suzanne COLLIN -
                          [1]<SmartEiffel@loria.fr>
                 Last modified: Tue Feb 11 12:11:33 CET 2003
+                                      
 
 References
 

@@ -3,6 +3,9 @@ class PRINT_ARGUMENTS
    -- How to print arguments of the command line.
    --
 
+inherit
+    ARGUMENTS
+
 creation make
 
 feature

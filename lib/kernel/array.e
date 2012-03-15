@@ -176,7 +176,7 @@ feature -- Implementation of deferred:
 
    force(element: like item; index: INTEGER) is
       require else
-         true
+         True
       do
          if upper < index then
             if index = upper + 1 then
@@ -315,7 +315,7 @@ feature -- Implementation of deferred:
    is_equal(other: like Current): BOOLEAN is
       do
          if Current = other then
-            Result := true
+            Result := True
          elseif lower = other.lower and then upper = other.upper then
             Result := storage.fast_memcmp(other.storage,count)
          end
@@ -324,7 +324,7 @@ feature -- Implementation of deferred:
    is_equal_map(other: like Current): BOOLEAN is
       do
          if Current = other then
-            Result := true
+            Result := True
          elseif lower = other.lower and then upper = other.upper then
             Result := storage.memcmp(other.storage,count)
          end

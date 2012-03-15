@@ -198,12 +198,12 @@ feature {NONE}
 	       system_tools.set_no_strip
 	       argi := argi + 1
 	    elseif flag_match(fz_no_split,arg) then
-	       ace.set_no_split(true)
+	       ace.set_no_split(True)
 	       argi := argi + 1
 	    elseif is_trace_flag(arg) then
 	       argi := argi + 1
 	    elseif flag_match(fz_wedit,arg) then
-	       ace.set_wedit(true)
+	       ace.set_wedit(True)
 	       argi := argi + 1
 	    elseif is_high_memory_compiler(arg) then
 	       argi := argi + 1
@@ -270,7 +270,7 @@ feature {NONE}
 	     or else
 	     is_verbose_flag(arg))
 	  then
-	    Result := true
+	    Result := True
 	 end
       end
 

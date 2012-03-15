@@ -35,13 +35,13 @@ feature
 
    id: INTEGER is 8
 
-   is_pointer: BOOLEAN is true
+   is_pointer: BOOLEAN is True
 
    is_integer,
    is_real,
    is_double,
    is_character,
-   is_boolean: BOOLEAN is false
+   is_boolean: BOOLEAN is False
    
    smallest_ancestor(other: E_TYPE): E_TYPE is
       local
@@ -58,7 +58,7 @@ feature
    is_a(other: E_TYPE): BOOLEAN is
       do
          if other.is_pointer then
-            Result := true
+            Result := True
          else
 	    Result := is_a_end_hook(other.run_type)
          end
@@ -208,7 +208,7 @@ feature {NONE}
       once
          if base_class /= Void then
 	    if run_class = Void then
-	       check false end
+	       check False end
 	    end
 	 end
       end

@@ -31,7 +31,9 @@ deferred class PROC_CALL
    -- 1 argument and PROC_CALL_N when N arguments.
    --
 
-inherit CALL_PROC_CALL; INSTRUCTION redefine stupid_switch end
+inherit
+   CALL_PROC_CALL
+   INSTRUCTION
 
 feature
 

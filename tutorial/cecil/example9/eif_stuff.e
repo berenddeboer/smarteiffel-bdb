@@ -4,7 +4,7 @@ expanded class EIF_STUFF
 --
 feature
    
-   adopted: FIXED_ARRAY[ANY] is
+   adopted: FAST_ARRAY[ANY] is
       once
          create Result.with_capacity(16)
       end

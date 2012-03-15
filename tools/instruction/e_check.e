@@ -155,7 +155,7 @@ feature {NONE}
 
    all_check: BOOLEAN
 
-   make(sp: like start_position; hc: COMMENT; l: FIXED_ARRAY[ASSERTION]) is
+   make(sp: like start_position; hc: COMMENT; l: FAST_ARRAY[ASSERTION]) is
       require
          not sp.is_unknown
       do

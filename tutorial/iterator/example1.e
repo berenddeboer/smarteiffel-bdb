@@ -62,14 +62,14 @@ feature {NONE}
    use_iterator_on_fixed_array is
       local
 	 iterator: ITERATOR[CHARACTER];
-         my_fa: FIXED_ARRAY[CHARACTER];
+         my_fa: FAST_ARRAY[CHARACTER];
       do
          !!my_fa.with_capacity(4);
          my_fa.add_last('f');
          my_fa.add_last('O');
          my_fa.add_last('o');
          iterator := my_fa.get_new_iterator;
-	 my_loop("FIXED_ARRAY",iterator);
+	 my_loop("FAST_ARRAY",iterator);
       end;
 
    use_iterator_on_linked_list is
@@ -101,16 +101,16 @@ feature {NONE}
    use_iterator_on_dictionary is
       local
 	 iterator: ITERATOR[CHARACTER];
-	 d: DICTIONARY[CHARACTER,CHARACTER];
+	 d: HASHED_DICTIONARY[CHARACTER,CHARACTER];
       do
 	 !!d.make;
 	 d.put('o','B');
 	 d.put('f','a');
 	 d.put('O','R');
          iterator := d.get_new_iterator_on_items;
-	 my_loop("DICTIONARY (items)",iterator);
+	 my_loop("HASHED_DICTIONARY (items)",iterator);
          iterator := d.get_new_iterator_on_keys;
-	 my_loop("DICTIONARY (keys)",iterator);
+	 my_loop("HASHED_DICTIONARY (keys)",iterator);
       end;
 
 end

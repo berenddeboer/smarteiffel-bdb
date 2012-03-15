@@ -195,10 +195,10 @@ feature
          lnk1, lnk2: like first_link
       do
          if Current = other then
-            Result := true
+            Result := True
          elseif upper = other.upper then
             from
-               Result := true
+               Result := True
                lnk1 := first_link
                lnk2 := other.first_link
             until
@@ -216,10 +216,10 @@ feature
          lnk1, lnk2: like first_link
       do
          if Current = other then
-            Result := true
+            Result := True
          elseif upper = other.upper then
             from
-               Result := true
+               Result := True
                lnk1 := first_link
                lnk2 := other.first_link
             until
@@ -393,7 +393,7 @@ feature
          d: like item
       do
          from
-            Result := true
+            Result := True
             l := first_link
          until
             not Result or else l = Void

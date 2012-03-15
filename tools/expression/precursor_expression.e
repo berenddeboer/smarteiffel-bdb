@@ -47,7 +47,7 @@ feature
 
    is_writable: BOOLEAN is False
 
-   extra_bracket_flag: BOOLEAN is false
+   extra_bracket_flag: BOOLEAN is False
    
    side_effect_free: BOOLEAN is False
 

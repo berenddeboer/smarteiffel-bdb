@@ -190,7 +190,7 @@ feature {IMPLICIT_CAST}
 	    end
 	 end
 	 key := once "... unique buffer ..."
-	 key.clear
+	 key.clear_count
 	 key.extend('T')
 	 source.id.append_in(key)
 	 key.append(once "toT")
@@ -267,7 +267,7 @@ feature {C_PRETTY_PRINTER}
 
 feature {SMART_EIFFEL}
 
-   force_compatibility(reference_integer_set: SET[RUN_CLASS]) is
+   force_compatibility(reference_integer_set: HASHED_SET[RUN_CLASS]) is
       require
 	 reference_integer_set /= Void
       local
@@ -509,7 +509,7 @@ feature {ASSIGNMENT_HANDLER_VISITOR}
 
 feature {NONE}
 
-   conversions: DICTIONARY[TUPLE[E_TYPE,E_TYPE], STRING] is
+   conversions: HASHED_DICTIONARY[TUPLE[E_TYPE,E_TYPE], STRING] is
          -- All needed conversions functions. The key is the corresponding 
          -- name for the C function (e.g. T56toT78).
       once
@@ -519,7 +519,7 @@ feature {NONE}
    c_header_for(key: STRING; source, destination: E_TYPE) is
 	 -- Compute the C header in the `buffer'
       do
-         buffer.clear
+         buffer.clear_count
          destination.c_type_for_result_in(buffer)
          buffer.extend(' ')
          buffer.append(key)
@@ -710,14 +710,14 @@ feature {NONE}
          create Result.make(128)
       end
 
-   graph_nodes: DICTIONARY[GRAPH_NODE, STRING] is
+   graph_nodes: HASHED_DICTIONARY[GRAPH_NODE, STRING] is
 	 -- The key STRING is the run time mark of the corresponding
 	 -- graph node.
       once
 	 create Result.with_capacity(512)
       end
 
-   external_types: DICTIONARY[E_TYPE, STRING] is
+   external_types: HASHED_DICTIONARY[E_TYPE, STRING] is
       once
 	 create Result.make
       end

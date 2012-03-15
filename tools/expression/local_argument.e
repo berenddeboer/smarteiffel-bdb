@@ -28,7 +28,9 @@ deferred class LOCAL_ARGUMENT
    -- argument names (ARGUMENT_NAME).
    --
 
-inherit NAME; EXPRESSION redefine to_runnable end
+inherit
+   NAME
+   EXPRESSION
 
 feature
 

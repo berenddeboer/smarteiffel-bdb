@@ -37,7 +37,7 @@ feature {CHECK_INVARIANT_VISITOR}
 
 feature
 
-   is_require: BOOLEAN is false
+   is_require: BOOLEAN is False
 
    name: STRING is
       do

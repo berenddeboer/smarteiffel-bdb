@@ -297,10 +297,39 @@ feature {NONE}
          expression := e
          source_type := e.result_type.run_type
          destination_type := dt.run_type
+         if source_type.is_expanded and then destination_type.is_reference then
+            -- Target is being automatically boxed
+            error_handler.add_position (e.start_position)
+            error_handler.append (once "This expression, of type ")
+            error_handler.append (source_type.run_time_mark)
+            error_handler.append (once " is being implicitely boxed to type ")
+            error_handler.append (destination_type.run_time_mark)
+            error_handler.append (once ". Automatic boxing will not %
+                                       %be done by SE2, please update your code.")
+            error_handler.print_as_warning
+         end
 	 if source_type.is_expanded and then destination_type.is_expanded
 	  then
 	    -- May be two INTEGERs of different size or some REAL 
 	    -- value converted into DOUBLE for example.
+	    if
+	       source_type.is_integer and then 
+	       (destination_type.is_real or destination_type.is_double) and then
+	       e.start_position.base_class_name.to_string /= as_integer_general and then
+	          -- Skip warning on INTEGER_GENERAL to allow to_double go unwarned
+	       source_type.c_sizeof >= destination_type.c_sizeof
+	    then
+	       error_handler.add_position (e.start_position)
+	       error_handler.append (once "This expression, of type ")
+	       error_handler.append (source_type.run_time_mark)
+	       error_handler.append (once " is being implicitely converted to type ")
+	       error_handler.append (destination_type.run_time_mark)
+	       error_handler.append (once ". This conversion will not %
+	                                  %work SE2, please update your code. %
+	                                  %The target real should be larger than the %
+	                                  %source integer.")
+	       error_handler.print_as_warning
+	    end
 	 else
 	    conversion := assignment_handler.register(source_type,
 						      destination_type)
@@ -323,7 +352,7 @@ feature {NONE}
 	    ic ?= e
 	    if ic /= Void then
 	       create {REAL_CONSTANT}
-	          Result.from_double(start_position, ic.value_memory, rt)
+	          Result.from_double(start_position, ic.value_memory.to_double, rt)
 	    else
 	       rc ?= e
 	       if rc /= Void then

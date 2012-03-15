@@ -148,7 +148,7 @@ feature
 
    to_string_format(d: INTEGER): STRING is
          -- Convert the REAL into a new allocated STRING including
-         -- only `d' digits in fractionnal part.
+         -- only `d' digits in fractional part.
          -- Note: see `append_in_format' to save memory.
       do
          Result := to_double.to_string_format(d)
@@ -156,7 +156,7 @@ feature
 
    append_in_format(str: STRING; f: INTEGER) is
          -- Same as `append_in' but produce only `f' digit of
-         -- the fractionnal part.
+         -- the fractional part.
       require
          str /= Void
          f >= 0

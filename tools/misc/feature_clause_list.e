@@ -71,7 +71,7 @@ feature {CLASS_CHECKER}
 
 feature {BASE_CLASS}
 
-   get_started(fd: DICTIONARY[E_FEATURE,FEATURE_NAME]) is
+   get_started(fd: HASHED_DICTIONARY[E_FEATURE,FEATURE_NAME]) is
       local
          i: INTEGER
       do
@@ -101,7 +101,7 @@ feature {FEATURE_CLAUSE_LIST_VISITOR}
 
 feature {FEATURE_CLAUSE_LIST_VISITOR}
 
-   list: FIXED_ARRAY[FEATURE_CLAUSE]
+   list: FAST_ARRAY[FEATURE_CLAUSE]
 
 feature {NONE}
 

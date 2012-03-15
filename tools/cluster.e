@@ -56,7 +56,7 @@ feature {ACE}
       do
 	 -- Update the `file_name_buffer':
 	 from
-	    file_name_buffer.clear
+	    file_name_buffer.clear_count
 	    i := 1
 	    count := class_name.count
 	 until
@@ -98,7 +98,7 @@ feature {ACE}
       do
 	 -- Update the `file_name_buffer':
 	 from
-	    file_name_buffer.clear
+	    file_name_buffer.clear_count
 	    i := 1
 	    count := class_name.count
 	 until
@@ -406,7 +406,7 @@ feature {ACE}
 	 class_name /= Void
 	 not key.is_empty
       local
-	 fas: FIXED_ARRAY[STRING]
+	 fas: FAST_ARRAY[STRING]
       do
 	 if option_debug_keys = Void then
 	    create option_debug_keys.make
@@ -421,7 +421,7 @@ feature {ACE}
 
    debug_check(class_name: CLASS_NAME; e_debug: E_DEBUG): BOOLEAN is
       local
-	 fas: FIXED_ARRAY[STRING]
+	 fas: FAST_ARRAY[STRING]
       do
 	 if option_debug_keys = Void then
 	    if default_debug_keys = Void then
@@ -561,7 +561,7 @@ feature {CLUSTER_VISITOR}
 
 feature {NONE}
 
-   rename_se: DICTIONARY[STRING,STRING]
+   rename_se: HASHED_DICTIONARY[STRING,STRING]
 	 -- To handle the old "rename.se" files style.
 
    default_assertion_level: INTEGER
@@ -584,14 +584,14 @@ feature {NONE}
 	 end
       end
 
-   default_debug_keys: FIXED_ARRAY[STRING]
+   default_debug_keys: FAST_ARRAY[STRING]
 	 -- The default(s) one for this cluster.
 
-   option_assertion_level: DICTIONARY[INTEGER,CLASS_NAME]
+   option_assertion_level: HASHED_DICTIONARY[INTEGER,CLASS_NAME]
 
-   option_debug_keys: DICTIONARY[FIXED_ARRAY[STRING],CLASS_NAME]
+   option_debug_keys: HASHED_DICTIONARY[FAST_ARRAY[STRING],CLASS_NAME]
 
-   option_trace: SET[CLASS_NAME]
+   option_trace: HASHED_SET[CLASS_NAME]
 
    compute_directory_path_using(path: STRING; from_config: BOOLEAN) is
       require
@@ -626,7 +626,7 @@ feature {NONE}
 	 end
       end
 
-   match_debug_keys(e_debug: E_DEBUG; list: FIXED_ARRAY[STRING]): BOOLEAN is
+   match_debug_keys(e_debug: E_DEBUG; list: FAST_ARRAY[STRING]): BOOLEAN is
       local
 	 key: STRING; i: INTEGER
       do
@@ -660,8 +660,8 @@ feature {NONE}
          !!Result.make(256)
       end
 
-   include_list: FIXED_ARRAY[STRING]
+   include_list: FAST_ARRAY[STRING]
 
-   exclude_list: FIXED_ARRAY[STRING]
+   exclude_list: FAST_ARRAY[STRING]
 
 end -- CLUSTER

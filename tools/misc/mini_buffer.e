@@ -108,19 +108,19 @@ feature
 	    stop
 	 loop
 	    if i > keyword.count then
-	       stop := true
+	       stop := True
 	    elseif idx > count then
-	       stop := true
+	       stop := True
 	    elseif to_string.item(idx) = keyword.item(i) then
 	       i := i + 1
 	       idx := idx + 1
 	    else
-	       stop := true
+	       stop := True
 	    end
 	 end
 	 if i > keyword.count then
 	    skip_separators
-	    Result := true
+	    Result := True
 	 else
 	    idx := idx_memory
 	 end
@@ -138,7 +138,7 @@ feature
 	 idx_memory := idx
 	 if a_keyword(keyword) then
 	    if idx > count then
-	       Result := true
+	       Result := True
 	    else
 	       idx := idx_memory
 	    end
@@ -159,18 +159,18 @@ feature
       do
 	 from
 	    Result := once ".... local unique buffer ...."
-	    Result.clear
+	    Result.clear_count
 	    Result.extend(item)
 	    next
 	 until
 	    stop
 	 loop
 	    if is_off then
-	       stop := true
+	       stop := True
 	    elseif item.is_separator then
-	       stop := true
+	       stop := True
 	    elseif item = ',' then
-	       stop := true
+	       stop := True
 	    else
 	       Result.extend(item)
 	       next
@@ -204,18 +204,18 @@ feature
       do
 	 from
 	    Result := once ".... local unique buffer ...."
-	    Result.clear
+	    Result.clear_count
 	    Result.extend(item)
 	    next
 	 until
 	    stop
 	 loop
 	    if is_off then
-	       stop := true
+	       stop := True
 	    elseif item = ',' then
-	       stop := true
+	       stop := True
 	    elseif item.is_separator then
-	       stop := true;	       
+	       stop := True;	       
 	    else
 	       Result.extend(item)
 	       next
@@ -223,7 +223,7 @@ feature
 		  if Result.occurrences('(') < Result.occurrences(')') then
 		     idx := idx - 1
 		     Result.remove_last(1)
-		     stop := true
+		     stop := True
 		  end
 	       end
 	    end
@@ -234,7 +234,7 @@ feature
 	 is_off or else not item.is_separator
       end
 
-   a_signature: FIXED_ARRAY[STRING] is
+   a_signature: FAST_ARRAY[STRING] is
 	 -- Read the expected external signature.
       require
 	 not item.is_separator      
@@ -260,7 +260,7 @@ feature
 	    elseif item = ',' then
 	       next; skip_separators
 	    elseif item = ')' then
-	       stop := true
+	       stop := True
 	       next; skip_separators
 	    else
 	       external_cast := a_type_cast

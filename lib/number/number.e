@@ -377,7 +377,7 @@ feature -- Conversions and printing:
 	 -- Note: see also `append_in' to save memory.
       do
 	 Result := once "......... (This is a private buffer) ............"
-	 Result.clear
+	 Result.clear_count
 	 append_in(Result)
 	 Result := Result.twin
       end
@@ -400,7 +400,7 @@ feature -- Conversions and printing:
 	 non_negative_digits: digits >= 0
       do
 	 Result := once "This is a local STRING buffer ...."
-	 Result.clear
+	 Result.clear_count
 	 append_decimal_in(Result,digits,all_digits)
 	 Result := Result.twin
       ensure
@@ -852,7 +852,7 @@ feature {NONE}
 	 tmp: STRING
       once
 	 tmp := "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-	 tmp.clear
+	 tmp.clear_count
 	 Maximum_double.append_in_format(tmp,0)
 	 Result := nt.from_string(tmp)
       end
@@ -863,7 +863,7 @@ feature {NONE}
 	 tmp: STRING
       once
 	 tmp := "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-	 tmp.clear
+	 tmp.clear_count
 	 Minimum_double.append_in_format(tmp,0)
 	 Result := nt.from_string(tmp)
       end
@@ -880,11 +880,11 @@ feature {NONE}
 	 -- So if Maximum_number is 2147483647 :
 	 -- The Base is :           1000000000.
 	 -- A number has a value between 0-9 so a number in a
-	 -- item of a FIXED_ARRAY[INTEGER] must be a succession
+	 -- item of a FAST_ARRAY[INTEGER] must be a succession
 	 -- of 9 so the value of the greater item is 999999999.
          -- And the Base is the greater value of a item + 1.
       once
-	 Result := (10 ^ (nb_c(Maximum_integer) - 1)).to_integer
+	 Result := ((10).to_integer ^ (nb_c(Maximum_integer) - 1)).to_integer
       end; -- Base
 
    Half_base: INTEGER is
@@ -893,7 +893,7 @@ feature {NONE}
 	 -- For the multiplication, we can make multiplication without
 	 -- depassement of capacity.
       once
-	    Result := (10^(Base.sqrt.log10.truncated_to_integer)).to_integer
+	    Result := ((10).to_integer^(Base.sqrt.log10.truncated_to_integer)).to_integer
       end
 
    Half_base_2: INTEGER is
@@ -926,44 +926,44 @@ feature {NONE}
 
    -- This global variable is necessary to have a good memory gestion
 
-   temp_2_digints: FIXED_ARRAY[INTEGER] is
+   temp_2_digints: FAST_ARRAY[INTEGER] is
 	 -- Global variable to put an integer in a large_integer
       once
 	 !!Result.make(2)
       end
 
-   temp_1_digint: FIXED_ARRAY[INTEGER] is
+   temp_1_digint: FAST_ARRAY[INTEGER] is
 	 -- Global varaible to put an integer in a small_integer
 	 -- for few operations
       once
 	 !!Result.make(1)
       end
 
-   temp_from_mult: FIXED_ARRAY[INTEGER] is
+   temp_from_mult: FAST_ARRAY[INTEGER] is
 	 -- Global variable
       once
 	 !!Result.make(0)
       end
 
-   temp_after_mult: FIXED_ARRAY[INTEGER] is
+   temp_after_mult: FAST_ARRAY[INTEGER] is
 	 -- Global variable
       once
 	 !!Result.make(0)
       end
 
-   temp_quotient: FIXED_ARRAY[INTEGER] is
+   temp_quotient: FAST_ARRAY[INTEGER] is
 	 -- Global variable
       once
 	 !!Result.make(0)
       end
 
-   temp_remainder: FIXED_ARRAY[INTEGER] is
+   temp_remainder: FAST_ARRAY[INTEGER] is
 	 -- Global variable
       once
 	 !!Result.make(0)
       end
 
-   temp_division: FIXED_ARRAY[INTEGER] is
+   temp_division: FAST_ARRAY[INTEGER] is
 	 -- Global variable
       once
 	 !!Result.make(0)

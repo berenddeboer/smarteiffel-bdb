@@ -25,9 +25,9 @@ inherit ABSTRACT_INTEGER
 
 feature
 
-   is_zero: BOOLEAN is false
+   is_zero: BOOLEAN is False
 
-   is_one: BOOLEAN is false
+   is_one: BOOLEAN is False
 
    is_equal(other: NUMBER): BOOLEAN is
 	 -- Compares two LARGE_INTEGERs. As they both have same sign
@@ -72,13 +72,13 @@ feature{NUMBER}
 	 end
       end
 
-   value: FIXED_ARRAY[INTEGER] is
+   value: FAST_ARRAY[INTEGER] is
       do
 	 Result := storage
       end
 
 
-   make_from_fixed_array(fa: FIXED_ARRAY[INTEGER]) is
+   make_from_fixed_array(fa: FAST_ARRAY[INTEGER]) is
       require
 	 fa /= Void
       do
@@ -164,9 +164,9 @@ feature{NUMBER}
 
 feature{NONE}
 
-   create_positive(fa: FIXED_ARRAY[INTEGER]): ABSTRACT_INTEGER is
+   create_positive(fa: FAST_ARRAY[INTEGER]): ABSTRACT_INTEGER is
 	 -- creates a simplified positive ABSTRACT_INTEGER
-	 -- from a correct FIXED_ARRAY or a one item FIXED
+	 -- from a correct FAST_ARRAY or a one item FIXED
       require
 	 fa /= Void
 	 internal_correct_fixed(fa)
@@ -183,9 +183,9 @@ feature{NONE}
 	 Result.is_abstract_integer
       end
 
-   create_negative(fa: FIXED_ARRAY[INTEGER]): ABSTRACT_INTEGER is
+   create_negative(fa: FAST_ARRAY[INTEGER]): ABSTRACT_INTEGER is
 	 -- creates a simplified negative ABSTRACT_INTEGER
-	 -- from a correct FIXED_ARRAY or a one item FIXED
+	 -- from a correct FAST_ARRAY or a one item FIXED
       require
 	 fa /= Void
 	 internal_correct_fixed(fa)
@@ -202,9 +202,9 @@ feature{NONE}
 	 Result.is_abstract_integer
       end
 
-   create_positive_directly(fa: FIXED_ARRAY[INTEGER]): ABSTRACT_INTEGER is
+   create_positive_directly(fa: FAST_ARRAY[INTEGER]): ABSTRACT_INTEGER is
 	 -- creates a simplified positive ABSTRACT_INTEGER
-	 -- from a correct FIXED_ARRAY or a one item FIXED
+	 -- from a correct FAST_ARRAY or a one item FIXED
       require
 	 fa /= Void
 	 internal_correct_fixed(fa)
@@ -221,9 +221,9 @@ feature{NONE}
 	 Result.is_abstract_integer
       end
 
-   create_negative_directly(fa: FIXED_ARRAY[INTEGER]): ABSTRACT_INTEGER is
+   create_negative_directly(fa: FAST_ARRAY[INTEGER]): ABSTRACT_INTEGER is
 	 -- creates a simplified negative ABSTRACT_INTEGER
-	 -- from a correct FIXED_ARRAY or a one item FIXED
+	 -- from a correct FAST_ARRAY or a one item FIXED
       require
 	 fa /= Void
 	 internal_correct_fixed(fa)
@@ -242,7 +242,7 @@ feature{NONE}
 
 feature {NONE} -- Conversion tool
 
-   fixed_array_to_double(fa: FIXED_ARRAY[INTEGER]): DOUBLE is
+   fixed_array_to_double(fa: FAST_ARRAY[INTEGER]): DOUBLE is
 	 -- only a tool
 	 -- unsigned conversion
       require
@@ -268,7 +268,7 @@ feature {NONE} -- Conversion tool
 
 feature{NONE} -- Operations tools
 
-      add_fixed_array_with_integer_in_himself_from(fa1: INTEGER; fa2: FIXED_ARRAY[INTEGER]; n: INTEGER) is
+      add_fixed_array_with_integer_in_himself_from(fa1: INTEGER; fa2: FAST_ARRAY[INTEGER]; n: INTEGER) is
 	 -- only a tool used by some features in positive
 	 -- and negative large integers
 	 -- result is stored in fa2
@@ -312,16 +312,16 @@ feature{NONE} -- Operations tools
 	 fa2.item(fa2.upper) /= 0
       end
 
-   add_fixed_arrays(fa1, fa2: FIXED_ARRAY[INTEGER]): FIXED_ARRAY[INTEGER] is
+   add_fixed_arrays(fa1, fa2: FAST_ARRAY[INTEGER]): FAST_ARRAY[INTEGER] is
 	 -- only a tool used by some features in positive
 	 -- and negative large integers
-	 -- Give a FIXED_ARRAY[INTEGER] for the creation of an
+	 -- Give a FAST_ARRAY[INTEGER] for the creation of an
 	 -- large_integer after an addition.
       require
 	 fa1 /= Void
 	 fa2 /= Void
       local
-	 smaller, larger: FIXED_ARRAY[INTEGER]
+	 smaller, larger: FAST_ARRAY[INTEGER]
 	 i, carry, partial_sum,
 	 initial_smaller_upper, initial_larger_upper: INTEGER
       do
@@ -374,7 +374,7 @@ feature{NONE} -- Operations tools
 	 Result.item(Result.upper) /= 0
       end
 
-      add_fixed_arrays_in_himself(fa1, fa2: FIXED_ARRAY[INTEGER]) is
+      add_fixed_arrays_in_himself(fa1, fa2: FAST_ARRAY[INTEGER]) is
 	 -- only a tool used by some features in positive
 	 -- and negative large integers
 	 -- result is stored in fa2
@@ -384,7 +384,7 @@ feature{NONE} -- Operations tools
 	 fa1 /= Void
 	 fa2 /= Void
       local
-	 smaller, larger: FIXED_ARRAY[INTEGER]
+	 smaller, larger: FAST_ARRAY[INTEGER]
 	 i, carry, partial_sum,
 	 initial_smaller_upper, initial_larger_upper: INTEGER
       do
@@ -434,7 +434,7 @@ feature{NONE} -- Operations tools
 	 fa2.item(fa2.upper) /= 0
       end
 
-      add_fixed_arrays_in_himself_from(fa1, fa2: FIXED_ARRAY[INTEGER]; n: INTEGER) is
+      add_fixed_arrays_in_himself_from(fa1, fa2: FAST_ARRAY[INTEGER]; n: INTEGER) is
 	 -- only a tool used by some features in positive
 	 -- and negative large integers
 	 -- result is stored in fa2
@@ -487,11 +487,11 @@ feature{NONE} -- Operations tools
 	 fa2.item(fa2.upper) /= 0
       end
 
-   difference_between_fixed_arrays(larger, smaller: FIXED_ARRAY[INTEGER]):FIXED_ARRAY[INTEGER] is
+   difference_between_fixed_arrays(larger, smaller: FAST_ARRAY[INTEGER]):FAST_ARRAY[INTEGER] is
 	 -- only a tool used by some features in positive and negative
 	 -- large integers
 	 -- Warning : temp can be an empty array if result is zero
-	 -- Give a FIXED_ARRAY[INTEGER] for the creation of an
+	 -- Give a FAST_ARRAY[INTEGER] for the creation of an
 	 -- large_integer after an subtraction.
       require
 	 smaller /= Void
@@ -551,7 +551,7 @@ feature{NONE} -- Operations tools
 	  internal_correct_fixed(Result)
       end
 
-   difference_between_fixed_arrays_in_himself(larger, smaller: FIXED_ARRAY[INTEGER]) is
+   difference_between_fixed_arrays_in_himself(larger, smaller: FAST_ARRAY[INTEGER]) is
 	 -- only a tool used by some features in positive and negative
 	 -- large integers
 	 -- Warning : temp can be an empty array if result is zero
@@ -617,7 +617,7 @@ feature{NONE} -- Operations tools
 	 internal_correct_fixed(larger)
       end
 
-   difference_between_fixed_arrays_in_himself_from(larger, smaller: FIXED_ARRAY[INTEGER]; n: INTEGER) is
+   difference_between_fixed_arrays_in_himself_from(larger, smaller: FAST_ARRAY[INTEGER]; n: INTEGER) is
 	 -- only a tool used by some features in positive and negative
 	 -- large integers
 	 -- Warning : temp can be an empty array if result is zero
@@ -686,11 +686,11 @@ feature{NONE} -- Operations tools
 	 internal_correct_fixed(larger)
       end
 
-   mult_fixed_with_integer(fa: FIXED_ARRAY[INTEGER]; int: INTEGER): FIXED_ARRAY[INTEGER] is
+   mult_fixed_with_integer(fa: FAST_ARRAY[INTEGER]; int: INTEGER): FAST_ARRAY[INTEGER] is
 	 -- only a tool used by some features in positive and negative
 	 -- large integers
 	 -- Warning : temp can be an empty array if result is zero
-	 -- Give a FIXED_ARRAY[INTEGER] for the creation of an
+	 -- Give a FAST_ARRAY[INTEGER] for the creation of an
 	 -- large_integer after an multiplication between a
 	 -- large_integer and a small_integer.
       require
@@ -772,11 +772,11 @@ feature{NONE} -- Operations tools
 	 internal_correct_fixed(Result)
       end
 
-   mult_fixed_with_integer_in_temp(fa: FIXED_ARRAY[INTEGER]; int: INTEGER) is
+   mult_fixed_with_integer_in_temp(fa: FAST_ARRAY[INTEGER]; int: INTEGER) is
 	 -- only a tool used by some features in positive and negative
 	 -- large integers
 	 -- Warning : temp can be an empty array if result is zero
-	 -- Give a FIXED_ARRAY[INTEGER] for the creation of an
+	 -- Give a FAST_ARRAY[INTEGER] for the creation of an
 	 -- large_integer after an multiplication between a
 	 -- large_integer and a small_integer.
       require
@@ -858,7 +858,7 @@ feature{NONE} -- Operations tools
 	 internal_correct_fixed(temp_after_mult)
       end
 
-   mult_fixed_with_integer_in(fa1: FIXED_ARRAY[INTEGER]; int: INTEGER; fa2: FIXED_ARRAY[INTEGER]) is
+   mult_fixed_with_integer_in(fa1: FAST_ARRAY[INTEGER]; int: INTEGER; fa2: FAST_ARRAY[INTEGER]) is
 	 -- only a tool used by some features in positive and negative
 	 -- large integers
 	 -- Warning : temp can be an empty array if result is zero
@@ -949,11 +949,11 @@ feature{NONE} -- Operations tools
 	 internal_correct_fixed(fa2)
       end
 
-   mult_2_fixed(fa1, fa2: FIXED_ARRAY[INTEGER]): FIXED_ARRAY[INTEGER] is
+   mult_2_fixed(fa1, fa2: FAST_ARRAY[INTEGER]): FAST_ARRAY[INTEGER] is
 	 -- only a tool used by some features in positive and negative
 	 -- large integers
 	 -- Warning : temp can be an empty array if result is zero
-	 -- Give a FIXED_ARRAY[INTEGER] for the creation of an
+	 -- Give a FAST_ARRAY[INTEGER] for the creation of an
 	 -- large_integer after the multiplication of 2 large_integer.
       require
 	 fa1 /= Void
@@ -979,7 +979,7 @@ feature{NONE} -- Operations tools
 	  internal_correct_fixed(Result)
       end
 
-   mult_2_fixed_in_temp(fa1, fa2: FIXED_ARRAY[INTEGER]) is
+   mult_2_fixed_in_temp(fa1, fa2: FAST_ARRAY[INTEGER]) is
 	 -- only a tool used by some features in positive and negative
 	 -- large integers
 	 -- Warning : temp can be an empty array if result is zero
@@ -1011,7 +1011,7 @@ feature{NONE} -- Operations tools
 
    -- constants for integer division
 
-   fa_one: FIXED_ARRAY[INTEGER] is
+   fa_one: FAST_ARRAY[INTEGER] is
       once
 	 !!Result.make(0)
 	 Result.add_last(1)
@@ -1019,7 +1019,7 @@ feature{NONE} -- Operations tools
 	 Result /= Void and then (Result.item(0) = 1)
       end
 
-   divise_fixed_array(dividende, divisor : FIXED_ARRAY[INTEGER]) is
+   divise_fixed_array(dividende, divisor : FAST_ARRAY[INTEGER]) is
 	 -- quotient is stored in temp_quotient, remainder in temp_remainder
 	 -- Make the division between 2 abstract_integer.
 	 -- quotient is stored in temp_quotient.
@@ -1045,7 +1045,7 @@ feature{NONE} -- Operations tools
 	    from
 	       temp_remainder.copy(dividende)
 	       temp_quotient.resize(0)
-	       t := true
+	       t := True
 	    until
 	       (temp_remainder.upper < 0)
 		  or else fixed_array_greater_than(divisor, temp_remainder)
@@ -1074,16 +1074,16 @@ feature{NONE} -- Operations tools
 	       if (approx >= Double_base) then
 		  temp_2_digints.put((approx / Double_base).truncated_to_integer, 1)
 		  temp_2_digints.put((approx - (Double_base * temp_2_digints.item(1))).truncated_to_integer, 0)
-		  td := false
+		  td := False
 		  if t then
-		     t := false
+		     t := False
 		     temp_quotient.resize(2 + n)
 		  end
 	       else
 		  val := approx.truncated_to_integer
-		  td := true
+		  td := True
 		  if t then
-		     t := false
+		     t := False
 		     temp_quotient.resize(1 + n)
 		  end
 	       end
@@ -1102,7 +1102,7 @@ feature{NONE} -- Operations tools
 	 internal_correct_fixed(temp_quotient)
       end
 
-   shift(fa: FIXED_ARRAY[INTEGER]) is
+   shift(fa: FAST_ARRAY[INTEGER]) is
       require
 	 fa /= Void
       local
@@ -1122,7 +1122,7 @@ feature{NONE} -- Operations tools
 
 feature {NONE} -- Comparison tools
 
-   fixed_array_greater_than(fa1, fa2: FIXED_ARRAY[INTEGER]): BOOLEAN is
+   fixed_array_greater_than(fa1, fa2: FAST_ARRAY[INTEGER]): BOOLEAN is
       require
 	 fa1 /= Void
 	 internal_correct_fixed(fa1)
@@ -1148,14 +1148,14 @@ feature {NONE} -- Comparison tools
 
 feature{NUMBER} -- validity check
 
-   internal_correct_fixed(fa: FIXED_ARRAY[INTEGER]): BOOLEAN is
+   internal_correct_fixed(fa: FAST_ARRAY[INTEGER]): BOOLEAN is
       do
 	 Result := correct_fixed(fa)
 		    or else ((fa.upper = 0) and then (fa.item(0) /= 0))
 		    or else (fa.upper = -1)
       end
 
-   correct_fixed(fa: FIXED_ARRAY[INTEGER]): BOOLEAN is
+   correct_fixed(fa: FAST_ARRAY[INTEGER]): BOOLEAN is
       local
 	 i : INTEGER
       do
@@ -1172,7 +1172,7 @@ feature{NUMBER} -- validity check
 
 feature {NONE}
 
-   storage : FIXED_ARRAY[INTEGER]
+   storage : FAST_ARRAY[INTEGER]
 
    view: STRING is
 	 -- for debugging only

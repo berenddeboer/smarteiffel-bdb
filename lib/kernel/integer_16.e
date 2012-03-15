@@ -23,12 +23,14 @@ expanded class INTEGER_16
 
 inherit
    INTEGER_GENERAL
-      redefine fit_integer_16, fit_integer_32, fit_integer, item
+      redefine
+          fit_integer_16, fit_integer_32, fit_integer, item, to_integer,
+          to_integer_32, to_number
       end
 
 feature
 
-   fit_integer_16, fit_integer_32, fit_integer: BOOLEAN is true
+   fit_integer_16, fit_integer_32, fit_integer: BOOLEAN is True
 
    low_8: INTEGER_8 is
 	 -- The 8 low bits of `Current' (i.e. the right-most part).
@@ -39,6 +41,21 @@ feature
 	 -- The 8 high bits of `Current' (i.e. the left-most part).
       do
 	 Result := (item |>> 8).low_8
+      end
+
+feature
+
+   to_integer_32, to_integer: INTEGER_32 is
+      external "SmartEiffel"
+      end
+
+   to_number: NUMBER is
+      local
+         number_tools: NUMBER_TOOLS
+      do
+         Result := number_tools.from_integer(Current)
+      ensure
+         Result @= Current
       end
 
 feature -- For experts only:

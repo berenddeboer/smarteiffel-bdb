@@ -20,7 +20,7 @@ expanded class HASH_TABLE_SIZE
 --
 -- Some useful features to deal with prime INTEGER values in order to
 -- select an appropriate size for some hash table (used for example
--- by the DICTIONARY class as well as by the SET class).
+-- by the HASHED_DICTIONARY class as well as by the HASHED_SET class).
 --
 
 feature

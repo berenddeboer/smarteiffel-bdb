@@ -80,7 +80,7 @@ feature -- Connect and disconnect:
          path_pointer := directory_path.to_external
          directory_stream := basic_directory_open(path_pointer)
          current_entry := directory_stream
-         last_entry.clear
+         last_entry.clear_count
       ensure
          is_connected implies not end_of_input
       end
@@ -114,10 +114,10 @@ feature -- Connect and disconnect:
                directory_stream := basic_directory_open(p)
                current_entry := directory_stream
                if directory_stream.is_null then
-                  last_entry.clear
+                  last_entry.clear_count
                end
             else
-               last_entry.clear
+               last_entry.clear_count
             end
          end
       ensure
@@ -140,10 +140,10 @@ feature -- Connect and disconnect:
             directory_stream := basic_directory_open(path)
             current_entry := directory_stream
             if directory_stream.is_null then
-               last_entry.clear
+               last_entry.clear_count
             end
          else
-            last_entry.clear
+            last_entry.clear_count
          end
       ensure
          is_connected implies not end_of_input
@@ -249,7 +249,7 @@ feature -- File path handling tools:
             end
 	 elseif amiga_notation then
 	    if last_entry.last = ':' then
-	       last_entry.clear
+	       last_entry.clear_count
 	    else
 	       from
 		  last_entry.remove_last(1)
@@ -301,7 +301,7 @@ feature -- File path handling tools:
                   end
                end
             elseif last_entry.last = ':' then
-	       last_entry.clear
+	       last_entry.clear_count
             else
                from
                   last_entry.remove_last(1)
@@ -312,17 +312,17 @@ feature -- File path handling tools:
                   last_entry.remove_last(1)
                end
                if last_entry.is_empty then
-		  last_entry.clear
+		  last_entry.clear_count
                end
             end
          elseif system_notation_detected then
-            last_entry.clear
+            last_entry.clear_count
          else
             set_notation_using(some_path)
             if system_notation_detected then
                compute_parent_directory_of(some_path)
             else
-               last_entry.clear
+               last_entry.clear_count
             end
          end
       end
@@ -344,10 +344,10 @@ feature -- File path handling tools:
             if (once ".").is_equal(entry_name) then
                -- Because you would get the same directory as `parent_path' and
                -- not a new subdirectory as explained before.
-               last_entry.clear
+               last_entry.clear_count
             elseif (once "..").is_equal(entry_name) then
                -- Because you would not get a subdirectory of `parent_path'.
-               last_entry.clear
+               last_entry.clear_count
             else
                last_entry.extend_unless('/')
                if entry_name.first = '/' then
@@ -360,10 +360,10 @@ feature -- File path handling tools:
             if (once ".").is_equal(entry_name) then
                -- Because you would get the same directory as `parent_path' and
                -- not a new subdirectory as explained before.
-               last_entry.clear
+               last_entry.clear_count
             elseif (once "..").is_equal(entry_name) then
                -- Because you would not get a subdirectory of `parent_path'.
-               last_entry.clear
+               last_entry.clear_count
             else
                last_entry.extend_unless('\')
                if entry_name.first = '\' then
@@ -396,7 +396,7 @@ feature -- File path handling tools:
             last_entry.extend_unless(':')
          elseif openvms_notation then
 	    if last_entry.count = 1 then
-	       last_entry.clear
+	       last_entry.clear_count
             elseif last_entry.last = ']' then
 	       last_entry.remove_last(1)
 	       if last_entry.last = '[' then
@@ -412,16 +412,16 @@ feature -- File path handling tools:
 	       last_entry.append(entry_name)
 	       last_entry.extend(']')
 	    else
-	       last_entry.clear
+	       last_entry.clear_count
             end
          elseif system_notation_detected then
-            last_entry.clear
+            last_entry.clear_count
          else
             set_notation_using(parent_path)
             if system_notation_detected then
                compute_subdirectory_with(parent_path,entry_name)
             else
-               last_entry.clear
+               last_entry.clear_count
             end
          end
       end
@@ -486,13 +486,13 @@ feature -- File path handling tools:
             end
             last_entry.append(file_name)
          elseif system_notation_detected then
-            last_entry.clear
+            last_entry.clear_count
          else
             set_notation_using(parent_path)
             if system_notation_detected then
                compute_file_path_with(parent_path,file_name)
             else
-               last_entry.clear
+               last_entry.clear_count
             end
          end
       end
@@ -517,10 +517,10 @@ feature -- File path handling tools:
                disconnect
                check not last_entry.is_empty end
             else
-               last_entry.clear
+               last_entry.clear_count
             end
          else
-            last_entry.clear
+            last_entry.clear_count
          end
       ensure
          not is_connected
@@ -561,6 +561,8 @@ feature -- Disk modification:
          -- specified by `directory_path'.
       require
          not is_connected
+      local
+         ftools: FILE_TOOLS
       do
          connect_to(directory_path)
          if is_connected then
@@ -572,7 +574,7 @@ feature -- Disk modification:
                tmp_path.copy(last_entry)
                compute_file_path_with(directory_path,tmp_path)
                tmp_path.copy(last_entry)
-               remove_file(tmp_path)
+               ftools.delete(tmp_path)
                read_entry
             end
             disconnect
@@ -602,7 +604,7 @@ feature -- Miscellaneous:
 	    end
 	 when 'W', 'V' then
 	 else
-	    Result := true
+	    Result := True
 	 end
       end
 

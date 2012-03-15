@@ -1021,7 +1021,7 @@ feature -- Comparison:
       do
 	 if not negative and other.negative then
 	    -- `Current'>0 and `other'<0
-	    other.set_negative(false)
+	    other.set_negative(False)
 	    if(current>other) then
 	       result:=1
 	    elseif(current<other) then
@@ -1029,10 +1029,10 @@ feature -- Comparison:
 	    else
 	       result:=0
 	    end
-	    other.set_negative(true)
+	    other.set_negative(True)
 	 elseif negative and not other.negative then
 	    --`Current'<0 and `other'>0
-	    set_negative(false)
+	    set_negative(False)
 	    if(current>other) then
 	       result:=1
 	    elseif(current<other) then
@@ -1040,11 +1040,11 @@ feature -- Comparison:
 	    else
 	       result:=0
 	    end
-	    set_negative(true)
+	    set_negative(True)
 	 elseif negative and other.negative then
 	    --`Current'<0 and `other'<0
-	    set_negative(false)
-	    other.set_negative(false)
+	    set_negative(False)
+	    other.set_negative(False)
 	    if(current>other) then
 	       result:=1
 	    elseif(current<other) then
@@ -1052,8 +1052,8 @@ feature -- Comparison:
 	    else
 	       result:=0
 	    end
-	    set_negative(true)
-	    other.set_negative(true)
+	    set_negative(True)
+	    other.set_negative(True)
 	 elseif not negative and not other.negative then
 	     --`Current'>0 and `other'>0
 	    if(current>other) then
@@ -1083,7 +1083,7 @@ feature -- Printing:
          -- STRING creation during the process.
       local
 	 max_num_digit_groups, num_groups, i, num_leading_zeros: INTEGER
-	 digit_group: FIXED_ARRAY[STRING]; q, r, a, b: like Current
+	 digit_group: FAST_ARRAY[STRING]; q, r, a, b: like Current
       do
 	 if integer_length = 0 then
 	    buffer.extend('0')
@@ -1666,7 +1666,7 @@ feature {NONE} -- Implementation:
    debug_info: INTEGER_64
 	 -- *** A VIRER PLUS TARD ***
 
-   divadd(a, res: FIXED_ARRAY[INTEGER]; o: INTEGER) is
+   divadd(a, res: FAST_ARRAY[INTEGER]; o: INTEGER) is
 	 -- A primitive used for division. This method adds in one multiple of the
 	 -- divisor a back to the dividend result at a specified offset. It is used
 	 -- when qhat was estimated too large, and must be adjusted.
@@ -1681,7 +1681,7 @@ feature {NONE} -- Implementation:
 
    unsigned_long_compare(one, two: INTEGER_64): BOOLEAN is
 	 -- Compare two longs as if they were unsigned.
-	 -- Returns true iff one is bigger than two.
+	 -- Returns True iff one is bigger than two.
       do
 	 Result := (one + Minimum_integer_64) > (two + Minimum_integer_64)
       end

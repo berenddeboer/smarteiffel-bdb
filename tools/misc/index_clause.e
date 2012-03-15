@@ -41,7 +41,7 @@ feature {NONE}
 
    tag: STRING
 
-   list: FIXED_ARRAY[EXPRESSION]
+   list: FAST_ARRAY[EXPRESSION]
 
    with_tag(i: like tag) is
       require

@@ -170,7 +170,7 @@ feature {NONE}
          create text.with_capacity(6000)
       end
 
-   text: FIXED_ARRAY[STRING]
+   text: FAST_ARRAY[STRING]
          -- To store the complete file to parse. Each line
          -- is one STRING without the '%N' end-of-line mark.
 
@@ -180,7 +180,7 @@ feature {NONE}
       do
          if i <= text.upper then
             Result := text.item(i)
-            Result.clear
+            Result.clear_count
          else
             !!Result.make(medium_line_size)
             text.add_last(Result)

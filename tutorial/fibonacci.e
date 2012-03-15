@@ -1,5 +1,8 @@
 class FIBONACCI
 
+inherit
+    ARGUMENTS
+
 creation make
 
 feature

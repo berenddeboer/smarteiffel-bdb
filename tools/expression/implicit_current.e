@@ -28,6 +28,10 @@ inherit ABSTRACT_CURRENT
 
 creation make
 
+feature
+
+   is_written: BOOLEAN is False
+
 feature {IMPLICIT_CURRENT_VISITOR}
 
    accept(visitor: IMPLICIT_CURRENT_VISITOR) is
@@ -37,6 +41,9 @@ feature {IMPLICIT_CURRENT_VISITOR}
 
 feature {NONE}
 
-   is_written: BOOLEAN is false
-
+   make_new: like Current is
+      do
+         create Result.make (start_position)
+      end
+               
 end -- IMPLICIT_CURRENT

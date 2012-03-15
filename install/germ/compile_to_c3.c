@@ -8,262 +8,261 @@ extern"C"{
 #ifdef __cplusplus
 extern"C"{
 #endif
-void Zzy(Zp2*C,T0*a1){T2 ZZw=0;(C->ZSb)=((((Zp2*)a1))->ZSb);(C->ZRb)=((((Zp2*)a1))->ZRb);ZZw=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));
-if((Z3)((((C)->ZQb))<(ZZw))){(C->ZPb)=((Zna)(Zk(ZZw,sizeof(T0*))));(C->ZQb)=ZZw;}if((Z3)((ZZw)>(Zrs(0)))){ZEt(((C)->ZPb),((((Zp2*)a1))->ZPb),(Z3)(((ZZw))-((T2)(Zrs(1)))));
-}}T2 ZAy(Zp2*C){T2 R=0;R=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));return R;}T0*ZBy(Zp2*C,T2 a1){T0*R=Zo;R=(((C)->ZPb))[(Z3)(((a1))-(((C)->ZSb)))];
-return R;}void ZCy(Zp2*C,T0*a1){T2 Z_w=0;if((Z3)((((C)->ZQb))<((Z3)(((ZAy(C)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){Z_w=Zrs(16);(C->ZPb)=((Zna)(Zk(Z_w,sizeof(T0*))));
-(C->ZQb)=Z_w;}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZDt(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-{Zp2*C1=C;T0*b1=a1;T2 b2=((C)->ZRb);(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);}}T0*ZDy(Zp2*C){T0*R=Zo;R=Zh(sizeof(*C));*((Zp2*)R)=ZHd;
-Zzy(((Zp2*)R),((T0*)C));return R;}void ZEy(Zp2*C,T2 a1,T2 a2){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zna)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;
-}(C->ZSb)=a2;(C->ZRb)=(Z3)(((a2))-(Zrs(1)));}void ZFy(Zt2*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((ZJa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zwu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZGy(Zt2*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((ZJa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else
-if((Z3)((((C)->ZQb))>(a1))){Zyu(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}void ZHy(Zz2*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zob)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zyw(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZIy(Zz2*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zob)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else
-if((Z3)((((C)->ZQb))>(a1))){ZAw(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}T6 ZJy(ZF2*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((Zrs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));
-return R;}T6 ZKy(ZF2*C,T0*a1){T6 R=0;R=((T6)(ZJy(C,ZLy(C,a1))));return R;}void ZMy(ZF2*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((ZDa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zfu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}T2 ZLy(ZF2*C,T0*a1){T2 R=0;R=Ziu(((C)->ZPb),a1,((C)->ZRb));return R;}void ZNy(ZF2*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((ZDa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){Zhu(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);
-}T6 ZOy(ZC3*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((Zrs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));return R;}T6 ZPy(ZC3*C,T0*a1){T6
-R=0;R=((T6)(ZOy(C,ZQy(C,a1))));return R;}void ZRy(ZC3*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((ZGa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zou(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}T2 ZQy(ZC3*C,T0*a1){T2 R=0;R=Zru(((C)->ZPb),a1,((C)->ZRb));return R;}void ZSy(ZC3*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((ZGa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){Zqu(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);
-}void ZTy(ZC3*C,T2 a1,T2 a2){T0*Zsx=Zo;Zsx=(((C)->ZPb))[a1];(((C)->ZPb))[a1]=((((C)->ZPb))[a2]);(((C)->ZPb))[a2]=(Zsx);}T6 ZUy(Z34*C,T2
-a1){T6 R=0;R=((T6)((T6)(((Z3)((Zrs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));return R;}T6 ZVy(Z34*C,T0*a1){T6 R=0;R=((T6)(ZUy(C,ZWy(C,a1))));
-return R;}void ZXy(Z34*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zha)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));
-(C->ZPb)=Zqt(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}T2 ZWy(Z34*C,T0*a1){
-T2 R=0;R=Ztt(((C)->ZPb),a1,((C)->ZRb));return R;}void ZYy(Z34*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zha)(Zk(a1,sizeof(T0*))));
-(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){Zst(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}void ZZy(Z54*C,T0*a1){T2 Z_w=0;
-if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){
-(C->ZPb)=((ZHa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zsu(((C)->ZPb),((C)->ZQb),Z_w);
-(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z_y(Z54*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((ZHa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){Zvu(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);
-}void Z0z(Zq4*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zpa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));
-(C->ZPb)=ZIt(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z1z(Zq4*C,T2
-a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zpa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){ZKt(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));
-}(C->ZRb)=Zrs(-1);}void Z2z(Zt4*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Z4b)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));
-(C->ZPb)=Zvv(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z3z(Zt4*C,T2
-a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Z4b)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){Zxv(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));
-}(C->ZRb)=Zrs(-1);}void Z4z(Zv4*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zib)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));
-(C->ZPb)=ZZv(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z5z(Zv4*C,T2
-a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zib)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){Z0w(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));
-}(C->ZRb)=Zrs(-1);}void Z6z(ZB4*C,T0*a1){T2 Zyx=0;T2 Z_w=0;Zyx=((((ZB4*)a1))->ZRb);if((Z3)((Zyx)>=(Zrs(0)))){Z_w=(Z3)(((Zyx))+(Zrs(1)));
-if((Z3)((((C)->ZQb))<(Z_w))){(C->ZPb)=((Zra)(Zk(Z_w,sizeof(T0*))));(C->ZQb)=Z_w;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){ZLt(((C)->ZPb),(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));
-}ZNt(((C)->ZPb),((((ZB4*)a1))->ZPb),Zyx);}else if((Z3)((((C)->ZQb))>(Zrs(0)))){ZLt(((C)->ZPb),(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));}(C->ZRb)=Zyx;
-}void Z7z(ZB4*C,T2 a1){if((Z3)((a1)>(((C)->ZQb)))){(C->ZPb)=((Zra)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){
-(C->ZRb)=ZNs(((C)->ZRb),(Z3)(((a1))-(Zrs(1))));if((Z3)((((C)->ZRb))>=(Zrs(0)))){ZLt(((C)->ZPb),((C)->ZRb));}}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));
-}void Z8z(ZB4*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zra)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));
-(C->ZPb)=ZMt(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z9z(ZB4*C,T2
-a1){T2 Z_w=0;if((Z3)((a1)>((Z3)(((((C)->ZRb)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zra)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;
-}else if((Z3)((((C)->ZQb))<(a1))){Z_w=(Z3)(((((C)->ZQb)))*(Zrs(2)));while(!((Z3)((Z_w)>=(a1)))){Z_w=(Z3)(((Z_w))*(Zrs(2)));}(C->ZPb)=ZMt(((C)->ZPb),((C)->ZQb),Z_w);
-(C->ZQb)=Z_w;}}else if((a1)!=((Z3)(((((C)->ZRb)))+(Zrs(1))))){ZOt(((C)->ZPb),a1,(Z3)((((Z3)(((((C)->ZRb)))+(Zrs(1)))))-((T2)(Zrs(1)))));
-}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}T0*Zaz(ZB4*C){T0*R=Zo;R=Zh(sizeof(*C));*((ZB4*)R)=Zbg;Z6z(((ZB4*)R),((T0*)C));return R;}void Zbz(ZB4*C,T2
-a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zra)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){ZOt(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));
-}(C->ZRb)=Zrs(-1);}void Zcz(ZP4*C,T2 a1){if((Z3)((a1)>(((C)->ZQb)))){(C->ZPb)=((ZOa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){
-(C->ZRb)=ZNs(((C)->ZRb),(Z3)(((a1))-(Zrs(1))));if((Z3)((((C)->ZRb))>=(Zrs(0)))){ZLu(((C)->ZPb),((C)->ZRb));}}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));
-}void Zdz(Z65*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zsa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));
-(C->ZPb)=ZPt(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}void Zez(Z65*C,T2
-a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zsa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){ZRt(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));
-}(C->ZRb)=Zrs(-1);}T2 Zfz(Zi5*C){T2 R=0;R=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));return R;}T0*Zgz(Zi5*C,T2 a1){T0*R=Zo;
-R=(((C)->ZPb))[(Z3)(((a1))-(((C)->ZSb)))];return R;}void Zhz(Zi5*C,T0*a1){T2 Z_w=0;if((Z3)((((C)->ZQb))<((Z3)(((Zfz(C)))+(Zrs(1)))))){
-if((((C)->ZQb))==(Zrs(0))){Z_w=Zrs(16);(C->ZPb)=((Zta)(Zk(Z_w,sizeof(T0*))));(C->ZQb)=Z_w;}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZSt(((C)->ZPb),((C)->ZQb),Z_w);
-(C->ZQb)=Z_w;}}(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));{Zi5*C1=C;T0*b1=a1;T2 b2=((C)->ZRb);(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);
-}}void Ziz(Zi5*C,T2 a1,T2 a2){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zta)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}(C->ZSb)=a2;(C->ZRb)=(Z3)(((a2))-(Zrs(1)));
-}void Zjz(Zo5*C,T0*a1){T2 Zyx=0;T2 Z_w=0;Zyx=((((Zo5*)a1))->ZRb);if((Z3)((Zyx)>=(Zrs(0)))){Z_w=(Z3)(((Zyx))+(Zrs(1)));if((Z3)((((C)->ZQb))<(Z_w))){
-(C->ZPb)=((ZMa)(Zk(Z_w,sizeof(T0*))));(C->ZQb)=Z_w;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){ZFu(((C)->ZPb),(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));
-}ZHu(((C)->ZPb),((((Zo5*)a1))->ZPb),Zyx);}else if((Z3)((((C)->ZQb))>(Zrs(0)))){ZFu(((C)->ZPb),(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));}(C->ZRb)=Zyx;
-}void Zkz(Zo5*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((ZMa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));
-(C->ZPb)=ZGu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}T0*Zlz(Zo5*C){
-T0*R=Zo;R=Zh(sizeof(*C));*((Zo5*)R)=Zgh;Zjz(((Zo5*)R),((T0*)C));return R;}void Zmz(Zo5*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((ZMa)(Zk(a1,sizeof(T0*))));
-(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){ZIu(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}T2 Znz(Zq5*C){T2 R=0;R=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));
-return R;}void Zoz(Zq5*C,T0*a1){T2 Z_w=0;if((Z3)((((C)->ZQb))<((Z3)(((Znz(C)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){Z_w=Zrs(16);(C->ZPb)=((ZNa)(Zk(Z_w,sizeof(T0*))));
-(C->ZQb)=Z_w;}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZJu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-{Zq5*C1=C;T0*b1=a1;T2 b2=((C)->ZRb);(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);}}void Zpz(Zq5*C,T2 a1,T2 a2){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((ZNa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}(C->ZSb)=a2;(C->ZRb)=(Z3)(((a2))-(Zrs(1)));}void Zqz(Zu5*C,T6 a1,T2 a2){if((Z3)((((C)->ZRb))<(a2))){
-if((a2)==((Z3)(((((C)->ZRb)))+(Zrs(1))))){Zrz(C,(T6)(a1));}else{Zsz(C,((C)->ZSb),a2);{Zu5*C1=C;T6 b1=(T6)(a1);T2 b2=a2;(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=((T6)(b1));
-}}}else if((Z3)((a2)<(((C)->ZSb)))){Zsz(C,a2,((C)->ZRb));{Zu5*C1=C;T6 b1=(T6)(a1);T2 b2=a2;(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=((T6)(b1));
-}}else{{Zu5*C1=C;T6 b1=(T6)(a1);T2 b2=a2;(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=((T6)(b1));}}}T2 Ztz(Zu5*C){T2 R=0;R=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));
-return R;}T6 Zuz(Zu5*C,T2 a1){T6 R=0;R=((T6)((((C)->ZPb))[(Z3)(((a1))-(((C)->ZSb)))]));return R;}void Zvz(Zu5*C,T2 a1,T2 a2){T2 ZOx=0;
-(C->ZSb)=a1;(C->ZRb)=a2;ZOx=(Z3)((((Z3)(((a2))-(a1))))+(Zrs(1)));if((Z3)((ZOx)>(Zrs(0)))){if((Z3)((((C)->ZQb))<(ZOx))){(C->ZPb)=((Zxa)(Zk(ZOx,sizeof(T6))));
-(C->ZQb)=ZOx;}else{{Zu5*C1=C;T6 ZPx=0;{Zu5*C2=C1;T6 c1=(T6)(ZPx);Z3u(((C2)->ZPb),(T6)(c1),(Z3)(((((C2)->ZRb)))-(((C2)->ZSb))));}}}}}void
-Zrz(Zu5*C,T6 a1){T2 Z_w=0;if((Z3)((((C)->ZQb))<((Z3)(((Ztz(C)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){Z_w=Zrs(16);(C->ZPb)=((Zxa)(Zk(Z_w,sizeof(T6))));
-(C->ZQb)=Z_w;}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Z0u(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-{Zu5*C1=C;T6 b1=(T6)(a1);T2 b2=((C)->ZRb);(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=((T6)(b1));}}void Zsz(Zu5*C,T2 a1,T2 a2){T2 ZOx=0;
-T2 Zoy=0;T2 Zpy=0;ZOx=(Z3)((((Z3)(((a2))-(a1))))+(Zrs(1)));if((Z3)((ZOx)>(Zrs(0)))){if((Z3)((ZOx)>(((C)->ZQb)))){if((((C)->ZQb))==(Zrs(0))){
-(C->ZPb)=((Zxa)(Zk(ZOx,sizeof(T6))));(C->ZQb)=ZOx;}else{(C->ZPb)=Z0u(((C)->ZPb),((C)->ZQb),ZOx);(C->ZQb)=ZOx;}}Zoy=(Z3)(((((C)->ZSb)))-(a1));
-Zpy=(Z3)((((Z3)(((ZSs(a2,((C)->ZRb))))-(ZNs(a1,((C)->ZSb))))))+(Zrs(1)));if((Z3)((Zpy)>(Zrs(0)))){if((Zoy)==(Zrs(0))){if((Z3)((Zpy)<(((C)->ZQb)))){
-Z4u(((C)->ZPb),Zpy,(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));}}else if((Z3)((Zoy)<(Zrs(0)))){Z2u(((C)->ZPb),-(Zoy),(Z3)((((Z3)(((Zpy))-(Zoy))))-((T2)(Zrs(1)))),Zoy);
-if((Z3)((Zpy)<(((C)->ZQb)))){Z4u(((C)->ZPb),Zpy,(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));}}else{Z2u(((C)->ZPb),(T2)(Zrs(0)),(Z3)(((Zpy))-((T2)(Zrs(1)))),Zoy);
-Z4u(((C)->ZPb),(T2)(Zrs(0)),(Z3)(((Zoy))-((T2)(Zrs(1)))));if((Z3)(((Z3)(((Zpy))+(Zoy)))<(((C)->ZQb)))){Z4u(((C)->ZPb),(Z3)(((Zpy))+(Zoy)),(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));
-}}}else{Z4u(((C)->ZPb),(T2)(Zrs(0)),(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));}}(C->ZSb)=a1;(C->ZRb)=a2;}T2 Zwz(T77*C,T76 a1){T2 R=0;R=Z2w(((C)->ZPb),a1,((C)->ZRb));
-return R;}void Zxz(T77*C){T79 Z3y=Zo;if((((C)->ZRb))==(Zrs(0))){(C->ZPb)=Z3y;(C->ZQb)=Zrs(0);(C->ZRb)=Zrs(-1);}else{Z6w(((C)->ZPb),((C)->ZRb));
-(C->ZRb)=(Z3)(((((C)->ZRb)))-(Zrs(1)));}}T76 Zyz(T77*C,T2 a1){T76 R={Zo,Zo,0};{T76 Z3w;R=(*(Z3w=(((C)->ZPb))[a1],&Z3w));}return R;}T6
-Zzz(T77*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((Zrs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));return R;}void ZAz(T77*C,T2 a1){Z9w(((C)->ZPb),a1,((C)->ZRb));
-(C->ZRb)=(Z3)(((((C)->ZRb)))-(Zrs(1)));}T6 ZBz(T77*C,T76 a1){T6 R=0;R=((T6)(Zzz(C,ZCz(C,a1))));return R;}void ZDz(T77*C,T76 a1){T2 Z_w=0;
-if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){
-(C->ZPb)=((T79)(Zk(Zrs(2),sizeof(T76))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Z4w(((C)->ZPb),((C)->ZQb),Z_w);
-(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}{T76 Z7w=a1;Z8w((((C)->ZPb))+(((C)->ZRb)),&(Z7w),sizeof(T76));}}T76 ZEz(T77*C){T76
-R={Zo,Zo,0};{T76 Z3w;R=(*(Z3w=(((C)->ZPb))[Zrs(0)],&Z3w));}return R;}T2 ZCz(T77*C,T76 a1){T2 R=0;R=Zbw(((C)->ZPb),a1,((C)->ZRb));return
-R;}void ZFz(T77*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((T79)(Zk(a1,sizeof(T76))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){
-Zaw(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}T0*ZGz(T52*C){T0*R=Zo;R=(((C)->ZPb))[((C)->ZRb)];return R;}T6 ZHz(T52*C,T2
-a1){T6 R=0;R=((T6)((T6)(((Z3)((Zrs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));return R;}T2 ZIz(T52*C,T0*a1){T2 R=0;R=ZRu(((C)->ZPb),a1,((C)->ZRb));
-return R;}void ZJz(T52*C,T2 a1){if((Z3)((a1)>(((C)->ZQb)))){(C->ZPb)=((T59)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){
-(C->ZRb)=ZNs(((C)->ZRb),(Z3)(((a1))-(Zrs(1))));if((Z3)((((C)->ZRb))>=(Zrs(0)))){ZOu(((C)->ZPb),((C)->ZRb));}}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));
-}T0*ZKz(T52*C){T0*R=Zo;{Z_7*n=((Z_7*)Zh(sizeof(*n)));*n=Zsk;ZLz(n,(T0*)C);R=((T0*)n);}return R;}T6 ZMz(T52*C,T0*a1){T6 R=0;R=((T6)(ZHz(C,ZIz(C,a1))));
-return R;}T6 ZNz(T52*C,T0*a1){T6 R=0;R=((T6)(ZHz(C,ZOz(C,a1))));return R;}void ZPz(T52*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((T59)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZPu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZQz(T52*C,T2 a1){T2 Z_w=0;if((Z3)((a1)>((Z3)(((((C)->ZRb)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){
-(C->ZPb)=((T59)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))<(a1))){Z_w=(Z3)(((((C)->ZQb)))*(Zrs(2)));while(!((Z3)((Z_w)>=(a1))))
-{Z_w=(Z3)(((Z_w))*(Zrs(2)));}(C->ZPb)=ZPu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}else if((a1)!=((Z3)(((((C)->ZRb)))+(Zrs(1))))){ZSu(((C)->ZPb),a1,(Z3)((((Z3)(((((C)->ZRb)))+(Zrs(1)))))-((T2)(Zrs(1)))));
-}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}T2 ZOz(T52*C,T0*a1){T2 R=0;R=ZTu(((C)->ZPb),a1,((C)->ZRb));return R;}void ZRz(T52*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((T59)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){ZSu(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);
-}void ZSz(T52*C,T0*a1){T2 _i1=0;T2 _i2=0;T2 _up=0;ZRz(C,ZTz(a1));(C->ZRb)=(Z3)(((ZTz(a1)))-(Zrs(1)));_i1=Zrs(0);_i2=ZUz(a1);_up=((((T52*)a1))->ZRb);
-while(!((Z3)((_i2)>(_up)))){(((C)->ZPb))[_i1]=(ZVz(a1,_i2));_i1=(Z3)(((_i1))+(Zrs(1)));_i2=(Z3)(((_i2))+(Zrs(1)));}}void ZWz(T52*C,T2
-a1,T2 a2){T0*Zsx=Zo;Zsx=(((C)->ZPb))[a1];(((C)->ZPb))[a1]=((((C)->ZPb))[a2]);(((C)->ZPb))[a2]=(Zsx);}T0*ZXz(Z_5*C){T0*R=Zo;R=(((C)->ZPb))[((C)->ZRb)];
-return R;}T6 ZYz(Z_5*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((Zrs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));return R;}void ZZz(Z_5*C,T2
-a1){if((Z3)((a1)>(((C)->ZQb)))){(C->ZPb)=((ZEa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){(C->ZRb)=ZNs(((C)->ZRb),(Z3)(((a1))-(Zrs(1))));
-if((Z3)((((C)->ZRb))>=(Zrs(0)))){Zju(((C)->ZPb),((C)->ZRb));}}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}void Z_z(Z_5*C){(C->ZRb)=(Z3)(((((C)->ZRb)))-(Zrs(1)));
-}T6 Z0A(Z_5*C,T0*a1){T6 R=0;R=((T6)(ZYz(C,Z1A(C,a1))));return R;}void Z2A(Z_5*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((ZEa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zku(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z3A(Z_5*C,T2 a1){T2 Z_w=0;if((Z3)((a1)>((Z3)(((((C)->ZRb)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){
-(C->ZPb)=((ZEa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))<(a1))){Z_w=(Z3)(((((C)->ZQb)))*(Zrs(2)));while(!((Z3)((Z_w)>=(a1))))
-{Z_w=(Z3)(((Z_w))*(Zrs(2)));}(C->ZPb)=Zku(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}else if((a1)!=((Z3)(((((C)->ZRb)))+(Zrs(1))))){Zmu(((C)->ZPb),a1,(Z3)((((Z3)(((((C)->ZRb)))+(Zrs(1)))))-((T2)(Zrs(1)))));
-}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}T2 Z1A(Z_5*C,T0*a1){T2 R=0;R=Znu(((C)->ZPb),a1,((C)->ZRb));return R;}void Z4A(Z_5*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((ZEa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){Zmu(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);
-}T2 Z5A(Z36*C){T2 R=0;R=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));return R;}T0*Z6A(Z36*C,T2 a1){T0*R=Zo;R=(((C)->ZPb))[(Z3)(((a1))-(((C)->ZSb)))];
-return R;}void Z7A(Z36*C,T0*a1){T2 Z_w=0;if((Z3)((((C)->ZQb))<((Z3)(((Z5A(C)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){Z_w=Zrs(16);(C->ZPb)=((Zka)(Zk(Z_w,sizeof(T0*))));
-(C->ZQb)=Z_w;}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zxt(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-{Z36*C1=C;T0*b1=a1;T2 b2=((C)->ZRb);(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);}}void Z8A(Z36*C,T2 a1,T2 a2){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((Zka)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}(C->ZSb)=a2;(C->ZRb)=(Z3)(((a2))-(Zrs(1)));}T6 Z9A(Zp6*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((Zrs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));
-return R;}T6 ZaA(Zp6*C,T0*a1){T6 R=0;R=((T6)(Z9A(C,ZbA(C,a1))));return R;}void ZcA(Zp6*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zgb)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZVv(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}T2 ZbA(Zp6*C,T0*a1){T2 R=0;R=ZYv(((C)->ZPb),a1,((C)->ZRb));return R;}void ZdA(Zp6*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((Zgb)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){ZXv(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);
-}void ZeA(ZR6*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zma)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));
-(C->ZPb)=ZAt(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZfA(ZR6*C,T2
-a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zma)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){ZCt(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));
-}(C->ZRb)=Zrs(-1);}void ZgA(Za7*C,T2 a1){if((Z3)((a1)>(((C)->ZQb)))){(C->ZPb)=((Zbb)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){
-(C->ZRb)=ZNs(((C)->ZRb),(Z3)(((a1))-(Zrs(1))));if((Z3)((((C)->ZRb))>=(Zrs(0)))){ZHv(((C)->ZPb),((C)->ZRb));}}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));
-}void ZhA(Za7*C,T2 a1){T2 Z_w=0;if((Z3)((a1)>((Z3)(((((C)->ZRb)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zbb)(Zk(a1,sizeof(T0*))));
-(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))<(a1))){Z_w=(Z3)(((((C)->ZQb)))*(Zrs(2)));while(!((Z3)((Z_w)>=(a1)))){Z_w=(Z3)(((Z_w))*(Zrs(2)));
-}(C->ZPb)=ZIv(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}else if((a1)!=((Z3)(((((C)->ZRb)))+(Zrs(1))))){ZKv(((C)->ZPb),a1,(Z3)((((Z3)(((((C)->ZRb)))+(Zrs(1)))))-((T2)(Zrs(1)))));
-}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}void ZiA(Z18*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((ZRa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZUu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZjA(Z18*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((ZRa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else
-if((Z3)((((C)->ZQb))>(a1))){ZWu(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}void ZkA(Z78*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((ZZa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Z6v(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZlA(Z78*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((ZZa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else
-if((Z3)((((C)->ZQb))>(a1))){Z8v(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}void ZmA(T91*C,T2 a1){if((Z3)((a1)>(((C)->ZQb)))){
-(C->ZPb)=((T93)(Zk(a1,sizeof(T10))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){(C->ZRb)=ZNs(((C)->ZRb),(Z3)(((a1))-(Zrs(1))));
-if((Z3)((((C)->ZRb))>=(Zrs(0)))){ZCu(((C)->ZPb),((C)->ZRb));}}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}void ZnA(T91*C,T10 a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((T93)(Zk(Zrs(2),sizeof(T10))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZDu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZoA(Zt8*C,T0*a1){T2 ZZw=0;(C->ZSb)=((((Zt8*)a1))->ZSb);(C->ZRb)=((((Zt8*)a1))->ZRb);ZZw=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));
-if((Z3)((((C)->ZQb))<(ZZw))){(C->ZPb)=((Zjb)(Zk(ZZw,sizeof(T0*))));(C->ZQb)=ZZw;}if((Z3)((ZZw)>(Zrs(0)))){Zdw(((C)->ZPb),((((Zt8*)a1))->ZPb),(Z3)(((ZZw))-((T2)(Zrs(1)))));
-}}T2 ZpA(Zt8*C){T2 R=0;R=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));return R;}T0*ZqA(Zt8*C,T2 a1){T0*R=Zo;R=(((C)->ZPb))[(Z3)(((a1))-(((C)->ZSb)))];
-return R;}void ZrA(Zt8*C,T2 a1,T2 a2){T2 ZOx=0;(C->ZSb)=a1;(C->ZRb)=a2;ZOx=(Z3)((((Z3)(((a2))-(a1))))+(Zrs(1)));if((Z3)((ZOx)>(Zrs(0)))){
-if((Z3)((((C)->ZQb))<(ZOx))){(C->ZPb)=((Zjb)(Zk(ZOx,sizeof(T0*))));(C->ZQb)=ZOx;}else{{Zt8*C1=C;T0*ZPx=Zo;{Zt8*C2=C1;T0*c1=ZPx;Zew(((C2)->ZPb),c1,(Z3)(((((C2)->ZRb)))-(((C2)->ZSb))));
-}}}}}void ZsA(Zt8*C,T0*a1){T2 Z_w=0;if((Z3)((((C)->ZQb))<((Z3)(((ZpA(C)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){Z_w=Zrs(16);(C->ZPb)=((Zjb)(Zk(Z_w,sizeof(T0*))));
-(C->ZQb)=Z_w;}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zcw(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-{Zt8*C1=C;T0*b1=a1;T2 b2=((C)->ZRb);(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);}}T0*ZtA(Zt8*C){T0*R=Zo;R=Zh(sizeof(*C));*((Zt8*)R)=Z0l;
-ZoA(((Zt8*)R),((T0*)C));return R;}void ZuA(Zt8*C,T2 a1,T2 a2){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zjb)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;
-}(C->ZSb)=a2;(C->ZRb)=(Z3)(((a2))-(Zrs(1)));}void ZvA(T94*C,T2 a1){if((Z3)((a1)>(((C)->ZQb)))){(C->ZPb)=((T96)(Zk(a1,sizeof(T2))));(C->ZQb)=a1;
-}else if((Z3)((((C)->ZQb))>(Zrs(0)))){(C->ZRb)=ZNs(((C)->ZRb),(Z3)(((a1))-(Zrs(1))));if((Z3)((((C)->ZRb))>=(Zrs(0)))){Ziw(((C)->ZPb),((C)->ZRb));
-}}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}void ZwA(T94*C,T2 a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((T96)(Zk(Zrs(2),sizeof(T2))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zjw(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZxA(T94*C,T2 a1){T2 Z_w=0;if((Z3)((a1)>((Z3)(((((C)->ZRb)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){
-(C->ZPb)=((T96)(Zk(a1,sizeof(T2))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))<(a1))){Z_w=(Z3)(((((C)->ZQb)))*(Zrs(2)));while(!((Z3)((Z_w)>=(a1))))
-{Z_w=(Z3)(((Z_w))*(Zrs(2)));}(C->ZPb)=Zjw(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}else if((a1)!=((Z3)(((((C)->ZRb)))+(Zrs(1))))){Znw(((C)->ZPb),a1,(Z3)((((Z3)(((((C)->ZRb)))+(Zrs(1)))))-((T2)(Zrs(1)))));
-}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}T2 ZyA(T94*C,T2 a1){T2 R=0;R=Zow(((C)->ZPb),a1,((C)->ZRb));return R;}void ZzA(T94*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((T96)(Zk(a1,sizeof(T2))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){Znw(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);
-}void ZAA(ZP8*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zmb)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));
-(C->ZPb)=Zpw(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZBA(ZP8*C,T2
-a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zmb)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){Zrw(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));
-}(C->ZRb)=Zrs(-1);}T2 ZCA(ZT8*C){T2 R=0;R=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));return R;}T0*ZDA(ZT8*C,T2 a1){T0*R=Zo;
-R=(((C)->ZPb))[(Z3)(((a1))-(((C)->ZSb)))];return R;}void ZEA(ZT8*C,T0*a1){T2 Z_w=0;if((Z3)((((C)->ZQb))<((Z3)(((ZCA(C)))+(Zrs(1)))))){
-if((((C)->ZQb))==(Zrs(0))){Z_w=Zrs(16);(C->ZPb)=((Zfb)(Zk(Z_w,sizeof(T0*))));(C->ZQb)=Z_w;}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZSv(((C)->ZPb),((C)->ZQb),Z_w);
-(C->ZQb)=Z_w;}}(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));{ZT8*C1=C;T0*b1=a1;T2 b2=((C)->ZRb);(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);
-}}void ZFA(ZT8*C,T2 a1,T2 a2){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zfb)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}(C->ZSb)=a2;(C->ZRb)=(Z3)(((a2))-(Zrs(1)));
-}void ZGA(ZT8*C,T2 a1,T2 a2){T0*Zsx=Zo;Zsx=ZDA(C,a1);{ZT8*C1=C;T0*b1=ZDA(C,a2);T2 b2=a1;(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);
-}{ZT8*C1=C;T0*b1=Zsx;T2 b2=a2;(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);}}void ZHA(Za9*C,T0*a1){T2 Zyx=0;T2 Z_w=0;Zyx=((((Za9*)a1))->ZRb);
-if((Z3)((Zyx)>=(Zrs(0)))){Z_w=(Z3)(((Zyx))+(Zrs(1)));if((Z3)((((C)->ZQb))<(Z_w))){(C->ZPb)=((Z5b)(Zk(Z_w,sizeof(T0*))));(C->ZQb)=Z_w;
-}else if((Z3)((((C)->ZQb))>(Zrs(0)))){Zyv(((C)->ZPb),(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));}ZAv(((C)->ZPb),((((Za9*)a1))->ZPb),Zyx);}else
-if((Z3)((((C)->ZQb))>(Zrs(0)))){Zyv(((C)->ZPb),(Z3)(((((C)->ZQb)))-((T2)(Zrs(1)))));}(C->ZRb)=Zyx;}T6 ZIA(Za9*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((Zrs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));
-return R;}T6 ZJA(Za9*C,T0*a1){T6 R=0;R=((T6)(ZIA(C,ZKA(C,a1))));return R;}void ZLA(Za9*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Z5b)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Zzv(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}T2 ZKA(Za9*C,T0*a1){T2 R=0;R=ZCv(((C)->ZPb),a1,((C)->ZRb));return R;}T0*ZMA(Za9*C){T0*R=Zo;R=Zh(sizeof(*C));
-*((Za9*)R)=ZNl;ZHA(((Za9*)R),((T0*)C));return R;}void ZNA(Za9*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Z5b)(Zk(a1,sizeof(T0*))));
-(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){ZBv(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}void ZOA(T74*C,T0*a1){T2 ZZw=0;
-(C->ZSb)=((((T74*)a1))->ZSb);(C->ZRb)=((((T74*)a1))->ZRb);ZZw=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));if((Z3)((((C)->ZQb))<(ZZw))){
-(C->ZPb)=((T59)(Zk(ZZw,sizeof(T0*))));(C->ZQb)=ZZw;}if((Z3)((ZZw)>(Zrs(0)))){ZQu(((C)->ZPb),((((T74*)a1))->ZPb),(Z3)(((ZZw))-((T2)(Zrs(1)))));
-}}T2 ZPA(T74*C){T2 R=0;R=(Z3)((((Z3)(((((C)->ZRb)))-(((C)->ZSb)))))+(Zrs(1)));return R;}T0*ZQA(T74*C,T2 a1){T0*R=Zo;R=(((C)->ZPb))[(Z3)(((a1))-(((C)->ZSb)))];
-return R;}T6 ZRA(T74*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((((C)->ZSb))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));return R;}T2 ZSA(T74*C,T0*a1){
-T2 R=0;R=(Z3)(((((C)->ZSb)))+(ZRu(((C)->ZPb),a1,(Z3)(((((C)->ZRb)))-(((C)->ZSb))))));return R;}T6 ZOw(T74*C){T6 R=0;R=((T6)((Z3)((((C)->ZRb))<(((C)->ZSb)))));
-return R;}T6 ZTA(T74*C,T0*a1){T6 R=0;R=((T6)(ZRA(C,ZSA(C,a1))));return R;}T6 ZUA(T74*C,T0*a1){T6 R=0;R=((T6)(ZRA(C,ZVA(C,a1))));return
-R;}void ZWA(T74*C,T0*a1){T2 Z_w=0;if((Z3)((((C)->ZQb))<((Z3)(((ZPA(C)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){Z_w=Zrs(16);(C->ZPb)=((T59)(Zk(Z_w,sizeof(T0*))));
-(C->ZQb)=Z_w;}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZPu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));
-{T74*C1=C;T0*b1=a1;T2 b2=((C)->ZRb);(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);}}void ZMw(T74*C){(C->ZRb)=(Z3)(((((C)->ZSb)))-(Zrs(1)));
-}T2 ZVA(T74*C,T0*a1){T2 R=0;R=(Z3)(((((C)->ZSb)))+(ZTu(((C)->ZPb),a1,(Z3)(((((C)->ZRb)))-(((C)->ZSb))))));return R;}T0*ZPw(T74*C){T0*R=Zo;
-R=Zh(sizeof(*C));*((T74*)R)=M74;ZOA(((T74*)R),((T0*)C));return R;}void ZXA(T74*C,T2 a1,T2 a2){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((T59)(Zk(a1,sizeof(T0*))));
-(C->ZQb)=a1;}(C->ZSb)=a2;(C->ZRb)=(Z3)(((a2))-(Zrs(1)));}void ZYA(T74*C,T2 a1,T2 a2){T0*Zsx=Zo;Zsx=ZQA(C,a1);{T74*C1=C;T0*b1=ZQA(C,a2);
-T2 b2=a1;(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);}{T74*C1=C;T0*b1=Zsx;T2 b2=a2;(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);
-}}void ZZA(Zc9*C,T2 a1){if((Z3)((a1)>(((C)->ZQb)))){(C->ZPb)=((Zza)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){
-(C->ZRb)=ZNs(((C)->ZRb),(Z3)(((a1))-(Zrs(1))));if((Z3)((((C)->ZRb))>=(Zrs(0)))){Z5u(((C)->ZPb),((C)->ZRb));}}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));
-}void Z_A(Zc9*C,T2 a1){T2 Z_w=0;if((Z3)((a1)>((Z3)(((((C)->ZRb)))+(Zrs(1)))))){if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zza)(Zk(a1,sizeof(T0*))));
-(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))<(a1))){Z_w=(Z3)(((((C)->ZQb)))*(Zrs(2)));while(!((Z3)((Z_w)>=(a1)))){Z_w=(Z3)(((Z_w))*(Zrs(2)));
-}(C->ZPb)=Z6u(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;}}else if((a1)!=((Z3)(((((C)->ZRb)))+(Zrs(1))))){Z8u(((C)->ZPb),a1,(Z3)((((Z3)(((((C)->ZRb)))+(Zrs(1)))))-((T2)(Zrs(1)))));
-}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}void Z0B(Zg9*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((ZSa)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZXu(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z1B(Zg9*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((ZSa)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else
-if((Z3)((((C)->ZQb))>(a1))){ZZu(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}void Z2B(Zq9*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Z_a)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=Z9v(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z3B(Zq9*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Z_a)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else
-if((Z3)((((C)->ZQb))>(a1))){Zbv(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}void Z4B(ZE9*C,T2 a1){if((Z3)((a1)>(((C)->ZQb)))){
-(C->ZPb)=((Z8b)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(Zrs(0)))){(C->ZRb)=ZNs(((C)->ZRb),(Z3)(((a1))-(Zrs(1))));
-if((Z3)((((C)->ZRb))>=(Zrs(0)))){ZDv(((C)->ZPb),((C)->ZRb));}}(C->ZRb)=(Z3)(((a1))-(Zrs(1)));}void Z5B(ZE9*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Z8b)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZEv(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z6B(ZE9*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Z8b)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else
-if((Z3)((((C)->ZQb))>(a1))){ZGv(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}void Z7B(ZQ9*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zfb)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZSv(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void Z8B(ZQ9*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zfb)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else
-if((Z3)((((C)->ZQb))>(a1))){ZUv(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}void Z9B(ZS9*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zeb)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZPv(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}void ZaB(ZS9*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){(C->ZPb)=((Zeb)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else
-if((Z3)((((C)->ZQb))>(a1))){ZRv(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);}T6 ZbB(ZU9*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((Zrs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZRb))))))));
-return R;}T6 ZcB(ZU9*C,T0*a1){T6 R=0;R=((T6)(ZbB(C,ZdB(C,a1))));return R;}void ZeB(ZU9*C,T0*a1){T2 Z_w=0;if((Z3)(((Z3)(((((C)->ZRb)))+(Zrs(1))))<=((Z3)(((((C)->ZQb)))-(Zrs(1)))))){
-(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}else if((((C)->ZQb))==(Zrs(0))){(C->ZPb)=((Zcb)(Zk(Zrs(2),sizeof(T0*))));(C->ZQb)=Zrs(2);(C->ZRb)=Zrs(0);
-}else{Z_w=(Z3)(((Zrs(2)))*(((C)->ZQb)));(C->ZPb)=ZLv(((C)->ZPb),((C)->ZQb),Z_w);(C->ZQb)=Z_w;(C->ZRb)=(Z3)(((((C)->ZRb)))+(Zrs(1)));}
-(((C)->ZPb))[((C)->ZRb)]=(a1);}T2 ZdB(ZU9*C,T0*a1){T2 R=0;R=ZOv(((C)->ZPb),a1,((C)->ZRb));return R;}void ZfB(ZU9*C,T2 a1){if((Z3)((((C)->ZQb))<(a1))){
-(C->ZPb)=((Zcb)(Zk(a1,sizeof(T0*))));(C->ZQb)=a1;}else if((Z3)((((C)->ZQb))>(a1))){ZNv(((C)->ZPb),(T2)(Zrs(0)),((C)->ZRb));}(C->ZRb)=Zrs(-1);
-}
+T2 Z8z(Z9a*C){T2 R=0;R=(Z3)((((Z3)(((((C)->ZWb)))-(((C)->ZXb)))))+(ZGs(1)));return R;}T0*Z9z(Z9a*C,T2 a1){T0*R=Zo;R=(((C)->ZUb))[(Z3)(((a1))-(((C)->ZXb)))];
+return R;}void Zaz(Z9a*C,T0*a1){T2 Zpx=0;if((Z3)((((C)->ZVb))<((Z3)(((Z8z(C)))+(ZGs(1)))))){if((((C)->ZVb))==(ZGs(0))){Zpx=ZGs(16);(C->ZUb)=(((void)(((C)->ZUb))),((ZZa)(Zk(Zpx,sizeof(T0*)))));
+(C->ZVb)=Zpx;}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=Znv(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;}}(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));
+{Z9a*C1=C;T0*b1=a1;T2 b2=((C)->ZWb);(((C1)->ZUb))[(Z3)(((b2))-(((C1)->ZXb)))]=(b1);}}void Zbz(Z9a*C,T2 a1,T2 a2){if((Z3)((((C)->ZVb))<(a1))){
+(C->ZUb)=(((void)(((C)->ZUb))),((ZZa)(Zk(a1,sizeof(T0*)))));(C->ZVb)=a1;}(C->ZXb)=a2;(C->ZWb)=(Z3)(((a2))-(ZGs(1)));}void Zcz(ZH*C,T0*a1){
+T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){
+(C->ZUb)=((Z6b)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=ZQv(((C)->ZUb),((C)->ZVb),Zpx);
+(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}(((C)->ZUb))[((C)->ZWb)]=(a1);}void Zdz(ZH*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){
+(C->ZUb)=((Z6b)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){ZSv(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);
+}T0*Zez(ZN*C,T2 a1){T0*R=Zo;Zfz(C,a1);R=(((Ze1*)(((C)->Zbc)))->ZFc);return R;}void Zfz(ZN*C,T2 a1){if((a1)==((Z3)(((((C)->Zac)))+(ZGs(1))))){
+(C->Zac)=a1;(C->Zbc)=(((Ze1*)(((C)->Zbc)))->ZHc);while(!((((C)->Zbc))!=((void*)(Zo)))){(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];
+}}else if((a1)==(((C)->Zac))){}else if((a1)==(ZGs(1))){(C->Zac)=ZGs(1);(C->Zcc)=ZGs(0);(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];while(!((((C)->Zbc))!=((void*)(Zo))))
+{(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];}}else{Zfz(C,(T2)(ZGs(1)));while(!((((C)->Zac))==(a1))){Zfz(C,(Z3)(((((C)->Zac)))+((T2)(ZGs(1)))));
+}}}void Zgz(ZN*C){T2 Zet=0;T2 Zft=0;T2 Zpx=0;Zma Zhz=Zo;T0*Ziz=Zo;T0*Zjz=Zo;int Zkz=0;Zpx=Zlz((Z3)(((((C)->ZVb)))+(ZGs(1))));Zhz=((C)->Z9c);
+(C->Z9c)=((Zma)(Zk(Zpx,sizeof(T0*))));Zet=(Z3)(((((C)->ZVb)))-(ZGs(1)));(C->ZVb)=Zpx;while(!((Z3)((Zet)<(ZGs(0))))){Ziz=(Zhz)[Zet];while(!((Ziz)==((void*)(Zo))))
+{Zjz=((((Ze1*)Ziz))->ZHc);Zft=(Z3)((Zmz((ZV6*)(((((Ze1*)Ziz))->ZFc))))%(((C)->ZVb)));((((Ze1*)(((Ze1*)Ziz))))->ZHc)=((((C)->Z9c))[Zft]);
+(((C)->Z9c))[Zft]=(Ziz);Ziz=Zjz;}Zet=(Z3)(((Zet))-(ZGs(1)));}(C->Zac)=ZGs(-1);}void Znz(ZN*C,T0*a1){T2 Zoz=0;T2 Zft=0;T0*Zpz=Zo;(C->Zac)=ZGs(-1);
+Zoz=Zmz(((ZV6*)a1));Zft=(Z3)((Zoz)%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Zqz((ZV6*)(((((Ze1*)Zpz))->ZFc)),a1))))))
+{Zpz=((((Ze1*)Zpz))->ZHc);}if((Zpz)==((void*)(Zo))){if((((C)->ZVb))==(((C)->Zdc))){Zgz(C);Zft=(Z3)((Zoz)%(((C)->ZVb)));}{Ze1*n=((Ze1*)Zh(sizeof(*n)));
+*n=Z5d;Zrz(n,a1,(((C)->Z9c))[Zft]);Zpz=((T0*)n);}(((C)->Z9c))[Zft]=(Zpz);(C->Zdc)=(Z3)(((((C)->Zdc)))+(ZGs(1)));}}void Zsz(ZN*C,T2 a1){
+T2 Zpx=0;int Zkz=0;Zpx=Zlz(a1);(C->Z9c)=((Zma)(Zk(Zpx,sizeof(T0*))));(C->ZVb)=Zpx;(C->Zac)=ZGs(-1);(C->Zdc)=ZGs(0);}T0*Ztz(ZN*C,T0*a1){
+T0*R=Zo;T2 Zft=0;T0*Zpz=Zo;Zft=(Z3)((Zmz(((ZV6*)a1)))%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Zqz((ZV6*)(((((Ze1*)Zpz))->ZFc)),a1))))))
+{Zpz=((((Ze1*)Zpz))->ZHc);}if((Zpz)!=((void*)(Zo))){R=((((Ze1*)Zpz))->ZFc);}return R;}void Zuz(ZP*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){
+(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zsb)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);
+}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=ZTw(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}
+(((C)->ZUb))[((C)->ZWb)]=(a1);}void Zvz(ZP*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Zsb)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else
+if((Z3)((((C)->ZVb))>(a1))){ZVw(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);}void Zwz(ZR*C){T2 Zet=0;T2 Zft=0;T2 Zpx=0;ZXa Zhz=Zo;
+T0*Ziz=Zo;T0*Zjz=Zo;int Zkz=0;Zpx=Zlz((Z3)(((((C)->ZVb)))+(ZGs(1))));Zhz=((C)->Z9c);(C->Z9c)=((ZXa)(Zk(Zpx,sizeof(T0*))));Zet=(Z3)(((((C)->ZVb)))-(ZGs(1)));
+(C->ZVb)=Zpx;while(!((Z3)((Zet)<(ZGs(0))))){Ziz=(Zhz)[Zet];while(!((Ziz)==((void*)(Zo)))){Zjz=((((ZD2*)Ziz))->ZHc);Zft=(Z3)(((((T85*)(((((ZD2*)Ziz))->ZFc)))->Zrf))%(((C)->ZVb)));
+((((ZD2*)(((ZD2*)Ziz))))->ZHc)=((((C)->Z9c))[Zft]);(((C)->Z9c))[Zft]=(Ziz);Ziz=Zjz;}Zet=(Z3)(((Zet))-(ZGs(1)));}(C->Zac)=ZGs(-1);}T6 Zxz(ZR*C,T0*a1){
+T6 R=0;T2 Zft=0;T0*Zpz=Zo;Zft=(Z3)((((((T85*)a1))->Zrf))%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Zyz((T85*)(((((ZD2*)Zpz))->ZFc)),a1))))))
+{Zpz=((((ZD2*)Zpz))->ZHc);}R=((T6)((Zpz)!=((void*)(Zo))));return R;}void Zzz(ZR*C,T0*a1){T2 Zoz=0;T2 Zft=0;T0*Zpz=Zo;(C->Zac)=ZGs(-1);
+Zoz=((((T85*)a1))->Zrf);Zft=(Z3)((Zoz)%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Zyz((T85*)(((((ZD2*)Zpz))->ZFc)),a1))))))
+{Zpz=((((ZD2*)Zpz))->ZHc);}if((Zpz)==((void*)(Zo))){if((((C)->ZVb))==(((C)->Zdc))){Zwz(C);Zft=(Z3)((Zoz)%(((C)->ZVb)));}{ZD2*n=((ZD2*)Zh(sizeof(*n)));
+*n=ZSd;ZAz(n,a1,(((C)->Z9c))[Zft]);Zpz=((T0*)n);}(((C)->Z9c))[Zft]=(Zpz);(C->Zdc)=(Z3)(((((C)->Zdc)))+(ZGs(1)));}}void ZBz(ZR*C,T2 a1){
+T2 Zpx=0;int Zkz=0;Zpx=Zlz(a1);(C->Z9c)=((ZXa)(Zk(Zpx,sizeof(T0*))));(C->ZVb)=Zpx;(C->Zac)=ZGs(-1);(C->Zdc)=ZGs(0);}T70*ZCz(void){T70*n;
+n=((T70*)Zh(sizeof(*n)));*n=M70;{T70*C1=n;ZDz(C1,Zxt(193));}return n;}T0*ZEz(T70*C,T2 a1){T0*R=Zo;ZFz(C,a1);R=(((T37*)(((C)->Zbc)))->ZGc);
+return R;}T0*ZGz(T70*C,T0*a1){T0*R=Zo;T2 Zft=0;T0*Zpz=Zo;Zft=(Z3)((ZBx(((T7*)a1)))%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];while(!(Z5v((T7*)(((((T37*)Zpz))->ZGc)),a1)))
+{Zpz=((((T37*)Zpz))->ZHc);}R=((((T37*)Zpz))->ZFc);return R;}T0*ZHz(T70*C,T2 a1){T0*R=Zo;ZFz(C,a1);R=(((T37*)(((C)->Zbc)))->ZFc);return
+R;}void ZIz(T70*C,T2 a1){T2 Zpx=0;int Zkz=0;Zpx=Zlz(a1);(C->Z9c)=((T36)(Zk(Zpx,sizeof(T0*))));(C->ZVb)=Zpx;(C->Zac)=ZGs(-1);(C->Zdc)=ZGs(0);
+}void ZFz(T70*C,T2 a1){if((a1)==((Z3)(((((C)->Zac)))+(ZGs(1))))){(C->Zac)=a1;(C->Zbc)=(((T37*)(((C)->Zbc)))->ZHc);while(!((((C)->Zbc))!=((void*)(Zo))))
+{(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];}}else if((a1)==(((C)->Zac))){}else if((a1)==(ZGs(1))){(C->Zac)=ZGs(1);
+(C->Zcc)=ZGs(0);(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];while(!((((C)->Zbc))!=((void*)(Zo)))){(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];
+}}else{ZFz(C,(T2)(ZGs(1)));while(!((((C)->Zac))==(a1))){ZFz(C,(Z3)(((((C)->Zac)))+((T2)(ZGs(1)))));}}}void ZJz(T70*C,T0*a1){T2 Zoz=0;
+T2 Zft=0;T0*Zpz=Zo;T0*ZKz=Zo;(C->Zac)=ZGs(-1);Zoz=ZBx(((T7*)a1));Zft=(Z3)((Zoz)%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];if((Zpz)!=((void*)(Zo))){
+if(Z5v((T7*)(((((T37*)Zpz))->ZGc)),a1)){(C->Zdc)=(Z3)(((((C)->Zdc)))-(ZGs(1)));Zpz=((((T37*)Zpz))->ZHc);(((C)->Z9c))[Zft]=(Zpz);}else{
+ZKz=Zpz;Zpz=((((T37*)Zpz))->ZHc);while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Z5v((T7*)(((((T37*)Zpz))->ZGc)),a1)))))){ZKz=Zpz;Zpz=((((T37*)Zpz))->ZHc);
+}if((Zpz)!=((void*)(Zo))){(C->Zdc)=(Z3)(((((C)->Zdc)))-(ZGs(1)));((((T37*)(((T37*)ZKz))))->ZHc)=(((((T37*)Zpz))->ZHc));}}}}void ZLz(T70*C){
+T2 Zet=0;T2 Zft=0;T2 Zpx=0;T36 Zhz=Zo;T0*Ziz=Zo;T0*Zjz=Zo;int Zkz=0;Zpx=Zlz((Z3)(((((C)->ZVb)))+(ZGs(1))));Zhz=((C)->Z9c);(C->Z9c)=((T36)(Zk(Zpx,sizeof(T0*))));
+Zet=(Z3)(((((C)->ZVb)))-(ZGs(1)));(C->ZVb)=Zpx;while(!((Z3)((Zet)<(ZGs(0))))){Ziz=(Zhz)[Zet];while(!((Ziz)==((void*)(Zo)))){Zjz=((((T37*)Ziz))->ZHc);
+Zft=(Z3)((ZBx((T7*)(((((T37*)Ziz))->ZGc))))%(((C)->ZVb)));((((T37*)(((T37*)Ziz))))->ZHc)=((((C)->Z9c))[Zft]);(((C)->Z9c))[Zft]=(Ziz);
+Ziz=Zjz;}Zet=(Z3)(((Zet))-(ZGs(1)));}(C->Zac)=ZGs(-1);}void ZMz(T70*C){Zu();Zv(ZGs(1));}T6 ZNz(T70*C,T0*a1){T6 R=0;T2 Zft=0;T0*Zpz=Zo;
+Zft=(Z3)((ZBx(((T7*)a1)))%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Z5v((T7*)(((((T37*)Zpz))->ZGc)),a1))))))
+{Zpz=((((T37*)Zpz))->ZHc);}R=((T6)((Zpz)!=((void*)(Zo))));return R;}void ZOz(T70*C,T0*a1,T0*a2){ZPz(C,a1,a2);ZQz((T55*)(((C)->Zxc)),a2);
+}void ZPz(T70*C,T0*a1,T0*a2){T2 Zft=0;T0*Zpz=Zo;(C->Zac)=ZGs(-1);if((((C)->ZVb))==(((C)->Zdc))){ZLz(C);}Zft=(Z3)((ZBx(((T7*)a2)))%(((C)->ZVb)));
+{T37*n=((T37*)Zh(sizeof(*n)));*n=M37;ZRz(n,a1,a2,(((C)->Z9c))[Zft]);Zpz=((T0*)n);}(((C)->Z9c))[Zft]=(Zpz);(C->Zdc)=(Z3)(((((C)->Zdc)))+(ZGs(1)));
+}void ZDz(T70*C,T2 a1){ZIz(C,a1);{T55*n=((T55*)Zh(sizeof(*n)));*n=M55;ZSz(n,a1);(C->Zxc)=((T0*)n);}}T0*ZTz(T70*C,T0*a1){T0*R=Zo;T2 Zft=0;
+T0*Zpz=Zo;Zft=(Z3)((ZBx(((T7*)a1)))%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Z5v((T7*)(((((T37*)Zpz))->ZGc)),a1))))))
+{Zpz=((((T37*)Zpz))->ZHc);}if((Zpz)!=((void*)(Zo))){R=((((T37*)Zpz))->ZFc);}return R;}void ZUz(Z81*C,T0*a1,T0*a2,T0*a3){(C->ZFc)=a1;(C->ZGc)=a2;
+(C->ZHc)=a3;}void ZVz(Zk1*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));
+}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Z1b)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));
+(C->ZUb)=Zsv(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZWz(Zk1*C,T2
+a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Z1b)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){Zuv(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));
+}(C->ZWb)=ZGs(-1);}void Zrz(Ze1*C,T0*a1,T0*a2){(C->ZFc)=a1;(C->ZHc)=a2;}void ZXz(Zu1*C,T0*a1){T2 ZYz=0;T2 Zpx=0;ZYz=((((Zu1*)a1))->ZWb);
+if((Z3)((ZYz)>=(ZGs(0)))){Zpx=(Z3)(((ZYz))+(ZGs(1)));if((Z3)((((C)->ZVb))<(Zpx))){(C->ZUb)=((Z7b)(Zk(Zpx,sizeof(T0*))));(C->ZVb)=Zpx;
+}else if((Z3)((((C)->ZVb))>(ZGs(0)))){ZTv(((C)->ZUb),(Z3)(((((C)->ZVb)))-((T2)(ZGs(1)))));}ZVv(((C)->ZUb),((((Zu1*)a1))->ZUb),ZYz);}else
+if((Z3)((((C)->ZVb))>(ZGs(0)))){ZTv(((C)->ZUb),(Z3)(((((C)->ZVb)))-((T2)(ZGs(1)))));}(C->ZWb)=ZYz;}T6 ZZz(Zu1*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((ZGs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZWb))))))));
+return R;}T6 Z_z(Zu1*C,T0*a1){T6 R=0;R=((T6)(ZZz(C,Z0A(C,a1))));return R;}void Z1A(Zu1*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){
+(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Z7b)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);
+}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=ZUv(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}
+(((C)->ZUb))[((C)->ZWb)]=(a1);}T2 Z0A(Zu1*C,T0*a1){T2 R=0;R=ZXv(((C)->ZUb),a1,((C)->ZWb));return R;}T0*Z2A(Zu1*C){T0*R=Zo;R=Zh(sizeof(*C));
+*((Zu1*)R)=Z6d;ZXz(((Zu1*)R),((T0*)C));return R;}void Z3A(Zu1*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Z7b)(Zk(a1,sizeof(T0*))));
+(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){ZWv(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);}T6 Z4A(ZE1*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((ZGs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZWb))))))));
+return R;}T6 Z5A(ZE1*C,T0*a1){T6 R=0;R=((T6)(Z4A(C,Z6A(C,a1))));return R;}void Z7A(ZE1*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){
+(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zib)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);
+}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=Zfw(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}
+(((C)->ZUb))[((C)->ZWb)]=(a1);}T2 Z6A(ZE1*C,T0*a1){T2 R=0;R=Ziw(((C)->ZUb),a1,((C)->ZWb));return R;}void Z8A(ZE1*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){
+(C->ZUb)=((Zib)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){Zhw(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);
+}void Z9A(ZQ1*C,T0*a1,T0*a2){T2 Zoz=0;T2 Zft=0;T0*Zpz=Zo;Zoz=ZBx(((T7*)a2));Zft=(Z3)((Zoz)%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Z5v((T7*)(((((Z81*)Zpz))->ZGc)),a2))))))
+{Zpz=((((Z81*)Zpz))->ZHc);}if((Zpz)==((void*)(Zo))){if((((C)->ZVb))==(((C)->Zdc))){ZaA(C);Zft=(Z3)((Zoz)%(((C)->ZVb)));}{Z81*n=((Z81*)Zh(sizeof(*n)));
+*n=ZIc;ZUz(n,a1,a2,(((C)->Z9c))[Zft]);Zpz=((T0*)n);}(((C)->Z9c))[Zft]=(Zpz);(C->Zdc)=(Z3)(((((C)->Zdc)))+(ZGs(1)));(C->Zac)=ZGs(-1);}
+else{((((Z81*)(((Z81*)Zpz))))->ZFc)=(a1);}}T0*ZbA(ZQ1*C,T2 a1){T0*R=Zo;ZcA(C,a1);R=(((Z81*)(((C)->Zbc)))->ZFc);return R;}void ZcA(ZQ1*C,T2
+a1){if((a1)==((Z3)(((((C)->Zac)))+(ZGs(1))))){(C->Zac)=a1;(C->Zbc)=(((Z81*)(((C)->Zbc)))->ZHc);while(!((((C)->Zbc))!=((void*)(Zo)))){
+(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];}}else if((a1)==(((C)->Zac))){}else if((a1)==(ZGs(1))){(C->Zac)=ZGs(1);
+(C->Zcc)=ZGs(0);(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];while(!((((C)->Zbc))!=((void*)(Zo)))){(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];
+}}else{ZcA(C,(T2)(ZGs(1)));while(!((((C)->Zac))==(a1))){ZcA(C,(Z3)(((((C)->Zac)))+((T2)(ZGs(1)))));}}}void ZaA(ZQ1*C){T2 Zet=0;T2 Zft=0;
+T2 Zpx=0;ZJa Zhz=Zo;T0*Ziz=Zo;T0*Zjz=Zo;int Zkz=0;Zpx=Zlz((Z3)(((((C)->ZVb)))+(ZGs(1))));Zhz=((C)->Z9c);(C->Z9c)=((ZJa)(Zk(Zpx,sizeof(T0*))));
+Zet=(Z3)(((((C)->ZVb)))-(ZGs(1)));(C->ZVb)=Zpx;while(!((Z3)((Zet)<(ZGs(0))))){Ziz=(Zhz)[Zet];while(!((Ziz)==((void*)(Zo)))){Zjz=((((Z81*)Ziz))->ZHc);
+Zft=(Z3)((ZBx((T7*)(((((Z81*)Ziz))->ZGc))))%(((C)->ZVb)));((((Z81*)(((Z81*)Ziz))))->ZHc)=((((C)->Z9c))[Zft]);(((C)->Z9c))[Zft]=(Ziz);
+Ziz=Zjz;}Zet=(Z3)(((Zet))-(ZGs(1)));}(C->Zac)=ZGs(-1);}void ZdA(ZQ1*C,T2 a1){T2 Zpx=0;int Zkz=0;Zpx=Zlz(a1);(C->Z9c)=((ZJa)(Zk(Zpx,sizeof(T0*))));
+(C->ZVb)=Zpx;(C->Zac)=ZGs(-1);(C->Zdc)=ZGs(0);}T0*ZeA(ZQ1*C,T0*a1){T0*R=Zo;T2 Zft=0;T0*Zpz=Zo;Zft=(Z3)((ZBx(((T7*)a1)))%(((C)->ZVb)));
+Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Z5v((T7*)(((((Z81*)Zpz))->ZGc)),a1)))))){Zpz=((((Z81*)Zpz))->ZHc);}if((Zpz)!=((void*)(Zo))){
+R=((((Z81*)Zpz))->ZFc);}return R;}void ZfA(ZY1*C,T0*a1,T0*a2,T0*a3){(C->ZFc)=a1;(C->ZGc)=a2;(C->ZHc)=a3;}void ZgA(Z12*C,T0*a1,T0*a2){
+(C->ZFc)=a1;(C->ZHc)=a2;}T6 ZhA(Z52*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((ZGs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZWb))))))));return R;
+}T6 ZiA(Z52*C,T0*a1){T6 R=0;R=((T6)(ZhA(C,ZjA(C,a1))));return R;}void ZkA(Z52*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){
+(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zla)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);
+}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=ZIt(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}
+(((C)->ZUb))[((C)->ZWb)]=(a1);}T2 ZjA(Z52*C,T0*a1){T2 R=0;R=ZMt(((C)->ZUb),a1,((C)->ZWb));return R;}void ZlA(Z52*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){
+(C->ZUb)=((Zla)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){ZKt(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);
+}void ZmA(Z72*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));
+}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Z0b)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));
+(C->ZUb)=Zpv(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZnA(Z72*C,T2
+a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Z0b)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){Zrv(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));
+}(C->ZWb)=ZGs(-1);}void ZoA(ZB2*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));
+}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zta)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));
+(C->ZUb)=Z0u(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZpA(ZB2*C,T2
+a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Zta)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){Z2u(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));
+}(C->ZWb)=ZGs(-1);}void ZAz(ZD2*C,T0*a1,T0*a2){(C->ZFc)=a1;(C->ZHc)=a2;}void ZqA(Z43*C,T0*a1){T2 ZYz=0;T2 Zpx=0;ZYz=((((Z43*)a1))->ZWb);
+if((Z3)((ZYz)>=(ZGs(0)))){Zpx=(Z3)(((ZYz))+(ZGs(1)));if((Z3)((((C)->ZVb))<(Zpx))){(C->ZUb)=((Zva)(Zk(Zpx,sizeof(T0*))));(C->ZVb)=Zpx;
+}else if((Z3)((((C)->ZVb))>(ZGs(0)))){Z3u(((C)->ZUb),(Z3)(((((C)->ZVb)))-((T2)(ZGs(1)))));}Z5u(((C)->ZUb),((((Z43*)a1))->ZUb),ZYz);}else
+if((Z3)((((C)->ZVb))>(ZGs(0)))){Z3u(((C)->ZUb),(Z3)(((((C)->ZVb)))-((T2)(ZGs(1)))));}(C->ZWb)=ZYz;}void ZrA(Z43*C,T2 a1){if((Z3)((a1)>(((C)->ZVb)))){
+(C->ZUb)=((Zva)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(ZGs(0)))){(C->ZWb)=Z3t(((C)->ZWb),(Z3)(((a1))-(ZGs(1))));
+if((Z3)((((C)->ZWb))>=(ZGs(0)))){Z3u(((C)->ZUb),((C)->ZWb));}}(C->ZWb)=(Z3)(((a1))-(ZGs(1)));}void ZsA(Z43*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){
+(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zva)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);
+}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=Z4u(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}
+(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZtA(Z43*C,T2 a1){T2 Zpx=0;if((Z3)((a1)>((Z3)(((((C)->ZWb)))+(ZGs(1)))))){if((((C)->ZVb))==(ZGs(0))){
+(C->ZUb)=((Zva)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))<(a1))){Zpx=(Z3)(((((C)->ZVb)))*(ZGs(2)));while(!((Z3)((Zpx)>=(a1))))
+{Zpx=(Z3)(((Zpx))*(ZGs(2)));}(C->ZUb)=Z4u(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;}}else if((a1)!=((Z3)(((((C)->ZWb)))+(ZGs(1))))){Z6u(((C)->ZUb),a1,(Z3)((((Z3)(((((C)->ZWb)))+(ZGs(1)))))-((T2)(ZGs(1)))));
+}(C->ZWb)=(Z3)(((a1))-(ZGs(1)));}T0*ZuA(Z43*C){T0*R=Zo;R=Zh(sizeof(*C));*((Z43*)R)=Zce;ZqA(((Z43*)R),((T0*)C));return R;}void ZvA(Z43*C,T2
+a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Zva)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){Z6u(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));
+}(C->ZWb)=ZGs(-1);}void ZwA(Zc3*C,T2 a1){if((Z3)((a1)>(((C)->ZVb)))){(C->ZUb)=((Zdb)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(ZGs(0)))){
+(C->ZWb)=Z3t(((C)->ZWb),(Z3)(((a1))-(ZGs(1))));if((Z3)((((C)->ZWb))>=(ZGs(0)))){Z1w(((C)->ZUb),((C)->ZWb));}}(C->ZWb)=(Z3)(((a1))-(ZGs(1)));
+}void ZxA(Zc3*C,T2 a1){T2 Zpx=0;if((Z3)((a1)>((Z3)(((((C)->ZWb)))+(ZGs(1)))))){if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zdb)(Zk(a1,sizeof(T0*))));
+(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))<(a1))){Zpx=(Z3)(((((C)->ZVb)))*(ZGs(2)));while(!((Z3)((Zpx)>=(a1)))){Zpx=(Z3)(((Zpx))*(ZGs(2)));
+}(C->ZUb)=Z2w(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;}}else if((a1)!=((Z3)(((((C)->ZWb)))+(ZGs(1))))){Z4w(((C)->ZUb),a1,(Z3)((((Z3)(((((C)->ZWb)))+(ZGs(1)))))-((T2)(ZGs(1)))));
+}(C->ZWb)=(Z3)(((a1))-(ZGs(1)));}void ZyA(Zs1*C,T2 a1,T2 a2,T0*a3){(C->ZFc)=a1;(C->ZGc)=a2;(C->ZHc)=a3;}T6 ZzA(Zy3*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((ZGs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZWb))))))));
+return R;}T6 ZAA(Zy3*C,T0*a1){T6 R=0;R=((T6)(ZzA(C,ZBA(C,a1))));return R;}void ZCA(Zy3*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){
+(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((ZHa)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);
+}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=Zyu(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}
+(((C)->ZUb))[((C)->ZWb)]=(a1);}T2 ZBA(Zy3*C,T0*a1){T2 R=0;R=ZBu(((C)->ZUb),a1,((C)->ZWb));return R;}void ZDA(Zy3*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){
+(C->ZUb)=((ZHa)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){ZAu(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);
+}void ZEA(ZA3*C,T2 a1){if((Z3)((a1)>(((C)->ZVb)))){(C->ZUb)=((Z3b)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(ZGs(0)))){
+(C->ZWb)=Z3t(((C)->ZWb),(Z3)(((a1))-(ZGs(1))));if((Z3)((((C)->ZWb))>=(ZGs(0)))){ZKv(((C)->ZUb),((C)->ZWb));}}(C->ZWb)=(Z3)(((a1))-(ZGs(1)));
+}void ZFA(ZA3*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));
+}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Z3b)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));
+(C->ZUb)=ZLv(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZGA(ZA3*C,T2
+a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Z3b)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){ZNv(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));
+}(C->ZWb)=ZGs(-1);}void ZHA(ZK3*C,T2 a1){if((Z3)((a1)>(((C)->ZVb)))){(C->ZUb)=((Zab)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(ZGs(0)))){
+(C->ZWb)=Z3t(((C)->ZWb),(Z3)(((a1))-(ZGs(1))));if((Z3)((((C)->ZWb))>=(ZGs(0)))){ZYv(((C)->ZUb),((C)->ZWb));}}(C->ZWb)=(Z3)(((a1))-(ZGs(1)));
+}void ZIA(ZK3*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));
+}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zab)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));
+(C->ZUb)=ZZv(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZJA(ZK3*C,T2
+a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Zab)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){Z0w(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));
+}(C->ZWb)=ZGs(-1);}void ZKA(ZO3*C,T0*a1,T0*a2){T2 Zoz=0;T2 Zft=0;T0*Zpz=Zo;Zoz=ZLA(((T93*)a2));Zft=(Z3)((Zoz)%(((C)->ZVb)));Zpz=(((C)->Z9c))[Zft];
+while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(ZMA((T93*)(((((Zx8*)Zpz))->ZGc)),a2)))))){Zpz=((((Zx8*)Zpz))->ZHc);}if((Zpz)==((void*)(Zo))){
+if((((C)->ZVb))==(((C)->Zdc))){ZNA(C);Zft=(Z3)((Zoz)%(((C)->ZVb)));}{Zx8*n=((Zx8*)Zh(sizeof(*n)));*n=Zdl;ZOA(n,a1,a2,(((C)->Z9c))[Zft]);
+Zpz=((T0*)n);}(((C)->Z9c))[Zft]=(Zpz);(C->Zdc)=(Z3)(((((C)->Zdc)))+(ZGs(1)));(C->Zac)=ZGs(-1);}else{((((Zx8*)(((Zx8*)Zpz))))->ZFc)=(a1);
+}}T0*ZPA(ZO3*C,T2 a1){T0*R=Zo;ZQA(C,a1);R=(((Zx8*)(((C)->Zbc)))->ZFc);return R;}void ZQA(ZO3*C,T2 a1){if((a1)==((Z3)(((((C)->Zac)))+(ZGs(1))))){
+(C->Zac)=a1;(C->Zbc)=(((Zx8*)(((C)->Zbc)))->ZHc);while(!((((C)->Zbc))!=((void*)(Zo)))){(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];
+}}else if((a1)==(((C)->Zac))){}else if((a1)==(ZGs(1))){(C->Zac)=ZGs(1);(C->Zcc)=ZGs(0);(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];while(!((((C)->Zbc))!=((void*)(Zo))))
+{(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];}}else{ZQA(C,(T2)(ZGs(1)));while(!((((C)->Zac))==(a1))){ZQA(C,(Z3)(((((C)->Zac)))+((T2)(ZGs(1)))));
+}}}void ZNA(ZO3*C){T2 Zet=0;T2 Zft=0;T2 Zpx=0;Z8b Zhz=Zo;T0*Ziz=Zo;T0*Zjz=Zo;int Zkz=0;Zpx=Zlz((Z3)(((((C)->ZVb)))+(ZGs(1))));Zhz=((C)->Z9c);
+(C->Z9c)=((Z8b)(Zk(Zpx,sizeof(T0*))));Zet=(Z3)(((((C)->ZVb)))-(ZGs(1)));(C->ZVb)=Zpx;while(!((Z3)((Zet)<(ZGs(0))))){Ziz=(Zhz)[Zet];while(!((Ziz)==((void*)(Zo))))
+{Zjz=((((Zx8*)Ziz))->ZHc);Zft=(Z3)((ZLA((T93*)(((((Zx8*)Ziz))->ZGc))))%(((C)->ZVb)));((((Zx8*)(((Zx8*)Ziz))))->ZHc)=((((C)->Z9c))[Zft]);
+(((C)->Z9c))[Zft]=(Ziz);Ziz=Zjz;}Zet=(Z3)(((Zet))-(ZGs(1)));}(C->Zac)=ZGs(-1);}void ZRA(ZO3*C,T2 a1){T2 Zpx=0;int Zkz=0;Zpx=Zlz(a1);(C->Z9c)=((Z8b)(Zk(Zpx,sizeof(T0*))));
+(C->ZVb)=Zpx;(C->Zac)=ZGs(-1);(C->Zdc)=ZGs(0);}T0*ZSA(ZO3*C,T0*a1){T0*R=Zo;T2 Zft=0;T0*Zpz=Zo;Zft=(Z3)((ZLA(((T93*)a1)))%(((C)->ZVb)));
+Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(ZMA((T93*)(((((Zx8*)Zpz))->ZGc)),a1)))))){Zpz=((((Zx8*)Zpz))->ZHc);}
+if((Zpz)!=((void*)(Zo))){R=((((Zx8*)Zpz))->ZFc);}return R;}void ZTA(ZQ3*C,T0*a1,T0*a2,T0*a3){(C->ZFc)=a1;(C->ZGc)=a2;(C->ZHc)=a3;}void
+ZUA(ZU3*C){T2 Zet=0;T2 Zft=0;T2 Zpx=0;Zkb Zhz=Zo;T0*Ziz=Zo;T0*Zjz=Zo;int Zkz=0;Zpx=Zlz((Z3)(((((C)->ZVb)))+(ZGs(1))));Zhz=((C)->Z9c);
+(C->Z9c)=((Zkb)(Zk(Zpx,sizeof(T0*))));Zet=(Z3)(((((C)->ZVb)))-(ZGs(1)));(C->ZVb)=Zpx;while(!((Z3)((Zet)<(ZGs(0))))){Ziz=(Zhz)[Zet];while(!((Ziz)==((void*)(Zo))))
+{Zjz=((((Zj4*)Ziz))->ZHc);Zft=(Z3)(((((T85*)(((((Zj4*)Ziz))->ZGc)))->Zrf))%(((C)->ZVb)));((((Zj4*)(((Zj4*)Ziz))))->ZHc)=((((C)->Z9c))[Zft]);
+(((C)->Z9c))[Zft]=(Ziz);Ziz=Zjz;}Zet=(Z3)(((Zet))-(ZGs(1)));}(C->Zac)=ZGs(-1);}void ZVA(ZU3*C,T0*a1,T0*a2){T2 Zft=0;T0*Zpz=Zo;(C->Zac)=ZGs(-1);
+if((((C)->ZVb))==(((C)->Zdc))){ZUA(C);}Zft=(Z3)((((((T85*)a2))->Zrf))%(((C)->ZVb)));{Zj4*n=((Zj4*)Zh(sizeof(*n)));*n=Z4g;ZWA(n,a1,a2,(((C)->Z9c))[Zft]);
+Zpz=((T0*)n);}(((C)->Z9c))[Zft]=(Zpz);(C->Zdc)=(Z3)(((((C)->Zdc)))+(ZGs(1)));}void ZXA(ZU3*C,T2 a1){T2 Zpx=0;int Zkz=0;Zpx=Zlz(a1);(C->Z9c)=((Zkb)(Zk(Zpx,sizeof(T0*))));
+(C->ZVb)=Zpx;(C->Zac)=ZGs(-1);(C->Zdc)=ZGs(0);}T0*ZYA(ZU3*C,T0*a1){T0*R=Zo;T2 Zft=0;T0*Zpz=Zo;Zft=(Z3)((((((T85*)a1))->Zrf))%(((C)->ZVb)));
+Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Zyz((T85*)(((((Zj4*)Zpz))->ZGc)),a1)))))){Zpz=((((Zj4*)Zpz))->ZHc);}
+if((Zpz)!=((void*)(Zo))){R=((((Zj4*)Zpz))->ZFc);}return R;}void ZZA(T0*a1,T2 a2,T2 a3){T2 Z_A=0;T2 Zet=0;if((Z3)((a2)<(a3))){Zet=(Z3)((((Z3)(((a2))+((Z3)(((Z3)(((a3))-(a2)))/(ZGs(2)))))))+(ZGs(1)));
+Z0B(a1,a2,Zet);Z_A=a2;Zet=(Z3)(((a2))+(ZGs(1)));while(!((Z3)((Zet)>(a3)))){if(Zvx((T7*)(Z1B(a1,Zet)),Z1B(a1,a2))){Z_A=(Z3)(((Z_A))+(ZGs(1)));
+Z0B(a1,Z_A,Zet);}Zet=(Z3)(((Zet))+(ZGs(1)));}Z0B(a1,a2,Z_A);ZZA(a1,a2,(Z3)(((Z_A))-((T2)(ZGs(1)))));ZZA(a1,(Z3)(((Z_A))+((T2)(ZGs(1)))),a3);
+}}void Z2B(T0*a1){if(!(Z3B(a1))){{T0*b1=a1;ZZA(b1,Z4B(b1),((((T55*)b1))->ZWb));}}}T6 Z3B(T0*a1){T6 R=0;T2 Zet=0;T2 Z5B=0;T0*Z6B=Zo;T0*Z7B=Zo;
+Zet=Z4B(a1);Z5B=((((T55*)a1))->ZWb);R=((T6)(1));if((Z3)((Z5B)>(Zet))){Z6B=Z1B(a1,Zet);while(!((T6)((!(R))||((T6)((Z3)((Zet)>=(Z5B)))))))
+{Zet=(Z3)(((Zet))+(ZGs(1)));Z7B=Z1B(a1,Zet);R=((T6)(Zux(((T7*)Z6B),Z7B)));Z6B=Z7B;}}return R;}void Z8B(Z04*C,T0*a1){T2 ZYz=0;T2 Zpx=0;
+ZYz=((((Z04*)a1))->ZWb);if((Z3)((ZYz)>=(ZGs(0)))){Zpx=(Z3)(((ZYz))+(ZGs(1)));if((Z3)((((C)->ZVb))<(Zpx))){(C->ZUb)=((Zrb)(Zk(Zpx,sizeof(T0*))));
+(C->ZVb)=Zpx;}else if((Z3)((((C)->ZVb))>(ZGs(0)))){ZNw(((C)->ZUb),(Z3)(((((C)->ZVb)))-((T2)(ZGs(1)))));}ZPw(((C)->ZUb),((((Z04*)a1))->ZUb),ZYz);
+}else if((Z3)((((C)->ZVb))>(ZGs(0)))){ZNw(((C)->ZUb),(Z3)(((((C)->ZVb)))-((T2)(ZGs(1)))));}(C->ZWb)=ZYz;}void Z9B(Z04*C){Zrb ZaB=Zo;if((((C)->ZWb))==(ZGs(0))){
+(C->ZUb)=ZaB;(C->ZVb)=ZGs(0);(C->ZWb)=ZGs(-1);}else{ZQw(((C)->ZUb),((C)->ZWb));(C->ZWb)=(Z3)(((((C)->ZWb)))-(ZGs(1)));}}void ZbB(Z04*C,T2
+a1){ZRw(((C)->ZUb),a1,((C)->ZWb));(C->ZWb)=(Z3)(((((C)->ZWb)))-(ZGs(1)));}void ZcB(Z04*C,T0*a1){ZdB(C,a1);if((((C)->ZWb))==(ZGs(0))){
+}else if((((C)->ZWb))==(ZGs(1))){ZeB(C,(T2)(ZGs(0)),(T2)(ZGs(1)));}else{ZfB(C,(T2)(ZGs(0)),(Z3)(((((C)->ZWb)))-((T2)(ZGs(1)))),(T2)(ZGs(1)));
+(((C)->ZUb))[(T2)(ZGs(0))]=(a1);}}void ZfB(Z04*C,T2 a1,T2 a2,T2 a3){T0*ZgB=Zo;T2 Zet=0;if((a3)==(ZGs(0))){}else if((Z3)((a3)<(ZGs(0)))){
+Zet=a1;while(!((Z3)((Zet)>(a2)))){(((C)->ZUb))[(Z3)(((Zet))+(a3))]=((((C)->ZUb))[Zet]);(((C)->ZUb))[Zet]=(ZgB);Zet=(Z3)(((Zet))+(ZGs(1)));
+}}else{Zet=a2;while(!((Z3)((Zet)<(a1)))){(((C)->ZUb))[(Z3)(((Zet))+(a3))]=((((C)->ZUb))[Zet]);(((C)->ZUb))[Zet]=(ZgB);Zet=(Z3)(((Zet))-(ZGs(1)));
+}}}void ZdB(Z04*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));
+}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zrb)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));
+(C->ZUb)=ZOw(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZhB(Z04*C,T0*a1,T2
+a2){if((a2)==((Z3)(((((C)->ZWb)))+(ZGs(1))))){ZdB(C,a1);}else{ZdB(C,a1);ZfB(C,a2,(Z3)(((((C)->ZWb)))-((T2)(ZGs(1)))),(T2)(ZGs(1)));(((C)->ZUb))[a2]=(a1);
+}}T0*ZiB(Z04*C){T0*R=Zo;R=Zh(sizeof(*C));*((Z04*)R)=Zhf;Z8B(((Z04*)R),((T0*)C));return R;}void ZjB(Z04*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){
+(C->ZUb)=((Zrb)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){ZSw(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);
+}void ZeB(Z04*C,T2 a1,T2 a2){T0*ZVx=Zo;ZVx=(((C)->ZUb))[a1];(((C)->ZUb))[a1]=((((C)->ZUb))[a2]);(((C)->ZUb))[a2]=(ZVx);}T0*ZkB(Z44*C,T2
+a1){T0*R=Zo;ZlB(C,a1);R=(((ZS5*)(((C)->Zbc)))->ZFc);return R;}void ZlB(Z44*C,T2 a1){if((a1)==((Z3)(((((C)->Zac)))+(ZGs(1))))){(C->Zac)=a1;
+(C->Zbc)=(((ZS5*)(((C)->Zbc)))->ZHc);while(!((((C)->Zbc))!=((void*)(Zo)))){(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];
+}}else if((a1)==(((C)->Zac))){}else if((a1)==(ZGs(1))){(C->Zac)=ZGs(1);(C->Zcc)=ZGs(0);(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];while(!((((C)->Zbc))!=((void*)(Zo))))
+{(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];}}else{ZlB(C,(T2)(ZGs(1)));while(!((((C)->Zac))==(a1))){ZlB(C,(Z3)(((((C)->Zac)))+((T2)(ZGs(1)))));
+}}}void ZmB(Z44*C){T2 Zet=0;T2 Zft=0;T2 Zpx=0;Ztb Zhz=Zo;T0*Ziz=Zo;T0*Zjz=Zo;int Zkz=0;Zpx=Zlz((Z3)(((((C)->ZVb)))+(ZGs(1))));Zhz=((C)->Z9c);
+(C->Z9c)=((Ztb)(Zk(Zpx,sizeof(T0*))));Zet=(Z3)(((((C)->ZVb)))-(ZGs(1)));(C->ZVb)=Zpx;while(!((Z3)((Zet)<(ZGs(0))))){Ziz=(Zhz)[Zet];while(!((Ziz)==((void*)(Zo))))
+{Zjz=((((ZS5*)Ziz))->ZHc);Zft=(Z3)(((((Z64*)(((((ZS5*)Ziz))->ZFc)))->Zrf))%(((C)->ZVb)));((((ZS5*)(((ZS5*)Ziz))))->ZHc)=((((C)->Z9c))[Zft]);
+(((C)->Z9c))[Zft]=(Ziz);Ziz=Zjz;}Zet=(Z3)(((Zet))-(ZGs(1)));}(C->Zac)=ZGs(-1);}T6 ZnB(Z44*C,T0*a1){T6 R=0;T2 Zft=0;T0*Zpz=Zo;Zft=(Z3)((((((Z64*)a1))->Zrf))%(((C)->ZVb)));
+Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(ZoB((Z64*)(((((ZS5*)Zpz))->ZFc)),a1)))))){Zpz=((((ZS5*)Zpz))->ZHc);}
+R=((T6)((Zpz)!=((void*)(Zo))));return R;}void ZpB(Z44*C,T0*a1){T2 Zoz=0;T2 Zft=0;T0*Zpz=Zo;(C->Zac)=ZGs(-1);Zoz=((((Z64*)a1))->Zrf);Zft=(Z3)((Zoz)%(((C)->ZVb)));
+Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(ZoB((Z64*)(((((ZS5*)Zpz))->ZFc)),a1)))))){Zpz=((((ZS5*)Zpz))->ZHc);}
+if((Zpz)==((void*)(Zo))){if((((C)->ZVb))==(((C)->Zdc))){ZmB(C);Zft=(Z3)((Zoz)%(((C)->ZVb)));}{ZS5*n=((ZS5*)Zh(sizeof(*n)));*n=ZYh;ZqB(n,a1,(((C)->Z9c))[Zft]);
+Zpz=((T0*)n);}(((C)->Z9c))[Zft]=(Zpz);(C->Zdc)=(Z3)(((((C)->Zdc)))+(ZGs(1)));}}void ZrB(Z44*C,T2 a1){T2 Zpx=0;int Zkz=0;Zpx=Zlz(a1);(C->Z9c)=((Ztb)(Zk(Zpx,sizeof(T0*))));
+(C->ZVb)=Zpx;(C->Zac)=ZGs(-1);(C->Zdc)=ZGs(0);}void ZsB(Zg4*C,T0*a1,T2 a2){T2 Zoz=0;T2 Zft=0;T0*Zpz=Zo;Zoz=Zbt(a2);Zft=(Z3)((Zoz)%(((C)->ZVb)));
+Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Z_s(((((Z25*)Zpz))->ZGc),a2)))))){Zpz=((((Z25*)Zpz))->ZHc);}if((Zpz)==((void*)(Zo))){
+if((((C)->ZVb))==(((C)->Zdc))){ZtB(C);Zft=(Z3)((Zoz)%(((C)->ZVb)));}{Z25*n=((Z25*)Zh(sizeof(*n)));*n=Z7h;ZuB(n,a1,a2,(((C)->Z9c))[Zft]);
+Zpz=((T0*)n);}(((C)->Z9c))[Zft]=(Zpz);(C->Zdc)=(Z3)(((((C)->Zdc)))+(ZGs(1)));(C->Zac)=ZGs(-1);}else{((((Z25*)(((Z25*)Zpz))))->ZFc)=(a1);
+}}T0*ZvB(Zg4*C,T2 a1){T0*R=Zo;ZwB(C,a1);R=(((Z25*)(((C)->Zbc)))->ZFc);return R;}void ZwB(Zg4*C,T2 a1){if((a1)==((Z3)(((((C)->Zac)))+(ZGs(1))))){
+(C->Zac)=a1;(C->Zbc)=(((Z25*)(((C)->Zbc)))->ZHc);while(!((((C)->Zbc))!=((void*)(Zo)))){(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];
+}}else if((a1)==(((C)->Zac))){}else if((a1)==(ZGs(1))){(C->Zac)=ZGs(1);(C->Zcc)=ZGs(0);(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];while(!((((C)->Zbc))!=((void*)(Zo))))
+{(C->Zcc)=(Z3)(((((C)->Zcc)))+(ZGs(1)));(C->Zbc)=(((C)->Z9c))[((C)->Zcc)];}}else{ZwB(C,(T2)(ZGs(1)));while(!((((C)->Zac))==(a1))){ZwB(C,(Z3)(((((C)->Zac)))+((T2)(ZGs(1)))));
+}}}void ZtB(Zg4*C){T2 Zet=0;T2 Zft=0;T2 Zpx=0;Zjb Zhz=Zo;T0*Ziz=Zo;T0*Zjz=Zo;int Zkz=0;Zpx=Zlz((Z3)(((((C)->ZVb)))+(ZGs(1))));Zhz=((C)->Z9c);
+(C->Z9c)=((Zjb)(Zk(Zpx,sizeof(T0*))));Zet=(Z3)(((((C)->ZVb)))-(ZGs(1)));(C->ZVb)=Zpx;while(!((Z3)((Zet)<(ZGs(0))))){Ziz=(Zhz)[Zet];while(!((Ziz)==((void*)(Zo))))
+{Zjz=((((Z25*)Ziz))->ZHc);Zft=(Z3)((Zbt(((((Z25*)Ziz))->ZGc)))%(((C)->ZVb)));((((Z25*)(((Z25*)Ziz))))->ZHc)=((((C)->Z9c))[Zft]);(((C)->Z9c))[Zft]=(Ziz);
+Ziz=Zjz;}Zet=(Z3)(((Zet))-(ZGs(1)));}(C->Zac)=ZGs(-1);}T6 ZxB(Zg4*C,T2 a1){T6 R=0;T2 Zft=0;T0*Zpz=Zo;Zft=(Z3)((Zbt(a1))%(((C)->ZVb)));
+Zpz=(((C)->Z9c))[Zft];while(!((T6)(((Zpz)==((void*)(Zo)))||((T6)(Z_s(((((Z25*)Zpz))->ZGc),a1)))))){Zpz=((((Z25*)Zpz))->ZHc);}R=((T6)((Zpz)!=((void*)(Zo))));
+return R;}void ZyB(Zg4*C,T2 a1){T2 Zpx=0;int Zkz=0;Zpx=Zlz(a1);(C->Z9c)=((Zjb)(Zk(Zpx,sizeof(T0*))));(C->ZVb)=Zpx;(C->Zac)=ZGs(-1);(C->Zdc)=ZGs(0);
+}void ZRz(T37*C,T0*a1,T0*a2,T0*a3){(C->ZFc)=a1;(C->ZGc)=a2;(C->ZHc)=a3;}void ZWA(Zj4*C,T0*a1,T0*a2,T0*a3){(C->ZFc)=a1;(C->ZGc)=a2;(C->ZHc)=a3;
+}T0*ZzB(T55*C){T0*R=Zo;R=(((C)->ZUb))[((C)->ZWb)];return R;}T6 ZAB(T55*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((ZGs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZWb))))))));
+return R;}T2 ZBB(T55*C,T0*a1){T2 R=0;R=Z9v(((C)->ZUb),a1,((C)->ZWb));return R;}void ZCB(T55*C,T2 a1){if((Z3)((a1)>(((C)->ZVb)))){(C->ZUb)=((T63)(Zk(a1,sizeof(T0*))));
+(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(ZGs(0)))){(C->ZWb)=Z3t(((C)->ZWb),(Z3)(((a1))-(ZGs(1))));if((Z3)((((C)->ZWb))>=(ZGs(0)))){Z6v(((C)->ZUb),((C)->ZWb));
+}}(C->ZWb)=(Z3)(((a1))-(ZGs(1)));}T0*ZDB(T55*C){T0*R=Zo;{Z_7*n=((Z_7*)Zh(sizeof(*n)));*n=Zzk;ZEB(n,(T0*)C);R=((T0*)n);}return R;}T6 ZFB(T55*C,T0*a1){
+T6 R=0;R=((T6)(ZAB(C,ZBB(C,a1))));return R;}T6 ZGB(T55*C,T0*a1){T6 R=0;R=((T6)(ZAB(C,ZHB(C,a1))));return R;}void ZQz(T55*C,T0*a1){T2 Zpx=0;
+if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){
+(C->ZUb)=((T63)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=Z7v(((C)->ZUb),((C)->ZVb),Zpx);
+(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZIB(T55*C,T2 a1){T2 Zpx=0;if((Z3)((a1)>((Z3)(((((C)->ZWb)))+(ZGs(1)))))){
+if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((T63)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))<(a1))){Zpx=(Z3)(((((C)->ZVb)))*(ZGs(2)));
+while(!((Z3)((Zpx)>=(a1)))){Zpx=(Z3)(((Zpx))*(ZGs(2)));}(C->ZUb)=Z7v(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;}}else if((a1)!=((Z3)(((((C)->ZWb)))+(ZGs(1))))){
+Zav(((C)->ZUb),a1,(Z3)((((Z3)(((((C)->ZWb)))+(ZGs(1)))))-((T2)(ZGs(1)))));}(C->ZWb)=(Z3)(((a1))-(ZGs(1)));}T2 ZHB(T55*C,T0*a1){T2 R=0;
+R=Zbv(((C)->ZUb),a1,((C)->ZWb));return R;}void ZSz(T55*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((T63)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;
+}else if((Z3)((((C)->ZVb))>(a1))){Zav(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);}void ZJB(T55*C,T0*a1){T2 Zwv=0;T2 Zxv=0;
+T2 ZKB=0;ZSz(C,ZLB(a1));(C->ZWb)=(Z3)(((ZLB(a1)))-(ZGs(1)));Zwv=ZGs(0);Zxv=Z4B(a1);ZKB=((((T55*)a1))->ZWb);while(!((Z3)((Zxv)>(ZKB))))
+{(((C)->ZUb))[Zwv]=(Z1B(a1,Zxv));Zwv=(Z3)(((Zwv))+(ZGs(1)));Zxv=(Z3)(((Zxv))+(ZGs(1)));}}void ZMB(T55*C,T2 a1,T2 a2){T0*ZVx=Zo;ZVx=(((C)->ZUb))[a1];
+(((C)->ZUb))[a1]=((((C)->ZUb))[a2]);(((C)->ZUb))[a2]=(ZVx);}void ZNB(Zp4*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){
+(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zhb)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);
+}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=Zcw(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}
+(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZOB(Zp4*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Zhb)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else
+if((Z3)((((C)->ZVb))>(a1))){Zew(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);}void ZPB(Zr4*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){
+(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zgb)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);
+}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=Z9w(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}
+(((C)->ZUb))[((C)->ZWb)]=(a1);}void ZQB(Zr4*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((Zgb)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else
+if((Z3)((((C)->ZVb))>(a1))){Zbw(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);}T6 ZRB(Zv4*C,T2 a1){T6 R=0;R=((T6)((T6)(((Z3)((ZGs(0))<=(a1)))&&((T6)((Z3)((a1)<=(((C)->ZWb))))))));
+return R;}T6 ZSB(Zv4*C,T0*a1){T6 R=0;R=((T6)(ZRB(C,ZTB(C,a1))));return R;}void ZUB(Zv4*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){
+(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((Zeb)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);
+}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));(C->ZUb)=Z5w(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}
+(((C)->ZUb))[((C)->ZWb)]=(a1);}T2 ZTB(Zv4*C,T0*a1){T2 R=0;R=Z8w(((C)->ZUb),a1,((C)->ZWb));return R;}void ZVB(Zv4*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){
+(C->ZUb)=((Zeb)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){Z7w(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);
+}void ZWB(ZB4*C,T0*a1){T2 ZYz=0;T2 Zpx=0;ZYz=((((ZB4*)a1))->ZWb);if((Z3)((ZYz)>=(ZGs(0)))){Zpx=(Z3)(((ZYz))+(ZGs(1)));if((Z3)((((C)->ZVb))<(Zpx))){
+(C->ZUb)=((ZQa)(Zk(Zpx,sizeof(T0*))));(C->ZVb)=Zpx;}else if((Z3)((((C)->ZVb))>(ZGs(0)))){ZYu(((C)->ZUb),(Z3)(((((C)->ZVb)))-((T2)(ZGs(1)))));
+}Z_u(((C)->ZUb),((((ZB4*)a1))->ZUb),ZYz);}else if((Z3)((((C)->ZVb))>(ZGs(0)))){ZYu(((C)->ZUb),(Z3)(((((C)->ZVb)))-((T2)(ZGs(1)))));}(C->ZWb)=ZYz;
+}void ZXB(ZB4*C,T0*a1){T2 Zpx=0;if((Z3)(((Z3)(((((C)->ZWb)))+(ZGs(1))))<=((Z3)(((((C)->ZVb)))-(ZGs(1)))))){(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));
+}else if((((C)->ZVb))==(ZGs(0))){(C->ZUb)=((ZQa)(Zk(ZGs(2),sizeof(T0*))));(C->ZVb)=ZGs(2);(C->ZWb)=ZGs(0);}else{Zpx=(Z3)(((ZGs(2)))*(((C)->ZVb)));
+(C->ZUb)=ZZu(((C)->ZUb),((C)->ZVb),Zpx);(C->ZVb)=Zpx;(C->ZWb)=(Z3)(((((C)->ZWb)))+(ZGs(1)));}(((C)->ZUb))[((C)->ZWb)]=(a1);}T0*ZYB(ZB4*C){
+T0*R=Zo;R=Zh(sizeof(*C));*((ZB4*)R)=ZBg;ZWB(((ZB4*)R),((T0*)C));return R;}void ZZB(ZB4*C,T2 a1){if((Z3)((((C)->ZVb))<(a1))){(C->ZUb)=((ZQa)(Zk(a1,sizeof(T0*))));
+(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(a1))){Z0v(((C)->ZUb),(T2)(ZGs(0)),((C)->ZWb));}(C->ZWb)=ZGs(-1);}void Z_B(ZD4*C,T2 a1){if((Z3)((a1)>(((C)->ZVb)))){
+(C->ZUb)=((ZSa)(Zk(a1,sizeof(T0*))));(C->ZVb)=a1;}else if((Z3)((((C)->ZVb))>(ZGs(0)))){(C->ZWb)=Z3t(((C)->ZWb),(Z3)(((a1))-(ZGs(1))));
+if((Z3)((((C)->ZWb))>=(ZGs(0)))){Z3v(((C)->ZUb),((C)->ZWb));}}(C->ZWb)=(Z3)(((a1))-(ZGs(1)));}
 #ifdef __cplusplus
 }
 #endif

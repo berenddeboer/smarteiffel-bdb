@@ -68,7 +68,7 @@ feature
          -- of some user expanded type with possibles side effects).
       do
          if is_live then
-            Result := true
+            Result := True
          elseif result_type.is_expanded then
 	    Result := not result_type.is_basic_eiffel_expanded
          end
@@ -88,7 +88,7 @@ feature {LOCAL_VAR_LIST}
 		  cpp.put_string("volatile ")
 	       end
 	    end
-            tmp_string.clear
+            tmp_string.clear_count
             t.c_type_for_result_in(tmp_string)
             tmp_string.extend(' ')
             cpp.put_string(tmp_string)
@@ -115,7 +115,7 @@ feature {LOCAL_NAME2}
 
    set_is_live is
       do
-         is_live := true
+         is_live := True
       end
 
 feature {LOCAL_NAME1_VISITOR}

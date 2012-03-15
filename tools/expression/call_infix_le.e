@@ -35,7 +35,7 @@ feature
 
    precedence: INTEGER is 6
 
-   left_brackets: BOOLEAN is false
+   left_brackets: BOOLEAN is False
 
    operator: STRING is
       do

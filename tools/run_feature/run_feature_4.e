@@ -634,7 +634,7 @@ feature {NONE}
             cpp.push_inline_dca(Current, cien)
             cien.dca_inline(cien.arg1.result_type)
             cpp.pop
-         when C_dc_pco1, C_dc_pco2 then
+         when C_dc_pco1 then
             flag := cpp.target_cannot_be_dropped
             if flag then
                cpp.put_character(',')
@@ -645,6 +645,17 @@ feature {NONE}
             cpp.push_direct(rf, c.target, c.arguments)
             rf.mapping_c
             cpp.pop
+            if flag then
+               cpp.put_character(')')
+            end
+         when C_dc_pco2 then
+            flag := cpp.target_cannot_be_dropped
+            if flag then
+               cpp.put_character(',')
+            end
+            a ?= routine_body.first
+            c ?= a.right_side
+            c.compile_to_c
             if flag then
                cpp.put_character(')')
             end

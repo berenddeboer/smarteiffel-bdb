@@ -48,6 +48,8 @@ feature
       end
    
    frozen to_runnable(ct: E_TYPE): EXPRESSION is
+      local
+         copied: like Current
       do
 	 if current_type = Void then
 	    current_type := ct
@@ -57,8 +59,9 @@ feature
 	    debug debug_info_update end
 	    run_feature_match
 	 else
-	    create {like Current} Result.with(target, feature_name)
-	    Result := Result.to_runnable(ct)
+	    copied := twin
+	    copied.with(target, feature_name)
+	    Result := copied.to_runnable(ct)
 	 end
       end
 
@@ -117,13 +120,15 @@ feature {CALL_PREFIX_VISITOR}
       deferred
       end
 
-feature {NONE}
+feature {CALL_PREFIX}
 
    frozen with(t: like target; fn: like feature_name) is
       require
          t /= Void
          fn /= Void
       do
+         run_feature := Void
+         current_type := Void
          target := t
          feature_name := fn
       ensure

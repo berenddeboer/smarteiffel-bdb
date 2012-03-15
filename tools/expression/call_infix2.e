@@ -34,7 +34,7 @@ feature
 
    precedence: INTEGER is 6
 
-   left_brackets: BOOLEAN is false
+   left_brackets: BOOLEAN is False
 
    start_lookup_class: BASE_CLASS is
       local
@@ -55,6 +55,8 @@ feature
       end
    
    frozen to_runnable(ct: E_TYPE): EXPRESSION is
+      local
+         copied: like Current
       do
 	 if current_type = Void then
 	    current_type := ct
@@ -66,8 +68,9 @@ feature
 	       check_comparison(ct)
 	    end
 	 else
-	    create {like Current} Result.with(target, feature_name, arguments)
-	    Result := Result.to_runnable(ct)
+	    copied := twin
+	    copied.with(target, feature_name, arguments)
+	    Result := copied.to_runnable(ct)
 	 end
       end
 
@@ -137,7 +140,7 @@ feature
          -- "=" and "/=" never can be guards; separate objects are accepted
          -- without being enclosed in a routine, because those features do not
          -- involve calling any message on the object.
-         Result := false;
+         Result := False;
       end
 
 feature {RUN_FEATURE_4}
@@ -181,7 +184,7 @@ feature {CALL_INFIX2}
 		  bcw2 := feature_name.start_position.base_class
 		  do_warning := bcw1 = bcw2
 	       else
-		  do_warning := true
+		  do_warning := True
 	       end
 	       error_handler.cancel
 	       error_handler.add_position(feature_name.start_position)
@@ -406,6 +409,8 @@ feature {CALL_INFIX2}
          fn /= Void
          a.count = 1
       do
+         run_feature := Void
+         current_type := Void
          target := t
          feature_name := fn
          arguments := a

@@ -24,7 +24,7 @@
 --
 class TYPE_REAL
    --
-   -- Handling of the "REAL" type mark.
+   -- Handling of the "REAL" / "REAL_32" type mark.
    --
 
 inherit TYPE_BASIC_EIFFEL_EXPANDED
@@ -35,18 +35,18 @@ feature
 
    id: INTEGER is 4
 
-   is_real: BOOLEAN is true
+   is_real: BOOLEAN is True
 
    is_double,
    is_integer,
    is_pointer,
    is_character,
-   is_boolean: BOOLEAN is false
+   is_boolean: BOOLEAN is False
 
    is_a(other: E_TYPE): BOOLEAN is
       do
          if other.is_real or else other.is_double then
-            Result := true
+            Result := True
          else
 	    Result := is_a_end_hook(other.run_type)
          end
@@ -82,9 +82,11 @@ feature
          load_run_class_once
       end
 
-   written_mark, run_time_mark: STRING is
+   written_mark: STRING
+   
+   run_time_mark: STRING is 
       do
-         Result := as_real
+         Result := as_real -- Must be constant to avoid code duplication. See ticket:40
       end
 
    c_type_for_argument_in(str: STRING) is
@@ -215,22 +217,25 @@ feature {TYPE_REAL_VISITOR}
 
 feature {NONE}
 
-   make(sp: like start_position) is
+   make(sp: like start_position; mark: STRING) is
+      require
+         mark = as_real or mark = as_real_32
       do
-         !!base_class_name.make(as_real,sp)
+         written_mark := mark
+         !!base_class_name.make(mark, sp)
       end
 
    load_run_class_once is
       once
          if base_class /= Void then
 	    if run_class = Void then
-	       check false end
+	       check False end
 	    end
 	 end
       end
 
 invariant
 
-   written_mark = as_real
+   written_mark = as_real or written_mark = as_real_32
 
 end -- TYPE_REAL

@@ -58,6 +58,11 @@ feature
 
    isa_dca_inline_argument: INTEGER is 0
 
+   is_written: BOOLEAN is
+         -- True when it is a really written Current.
+      deferred
+      end
+
    frozen start_lookup_class: BASE_CLASS is
       do
          Result := start_position.base_class
@@ -187,8 +192,7 @@ feature
             result_type := ct
             Result := Current
          else
-            !!Result.make(start_position)
-            Result := Result.to_runnable(ct)
+            Result := make_new.to_runnable(ct)
          end
       end
 
@@ -242,11 +246,6 @@ feature {ABSTRACT_CURRENT_VISITOR}
 
 feature {NONE}
 
-   is_written: BOOLEAN is
-         -- True when it is a really written Current.
-      deferred
-      end
-
    make(sp: like start_position) is
       require
          not sp.is_unknown
@@ -254,6 +253,11 @@ feature {NONE}
          start_position := sp
       ensure
          start_position = sp
+      end
+
+   make_new: like Current is
+         -- like twin, but the copy is not runnable
+      deferred
       end
 
 end -- ABSTRACT_CURRENT

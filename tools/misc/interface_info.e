@@ -54,7 +54,7 @@ feature {JVM}
    clear is
       do
          count := 0
-         storage.clear
+         storage.clear_count
       end
 
    write_bytes is

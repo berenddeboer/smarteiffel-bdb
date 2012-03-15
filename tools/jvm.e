@@ -745,7 +745,7 @@ feature {RUN_CLASS}
          cp := constant_pool
          method_info.start(1,fz_invariant,fz_29)
          stack_push(C_switch)
-         ci.compile_to_jvm(true)
+         ci.compile_to_jvm(True)
          pop
          ca.opcode_return
          method_info.finish
@@ -1014,7 +1014,7 @@ feature {RUN_FEATURE,NATIVE}
             Result := fal.jvm_switch_push_ith(dyn_rf.arguments,i)
          when C_expanded_initialize then
             check
-               false
+               False
             end
          when C_create_instruction then
             cpc := stack_cpc.item(top)
@@ -1044,15 +1044,15 @@ feature {RUN_FEATURE,NATIVE}
             cpc.target.jvm_assign
          when C_expanded_initialize then
             check
-               false
+               False
             end
          when C_create_instruction then
             check
-               false
+               False
             end
          when C_inside_twin then
             check
-               false
+               False
             end
          end
       end
@@ -1083,15 +1083,15 @@ feature {RUN_FEATURE,NATIVE}
             end
          when C_expanded_initialize then
             check
-               false
+               False
             end
          when C_create_instruction then
             check
-               false
+               False
             end
          when C_inside_twin then
             check
-               false
+               False
             end
          end
       end
@@ -1111,12 +1111,12 @@ feature {SWITCH}
 
 feature {NONE}
 
-   fields: FIXED_ARRAY[RUN_FEATURE] is
+   fields: FAST_ARRAY[RUN_FEATURE] is
       once
          !!Result.with_capacity(4)
       end
 
-   methods: FIXED_ARRAY[RUN_FEATURE] is
+   methods: FAST_ARRAY[RUN_FEATURE] is
       once
          !!Result.with_capacity(64)
       end

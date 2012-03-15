@@ -21,7 +21,7 @@ expanded class INTEGER_64
 -- 64 bits signed integer.
 --
 
-inherit INTEGER_GENERAL redefine item, hash_code end
+inherit INTEGER_GENERAL redefine item, hash_code, to_integer, to_integer_32, to_number end
 
 feature
 
@@ -39,6 +39,21 @@ feature
    hash_code: INTEGER is
       do
 	 Result := item.low_32 & 0x7FFFFFFF
+      end
+
+feature
+
+   to_integer_32, to_integer: INTEGER_32 is
+      external "SmartEiffel"
+      end
+
+   to_number: NUMBER is
+      local
+         number_tools: NUMBER_TOOLS
+      do
+         Result := number_tools.from_integer(Current)
+      ensure
+         Result @= Current
       end
 
 feature -- For experts only:

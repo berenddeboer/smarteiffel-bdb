@@ -29,7 +29,6 @@ class ASSERTION_LEVEL_NUMBERING
 
 inherit
    GLOBALS
-   VISITABLE
 
 feature
 

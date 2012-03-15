@@ -174,7 +174,7 @@ feature {CREATION_CLAUSE_LIST_VISITOR}
          visitor.visit_creation_clause_list(Current)
       end
 
-   list: FIXED_ARRAY[CREATION_CLAUSE]
+   list: FAST_ARRAY[CREATION_CLAUSE]
 
 feature {NONE}
 

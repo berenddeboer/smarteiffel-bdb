@@ -29,7 +29,7 @@ class TYPE_LIKE_FEATURE
    -- See also TYPE_LIKE_ARG and TYPE_LIKE_CURRENT.
    --
 
-inherit TYPE_ANCHORED redefine is_like_feature end
+inherit TYPE_ANCHORED
 
 creation {EIFFEL_PARSER} make
 

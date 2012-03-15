@@ -76,7 +76,7 @@ feature
       do
          if is_omitted then
             -- It is equivalent to {ANY}:
-            Result := true
+            Result := True
          elseif list = Void then
             -- Because it is equivalent to {NONE}.
          else
@@ -93,7 +93,7 @@ feature
 	 error_handler.is_empty
       do
          if is_omitted then
-            Result := true
+            Result := True
             -- Because it is as : {ANY}.
          elseif list = Void then
             -- Because it is as : {NONE}.
@@ -214,10 +214,10 @@ feature {RUN_FEATURE}
             vape := other.gives_permission_to_any
          elseif list = Void then
             -- It is {NONE}:
-            vape := true
+            vape := True
          else
             from
-               vape := true
+               vape := True
                i := list.count
             until
                not vape or else i = 0

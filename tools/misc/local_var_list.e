@@ -77,7 +77,7 @@ feature
          i, j, column, wrap_limit: INTEGER; buffer: STRING; c: CHARACTER
       do
 	 buffer := once "........................"
-	 buffer.clear
+	 buffer.clear_count
 	 -- Fill the `buffer' first:
          from
 	    i := list.lower
@@ -195,7 +195,7 @@ feature {RUN_FEATURE}
 	    if n.produce_c then
 	       to_string := n.to_string
 	       format.append(to_string)
-	       locals.append(once "(void**)&_")
+	       locals.append(once "(void**)&_l_")
 	       locals.append(to_string)
 	       locals.extend(',')
 	       type(i).c_frame_descriptor_in(format)

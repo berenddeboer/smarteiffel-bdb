@@ -144,6 +144,7 @@ feature {NONE}
          prefix_name.count > 0
       local
          i: INTEGER
+         ftools: FILE_TOOLS
       do
          from
             i := 1
@@ -154,7 +155,7 @@ feature {NONE}
             i.append_in(tmp_path)
             tmp_path.extend('.')
             tmp_path.extend('c')
-            if file_exists(tmp_path) then
+            if ftools.is_readable(tmp_path) then
                echo.file_removing(tmp_path)
                tmp_path.put('d',tmp_path.count)
                echo.file_removing(tmp_path)

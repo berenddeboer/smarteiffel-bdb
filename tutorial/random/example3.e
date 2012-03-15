@@ -1,5 +1,8 @@
 class EXAMPLE3
 
+inherit
+    ARGUMENTS
+
 creation make
 
 feature

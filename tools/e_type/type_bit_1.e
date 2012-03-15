@@ -35,7 +35,7 @@ feature
 
    n: INTEGER_CONSTANT
 
-   is_run_type: BOOLEAN is true
+   is_run_type: BOOLEAN is True
 
    run_time_mark: STRING is
       do

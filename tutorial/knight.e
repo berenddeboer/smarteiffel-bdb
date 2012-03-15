@@ -14,7 +14,9 @@ class KNIGHT
    --           21   44   33   14    7   46   49
    --
 
-inherit ANY redefine print_on end;
+inherit
+    ARGUMENTS
+        redefine print_on end
 
 creation make
 
@@ -90,7 +92,7 @@ feature {NONE}
          value,i : INTEGER;
       do
          if chessboard.count = chessboard.item(line,column) then
-            Result := true;
+            Result := True;
          else
             from
                i := 1;
@@ -135,7 +137,7 @@ feature {NONE}
             elseif max < Result then
                io.put_string("Value too big.%N");
             else
-               stop := true;
+               stop := True;
             end;
          end;
       end;

@@ -26,7 +26,7 @@ class ERROR_HANDLER
    --
    -- The unique `error_handler' object for Warning, Error and Fatal Error
    -- handling.
-   -- This handler use an assynchronous strategy.
+   -- This handler uses an asynchronous strategy.
    --
 
 inherit
@@ -194,7 +194,7 @@ feature
    cancel is
       -- Cancel a prepared report without printing it.
       do
-         explanation.clear
+         explanation.clear_count
          positions.clear
       ensure
          is_empty
@@ -216,7 +216,7 @@ feature {NONE}
          !!Result.make(1024)
       end
 
-   positions: FIXED_ARRAY[POSITION] is
+   positions: FAST_ARRAY[POSITION] is
          -- The list of `positions' to be shown with next Warning,
          -- the next Error or the next Fatal Error.
       once

@@ -42,11 +42,11 @@ feature {TYPE_LIKE_ARGUMENT_VISITOR}
 
 feature
 
-   is_like_current: BOOLEAN is false
+   is_like_current: BOOLEAN is False
 
-   is_like_argument: BOOLEAN is true
+   is_like_argument: BOOLEAN is True
 
-   is_like_feature: BOOLEAN is false
+   is_like_feature: BOOLEAN is False
 
    like_what: ARGUMENT_NAME2
 

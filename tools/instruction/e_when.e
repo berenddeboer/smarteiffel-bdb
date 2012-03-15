@@ -147,9 +147,9 @@ feature {WHEN_LIST}
       do
          ca := code_attribute
          if remainder > 0 then
-            must_test := true
+            must_test := True
          elseif ace.no_check then
-            must_test := true
+            must_test := True
          else -- boost :
             must_test := not else_position.is_unknown
          end
@@ -699,7 +699,7 @@ feature {NONE}
    values: ARRAY[INTEGER]
 	 -- To store pairs of range values.
 
-   points1: FIXED_ARRAY[INTEGER] is
+   points1: FAST_ARRAY[INTEGER] is
          -- To reach the `compound'.
       once
          !!Result.with_capacity(12)

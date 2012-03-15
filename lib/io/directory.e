@@ -37,7 +37,7 @@ feature {NONE}
    basic_directory: BASIC_DIRECTORY
          -- Provide low level access to directories.
 
-   name_list: FIXED_ARRAY[STRING]
+   name_list: FAST_ARRAY[STRING]
          -- Actual list of entries (files or subdirectories)..
 
    make is
@@ -78,9 +78,9 @@ feature -- Disk access:
                basic_directory.read_entry
             end
             basic_directory.disconnect
-            last_scan_status := true
+            last_scan_status := True
          else
-            last_scan_status := false
+            last_scan_status := False
          end
       ensure
 	 (not last_scan_status) implies is_empty
@@ -168,10 +168,10 @@ feature -- Disk access:
             end
             basic_directory.disconnect
             name_list.resize(i)
-            last_scan_status := true
+            last_scan_status := True
          else
             name_list.clear
-            last_scan_status := false
+            last_scan_status := False
          end
       ensure
 	 (not last_scan_status) implies is_empty
@@ -195,9 +195,9 @@ feature -- Disk access:
                basic_directory.read_entry
             end
             basic_directory.disconnect
-            last_scan_status := true
+            last_scan_status := True
          else
-            last_scan_status := false
+            last_scan_status := False
          end
       ensure
 	 (not last_scan_status) implies is_empty

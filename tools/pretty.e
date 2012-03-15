@@ -151,7 +151,7 @@ feature {NONE}
    style: STRING
 	 -- The selected one among: -default -zen -end -parano
 
-   class_names: FIXED_ARRAY[STRING] is
+   class_names: FAST_ARRAY[STRING] is
       once
          create Result.with_capacity(12)
       end
@@ -173,6 +173,7 @@ feature {NONE}
          name /= Void
       local
          root_class: STRING; bc: BASE_CLASS; cn: CLASS_NAME
+         ftools: FILE_TOOLS
       do
          ace.set_root_class_name_using(name)
          root_class := ace.root_class_name
@@ -187,14 +188,14 @@ feature {NONE}
             backup.copy(path)
             backup.remove_suffix(eiffel_suffix)
             backup.append(backup_suffix)
-            if file_exists(backup) then
+            if ftools.is_readable(backup) then
                error_handler.append("Security backup file %"")
                error_handler.append(backup)
                fatal_error("%" already exists. Remove this file first and %
 			     %then run pretty again.")
             end
-            rename_file(path, backup)
-            if not file_exists(backup) then
+            ftools.rename_to(path, backup)
+            if not ftools.is_readable(backup) then
                error_handler.append("Cannot rename %"")
                error_handler.append(path)
                fatal_error("%".")

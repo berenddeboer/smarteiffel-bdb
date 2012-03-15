@@ -147,7 +147,7 @@ feature -- Non-Standard Extensions:
       external "SmartEiffel"
       end
 
-   developer_exception_name_memory: MEMO[STRING] is
+   developer_exception_name_memory: REFERENCE[STRING] is
       once
          create Result
       end

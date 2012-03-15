@@ -31,7 +31,7 @@ inherit E_TYPE
 
 feature
 
-   is_basic_eiffel_expanded, is_expanded, is_run_type: BOOLEAN is true
+   is_basic_eiffel_expanded, is_expanded, is_run_type: BOOLEAN is True
 
    is_none,
    is_array,
@@ -47,7 +47,7 @@ feature
    is_like_argument,
    is_like_feature,
    need_c_struct,
-   is_bit : BOOLEAN is false
+   is_bit : BOOLEAN is False
 
    base_class_name: CLASS_NAME
 
@@ -119,12 +119,12 @@ feature
 
    frozen local_from_separate: E_TYPE is
       do
-	 check false end
+	 check False end
       end
 
    frozen stupid_switch(run_time_set: RUN_TIME_SET): BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    frozen run_type: E_TYPE is
@@ -178,7 +178,7 @@ feature
 
 feature {RUN_CLASS,E_TYPE}
 
-   need_gc_mark_function: BOOLEAN is false
+   need_gc_mark_function: BOOLEAN is False
 
    frozen just_before_gc_mark_in(str: STRING) is
       do
@@ -220,7 +220,7 @@ feature {NONE}
 	 ref_type ?= other
 	 if ref_type /= Void then
 	    if Current.is_a(ref_type.expanded_type) then
-	       Result := true
+	       Result := True
 	    else
 	       error_handler.cancel
 	    end

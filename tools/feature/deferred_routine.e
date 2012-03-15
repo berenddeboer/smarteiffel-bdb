@@ -37,7 +37,7 @@ feature {DEFERRED_ROUTINE_VISITOR}
 
 feature
 
-   is_deferred: BOOLEAN is true
+   is_deferred: BOOLEAN is True
 
    frozen set_rescue_compound(c: COMPOUND) is
       do

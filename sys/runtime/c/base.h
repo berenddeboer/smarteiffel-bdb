@@ -57,7 +57,7 @@
 #  endif
 #endif
 
-#if defined(_MSC_VER) && (_MSC_VER < 1400) /* MSVC older than v8 */
+#if defined(_MSC_VER) 
 typedef signed char int8_t;
 typedef signed short int16_t;
 typedef signed int int32_t;
@@ -463,5 +463,16 @@ typedef void* T8;
 void* se_malloc(size_t size);
 void* se_calloc(size_t nmemb, size_t size);
 
+/*
+   Infinities
+*/
+
+#ifdef INFINITY /* ISO C99 constant */
+#   define POSITIVE_INFINITY INFINITY
+#else /* Fallback for infinity in non-ISO C99 compilers  */
+#   define POSITIVE_INFINITY (1.0/0.0)
+#endif
+
+#define NEGATIVE_INFINITY (-POSITIVE_INFINITY)
 
 #endif /* #ifndef _BASE_H */

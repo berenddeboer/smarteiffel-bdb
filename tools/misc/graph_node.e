@@ -29,7 +29,13 @@ class GRAPH_NODE
 
 inherit
    GLOBALS
+      redefine
+         is_equal
+      end
    VISITABLE
+      redefine
+         is_equal
+      end
    HASHABLE
       redefine
          is_equal
@@ -58,10 +64,10 @@ feature
    run_time_set: RUN_TIME_SET
 	 -- An alias for `run_class.run_time_set'.
 
-   destination_types: SET[GRAPH_NODE]
+   destination_types: HASHED_SET[GRAPH_NODE]
 	 -- The set of possible destination starting from `source_type'.
 
-   explanation_memory: FIXED_ARRAY[TUPLE[POSITION,E_TYPE]]
+   explanation_memory: FAST_ARRAY[TUPLE[POSITION,E_TYPE]]
 
    hash_code: INTEGER
 	 -- A memory cache for `source_type.run_time_mark.hash_code'.

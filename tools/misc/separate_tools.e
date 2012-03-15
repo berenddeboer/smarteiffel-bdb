@@ -72,7 +72,7 @@ feature
 
 feature {SMART_EIFFEL}
 
-   generate_scoop_functions(run_class_map: FIXED_ARRAY[RUN_CLASS]) is
+   generate_scoop_functions(run_class_map: FAST_ARRAY[RUN_CLASS]) is
       require
 	 cpp.on_c
       do
@@ -82,7 +82,7 @@ feature {SMART_EIFFEL}
 
 feature {NONE}
 
-   generate_as_separate(run_class_map: FIXED_ARRAY[RUN_CLASS]) is
+   generate_as_separate(run_class_map: FAST_ARRAY[RUN_CLASS]) is
          -- Generate the "as_separate()" C function, used to SCOOP'ify an
          -- object, to pass it to another thread.
       local
@@ -131,7 +131,7 @@ feature {NONE}
 	 cpp.put_string(once "}%N")
       end
 
-   generate_get_subsystem(run_class_map: FIXED_ARRAY[RUN_CLASS]) is
+   generate_get_subsystem(run_class_map: FAST_ARRAY[RUN_CLASS]) is
          -- Generates the "get_subsystem()" C function, used to return the
          -- subsystem of an object. If the object type is not separate, that
          -- function will return NULL.

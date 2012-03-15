@@ -43,11 +43,11 @@ feature {NONE}
 
    show_time(format: TIME_IN_SOME_LANGUAGE) is
       do
-         format.set_short_mode(false);
+         format.set_short_mode(False);
          io.put_string("        ");
          io.put_string(format.to_string);
          io.put_string("%N        ");
-         format.set_short_mode(true);
+         format.set_short_mode(True);
          io.put_string(format.to_string);
          io.put_new_line;
       end;

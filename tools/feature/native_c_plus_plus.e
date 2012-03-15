@@ -42,13 +42,13 @@ feature
    stupid_switch_function(run_time_set: RUN_TIME_SET; name: STRING)
       : BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    stupid_switch_procedure(run_time_set: RUN_TIME_SET; name: STRING)
       : BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    notify_external_assignments(args: FORMAL_ARG_LIST; rt: E_TYPE) is
@@ -138,7 +138,7 @@ feature {NONE}
       do
 	 rf8.external_c_prototype_from(external_tag.start_position)
          if ace.no_check then
-            body.clear
+            body.clear_count
             body.extend('R')
             body.extend('=')
             wrapped_external_call(rf8.base_feature,rf8.arg_count)
@@ -150,7 +150,7 @@ feature {NONE}
       do
 	 rf7.external_c_prototype_from(external_tag.start_position)
          if ace.no_check then
-            body.clear
+            body.clear_count
             wrapped_external_call(rf7.base_feature,rf7.arg_count)
             rf7.c_define_with_body(body)
          end
@@ -222,7 +222,7 @@ feature {NONE}
 	 if not external_routine_memory.fast_has(er) then
 	    external_routine_memory.add_last(er)
 	    rf8.c_plus_plus_prototype(er)
-	    body.clear
+	    body.clear_count
 	    body.append(once "return ((")
 	    rf8.result_type.c_type_for_external_in(body)
 	    body.extend(')')
@@ -246,7 +246,7 @@ feature {NONE}
 	 if not external_routine_memory.fast_has(er) then
 	    external_routine_memory.add_last(er)
 	    rf7.c_plus_plus_prototype(er)
-	    body.clear
+	    body.clear_count
 	    if rf7.arguments /= Void then
 	       args_count := rf7.arguments.count
 	    end
@@ -555,7 +555,7 @@ feature {NONE}
 	 i: INTEGER; c: CHARACTER
       do
 	 from
-	    buffer.clear
+	    buffer.clear_count
 	    buffer.extend(tag.item(s))
 	    i := s + 1
 	 until
@@ -664,12 +664,12 @@ feature {NONE}
          Result := tag.count + 1
       end
 
-   include_memory: FIXED_ARRAY[STRING] is
+   include_memory: FAST_ARRAY[STRING] is
       once
          !!Result.with_capacity(4)
       end
 
-   external_routine_memory: FIXED_ARRAY[EXTERNAL_ROUTINE] is
+   external_routine_memory: FAST_ARRAY[EXTERNAL_ROUTINE] is
       once
          !!Result.with_capacity(4)
       end

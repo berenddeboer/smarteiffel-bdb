@@ -89,9 +89,11 @@ feature
          load_run_class_once
       end
 
-   written_mark, run_time_mark: STRING is
+   written_mark: STRING
+   
+   run_time_mark: STRING is
       do
-         Result := as_double
+         Result := as_double -- must be constant to avoid code duplication, see ticket:40
       end
 
    c_type_for_argument_in(str: STRING) is
@@ -226,9 +228,12 @@ feature
    
 feature {NONE}
    
-   make(sp: like start_position) is
+   make(sp: like start_position; mark: STRING) is
+      require
+         mark = as_double or mark = as_real_64 or mark = as_real_general
       do
-         create base_class_name.make(as_double,sp)
+         written_mark := mark
+         create base_class_name.make(mark,sp)
       end
 
    load_run_class_once is
@@ -242,6 +247,8 @@ feature {NONE}
 
 invariant
 
-   written_mark = as_double
+   written_mark = as_double or
+   written_mark = as_real_64 or
+   written_mark = as_real_general
 
 end -- TYPE_DOUBLE

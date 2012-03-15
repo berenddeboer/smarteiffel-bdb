@@ -23,12 +23,12 @@ expanded class INTEGER
 
 inherit
    INTEGER_GENERAL
-      redefine fit_integer_32, fit_integer, item
+      redefine fit_integer_32, fit_integer, item, to_number
       end
 
 feature
 
-   fit_integer_32, fit_integer: BOOLEAN is true
+   fit_integer_32, fit_integer: BOOLEAN is True
 
    low_16: INTEGER_16 is
 	 -- The 16 low bits of `Current' (i.e. the right-most part).
@@ -39,6 +39,15 @@ feature
 	 -- The 16 high bits of `Current' (i.e. the left-most part).
       do
 	 Result := (item |>> 16).low_16
+      end
+
+   to_number: NUMBER is
+      local
+         number_tools: NUMBER_TOOLS
+      do
+         Result := number_tools.from_integer(Current)
+      ensure
+         Result @= Current
       end
 
 feature -- For experts only:

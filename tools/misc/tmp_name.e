@@ -39,6 +39,27 @@ feature {TMP_NAME_VISITOR}
          visitor.visit_tmp_name(Current)
       end
 
+feature {PARSER, CREATE_TOOLS} 
+   -- Hack: we need to create a fake name at creation sites,
+   -- to build HASHED_DICTIONARYs instead of DICTIONARYs
+
+   to_class_name: CLASS_NAME is
+      do
+         !!Result.make(aliased_string,start_position)
+      end
+
+   reset(sp: like start_position) is
+      do
+         start_position := sp
+         buffer.clear_count
+         aliased_string_memory := Void
+      end
+
+   append(s: STRING) is
+      do
+         buffer.append(s)
+      end
+
 feature {PARSER}
 
    buffer: STRING is "                                                 "
@@ -55,21 +76,9 @@ feature {PARSER}
          Result := start_position.column
       end
 
-   reset(sp: like start_position) is
-      do
-         start_position := sp
-         buffer.clear
-         aliased_string_memory := Void
-      end
-
    extend(ch: CHARACTER) is
       do
          buffer.extend(ch)
-      end
-
-   append(s: STRING) is
-      do
-         buffer.append(s)
       end
 
    is_current: BOOLEAN is
@@ -110,134 +119,134 @@ feature {PARSER}
             c
          when 'a' then
             if fz_alias.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_all.same_as(buffer) then
-               Result := true
+               Result := True
             elseif as_and.same_as(buffer) then
-               Result := true
+               Result := True
             elseif as_agent.same_as(buffer) then
 	       new_keyword_warning
-               Result := true
+               Result := True
             else
                Result := fz_as.same_as(buffer)
             end
          when 'c' then
             if fz_check.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_class.same_as(buffer) then
-               Result := true
+               Result := True
 	    elseif fz_create.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_creation.same_as(buffer)
             end
          when 'd' then
             if fz_debug.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_deferred.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_do.same_as(buffer)
             end
          when 'e' then
             if fz_else.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_elseif.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_end.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_ensure.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_expanded.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_export.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_external.same_as(buffer)
             end
          when 'f' then
             if fz_false.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_feature.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_from.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_frozen.same_as(buffer)
             end
          when 'i' then
             if fz_if.same_as(buffer) then
-               Result := true
+               Result := True
             elseif as_implies.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_indexing.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_infix.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_inherit.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_inspect.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_invariant.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_is.same_as(buffer)
             end
          when 'l' then
             if fz_like.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_local.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_loop.same_as(buffer)
             end
          when 'o' then
             if fz_obsolete.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_old.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_once.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := as_or.same_as(buffer)
             end
          when 'p' then
             if as_precursor.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_prefix.same_as(buffer)
             end
          when 'r' then
             if fz_redefine.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_rename.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_require.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_rescue.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_retry.same_as(buffer)
             end
          when 's' then
             if fz_select.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_separate.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_strip.same_as(buffer)
             end
          when 't' then
             if fz_then.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_true.same_as(buffer)
             end
          when 'u' then
             if fz_undefine.same_as(buffer) then
-               Result := true
+               Result := True
             elseif fz_unique.same_as(buffer) then
-               Result := true
+               Result := True
             else
                Result := fz_until.same_as(buffer)
             end
@@ -259,11 +268,6 @@ feature {PARSER}
    to_argument_name2(fal: FORMAL_ARG_LIST; rank: INTEGER): ARGUMENT_NAME2 is
       do
          !!Result.refer_to(start_position,fal,rank)
-      end
-
-   to_class_name: CLASS_NAME is
-      do
-         !!Result.make(aliased_string,start_position)
       end
 
    to_e_void: E_VOID is

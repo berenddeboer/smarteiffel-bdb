@@ -39,6 +39,8 @@ inherit
       redefine is_equal
       end
    EXPRESSION
+      redefine is_equal
+      end
    NAME
       redefine is_equal
       end

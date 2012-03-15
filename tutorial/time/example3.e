@@ -15,11 +15,11 @@ feature {NONE}
          time.update;
          format.set_time(time);
          io.put_string("The complete format :%N");
-         format.set_short_mode(false);
+         format.set_short_mode(False);
          format.print_on(io);
          io.put_new_line;
          io.put_string("The short format :%N");
-         format.set_short_mode(true);
+         format.set_short_mode(True);
          format.print_on(io);
          io.put_new_line;
       end;

@@ -4,8 +4,11 @@ class EXAMPLE2
 -- using low level class BASIC_DIRECTORY.
 --
    
-creation make
+inherit
+    ARGUMENTS
    
+creation make
+
 feature {NONE}
    
    make is

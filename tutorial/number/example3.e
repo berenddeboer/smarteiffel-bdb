@@ -5,6 +5,9 @@ class EXAMPLE3
    --            compile -o example3 -boost example3
    --
 
+inherit
+    ARGUMENTS
+
 creation make
 
 feature

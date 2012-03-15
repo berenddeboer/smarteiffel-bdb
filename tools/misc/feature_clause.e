@@ -141,7 +141,7 @@ feature {FEATURE_NAME_LIST}
 
 feature {FEATURE_CLAUSE_LIST}
 
-   add_into(fd: DICTIONARY[E_FEATURE,FEATURE_NAME]) is
+   add_into(fd: HASHED_DICTIONARY[E_FEATURE,FEATURE_NAME]) is
       local
          i: INTEGER; f: E_FEATURE
       do
@@ -166,10 +166,10 @@ feature {FEATURE_CLAUSE_VISITOR}
          visitor.visit_feature_clause(Current)
       end
 
-   list: FIXED_ARRAY[E_FEATURE]
+   list: FAST_ARRAY[E_FEATURE]
          -- Only the features of the current clause. (Actually, this is useful 
          -- only for `pretty' because all features of a class are grouped in a 
-         -- single DICTIONARY (see BASE_CLASS).
+         -- single HASHED_DICTIONARY (see BASE_CLASS).
 
 feature {NONE}
 

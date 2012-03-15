@@ -438,7 +438,7 @@ feature {NONE}
          append_u2(str,u4 \\ 65536)
       end
 
-   is_install: reference BOOLEAN is
+   is_install: REFERENCE [BOOLEAN] is
       once
          create Result
       end

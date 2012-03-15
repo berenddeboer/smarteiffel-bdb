@@ -1,0 +1,29 @@
+Installation instructions
+=========================
+
+* From source, UNIX
+
+This assumes you have downloaded a release, which is a file called
+
+  SmartEiffel-1.2r1.tar.gz
+
+Where instead of r1 you may have a higher version number (r2, r3, r4, ...).
+in the commands below, substitute r1 for the number of your file.
+
+This package should be unpacked in the place where you want SmartEiffel 1.2
+to be installed. A usual place is /usr/lib, or somewhere inside your home
+directory if you want to install as an unprivileged user. Enter the following
+commands.
+
+  cd /usr/lib # You can change this for your location of choice
+  tar xzf your/downlaod/path/SmartEiffel-1.2r1.tar.gz
+  cd SmartEiffel12
+  ./configure
+  make
+
+after this, you should have SmartEiffel 12 installed.
+
+If you prefer a custom installation, run "make interactive" instead of just
+"make". You can customize the location of the config file, the OS
+autodetection, paths, compiler options and modes, etc. The defaults should
+be fine for almost anything.

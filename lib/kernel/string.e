@@ -140,7 +140,7 @@ feature -- Testing:
 	 until
 	    j <= 0
 	 loop
-            Result := 5 #* Result #+ item(i).code
+            Result := Result #* 5 #+ item(i).code
             i := i + 1
 	    j := j - 1
          end
@@ -216,13 +216,13 @@ feature -- Testing:
          i := count
          if i = other.count then
             if storage.fast_memcmp(other.storage,i) then
-               Result := true
+               Result := True
             else
                from
                   i := i - 1
                   s1 := storage
                   s2 := other.storage
-                  Result := true
+                  Result := True
                until
                   i < 0
                loop
@@ -230,7 +230,7 @@ feature -- Testing:
                      i := i - 1
                   else
                      i := -1
-                     Result := false
+                     Result := False
                   end
                end
             end
@@ -382,149 +382,152 @@ feature -- Testing and Conversion:
          Result := (once "True").is_equal(Current)
       end
 
-   is_integer: BOOLEAN is
-         -- Does 'Current' represent an INTEGER?
-         -- `Result' is true if and only if the following two conditions 
-         -- hold: 
-         --
-         -- 1. In the following BNF grammar, the value of `Current' can be
-         -- produced by "Integer_literal", if leading and trailing
-         -- separators are ignored:
-         --
-         -- Integer_literal = [Sign] Integer
-         -- Sign            = "+" | "-"
-         -- Integer         = Digit | Digit Integer
-         -- Digit           = "0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"
-         --
-         -- 2. The numerical value represented by `Current' is within the
-         -- range that can be represented by an instance of type INTEGER.
-      local
-         i, state, value: INTEGER; negative: BOOLEAN; cc: CHARACTER
-      do
-         -- state 0: nothing read.
-         -- state 1: "+" or "-" read.
-         -- state 2: in the number.
-         -- state 3: after the number.
-         -- state 4: error.
-         from
-            i := 1
-	 variant
-	    count - i
-         until
-            state = 4 or else i > count
-         loop
-            cc := item(i)
-            inspect
-               state
-            when 0 then
-               if cc.is_separator then
-               elseif cc = '+' then
-                  state := 1
-               elseif cc = '-' then
-                  negative := true
-                  state := 1
-               elseif cc.is_digit then
-                  value := cc.decimal_value
-                  state := 2
-               else
-                  state := 4
-               end
-            when 1 then
-               if cc.is_digit then
-                  value := cc.decimal_value
-                  if negative then
-                     value := -1 * value
-                  end
-                  state := 2
-               else
-                  state := 4
-               end
-            when 2 then
-               if cc.is_digit then
-                  if negative then
-                     value := 10 * value - cc.decimal_value
-                  else
-                     value := 10 * value + cc.decimal_value
-                  end
-                  -- over/underflow check here
-                  if (negative and then value > 0)
-                     or else (not negative and then value < 0) then
-                     state := 4
-                  end
-               elseif cc.is_separator then
-                  state := 3
-               else
-                  state := 4
-               end
-            when 3 then
-               if cc.is_separator then
-               else
-                  state := 4
-               end
-            end
-            i := i + 1
-         end
-	 if state = 2 or else state = 3 then
-            Result := true
-         end
-      end
+	is_integer: BOOLEAN is
+			-- Does 'Current' represent an INTEGER?
+			-- `Result' is True if and only if the following two conditions
+			-- hold:
+			--
+			-- 1. In the following BNF grammar, the value of `Current' can be
+			-- produced by "Integer_literal", if leading and trailing
+			-- separators are ignored:
+			--
+			-- Integer_literal = [Sign] Integer
+			-- Sign            = "+" | "-"
+			-- Integer         = Digit | Digit Integer
+			-- Digit           = "0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"
+			--
+			-- 2. The numerical value represented by `Current' is within the
+			-- range that can be represented by an instance of type INTEGER.
+		local
+			i, state, value, bound, critical_bound: INTEGER; cc: CHARACTER
+		do
+			-- state 0: nothing read.
+			-- state 1: "+" or "-" read.
+			-- state 2: error.
+			-- state 3: in the number.
+			-- state 4: last digit of a critically big number
+			-- state 5: after the number.
+			from
+				i := 1
+			variant
+				count - i
+			until
+				state = 2 or else i > count
+			loop
+				cc := item(i)
+				inspect
+					state
+				when 0 then
+					if cc.is_separator then
+					elseif cc = '+' then
+						bound := Maximum_integer \\ 10
+						critical_bound := Maximum_integer // 10
+						state := 1
+					elseif cc = '-' then
+						bound := - (Minimum_integer \\ 10)
+						critical_bound := - (Minimum_integer // 10)
+						state := 1
+					elseif cc.is_digit then
+						bound := Maximum_integer \\ 10
+						critical_bound := Maximum_integer // 10
+						value := cc.decimal_value
+						state := 3
+					else
+						state := 2
+					end
+				when 1 then
+					if cc.is_digit then
+						value := cc.decimal_value
+						state := 3
+					else
+						state := 2
+					end
+				when 3 then
+					if cc.is_digit then
+						value := 10 * value + cc.decimal_value
+						if value >= critical_bound then
+							state := 4
+						end
+					elseif cc.is_separator then
+						state := 5
+					else
+						state := 2
+					end
+				when 4 then
+					if cc.is_digit then
+						if value > critical_bound then
+							state := 2
+						else
+							if cc.decimal_value <= bound then
+								state := 5
+							else
+								state := 2
+							end
+						end
+					elseif cc.is_separator then
+						state := 5
+					else
+						state := 2
+					end
+				when 5 then
+					if cc.is_separator then
+					else
+						state := 2
+					end
+				end
+				i := i + 1
+			end
+			Result := state >= 3
+		end
 
-   to_integer: INTEGER is
-         -- `Current' must look like an INTEGER.
-      require
-         is_integer
-      local
-         i, state: INTEGER; cc: CHARACTER; negative: BOOLEAN
-      do
-         -- state 0: nothing read.
-         -- state 1: "+" or "-" read.
-         -- state 2: in the number.
-         -- state 3: after the number.
-         from
-            i := 1
-	 variant
-	    count - i
-         until
-            i > count
-         loop
-            cc := item(i)
-            inspect
-               state
-            when 0 then
-               if cc.is_separator then
-               elseif cc = '+' then
-                  state := 1
-               elseif cc = '-' then
-                  negative := true
-                  state := 1
-               else -- cc.is_digit
-                  Result := cc.value
-                  state := 2
-               end
-            when 1 then
-               -- cc.is_digit
-               Result := cc.value
-               if negative then
-                     Result := -1 * Result
-               end
-               state := 2
-            when 2 then
-               if cc.is_digit then
-                  if negative then
-                     Result := 10 * Result - cc.decimal_value
-                  else
-                     Result := 10 * Result + cc.decimal_value
-                  end
-               else -- cc.is_separator
-                  state := 3
-               end
-            when 3 then
-               -- cc.is_separator
-               i := count; -- terminate the loop
-            end
-            i := i + 1
-         end
-      end
+	to_integer: INTEGER is
+			-- `Current' must look like an INTEGER.
+		require
+			is_integer
+		local
+			i: INTEGER; cc: CHARACTER; negative: BOOLEAN
+		do
+			from
+				i := 1
+			variant
+				count - i
+			until
+				not item(i).is_separator
+			loop
+				i := i + 1
+			end
+			cc := item(i)
+			i := i + 1
+			if cc = '+' then
+				cc := item(i)
+				i := i + 1
+			elseif cc = '-' then
+				negative := True
+				cc := item(i)
+				i := i + 1
+			end
+			check cc.is_digit end
+			Result := - cc.value
+			from
+			variant
+				count - i
+			until
+				i > count
+			loop
+				cc := item(i)
+				if cc.is_digit then
+					Result := 10 * Result - cc.decimal_value -- Should not overflow since `is_integer' is True
+				else
+					check cc.is_separator end
+					i := count -- terminate the loop
+				end
+				i := i + 1
+			end
+			if negative then
+			else
+				Result := - Result
+			end
+		end
 
    is_double: BOOLEAN is
          -- Can contents be read as a DOUBLE?
@@ -534,7 +537,7 @@ feature -- Testing and Conversion:
          -- `Maximum_double' it will not work correctly. Furthermore the
          -- arithmetric package used must support the value 'inf' for a
          -- number greater than Maximum_double.
-         -- `Result' is true if and only if the following two conditions 
+         -- `Result' is True if and only if the following two conditions 
          -- hold:
          --
          -- 1. In the following BNF grammar, the value of `Current' can be
@@ -585,7 +588,7 @@ feature -- Testing and Conversion:
                elseif cc = '+' then
                   state := 1
                elseif cc = '-' then
-                  negative := true
+                  negative := True
                   state := 1
                elseif cc.is_digit then
                   base := cc.decimal_value
@@ -637,7 +640,7 @@ feature -- Testing and Conversion:
                end
             when 5 then
                if cc = '-' then
-                  neg_exp := true
+                  neg_exp := True
                   state := 6
                elseif cc = '+'  then
                   state := 6
@@ -671,19 +674,19 @@ feature -- Testing and Conversion:
             i := i + 1
          end
 	 if state /= 0 and then state /= 9 and then state /= 1 then
-	    Result := true
+	    Result := True
 	    if neg_exp then exp := -1 * exp end
-	    value := base * (10.0).pow(exp)
+	    value := base * numeric_base.pow(exp)
 	    if value > Maximum_double then
 	       -- can only happen if value = inf
-	       Result := false
+	       Result := False
 	    end
 	 end
       end
 
    to_double: DOUBLE is
          -- Conversion to the corresponding DOUBLE value. The string must
-         -- looks like a DOUBLE (or like an INTEGER because fractionnal part
+         -- looks like a DOUBLE (or like an INTEGER because fractional part
          -- is optional). For an exact definition see 'is_double'.
          -- Note that this conversion might not be exact.
       require
@@ -716,7 +719,7 @@ feature -- Testing and Conversion:
                elseif cc = '+' then
                   state := 1
                elseif cc = '-' then
-                  negative := true
+                  negative := True
                   state := 1
                elseif cc.is_digit then
                   base := cc.decimal_value
@@ -760,7 +763,7 @@ feature -- Testing and Conversion:
                end
             when 5 then
                if cc = '-' then
-                  neg_exp := true
+                  neg_exp := True
                   state := 6
                elseif cc = '+'  then
                   state := 6
@@ -786,9 +789,9 @@ feature -- Testing and Conversion:
          end
          if neg_exp then exp := -1 * exp end
          if negative then
-            Result := -1 * base * (10.0).pow(exp)
+            Result := -1 * base * numeric_base.pow(exp)
          else
-            Result :=  base * (10.0).pow(exp)
+            Result :=  base * numeric_base.pow(exp)
          end
       end
 
@@ -800,7 +803,7 @@ feature -- Testing and Conversion:
          if is_double then
             d := to_double
             if Minimum_real <= d and then d <= Maximum_real then
-               Result := true
+               Result := True
                -- This gives only approximate accuracy; the comparison
                -- is not accurate to nearly as many significant figures
                -- as are displayed for the limits.
@@ -811,7 +814,7 @@ feature -- Testing and Conversion:
    to_real: REAL is
          -- Conversion to the corresponding REAL value.
          -- The string must looks like a REAL (or like an
-         -- INTEGER because fractionnal part is optional).
+         -- INTEGER because fractional part is optional).
       require
          is_integer or is_real
       do
@@ -844,7 +847,7 @@ feature -- Testing and Conversion:
       do
          from
             i := count
-            Result := true
+            Result := True
          until
             not Result or else i = 0
          loop
@@ -951,14 +954,39 @@ feature -- Modification:
          capacity >= old capacity
       end
 
-   clear, wipe_out is
-         -- Clear out the current STRING.
-         -- Note: internal `storage' memory is neither released nor shrunk.
-      do
-         count := 0
-      ensure
-         count = 0
-      end
+	clear is
+		obsolete "Now use `clear_count' or `clear_count_and_capacity' (for SE2 compatibility)."
+		do
+			clear_count
+		ensure
+			count = 0
+		end
+
+	clear_count, wipe_out is
+			-- Discard all characters (`is_empty' is True after that call). The internal `capacity' is not changed
+			-- by this call. See also `clear_count_and_capacity' to select the most appropriate.
+			-- Note: internal `storage' memory is neither released nor shrunk.
+		do
+			count := 0
+		ensure
+			is_empty: count = 0
+			capacity = old capacity
+		end
+
+	clear_count_and_capacity is
+			-- Discard all characters (`is_empty' is True after that call). The internal `capacity' will be
+			-- reduced after this call. See also `clear_count' to select the most appropriate.
+		local
+			null_storage: like storage
+		do
+			count := 0
+			capacity := 0
+			storage := null_storage
+		ensure
+			is_empty: count = 0
+			capacity = 0
+			storage.is_null			 
+		end
 
    copy(other: like Current) is
          -- Copy `other' onto Current.
@@ -1689,7 +1717,7 @@ feature -- Splitting a STRING:
                c := item(i)
                if state = 0 then
                   if not c.is_separator then
-                     string_buffer.clear
+                     string_buffer.clear_count
                      string_buffer.append_character(c)
                      state := 1
                   end
@@ -1872,6 +1900,9 @@ feature {NONE}
       once
          create Result.with_capacity(4,1)
       end
+
+   numeric_base: DOUBLE is 10.0
+         -- Base of numbering system, for conversion functions
 
 invariant
 

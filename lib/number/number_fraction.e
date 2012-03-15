@@ -311,7 +311,7 @@ feature -- Comparisons with INTEGER
 	    if other < 0 then
 	       Result := numerator > (denominator @* -other)
 	    else
-	       Result := true
+	       Result := True
 	    end
 	 elseif other >= 0 then
 	    Result := numerator < (denominator @* other)
@@ -343,7 +343,7 @@ feature -- Comparisons with INTEGER
 	    if other < 0 then
 	       Result := numerator >= (denominator @* -other)
 	    else
-	       Result := true
+	       Result := True
 	    end
 	 elseif other >= 0 then
 	    Result := numerator <= (denominator @* other)

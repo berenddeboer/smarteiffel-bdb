@@ -1,11 +1,12 @@
+
                                    [Line]
                        This page is not finished yet
 
-   About the SmartEiffel Debugger
+                       About the SmartEiffel Debugger
 
    The SmartEiffel debugger is an embedded debugger. It means that to use
-   it,  you must compile your application with the special command option
-   -sedb.  The  generated  executable is then equipped with the debugger,
+   it, you must compile your application with the special command option
+   -sedb. The generated executable is then equipped with the debugger,
    you just have to start it as you would without it.
 
    The debugger offers many powerful commands, that let you look into the
@@ -17,81 +18,81 @@
 
    Execution commands
 
-   Those  commands  are  meant  to make your program advance; either walk
-   step  by  step,  or by greater strides, or run until its end. Whatever
-   command  you  choose,  the  program  will  run  at  most  to  the next
+   Those commands are meant to make your program advance; either walk
+   step by step, or by greater strides, or run until its end. Whatever
+   command you choose, the program will run at most to the next
    breakpoint ([5]see below) or till you press ^C. The available commands
    are:
 
-     s Make a single step; if it involves entering into another routine
-       (it's a feature call), then so be it.
-     n Make a single step, without entering into any other routine (it
-       means that a feature call is seen as a single step).
-     f Stride to the end of the current routine.
-     c Run till the next breakpoint, or till the end.
+   s Make a single step; if it involves entering into another routine
+   (it's a feature call), then so be it.
+   n Make a single step, without entering into any other routine (it
+   means that a feature call is seen as a single step).
+   f Stride to the end of the current routine.
+   c Run till the next breakpoint, or till the end.
 
    Breakpoints
 
-   Note   that   the   breakpoints   in   the   code   (marked   by   the
-   pseudo-instruction   sedb_breakpoint)   are   heeded;   they  work  as
-   manually-added   breakpoints.   Here   are   the  commands  to  manage
+   Note that the breakpoints in the code (marked by the
+   pseudo-instruction sedb_breakpoint) are heeded; they work as
+   manually-added breakpoints. Here are the commands to manage
    manually-added breakpoints:
 
-    b    Add a breakpoint. There are many possibilities, among which you can
-         choose a subset to define. All the criteria you choose must be met for
-         the breakpoint to be activated.
+   b Add a breakpoint. There are many possibilities, among which you can
+   choose a subset to define. All the criteria you choose must be met for
+   the breakpoint to be activated.
 
-         The possible criteria are described below.
-    B    Display all the manually-added breakpoints.
- - <num> Removes the breakpoint designed by its number (you can see
-         that number by the 'B' command).
+   The possible criteria are described below.
+   B Display all the manually-added breakpoints.
+   - <num> Removes the breakpoint designed by its number (you can see
+   that number by the 'B' command).
 
    When setting a breakpoint, the possible criteria are:
-     * Name  indication:  The  name  information  of  the debugging stack
-       contains  information about the name of the routine called as well
-       as  the  base  class  where  this  routine  is  defined.  The name
-       indication  of  the breakpoint can be any substring to be searched
+     * Name indication: The name information of the debugging stack
+       contains information about the name of the routine called as well
+       as the base class where this routine is defined. The name
+       indication of the breakpoint can be any substring to be searched
        within the name information of the stack. For example, if the name
-       indication  is "item", the execution would stop in feature item of
-       STRING  but  also  in  feature  item  of ARRAY, in feature item of
-       DICTIONARY,   etc.  If  the  name  indication  is  "item  STRING",
+       indication is "item", the execution would stop in feature item of
+       STRING but also in feature item of ARRAY, in feature item of
+       DICTIONARY, etc. If the name indication is "item STRING",
        execution would stop only in routine item defined in class STRING.
-       Also  note  that  the  name  indication  can be any substring. For
+       Also note that the name indication can be any substring. For
        example, if the name indication is "is_", the execution would stop
-       in  is_empty, is_integer, is_real, etc. As another example, if the
-       name  indication  is "STRI", the execution would stop at any place
-       in  classes  STRING,  ARRAY[STRING],  DICTIONARY[STRING,FOO], etc.
-       Finally,  also  note  that the "invariant" string is used when the
-       execution  is in the class invariant of some class, hence allowing
+       in is_empty, is_integer, is_real, etc. As another example, if the
+       name indication is "STRI", the execution would stop at any place
+       in classes STRING, ARRAY[STRING], DICTIONARY[STRING,FOO], etc.
+       Finally, also note that the "invariant" string is used when the
+       execution is in the class invariant of some class, hence allowing
        you to spot all class invariant execution.
-     * File  indication:  If  you  want  to  stop each time the execution
-       reaches  the  string.e  file  class,  it can be achieved easily by
-       setting  the  file indication to "string.e". Because the file name
-       indication  is  applied  on  the  whole path of the file, the file
-       indication  allows you to filter more than a simple file name. For
-       example,  if  the  file  indication is "lib/kernel", the execution
-       would  stop  each  time  execution reaches some code in the kernel
+     * File indication: If you want to stop each time the execution
+       reaches the string.e file class, it can be achieved easily by
+       setting the file indication to "string.e". Because the file name
+       indication is applied on the whole path of the file, the file
+       indication allows you to filter more than a simple file name. For
+       example, if the file indication is "lib/kernel", the execution
+       would stop each time execution reaches some code in the kernel
        cluster of the SmartEiffel library.
-     * Line  range:  The  line range information allows you to select the
-       line  range  to  be  considered.  For  example,  to stop each time
-       execution  reaches  line 12 or 13 in some file, just enter [12,13]
+     * Line range: The line range information allows you to select the
+       line range to be considered. For example, to stop each time
+       execution reaches line 12 or 13 in some file, just enter [12,13]
        as a line range.
-     * Stack  limit:  The  stack  limit condition allows you to watch the
-       stack  size  during  execution.  (This  is  useful  to  debug  bad
-       recursive  calls.) For example, a stack limit of 10 would stop the
-       execution  as  soon  as  the stack size reaches this 10 limit. The
-       automatic  incrementation  option  causes  the  stack-limit  to be
-       incremented  each  time  the  corresponding  breakpoint matches. A
-       breakpoint  composed  only  of a single stack limit condition is a
+     * Stack limit: The stack limit condition allows you to watch the
+       stack size during execution. (This is useful to debug bad
+       recursive calls.) For example, a stack limit of 10 would stop the
+       execution as soon as the stack size reaches this 10 limit. The
+       automatic incrementation option causes the stack-limit to be
+       incremented each time the corresponding breakpoint matches. A
+       breakpoint composed only of a single stack limit condition is a
        perfect watch dog of stack memory consumption.
 
    Here is how sedb_breakpoint works:
 
-   The  feature  sedb_breakpoint  defined in class GENERAL can be used to
-   set  a  breakpoint  directly  in your Eiffel source file. Keep in mind
-   that  you must recompile your system each time some Eiffel source file
-   is  modified.  Thus  each  time you add a sedb_breakpoint call to some
-   Eiffel  source file you must recompile your code first. Also note that
+   The feature sedb_breakpoint defined in class GENERAL can be used to
+   set a breakpoint directly in your Eiffel source file. Keep in mind
+   that you must recompile your system each time some Eiffel source file
+   is modified. Thus each time you add a sedb_breakpoint call to some
+   Eiffel source file you must recompile your code first. Also note that
    a sedb_breakpoint is always enabled even when the corresponding source
    file is not traced (see ACE file mode).
 
@@ -99,60 +100,61 @@
 
    The following commands allow you to look at the data of your program:
 
- e <exp> Evaluates and displays the result of an expression. Note that
-         currently only object attributes can be displayed (general Eiffel
-         expression are not supported).
+   e <exp> Evaluates and displays the result of an expression. Note that
+   currently only object attributes can be displayed (general Eiffel
+   expression are not supported).
 
-         What you can do is:
-           * display either Current or any local variable or parameter of the
-             current routine;
-           * display any attribute of the above objects, using the standard
-             Eiffel dotted expression (e.g. e my_string.count);
-           * display any element of a NATIVE_ARRAY, using a special notation: a
-             dot followed by the offset of the object you want to display (e.g.
-             e my_string.storage.4);
-           * recursively string dotted expressions (like in the above example,
-             or even more complex expressions).
+   What you can do is:
+     * display either Current or any local variable or parameter of the
+       current routine;
+     * display any attribute of the above objects, using the standard
+       Eiffel dotted expression (e.g. e my_string.count);
+     * display any element of a NATIVE_ARRAY, using a special notation: a
+       dot followed by the offset of the object you want to display (e.g.
+       e my_string.storage.4);
+     * recursively string dotted expressions (like in the above example,
+       or even more complex expressions).
 
-         Note: the 'e' command is available since SmartEiffel 1.1 beta 3.
-    .    Display the current frame.
-    u    Up in the stack (go to the caller). Note that the 'e' expressions
-         follow the "current frame" (you can display Current and so on of that
-         frame).
-    d    Down in the stack (go back to the callee). Note that the 'e'
-         expressions follow the "current frame" (you can display Current and so
-         on of that frame).
-    S    Display the whole stack (compact mode or not).
+   Note: the 'e' command is available since SmartEiffel 1.1 beta 3.
+   . Display the current frame.
+   u Up in the stack (go to the caller). Note that the 'e' expressions
+   follow the "current frame" (you can display Current and so on of that
+   frame).
+   d Down in the stack (go back to the callee). Note that the 'e'
+   expressions follow the "current frame" (you can display Current and so
+   on of that frame).
+   S Display the whole stack (compact mode or not).
 
    Other commands
 
-       q   Quits the debugger (the program will be stopped). You can use 'Q' to
-           bypass the confirmation.
-       h   Display some help. You can follow that 'h' by a second letter to
-           have help on the following topics:
-             * a: all topics
-             * e: "executing" topic
-             * b: "breakpoints" topic
-             * d: "data-display" topic
-             * m: "miscellaneous" topic
+   q Quits the debugger (the program will be stopped). You can use 'Q' to
+   bypass the confirmation.
+   h Display some help. You can follow that 'h' by a second letter to
+   have help on the following topics:
+     * a: all topics
+     * e: "executing" topic
+     * b: "breakpoints" topic
+     * d: "data-display" topic
+     * m: "miscellaneous" topic
 
-           Note: you can use '?' instead of 'h'.
-       H   Display some more help. Answer "yes" at each question if you want
-           details.
-       G   Run the Garbage Collector.
-       T   Switch to the trace.se file mode.
-     Enter Repeat the last command.
+   Note: you can use '?' instead of 'h'.
+   H Display some more help. Answer "yes" at each question if you want
+   details.
+   G Run the Garbage Collector.
+   T Switch to the trace.se file mode.
+   Enter Repeat the last command.
 
                                    [Line]
              Copyright © Dominique COLNET and Suzanne COLLIN -
                          [6]<SmartEiffel@loria.fr>
                 Last modified: Thu May 1 17:58:51 CEST 2003
+                                      
 
 References
 
-   1. file://localhost/users/miro/colnet/SmartEiffel/man/sedb.html#execution
-   2. file://localhost/users/miro/colnet/SmartEiffel/man/sedb.html#breakpoints
-   3. file://localhost/users/miro/colnet/SmartEiffel/man/sedb.html#data-display
-   4. file://localhost/users/miro/colnet/SmartEiffel/man/sedb.html#other
-   5. file://localhost/users/miro/colnet/SmartEiffel/man/sedb.html#breakpoints
+   1. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/sedb.html#execution
+   2. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/sedb.html#breakpoints
+   3. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/sedb.html#data-display
+   4. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/sedb.html#other
+   5. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/sedb.html#breakpoints
    6. mailto:SmartEiffel@loria.fr

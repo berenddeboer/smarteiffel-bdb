@@ -1,7 +1,7 @@
 class EXAMPLE2
 --
 -- Actually, agents are available for all kinds of COLLECTION (i.e. ARRAY,
--- FIXED_ARRAY, LINKED_LIST, TWO_WAY_LINKED_LIST), but also for class SET
+-- FAST_ARRAY, LINKED_LIST, TWO_WAY_LINKED_LIST), but also for class SET
 -- as well as for class DICTIONARY.
 --
 
@@ -12,7 +12,7 @@ feature
    make is
       local
 	 my_collection: COLLECTION[STRING]
-         my_list: LINKED_LIST[STRING]; my_set: SET[STRING]
+         my_list: LINKED_LIST[STRING]; my_set: HASHED_SET[STRING]
       do
 	 my_collection := <<"Benedicte","Lucien","Marie">>
 

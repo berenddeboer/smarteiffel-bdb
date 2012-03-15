@@ -112,7 +112,7 @@ feature {EIFFEL_PARSER}
       end
 
    set_require(sp: POSITION; else_flag: BOOLEAN
-	       hc: COMMENT; al: FIXED_ARRAY[ASSERTION]) is
+	       hc: COMMENT; al: FAST_ARRAY[ASSERTION]) is
       do
          if hc /= Void or else al /= Void then
             create require_assertion.with(sp, else_flag, hc, al)
@@ -191,7 +191,7 @@ feature {EIFFEL_PARSER}
 	       v := value.to_runnable(type_integer)
 	       if v.result_type.is_a(type_integer) then
 	       else
-		  check false end
+		  check False end
 	       end
 	       error_handler.append("Bad constant attribute definition %
 				    %(manifest constant value out of range).")
@@ -324,7 +324,7 @@ feature {EIFFEL_PARSER}
 
 feature {NONE}
 
-   names: FIXED_ARRAY[FEATURE_NAME] is
+   names: FAST_ARRAY[FEATURE_NAME] is
       once
          !!Result.make(8)
       end

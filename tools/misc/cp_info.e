@@ -53,7 +53,7 @@ feature {CONSTANT_POOL}
          if info = Void then
             !!info.make(4)
          else
-            info.clear
+            info.clear_count
          end
       end
 
@@ -104,7 +104,7 @@ feature
          c: CHARACTER
       do
          tag := Constant_string
-         info.clear
+         info.clear_count
          info.extend(str.item(1))
          info.extend(str.item(2))
          from
@@ -347,7 +347,7 @@ feature {CONSTANT_POOL} -- Update and search :
                   check
                      i1 + 2 = i2
                   end
-                  Result := true
+                  Result := True
                until
                   not Result or else i1 = 1
                loop

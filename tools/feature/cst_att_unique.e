@@ -47,7 +47,7 @@ feature
 
 feature {NONE}
 
-   values: FIXED_ARRAY[INTEGER_CONSTANT]
+   values: FAST_ARRAY[INTEGER_CONSTANT]
 
    make(n: like names; t: like result_type) is
       require

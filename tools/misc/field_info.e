@@ -49,7 +49,7 @@ feature {NONE}
          !!Result.make(512)
       end
 
-   field_modifiers: DICTIONARY[FIELD_MODIFIER,INTEGER] is
+   field_modifiers: HASHED_DICTIONARY[FIELD_MODIFIER,INTEGER] is
       once
          create Result.make
       end
@@ -60,7 +60,7 @@ feature {JVM}
    clear is
       do
          count := 0
-         storage.clear
+         storage.clear_count
          field_modifiers.clear
       end
 

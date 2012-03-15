@@ -1,68 +1,70 @@
-   The pretty Command
+
+                             The pretty Command
 
    Usage
 
    pretty [options] <class_name> ...
 
-   Command  pretty  is  the  SmartEiffel pretty printer for Eiffel source
-   files.  The  class_name argument can be a classic Eiffel class name as
-   for  example  "INTEGER"  or  the  name  of  some  file  as for example
+   Command pretty is the SmartEiffel pretty printer for Eiffel source
+   files. The class_name argument can be a classic Eiffel class name as
+   for example "INTEGER" or the name of some file as for example
    "integer.e". The class file to be treated by pretty is always searched
    in the current working directory.
-   One  can specify more than one class name (or more than one file name)
-   at   a  time  in  order  to  apply  pretty  on  many  files.  All  the
+   One can specify more than one class name (or more than one file name)
+   at a time in order to apply pretty on many files. All the
    corresponding files are reprinted in a pretty way.
 
-   There  are  four  modes  of  pretty  printing -zen, -default, -end and
-   -parano  mode.  Only one mode can be selected and mode -default is the
+   There are four modes of pretty printing -zen, -default, -end and
+   -parano mode. Only one mode can be selected and mode -default is the
    default mode.
 
    Options for Pretty Printing
 
    -help:
-          Display  a  brief  summary  of  the  command-line  syntax and a
+          Display a brief summary of the command-line syntax and a
           complete list of pretty options.
    -version:
           Show the number of the version of SmartEiffel you're using.
    -zen:
-          The  less you can print (i.e. very compact output). No end mark
-          comment  for  routines.  No  end  comments  for statements (if,
+          The less you can print (i.e. very compact output). No end mark
+          comment for routines. No end comments for statements (if,
           inspect, debug, ...).
    -default:
-          The  default  mode.  This is close to what we are using for our
+          The default mode. This is close to what we are using for our
           library.
    -end:
-          Same  printing  as  for  previous  mode but also print end mark
+          Same printing as for previous mode but also print end mark
           comments for all routines.
    -parano:
-          Same  printing  as  for  previous  mode but also print end mark
+          Same printing as for previous mode but also print end mark
           comments for all statements (if, inspect, debug, ...).
    -no_style_warning:
-          Suppress  output for warning messages related to non respect of
-          standard  Eiffel  style  guidelines  (for example ItEm will not
+          Suppress output for warning messages related to non respect of
+          standard Eiffel style guidelines (for example ItEm will not
           trigger a warning).
    -no_warning:
-          Suppress  output  for  all warning messages (error messages are
+          Suppress output for all warning messages (error messages are
           still printed).
 
    Security and BackUp File
 
-   For  the  security  of  sources files, a backup file is created before
-   writing  the  new  file  (system  or  command  pretty may crash during
-   printing  of  the  new  file).  The backup file name is "foo.bak" when
-   source  file  name  is  "foo.e".  Backup  file  is written in the same
+   For the security of sources files, a backup file is created before
+   writing the new file (system or command pretty may crash during
+   printing of the new file). The backup file name is "foo.bak" when
+   source file name is "foo.e". Backup file is written in the same
    directory as source file.
-   If  an  old backup file already exists before pretty printing, command
+   If an old backup file already exists before pretty printing, command
    pretty exit with an error message. To be sure that the pretty printing
    is well done, the output file is parsed again.
-   Even  if  second  parsing gives no errors, backup file is NOT removed.
-   Thus  you  can  recompile  your  Eiffel  code to check new file before
+   Even if second parsing gives no errors, backup file is NOT removed.
+   Thus you can recompile your Eiffel code to check new file before
    removing backup file by yourself.
 
                                    [Line]
              Copyright © Dominique COLNET and Suzanne COLLIN -
                          [1]<SmartEiffel@loria.fr>
                 Last modified: Tue Feb 11 12:16:31 CET 2003
+                                      
 
 References
 

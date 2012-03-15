@@ -28,7 +28,8 @@ class E_AGENT
    --
 
 inherit
-   EXPRESSION;
+   EXPRESSION
+      redefine is_equal end
    HASHABLE
       redefine is_equal end
 
@@ -70,10 +71,10 @@ feature
 	       if other.base /= Void then
 		  Result := mold_equal(base, other.base)
 	       else
-		  Result := false
+		  Result := False
 	       end
 	    elseif other.base /= Void then
-	       Result := false
+	       Result := False
 	    end
 	 end
 	 if Result and then arguments /= Void then
@@ -103,7 +104,7 @@ feature
       end
    
    hash_code: INTEGER is
-	 -- (Because we want to store `Current' in DICTIONARY and/or SET)
+	 -- (Because we want to store `Current' in HASHED_DICTIONARY and/or HASHED_SET)
       do
 	 Result := run_feature.name.hash_code
       end
@@ -481,12 +482,12 @@ feature
             create fcn.make(64)
             if base = void then
                target.compile_to_jvm -- target object
-               fcn.clear
+               fcn.clear_count
                fcn.append(target.result_type.run_class.fully_qualified_name)
                idx := constant_pool.idx_methodref3(fcn,fz_c3,fz_c4); -- getClass
                code_attribute.opcode_invokevirtual(idx,-1)
             else
-               fcn.clear
+               fcn.clear_count
    
                fcn.append(base.run_class.fully_qualified_name)
                fcn.replace_all('/','.')
@@ -516,7 +517,7 @@ feature
                if arguments.expression(i_argument).result_type.is_basic_eiffel_expanded then
                   push_jvm_expanded_argument_object_wrapper_type(run_feature.arguments.type(i_argument))
                else
-                  fcn.clear
+                  fcn.clear_count
                   fcn.append(ace.executable_name)
                   fcn.extend('.')
                   fcn.append(fz_jvm_root)
@@ -695,7 +696,7 @@ feature
             code_attribute.opcode_dup
             
             create fcn.make(64)
-            fcn.clear
+            fcn.clear_count
             fcn.append(ace.executable_name)
             fcn.extend('.')
             fcn.append(fz_jvm_root)
@@ -716,7 +717,7 @@ feature
    
             code_attribute.opcode_dup
             code_attribute.opcode_push_integer(0)
-            fcn.clear
+            fcn.clear_count
             fcn.append(ace.executable_name)
             fcn.extend('.')
             fcn.append(fz_jvm_root)
@@ -737,7 +738,7 @@ feature
                if arguments.expression(i_argument).result_type.is_basic_eiffel_expanded then
                   push_jvm_expanded_argument_object_wrapper_type(run_feature.arguments.type(i_argument))
                else
-                  fcn.clear
+                  fcn.clear_count
                   fcn.append(ace.executable_name)
                   fcn.extend('.')
                   fcn.append(fz_jvm_root)
@@ -919,7 +920,7 @@ feature {AGENT_POOL}
 	 i, id: INTEGER; t: E_TYPE
       do
 	 id := creation_mold_id
-	 buffer.clear
+	 buffer.clear_count
 	 buffer.append(once "typedef struct _se_agent")
 	 id.append_in(buffer)
 	 buffer.append(once " se_agent")
@@ -1012,7 +1013,7 @@ feature {AGENT_POOL}
       do
 	 id := creation_mold_id
 	 -- The local execution function:
-	 buffer.clear
+	 buffer.clear_count
 	 buffer.append(once "%Nstatic ")
 	 t := run_feature.result_type
 	 if t /= Void then
@@ -1106,7 +1107,7 @@ feature {AGENT_POOL}
 	 end
 	 cpp.put_character('}')
 	 -- The definition function:
-	 buffer.clear
+	 buffer.clear_count
 	 buffer.append(once "/*agent*/T0*")
 	 buffer.append(definition_function_name)
 	 buffer.extend('(')
@@ -1215,7 +1216,7 @@ feature {JVM, E_AGENT}
    arguments: EFFECTIVE_ARG_LIST
 	 -- Computed one using the `call'.
 
-   open_args: FIXED_ARRAY[OPEN_OPERAND]
+   open_args: FAST_ARRAY[OPEN_OPERAND]
 	 -- Computed using `arguments' to store, if any, the list of open
 	 -- arguments. -- (The `target' is never part of this list, see 
 	 -- `base'.)

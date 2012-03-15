@@ -5,6 +5,9 @@ class EXAMPLE4
 -- directory or from some directory path given as an argument).
 --
    
+inherit
+    ARGUMENTS
+   
 creation make
    
 feature {NONE}

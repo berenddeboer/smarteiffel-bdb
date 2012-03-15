@@ -33,7 +33,7 @@ creation make
 
 feature
 
-   is_connected: BOOLEAN is true
+   is_connected: BOOLEAN is True
 
 feature
 

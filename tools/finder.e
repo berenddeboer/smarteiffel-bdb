@@ -136,10 +136,10 @@ feature {NONE}
 		or else
 		is_help_flag(arg))
 	     then
-	       Result := true
+	       Result := True
 	    end
 	 else
-	    Result := true
+	    Result := True
 	 end
       end
 

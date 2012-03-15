@@ -167,6 +167,13 @@ feature
 
    even: BOOLEAN is
          -- Is even ?
+      obsolete "Use `is_even' instead"
+      do
+         Result := is_even
+      end
+
+   is_even: BOOLEAN is
+         -- Is even ?
       do
          Result := (item & 1) = 0
       end
@@ -227,7 +234,7 @@ feature -- Conversions:
          -- STRING. For example, if `Current' is -1 the new STRING is "-1".
          -- Note: see also `append_in' to save memory.
       do
-	 string_buffer.clear
+	 string_buffer.clear_count
          append_in(string_buffer)
          Result := string_buffer.twin
       end
@@ -301,6 +308,7 @@ feature -- Conversions:
 
    to_integer_32, to_integer: INTEGER_32 is
 	 -- Explicit conversion to INTEGER_32.
+	 obsolete "This feature will not be present in SE2. Please update your code."
       require
 	 fit_integer_32
       external "SmartEiffel"
@@ -317,16 +325,18 @@ feature -- Conversions:
       end
 
    to_number: NUMBER is
+      obsolete
+         "Do not use INTEGER_GENERAL.to_number, use some INTEGER_XX instead."
       local
 	 number_tools: NUMBER_TOOLS
       do
 	 Result := number_tools.from_integer(Current.to_integer)
-      ensure
-	 Result @= Current.to_integer
       end
 
    to_bit: BIT Integer_bits is
          -- Portable BIT_N conversion.
+      obsolete "BIT types will not be supported in SE2. Use `code' and INTEGER bit %
+               %operations instead"
       external "SmartEiffel"
       end
 
@@ -429,7 +439,7 @@ feature -- Conversions:
       local
 	 i: INTEGER
       do
-	 string_buffer.clear
+	 string_buffer.clear_count
 	 append_in(string_buffer)
          from
 	    create Result.make(string_buffer.count.max(s))
@@ -479,7 +489,7 @@ feature -- Conversions:
       local
 	 i: INTEGER
       do
-	 string_buffer.clear
+	 string_buffer.clear_count
 	 append_in(string_buffer)
          from
 	    i := s - string_buffer.count
@@ -546,7 +556,7 @@ feature -- Conversions:
    to_character: CHARACTER is
          -- Return the coresponding ASCII character.
       require
-         Current >= 0
+         in_range (0, Maximum_character_code)
       external "SmartEiffel"
       end
 
@@ -585,7 +595,7 @@ feature -- Conversions:
             Result := -((-Current).to_octal)
          else
             from
-               string_buffer.clear
+               string_buffer.clear_count
                Result := Current.to_integer
             until
                Result = 0
@@ -604,7 +614,7 @@ feature -- Conversions:
          -- 32 bits integer the `Result' is "FFFFFFFF".
          -- Note: see also `to_hexadecimal_in' to save memory.
       do
-         string_buffer.clear
+         string_buffer.clear_count
          to_hexadecimal_in(string_buffer)
          Result := string_buffer.twin
       ensure
@@ -638,7 +648,7 @@ feature -- Hashing:
 
    hash_code: INTEGER is
       do
-	 Result := item.to_integer_32 & 0x7FFFFFFF
+	 Result := 0x7FFFFFFF & item
       end
 
 feature -- Bitwise Logical Operators:

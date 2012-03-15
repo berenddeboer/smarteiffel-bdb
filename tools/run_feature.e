@@ -369,7 +369,7 @@ feature
 
    mapping_name(local_current: BOOLEAN) is
       do
-         c_code.clear
+         c_code.clear_count
          if smart_eiffel.scoop and then not local_current and then (current_type.is_separate or else is_root) then
             c_code.append(once "Sw")
          else
@@ -563,7 +563,7 @@ feature {CONSTANT_POOL,SWITCH_COLLECTION}
 
    frozen jvm_descriptor: STRING is
       do
-         tmp_jvm_descriptor.clear
+         tmp_jvm_descriptor.clear_count
          update_tmp_jvm_descriptor
          Result := tmp_jvm_descriptor
       end
@@ -587,7 +587,7 @@ feature {SWITCH, C_PRETTY_PRINTER, GC_HANDLER, CECIL_POOL}
       require
 	 cpp.on_c
       do
-	 c_code.clear
+	 c_code.clear_count
 	 c_set_dump_stack_top_in(c_code, ds, comment)
 	 cpp.put_string(c_code)
       ensure
@@ -699,7 +699,7 @@ feature {RUN_FEATURE,E_RETRY}
 
 feature {NONE}
 
-   old_list: FIXED_ARRAY[E_OLD]
+   old_list: FAST_ARRAY[E_OLD]
 
    c_plus_plus_prototype_buffer: STRING is
       once
@@ -720,7 +720,7 @@ feature {NONE}
       local
          t: E_TYPE
       do
-         c_code.clear
+         c_code.clear_count
          c_code.append(tag)
          -- Define heading of corresponding C function.
          t := result_type
@@ -794,7 +794,7 @@ feature {NONE}
       require
          cpp.on_c
       do
-         c_code.clear
+         c_code.clear_count
          if result_type = Void then
             c_code.append(fz_void)
          else
@@ -817,7 +817,7 @@ feature {NONE}
 
    address_of_c_mapping_wrapper is
       do
-         c_code.clear
+         c_code.clear_count
          address_of_wrapper_name_in(c_code)
          cpp.put_string(c_code)
       end
@@ -841,8 +841,8 @@ feature {NONE}
       local
 	 oresult: STRING; t: E_TYPE
       do
-	 c_frame_descriptor_format.clear
-	 c_frame_descriptor_locals.clear
+	 c_frame_descriptor_format.clear_count
+	 c_frame_descriptor_locals.clear_count
 	 if use_current then
             current_type.c_frame_descriptor_in(c_frame_descriptor_format)
 	 end
@@ -884,7 +884,7 @@ feature {NONE}
          no_check := ace.no_check
          mem_id := id
          -- Define heading of corresponding C function.
-         c_code.clear
+         c_code.clear_count
 	 -- Extra comment to debug C code :
 	 c_code.append(once "/*")
 	 c_code.append(current_type.run_time_mark)
@@ -940,7 +940,7 @@ feature {NONE}
          no_check := ace.no_check
          mem_id := id
          -- Define heading of corresponding C function.
-         c_code.clear
+         c_code.clear_count
 	 -- Extra comment to debug C code :
 	 c_code.append(once "/*")
 	 c_code.append(current_type.run_time_mark)
@@ -988,7 +988,7 @@ feature {NONE}
 	    oresult := once_routine_pool.o_result(base_feature)
          elseif result_type /= Void then
             t := result_type.run_type
-            c_code.clear
+            c_code.clear_count
             t.c_type_for_result_in(c_code)
             c_code.append(once " R=")
             t.c_initialize_in(c_code)
@@ -1147,7 +1147,7 @@ feature {NONE}
 	 comment: STRING
       do
 	 comment := once "... mini local unique buffer ..."
-	 comment.clear
+	 comment.clear_count
 	 comment.append(once "/* Extra external prototype for line ")
 	 p.line.append_in(comment)
 	 comment.append(fz_81)
@@ -1444,7 +1444,7 @@ feature {NONE}
       do
 	 cpp.put_string(once "static se_frame_descriptor fd={")
 	 put_c_name_tag
-	 c_code.clear
+	 c_code.clear_count
 	 c_code.extend(',')
 	 if use_current then
 	    c_code.extend('1')
@@ -1551,7 +1551,7 @@ feature {NONE}
 	    local_run_feature /= Void
 	 end
          -- Struct for the local variables to wrap:
-         c_code.clear
+         c_code.clear_count
          c_code.append(once "typedef struct {")
 	 local_type.c_type_for_target_in(c_code)
          c_code.append(once " C;")
@@ -1572,7 +1572,7 @@ feature {NONE}
          -- (1) -------------------- Local variable for Result :
          if result_type /= Void then
             t := result_type.run_type
-            c_code.clear
+            c_code.clear_count
             t.c_type_for_result_in(c_code)
             c_code.append(once " R=")
             t.c_initialize_in(c_code)
@@ -1600,7 +1600,7 @@ feature {NONE}
 	    end
 	 end
 	 cpp.put_string(once "}%Nelse {%N")
-         c_code.clear
+         c_code.clear_count
          c_code.append(once "Tw")
 	 local_id.append_in(c_code)
          name.mapping_c_in(c_code)
@@ -1614,7 +1614,7 @@ feature {NONE}
          cpp.put_string(c_code)
          -- (4) -------------------------------- Function wrap:
          if use_current then
-            c_code.clear
+            c_code.clear_count
 	    if has_like_current then
 	       c_code.append(once "data->C=C;%N")
 	    else
@@ -1629,7 +1629,7 @@ feature {NONE}
             until
                i > c
             loop
-               c_code.clear
+               c_code.clear_count
                c_code.append(once "data->_")
                c_code.append(arguments.name(i).to_string)
 	       if arguments.type(i).is_expanded then
@@ -1645,7 +1645,7 @@ feature {NONE}
             end
          end
          -- (5) -------------------------------- Function call:
-         c_code.clear
+         c_code.clear_count
          if result_type /= Void then
             c_code.append(once "client->vft.query")
          else
@@ -1691,7 +1691,7 @@ feature {NONE}
          end
          -- (3) -------------------------------- Function call:
          if result_type /= Void then
-	    c_code.clear
+	    c_code.clear_count
             c_code.append(once "*((")
 	    result_type.c_type_for_result_in(c_code)
 	    c_code.append(once "*)result_ref)=")
@@ -1768,7 +1768,7 @@ feature {NONE}
          stupid_switch_state := Unknown_state
          initialize
 	 debug
-	    debug_info.clear
+	    debug_info.clear_count
 	    debug_info_in(debug_info)
 	 end
          smart_eiffel.pop
@@ -1796,7 +1796,7 @@ feature {NONE}
          my_buffer: STRING
       do
 	 my_buffer := once "..............."
-	 my_buffer.clear
+	 my_buffer.clear_count
 	 put_current_thread_in(my_buffer)
 	 cpp.put_string(my_buffer)
       end

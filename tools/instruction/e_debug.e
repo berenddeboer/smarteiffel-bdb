@@ -182,7 +182,7 @@ feature {NONE}
 
    current_type: E_TYPE
 
-   list: FIXED_ARRAY[MANIFEST_STRING]
+   list: FAST_ARRAY[MANIFEST_STRING]
 
    compound: COMPOUND
 

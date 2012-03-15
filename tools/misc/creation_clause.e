@@ -109,7 +109,7 @@ feature
                procedure_list.short_for_creation
             end
             short_print.hook_or("hook101","")
-            Result := true
+            Result := True
          else
             error_handler.cancel
          end

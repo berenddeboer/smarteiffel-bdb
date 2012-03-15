@@ -117,7 +117,7 @@ feature
       do
 	 ca := code_attribute
 	 if list.upper = 1 then
-	    list.first.compile_to_jvm(true)
+	    list.first.compile_to_jvm(True)
 	    ca.opcode_pop
 	 else
 	    sucess.clear
@@ -126,11 +126,11 @@ feature
 	    until
 	       i > (list.upper - 1)
 	    loop
-	       list.item(i).compile_to_jvm(false)
+	       list.item(i).compile_to_jvm(False)
 	       sucess.add_last(ca.opcode_ifne)
 	       i := i + 1
 	    end
-	    list.item(i).compile_to_jvm(true)
+	    list.item(i).compile_to_jvm(True)
 	    ca.opcode_pop
 	    ca.resolve_with(sucess)
          end
@@ -248,7 +248,7 @@ feature {NONE}
          list.add_last(first)
       end
 
-   sucess: FIXED_ARRAY[INTEGER] is
+   sucess: FAST_ARRAY[INTEGER] is
          -- To reach the sucessful code.
       once
          !!Result.with_capacity(4)

@@ -139,7 +139,7 @@ feature
                if not assignment_handler.redefinition(other.result_type,
 						      result_type,
 						      rc,
-						      false)
+						      False)
 		then
                   error_handler.append(em_chtfi)
                   error_handler.append(rc.current_type.run_time_mark)
@@ -236,7 +236,7 @@ feature {PARENT_LIST}
             elseif arguments = Void then
             elseif arguments.count /= other.arguments.count then
                error_handler.append(em_ina)
-               Result := true
+               Result := True
             end
          end
          merge_header_comments(other)
@@ -291,7 +291,7 @@ feature {FEATURE_CLAUSE,E_FEATURE,BASE_CLASS}
 
 feature {FEATURE_CLAUSE,BASE_CLASS}
 
-   frozen add_into(fd: DICTIONARY[E_FEATURE,FEATURE_NAME]) is
+   frozen add_into(fd: HASHED_DICTIONARY[E_FEATURE,FEATURE_NAME]) is
          -- Also check for multiple definitions.
       local
          i: INTEGER; fn: FEATURE_NAME; f: E_FEATURE

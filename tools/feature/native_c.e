@@ -45,13 +45,13 @@ feature
    stupid_switch_function(run_time_set: RUN_TIME_SET; name: STRING)
       : BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    stupid_switch_procedure(run_time_set: RUN_TIME_SET; name: STRING)
       : BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    notify_external_assignments(args: FORMAL_ARG_LIST; rt: E_TYPE) is
@@ -67,7 +67,7 @@ feature
 	       rf8.external_c_prototype_from(start_position)
 	    end
 	    rf8.c_opening
-	    c_mapping(rf8.base_feature,true,true,rf8.arg_count)
+	    c_mapping(rf8.base_feature,True,True,rf8.arg_count)
 	    rf8.c_closing
 	 end
       end
@@ -81,7 +81,7 @@ feature
 	    if need_prototype then 
 	       rf8.external_c_prototype_from(start_position)
 	    end
-            c_mapping(rf8.base_feature,false,true,rf8.arg_count)
+            c_mapping(rf8.base_feature,False,True,rf8.arg_count)
          end
       end
 
@@ -93,7 +93,7 @@ feature
 	       rf7.external_c_prototype_from(start_position)
 	    end
 	    rf7.c_opening
-	    c_mapping(rf7.base_feature,true,false,rf7.arg_count)
+	    c_mapping(rf7.base_feature,True,False,rf7.arg_count)
 	    rf7.c_closing
 	 end
       end
@@ -107,7 +107,7 @@ feature
 	    if need_prototype then 
 	       rf7.external_c_prototype_from(start_position)
 	    end
-            c_mapping(rf7.base_feature,false,false,rf7.arg_count)
+            c_mapping(rf7.base_feature,False,False,rf7.arg_count)
          end
       end
 
@@ -161,7 +161,7 @@ feature {NONE}
 
    set_access, get_access, getset_access: INTEGER is unique
 
-   signature: FIXED_ARRAY[STRING]
+   signature: FAST_ARRAY[STRING]
 	 -- Non Void when some external `signature' is used.
 
    c_inline: BOOLEAN
@@ -172,9 +172,9 @@ feature {NONE}
 	 file_name: STRING
       do
 	 if not parsing_done then
-	    parsing_done := true
+	    parsing_done := True
 	    from
-	       need_prototype := true
+	       need_prototype := True
 	       mini_buffer.start_with(external_tag)
 	       mini_buffer.next
 	       mini_buffer.skip_separators
@@ -182,10 +182,10 @@ feature {NONE}
 	       mini_buffer.is_off
 	    loop
 	       if mini_buffer.a_keyword(fz_macro) then
-		  macro := true
-		  need_prototype := false
+		  macro := True
+		  need_prototype := False
 	       elseif mini_buffer.a_keyword(fz_struct) then
-		  need_prototype := false
+		  need_prototype := False
 		  struct := mini_buffer.a_type_cast
 		  if mini_buffer.a_keyword(fz_set) then
 		     -- *** NO WARNING ... TO BE DISCUSS
@@ -211,8 +211,8 @@ feature {NONE}
                   type := mini_buffer.a_field_or_variable_name
                elseif mini_buffer.a_keyword(fz_use) then
 	       elseif mini_buffer.a_keyword(fz_inline) then
-		  c_inline := true
-		  need_prototype := false
+		  c_inline := True
+		  need_prototype := False
 	       elseif mini_buffer.a_keyword(fz_signature) then
                   signature := mini_buffer.a_signature
 	       elseif mini_buffer.item = '(' then
@@ -225,7 +225,7 @@ feature {NONE}
 		     mini_buffer.skip_separators
 		  else
 		     file_name := mini_buffer.a_include
-		     need_prototype := false
+		     need_prototype := False
 		     cpp.include_register(start_position,file_name)
 		  end
 	       end
@@ -313,7 +313,7 @@ feature {NONE}
 		  from
 		     i := i + 1
 		     arg := once "local buffer..."
-		     arg.clear
+		     arg.clear_count
 		     stop := i > c_code.count
 		  until
 		     stop
@@ -325,7 +325,7 @@ feature {NONE}
 			arg.extend(cc)
 			i := i + 1
 		     else
-			stop := true
+			stop := True
 			i := i - 1
 		     end
 		  end
@@ -402,15 +402,15 @@ feature {NONE}
 	 Precursor(et)
 	 oldies := et.to_string
 	 if (once "C_WithoutCurrent").is_equal(oldies) then
-	    obsolete_warning := true
+	    obsolete_warning := True
 	    new_notation := "C"
 	 elseif (once "C_WithCurrent").is_equal(oldies) then
-	    obsolete_warning := true
+	    obsolete_warning := True
 	 elseif (once "C_InlineWithoutCurrent").is_equal(oldies) then
-	    obsolete_warning := true
+	    obsolete_warning := True
 	    new_notation := "C macro"
 	 elseif (once "C_InlineWithCurrent").is_equal(oldies) then
-	    obsolete_warning := true
+	    obsolete_warning := True
 	 end
 	 if obsolete_warning then
 	    error_handler.add_position(start_position)

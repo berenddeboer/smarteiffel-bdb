@@ -460,7 +460,10 @@ feature {PARENT_LIST}
          all_check := ace.all_check
          wbc := parent_list.base_class
          if forbidden_parent_list.fast_has(type.written_mark) and then
-	    wbc.name.to_string /= as_integer_32
+	    (wbc.name.to_string /= as_integer_32 and then
+	     wbc.name.to_string /= as_real_32 and then
+	     wbc.name.to_string /= as_real_64
+	    )
 	  then
             error_handler.add_position(start_position)
             error_handler.append("You cannot inherit %"")
@@ -592,7 +595,7 @@ feature {PARENT_LIST}
          end
       end
 
-   going_up(trace: FIXED_ARRAY[PARENT]; top: BASE_CLASS
+   going_up(trace: FAST_ARRAY[PARENT]; top: BASE_CLASS
             top_fn: FEATURE_NAME;): FEATURE_NAME is
       local
          bc: like base_class
@@ -667,7 +670,7 @@ feature {EIFFEL_PARSER}
 
 feature {PARENT}
 
-   going_down(trace: FIXED_ARRAY[PARENT]; fn: FEATURE_NAME;): FEATURE_NAME is
+   going_down(trace: FAST_ARRAY[PARENT]; fn: FEATURE_NAME;): FEATURE_NAME is
       require
          trace /= Void
          fn /= Void
@@ -762,9 +765,9 @@ feature {NONE}
          end
       end
 
-   undefine_memory1: FIXED_ARRAY[STRING]
+   undefine_memory1: FAST_ARRAY[STRING]
 
-   undefine_memory2: FIXED_ARRAY[E_FEATURE]
+   undefine_memory2: FAST_ARRAY[E_FEATURE]
 
    has_undefine(fn: FEATURE_NAME): FEATURE_NAME is
       do

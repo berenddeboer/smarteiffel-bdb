@@ -33,7 +33,7 @@ creation make, from_other
 
 feature
 
-   is_expanded: BOOLEAN is true
+   is_expanded: BOOLEAN is True
 
    is_separate,
    is_reference,
@@ -44,7 +44,7 @@ feature
    is_anchored,
    is_like_current,
    is_like_argument,
-   is_like_feature: BOOLEAN is false
+   is_like_feature: BOOLEAN is False
 
    jvm_method_flags: INTEGER is 17
 
@@ -111,14 +111,14 @@ feature
 
    local_from_separate: E_TYPE is
       do
-	 check false end
+	 check False end
       end
 
    is_user_expanded: BOOLEAN is
       do
          if mapped.is_basic_eiffel_expanded then
          else
-            Result := true
+            Result := True
          end
       end
 
@@ -425,7 +425,7 @@ feature
    jvm_expanded_from_reference(other: E_TYPE): INTEGER is
       do
          check
-            false
+            False
          end
       end
 

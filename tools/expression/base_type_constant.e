@@ -74,7 +74,7 @@ feature
 
    frozen stupid_switch(run_time_set: RUN_TIME_SET): BOOLEAN is
       do
-         Result := true
+         Result := True
       end
 
    frozen assertion_check(tag: CHARACTER) is do end
@@ -137,7 +137,7 @@ feature
 
    frozen jvm_assign_creation, jvm_assign is
       do
-	 check false end
+	 check False end
       end
 
 feature {BASE_TYPE_CONSTANT_VISITOR}

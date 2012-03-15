@@ -299,6 +299,8 @@ feature
 feature -- Conversions:
 
    to_bit: BIT Character_bits is
+      obsolete "BIT types will not be supported in SE2. Use `code' and INTEGER bit %
+               %operations instead"
       external "SmartEiffel"
       end
 
@@ -317,25 +319,25 @@ feature -- Conversions:
    to_hexadecimal_in(str: STRING) is
          -- Append the equivalent of `to_hexadecimal' at the end of
          -- `str'. Thus you can save memory because no other
-         -- STRING is allocate for the job.
+         -- STRING is allocated for the job.
       local
-         c: CHARACTER
+         c: INTEGER_16
       do
-         c := ((to_bit and 11110000B) |>> 4).to_character
+         c := code |>>> 4
          inspect
-            c.code
+            c
          when 0 .. 9 then
-            str.extend((('0').code + c.code).to_character)
+            str.extend((('0').code + c).to_character)
          else
-            str.extend(((('A').code - 10) + c.code).to_character)
+            str.extend(((('A').code - 10) + c).to_character)
          end
-         c := (to_bit and 00001111B).to_character
+         c := code & 0x000F
          inspect
-            c.code
+            c
          when 0 .. 9 then
-            str.extend((('0').code + c.code).to_character)
+            str.extend((('0').code + c).to_character)
          else
-            str.extend(((('A').code - 10) + c.code).to_character)
+            str.extend(((('A').code - 10) + c).to_character)
          end
       ensure
          str.count = 2 + old str.count

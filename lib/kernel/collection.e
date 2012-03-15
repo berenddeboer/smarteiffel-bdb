@@ -23,7 +23,7 @@ deferred class COLLECTION[E]
 -- to `upper'. Items can be added, changed or removed.
 --
 -- The SmartEiffel standard library provides four implementations of
--- COLLECTION[E]: ARRAY[E], FIXED_ARRAY[E], LINKED_LIST[E] and
+-- COLLECTION[E]: ARRAY[E], FAST_ARRAY[E], LINKED_LIST[E] and
 -- TWO_WAY_LINKED_LIST[E]. All implementations have exactly the same
 -- behavior. Switching from one implementation to another only change the
 -- memory used and the execution time.
@@ -318,7 +318,7 @@ feature -- Looking and Searching:
       ensure
          lower <= Result
          Result <= upper + 1
-         Result <= upper implies equal(element,item(Result))
+         Result <= upper implies safe_equal(element,item(Result))
       end
 
    fast_index_of(element: like item): INTEGER is

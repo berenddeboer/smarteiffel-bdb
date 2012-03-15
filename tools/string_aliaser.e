@@ -108,6 +108,7 @@ feature {NONE}
          -- Hard-coded class names:
          memory_add(as_any)
          memory_add(as_array)
+         memory_add(as_arguments)
          memory_add(as_bit)
          memory_add(as_bit_n)
          memory_add(as_boolean)
@@ -360,7 +361,7 @@ feature {NONE}
 	 memory.add(str, str)
       end
 
-   memory: DICTIONARY[STRING,STRING] is
+   memory: HASHED_DICTIONARY[STRING,STRING] is
       once
          create Result.with_capacity(16384)
       end

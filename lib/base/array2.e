@@ -222,7 +222,7 @@ feature -- Implementation of others feature from COLLECTION2:
 
    force(x: like item; line, column: INTEGER) is
       require else
-         true
+         True
       do
          if not valid_index(line,column) then
             resize(line.min(lower1),
@@ -336,7 +336,7 @@ feature --  Looking and comparison:
    is_equal(other: like Current): BOOLEAN is
       do
          if other = Current then
-            Result := true
+            Result := True
          elseif lower1 /= other.lower1 then
          elseif lower2 /= other.lower2 then
          elseif upper1 /= other.upper1 then

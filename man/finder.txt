@@ -1,36 +1,37 @@
-   The finder Command
+
+                             The finder Command
 
    Usage
 
    finder [options] [<ACEfile.ace>] <Class>
 
-   The  finder  command tells you which file is loaded when searching for
+   The finder command tells you which file is loaded when searching for
    an Eiffel <Class>.
-   When  an  Eiffel  file  is  found, finder prints the full path name on
+   When an Eiffel file is found, finder prints the full path name on
    standard output.
    The exit status is set GENERAL.exit_success_code only when an existing
-   file  is  found  (thus  allowing  usage  of  command  finder  in shell
+   file is found (thus allowing usage of command finder in shell
    scripts).
 
-   As  for  other  commands,  when  the  ACE  file mode is used, only the
+   As for other commands, when the ACE file mode is used, only the
    content of the <ACEfile.ace> file is used to search the source file.
 
-   To  see the loading path used by SmartEiffel, you can for example type
+   To see the loading path used by SmartEiffel, you can for example type
    the finder command using a bad (inexistent) class name.
 
    In ACE file mode, the loading path can be updated by modifying the ACE
-   file  itself.  In  traditional  mode  (i.e.  no ACE file), the default
+   file itself. In traditional mode (i.e. no ACE file), the default
    loading path may also be tailored (see [1]below).
 
    Options
 
    -help:
-          Display  a  brief  summary  of  the  command-line  syntax and a
+          Display a brief summary of the command-line syntax and a
           complete list of finder options.
    -version:
           Show the number of the version of SmartEiffel you're using.
    -verbose:
-          Print  system  information during the compilation (full path of
+          Print system information during the compilation (full path of
           loaded files, type inference score, removed files, etc.).
    -loadpath <loadpath_file>:
           Adds a loadpath file for class lookup. See [2]below for details
@@ -42,53 +43,53 @@
    the following:
 
    1. Lower case filenames - SmartEiffel looks all along the loading path
-   (see [3]below)  using  <class>  name in lower case as tail. If needed,
-   the  Eiffel  suffix  (".e")  is  added automatically. SmartEiffel only
-   looks  for suffixed files on the disk. Only the first file encountered
+   (see [3]below) using <class> name in lower case as tail. If needed,
+   the Eiffel suffix (".e") is added automatically. SmartEiffel only
+   looks for suffixed files on the disk. Only the first file encountered
    according to the order of the path is taken in account. File is always
    supposed to have the same name as the inside class definition.
 
-   2.  Renamed  files  - When the above search has failed to find a file,
-   SmartEiffel  tries to search for files rename.se in all directories of
+   2. Renamed files - When the above search has failed to find a file,
+   SmartEiffel tries to search for files rename.se in all directories of
    the path.
-   A  file rename.se allows the user to put in file "foo" the class "bar"
+   A file rename.se allows the user to put in file "foo" the class "bar"
    for example.
    Such renaming facilities has been added especially for DOS (file names
    are limited to 8 characters).
-   Each  line  of a rename.se file is a renaming directive containing two
-   names,  first  the  full  name  and  then the short name to use in the
+   Each line of a rename.se file is a renaming directive containing two
+   names, first the full name and then the short name to use in the
    directory where the rename.se file is. File SmartEiffel/misc/rename.se
    is an example of such a file.
 
    Thus, knowing the algorithm of SmartEiffel to find a class file, it is
-   better  not  to  use the renaming facilities to speed up class loading
+   better not to use the renaming facilities to speed up class loading
    (see [4]below for more details about the loading path algorithm).
 
-   3.  Upper  case  filenames - Finally, when both previous steps did not
-   find  the  required  Eiffel  class  file,  SmartEiffel looks along the
+   3. Upper case filenames - Finally, when both previous steps did not
+   find the required Eiffel class file, SmartEiffel looks along the
    loading path (see [5]below) for a file bearing the class name upper in
-   upper  case  letters.  If  needed,  the  Eiffel  suffix  ".e" is added
+   upper case letters. If needed, the Eiffel suffix ".e" is added
    automatically.
    One must note that the overhead to find an upper case file name is not
-   negligible  at all and that a lower case file name may hide some upper
+   negligible at all and that a lower case file name may hide some upper
    case name.
 
    How is the loading path built?
 
-   As  described  above,  SmartEiffel  looks for classes in .e files. But
-   where  should  those  files be situated? The answer is, in the loading
-   path.  The  thing  is,  how  is  the  loading path built, what are the
+   As described above, SmartEiffel looks for classes in .e files. But
+   where should those files be situated? The answer is, in the loading
+   path. The thing is, how is the loading path built, what are the
    default values, and how can it be changed?
 
-   There  are many things that are taken into account. Let's take them in
-   order,  from  the  most  important  to  the  least (i.e., in the order
+   There are many things that are taken into account. Let's take them in
+   order, from the most important to the least (i.e., in the order
    SmartEiffel looks in; remember that the first filename that matches is
    used, thus allowing class covering).
     1. The loadpath files given on the command line (using -loadpath) are
        searched first.
-    2. If  the  current directory contains a file named loadpath.se, this
+    2. If the current directory contains a file named loadpath.se, this
        file is used as loadpath file; otherwise, the current directory is
-       considered  as  a path where to look for classes (this allows very
+       considered as a path where to look for classes (this allows very
        simple projects to not define any loadpath file).
     3. At last, the loadpath files of the configuration file are used.
 
@@ -96,12 +97,13 @@
              Copyright © Dominique COLNET and Suzanne COLLIN -
                          [6]<SmartEiffel@loria.fr>
                 Last modified: Tue Feb 11 12:15:38 CET 2003
+                                      
 
 References
 
-   1. file://localhost/users/miro/colnet/SmartEiffel/man/finder.html#LOADPATH
-   2. file://localhost/users/miro/colnet/SmartEiffel/man/finder.html#LOADPATH
-   3. file://localhost/users/miro/colnet/SmartEiffel/man/finder.html#LOADPATH
-   4. file://localhost/users/miro/colnet/SmartEiffel/man/finder.html#LOADPATH
-   5. file://localhost/users/miro/colnet/SmartEiffel/man/finder.html#LOADPATH
+   1. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/finder.html#LOADPATH
+   2. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/finder.html#LOADPATH
+   3. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/finder.html#LOADPATH
+   4. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/finder.html#LOADPATH
+   5. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/finder.html#LOADPATH
    6. mailto:SmartEiffel@loria.fr

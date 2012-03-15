@@ -55,7 +55,7 @@ feature {BASE_CLASS}
          non_empty_default_rescue: BOOLEAN
       do
          if local_vars /= Void then
-            non_empty_default_rescue := true
+            non_empty_default_rescue := True
          elseif routine_body /= Void then
             non_empty_default_rescue := not routine_body.side_effect_free
          end

@@ -32,7 +32,7 @@ feature {NONE}
 
 feature
 
-   make(d: DICTIONARY[ANY,E]) is
+   make(d: like dictionary) is
       require
 	 d /= Void
       do

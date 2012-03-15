@@ -25,35 +25,35 @@ inherit NUMBER
 
 feature
 
-   is_zero: BOOLEAN is false
+   is_zero: BOOLEAN is False
 
-   is_one: BOOLEAN is false
+   is_one: BOOLEAN is False
 
    frozen to_integer: INTEGER is
       do
-	 check false end
+	 check False end
       end
 
    infix "@=" (other: INTEGER): BOOLEAN is do end
 
    infix "//"(other: NUMBER): NUMBER is
       do
-	 check false end
+	 check False end
       end
 
    infix "@//"(other: INTEGER): NUMBER is
       do
-	 check false end
+	 check False end
       end
 
    infix "\\"(other: NUMBER): NUMBER is
       do
-	 check false end
+	 check False end
       end
 
    infix "@\\"(other: INTEGER): NUMBER is
       do
-	 check false end
+	 check False end
       end
 
 feature {NUMBER}

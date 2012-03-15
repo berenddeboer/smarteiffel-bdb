@@ -87,7 +87,7 @@ feature
    
    compile_to_c is
       local
-	 i: INTEGER; list: FIXED_ARRAY[EXPRESSION]; e: EXPRESSION
+	 i: INTEGER; list: FAST_ARRAY[EXPRESSION]; e: EXPRESSION
       do
 	 list := tuple_expression.list
 	 if list /= Void then
@@ -212,7 +212,7 @@ feature
 
    compile_to_jvm is
       local
-	 i: INTEGER; list: FIXED_ARRAY[EXPRESSION]
+	 i: INTEGER; list: FAST_ARRAY[EXPRESSION]
       do
 	 list := tuple_expression.list
 	 if list /= Void then
@@ -241,7 +241,7 @@ feature {AGENT_ARGS,AGENT_INSTRUCTION,AGENT_EXPRESSION}
 
    count: INTEGER is
       local
-	 list: FIXED_ARRAY[EXPRESSION]
+	 list: FAST_ARRAY[EXPRESSION]
       do
 	 list := tuple_expression.list
 	 if list /= Void then
@@ -253,7 +253,7 @@ feature {AGENT_ARGS,AGENT_INSTRUCTION,AGENT_EXPRESSION}
       require
 	 i.in_range(1, count)
       local
-	 list: FIXED_ARRAY[EXPRESSION]
+	 list: FAST_ARRAY[EXPRESSION]
       do
 	 list := tuple_expression.list
 	 Result := list.item(i - 1)
@@ -266,7 +266,7 @@ feature {AGENT_ARGS}
 	 e /= Void
 	 e /= expression(i)
       local
-	 list: FIXED_ARRAY[EXPRESSION]
+	 list: FAST_ARRAY[EXPRESSION]
       do
 	 list := tuple_expression.list
 	 list.put(e, i - 1)

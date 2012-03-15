@@ -123,7 +123,7 @@ feature {CLIENT_LIST}
          i: INTEGER
       do
          if index_of(cn) > 0 then
-            Result := true
+            Result := True
          else
             from
                i := count
@@ -155,7 +155,7 @@ feature {NONE}
 
    first: CLASS_NAME
 
-   remainder: FIXED_ARRAY[CLASS_NAME]
+   remainder: FAST_ARRAY[CLASS_NAME]
 
    make_1(cn: CLASS_NAME) is
       require

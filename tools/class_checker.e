@@ -36,7 +36,7 @@ feature {CLASS_CHECKER_VISITOR}
       do
       end
 
-   parents: FIXED_ARRAY[BASE_CLASS] is
+   parents: FAST_ARRAY[BASE_CLASS] is
          -- From `ace..root_class' up to ANY included.
       once
          create Result.with_capacity(4)
@@ -66,7 +66,7 @@ feature {CLASS_CHECKER_VISITOR}
 
    output: OUTPUT_STREAM
 
-   root_class_names: FIXED_ARRAY[STRING] is
+   root_class_names: FAST_ARRAY[STRING] is
       once
          create Result.with_capacity(1)
       end
@@ -189,7 +189,7 @@ feature {CLASS_CHECKER_VISITOR}
 
    compute_run_class(bc: BASE_CLASS) is
       local
-         ct, t: E_TYPE; constraints: DICTIONARY[E_TYPE, STRING]
+         ct, t: E_TYPE; constraints: HASHED_DICTIONARY[E_TYPE, STRING]
 	 i: INTEGER; fgl: FORMAL_GENERIC_LIST; sp: POSITION
 	 fga: FORMAL_GENERIC_ARG
       do
@@ -245,7 +245,7 @@ feature {CLASS_CHECKER_VISITOR}
 feature {NONE}
 
    run_type_for(bc: BASE_CLASS; sp: POSITION
-		constraints: DICTIONARY[E_TYPE, STRING]): E_TYPE is
+		constraints: HASHED_DICTIONARY[E_TYPE, STRING]): E_TYPE is
 	 -- Create a valid runnable one. The `constraints' dictionary
 	 -- is used to substitute nested generic formal arguments.
       local
@@ -275,9 +275,13 @@ feature {NONE}
          elseif as_integer_general = bcn then
             create {TYPE_INTEGER} Result.integer_general(sp)
          elseif as_real = bcn then
-            create {TYPE_REAL} Result.make(sp)
+            create {TYPE_REAL} Result.make(sp, as_real)
+         elseif as_real_32 = bcn then
+            create {TYPE_REAL} Result.make(sp, as_real_32)
+         elseif as_real_64 = bcn then
+            create {TYPE_DOUBLE} Result.make(sp, as_real_64)
          elseif as_double = bcn then
-            create {TYPE_DOUBLE} Result.make(sp)
+            create {TYPE_DOUBLE} Result.make(sp, as_double)
          elseif as_character = bcn then
             create {TYPE_CHARACTER} Result.make(sp)
          elseif as_boolean = bcn then

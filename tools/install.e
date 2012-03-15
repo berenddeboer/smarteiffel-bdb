@@ -71,9 +71,9 @@ unchanged and get you back to the previous menu.
 As training, you'll be asked to press the <Enter> key to gain access to the
 main menu ;-)
 
-If you have problems, please contact the SmartEiffel team:
-  - either by mail:  SmartEiffel@loria.fr
-  - either by using the bugs database: http://SmartZilla.loria.fr
+If you have problems, please contact the SmartEiffel12 team:
+  - either by mail:  smarteiffel@except.com.ar
+  - either by using the bugs database: http://opensvn.csie.org/traccgi/smarteiffel12
 
 
 Press the <Enter> key: 
@@ -113,7 +113,7 @@ feature {NONE} -- Initialization:
          set_compiler_lists
 
          config_detected := seconf /= fz_conf_undefined
-            and then file_tools.is_readable(seconf)
+            and then ftools.is_readable(seconf)
             and then not ini_parser.is_invalid
             and then use_existing_config
 
@@ -249,14 +249,14 @@ feature {NONE} -- Initialization:
    unix_seconf is
       do
          if system_tools.home_env = Void or else system_tools.user_env = Void or else system_tools.user_env.is_equal(once "root") then
-            seconf := once "/etc/serc"
+            seconf := once "/etc/serc12"
          else
             seconf := seconf_buffer
             seconf.copy(system_tools.home_env)
             if seconf.last /= '/' then
                seconf.extend('/')
             end
-            seconf.append(once ".serc")
+            seconf.append(once ".serc12")
          end
       end
 
@@ -296,26 +296,26 @@ feature {NONE} -- Initialization:
          s: SYSTEM
          is_better_default_than_system_tools: BOOLEAN
       do
-         if file_exists(once "/sys/rc") then
+         if ftools.is_readable(once "/sys/rc") then
             -- We're looking for a file unique to the new Amiga Digital
             -- Environment running on Taos.
             set_system_name(system_tools.elate_system)
-            seconf := once "/lang/eiffel/.serc" -- contributed by Joseph R. Kiniry
+            seconf := once "/lang/eiffel/.serc12" -- contributed by Joseph R. Kiniry
             is_better_default_than_system_tools := True
-         elseif file_exists(once "s:startup-sequence") then
+         elseif ftools.is_readable(once "s:startup-sequence") then
             -- This check has to be performed BEFORE the Unix check
             -- ("/bin/ls"), because the latter might be true if the user
             -- installed GeekGadgets and one of those perverted patches
             -- to handle Unix-style paths!
             set_system_name(system_tools.amiga_system)
             -- seconf not yet contributed
-         elseif file_exists(once "/boot/beos/system/Tracker") then
+         elseif ftools.is_readable(once "/boot/beos/system/Tracker") then
             set_system_name(system_tools.beos_system)
             -- seconf not yet contributed
-         elseif file_exists(once "/bin/ls.exe") then
+         elseif ftools.is_readable(once "/bin/ls.exe") then
             set_system_name(system_tools.cygwin_system)
             unix_seconf
-         elseif file_exists(once "/bin/ls") then
+         elseif ftools.is_readable(once "/bin/ls") then
             set_system_name(system_tools.unix_system)
             unix_seconf
          else
@@ -346,21 +346,20 @@ feature {NONE} -- Initialization:
             end
          end
 
+
          system_tools.make
 
          if system_tools.seconf_env /= Void then
             -- The "SmartEiffel" environment variable was set, we must use it
             seconf := system_tools.seconf_env
-         elseif seconf = Void then
+         elseif seconf = Void or seconf = fz_conf_undefined then
             -- No conf file is set: use the SYSTEM_TOOLS computed default
             seconf := system_tools.seconf
          elseif not is_better_default_than_system_tools and then system_tools.seconf /= fz_conf_undefined then
             -- A conf file is set, but SYSTEM_TOOLS is deemed more pertinent
             seconf := system_tools.seconf
-         else
-            -- No known conf file, the user will have to set it
-            seconf := fz_conf_undefined
          end
+         -- Otherwise, we use the default for our system
 
          check
             seconf /= Void
@@ -773,18 +772,18 @@ feature {NONE} -- Variables:
    system_name: STRING
          -- One element of SYSTEM_TOOLS `system_list'
 
-   c_modes: FIXED_ARRAY[C_MODE]
+   c_modes: FAST_ARRAY[C_MODE]
          -- Currently configured C modes (those will be written in the
          -- configuration file)
 
-   unused_c_modes: FIXED_ARRAY[C_MODE]
+   unused_c_modes: FAST_ARRAY[C_MODE]
          -- `Trop-plein' of C modes (unused created ones; to avoid too many
          -- memory leaks)
 
-   extra_loadpath_keys: FIXED_ARRAY[STRING]
+   extra_loadpath_keys: FAST_ARRAY[STRING]
          -- The keys of the loadpaths in the configuration file
 
-   extra_loadpath_items: FIXED_ARRAY[STRING]
+   extra_loadpath_items: FAST_ARRAY[STRING]
          -- The loadpaths in the configuration file
 
 feature {NONE} -- Internally handled menu:
@@ -1326,8 +1325,8 @@ Your choice [
                      lost_loadpath_item := extra_loadpath_items.item(entry-1)
                      extra_loadpath_keys.remove(entry-1)
                      extra_loadpath_items.remove(entry-1)
-                     lost_loadpath_key.clear
-                     lost_loadpath_item.clear
+                     lost_loadpath_key.clear_count
+                     lost_loadpath_item.clear_count
                      extra_loadpath_keys.add_last(lost_loadpath_key) -- memory conservation
                      extra_loadpath_items.add_last(lost_loadpath_item) -- memory conservation
                   end
@@ -1475,7 +1474,7 @@ Your choice [
                                                      c_compiler_list,
                                                      def)
                      check default_c_compiler /= Void end
-                     default_c_compiler_options.clear
+                     default_c_compiler_options.clear_count
                      if system_tools.c_plus_plus_compiler_list.has(default_c_compiler) then
                         default_cpp_compiler := default_c_compiler
                         default_cpp_compiler_options.copy(default_c_compiler_options)
@@ -1496,7 +1495,7 @@ Your choice [
                            default_cpp_compiler := fz_conf_undefined
                         end
                         check default_cpp_compiler /= Void end
-                        default_cpp_compiler_options.clear
+                        default_cpp_compiler_options.clear_count
                      end
                      read_compiler_template(True)
 
@@ -1731,7 +1730,7 @@ Your choice [
                   when 2 then
                      ask(once "C compiler path")
                      if not entry_buffer.is_empty then
-                        if file_tools.is_readable(entry_buffer) then
+                        if ftools.is_readable(entry_buffer) then
                            c_mode.set_c_compiler_path(entry_buffer)
                         else
                            io.put_string(once "*** This file does not exist or is not readable.%N")
@@ -1745,7 +1744,7 @@ Your choice [
                   when 4 then
                      ask(once "C linker path")
                      if not entry_buffer.is_empty then
-                        if file_tools.is_readable(entry_buffer) then
+                        if ftools.is_readable(entry_buffer) then
                            c_mode.set_c_linker_path(entry_buffer)
                            c_mode.set_c_linker_options(Void)
                         else
@@ -1791,7 +1790,7 @@ Your choice [
                      if has_cpp then
                         ask(once "C++ compiler path")
                         if not entry_buffer.is_empty then
-                           if file_tools.is_readable(entry_buffer) then
+                           if ftools.is_readable(entry_buffer) then
                               c_mode.set_cpp_compiler_path(entry_buffer)
                            else
                               io.put_string(once "*** This file does not exist or is not readable.%N")
@@ -1813,7 +1812,7 @@ Your choice [
                   when 9 then
                      ask(once "C++ linker path")
                      if not entry_buffer.is_empty then
-                        if file_tools.is_readable(entry_buffer) then
+                        if ftools.is_readable(entry_buffer) then
                            c_mode.set_cpp_linker_path(entry_buffer)
                            c_mode.set_cpp_linker_options(Void)
                         else
@@ -2035,7 +2034,7 @@ feature {NONE} -- The installation itself:
          i: INTEGER
          c_mode: C_MODE
       do
-         if file_tools.is_readable(seconf) then
+         if ftools.is_readable(seconf) then
             tmp_buffer.copy(seconf)
             tmp_buffer.extend('~')
             io.put_string(once "Renaming ")
@@ -2043,7 +2042,7 @@ feature {NONE} -- The installation itself:
             io.put_string(once " to ")
             io.put_string(tmp_buffer)
             io.put_new_line
-            file_tools.rename_to(seconf, tmp_buffer)
+            ftools.rename_to(seconf, tmp_buffer)
          end
          open_seconf
          if not tfw.is_connected then
@@ -2056,8 +2055,8 @@ feature {NONE} -- The installation itself:
 -- This is the configuration file of SmartEiffel, generated by the
 -- SmartEiffel installer.
 -- If you have any problems or questions, please:
---   - either look at the SmartEiffel site (http://SmartEiffel.loria.fr)
---   - or contact the SmartEiffel team (SmartEiffel@loria.fr)
+--   - either look at the SmartEiffel site (http://opensvn.csie.org/traccgi/smarteiffel12)
+--   - or contact the SmartEiffel12 team (smarteiffel@except.com.ar)
 -- ======================================================================= --
 
             }")
@@ -2275,8 +2274,8 @@ feature {NONE} -- The installation itself:
          if not has_germ_dir then
             fatal_problem_description_start
             std_error.put_string(once "The install/germ directory does not exist!%N%
-                                      %Did you use a SmartEiffel archive from Loria?%N%
-                                      %If not, you can download it at http://SmartEiffel.loria.fr%N%
+                                      %Did you use a smarteiffel12 package?%N%
+                                      %If not, you can download it at http://opensvn.csie.org/traccgi/smarteiffel12%N%
                                       %and start the installation again.")
             fatal_problem_description_end
          end
@@ -2402,7 +2401,7 @@ feature {NONE} -- The installation itself:
                      basic_directory.compute_file_path_with(germ_directory, s)
                      if not basic_directory.last_entry.is_empty then
                         s.copy(basic_directory.last_entry)
-                        remove_file(s)
+                        ftools.delete(s)
                      end
                   end
                   basic_directory.read_entry
@@ -2593,15 +2592,15 @@ feature {NONE} -- The installation itself:
                done
             loop
                if s.count = 0 then
-                  done := true
+                  done := True
                elseif s.last = ';' then
                   s.remove_last(1)
                   entry.copy(s)
-                  done := true
+                  done := True
                elseif s.last.is_decimal_digit then
                   s.remove_last(1)
                else
-                  done := true
+                  done := True
                end
             end
          end
@@ -2622,7 +2621,7 @@ feature {NONE} -- The installation itself:
          basic_directory.compute_file_path_with(noenv_bin_directory,executable)
          new_path := once ""
          new_path.copy(basic_directory.last_entry)
-         if not file_exists(old_path) then
+         if not ftools.is_readable(old_path) then
             fatal_problem_description_start
             std_error.put_string(once "Unable to find executable %"")
             std_error.put_string(old_path)
@@ -2651,7 +2650,7 @@ feature {NONE} -- The installation itself:
          x_name.copy(name)
          system_tools.add_x_suffix(x_name)
 
-         command.clear
+         command.clear_count
          system_tools.command_path_in(command, once "compile")
          command.extend(' ')
          command.append(options)
@@ -2672,7 +2671,7 @@ feature {NONE} -- The installation itself:
          x_name.copy(name)
          system_tools.add_x_suffix(x_name)
 
-         command.clear
+         command.clear_count
          system_tools.command_path_in(command, once "compile_to_c")
          command.extend(' ')
          command.append(options)
@@ -2687,7 +2686,7 @@ feature {NONE} -- The installation itself:
 
    call_clean(name: STRING) is
       do
-         command.clear
+         command.clear_count
          system_tools.command_path_in(command, once "clean")
          command.extend(' ')
          command.append(name)
@@ -2710,8 +2709,8 @@ feature {NONE} -- The installation itself:
          std_error.put_string(once
          "***************************************************************%N%
          %Fix the previously described problem and launch again the,%N%
-         %installation, or contact the SmartEiffel team:%N%
-         %SmartEiffel@loria.fr%N")
+         %installation, or contact the SmartEiffel12 team:%N%
+         %smarteiffel@except.com.ar%N")
          restore_current_working_directory
          install_exit(exit_failure_code)
       end
@@ -2756,6 +2755,8 @@ feature {NONE} -- Exit:
 
 feature {NONE} -- Misc:
 
+   ftools: FILE_TOOLS
+
    restore_current_working_directory is
       do
          if cwd /= Void then
@@ -2765,7 +2766,7 @@ feature {NONE} -- Misc:
 
    read_line is
       do
-         entry_buffer.clear
+         entry_buffer.clear_count
          io.read_line_in(entry_buffer)
          entry_buffer.left_adjust
          entry_buffer.right_adjust
@@ -2889,7 +2890,7 @@ feature {NONE} -- Buffers:
          !!Result.make
       end
 
-   templates: DICTIONARY[INI_PARSER, STRING] is
+   templates: HASHED_DICTIONARY[INI_PARSER, STRING] is
       once
          create Result.make
       end
@@ -2943,14 +2944,14 @@ feature {NONE} -- Buffers:
                    >>
       end
 
-   c_compiler_rc_map: DICTIONARY[STRING, STRING] is
+   c_compiler_rc_map: HASHED_DICTIONARY[STRING, STRING] is
          -- Keys: "reduced" RC file names
          -- Values: compilers
       once
          create Result.make
       end
 
-   cpp_compiler_rc_map: DICTIONARY[STRING, STRING] is
+   cpp_compiler_rc_map: HASHED_DICTIONARY[STRING, STRING] is
          -- Keys: "reduced" RC file names
          -- Values: compilers
       once

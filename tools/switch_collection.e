@@ -61,7 +61,7 @@ feature {SMART_EIFFEL}
    c_define is
          -- Produce C code for switches.
       local
-         dictionary2: DICTIONARY[RUN_FEATURE,FEATURE_NAME]
+         dictionary2: HASHED_DICTIONARY[RUN_FEATURE,FEATURE_NAME]
          count1, count2, total: INTEGER; switch: SWITCH
       do
 	 echo.put_string(
@@ -98,7 +98,7 @@ feature {CECIL_FILE, ADDRESS_OF_POOL, E_AGENT, RUN_CLASS}
 	 not run_feature.current_type.is_type_of_agent
       local
          current_type: E_TYPE; key1: STRING; key2: FEATURE_NAME
-         dictionary2: DICTIONARY[RUN_FEATURE,FEATURE_NAME]
+         dictionary2: HASHED_DICTIONARY[RUN_FEATURE,FEATURE_NAME]
          run_time_set: RUN_TIME_SET; dyn_rf: RUN_FEATURE; i: INTEGER
       do
          current_type := run_feature.current_type
@@ -142,7 +142,7 @@ feature {C_PRETTY_PRINTER}
          run_feature /= Void
       local
          key1: STRING; key2: FEATURE_NAME
-         dictionary2: DICTIONARY[RUN_FEATURE,FEATURE_NAME]
+         dictionary2: HASHED_DICTIONARY[RUN_FEATURE,FEATURE_NAME]
       do
          key1 := run_feature.run_class.run_time_mark
 	 dictionary2 := dictionary.reference_at(key1)
@@ -160,7 +160,7 @@ feature {JVM}
    jvm_define is
          -- Produce Java byte code for switches.
       local
-         dictionary2: DICTIONARY[RUN_FEATURE,FEATURE_NAME]
+         dictionary2: HASHED_DICTIONARY[RUN_FEATURE,FEATURE_NAME]
          count1, count2, total: INTEGER; switch: SWITCH
          up_rf: RUN_FEATURE
       do
@@ -197,7 +197,7 @@ feature {SWITCH_COLLECTION_VISITOR}
 
 feature {NONE}
 
-   dictionary: DICTIONARY[DICTIONARY[RUN_FEATURE,FEATURE_NAME],STRING] is
+   dictionary: HASHED_DICTIONARY[HASHED_DICTIONARY[RUN_FEATURE,FEATURE_NAME],STRING] is
          -- First STRING key is the name of a run type corresponding
          -- to a RUN_CLASS. Embedded dictionary gives all switching points.
       once

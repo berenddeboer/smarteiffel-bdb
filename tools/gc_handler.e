@@ -63,14 +63,14 @@ feature
       local
 	 my_buffer: STRING
       do
-         body.clear
+         body.clear_count
          body.extend('T')
          run_class.id.append_in(body)
          body.extend('*')
 	 allocation_in_(once "n",body,run_class,Void)
 	 if run_class.current_type.is_separate then
 	    my_buffer := once "                "
-	    my_buffer.clear
+	    my_buffer.clear_count
 	    my_buffer.append(once "(n->ref)")
 	    allocation_in_(my_buffer, body,
 		 run_class.current_type.local_from_separate.run_class,
@@ -83,8 +83,8 @@ feature {ACE, COMPILE_TO_C, STRING_COMMAND_LINE}
 
    no_gc is
       do
-         is_off := true
-         info_flag := false
+         is_off := True
+         info_flag := False
       ensure
          is_off
          not info_flag
@@ -92,8 +92,8 @@ feature {ACE, COMPILE_TO_C, STRING_COMMAND_LINE}
 
    set_info_flag is
       do
-         is_off := false
-         info_flag := true
+         is_off := False
+         info_flag := True
       ensure
          not is_off
          info_flag
@@ -207,13 +207,13 @@ feature {SMART_EIFFEL}
       require
          not is_off
       local
-         i: INTEGER; rc: RUN_CLASS; run_class_map: FIXED_ARRAY[RUN_CLASS]
+         i: INTEGER; rc: RUN_CLASS; run_class_map: FAST_ARRAY[RUN_CLASS]
          root_type: E_TYPE
       do
          run_class_map := smart_eiffel.get_run_class_map
          root_type := smart_eiffel.root_procedure.current_type
          manifest_string_pool.define_manifest_string_mark
-         body.clear
+         body.clear_count
          once_routine_pool.gc_mark_in(body)
          cpp.put_c_function(once "void once_function_mark(void)",body)
          define_gc_start(root_type,run_class_map)
@@ -263,7 +263,7 @@ feature {RUN_CLASS}
          if not is_off then
             rf3 := run_class.get_memory_dispose
             if rf3 /= Void then
-               dispose_flag := true
+               dispose_flag := True
             end
          end
       end
@@ -280,7 +280,7 @@ feature {RUN_CLASS,C_PRETTY_PRINTER,ASSIGNMENT_HANDLER,CREATE_EXPRESSION}
          rc.current_type.is_reference
          cpp.on_c
       do
-	 body.clear
+	 body.clear_count
 	 allocation_in_(var,body,rc,Void)
          cpp.put_string(body)
       end
@@ -322,7 +322,7 @@ feature {SEPARATE_TOOLS}
 
    new_separate(rc: RUN_CLASS; subsystem: STRING) is
       do
-	 body.clear
+	 body.clear_count
 	 allocation_in_(once "n", body, rc, subsystem)
 	 cpp.put_string(body)
       end
@@ -467,10 +467,13 @@ feature {NONE}
 
    make is do end
 
+   min_kb_count: INTEGER is 256
+         -- Minimum kb to allocate for fsoc and for rsoc
+
    compute_ceils is
       local
          fsoc_count_ceil, rsoc_count_ceil, i: INTEGER
-         run_class_map: FIXED_ARRAY[RUN_CLASS]
+         run_class_map: FAST_ARRAY[RUN_CLASS]
          rc: RUN_CLASS
          kb_count: INTEGER
       do
@@ -492,19 +495,19 @@ feature {NONE}
          end
          fsoc_count_ceil := 4 * fsoc_count_ceil
          kb_count := fsoc_count_ceil * (fsoc_size // 1024)
-         if kb_count < 256 then
-            fsoc_count_ceil := 256 // (fsoc_size // 1024)
+         if kb_count < min_kb_count then
+            fsoc_count_ceil := min_kb_count // (fsoc_size // 1024)
          end
          rsoc_count_ceil := 3 * rsoc_count_ceil
          kb_count := rsoc_count_ceil * (rsoc_size // 1024)
-         if kb_count < 256 then
-            rsoc_count_ceil := 256 // (rsoc_size // 1024)
+         if kb_count < min_kb_count then
+            rsoc_count_ceil := min_kb_count // (rsoc_size // 1024)
          end
          cpp.put_extern6(once "unsigned int fsoc_count_ceil",fsoc_count_ceil)
          cpp.put_extern6(once "unsigned int rsoc_count_ceil",rsoc_count_ceil)
       end
 
-   switch_list: FIXED_ARRAY[RUN_CLASS] is
+   switch_list: FAST_ARRAY[RUN_CLASS] is
 	 -- For which there is a switching function.
       once
          create Result.with_capacity(128)
@@ -514,7 +517,7 @@ feature {NONE}
       local
          ct: E_TYPE; run_time_set: RUN_TIME_SET
       do
-         header.clear
+         header.clear_count
          header.append(fz_void)
          header.extend(' ')
          header.extend('X')
@@ -524,7 +527,7 @@ feature {NONE}
          header.append(fz_t0_star)
          header.extend('o')
          header.extend(')')
-         body.clear
+         body.clear_count
          run_time_set := rc.run_time_set
          body.append(once "{int i=o->id;%N")
          c_dicho(run_time_set,1,run_time_set.count)
@@ -564,7 +567,7 @@ feature {NONE}
          end
       end
 
-  just_before_mark(run_class_map: FIXED_ARRAY[RUN_CLASS]) is
+  just_before_mark(run_class_map: FAST_ARRAY[RUN_CLASS]) is
       require
          not is_off
       local
@@ -582,14 +585,14 @@ feature {NONE}
          end
       end
 
-   define_gc_info(run_class_map: FIXED_ARRAY[RUN_CLASS]) is
+   define_gc_info(run_class_map: FAST_ARRAY[RUN_CLASS]) is
       require
          info_flag
       local
          i: INTEGER; rc: RUN_CLASS
       do
          header.copy(once "void  gc_info(void)")
-         body.clear
+         body.clear_count
          body.append(once "fprintf(SE_GCINFO,%"--------------------\n%");%N")
          from
             i := run_class_map.upper
@@ -614,9 +617,9 @@ feature {NONE}
          cpp.put_c_function(header,body)
       end
 
-   define_gc_start(root_type: E_TYPE; run_class_map: FIXED_ARRAY[RUN_CLASS]) is
+   define_gc_start(root_type: E_TYPE; run_class_map: FAST_ARRAY[RUN_CLASS]) is
       do
-         body.clear
+         body.clear_count
          body.append(once "if(gc_is_off)return;%N%
                    %if(garbage_delayed())return;%N")
          body.append(

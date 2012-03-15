@@ -49,7 +49,7 @@ feature
          Result := list.count
       end
 
-   up_to_any_in(pl: FIXED_ARRAY[BASE_CLASS]) is
+   up_to_any_in(pl: FAST_ARRAY[BASE_CLASS]) is
       local
          i: INTEGER
          p: PARENT
@@ -211,7 +211,7 @@ feature {BASE_CLASS}
          end
       end
 
-   going_up(trace: FIXED_ARRAY[PARENT]; top: BASE_CLASS
+   going_up(trace: FAST_ARRAY[PARENT]; top: BASE_CLASS
             top_fn: FEATURE_NAME;): FEATURE_NAME is
       require
          top /= Void
@@ -352,9 +352,9 @@ feature {BASE_CLASS}
          loop
             bc := list.item(i).base_class
             if c = bc then
-               Result := true
+               Result := True
             elseif bc.is_subclass_of(c) then
-               Result := true
+               Result := True
             else
                i := i - 1
             end
@@ -698,7 +698,7 @@ feature {PARENT_LIST_VISITOR}
 
 feature {PARENT_LIST_VISITOR}
 
-   list: FIXED_ARRAY[PARENT]
+   list: FAST_ARRAY[PARENT]
 
 feature {NONE}
 

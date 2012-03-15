@@ -28,6 +28,7 @@ deferred class LOCAL_NAME1_VISITOR
       --
 inherit
    LOCAL_NAME_VISITOR
+   LOCAL_ARGUMENT1_VISITOR
 
 feature {LOCAL_NAME1}
 

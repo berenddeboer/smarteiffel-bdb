@@ -54,11 +54,11 @@ feature
    run_type: E_TYPE
          -- When runnable only.
 
-   is_expanded: BOOLEAN is false
+   is_expanded: BOOLEAN is False
 
-   is_reference: BOOLEAN is true
+   is_reference: BOOLEAN is True
 
-   is_separate: BOOLEAN is true
+   is_separate: BOOLEAN is True
 
    local_from_separate: E_TYPE is
       do
@@ -80,11 +80,11 @@ feature
          Result := mapped.is_any
       end
 
-   is_like_current: BOOLEAN is false
+   is_like_current: BOOLEAN is False
 
-   is_like_argument: BOOLEAN is false
+   is_like_argument: BOOLEAN is False
 
-   is_like_feature: BOOLEAN is false
+   is_like_feature: BOOLEAN is False
 
    jvm_method_flags: INTEGER is 17
 
@@ -103,7 +103,7 @@ feature
          Result := base_class_name
       end
 
-   is_basic_eiffel_expanded: BOOLEAN is false
+   is_basic_eiffel_expanded: BOOLEAN is False
 
    stupid_switch(run_time_set: RUN_TIME_SET): BOOLEAN is
       do
@@ -120,9 +120,9 @@ feature
          Result := mapped.generic_list
       end
 
-   is_user_expanded: BOOLEAN is false
+   is_user_expanded: BOOLEAN is False
 
-   is_dummy_expanded: BOOLEAN is false
+   is_dummy_expanded: BOOLEAN is False
 
    id: INTEGER is
       do

@@ -66,7 +66,7 @@ feature {RUN_FEATURE}
 
    set_used is
       do
-         used := true
+         used := True
       end
 
 feature {C_PRETTY_PRINTER}

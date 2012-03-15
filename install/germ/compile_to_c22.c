@@ -8,296 +8,297 @@ extern"C"{
 #ifdef __cplusplus
 extern"C"{
 #endif
-void Z9Y1(ZU7*C,T0*a1,T0*a2){((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZaY1(C,ZTL1,a1,a2);Z7I((Zi4*)(ZsG),ZTL1);}void ZbY1(ZU7*C){T2 ZXO=0;
-T6 Zb71=0;Zb71=((T6)((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))));ZXO=ZcY1(C);((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZXw((T7*)(ZTL1),ZZL1);
-ZXw((T7*)(ZTL1),ZDF(((C)->Z0c)));ZXw((T7*)(ZTL1),Z_L1);if((((C)->Zgc))==((void*)(Zo))){ZXw((T7*)(ZTL1),Z9N);}else{ZXU(ZvG(((C)->Zgc)),ZTL1);
-}ZZs((T7*)(ZTL1),((T3)'\040'));ZZs((T7*)(ZTL1),((T3)'r'));ZQs(ZXO,ZTL1);{ZB8*C1=(ZB8*)(((C)->Zkc));T0*b1=ZTL1;ZXw(((T7*)b1),((C1)->Z3n));
-}ZZs((T7*)(ZTL1),((T3)'\050'));if(Zb71){ZXw((T7*)(ZTL1),Z0M1);if((T6)((ZdY1(C))||((T6)((((C)->ZAb))!=((void*)(Zo)))))){ZZs((T7*)(ZTL1),((T3)'\054'));
-}}if(ZdY1(C)){ZNS(((C)->Z0c),ZTL1);ZZs((T7*)(ZTL1),((T3)'\040'));ZZs((T7*)(ZTL1),((T3)'C'));if((((C)->ZAb))!=((void*)(Zo))){ZZs((T7*)(ZTL1),((T3)'\054'));
-}}if((((C)->ZAb))==((void*)(Zo))){if(Zb71){}else if(!(ZdY1(C))){ZXw((T7*)(ZTL1),Z9N);}}else{ZH71((ZH6*)(((C)->ZAb)),ZTL1);}ZZs((T7*)(ZTL1),((T3)'\051'));
-ZyI((Zi4*)(ZsG),ZTL1);ZES((Zi4*)(ZsG));}void ZeY1(ZU7*C){ZfY1(C);Z7I((Zi4*)(ZsG),Z8M);}void ZgY1(ZU7*C){{T76 Z3w;ZzF((*(Z3w=Z3L(((C)->Zgc)),&Z3w)));
-}{T0*b1=ZvF(61,"Result type of a once function must not be anchored (VFFD.7).");ZXw((T7*)(ZwF),b1);}ZEF((T75*)(ZyF));}void ZhY1(ZU7*C,T0*a1){
-if(Z2H(((C)->Z0c))){ZXw(((T7*)a1),Z4M1);}else{ZXw(((T7*)a1),Z5M1);}}void ZiY1(ZU7*C,T76 a1){T0*Z8M1=Zo;Z8M1=ZWG();ZoF((ZD*)(Zzk1(Z8M1)),Z8M1,a1,ZjY1(C));
-}T2 ZcY1(ZU7*C){T2 R=0;R=ZuI(((C)->Z0c));return R;}void ZkY1(ZU7*C,T0*a1){Z7I((Zi4*)(ZsG),ZcM1);Z7I((Zi4*)(ZsG),a1);ZlY1(C);Z7I((Zi4*)(ZsG),ZeM1);
-{T76 Z3w;Z6B1((Zi4*)(ZsG),(*(Z3w=ZmY1(C),&Z3w)));}Z9Y1(C,ZgM1,ZrE1);}void ZnY1(ZU7*C){if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){if((((C)->Zgc))==((void*)(Zo))){
-ZeY1(C);}else{ZfY1(C);}}else if((((C)->Zgc))!=((void*)(Zo))){ZzZ(((C)->Zgc));}}void ZoY1(ZU7*C,T6 a1){((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));
-if((T6)(((T6)(((((T41*)(Z1G))->ZPk))&&((T6)(!(a1)))))&&((T6)((T6)((Z2H(((C)->Z0c)))||((T6)(((C)->ZLj)))))))){ZXw((T7*)(ZTL1),ZqM1);}else{
-ZZs((T7*)(ZTL1),((T3)'r'));}ZQs(ZcY1(C),ZTL1);{ZB8*C1=(ZB8*)(((C)->Zkc));T0*b1=ZTL1;ZXw(((T7*)b1),((C1)->Z3n));}Z7I((Zi4*)(ZsG),ZTL1);
-}void ZpY1(ZU7*C,T6 a1){T2 ZXO=0;T0*ZsM1=Zo;T0*ZtM1=Zo;ZXO=ZcY1(C);Z7I((Zi4*)(ZsG),ZuM1);if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){ZkY1(C,ZvM1);
-}if((((C)->Zgc))!=((void*)(Zo))){((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZXw((T7*)(ZTL1),ZwM1);ZXU(((C)->Zgc),ZTL1);ZXw((T7*)(ZTL1),ZxM1);
-Z7I((Zi4*)(ZsG),ZTL1);}if(a1){ZyM1((Zi4*)(ZsG),(T0*)C);ZnY1(C);ZwX((Zi4*)(ZsG));}else{ZsM1=ZKI(((C)->Z0c));ZtM1=Z8E(((Zj6*)((((Ze4*)(Z8G(ZsM1)))->Zug))),((C)->Zkc));
-ZyM1((Zi4*)(ZsG),ZtM1);ZvX(ZtM1);ZwX((Zi4*)(ZsG));}if((((C)->Zgc))!=((void*)(Zo))){Z7I((Zi4*)(ZsG),Z8M);if(ZaH(((C)->Zgc))){Z7I((Zi4*)(ZsG),ZzM1);
-}}Z7I((Zi4*)(ZsG),ZAM1);if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){Z9Y1(C,ZxO,ZvE1);}}void ZlY1(ZU7*C){T0*_fn=Zo;T0*Zcd=Zo;ZcH((Zi4*)(ZsG),((T3)'\042'));
-_fn=((((Zx8*)((((ZM3*)(((C)->ZPj)))->Zfc))))->ZBd);if((((((ZB8*)_fn))->Z3n))!=((void*)((((ZB8*)(((C)->Zkc)))->Z3n)))){Zcd=ZBM1((ZB8*)(((C)->Zkc)));
-if((Zcd)!=((void*)(Zo))){Z7I((Zi4*)(ZsG),Zcd);ZcH((Zi4*)(ZsG),((T3)'\040'));}Z7I((Zi4*)(ZsG),(((ZB8*)(((C)->Zkc)))->Zre));ZcH((Zi4*)(ZsG),((T3)'\040'));
-ZcH((Zi4*)(ZsG),((T3)'\050'));}Zcd=ZBM1(((ZB8*)_fn));if((Zcd)!=((void*)(Zo))){Z7I((Zi4*)(ZsG),Zcd);ZcH((Zi4*)(ZsG),((T3)'\040'));}Z7I((Zi4*)(ZsG),((((ZB8*)_fn))->Zre));
-ZcH((Zi4*)(ZsG),((T3)'\040'));Z7I((Zi4*)(ZsG),(((T80*)(((((T82*)((((ZM3*)(((C)->ZPj)))->Zqb))))->Zkc)))->Zre));if((((((ZB8*)_fn))->Z3n))!=((void*)((((ZB8*)(((C)->Zkc)))->Z3n)))){
-ZcH((Zi4*)(ZsG),((T3)'\051'));}ZcH((Zi4*)(ZsG),((T3)'\042'));}T0*ZqY1(ZU7*C,T0*a1){T0*R=Zo;{int z1=((C)->ZNj);switch(z1){case 20:R=ZrY1;
-break;case 19:break;case 21:(C->ZNj)=Zrs(22);ZsY1(C,a1);if((((C)->ZNj))==(Zrs(20))){R=ZrY1;}break;default:;(C->ZNj)=Zrs(19);}}return R;
-}void ZtY1(ZU7*C){T0*ZIM1=Zo;T0*_t=Zo;((((T7*)((T7*)(ZRL1))))->Zcc)=(Zrs(0));((((T7*)((T7*)(Z6M1))))->Zcc)=(Zrs(0));if(ZdY1(C)){ZH61(((C)->Z0c),ZRL1);
-}if((((C)->ZAb))!=((void*)(Zo))){ZZ71((ZH6*)(((C)->ZAb)),ZRL1,Z6M1);}if((((C)->Zgc))!=((void*)(Zo))){_t=ZvG(((C)->Zgc));ZXw((T7*)(Z6M1),ZKM1);
-ZXw((T7*)(ZRL1),ZmS);ZH61(_t,ZRL1);}if((((C)->ZDe))!=((void*)(Zo))){ZLM1((Z11*)(((C)->ZDe)),ZRL1,Z6M1);}}void Zra1(ZU7*C,T0*a1,T0*a2,T0*a3){
-T0*ZtM1=Zo;T0*ZsM1=Zo;{T0*b1=(T0*)C;Z2A((Z_5*)(ZuK),b1);}(C->Znf)=Z8G(a1);(C->Z0c)=a1;(C->Zkc)=a2;(C->ZPj)=a3;Z6E(((Zj6*)((((Ze4*)(((C)->Znf)))->Zug))),(T0*)C,a2);
-ZhG((T41*)(Z1G));(C->Zah)=Zrs(21);(C->ZNj)=Zrs(21);ZuY1(C);Z_z((Z_5*)(ZuK));if(Z2H(((C)->Z0c))){ZsM1=ZKI(((C)->Z0c));ZtM1=ZaL((Ze4*)(Z8G(ZsM1)),((C)->Zkc));
-}}void ZvY1(T0*a1){{T0*b1=a1;ZXw((T7*)(ZwF),b1);}ZEF((T75*)(ZyF));}void ZwY1(ZU7*C,T6 a1,T6 a2,T6 a3){ZcH((Zi4*)(ZsG),((T3)'\050'));if(a1){
-Z7I((Zi4*)(ZsG),ZPM1);}if(a2){if(a1){ZcH((Zi4*)(ZsG),((T3)'\054'));}if(Z2T(((C)->Z0c))){Z7I((Zi4*)(ZsG),ZQM1);}ZRM1((Zi4*)(ZsG));if(Z2T(((C)->Z0c))){
-ZcH((Zi4*)(ZsG),((T3)'\051'));}}if((((C)->ZAb))!=((void*)(Zo))){if((T6)((a2)||((T6)(a1)))){ZcH((Zi4*)(ZsG),((T3)'\054'));}ZCM((Zi4*)(ZsG));
-}ZcH((Zi4*)(ZsG),((T3)'\051'));if((T6)((!(a2))&&((T6)(a3)))){ZcH((Zi4*)(ZsG),((T3)'\051'));}}void ZxY1(ZU7*C){if((T6)((Z1k1((T82*)(ZbK(((C)->Z0c)))))&&((T6)((((C)->ZEb))!=((void*)(Zo)))))){
-ZiI((ZN*)(((C)->ZEb)));}if((((C)->ZDe))!=((void*)(Zo))){ZTM1((Z11*)(((C)->ZDe)));}}void ZaY1(ZU7*C,T0*a1,T0*a2,T0*a3){ZXw(((T7*)a1),ZUM1);
-if((((T41*)(Z1G))->ZPk)){ZhY1(C,a1);ZZs(((T7*)a1),((T3)'\054'));}ZXw(((T7*)a1),a2);ZXw(((T7*)a1),ZVM1);ZXw(((T7*)a1),a3);ZXw(((T7*)a1),ZWM1);
-}void ZyY1(ZU7*C){ZxY1(C);ZzY1((T0*)C);}T6 ZdY1(ZU7*C){T6 R=0;{int z1=((C)->Zah);switch(z1){case 20:R=((T6)(1));break;case 19:break;case
-21:(C->Zah)=Zrs(22);if((((T41*)(Z1G))->ZPk)){if(Z2H(((C)->Z0c))){(C->Zah)=Zrs(20);}else{((((ZU7*)(C)))->Zah)=(Zrs(20));}}else{((((ZU7*)(C)))->Zah)=(Zrs(20));
-}R=((T6)((((C)->Zah))==(Zrs(20))));break;default:;(C->Zah)=Zrs(20);R=((T6)(1));}}return R;}void ZAY1(ZU7*C){T0*_t=Zo;T6 Zb71=0;T0*ZIM1=Zo;
-T0*ZPW=Zo;T2 ZYM1=0;T2 _i=0;Zb71=((T6)((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))));if(Zb71){ZtY1(C);}if(Z2H(((C)->Z0c))){Z7I((Zi4*)(ZsG),Z_M1);
-}if((((C)->Zgc))!=((void*)(Zo))){_t=ZvG(((C)->Zgc));((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZXU(_t,ZTL1);ZXw((T7*)(ZTL1),Z0N1);Z8Z(_t,ZTL1);
-ZXw((T7*)(ZTL1),Z8M);Z7I((Zi4*)(ZsG),ZTL1);}if((((C)->ZMj))!=((void*)(Zo))){_i=(((Zda*)(((C)->ZMj)))->ZRb);while(!((Z3)((_i)<(Zrs(0)))))
-{Z6b1((ZE3*)(((((Zda*)(((C)->ZMj)))->ZPb))[_i]));_i=(Z3)(((_i))-(Zrs(1)));}}if(Zb71){ZYM1=ZCw((T7*)(ZRL1),((T3)'\045'));if((Z3)((ZYM1)>(Zrs(0)))){
-ZYM1=(Z3)((ZYM1)/(Zrs(2)));if(ZdY1(C)){ZYM1=(Z3)(((ZYM1))-(Zrs(1)));}}if((Z3)((ZYM1)>(Zrs(0)))){Z7I((Zi4*)(ZsG),Z1N1);ZtI((Zi4*)(ZsG),(T11)(ZYM1));
-Z7I((Zi4*)(ZsG),Z2N1);}ZBY1(C,ZYM1);Z9Y1(C,Z4N1,ZrE1);}if((((C)->ZMj))!=((void*)(Zo))){_i=(((Zda*)(((C)->ZMj)))->ZRb);while(!((Z3)((_i)<(Zrs(0)))))
-{Z8b1((ZE3*)(((((Zda*)(((C)->ZMj)))->ZPb))[_i]));_i=(Z3)(((_i))-(Zrs(1)));}}if((((C)->Zgc))!=((void*)(Zo))){if(Z4_(((C)->Zgc))){ZPW=ZsY((Ze4*)(Z8G(((C)->Zgc))));
-if((ZPW)!=((void*)(Zo))){if((ZIM1)!=((void*)(Zo))){Zp41((Zi4*)(ZsG),ZPW,Zo,ZIM1);}else{Zp41((Zi4*)(ZsG),ZPW,Zo,Z7N1);}}}}if((T6)((Z1k1((T82*)(ZbK(((C)->Z0c)))))&&((T6)((((C)->ZEb))!=((void*)(Zo)))))){
-Z6I((ZN*)(((C)->ZEb)));}if((T6)(((((T41*)(Z1G))->ZPk))&&((T6)((((C)->ZAb))!=((void*)(Zo)))))){Z7I((Zi4*)(ZsG),ZcN1);ZS71((ZH6*)(((C)->ZAb)));
-if((((C)->ZEb))==((void*)(Zo))){Z981((ZH6*)(((C)->ZAb)));}else{Z7I((Zi4*)(ZsG),ZdN1);Z981((ZH6*)(((C)->ZAb)));ZeI((ZN*)(((C)->ZEb)));
-Zq81((ZH6*)(((C)->ZAb)));Z7I((Zi4*)(ZsG),ZeN1);}Z7I((Zi4*)(ZsG),ZfN1);}}void ZsY1(ZU7*C,T0*a1){(C->ZNj)=Zrs(19);}void ZCY1(ZU7*C){ZAY1(C);
-ZDY1((Zi4*)(ZsG),ZvF(24,"Deferred routine called."));ZEY1(C);}void ZFY1(ZU7*C){T2 ZXO=0;T6 Zb71=0;Zb71=((T6)((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))));
-ZXO=ZcY1(C);((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZXw((T7*)(ZTL1),ZiN1);ZXw((T7*)(ZTL1),ZDF(((C)->Z0c)));ZXw((T7*)(ZTL1),ZjN1);ZXw((T7*)(ZTL1),Z9N);
-ZZs((T7*)(ZTL1),((T3)'\040'));ZXw((T7*)(ZTL1),ZkN1);ZQs(ZXO,ZTL1);{ZB8*C1=(ZB8*)(((C)->Zkc));T0*b1=ZTL1;ZXw(((T7*)b1),((C1)->Z3n));}ZXw((T7*)(ZTL1),ZlN1);
-ZyI((Zi4*)(ZsG),ZTL1);ZES((Zi4*)(ZsG));}void ZGY1(ZU7*C){ZbY1(C);ZCY1(C);Z7I((Zi4*)(ZsG),ZdI);}void ZHY1(ZU7*C,T0*a1){{T76 Z3w;ZzF((*(Z3w=Zac1(((ZA1*)a1)),&Z3w)));
-}{T76 Z3w;ZzF((*(Z3w=ZmY1(C),&Z3w)));}ZvY1(ZvF(44,"Cannot access address of a deferred routine."));}void ZIY1(ZU7*C){T6 ZvN1=0;if((T6)(((((T41*)(Z1G))->ZPk))&&((T6)(Z2H(((C)->Z0c)))))){
-(C->ZOj)=((T6)(1));if((((C)->ZAb))!=((void*)(Zo))){ZvN1=((T6)(Zp81((ZH6*)(((C)->ZAb)))));}ZbY1(C);ZJY1(C,(T6)(ZvN1));if((((C)->Zgc))==((void*)(Zo))){
-Z7I((Zi4*)(ZsG),ZdI);}else{Z7I((Zi4*)(ZsG),ZtN1);}ZFY1(C);ZpY1(C,(T6)(ZvN1));Z7I((Zi4*)(ZsG),ZdI);(C->ZOj)=((T6)(0));}else{ZGY1(C);}}
-void ZKY1(ZU7*C){{ZD*n=((ZD*)Zh(sizeof(*n)));*n=ZWb;(C->ZKj)=((T0*)n);}}void ZLY1(ZU7*C){T0*Zof=Zo;T2 _i=0;T0*ZzR1=Zo;T0*ZAR1=Zo;if((((T41*)(Z1G))->ZPk)){
-if((((C)->ZEb))!=((void*)(Zo))){ZoI((ZN*)(((C)->ZEb)),((C)->ZAb));}}Zof=(((Ze4*)(((C)->Znf)))->Zof);_i=(Z3)(((((((ZC3*)(((((Zc3*)Zof))->Z9e))))->ZRb)))+(Zrs(1)));
-while(!((_i)==(Zrs(0)))){ZzR1=(((((ZC3*)(((((Zc3*)Zof))->Z9e))))->ZPb))[(_i)-(Zrs(1))];if((ZzR1)!=((void*)(((C)->Znf)))){ZAR1=ZCH(((Ze4*)ZzR1),(T0*)C);
-ZBR1((T0*)C,ZAR1);}_i=(Z3)(((_i))-(Zrs(1)));}}void ZMY1(ZU7*C,T76 a1){(C->Zvh)=((T6)(1));}void ZBY1(ZU7*C,T2 a1){T2 _i=0;T2 _j=0;T3 _c=0;
-Z7I((Zi4*)(ZsG),ZyN1);ZlY1(C);((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZZs((T7*)(ZTL1),((T3)'\054'));if(ZdY1(C)){ZZs((T7*)(ZTL1),((T3)'1'));
-}else{ZZs((T7*)(ZTL1),((T3)'0'));}ZZs((T7*)(ZTL1),((T3)'\054'));ZQs(a1,ZTL1);ZXw((T7*)(ZTL1),ZzN1);ZXw((T7*)(ZTL1),ZRL1);ZXw((T7*)(ZTL1),ZAN1);
-if(ZdY1(C)){if(Z5T(((C)->Z0c))){if(Z4_(((C)->Z0c))){ZXw((T7*)(ZTL1),ZBN1);}else{ZXw((T7*)(ZTL1),ZCN1);}}else{ZXw((T7*)(ZTL1),ZDN1);}ZZs((T7*)(ZTL1),((T3)'C'));
-}else{ZXw((T7*)(ZTL1),ZxO);}ZZs((T7*)(ZTL1),((T3)'\073'));ZZs((T7*)(ZTL1),((T3)'\n'));Z7I((Zi4*)(ZsG),ZTL1);{T76 Z3w;Z6B1((Zi4*)(ZsG),(*(Z3w=ZmY1(C),&Z3w)));
-}Z7I((Zi4*)(ZsG),ZEN1);if((Z3)((a1)<=(Zrs(0)))){Z7I((Zi4*)(ZsG),ZFN1);}else{Z7I((Zi4*)(ZsG),ZGN1);}Z7I((Zi4*)(ZsG),ZHN1);_j=Zrs(1);while(!((_i)==(a1)))
-{Z7I((Zi4*)(ZsG),ZIN1);ZtI((Zi4*)(ZsG),(T11)(_i));Z7I((Zi4*)(ZsG),ZJN1);_c=((((T7*)(Z6M1))->ZPb))[(_j)-(Zrs(1))];while(!((_c)==(((T3)'\054'))))
-{ZcH((Zi4*)(ZsG),_c);_j=(Z3)(((_j))+(Zrs(1)));_c=((((T7*)(Z6M1))->ZPb))[(_j)-(Zrs(1))];}_j=(Z3)(((_j))+(Zrs(1)));Z7I((Zi4*)(ZsG),Z8M);
-_i=(Z3)(((_i))+(Zrs(1)));}}void ZuY1(ZU7*C){T0*Zqb=Zo;Zqb=ZbK(((C)->Z0c));(C->Zgc)=ZNY1(((C)->ZPj));(C->ZAb)=(((ZM3*)(((C)->ZPj)))->ZAb);
-if((((C)->Zgc))!=((void*)(Zo))){if(ZNU1(((C)->Zgc))){if(!(ZO71((ZH6*)(((C)->ZAb)),((C)->Z0c)))){{ZH6*n=((ZH6*)Zh(sizeof(*n)));*n=Z8j;
-ZQ71(n,((C)->ZAb),((C)->Z0c));(C->ZAb)=((T0*)n);}}(C->Zgc)=Z9L(((C)->Zgc),((C)->Z0c));}else{(C->Zgc)=Z9L(((C)->Zgc),((C)->Z0c));if((((C)->ZAb))!=((void*)(Zo))){
-if(!(ZO71((ZH6*)(((C)->ZAb)),((C)->Z0c)))){{ZH6*n=((ZH6*)Zh(sizeof(*n)));*n=Z8j;ZQ71(n,((C)->ZAb),((C)->Z0c));(C->ZAb)=((T0*)n);}}}}}
-else if((((C)->ZAb))!=((void*)(Zo))){if(!(ZO71((ZH6*)(((C)->ZAb)),((C)->Z0c)))){{ZH6*n=((ZH6*)Zh(sizeof(*n)));*n=Z8j;ZQ71(n,((C)->ZAb),((C)->Z0c));
-(C->ZAb)=((T0*)n);}}}if((((T41*)(Z1G))->ZJk)){(C->ZEb)=Zqj1(((T82*)Zqb),(T0*)C);(C->ZDe)=ZQi1(((T82*)Zqb),(T0*)C);}}T0*ZjY1(ZU7*C){T0*R=Zo;
-T0*_bc=Zo;T0*ZMN1=Zo;if((((C)->ZKj))==((void*)(Zo))){_bc=ZbK(((C)->Z0c));ZMN1=(((ZM3*)(((C)->ZPj)))->Zqb);if((_bc)==((void*)(ZMN1))){
-R=(((ZM3*)(((C)->ZPj)))->Zec);}else{R=ZAj1(((T82*)_bc),((C)->Zkc));}(C->ZKj)=R;}else{R=((C)->ZKj);}return R;}void ZOY1(ZU7*C,T0*a1){if((((C)->ZMj))==((void*)(Zo))){
-{Zda*n=((Zda*)Zh(sizeof(*n)));*n=Z8n;ZlB(n,(T2)(Zrs(4)));(C->ZMj)=((T0*)n);}}ZkB((Zda*)(((C)->ZMj)),a1);}void ZJY1(ZU7*C,T6 a1){T2 _i=0;
-T2 _c=0;T2 ZXO=0;T2 ZON1=0;T0*_t=Zo;T0*ZsM1=Zo;T0*ZtM1=Zo;ZXO=ZcY1(C);if(a1){ZsM1=((C)->Z0c);ZON1=ZXO;ZtM1=((T0*)(C));}else{ZsM1=ZKI(((C)->Z0c));
-ZON1=ZuI(ZsM1);ZtM1=Z8E(((Zj6*)((((Ze4*)(Z8G(ZsM1)))->Zug))),((C)->Zkc));}((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZXw((T7*)(ZTL1),ZPN1);
-ZNS(ZsM1,ZTL1);ZXw((T7*)(ZTL1),ZQN1);if((((C)->ZAb))!=((void*)(Zo))){Zf81((ZH6*)(((C)->ZAb)),ZTL1);}ZXw((T7*)(ZTL1),ZRN1);ZQs(ZON1,ZTL1);
-{ZB8*C1=(ZB8*)(((C)->Zkc));T0*b1=ZTL1;ZXw(((T7*)b1),((C1)->Z3n));}ZXw((T7*)(ZTL1),Z8M);ZSN1((Zi4*)(ZsG),ZTL1);Z7I((Zi4*)(ZsG),ZTN1);if((((C)->Zgc))!=((void*)(Zo))){
-_t=ZvG(((C)->Zgc));((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZXU(_t,ZTL1);ZXw((T7*)(ZTL1),ZUN1);Z8Z(_t,ZTL1);ZXw((T7*)(ZTL1),Z8M);Z7I((Zi4*)(ZsG),ZTL1);
-}if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){ZkY1(C,ZVN1);}Z7I((Zi4*)(ZsG),ZWN1);if(a1){ZCY1(C);}else{if((((C)->Zgc))!=((void*)(Zo))){
-Z7I((Zi4*)(ZsG),ZXN1);}ZYN1((Zi4*)(ZsG),ZtM1);ZvX(ZtM1);ZwX((Zi4*)(ZsG));if((((C)->Zgc))!=((void*)(Zo))){Z7I((Zi4*)(ZsG),ZGM);}}Z7I((Zi4*)(ZsG),ZZN1);
-((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZXw((T7*)(ZTL1),Z_N1);ZQs(ZON1,ZTL1);{ZB8*C1=(ZB8*)(((C)->Zkc));T0*b1=ZTL1;ZXw(((T7*)b1),((C1)->Z3n));
-}ZXw((T7*)(ZTL1),Z0O1);ZQs(ZON1,ZTL1);{ZB8*C1=(ZB8*)(((C)->Zkc));T0*b1=ZTL1;ZXw(((T7*)b1),((C1)->Z3n));}ZXw((T7*)(ZTL1),Z1O1);ZQs(ZON1,ZTL1);
-{ZB8*C1=(ZB8*)(((C)->Zkc));T0*b1=ZTL1;ZXw(((T7*)b1),((C1)->Z3n));}ZXw((T7*)(ZTL1),Z2O1);Z7I((Zi4*)(ZsG),ZTL1);if(ZdY1(C)){((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));
-if(a1){ZXw((T7*)(ZTL1),Z3O1);}else{ZXw((T7*)(ZTL1),Z4O1);}Z7I((Zi4*)(ZsG),ZTL1);}if((((C)->ZAb))!=((void*)(Zo))){_i=Zrs(1);_c=Zty(((Zn2*)((((ZH6*)(((C)->ZAb)))->Zhe))));
-while(!((Z3)((_i)>(_c)))){((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));ZXw((T7*)(ZTL1),Z5O1);ZXw((T7*)(ZTL1),(((Zi1*)(Zuy(((Zn2*)((((ZH6*)(((C)->ZAb)))->Zhe))),_i)))->Zre));
-if(Z5T(ZI71((ZH6*)(((C)->ZAb)),_i))){ZXw((T7*)(ZTL1),Z6O1);ZQs(_i,ZTL1);}else{ZXw((T7*)(ZTL1),Z7O1);ZQs(_i,ZTL1);}ZXw((T7*)(ZTL1),ZGM);
-Z7I((Zi4*)(ZsG),ZTL1);_i=(Z3)(((_i))+(Zrs(1)));}}((((T7*)((T7*)(ZTL1))))->Zcc)=(Zrs(0));if((((C)->Zgc))!=((void*)(Zo))){ZXw((T7*)(ZTL1),Z8O1);
-}else{ZXw((T7*)(ZTL1),Z9O1);}ZXw((T7*)(ZTL1),ZaO1);ZQs(ZXO,ZTL1);{ZB8*C1=(ZB8*)(((C)->Zkc));T0*b1=ZTL1;ZXw(((T7*)b1),((C1)->Z3n));}ZXw((T7*)(ZTL1),ZbO1);
-ZQs(ZON1,ZTL1);{ZB8*C1=(ZB8*)(((C)->Zkc));T0*b1=ZTL1;ZXw(((T7*)b1),((C1)->Z3n));}ZZs((T7*)(ZTL1),((T3)'\051'));if((((C)->Zgc))!=((void*)(Zo))){
-ZXw((T7*)(ZTL1),ZcO1);}ZXw((T7*)(ZTL1),ZGM);Z7I((Zi4*)(ZsG),ZTL1);Z7I((Zi4*)(ZsG),ZdI);if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){Z9Y1(C,ZdO1,ZvE1);
-}}void ZPY1(ZU7*C){T0*_rt=Zo;_rt=((C)->Zgc);if((T6)(((_rt)!=((void*)(Zo)))&&((T6)(Z4_(_rt))))){if(ZjW(_rt)){}else{{T0*b1=((C)->Zgc);ZZy((Z54*)(ZfO1),b1);
-}}}}T76 ZmY1(ZU7*C){T76 R={Zo,Zo,0};{T76 Z3w;R=(*(Z3w=ZQY1(((C)->ZPj)),&Z3w));}return R;}void ZEY1(ZU7*C){T76 ZhO1={Zo,Zo,0};if((((C)->ZDe))!=((void*)(Zo))){
-ZiO1((Z11*)(((C)->ZDe)));}if(ZdY1(C)){if(((((ZB8*)(((C)->Zkc)))->Zre))!=((void*)(ZSQ))){ZjO1((Zi4*)(ZsG),((C)->Z0c));}}if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){
-ZhO1=(((ZM3*)(((C)->ZPj)))->ZCe);if(!(ZMF(&ZhO1))){Z741((Zi4*)(ZsG),ZhO1);}Z9Y1(C,ZdO1,ZvE1);}if((T6)(((((T41*)(Z1G))->ZPk))&&((T6)((((C)->ZAb))!=((void*)(Zo)))))){
-Z7I((Zi4*)(ZsG),ZlO1);Zq81((ZH6*)(((C)->ZAb)));Z7I((Zi4*)(ZsG),ZmO1);}}void ZfY1(ZU7*C){T6 Zb71=0;T6 _uc=0;T6 ZyM=0;Zb71=((T6)((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))));
-_uc=((T6)(ZdY1(C)));if(!(_uc)){ZyM=((T6)(ZzM((Zi4*)(ZsG))));if(ZyM){ZcH((Zi4*)(ZsG),((T3)'\054'));}}ZoY1(C,(T6)(1));ZwY1(C,(T6)(Zb71),(T6)(_uc),(T6)(ZyM));
-}void ZRY1(ZW7*C,T0*a1,T6 a2,T6 a3,T2 a4){T6 ZyM=0;T6 ZSY1=0;T76 _p={Zo,Zo,0};T0*ZTY1=Zo;T0*Zj81=Zo;T3 _cc=0;T2 _i=0;T2 ZUY1=0;{T76 Z3w;
-_p=(*(Z3w=ZVY1(C),&Z3w));}{Zi4*C1=(Zi4*)(ZsG);T76 b1=_p;ZdJ1(((C1)->ZLf),b1);}if((T6)(((((C)->Znk))!=((void*)(Zo)))&&((T6)(((((T52*)(((C)->Znk)))->ZRb))!=(a4))))){
-ZWY1(C,ZvF(46,"Bad number of arguments of external signature."));}if(a2){if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){Z741((Zi4*)(ZsG),_p);
-}if(a3){Z7I((Zi4*)(ZsG),ZXN1);}}else{ZyM=((T6)(ZzM((Zi4*)(ZsG))));if(ZyM){ZcH((Zi4*)(ZsG),((T3)'\054'));}}if((((C)->Zkk))!=((void*)(Zo))){
-if((((C)->Zmk))==(Zrs(29))){if((T6)((a3)||((T6)((a4)!=(Zrs(2)))))){{T76 Z3w;ZzF((*(Z3w=ZXY1(a1),&Z3w)));}ZWY1(C,ZvF(42,"Bad prototype for C struture set external."));
-}}else if((((C)->Zmk))==(Zrs(30))){if((T6)((!(a3))||((T6)((a4)!=(Zrs(1)))))){{T76 Z3w;ZzF((*(Z3w=ZXY1(a1),&Z3w)));}ZWY1(C,ZvF(42,"Bad prototype for C struture get external."));
-}}Z7I((Zi4*)(ZsG),ZPS1);Z7I((Zi4*)(ZsG),((C)->Zkk));Z7I((Zi4*)(ZsG),ZYY1);if(a2){Z7I((Zi4*)(ZsG),ZrQ);}else{Ze81((Zi4*)(ZsG),(T2)(Zrs(1)));
-}Z7I((Zi4*)(ZsG),Z_R1);Z7I((Zi4*)(ZsG),((C)->Zlk));ZcH((Zi4*)(ZsG),((T3)'\051'));if(!(a3)){Z7I((Zi4*)(ZsG),ZZY1);if((((C)->ZBb))!=((void*)(Zo))){
-ZcH((Zi4*)(ZsG),((T3)'\050'));Z7I((Zi4*)(ZsG),((C)->ZBb));ZcH((Zi4*)(ZsG),((T3)'\051'));}if(a2){Z7I((Zi4*)(ZsG),Z_Y1);}else{Ze81((Zi4*)(ZsG),(T2)(Zrs(2)));
-}ZcH((Zi4*)(ZsG),((T3)'\051'));}}else if(((C)->Zok)){ZTY1=ZAM(((Z85*)a1));_i=Zrs(1);while(!((Z3)((_i)>(((((T7*)ZTY1))->Zcc))))){_cc=(((((T7*)ZTY1))->ZPb))[(_i)-(Zrs(1))];
-if((_cc)!=(((T3)'\044'))){ZcH((Zi4*)(ZsG),_cc);}else{_i=(Z3)(((_i))+(Zrs(1)));Zj81=Z0Z1;((((T7*)(((T7*)Zj81))))->Zcc)=(Zrs(0));ZSY1=((T6)((Z3)((_i)>(((((T7*)ZTY1))->Zcc)))));
-while(!(ZSY1)){_cc=(((((T7*)ZTY1))->ZPb))[(_i)-(Zrs(1))];{int z1=_cc;switch(z1){case 48:case 49:case 50:case 51:case 52:case 53:case 54:
-case 55:case 56:case 57:case 65:case 66:case 67:case 68:case 69:case 70:case 71:case 72:case 73:case 74:case 75:case 76:case 77:case 78:
-case 79:case 80:case 81:case 82:case 83:case 84:case 85:case 86:case 87:case 88:case 89:case 90:case 95:case 97:case 98:case 99:case 100:
-case 101:case 102:case 103:case 104:case 105:case 106:case 107:case 108:case 109:case 110:case 111:case 112:case 113:case 114:case 115:
-case 116:case 117:case 118:case 119:case 120:case 121:case 122:ZZs(((T7*)Zj81),_cc);_i=(Z3)(((_i))+(Zrs(1)));break;default:;ZSY1=((T6)(1));
-_i=(Z3)(((_i))-(Zrs(1)));}}}Zj81=(((void)((T26*)(Z1Z1()))),ZAS(Zj81));ZUY1=Z2Z1(((Z85*)a1),Zj81);if((Z3)((ZUY1)>(Zrs(0)))){if(a2){ZcH((Zi4*)(ZsG),((T3)'a'));
-ZtI((Zi4*)(ZsG),(T11)(ZUY1));}else{Ze81((Zi4*)(ZsG),ZUY1);}}else{{T76 Z3w;ZzF((*(Z3w=ZXY1(a1),&Z3w)));}{T76 Z3w;ZzF((*(Z3w=ZVY1(C),&Z3w)));
-}{T0*b1=ZvF(10,"Unknown \"$");ZXw((T7*)(ZwF),b1);}{T0*b1=Zj81;ZXw((T7*)(ZwF),b1);}{T0*b1=ZvF(43,"\" argument in external C inline definition.");
-ZXw((T7*)(ZwF),b1);}ZEF((T75*)(ZyF));}}_i=(Z3)(((_i))+(Zrs(1)));}}else{Z7I((Zi4*)(ZsG),ZAM(((Z85*)a1)));if((Z3)((a4)>(Zrs(0)))){ZcH((Zi4*)(ZsG),((T3)'\050'));
-_i=Zrs(1);while(!((Z3)((_i)>(a4)))){if((((C)->Znk))!=((void*)(Zo))){ZcH((Zi4*)(ZsG),((T3)'\050'));ZcH((Zi4*)(ZsG),((T3)'\050'));Z7I((Zi4*)(ZsG),((((T52*)(((C)->Znk)))->ZPb))[_i]);
-ZcH((Zi4*)(ZsG),((T3)'\051'));}if(a2){ZcH((Zi4*)(ZsG),((T3)'a'));ZtI((Zi4*)(ZsG),(T11)(_i));}else{Ze81((Zi4*)(ZsG),_i);}if((((C)->Znk))!=((void*)(Zo))){
-ZcH((Zi4*)(ZsG),((T3)'\051'));}_i=(Z3)(((_i))+(Zrs(1)));if((Z3)((_i)<=(a4))){ZcH((Zi4*)(ZsG),((T3)'\054'));}}ZcH((Zi4*)(ZsG),((T3)'\051'));
-}else if(!(((C)->Zjk))){Z7I((Zi4*)(ZsG),ZuF1);}}if(a2){if(a3){ZcH((Zi4*)(ZsG),((T3)'\051'));}ZcH((Zi4*)(ZsG),((T3)'\073'));}else{if(ZyM){
-ZcH((Zi4*)(ZsG),((T3)'\051'));}if(!(a3)){ZcH((Zi4*)(ZsG),((T3)'\073'));}}ZcH((Zi4*)(ZsG),((T3)'\n'));{Zi4*C1=(Zi4*)(ZsG);T76 b1=_p;ZdJ1(((C1)->ZLf),b1);
-}}void Z3Z1(ZW7*C,T0*a1){(C->ZBc)=a1;}void ZWY1(ZW7*C,T0*a1){{T76 Z3w;ZzF((*(Z3w=ZVY1(C),&Z3w)));}{T0*b1=a1;ZXw((T7*)(ZwF),b1);}ZEF((T75*)(ZyF));
-}void Z4Z1(ZW7*C,T0*a1,T0*a2,T0*a3){Z5Z1(C);if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){if(((C)->Zhk)){{T76 Z3w;{ZS7*C1=((ZS7*)a1);T76
-b1=(*(Z3w=ZVY1(C),&Z3w));ZpM(C1,b1,((C1)->ZPj));}}}Z6Y1(((ZS7*)a1));ZRY1(C,((((ZS7*)a1))->ZPj),(T6)(1),(T6)(1),ZrM(((ZS7*)a1)));ZxX1(((ZS7*)a1));
-}}void Z6Z1(ZW7*C,T0*a1,T0*a2,T0*a3){Z5Z1(C);if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){Z9M(((ZQ7*)a1));}else{if(((C)->Zhk)){{T76 Z3w;
-{ZQ7*C1=((ZQ7*)a1);T76 b1=(*(Z3w=ZVY1(C),&Z3w));ZuM(C1,b1,((C1)->ZPj));}}}ZRY1(C,((((ZQ7*)a1))->ZPj),(T6)(0),(T6)(0),Z7M(((ZQ7*)a1)));
-}}void Z7Z1(ZW7*C,T0*a1,T0*a2,T0*a3){Z5Z1(C);if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){if(((C)->Zhk)){{T76 Z3w;{ZQ7*C1=((ZQ7*)a1);T76
-b1=(*(Z3w=ZVY1(C),&Z3w));ZuM(C1,b1,((C1)->ZPj));}}}ZjX1(((ZQ7*)a1));ZRY1(C,((((ZQ7*)a1))->ZPj),(T6)(1),(T6)(0),Z7M(((ZQ7*)a1)));ZCW1(((ZQ7*)a1));
-}}void Z8Z1(ZW7*C,T0*a1){T0*Z9Z1=Zo;T0*ZaZ1=Zo;T6 ZbZ1=0;Z3Z1(C,a1);Z9Z1=((((T88*)a1))->Zre);if(ZNu(((T7*)ZcZ1),Z9Z1)){ZbZ1=((T6)(1));
-ZaZ1=ZvF(1,Znn);}else if(ZNu(((T7*)ZdZ1),Z9Z1)){ZbZ1=((T6)(1));}else if(ZNu(((T7*)ZeZ1),Z9Z1)){ZbZ1=((T6)(1));ZaZ1=ZvF(7,"C macro");}
-else if(ZNu(((T7*)ZfZ1),Z9Z1)){ZbZ1=((T6)(1));}if(ZbZ1){{T76 Z3w;ZzF((*(Z3w=ZVY1(C),&Z3w)));}{T0*b1=ZvF(189,"Since release -0.74 this external C definition is obsolete. You should update your code with the new ETL external specification (see SmartEiffel/tutorial/external/C directory for examples).");
-ZXw((T7*)(ZwF),b1);}if((ZaZ1)!=((void*)(Zo))){ZBw((T7*)(((((T88*)a1))->Zre)),ZaZ1);{T0*b1=ZvF(33,"Obsolete notation replaced with \"");
-ZXw((T7*)(ZwF),b1);}{T0*b1=ZaZ1;ZXw((T7*)(ZwF),b1);}{T0*b1=ZvF(44,"\". Update your code before the next release.");ZXw((T7*)(ZwF),b1);
-}ZoK((T75*)(ZyF));}else{ZxF((T75*)(ZyF));}}}T6 ZgZ1(T0*a1){T6 R=0;return R;}T0*Z1Z1(void){if(ZbP==0){ZbP=1;{{T26*n=((T26*)Zh(1));ZaP=((T0*)n);
-ZdP(ZeP);ZdP(ZfP);ZdP(ZgP);ZdP(ZhP);ZdP(ZiP);ZdP(ZjP);ZdP(ZkP);ZdP(ZlP);ZdP(ZmP);ZdP(ZnP);ZdP(ZoP);ZdP(ZpP);ZdP(ZqP);ZdP(ZrP);ZdP(ZpK);
-ZdP(ZsP);ZdP(ZtP);ZdP(ZuP);ZdP(ZvP);ZdP(ZwP);ZdP(ZxP);ZdP(ZyP);ZdP(ZzP);ZdP(ZAP);ZdP(ZBP);ZdP(ZCP);ZdP(ZDP);ZdP(ZEP);ZdP(ZFP);ZdP(ZGP);
-ZdP(ZHP);ZdP(ZIP);ZdP(ZJP);ZdP(ZKP);ZdP(ZLP);ZdP(ZMP);ZdP(ZNP);ZdP(ZOP);ZdP(ZPP);ZdP(ZQP);ZdP(ZRP);ZdP(ZSP);ZdP(ZTP);ZdP(ZUP);ZdP(ZVP);
-ZdP(ZWP);ZdP(ZXP);ZdP(ZYP);ZdP(ZZP);ZdP(Z_P);ZdP(Z0Q);ZdP(Z1Q);ZdP(Z2Q);ZdP(Z3Q);ZdP(Z4Q);ZdP(Z5Q);ZdP(Z6Q);ZdP(Z7Q);ZdP(Z8Q);ZdP(Z9Q);
-ZdP(ZaQ);ZdP(ZbQ);ZdP(ZcQ);ZdP(ZdJ);ZdP(ZdQ);ZdP(ZeQ);ZdP(ZfQ);ZdP(ZgQ);ZdP(ZhQ);ZdP(ZiQ);ZdP(ZjQ);ZdP(ZkQ);ZdP(ZlQ);ZdP(ZmQ);ZdP(ZnQ);
-ZdP(ZoQ);ZdP(ZpQ);ZdP(ZqQ);ZdP(ZDG);ZdP(ZrQ);ZdP(ZsQ);ZdP(ZtQ);ZdP(ZuQ);ZdP(ZvQ);ZdP(ZwQ);ZdP(ZxQ);ZdP(ZyQ);ZdP(ZzQ);ZdP(ZAQ);ZdP(ZBQ);
-ZdP(ZCQ);ZdP(ZDQ);ZdP(ZEQ);ZdP(ZFQ);ZdP(ZGQ);ZdP(ZHQ);ZdP(ZIQ);ZdP(ZJQ);ZdP(ZKQ);ZdP(ZLQ);ZdP(ZMQ);ZdP(ZNQ);ZdP(ZOQ);ZdP(ZPQ);ZdP(ZQQ);
-ZdP(ZRQ);ZdP(ZSQ);ZdP(ZTQ);ZdP(ZUQ);ZdP(ZVQ);ZdP(ZWQ);ZdP(ZXQ);ZdP(ZYQ);ZdP(ZZQ);ZdP(Z_Q);ZdP(Z0R);ZdP(Z1R);ZdP(Z2R);ZdP(Z3R);ZdP(Z4R);
-ZdP(Z5R);ZdP(Z6R);ZdP(Z7R);ZdP(Z8R);ZdP(Z9R);ZdP(ZaR);ZdP(ZbR);ZdP(ZcR);ZdP(ZdR);ZdP(ZeR);ZdP(ZfR);ZdP(ZgR);ZdP(ZhR);ZdP(ZiR);ZdP(ZjR);
-ZdP(ZkR);ZdP(ZlR);ZdP(ZmR);ZdP(ZnR);ZdP(ZoR);ZdP(ZpR);ZdP(ZqR);ZdP(ZrR);ZdP(ZsR);ZdP(ZtR);ZdP(ZuR);ZdP(ZvR);ZdP(ZwR);ZdP(ZxR);ZdP(ZyR);
-ZdP(ZzR);ZdP(ZAR);ZdP(ZBR);ZdP(ZCR);ZdP(ZDR);ZdP(ZER);ZdP(ZFR);ZdP(ZGR);ZdP(ZHR);ZdP(ZIR);ZdP(ZJR);ZdP(ZKR);ZdP(ZLR);ZdP(ZMR);ZdP(ZNR);
-ZdP(ZOR);ZdP(ZPR);ZdP(ZQR);ZdP(ZRR);ZdP(ZSR);ZdP(ZTR);ZdP(ZUR);ZdP(ZVR);ZdP(ZWR);ZdP(ZXR);ZdP(ZYR);ZdP(ZZR);ZdP(Z_R);ZdP(Z0S);ZdP(Z1S);
-ZdP(Z2S);ZdP(Z3S);ZdP(Z4S);ZdP(Z5S);ZdP(Z6S);ZdP(Z7S);ZdP(Z8S);ZdP(Z9S);ZdP(ZaS);ZdP(ZbS);ZdP(ZcS);ZdP(ZdS);ZdP(ZeS);ZdP(ZfS);ZdP(ZgS);
-ZdP(ZhS);ZdP(ZiS);ZdP(ZjS);ZdP(ZkS);ZdP(ZlS);ZdP(ZmS);ZdP(ZnS);ZdP(ZoS);}}}return ZaP;}T0*ZhZ1=Zo;void ZiZ1(ZW7*C,T0*a1,T0*a2,T0*a3){
-Z5Z1(C);if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){ZIM(((ZS7*)a1));}else{if(((C)->Zhk)){{T76 Z3w;{ZS7*C1=((ZS7*)a1);T76 b1=(*(Z3w=ZVY1(C),&Z3w));
-ZpM(C1,b1,((C1)->ZPj));}}}ZRY1(C,((((ZS7*)a1))->ZPj),(T6)(0),(T6)(1),ZrM(((ZS7*)a1)));}}void Z5Z1(ZW7*C){T0*ZjZ1=Zo;if(!(((C)->Zik))){
-(C->Zik)=((T6)(1));(C->Zhk)=((T6)(1));ZkZ1((Z07*)(ZhZ1),((C)->ZBc));ZlZ1((Z07*)(ZhZ1));ZmZ1((Z07*)(ZhZ1));while(!(ZnZ1((Z07*)(ZhZ1))))
-{if(ZoZ1((Z07*)(ZhZ1),ZpZ1)){(C->Zjk)=((T6)(1));(C->Zhk)=((T6)(0));}else if(ZoZ1((Z07*)(ZhZ1),ZtO)){(C->Zhk)=((T6)(0));(C->Zkk)=ZqZ1((Z07*)(ZhZ1));
-if(ZoZ1((Z07*)(ZhZ1),ZrZ1)){(C->Zlk)=ZqZ1((Z07*)(ZhZ1));(C->Zmk)=Zrs(29);}else if(ZoZ1((Z07*)(ZhZ1),ZsZ1)){(C->Zlk)=ZqZ1((Z07*)(ZhZ1));
-(C->Zmk)=Zrs(30);}else if(ZoZ1((Z07*)(ZhZ1),ZtZ1)){(C->Zlk)=ZqZ1((Z07*)(ZhZ1));(C->Zmk)=Zrs(31);}else{ZWY1(C,ZvF(43,"\"set\", \"get\", or \"access\" keyword expected."));
-}}else if(ZoZ1((Z07*)(ZhZ1),ZuZ1)){(C->ZBb)=ZqZ1((Z07*)(ZhZ1));}else if(ZoZ1((Z07*)(ZhZ1),ZvZ1)){}else if(ZoZ1((Z07*)(ZhZ1),ZwZ1)){(C->Zok)=((T6)(1));
-(C->Zhk)=((T6)(0));}else if(ZoZ1((Z07*)(ZhZ1),ZxZ1)){(C->Znk)=ZyZ1((Z07*)(ZhZ1));}else if((ZzZ1((Z07*)(ZhZ1)))==(((T3)'\050'))){(C->Znk)=ZyZ1((Z07*)(ZhZ1));
-}else{{int z1=ZzZ1((Z07*)(ZhZ1));switch(z1){case 44:case 124:ZlZ1((Z07*)(ZhZ1));ZmZ1((Z07*)(ZhZ1));break;default:;ZjZ1=ZAZ1((Z07*)(ZhZ1));
-(C->Zhk)=((T6)(0));{T76 Z3w;ZBZ1((Zi4*)(ZsG),(*(Z3w=ZVY1(C),&Z3w)),ZjZ1);}}}}}}}T76 ZVY1(ZW7*C){T76 R={Zo,Zo,0};R=(((T88*)(((C)->ZBc)))->Zxb);
-return R;}void ZJj1(ZY7*C,T0*a1){{Zq5*n=((Zq5*)Zh(sizeof(*n)));*n=Zhh;Zpz(n,(T2)(Zrs(4)),(T2)(Zrs(1)));(C->ZUb)=((T0*)n);}Zoz((Zq5*)(((C)->ZUb)),a1);
-}void ZCZ1(Z38*C,T0*a1,T0*a2){(C->Zkc)=a1;(C->Zuk)=a2;}void ZDZ1(Z38*C,T0*a1,T2 a2){T0*ZEZ1=Zo;T0*_cn=Zo;if((((C)->Zuk))!=((void*)(Zo))){
-ZEZ1=(((T80*)(((((Z38*)a1))->Zkc)))->Zre);if(ZQS(((C)->Zuk))){ZFZ1(ZbN(((C)->Zuk)),a1,a2,ZEZ1);}else{_cn=Z3P(((C)->Zuk));if((ZEZ1)==((void*)(((((T80*)_cn))->Zre)))){
-{Zr8*n=((Zr8*)Zh(sizeof(*n)));*n=Z_k;ZGZ1(n,_cn,a1,a2);(C->Zuk)=((T0*)n);}}}}}void ZHZ1(Z38*C){if((ZJF1(((C)->Zkc)))!=((void*)(Zo))){
-ZzF((((T80*)(((C)->Zkc)))->Zxb));{T0*b1=ZvF(77,"A formal generic argument must not be the name of an existing class (VCFG.1).");ZXw((T7*)(ZwF),b1);
-}ZEF((T75*)(ZyF));}}void ZFZ1(T0*a1,T0*a2,T2 a3,T0*a4){T2 _i=0;T0*ZmB1=Zo;T0*_t=Zo;T0*_cn=Zo;_i=((((ZY*)a1))->ZRb);while(!((Z3)((_i)<(((((ZY*)a1))->ZSb)))))
-{_t=ZMx(((ZY*)a1),_i);if(ZQS(_t)){ZFZ1(ZbN(_t),a2,a3,a4);}else{_cn=Z3P(_t);if((a4)==((void*)(((((T80*)_cn))->Zre)))){{Zr8*n=((Zr8*)Zh(sizeof(*n)));
-*n=Z_k;ZGZ1(n,_cn,a2,a3);ZmB1=((T0*)n);}{ZY*C1=((ZY*)a1);T0*b1=ZmB1;T2 b2=_i;(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);}}}_i=(Z3)(((_i))-(Zrs(1)));
-}}T76 ZIZ1(Z38*C){T76 R={Zo,Zo,0};R=(((T80*)(((C)->Zkc)))->Zxb);return R;}void ZJZ1(Z58*C){T0*_et=Zo;T0*ZKZ1=Zo;if(Zho1((Ze4*)(ZLZ1(C)),Z2R)){
-ZXw((T7*)(ZcN),ZMZ1);}_et=(((((ZY*)(((C)->ZCj))))->ZPb))[Zrs(0)];if(ZBZ(_et)){ZKZ1=Z8G(_et);ZXw((T7*)(ZcN),ZNZ1);ZOZ1(C,ZcN);Zex((T7*)(ZcN),(T2)(Zrs(1)));
-ZXw((T7*)(ZcN),ZPZ1);ZOZ1(C,ZcN);ZXw((T7*)(ZcN),ZQZ1);(((void)((Zh8*)(ZRZ1()))),Zdo1(ZcN,ZSZ1,ZKZ1));ZXw((T7*)(ZcN),ZTZ1);}else{ZXw((T7*)(ZcN),ZUZ1);
-}}void ZVZ1(Z58*C,T0*a1){ZXw(((T7*)a1),ZWZ1);ZQs(ZXZ1(C),a1);}T0*ZYZ1(void){if(ZKK==0){ZKK=1;{T76 ZMK={Zo,Zo,0};{Zk3*n=((Zk3*)Zh(sizeof(*n)));
-*n=Zge;ZJK=((T0*)n);ZNK(n,ZMK);}}}return ZJK;}T0*ZZZ1(Z58*C){T0*R=Zo;if((((C)->ZNc))!=(Zo)){R=(((Z58*)(((C)->ZNc)))->ZKc);}return R;}
-void Z_Z1(Z58*C,T0*a1,T0*a2,T0*a3,T0*a4,T0*a5,T0*a6){(C->ZIc)=a1;(C->ZJc)=a2;(C->Zfe)=a3;(C->ZCj)=a4;(C->ZKc)=a5;(C->ZNc)=a6;}T6 Z0_1(void){
-T6 R=0;return R;}T6 Z1_1(Z58*C){T6 R=0;T0*ZCO=Zo;ZCO=((void*)C);R=((T6)((ZCO)!=((void*)(Zo))));return R;}void Z2_1(Z58*C,T0*a1){ZXw(((T7*)a1),ZDO);
-ZQs(ZXZ1(C),a1);}T6 Z3_1(Z58*C){T6 R=0;T0*_rt=Zo;if((((C)->ZNc))!=(Zo)){_rt=((C)->ZNc);if((C)==((void*)(_rt))){if((((((Z58*)_rt))->ZNc))==((void*)(_rt))){
-R=((T6)((((((Z58*)_rt))->ZKc))==((void*)(ZZZ1(((Z58*)_rt))))));}}}return R;}void Z4_1(Z58*C,T0*a1){ZXw(((T7*)a1),Z5_1);ZVZ1(C,a1);ZXw(((T7*)a1),Z6_1);
-ZVZ1(C,a1);ZXw(((T7*)a1),Z7_1);ZVZ1(C,a1);ZXw(((T7*)a1),Z8_1);ZVZ1(C,a1);ZXw(((T7*)a1),Z9_1);ZVZ1(C,a1);ZXw(((T7*)a1),Za_1);ZVZ1(C,a1);
-ZXw(((T7*)a1),Zb_1);ZVZ1(C,a1);ZXw(((T7*)a1),Zc_1);}void Zd_1(Z58*C){T0*_et=Zo;T0*_rf=Zo;T0*_rc=Zo;_rc=ZLZ1(C);ZeL(((Ze4*)_rc));_et=(((((ZY*)(((C)->ZCj))))->ZPb))[Zrs(0)];
-if(Z5T(_et)){ZeL((Ze4*)(Z8G(_et)));}_rf=Zw81(((Ze4*)_rc),ZeR);_rf=Zw81(((Ze4*)_rc),ZAR);if(Z4_(_et)){if((ZsY((Ze4*)(Z8G(_et))))!=((void*)(Zo))){
-_rf=Zw81(((Ze4*)_rc),ZCQ);}}}T2 ZXZ1(Z58*C){T2 R=0;R=(((Ze4*)(ZLZ1(C)))->_id);return R;}T2 Ze_1(void){T2 R=0;T8 _p=Zo;R=sizeof(T8);return
-R;}void Zf_1(Z58*C){((((T7*)((T7*)(ZJO))))->Zcc)=(Zrs(0));ZZs((T7*)(ZJO),((T3)'\050'));{Z58*C1=C;T0*b1=ZJO;Zg_1(C1,b1);}ZZs((T7*)(ZJO),((T3)'\051'));
-Z7I((Zi4*)(ZsG),ZJO);}void Zg_1(Z58*C,T0*a1){ZZs(((T7*)a1),((T3)'T'));ZQs(ZXZ1(C),a1);}T6 Zh_1(Z58*C,T0*a1){T6 R=0;R=((T6)(Z_O(((((ZY*)(((C)->ZCj)))->ZPb))[Zrs(0)],a1)));
-return R;}void Zi_1(Z58*C,T76 a1,T0*a2){{T80*n=((T80*)Zh(sizeof(*n)));*n=M80;Zb61(n,ZAP,a1);(C->Zfe)=((T0*)n);}{ZY*n=((ZY*)Zh(sizeof(*n)));
-*n=Zjc;ZNx(n,(T2)(Zrs(1)),(T2)(Zrs(1)));(C->ZCj)=((T0*)n);}{ZY*C1=(ZY*)(((C)->ZCj));T0*b1=a2;T2 b2=(T2)(Zrs(1));(((C1)->ZPb))[(Z3)(((b2))-(((C1)->ZSb)))]=(b1);
-}ZBw((T7*)(ZYO),ZAP);ZZs((T7*)(ZYO),((T3)'\133'));ZXw((T7*)(ZYO),ZFO(a2));ZZs((T7*)(ZYO),((T3)'\135'));(C->ZKc)=(((void)((T26*)(Zj_1()))),ZAS(ZYO));
-if(Z7V(a2)){(C->ZDj)=((T6)((ZvG(a2))==((void*)(a2))));}if(((C)->ZDj)){(C->ZNc)=((T0*)(C));}}void Zk_1(T0*a1){{T0*b1=a1;ZXw((T7*)(ZwF),b1);
-}ZEF((T75*)(ZyF));}T0*ZRZ1(void){if(ZDI==0){ZDI=1;{{Zh8*n=((Zh8*)Zh(sizeof(*n)));*n=ZGk;ZCI=((T0*)n);}}}return ZCI;}void Zl_1(Z58*C,T0*a1){
-ZXw(((T7*)a1),Zm_1);Zn_1(C,a1);ZXw(((T7*)a1),Zo_1);ZXw(((T7*)a1),ZZZ1(C));ZXw(((T7*)a1),Zp_1);Zn_1(C,a1);ZXw(((T7*)a1),Zq_1);}T0*Zj_1(void){
-if(ZbP==0){ZbP=1;{{T26*n=((T26*)Zh(1));ZaP=((T0*)n);ZdP(ZeP);ZdP(ZfP);ZdP(ZgP);ZdP(ZhP);ZdP(ZiP);ZdP(ZjP);ZdP(ZkP);ZdP(ZlP);ZdP(ZmP);
-ZdP(ZnP);ZdP(ZoP);ZdP(ZpP);ZdP(ZqP);ZdP(ZrP);ZdP(ZpK);ZdP(ZsP);ZdP(ZtP);ZdP(ZuP);ZdP(ZvP);ZdP(ZwP);ZdP(ZxP);ZdP(ZyP);ZdP(ZzP);ZdP(ZAP);
-ZdP(ZBP);ZdP(ZCP);ZdP(ZDP);ZdP(ZEP);ZdP(ZFP);ZdP(ZGP);ZdP(ZHP);ZdP(ZIP);ZdP(ZJP);ZdP(ZKP);ZdP(ZLP);ZdP(ZMP);ZdP(ZNP);ZdP(ZOP);ZdP(ZPP);
-ZdP(ZQP);ZdP(ZRP);ZdP(ZSP);ZdP(ZTP);ZdP(ZUP);ZdP(ZVP);ZdP(ZWP);ZdP(ZXP);ZdP(ZYP);ZdP(ZZP);ZdP(Z_P);ZdP(Z0Q);ZdP(Z1Q);ZdP(Z2Q);ZdP(Z3Q);
-ZdP(Z4Q);ZdP(Z5Q);ZdP(Z6Q);ZdP(Z7Q);ZdP(Z8Q);ZdP(Z9Q);ZdP(ZaQ);ZdP(ZbQ);ZdP(ZcQ);ZdP(ZdJ);ZdP(ZdQ);ZdP(ZeQ);ZdP(ZfQ);ZdP(ZgQ);ZdP(ZhQ);
-ZdP(ZiQ);ZdP(ZjQ);ZdP(ZkQ);ZdP(ZlQ);ZdP(ZmQ);ZdP(ZnQ);ZdP(ZoQ);ZdP(ZpQ);ZdP(ZqQ);ZdP(ZDG);ZdP(ZrQ);ZdP(ZsQ);ZdP(ZtQ);ZdP(ZuQ);ZdP(ZvQ);
-ZdP(ZwQ);ZdP(ZxQ);ZdP(ZyQ);ZdP(ZzQ);ZdP(ZAQ);ZdP(ZBQ);ZdP(ZCQ);ZdP(ZDQ);ZdP(ZEQ);ZdP(ZFQ);ZdP(ZGQ);ZdP(ZHQ);ZdP(ZIQ);ZdP(ZJQ);ZdP(ZKQ);
-ZdP(ZLQ);ZdP(ZMQ);ZdP(ZNQ);ZdP(ZOQ);ZdP(ZPQ);ZdP(ZQQ);ZdP(ZRQ);ZdP(ZSQ);ZdP(ZTQ);ZdP(ZUQ);ZdP(ZVQ);ZdP(ZWQ);ZdP(ZXQ);ZdP(ZYQ);ZdP(ZZQ);
-ZdP(Z_Q);ZdP(Z0R);ZdP(Z1R);ZdP(Z2R);ZdP(Z3R);ZdP(Z4R);ZdP(Z5R);ZdP(Z6R);ZdP(Z7R);ZdP(Z8R);ZdP(Z9R);ZdP(ZaR);ZdP(ZbR);ZdP(ZcR);ZdP(ZdR);
-ZdP(ZeR);ZdP(ZfR);ZdP(ZgR);ZdP(ZhR);ZdP(ZiR);ZdP(ZjR);ZdP(ZkR);ZdP(ZlR);ZdP(ZmR);ZdP(ZnR);ZdP(ZoR);ZdP(ZpR);ZdP(ZqR);ZdP(ZrR);ZdP(ZsR);
-ZdP(ZtR);ZdP(ZuR);ZdP(ZvR);ZdP(ZwR);ZdP(ZxR);ZdP(ZyR);ZdP(ZzR);ZdP(ZAR);ZdP(ZBR);ZdP(ZCR);ZdP(ZDR);ZdP(ZER);ZdP(ZFR);ZdP(ZGR);ZdP(ZHR);
-ZdP(ZIR);ZdP(ZJR);ZdP(ZKR);ZdP(ZLR);ZdP(ZMR);ZdP(ZNR);ZdP(ZOR);ZdP(ZPR);ZdP(ZQR);ZdP(ZRR);ZdP(ZSR);ZdP(ZTR);ZdP(ZUR);ZdP(ZVR);ZdP(ZWR);
-ZdP(ZXR);ZdP(ZYR);ZdP(ZZR);ZdP(Z_R);ZdP(Z0S);ZdP(Z1S);ZdP(Z2S);ZdP(Z3S);ZdP(Z4S);ZdP(Z5S);ZdP(Z6S);ZdP(Z7S);ZdP(Z8S);ZdP(Z9S);ZdP(ZaS);
-ZdP(ZbS);ZdP(ZcS);ZdP(ZdS);ZdP(ZeS);ZdP(ZfS);ZdP(ZgS);ZdP(ZhS);ZdP(ZiS);ZdP(ZjS);ZdP(ZkS);ZdP(ZlS);ZdP(ZmS);ZdP(ZnS);ZdP(ZoS);}}}return
-ZaP;}T0*Zr_1(Z58*C){T0*R=Zo;T0*ZqS=Zo;if((((C)->ZIc))!=((void*)(Zo))){R=((C)->ZIc);}else{ZqS=((C)->Zfe);if((ZqS)!=((void*)(Zo))){(C->ZIc)=ZrS(((T80*)ZqS));
-R=((C)->ZIc);}else{{T0*b1=ZvF(27,"Cannot find Base Class for ");ZXw((T7*)(ZwF),b1);}ZsS((T0*)C,ZMJ);ZEF((T75*)(ZyF));}}return R;}void
-Zs_1(Z58*C,T0*a1){ZZs(((T7*)a1),((T3)'\045'));ZZs(((T7*)a1),((T3)'E'));ZQs(ZXZ1(C),a1);ZZs(((T7*)a1),((T3)'\045'));}void Zt_1(Z58*C){
-if((Z3)(((((T84*)(ZFI))->Zcf))>=(Zrs(2)))){ZwS((Ze4*)(ZLZ1(C)));}}T6 Zu_1(void){T6 R=0;return R;}T6 Zv_1(Z58*C){T6 R=0;T0*ZyS=Zo;ZyS=Zo;
-R=((T6)((ZyS)!=((void*)(Zo))));return R;}void Zw_1(Z58*C){T0*_rc=Zo;T2 ZnN=0;_rc=ZLZ1(C);ZnN=((((Ze4*)_rc))->_id);ZBw((T7*)(ZqN),Zx_1);
-ZVZ1(C,ZqN);ZBw((T7*)(ZcN),Zy_1);Z2_1(C,ZcN);ZZs((T7*)(ZcN),((T3)'\175'));ZYN((Zi4*)(ZsG),ZqN,ZcN);if((((Zh8*)(ZRZ1()))->ZEk)){ZBw((T7*)(ZqN),ZyO);
-ZZs((T7*)(ZqN),((T3)'\040'));Zn_1(C,ZqN);ZzO((Zi4*)(ZsG),ZqN,((T3)'0'));}}void Zz_1(Z58*C){T0*_et=Zo;T0*ZKZ1=Zo;T2 ZnN=0;_et=(((((ZY*)(((C)->ZCj))))->ZPb))[Zrs(0)];
-ZKZ1=Z8G(_et);ZnN=(((Ze4*)(ZLZ1(C)))->_id);ZBw((T7*)(ZqN),Z9N);ZZs((T7*)(ZqN),((T3)'\040'));Z2_1(C,ZqN);ZXw((T7*)(ZqN),ZA_1);ZQs(ZnN,ZqN);
-ZXw((T7*)(ZqN),ZB_1);((((T7*)((T7*)(ZcN))))->Zcc)=(Zrs(0));ZJZ1(C);ZGN((Zi4*)(ZsG),ZqN,ZcN);((((T7*)((T7*)(ZqN))))->Zcc)=(Zrs(0));ZZs((T7*)(ZqN),((T3)'T'));
-ZQs(ZnN,ZqN);ZZs((T7*)(ZqN),((T3)'\040'));ZXw((T7*)(ZqN),ZZN);ZQs(ZnN,ZqN);ZXw((T7*)(ZqN),ZC_1);ZBw((T7*)(ZcN),ZD_1);ZXU(_et,ZcN);ZXw((T7*)(ZcN),ZE_1);
-if((((Zh8*)(ZRZ1()))->ZEk)){Zn_1(C,ZcN);ZXw((T7*)(ZcN),ZF_1);}ZXw((T7*)(ZcN),ZG_1);ZVZ1(C,ZcN);ZXw((T7*)(ZcN),ZH_1);ZVZ1(C,ZcN);ZXw((T7*)(ZcN),ZI_1);
-ZVZ1(C,ZcN);ZXw((T7*)(ZcN),ZJ_1);ZVZ1(C,ZcN);ZXw((T7*)(ZcN),ZK_1);ZVZ1(C,ZcN);ZXw((T7*)(ZcN),ZL_1);ZVZ1(C,ZcN);ZXw((T7*)(ZcN),ZM_1);ZVZ1(C,ZcN);
-ZXw((T7*)(ZcN),ZN_1);ZVZ1(C,ZcN);ZXw((T7*)(ZcN),ZO_1);ZQs(ZnN,ZcN);ZXw((T7*)(ZcN),ZP_1);ZQs(ZnN,ZcN);ZXw((T7*)(ZcN),ZQ_1);ZVZ1(C,ZcN);
-ZXw((T7*)(ZcN),ZR_1);ZGN((Zi4*)(ZsG),ZqN,ZcN);}void ZOZ1(Z58*C,T0*a1){T0*_et=Zo;_et=(((((ZY*)(((C)->ZCj))))->ZPb))[Zrs(0)];ZZs(((T7*)a1),((T3)'T'));
-if(ZaH(_et)){ZZs(((T7*)a1),((T3)'0'));ZZs(((T7*)a1),((T3)'\052'));}else{ZQs(ZuI(_et),a1);}ZZs(((T7*)a1),((T3)'\052'));}void ZS_1(T0*a1){
-ZUS(a1,ZVS);ZUS(a1,Z2_);ZXS(a1,((T3)'\n'));}T6 ZT_1(Z58*C,T0*a1){T6 R=0;R=((T6)((ZLZ1(C))==((void*)(Z8G(a1)))));if(!(R)){ZZS((T0*)C,a1);
-}return R;}T0*ZU_1(Z58*C){T0*R=Zo;{T76 Z3w;if(!(ZMF(&((*(Z3w=ZV_1(C),&Z3w)))))){{T76 Zo61;R=Z0T(&((*(Zo61=ZV_1(C),&Zo61))));}}}return
-R;}T0*ZW_1(Z58*C,T0*a1){T0*R=Zo;T0*ZRK1=Zo;T0*ZSK1=Zo;T0*ZTK1=Zo;if(((C)->ZDj)){R=((T0*)(C));ZRK1=Z9L(((((ZY*)(((C)->ZCj)))->ZPb))[Zrs(0)],a1);
-Zd_1(C);}else{ZRK1=((((ZY*)(((C)->ZCj)))->ZPb))[Zrs(0)];ZSK1=Z9L(ZRK1,a1);if((T6)(((ZSK1)==((void*)(Zo)))||((T6)(!(Z7V(ZSK1)))))){if((ZSK1)!=((void*)(Zo))){
-{T76 Z3w;ZzF((*(Z3w=Z3L(ZSK1),&Z3w)));}}{T76 Z3w;ZzF((*(Z3w=Z3L(ZRK1),&Z3w)));}Zk_1(ZUK1);}ZSK1=ZvG(ZSK1);if((((C)->ZNc))==((void*)(Zo))){
-{T76 Z3w;{Z58*n=((Z58*)Zh(sizeof(*n)));*n=Zxk;Zi_1(n,(*(Z3w=ZV_1(C),&Z3w)),ZSK1);(C->ZNc)=((T0*)n);}}Zd_1((Z58*)(((C)->ZNc)));R=((T0*)(C));
-}else{ZTK1=((((ZY*)((((Z58*)(((C)->ZNc)))->ZCj)))->ZPb))[Zrs(0)];if((T6)(((ZSK1)==((void*)(ZTK1)))||((T6)((ZDF(ZSK1))==((void*)(ZDF(ZTK1))))))){
-R=((T0*)(C));}else{{T76 Z3w;{Z58*n=((Z58*)Zh(sizeof(*n)));*n=Zxk;Zi_1(n,(*(Z3w=ZV_1(C),&Z3w)),ZSK1);R=((T0*)n);}}{Z58*n=((Z58*)Zh(sizeof(*n)));
-*n=Zxk;Z_Z1(n,((C)->ZIc),ZLZ1(((Z58*)R)),((C)->Zfe),((C)->ZCj),((C)->ZKc),R);R=((T0*)n);}}}}return R;}T0*ZX_1(Z58*C){T0*R=Zo;T0*Z9T=Zo;
-Z9T=((C)->Zfe);if((Z9T)!=((void*)(Zo))){R=ZrS(((T80*)Z9T));}return R;}T0*ZLZ1(Z58*C){T0*R=Zo;if((((C)->ZJc))!=((void*)(Zo))){R=((C)->ZJc);
-}else if((((C)->ZNc))!=(Zo)){(C->ZJc)=ZdT(((C)->ZNc));R=((C)->ZJc);}return R;}void ZY_1(Z58*C){T0*_et=Zo;ZNq1((Ze4*)(Z8G(((((ZY*)(((C)->ZCj)))->ZPb))[Zrs(0)])));
-_et=ZvG((((((ZY*)(((C)->ZCj))))->ZPb))[Zrs(0)]);ZBw((T7*)(ZYO),ZsO);ZOZ1(C,ZYO);ZZs((T7*)(ZYO),((T3)'T'));ZQs(ZXZ1(C),ZYO);ZXw((T7*)(ZYO),ZZ_1);
-ZQs(ZXZ1(C),ZYO);ZXw((T7*)(ZYO),Z__1);Z7I((Zi4*)(ZsG),ZYO);}T76 ZV_1(Z58*C){T76 R={Zo,Zo,0};R=(((T80*)(((C)->Zfe)))->Zxb);return R;}T0*Z002(Z58*C,T0*a1){
-T0*R=Zo;T0*ZWd1=Zo;ZWd1=ZvG(a1);if(ZYF(ZWd1,((C)->ZNc))){R=ZWd1;}else if(ZT_1((Z58*)(((C)->ZNc)),ZWd1)){R=((C)->ZNc);}else{R=ZYZ1();}
-((((T7*)((T7*)(ZwF))))->Zcc)=(Zrs(0));((((T77*)((T77*)(Z_F))))->ZRb)=(Zrs(-1));return R;}void Zn_1(Z58*C,T0*a1){ZXw(((T7*)a1),ZjT);ZQs(ZXZ1(C),a1);
-}void Z102(Z58*C,T0*a1){ZXw(((T7*)a1),ZZN);ZQs(ZXZ1(C),a1);ZZs(((T7*)a1),((T3)'\050'));ZZs(((T7*)a1),((T3)'\051'));}void Z202(Zd8*C){
-if((((C)->ZAb))!=((void*)(Zo))){ZpG((Zm3*)(((C)->ZAb)));}}void Z302(Zd8*C){ZuX((Zi4*)(ZsG),((C)->Z_b),((C)->ZAb));ZvX(((C)->Z_b));ZwX((Zi4*)(ZsG));
-}void Z402(Zd8*C,T76 a1,T0*a2,T0*a3){(C->Zxb)=a1;(C->Zud)=a2;(C->ZAb)=a3;}void Z502(T0*a1){{T0*b1=a1;ZXw((T7*)(ZwF),b1);}ZEF((T75*)(ZyF));
-}T0*Z602(Zd8*C,T0*a1){T0*R=Zo;T0*ZsH=Zo;T0*ZFX=Zo;T0*_pl=Zo;ZsH=ZyV(a1);ZFX=((((Z85*)ZsH))->Zqb);_pl=((((T82*)ZFX))->Zmg);if((_pl)==((void*)(Zo))){
-ZzF(((C)->Zxb));Z502(ZvF(71,"Precursor call is allowed only when the enclosing routine is redefined."));}else{R=ZGX(((Z3a*)_pl),(T0*)C,a1);
-}return R;}void Z702(Zd8*C){if((((C)->ZAb))!=((void*)(Zo))){ZTG((Zm3*)(((C)->ZAb)));}}void Z802(Zd8*C,T0*a1){T0*_a=Zo;if((((C)->ZAb))!=((void*)(Zo))){
-_a=ZaG((Zm3*)(((C)->ZAb)),a1);if((_a)==((void*)(Zo))){{T76 Z3w;ZzF((*(Z3w=ZbG((Zm3*)(((C)->ZAb))),&Z3w)));}{T0*b1=ZJX;ZXw((T7*)(ZwF),b1);
-}ZEF((T75*)(ZyF));}else{(C->ZAb)=_a;}}ZTF(((C)->Zxb),((C)->ZAb),((C)->Z_b));}T0*Z902(T0*a1,T0*a2){T0*R=Zo;{ZB8*n=((ZB8*)Zh(sizeof(*n)));
-*n=Z6n;ZLX(n,(T2)((((T82*)(((((Z85*)a2))->Zqb)))->_id)),a1);R=((T0*)n);}return R;}T0*Za02(Zd8*C,T0*a1){T0*R=Zo;{Zn8*n=((Zn8*)Zh(sizeof(*n)));
-*n=ZVk;Z1N(n,(T0*)C,a1);R=((T0*)n);}return R;}T0*Zb02(Zd8*C,T0*a1){T0*R=Zo;T0*ZPX=Zo;T0*ZQX=Zo;T0*_pn=Zo;if((((C)->Z0c))==((void*)(Zo))){
-(C->Z0c)=a1;R=((T0*)(C));ZPX=ZWG();if((ZqG(ZPX))!=((void*)(Zo))){ZzF(((C)->Zxb));Z502(ZvF(83,"Inside a function, a Precursor call must be a function call (not a procedure call)."));
-}ZQX=Z602(C,ZPX);_pn=Z902(((((ZS7*)ZPX))->Zkc),ZQX);(C->Z_b)=Z8E(((Zj6*)((((Ze4*)(Z8G(a1)))->Zug))),_pn);if((((C)->Z_b))==((void*)(Zo))){
-{Zo7*n=((Zo7*)Zh(sizeof(*n)));*n=ZSj;ZLO1(n,a1,_pn,ZQX);(C->Z_b)=((T0*)n);}}Z802(C,a1);}else{{Zd8*n=((Zd8*)Zh(sizeof(*n)));*n=ZBk;Z402(n,((C)->Zxb),((C)->Zud),((C)->ZAb));
-R=((T0*)n);}R=Zb02(((Zd8*)R),a1);}return R;}void Zc02(Zd8*C){if((((C)->ZAb))!=((void*)(Zo))){ZAH((Zm3*)(((C)->ZAb)));}}void Zd02(ZX8*C){
-ZzF(((C)->Zxb));{T0*b1=ZvF(63,"A separate target must be an argument of the enclosing routine.");ZXw((T7*)(ZwF),b1);}ZEF((T75*)(ZyF));
-}void ZqH(ZX8*C,T76 a1){(C->Zxb)=a1;{Zf8*n=((Zf8*)Zh(sizeof(*n)));*n=ZCk;ZC11(n,((C)->Zxb));(C->Zgc)=((T0*)n);}}T6 Ze02(T0*a1){T6 R=0;
-return R;}T0*Zf02(ZX8*C){T0*R=Zo;if((((C)->Zgc))!=((void*)(Zo))){R=ZbK(((C)->Zgc));}return R;}void Zg02(Zj8*C){if((T6)((Z4_(((C)->Zgc)))&&((T6)(!(ZjW(((C)->Zgc))))))){
-ZcH((Zi4*)(ZsG),((T3)'\052'));}ZIb1((Zi4*)(ZsG));}T6 Zh02(T0*a1){T6 R=0;return R;}void Zi02(Zj8*C,T0*a1){T0*_rt=Zo;_rt=ZvG(((C)->Zgc));
-if(ZaH(_rt)){if(ZaH(a1)){Z7I((Zi4*)(ZsG),Zkr1);ZIb1((Zi4*)(ZsG));}else{ZIb1((Zi4*)(ZsG));}}else if(ZaH(a1)){ZIb1((Zi4*)(ZsG));}else if(Z4_(_rt)){
-if(!(ZjW(_rt))){ZcH((Zi4*)(ZsG),((T3)'\052'));}ZIb1((Zi4*)(ZsG));}else{ZIb1((Zi4*)(ZsG));}}void Zj02(Zj8*C){ZzF(((C)->Zxb));{T0*b1=ZvF(63,"A separate target must be an argument of the enclosing routine.");
-ZXw((T7*)(ZwF),b1);}ZEF((T75*)(ZyF));}void Zk02(Zj8*C){{T0*b1=ZIG;ZXw((T7*)(ZwF),b1);}ZzF(((C)->Zxb));ZxF((T75*)(ZyF));}T6 Zl02(T0*a1){
-T6 R=0;return R;}void Zm02(T0*a1){T6 Z7H=0;Z7H=((T6)(Z9H((Zi4*)(ZsG),a1)));ZIb1((Zi4*)(ZsG));if(Z7H){ZfH((Zi4*)(ZsG));}}T2 Zn02(Zj8*C){
-T2 R=0;Zk02(C);return R;}T0*Zo02(Zj8*C,T0*a1){T0*R=Zo;if((((C)->Zgc))==((void*)(Zo))){(C->Zgc)=a1;R=((T0*)(C));}else{{Zj8*n=((Zj8*)Zh(sizeof(*n)));
-*n=ZHk;((((Zj8*)(n)))->Zxb)=(((C)->Zxb));R=((T0*)n);}R=Zo02(((Zj8*)R),a1);}return R;}T0*Zp02(Zj8*C){T0*R=Zo;R=((((C)->Zxb)).Zqb);return
-R;}T0*Zq02(Zl8*C,T0*a1,T0*a2){T0*R=Zo;{T76 Z3w;ZzF((*(Z3w=Zr02(C),&Z3w)));}Zs02(((((ZB8*)a1))->Zxb),ZvF(42,"An attribute must not be undefined (VDUS)."));
-ZEJ(((T82*)a2),a1);return R;}void Zs02(T76 a1,T0*a2){ZzF(a1);{T0*b1=a2;ZXw((T7*)(ZwF),b1);}ZxF((T75*)(ZyF));}T6 Zt02(Zl8*C,T0*a1,T0*a2){
-T6 R=0;if((((C)->Zgc))!=((void*)(ZvH(a1)))){if((T6)(((((C)->Zgc))==((void*)(Zo)))||((T6)((ZvH(a1))==((void*)(Zo)))))){{T76 Z3w;ZzF((*(Z3w=ZGJ(a1),&Z3w)));
-}{T76 Z3w;Zs02((*(Z3w=Zr02(C),&Z3w)),ZHJ);}}}if((Zo)!=((void*)(ZIJ(a1)))){{T76 Z3w;ZzF((*(Z3w=ZGJ(a1),&Z3w)));}{T76 Z3w;Zs02((*(Z3w=Zr02(C),&Z3w)),ZJJ);
-}}if(((((T75*)(ZyF))->ZAg))==(Zrs(0))){if((((C)->Zgc))!=((void*)(Zo))){if(!(ZKJ(ZvH(a1),((C)->Zgc),a2,(T6)(0)))){{T0*b1=ZLJ;ZXw((T7*)(ZwF),b1);
-}{T0*b1=ZDF(((((Ze4*)a2))->Z0c));ZXw((T7*)(ZwF),b1);}{T0*b1=ZMJ;ZXw((T7*)(ZwF),b1);}ZxF((T75*)(ZyF));}}}if(((((T75*)(ZyF))->ZAg))==(Zrs(0))){
-}R=((T6)(((((T75*)(ZyF))->ZAg))==(Zrs(0))));if(R){Zu02(C,a1);}return R;}void Zu02(Zl8*C,T0*a1){if((((T41*)(Z1G))->ZJk)){if((((C)->ZCb))==((void*)(Zo))){
-(C->ZCb)=ZOJ(a1);}else if((ZOJ(a1))==((void*)(Zo))){ZPJ(a1,((C)->ZCb));}}}void Zv02(Zl8*C,T0*a1){T2 _i=0;T0*_fn=Zo;T0*_f=Zo;(C->Zqb)=(((((ZB8*)(ZRJ((Zx8*)(((C)->Zfc)),Zrs(1))))->Zxb)).Zqb);
-_i=Zrs(1);while(!((Z3)((_i)>(ZSJ((Zx8*)(((C)->Zfc))))))){_fn=ZRJ((Zx8*)(((C)->Zfc)),_i);_f=ZED(((Z25*)a1),_fn);if((_f)!=((void*)(Zo))){
-_fn=((((Zx8*)(((((Z85*)_f))->Zfc))))->ZBd);ZzF(((((ZB8*)_fn))->Zxb));ZzF((((ZB8*)(ZRJ((Zx8*)(((C)->Zfc)),_i)))->Zxb));{T0*b1=ZvF(29,"Double definition of feature ");
-ZXw((T7*)(ZwF),b1);}{T0*b1=((((ZB8*)_fn))->Zre);ZXw((T7*)(ZwF),b1);}{T0*b1=ZMJ;ZXw((T7*)(ZwF),b1);}ZxF((T75*)(ZyF));}else{ZBD(((Z25*)a1),(T0*)C,_fn);
-}_i=(Z3)(((_i))+(Zrs(1)));}}T0*Zw02(Zl8*C,T0*a1,T0*a2){T0*R=Zo;T0*ZUJ=Zo;ZzF(((((ZB8*)a1))->Zxb));ZUJ=ZVJ((Zx8*)(((C)->Zfc)),((((ZB8*)a1))->Z3n));
-if((ZUJ)!=((void*)(Zo))){ZWJ(((ZB8*)ZUJ),a2);}((((T7*)((T7*)(ZwF))))->Zcc)=(Zrs(0));((((T77*)((T77*)(Z_F))))->ZRb)=(Zrs(-1));R=Zq02(C,a1,a2);
-if((R)!=((void*)(Zo))){((((ZM3*)(((ZM3*)R))))->Zec)=(((C)->Zec));Zu02(C,R);}else{ZEJ(((T82*)a2),a1);}return R;}void Zx02(Zl8*C,T0*a1,T0*a2){
-T2 _i=0;T2 _j=0;T0*_ic=Zo;((((Zl8*)(C)))->Zfc)=(a1);(C->Zgc)=a2;_i=ZSJ((Zx8*)(((C)->Zfc)));{ZR6*n=((ZR6*)Zh(sizeof(*n)));*n=Zgj;ZfA(n,_i);
-(C->ZRg)=((T0*)n);}_j=Zrs(1);while(!((_i)==(Zrs(0)))){ZKL((Zn6*)(Zy02));{Zs1*n=((Zs1*)Zh(sizeof(*n)));*n=ZIl;ZxJ(n,(T11)((((Zn6*)(Zy02))->Zde)),(((ZB8*)(ZRJ((Zx8*)(((C)->Zfc)),_j)))->Zxb));
-_ic=((T0*)n);}ZeA((ZR6*)(((C)->ZRg)),_ic);_j=(Z3)(((_j))+(Zrs(1)));_i=(Z3)(((_i))-(Zrs(1)));}}T0*Zy02=Zo;T0*Zz02(Zl8*C,T0*a1,T0*a2){T0*R=Zo;
-T0*_rc=Zo;_rc=Z8G(a1);R=Z8E(((Zj6*)(((((Ze4*)_rc))->Zug))),a2);if(Zo!=(R)){switch(((T0*)R)->id){case 556:break;default:R=Zo;}}if((R)==((void*)(Zo))){
-{ZE7*n=((ZE7*)Zh(sizeof(*n)));*n=Z4k;ZZJ(n,a1,a2,(T0*)C);R=((T0*)n);}}return R;}T6 ZA02(Zl8*C,T0*a1){T6 R=0;if((((C)->Zgc))==((void*)(Zo))){
-R=((T6)((ZvH(a1))!=((void*)(Zo))));}else{R=((T6)((ZvH(a1))==((void*)(Zo))));}if(R){{T0*b1=ZHJ;ZXw((T7*)(ZwF),b1);}}else{R=((T6)((ZIJ(a1))!=((void*)(Zo))));
-if(R){{T0*b1=ZJJ;ZXw((T7*)(ZwF),b1);}}}Zu02(C,a1);return R;}T76 Zr02(Zl8*C){T76 R={Zo,Zo,0};R=(((ZB8*)(((((Zx8*)(((C)->Zfc))))->ZBd)))->Zxb);
-return R;}void ZB02(T76 a1,T0*a2){ZzF(a1);{T0*b1=a2;ZXw((T7*)(ZwF),b1);}ZxF((T75*)(ZyF));}void ZC02(Zn8*C){ZbJ1(((C)->ZUk));}void ZD02(Zn8*C,T0*a1,T2
-a2){ZeV(((Z47*)a1),a2);Z6J1(((Z47*)a1),((C)->ZUk),a2);ZaJ1(((C)->ZUk),a1,a2);}void ZE02(Zn8*C){ZfJ1(((C)->ZUk));}T6 ZF02(Zn8*C,T0*a1){
-T6 R=0;R=((T6)(ZgJ1(((C)->ZUk),a1)));return R;}void Z1N(Zn8*C,T0*a1,T0*a2){(C->ZUk)=a1;(C->Zjd)=a2;}void ZG02(Zn8*C){ZhJ1(((C)->ZUk));
-}T6 ZH02(Zn8*C){T6 R=0;R=((T6)(ZiJ1(((C)->ZUk))));return R;}T6 ZI02(Zn8*C){T6 R=0;R=((T6)(ZkJ1(((C)->ZUk))));return R;}void ZJ02(Zn8*C,T0*a1){
-ZpJ1(((C)->ZUk),a1);}T6 ZK02(Zn8*C){T6 R=0;R=((T6)(ZrJ1(((C)->ZUk))));return R;}T0*ZL02(Zn8*C,T0*a1){T0*R=Zo;{Zn8*n=((Zn8*)Zh(sizeof(*n)));
-*n=ZVk;Z1N(n,(T0*)C,a1);R=((T0*)n);}return R;}T0*ZM02(Zn8*C,T0*a1){T0*R=Zo;T0*_ri=Zo;_ri=ZzH1(((C)->ZUk),a1);if((_ri)==((void*)(Zo))){
-{T76 Z3w;ZB02((*(Z3w=ZcJ1(((C)->ZUk)),&Z3w)),ZvF(16,"Bad instruction."));}R=((T0*)(C));}else if((_ri)==((void*)(((C)->ZUk)))){R=((T0*)(C));
-}else{{Zn8*n=((Zn8*)Zh(sizeof(*n)));*n=ZVk;Z1N(n,_ri,((C)->Zjd));R=((T0*)n);}}return R;}void ZN02(Zn8*C){ZeJ1(((C)->ZUk));}T76 ZO02(Zn8*C){
-T76 R={Zo,Zo,0};{T76 Z3w;R=(*(Z3w=ZcJ1(((C)->ZUk)),&Z3w));}return R;}
+void Zv12(ZU7*C,T0*a1,T0*a2){((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));Zw12(C,ZWP1,a1,a2);ZgM((Z84*)(ZkH),ZWP1);}void Zx12(ZU7*C){T2 ZuT=0;
+T6 Zz91=0;Zz91=((T6)((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))));ZuT=Zy12(C);((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));Zmx((T7*)(ZWP1),Z1Q1);
+Zmx((T7*)(ZWP1),Z9G(((C)->Z4c)));Zmx((T7*)(ZWP1),Z2Q1);if((((C)->Zlc))==((void*)(Zo))){Zmx((T7*)(ZWP1),ZHR);}else{ZmW(ZnH(((C)->Zlc)),ZWP1);
+}Zgt((T7*)(ZWP1),((T3)'\040'));Zgt((T7*)(ZWP1),((T3)'r'));Z6t(ZuT,ZWP1);{ZD8*C1=(ZD8*)(((C)->Zpc));T0*b1=ZWP1;Zmx(((T7*)b1),((C1)->Zcn));
+}Zgt((T7*)(ZWP1),((T3)'\050'));if(Zz91){Zmx((T7*)(ZWP1),Z3Q1);if((T6)((Zz12(C))||((T6)((((C)->ZFb))!=((void*)(Zo)))))){Zgt((T7*)(ZWP1),((T3)'\054'));
+}}if(Zz12(C)){Z6U(((C)->Z4c),ZWP1);Zgt((T7*)(ZWP1),((T3)'\040'));Zgt((T7*)(ZWP1),((T3)'C'));if((((C)->ZFb))!=((void*)(Zo))){Zgt((T7*)(ZWP1),((T3)'\054'));
+}}if((((C)->ZFb))==((void*)(Zo))){if(Zz91){}else if(!(Zz12(C))){Zmx((T7*)(ZWP1),ZHR);}}else{Z7a1((Zz6*)(((C)->ZFb)),ZWP1);}Zgt((T7*)(ZWP1),((T3)'\051'));
+ZIM((Z84*)(ZkH),ZWP1);ZXT((Z84*)(ZkH));}void ZA12(ZU7*C){ZB12(C);ZgM((Z84*)(ZkH),ZCQ);}void ZC12(ZU7*C){{T81 Zow;Z5G((*(Zow=ZrP(((C)->Zlc)),&Zow)));
+}{T0*b1=Z1G(61,"Result type of a once function must not be anchored (VFFD.7).");Zmx((T7*)(Z2G),b1);}ZaG((T80*)(Z4G));}void ZD12(ZU7*C,T0*a1){
+if(Z3L(((C)->Z4c))){Zmx(((T7*)a1),Z7Q1);}else{Zmx(((T7*)a1),Z8Q1);}}void ZE12(ZU7*C,T81 a1){T0*ZbQ1=Zo;ZbQ1=ZPH();ZUF((ZD*)(ZHn1(ZbQ1)),ZbQ1,a1,ZF12(C));
+}T2 Zy12(ZU7*C){T2 R=0;R=ZEM(((C)->Z4c));return R;}void ZG12(ZU7*C,T0*a1){ZgM((Z84*)(ZkH),ZfQ1);ZgM((Z84*)(ZkH),a1);ZH12(C);ZgM((Z84*)(ZkH),ZhQ1);
+{T81 Zow;ZPE1((Z84*)(ZkH),(*(Zow=ZI12(C),&Zow)));}Zv12(C,ZjQ1,ZmI1);}void ZJ12(ZU7*C){if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){if((((C)->Zlc))==((void*)(Zo))){
+ZA12(C);}else{ZB12(C);}}else if((((C)->Zlc))!=((void*)(Zo))){Zr01(((C)->Zlc));}}void ZK12(ZU7*C,T6 a1){((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));
+if((T6)(((T6)(((((T43*)(ZSG))->ZXk))&&((T6)(!(a1)))))&&((T6)((T6)((Z3L(((C)->Z4c)))||((T6)(((C)->ZPj)))))))){Zmx((T7*)(ZWP1),ZtQ1);}else{
+Zgt((T7*)(ZWP1),((T3)'r'));}Z6t(Zy12(C),ZWP1);{ZD8*C1=(ZD8*)(((C)->Zpc));T0*b1=ZWP1;Zmx(((T7*)b1),((C1)->Zcn));}ZgM((Z84*)(ZkH),ZWP1);
+}void ZL12(ZU7*C,T6 a1){T2 ZuT=0;T0*ZvQ1=Zo;T0*ZwQ1=Zo;ZuT=Zy12(C);ZgM((Z84*)(ZkH),ZxQ1);if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){ZG12(C,ZyQ1);
+}if((((C)->Zlc))!=((void*)(Zo))){((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));Zmx((T7*)(ZWP1),ZzQ1);ZmW(((C)->Zlc),ZWP1);Zmx((T7*)(ZWP1),ZAQ1);
+ZgM((Z84*)(ZkH),ZWP1);}if(a1){ZBQ1((Z84*)(ZkH),(T0*)C);ZJ12(C);Z4Z((Z84*)(ZkH));}else{ZvQ1=ZUM(((C)->Z4c));ZwQ1=ZjD(((ZR6*)((((ZZ3*)(Z_G(ZvQ1)))->Ztg))),((C)->Zpc));
+ZBQ1((Z84*)(ZkH),ZwQ1);Z3Z(ZwQ1);Z4Z((Z84*)(ZkH));}if((((C)->Zlc))!=((void*)(Zo))){ZgM((Z84*)(ZkH),ZCQ);if(ZbL(((C)->Zlc))){ZgM((Z84*)(ZkH),ZCQ1);
+}}ZgM((Z84*)(ZkH),ZDQ1);if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){Zv12(C,Z4T,ZqI1);}}void ZH12(ZU7*C){T0*Z5O=Zo;T0*ZEQ1=Zo;ZdL((Z84*)(ZkH),((T3)'\042'));
+Z5O=((((Zz8*)((((ZE3*)(((C)->ZTj)))->Zkc))))->ZGd);if((((((ZD8*)Z5O))->Zcn))!=((void*)((((ZD8*)(((C)->Zpc)))->Zcn)))){ZEQ1=ZFQ1((ZD8*)(((C)->Zpc)));
+if((ZEQ1)!=((void*)(Zo))){ZgM((Z84*)(ZkH),ZEQ1);ZdL((Z84*)(ZkH),((T3)'\040'));}ZgM((Z84*)(ZkH),(((ZD8*)(((C)->Zpc)))->Zse));ZdL((Z84*)(ZkH),((T3)'\040'));
+ZdL((Z84*)(ZkH),((T3)'\050'));}ZEQ1=ZFQ1(((ZD8*)Z5O));if((ZEQ1)!=((void*)(Zo))){ZgM((Z84*)(ZkH),ZEQ1);ZdL((Z84*)(ZkH),((T3)'\040'));}
+ZgM((Z84*)(ZkH),((((ZD8*)Z5O))->Zse));ZdL((Z84*)(ZkH),((T3)'\040'));ZgM((Z84*)(ZkH),(((T85*)(((((T87*)((((ZE3*)(((C)->ZTj)))->Zvb))))->Zpc)))->Zse));
+if((((((ZD8*)Z5O))->Zcn))!=((void*)((((ZD8*)(((C)->Zpc)))->Zcn)))){ZdL((Z84*)(ZkH),((T3)'\051'));}ZdL((Z84*)(ZkH),((T3)'\042'));}T0*ZM12(ZU7*C,T0*a1){
+T0*R=Zo;{int z1=((C)->ZRj);switch(z1){case 20:R=ZN12;break;case 19:break;case 21:(C->ZRj)=ZGs(22);ZO12(C,a1);if((((C)->ZRj))==(ZGs(20))){
+R=ZN12;}break;default:;(C->ZRj)=ZGs(19);}}return R;}void ZP12(ZU7*C){T0*ZMQ1=Zo;T0*ZxH=Zo;((((T7*)((T7*)(ZUP1))))->Zdc)=(ZGs(0));((((T7*)((T7*)(Z9Q1))))->Zdc)=(ZGs(0));
+if(Zz12(C)){Z291(((C)->Z4c),ZUP1);}if((((C)->ZFb))!=((void*)(Zo))){Zpa1((Zz6*)(((C)->ZFb)),ZUP1,Z9Q1);}if((((C)->Zlc))!=((void*)(Zo))){
+ZxH=ZnH(((C)->Zlc));Zmx((T7*)(Z9Q1),ZOQ1);Zmx((T7*)(ZUP1),ZXK);Z291(ZxH,ZUP1);}if((((C)->ZFe))!=((void*)(Zo))){ZPQ1((Z11*)(((C)->ZFe)),ZUP1,Z9Q1);
+}}void ZZc1(ZU7*C,T0*a1,T0*a2,T0*a3){T0*ZwQ1=Zo;T0*ZvQ1=Zo;{T0*b1=(T0*)C;ZiE((Z58*)(ZSO()),b1);}(C->Znf)=Z_G(a1);(C->Z4c)=a1;(C->Zpc)=a2;
+(C->ZTj)=a3;ZhD(((ZR6*)((((ZZ3*)(((C)->Znf)))->Ztg))),(T0*)C,a2);Z8H((T43*)(ZSG));(C->Zbh)=ZGs(21);(C->ZRj)=ZGs(21);ZQ12(C);ZfE((Z58*)(ZSO()));
+if(Z3L(((C)->Z4c))){ZvQ1=ZUM(((C)->Z4c));ZwQ1=ZyP((ZZ3*)(Z_G(ZvQ1)),((C)->Zpc));}}void ZR12(T0*a1){{T0*b1=a1;Zmx((T7*)(Z2G),b1);}ZaG((T80*)(Z4G));
+}void ZS12(ZU7*C,T6 a1,T6 a2,T6 a3){ZdL((Z84*)(ZkH),((T3)'\050'));if(a1){ZgM((Z84*)(ZkH),ZTQ1);}if(a2){if(a1){ZdL((Z84*)(ZkH),((T3)'\054'));
+}if(ZmU(((C)->Z4c))){ZgM((Z84*)(ZkH),ZUQ1);}ZVQ1((Z84*)(ZkH));if(ZmU(((C)->Z4c))){ZdL((Z84*)(ZkH),((T3)'\051'));}}if((((C)->ZFb))!=((void*)(Zo))){
+if((T6)((a2)||((T6)(a1)))){ZdL((Z84*)(ZkH),((T3)'\054'));}Z7R((Z84*)(ZkH));}ZdL((Z84*)(ZkH),((T3)'\051'));if((T6)((!(a2))&&((T6)(a3)))){
+ZdL((Z84*)(ZkH),((T3)'\051'));}}void ZT12(ZU7*C){if((T6)((Z2n1((T87*)(ZsO(((C)->Z4c)))))&&((T6)((((C)->ZJb))!=((void*)(Zo)))))){ZrM((ZL*)(((C)->ZJb)));
+}if((((C)->ZFe))!=((void*)(Zo))){ZXQ1((Z11*)(((C)->ZFe)));}}void Zw12(ZU7*C,T0*a1,T0*a2,T0*a3){Zmx(((T7*)a1),ZYQ1);if((((T43*)(ZSG))->ZXk)){
+ZD12(C,a1);Zgt(((T7*)a1),((T3)'\054'));}Zmx(((T7*)a1),a2);Zmx(((T7*)a1),ZZQ1);Zmx(((T7*)a1),a3);Zmx(((T7*)a1),Z_Q1);}void ZU12(ZU7*C){
+ZT12(C);ZV12((T0*)C);}T6 Zz12(ZU7*C){T6 R=0;{int z1=((C)->Zbh);switch(z1){case 20:R=((T6)(1));break;case 19:break;case 21:(C->Zbh)=ZGs(22);
+if((((T43*)(ZSG))->ZXk)){if(Z3L(((C)->Z4c))){(C->Zbh)=ZGs(20);}else{((((ZU7*)(C)))->Zbh)=(ZGs(20));}}else{((((ZU7*)(C)))->Zbh)=(ZGs(20));
+}R=((T6)((((C)->Zbh))==(ZGs(20))));break;default:;(C->Zbh)=ZGs(20);R=((T6)(1));}}return R;}void ZW12(ZU7*C){T0*ZxH=Zo;T6 Zz91=0;T0*ZMQ1=Zo;
+T0*ZkY=Zo;T2 Z1R1=0;T2 Zet=0;Zz91=((T6)((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))));if(Zz91){ZP12(C);}if(Z3L(((C)->Z4c))){ZgM((Z84*)(ZkH),Z3R1);
+}if((((C)->Zlc))!=((void*)(Zo))){ZxH=ZnH(((C)->Zlc));((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));ZmW(ZxH,ZWP1);Zmx((T7*)(ZWP1),Z4R1);Z001(ZxH,ZWP1);
+Zmx((T7*)(ZWP1),ZCQ);ZgM((Z84*)(ZkH),ZWP1);}if((((C)->ZQj))!=((void*)(Zo))){Zet=(((Zv6*)(((C)->ZQj)))->ZWb);while(!((Z3)((Zet)<(ZGs(0)))))
+{ZEd1((Zs3*)(((((Zv6*)(((C)->ZQj)))->ZUb))[Zet]));Zet=(Z3)(((Zet))-(ZGs(1)));}}if(Zz91){Z1R1=ZYw((T7*)(ZUP1),((T3)'\045'));if((Z3)((Z1R1)>(ZGs(0)))){
+Z1R1=(Z3)((Z1R1)/(ZGs(2)));if(Zz12(C)){Z1R1=(Z3)(((Z1R1))-(ZGs(1)));}}if((Z3)((Z1R1)>(ZGs(0)))){ZgM((Z84*)(ZkH),Z5R1);ZDM((Z84*)(ZkH),(T11)(Z1R1));
+ZgM((Z84*)(ZkH),Z6R1);}ZX12(C,Z1R1);Zv12(C,Z8R1,ZmI1);}if((((C)->ZQj))!=((void*)(Zo))){Zet=(((Zv6*)(((C)->ZQj)))->ZWb);while(!((Z3)((Zet)<(ZGs(0)))))
+{ZGd1((Zs3*)(((((Zv6*)(((C)->ZQj)))->ZUb))[Zet]));Zet=(Z3)(((Zet))-(ZGs(1)));}}if((((C)->Zlc))!=((void*)(Zo))){if(ZX01(((C)->Zlc))){ZkY=Zg_((ZZ3*)(Z_G(((C)->Zlc))));
+if((ZkY)!=((void*)(Zo))){if((ZMQ1)!=((void*)(Zo))){ZD61((Z84*)(ZkH),ZkY,Zo,ZMQ1);}else{ZD61((Z84*)(ZkH),ZkY,Zo,ZbR1);}}}}if((T6)((Z2n1((T87*)(ZsO(((C)->Z4c)))))&&((T6)((((C)->ZJb))!=((void*)(Zo)))))){
+ZfM((ZL*)(((C)->ZJb)));}if((T6)(((((T43*)(ZSG))->ZXk))&&((T6)((((C)->ZFb))!=((void*)(Zo)))))){ZgM((Z84*)(ZkH),ZgR1);Zia1((Zz6*)(((C)->ZFb)));
+if((((C)->ZJb))==((void*)(Zo))){ZCa1((Zz6*)(((C)->ZFb)));}else{ZgM((Z84*)(ZkH),ZhR1);ZCa1((Zz6*)(((C)->ZFb)));ZnM((ZL*)(((C)->ZJb)));
+ZTa1((Zz6*)(((C)->ZFb)));ZgM((Z84*)(ZkH),ZiR1);}ZgM((Z84*)(ZkH),ZjR1);}}void ZO12(ZU7*C,T0*a1){(C->ZRj)=ZGs(19);}void ZY12(ZU7*C){ZW12(C);
+ZZ12((Z84*)(ZkH),Z1G(24,"Deferred routine called."));Z_12(C);}void Z022(ZU7*C){T2 ZuT=0;T6 Zz91=0;Zz91=((T6)((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))));
+ZuT=Zy12(C);((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));Zmx((T7*)(ZWP1),ZmR1);Zmx((T7*)(ZWP1),Z9G(((C)->Z4c)));Zmx((T7*)(ZWP1),ZnR1);Zmx((T7*)(ZWP1),ZHR);
+Zgt((T7*)(ZWP1),((T3)'\040'));Zmx((T7*)(ZWP1),ZoR1);Z6t(ZuT,ZWP1);{ZD8*C1=(ZD8*)(((C)->Zpc));T0*b1=ZWP1;Zmx(((T7*)b1),((C1)->Zcn));}Zmx((T7*)(ZWP1),ZpR1);
+ZIM((Z84*)(ZkH),ZWP1);ZXT((Z84*)(ZkH));}void Z122(ZU7*C){Zx12(C);ZY12(C);ZgM((Z84*)(ZkH),ZmM);}void Z222(ZU7*C,T0*a1){{T81 Zow;Z5G((*(Zow=ZKe1(((ZG1*)a1)),&Zow)));
+}{T81 Zow;Z5G((*(Zow=ZI12(C),&Zow)));}ZR12(Z1G(44,"Cannot access address of a deferred routine."));}void Z322(ZU7*C){T6 ZzR1=0;if((T6)(((((T43*)(ZSG))->ZXk))&&((T6)(Z3L(((C)->Z4c)))))){
+(C->ZSj)=((T6)(1));if((((C)->ZFb))!=((void*)(Zo))){ZzR1=((T6)(ZSa1((Zz6*)(((C)->ZFb)))));}Zx12(C);Z422(C,(T6)(ZzR1));if((((C)->Zlc))==((void*)(Zo))){
+ZgM((Z84*)(ZkH),ZmM);}else{ZgM((Z84*)(ZkH),ZxR1);}Z022(C);ZL12(C,(T6)(ZzR1));ZgM((Z84*)(ZkH),ZmM);(C->ZSj)=((T6)(0));}else{Z122(C);}}
+void Z522(ZU7*C){{ZD*n=((ZD*)Zh(sizeof(*n)));*n=Z0c;(C->ZOj)=((T0*)n);}}void Z622(ZU7*C){T0*ZdH=Zo;T2 Zet=0;T0*ZJV1=Zo;T0*ZKV1=Zo;if((((T43*)(ZSG))->ZXk)){
+if((((C)->ZJb))!=((void*)(Zo))){ZyM((ZL*)(((C)->ZJb)),((C)->ZFb));}}ZdH=(((ZZ3*)(((C)->Znf)))->Zof);Zet=(Z3)(((((((Ze7*)(((((Z23*)ZdH))->Zae))))->ZWb)))+(ZGs(1)));
+while(!((Zet)==(ZGs(0)))){ZJV1=(((((Ze7*)(((((Z23*)ZdH))->Zae))))->ZUb))[(Zet)-(ZGs(1))];if((ZJV1)!=((void*)(((C)->Znf)))){ZKV1=ZIL(((ZZ3*)ZJV1),(T0*)C);
+ZLV1((T0*)C,ZKV1);}Zet=(Z3)(((Zet))-(ZGs(1)));}}void Z722(ZU7*C,T81 a1){(C->Zth)=((T6)(1));}void ZX12(ZU7*C,T2 a1){T2 Zet=0;T2 Z3x=0;
+T3 ZXw=0;ZgM((Z84*)(ZkH),ZCR1);ZH12(C);((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));Zgt((T7*)(ZWP1),((T3)'\054'));if(Zz12(C)){Zgt((T7*)(ZWP1),((T3)'1'));
+}else{Zgt((T7*)(ZWP1),((T3)'0'));}Zgt((T7*)(ZWP1),((T3)'\054'));Z6t(a1,ZWP1);Zmx((T7*)(ZWP1),ZDR1);Zmx((T7*)(ZWP1),ZUP1);Zmx((T7*)(ZWP1),ZER1);
+if(Zz12(C)){if(ZqU(((C)->Z4c))){if(ZX01(((C)->Z4c))){Zmx((T7*)(ZWP1),ZFR1);}else{Zmx((T7*)(ZWP1),ZGR1);}}else{Zmx((T7*)(ZWP1),ZHR1);}
+Zgt((T7*)(ZWP1),((T3)'C'));}else{Zmx((T7*)(ZWP1),Z4T);}Zgt((T7*)(ZWP1),((T3)'\073'));Zgt((T7*)(ZWP1),((T3)'\n'));ZgM((Z84*)(ZkH),ZWP1);
+{T81 Zow;ZPE1((Z84*)(ZkH),(*(Zow=ZI12(C),&Zow)));}ZgM((Z84*)(ZkH),ZIR1);if((Z3)((a1)<=(ZGs(0)))){ZgM((Z84*)(ZkH),ZJR1);}else{ZgM((Z84*)(ZkH),ZKR1);
+}ZgM((Z84*)(ZkH),ZLR1);Z3x=ZGs(1);while(!((Zet)==(a1))){ZgM((Z84*)(ZkH),ZMR1);ZDM((Z84*)(ZkH),(T11)(Zet));ZgM((Z84*)(ZkH),ZNR1);ZXw=((((T7*)(Z9Q1))->ZUb))[(Z3x)-(ZGs(1))];
+while(!((ZXw)==(((T3)'\054')))){ZdL((Z84*)(ZkH),ZXw);Z3x=(Z3)(((Z3x))+(ZGs(1)));ZXw=((((T7*)(Z9Q1))->ZUb))[(Z3x)-(ZGs(1))];}Z3x=(Z3)(((Z3x))+(ZGs(1)));
+ZgM((Z84*)(ZkH),ZCQ);Zet=(Z3)(((Zet))+(ZGs(1)));}}void ZQ12(ZU7*C){T0*ZpN1=Zo;ZpN1=ZsO(((C)->Z4c));(C->Zlc)=Z822(((C)->ZTj));(C->ZFb)=(((ZE3*)(((C)->ZTj)))->ZFb);
+if((((C)->Zlc))!=((void*)(Zo))){if(Z1Z1(((C)->Zlc))){if(!(Zea1((Zz6*)(((C)->ZFb)),((C)->Z4c)))){{Zz6*n=((Zz6*)Zh(sizeof(*n)));*n=Zbj;
+Zga1(n,((C)->ZFb),((C)->Z4c));(C->ZFb)=((T0*)n);}}(C->Zlc)=ZxP(((C)->Zlc),((C)->Z4c));}else{(C->Zlc)=ZxP(((C)->Zlc),((C)->Z4c));if((((C)->ZFb))!=((void*)(Zo))){
+if(!(Zea1((Zz6*)(((C)->ZFb)),((C)->Z4c)))){{Zz6*n=((Zz6*)Zh(sizeof(*n)));*n=Zbj;Zga1(n,((C)->ZFb),((C)->Z4c));(C->ZFb)=((T0*)n);}}}}}
+else if((((C)->ZFb))!=((void*)(Zo))){if(!(Zea1((Zz6*)(((C)->ZFb)),((C)->Z4c)))){{Zz6*n=((Zz6*)Zh(sizeof(*n)));*n=Zbj;Zga1(n,((C)->ZFb),((C)->Z4c));
+(C->ZFb)=((T0*)n);}}}if((((T43*)(ZSG))->ZRk)){(C->ZJb)=Zpm1(((T87*)ZpN1),(T0*)C);(C->ZFe)=ZOl1(((T87*)ZpN1),(T0*)C);}}T0*ZF12(ZU7*C){
+T0*R=Zo;T0*ZkL=Zo;T0*ZQR1=Zo;if((((C)->ZOj))==((void*)(Zo))){ZkL=ZsO(((C)->Z4c));ZQR1=(((ZE3*)(((C)->ZTj)))->Zvb);if((ZkL)==((void*)(ZQR1))){
+R=(((ZE3*)(((C)->ZTj)))->Zjc);}else{R=Zzm1(((T87*)ZkL),((C)->Zpc));}(C->ZOj)=R;}else{R=((C)->ZOj);}return R;}void Z922(ZU7*C,T0*a1){if((((C)->ZQj))==((void*)(Zo))){
+{Zv6*n=((Zv6*)Zh(sizeof(*n)));*n=Z8j;Z5D(n,(T2)(ZGs(4)));(C->ZQj)=((T0*)n);}}Z4D((Zv6*)(((C)->ZQj)),a1);}void Z422(ZU7*C,T6 a1){T2 Zet=0;
+T2 ZXw=0;T2 ZuT=0;T2 ZSR1=0;T0*ZxH=Zo;T0*ZvQ1=Zo;T0*ZwQ1=Zo;ZuT=Zy12(C);if(a1){ZvQ1=((C)->Z4c);ZSR1=ZuT;ZwQ1=((T0*)(C));}else{ZvQ1=ZUM(((C)->Z4c));
+ZSR1=ZEM(ZvQ1);ZwQ1=ZjD(((ZR6*)((((ZZ3*)(Z_G(ZvQ1)))->Ztg))),((C)->Zpc));}((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));Zmx((T7*)(ZWP1),ZTR1);
+Z6U(ZvQ1,ZWP1);Zmx((T7*)(ZWP1),ZUR1);if((((C)->ZFb))!=((void*)(Zo))){ZIa1((Zz6*)(((C)->ZFb)),ZWP1);}Zmx((T7*)(ZWP1),ZVR1);Z6t(ZSR1,ZWP1);
+{ZD8*C1=(ZD8*)(((C)->Zpc));T0*b1=ZWP1;Zmx(((T7*)b1),((C1)->Zcn));}Zmx((T7*)(ZWP1),ZCQ);ZWR1((Z84*)(ZkH),ZWP1);ZgM((Z84*)(ZkH),ZXR1);if((((C)->Zlc))!=((void*)(Zo))){
+ZxH=ZnH(((C)->Zlc));((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));ZmW(ZxH,ZWP1);Zmx((T7*)(ZWP1),ZYR1);Z001(ZxH,ZWP1);Zmx((T7*)(ZWP1),ZCQ);ZgM((Z84*)(ZkH),ZWP1);
+}if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){ZG12(C,ZZR1);}ZgM((Z84*)(ZkH),Z_R1);if(a1){ZY12(C);}else{if((((C)->Zlc))!=((void*)(Zo))){
+ZgM((Z84*)(ZkH),Z0S1);}Z1S1((Z84*)(ZkH),ZwQ1);Z3Z(ZwQ1);Z4Z((Z84*)(ZkH));if((((C)->Zlc))!=((void*)(Zo))){ZgM((Z84*)(ZkH),ZbR);}}ZgM((Z84*)(ZkH),Z2S1);
+((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));Zmx((T7*)(ZWP1),Z3S1);Z6t(ZSR1,ZWP1);{ZD8*C1=(ZD8*)(((C)->Zpc));T0*b1=ZWP1;Zmx(((T7*)b1),((C1)->Zcn));
+}Zmx((T7*)(ZWP1),Z4S1);Z6t(ZSR1,ZWP1);{ZD8*C1=(ZD8*)(((C)->Zpc));T0*b1=ZWP1;Zmx(((T7*)b1),((C1)->Zcn));}Zmx((T7*)(ZWP1),Z5S1);Z6t(ZSR1,ZWP1);
+{ZD8*C1=(ZD8*)(((C)->Zpc));T0*b1=ZWP1;Zmx(((T7*)b1),((C1)->Zcn));}Zmx((T7*)(ZWP1),Z6S1);ZgM((Z84*)(ZkH),ZWP1);if(Zz12(C)){((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));
+if(a1){Zmx((T7*)(ZWP1),Z7S1);}else{Zmx((T7*)(ZWP1),Z8S1);}ZgM((Z84*)(ZkH),ZWP1);}if((((C)->ZFb))!=((void*)(Zo))){Zet=ZGs(1);ZXw=Zjy(((Zl2*)((((Zz6*)(((C)->ZFb)))->Zie))));
+while(!((Z3)((Zet)>(ZXw)))){((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));Zmx((T7*)(ZWP1),Z9S1);Zmx((T7*)(ZWP1),(((Zi1*)(Zky(((Zl2*)((((Zz6*)(((C)->ZFb)))->Zie))),Zet)))->Zse));
+if(ZqU(Z8a1((Zz6*)(((C)->ZFb)),Zet))){Zmx((T7*)(ZWP1),ZaS1);Z6t(Zet,ZWP1);}else{Zmx((T7*)(ZWP1),ZbS1);Z6t(Zet,ZWP1);}Zmx((T7*)(ZWP1),ZbR);
+ZgM((Z84*)(ZkH),ZWP1);Zet=(Z3)(((Zet))+(ZGs(1)));}}((((T7*)((T7*)(ZWP1))))->Zdc)=(ZGs(0));if((((C)->Zlc))!=((void*)(Zo))){Zmx((T7*)(ZWP1),ZcS1);
+}else{Zmx((T7*)(ZWP1),ZdS1);}Zmx((T7*)(ZWP1),ZeS1);Z6t(ZuT,ZWP1);{ZD8*C1=(ZD8*)(((C)->Zpc));T0*b1=ZWP1;Zmx(((T7*)b1),((C1)->Zcn));}Zmx((T7*)(ZWP1),ZfS1);
+Z6t(ZSR1,ZWP1);{ZD8*C1=(ZD8*)(((C)->Zpc));T0*b1=ZWP1;Zmx(((T7*)b1),((C1)->Zcn));}Zgt((T7*)(ZWP1),((T3)'\051'));if((((C)->Zlc))!=((void*)(Zo))){
+Zmx((T7*)(ZWP1),ZgS1);}Zmx((T7*)(ZWP1),ZbR);ZgM((Z84*)(ZkH),ZWP1);ZgM((Z84*)(ZkH),ZmM);if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){Zv12(C,ZhS1,ZqI1);
+}}void Za22(ZU7*C){T0*ZjL=Zo;ZjL=((C)->Zlc);if((T6)(((ZjL)!=((void*)(Zo)))&&((T6)(ZX01(ZjL))))){if(ZPX(ZjL)){}else{{T0*b1=((C)->Zlc);
+ZUC((Zb6*)(ZjS1()),b1);}}}}T81 ZI12(ZU7*C){T81 R={Zo,Zo,0};{T81 Zow;R=(*(Zow=Zb22(((C)->ZTj)),&Zow));}return R;}void Z_12(ZU7*C){T81 ZlS1={Zo,Zo,0};
+if((((C)->ZFe))!=((void*)(Zo))){ZmS1((Z11*)(((C)->ZFe)));}if(Zz12(C)){if(((((ZD8*)(((C)->Zpc)))->Zse))!=((void*)(ZuJ))){ZnS1((Z84*)(ZkH),((C)->Z4c));
+}}if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){ZlS1=(((ZE3*)(((C)->ZTj)))->ZEe);if(!((((ZlS1).Zxb))==(ZGs(0)))){Zl61((Z84*)(ZkH),ZlS1);
+}Zv12(C,ZhS1,ZqI1);}if((T6)(((((T43*)(ZSG))->ZXk))&&((T6)((((C)->ZFb))!=((void*)(Zo)))))){ZgM((Z84*)(ZkH),ZpS1);ZTa1((Zz6*)(((C)->ZFb)));
+ZgM((Z84*)(ZkH),ZqS1);}}void ZB12(ZU7*C){T6 Zz91=0;T6 ZrS1=0;T6 Z3R=0;Zz91=((T6)((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))));ZrS1=((T6)(Zz12(C)));
+if(!(ZrS1)){Z3R=((T6)(Z4R((Z84*)(ZkH))));if(Z3R){ZdL((Z84*)(ZkH),((T3)'\054'));}}ZK12(C,(T6)(1));ZS12(C,(T6)(Zz91),(T6)(ZrS1),(T6)(Z3R));
+}void Zc22(ZW7*C,T0*a1,T6 a2,T6 a3,T2 a4){T6 Z3R=0;T6 Zd22=0;T81 Z4W={Zo,Zo,0};T0*Ze22=Zo;T0*ZMa1=Zo;T3 Zex=0;T2 Zet=0;T2 Zf22=0;{T81
+Zow;Z4W=(*(Zow=Zg22(C),&Zow));}{Z84*C1=(Z84*)(ZkH);T81 b1=Z4W;ZeN1(((C1)->ZMf),b1);}if((T6)(((((C)->Zuk))!=((void*)(Zo)))&&((T6)(((((T55*)(((C)->Zuk)))->ZWb))!=(a4))))){
+Zh22(C,Z1G(46,"Bad number of arguments of external signature."));}if(a2){if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){Zl61((Z84*)(ZkH),Z4W);
+}if(a3){ZgM((Z84*)(ZkH),Z0S1);}}else{Z3R=((T6)(Z4R((Z84*)(ZkH))));if(Z3R){ZdL((Z84*)(ZkH),((T3)'\054'));}}if((((C)->Zrk))!=((void*)(Zo))){
+if((((C)->Ztk))==(ZGs(29))){if((T6)((a3)||((T6)((a4)!=(ZGs(2)))))){{T81 Zow;Z5G((*(Zow=Zi22(a1),&Zow)));}Zh22(C,Z1G(42,"Bad prototype for C struture set external."));
+}}else if((((C)->Ztk))==(ZGs(30))){if((T6)((!(a3))||((T6)((a4)!=(ZGs(1)))))){{T81 Zow;Z5G((*(Zow=Zi22(a1),&Zow)));}Zh22(C,Z1G(42,"Bad prototype for C struture get external."));
+}}ZgM((Z84*)(ZkH),Z0X1);ZgM((Z84*)(ZkH),((C)->Zrk));ZgM((Z84*)(ZkH),Zj22);if(a2){ZgM((Z84*)(ZkH),Z3J);}else{ZHa1((Z84*)(ZkH),(T2)(ZGs(1)));
+}ZgM((Z84*)(ZkH),Z9W1);ZgM((Z84*)(ZkH),((C)->Zsk));ZdL((Z84*)(ZkH),((T3)'\051'));if(!(a3)){ZgM((Z84*)(ZkH),Zk22);if((((C)->ZGb))!=((void*)(Zo))){
+ZdL((Z84*)(ZkH),((T3)'\050'));ZgM((Z84*)(ZkH),((C)->ZGb));ZdL((Z84*)(ZkH),((T3)'\051'));}if(a2){ZgM((Z84*)(ZkH),Zl22);}else{ZHa1((Z84*)(ZkH),(T2)(ZGs(2)));
+}ZdL((Z84*)(ZkH),((T3)'\051'));}}else if(((C)->Zvk)){Ze22=Z5R(((ZX4*)a1));Zet=ZGs(1);while(!((Z3)((Zet)>(((((T7*)Ze22))->Zdc))))){Zex=(((((T7*)Ze22))->ZUb))[(Zet)-(ZGs(1))];
+if((Zex)!=(((T3)'\044'))){ZdL((Z84*)(ZkH),Zex);}else{Zet=(Z3)(((Zet))+(ZGs(1)));ZMa1=Zm22;((((T7*)(((T7*)ZMa1))))->Zdc)=(ZGs(0));Zd22=((T6)((Z3)((Zet)>(((((T7*)Ze22))->Zdc)))));
+while(!(Zd22)){Zex=(((((T7*)Ze22))->ZUb))[(Zet)-(ZGs(1))];{int z1=Zex;switch(z1){case 48:case 49:case 50:case 51:case 52:case 53:case
+54:case 55:case 56:case 57:case 65:case 66:case 67:case 68:case 69:case 70:case 71:case 72:case 73:case 74:case 75:case 76:case 77:case
+78:case 79:case 80:case 81:case 82:case 83:case 84:case 85:case 86:case 87:case 88:case 89:case 90:case 95:case 97:case 98:case 99:case
+100:case 101:case 102:case 103:case 104:case 105:case 106:case 107:case 108:case 109:case 110:case 111:case 112:case 113:case 114:case
+115:case 116:case 117:case 118:case 119:case 120:case 121:case 122:Zgt(((T7*)ZMa1),Zex);Zet=(Z3)(((Zet))+(ZGs(1)));break;default:;Zd22=((T6)(1));
+Zet=(Z3)(((Zet))-(ZGs(1)));}}}ZMa1=(((void)((T27*)(Zn22()))),ZCG(ZMa1));Zf22=Zo22(((ZX4*)a1),ZMa1);if((Z3)((Zf22)>(ZGs(0)))){if(a2){ZdL((Z84*)(ZkH),((T3)'a'));
+ZDM((Z84*)(ZkH),(T11)(Zf22));}else{ZHa1((Z84*)(ZkH),Zf22);}}else{{T81 Zow;Z5G((*(Zow=Zi22(a1),&Zow)));}{T81 Zow;Z5G((*(Zow=Zg22(C),&Zow)));
+}{T0*b1=Z1G(10,"Unknown \"$");Zmx((T7*)(Z2G),b1);}{T0*b1=ZMa1;Zmx((T7*)(Z2G),b1);}{T0*b1=Z1G(43,"\" argument in external C inline definition.");
+Zmx((T7*)(Z2G),b1);}ZaG((T80*)(Z4G));}}Zet=(Z3)(((Zet))+(ZGs(1)));}}else{ZgM((Z84*)(ZkH),Z5R(((ZX4*)a1)));if((Z3)((a4)>(ZGs(0)))){ZdL((Z84*)(ZkH),((T3)'\050'));
+Zet=ZGs(1);while(!((Z3)((Zet)>(a4)))){if((((C)->Zuk))!=((void*)(Zo))){ZdL((Z84*)(ZkH),((T3)'\050'));ZdL((Z84*)(ZkH),((T3)'\050'));ZgM((Z84*)(ZkH),((((T55*)(((C)->Zuk)))->ZUb))[Zet]);
+ZdL((Z84*)(ZkH),((T3)'\051'));}if(a2){ZdL((Z84*)(ZkH),((T3)'a'));ZDM((Z84*)(ZkH),(T11)(Zet));}else{ZHa1((Z84*)(ZkH),Zet);}if((((C)->Zuk))!=((void*)(Zo))){
+ZdL((Z84*)(ZkH),((T3)'\051'));}Zet=(Z3)(((Zet))+(ZGs(1)));if((Z3)((Zet)<=(a4))){ZdL((Z84*)(ZkH),((T3)'\054'));}}ZdL((Z84*)(ZkH),((T3)'\051'));
+}else if(!(((C)->Zqk))){ZgM((Z84*)(ZkH),ZpJ1);}}if(a2){if(a3){ZdL((Z84*)(ZkH),((T3)'\051'));}ZdL((Z84*)(ZkH),((T3)'\073'));}else{if(Z3R){
+ZdL((Z84*)(ZkH),((T3)'\051'));}if(!(a3)){ZdL((Z84*)(ZkH),((T3)'\073'));}}ZdL((Z84*)(ZkH),((T3)'\n'));{Z84*C1=(Z84*)(ZkH);T81 b1=Z4W;ZeN1(((C1)->ZMf),b1);
+}}void Zh22(ZW7*C,T0*a1){{T81 Zow;Z5G((*(Zow=Zg22(C),&Zow)));}{T0*b1=a1;Zmx((T7*)(Z2G),b1);}ZaG((T80*)(Z4G));}void Zp22(ZW7*C,T0*a1,T0*a2,T0*a3){
+Zq22(C);if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){if(((C)->Zok)){{T81 Zow;{ZQ7*C1=((ZQ7*)a1);T81 b1=(*(Zow=Zg22(C),&Zow));ZVQ(C1,b1,((C1)->ZTj));
+}}}Zs12(((ZQ7*)a1));Zc22(C,((((ZQ7*)a1))->ZTj),(T6)(1),(T6)(1),ZXQ(((ZQ7*)a1)));ZS02(((ZQ7*)a1));}}void Zr22(ZW7*C,T0*a1,T0*a2,T0*a3){
+Zq22(C);if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){ZDQ(((ZO7*)a1));}else{if(((C)->Zok)){{T81 Zow;{ZO7*C1=((ZO7*)a1);T81 b1=(*(Zow=Zg22(C),&Zow));
+Z_Q(C1,b1,((C1)->ZTj));}}}Zc22(C,((((ZO7*)a1))->ZTj),(T6)(0),(T6)(0),ZBQ(((ZO7*)a1)));}}void Zs22(ZW7*C,T0*a1,T0*a2,T0*a3){Zq22(C);if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){
+if(((C)->Zok)){{T81 Zow;{ZO7*C1=((ZO7*)a1);T81 b1=(*(Zow=Zg22(C),&Zow));Z_Q(C1,b1,((C1)->ZTj));}}}ZE02(((ZO7*)a1));Zc22(C,((((ZO7*)a1))->ZTj),(T6)(1),(T6)(0),ZBQ(((ZO7*)a1)));
+ZS_1(((ZO7*)a1));}}void Zt22(ZW7*C,T0*a1){T0*Zu22=Zo;T0*Zv22=Zo;T6 Zw22=0;Zx22(C,a1);Zu22=((((T93*)a1))->Zse);if(Z5v(((T7*)Zy22),Zu22)){
+Zw22=((T6)(1));Zv22=Z1G(1,Zvn);}else if(Z5v(((T7*)Zz22),Zu22)){Zw22=((T6)(1));}else if(Z5v(((T7*)ZA22),Zu22)){Zw22=((T6)(1));Zv22=Z1G(7,"C macro");
+}else if(Z5v(((T7*)ZB22),Zu22)){Zw22=((T6)(1));}if(Zw22){{T81 Zow;Z5G((*(Zow=Zg22(C),&Zow)));}{T0*b1=Z1G(189,"Since release -0.74 this external C definition is obsolete. You should update your code with the new ETL external specification (see SmartEiffel/tutorial/external/C directory for examples).");
+Zmx((T7*)(Z2G),b1);}if((Zv22)!=((void*)(Zo))){ZWw((T7*)(((((T93*)a1))->Zse)),Zv22);{T0*b1=Z1G(33,"Obsolete notation replaced with \"");
+Zmx((T7*)(Z2G),b1);}{T0*b1=Zv22;Zmx((T7*)(Z2G),b1);}{T0*b1=Z1G(44,"\". Update your code before the next release.");Zmx((T7*)(Z2G),b1);
+}ZPG((T80*)(Z4G));}else{Z3G((T80*)(Z4G));}}}T6 ZC22(T0*a1){T6 R=0;return R;}T0*Zn22(void){if(ZTH==0){ZTH=1;{{T27*n=((T27*)Zh(1));ZSH=((T0*)n);
+ZUH(ZVH);ZUH(ZWH);ZUH(ZXH);ZUH(ZYH);ZUH(ZZH);ZUH(Z_H);ZUH(Z0I);ZUH(Z1I);ZUH(Z2I);ZUH(Z3I);ZUH(Z4I);ZUH(Z5I);ZUH(Z6I);ZUH(Z7I);ZUH(Z8I);
+ZUH(Z9I);ZUH(ZaI);ZUH(ZbI);ZUH(ZcI);ZUH(ZdI);ZUH(ZeI);ZUH(ZfI);ZUH(ZgI);ZUH(ZhI);ZUH(ZiI);ZUH(ZjI);ZUH(ZkI);ZUH(ZlI);ZUH(ZmI);ZUH(ZnI);
+ZUH(ZoI);ZUH(ZpI);ZUH(ZqI);ZUH(ZrI);ZUH(ZsI);ZUH(ZtI);ZUH(ZuI);ZUH(ZvI);ZUH(ZwI);ZUH(ZxI);ZUH(ZyI);ZUH(ZzI);ZUH(ZAI);ZUH(ZBI);ZUH(ZCI);
+ZUH(ZDI);ZUH(ZEI);ZUH(ZFI);ZUH(ZGI);ZUH(ZHI);ZUH(ZII);ZUH(ZJI);ZUH(ZKI);ZUH(ZLI);ZUH(ZMI);ZUH(ZNI);ZUH(ZOI);ZUH(ZPI);ZUH(ZQI);ZUH(ZAG);
+ZUH(ZzG);ZUH(ZRI);ZUH(ZyG);ZUH(ZxG);ZUH(ZuG);ZUH(ZSI);ZUH(ZvG);ZUH(ZTI);ZUH(ZUI);ZUH(ZVI);ZUH(ZWI);ZUH(ZXI);ZUH(ZtG);ZUH(ZYI);ZUH(ZZI);
+ZUH(Z_I);ZUH(Z0J);ZUH(Z1J);ZUH(Z2J);ZUH(ZvH);ZUH(Z3J);ZUH(Z4J);ZUH(Z5J);ZUH(Z6J);ZUH(Z7J);ZUH(Z8J);ZUH(Z9J);ZUH(ZaJ);ZUH(ZbJ);ZUH(ZcJ);
+ZUH(ZdJ);ZUH(ZeJ);ZUH(ZfJ);ZUH(ZgJ);ZUH(ZhJ);ZUH(ZiJ);ZUH(ZjJ);ZUH(ZkJ);ZUH(ZlJ);ZUH(ZmJ);ZUH(ZnJ);ZUH(ZoJ);ZUH(ZpJ);ZUH(ZqJ);ZUH(ZrJ);
+ZUH(ZsJ);ZUH(ZtJ);ZUH(ZuJ);ZUH(ZvJ);ZUH(ZwJ);ZUH(ZxJ);ZUH(ZyJ);ZUH(ZzJ);ZUH(ZAJ);ZUH(ZBJ);ZUH(ZCJ);ZUH(ZDJ);ZUH(ZEJ);ZUH(ZFJ);ZUH(ZGJ);
+ZUH(ZHJ);ZUH(ZIJ);ZUH(ZJJ);ZUH(ZKJ);ZUH(ZLJ);ZUH(ZMJ);ZUH(ZNJ);ZUH(ZOJ);ZUH(ZwG);ZUH(ZPJ);ZUH(ZQJ);ZUH(ZRJ);ZUH(ZSJ);ZUH(ZTJ);ZUH(ZUJ);
+ZUH(ZVJ);ZUH(ZWJ);ZUH(ZXJ);ZUH(ZYJ);ZUH(ZZJ);ZUH(Z_J);ZUH(Z0K);ZUH(Z1K);ZUH(Z2K);ZUH(Z3K);ZUH(Z4K);ZUH(Z5K);ZUH(Z6K);ZUH(Z7K);ZUH(Z8K);
+ZUH(Z9K);ZUH(ZaK);ZUH(ZbK);ZUH(ZcK);ZUH(ZdK);ZUH(ZeK);ZUH(ZfK);ZUH(ZgK);ZUH(ZhK);ZUH(ZiK);ZUH(ZjK);ZUH(ZkK);ZUH(ZlK);ZUH(ZmK);ZUH(ZnK);
+ZUH(ZoK);ZUH(ZpK);ZUH(ZqK);ZUH(ZrK);ZUH(ZsK);ZUH(ZtK);ZUH(ZuK);ZUH(ZvK);ZUH(ZwK);ZUH(ZxK);ZUH(ZyK);ZUH(ZzK);ZUH(ZAK);ZUH(ZBK);ZUH(ZCK);
+ZUH(ZDK);ZUH(ZEK);ZUH(ZFK);ZUH(ZGK);ZUH(ZHK);ZUH(ZIK);ZUH(ZJK);ZUH(ZKK);ZUH(ZLK);ZUH(ZMK);ZUH(ZXH);ZUH(ZNK);ZUH(ZOK);ZUH(ZPK);ZUH(ZQK);
+ZUH(ZRK);ZUH(ZSK);ZUH(ZTK);ZUH(ZUK);ZUH(ZVK);ZUH(ZWK);ZUH(ZXK);ZUH(ZYK);ZUH(ZZK);}}}return ZSH;}T0*ZD22=Zo;void ZE22(ZW7*C,T0*a1,T0*a2,T0*a3){
+Zq22(C);if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){ZfR(((ZQ7*)a1));}else{if(((C)->Zok)){{T81 Zow;{ZQ7*C1=((ZQ7*)a1);T81 b1=(*(Zow=Zg22(C),&Zow));
+ZVQ(C1,b1,((C1)->ZTj));}}}Zc22(C,((((ZQ7*)a1))->ZTj),(T6)(0),(T6)(1),ZXQ(((ZQ7*)a1)));}}void Zx22(ZW7*C,T0*a1){(C->ZJc)=a1;}void Zq22(ZW7*C){
+T0*ZF22=Zo;if(!(((C)->Zpk))){(C->Zpk)=((T6)(1));(C->Zok)=((T6)(1));ZG22((ZT6*)(ZD22),((C)->ZJc));ZH22((ZT6*)(ZD22));ZI22((ZT6*)(ZD22));
+while(!(ZJ22((ZT6*)(ZD22)))){if(ZK22((ZT6*)(ZD22),ZL22)){(C->Zqk)=((T6)(1));(C->Zok)=((T6)(0));}else if(ZK22((ZT6*)(ZD22),Z0T)){(C->Zok)=((T6)(0));
+(C->Zrk)=ZM22((ZT6*)(ZD22));if(ZK22((ZT6*)(ZD22),ZN22)){(C->Zsk)=ZM22((ZT6*)(ZD22));(C->Ztk)=ZGs(29);}else if(ZK22((ZT6*)(ZD22),ZO22)){
+(C->Zsk)=ZM22((ZT6*)(ZD22));(C->Ztk)=ZGs(30);}else if(ZK22((ZT6*)(ZD22),ZP22)){(C->Zsk)=ZM22((ZT6*)(ZD22));(C->Ztk)=ZGs(31);}else{Zh22(C,Z1G(43,"\"set\", \"get\", or \"access\" keyword expected."));
+}}else if(ZK22((ZT6*)(ZD22),ZQ22)){(C->ZGb)=ZM22((ZT6*)(ZD22));}else if(ZK22((ZT6*)(ZD22),ZR22)){}else if(ZK22((ZT6*)(ZD22),ZS22)){(C->Zvk)=((T6)(1));
+(C->Zok)=((T6)(0));}else if(ZK22((ZT6*)(ZD22),ZT22)){(C->Zuk)=ZU22((ZT6*)(ZD22));}else if((ZV22((ZT6*)(ZD22)))==(((T3)'\050'))){(C->Zuk)=ZU22((ZT6*)(ZD22));
+}else{{int z1=ZV22((ZT6*)(ZD22));switch(z1){case 44:case 124:ZH22((ZT6*)(ZD22));ZI22((ZT6*)(ZD22));break;default:;ZF22=ZW22((ZT6*)(ZD22));
+(C->Zok)=((T6)(0));{T81 Zow;ZX22((Z84*)(ZkH),(*(Zow=Zg22(C),&Zow)),ZF22);}}}}}}}T81 Zg22(ZW7*C){T81 R={Zo,Zo,0};R=(((T93*)(((C)->ZJc)))->ZCb);
+return R;}void ZIm1(ZY7*C,T0*a1){{Ze5*n=((Ze5*)Zh(sizeof(*n)));*n=Zhh;ZBy(n,(T2)(ZGs(4)),(T2)(ZGs(1)));(C->ZZb)=((T0*)n);}ZAy((Ze5*)(((C)->ZZb)),a1);
+}void ZY22(Z18*C,T0*a1,T0*a2){(C->Zpc)=a1;(C->ZAk)=a2;}void ZZ22(Z18*C,T0*a1,T2 a2){T0*Z_22=Zo;T0*ZWF=Zo;if((((C)->ZAk))!=((void*)(Zo))){
+Z_22=(((T85*)(((((Z18*)a1))->Zpc)))->Zse);if(Z9U(((C)->ZAk))){Z032(ZJR(((C)->ZAk)),a1,a2,Z_22);}else{ZWF=ZBT(((C)->ZAk));if((Z_22)==((void*)(((((T85*)ZWF))->Zse)))){
+{Zt8*n=((Zt8*)Zh(sizeof(*n)));*n=Z7l;Z132(n,ZWF,a1,a2);(C->ZAk)=((T0*)n);}}}}}void Z232(Z18*C){if((ZGJ1(((C)->Zpc)))!=((void*)(Zo))){
+Z5G((((T85*)(((C)->Zpc)))->ZCb));{T0*b1=Z1G(77,"A formal generic argument must not be the name of an existing class (VCFG.1).");Zmx((T7*)(Z2G),b1);
+}ZaG((T80*)(Z4G));}}void Z032(T0*a1,T0*a2,T2 a3,T0*a4){T2 Zet=0;T0*Z5F1=Zo;T0*ZxH=Zo;T0*ZWF=Zo;Zet=((((ZY*)a1))->ZWb);while(!((Z3)((Zet)<(((((ZY*)a1))->ZXb)))))
+{ZxH=Z1y(((ZY*)a1),Zet);if(Z9U(ZxH)){Z032(ZJR(ZxH),a2,a3,a4);}else{ZWF=ZBT(ZxH);if((a4)==((void*)(((((T85*)ZWF))->Zse)))){{Zt8*n=((Zt8*)Zh(sizeof(*n)));
+*n=Z7l;Z132(n,ZWF,a2,a3);Z5F1=((T0*)n);}{ZY*C1=((ZY*)a1);T0*b1=Z5F1;T2 b2=Zet;(((C1)->ZUb))[(Z3)(((b2))-(((C1)->ZXb)))]=(b1);}}}Zet=(Z3)(((Zet))-(ZGs(1)));
+}}T81 Z332(Z18*C){T81 R={Zo,Zo,0};R=(((T85*)(((C)->Zpc)))->ZCb);return R;}void Z432(Z78*C){T0*ZsW=Zo;T0*Z532=Zo;if(ZCr1((ZZ3*)(Z632(C)),ZFJ)){
+Zmx((T7*)(ZKR),Z732);}ZsW=(((((ZY*)(((C)->ZFj))))->ZUb))[ZGs(0)];if(Zt01(ZsW)){Z532=Z_G(ZsW);Zmx((T7*)(ZKR),Z832);Z932(C,ZKR);ZFx((T7*)(ZKR),(T2)(ZGs(1)));
+Zmx((T7*)(ZKR),Za32);Z932(C,ZKR);Zmx((T7*)(ZKR),Zb32);(((void)((Zj8*)(Zc32()))),Zwr1(ZKR,Zd32,Z532));Zmx((T7*)(ZKR),Ze32);}else{Zmx((T7*)(ZKR),Zf32);
+}}void Zg32(Z78*C,T0*a1){Zmx(((T7*)a1),Zh32);Z6t(Zi32(C),a1);}T0*Zj32(void){if(Z7P==0){Z7P=1;{T81 Z9P={Zo,Zo,0};{Z83*n=((Z83*)Zh(sizeof(*n)));
+*n=Zge;Z6P=((T0*)n);ZaP(n,Z9P);}}}return Z6P;}T0*Zk32(Z78*C){T0*R=Zo;if((((C)->ZVc))!=(Zo)){R=(((Z78*)(((C)->ZVc)))->ZSc);}return R;}
+void Zl32(Z78*C,T0*a1,T0*a2,T0*a3,T0*a4,T0*a5,T0*a6){(C->ZQc)=a1;(C->ZRc)=a2;(C->Zfe)=a3;(C->ZFj)=a4;(C->ZSc)=a5;(C->ZVc)=a6;}T6 Zm32(void){
+T6 R=0;return R;}T6 Zn32(Z78*C){T6 R=0;T0*Z9T=Zo;Z9T=((void*)C);R=((T6)((Z9T)!=((void*)(Zo))));return R;}void Zo32(Z78*C,T0*a1){Zmx(((T7*)a1),ZaT);
+Z6t(Zi32(C),a1);}T6 Zp32(Z78*C){T6 R=0;T0*ZjL=Zo;if((((C)->ZVc))!=(Zo)){ZjL=((C)->ZVc);if((C)==((void*)(ZjL))){if((((((Z78*)ZjL))->ZVc))==((void*)(ZjL))){
+R=((T6)((((((Z78*)ZjL))->ZSc))==((void*)(Zk32(((Z78*)ZjL))))));}}}return R;}void Zq32(Z78*C,T0*a1){Zmx(((T7*)a1),Zr32);Zg32(C,a1);Zmx(((T7*)a1),Zs32);
+Zg32(C,a1);Zmx(((T7*)a1),Zt32);Zg32(C,a1);Zmx(((T7*)a1),Zu32);Zg32(C,a1);Zmx(((T7*)a1),Zv32);Zg32(C,a1);Zmx(((T7*)a1),Zw32);Zg32(C,a1);
+Zmx(((T7*)a1),Zx32);Zg32(C,a1);Zmx(((T7*)a1),Zy32);}void Zz32(Z78*C){T0*ZsW=Zo;T0*ZiL=Zo;T0*ZJH=Zo;ZJH=Z632(C);ZCP(((ZZ3*)ZJH));ZsW=(((((ZY*)(((C)->ZFj))))->ZUb))[ZGs(0)];
+if(ZqU(ZsW)){ZCP((ZZ3*)(Z_G(ZsW)));}ZiL=ZZa1(((ZZ3*)ZJH),ZQJ);ZiL=ZZa1(((ZZ3*)ZJH),ZbK);if(ZX01(ZsW)){if((Zg_((ZZ3*)(Z_G(ZsW))))!=((void*)(Zo))){
+ZiL=ZZa1(((ZZ3*)ZJH),ZeJ);}}}T2 Zi32(Z78*C){T2 R=0;R=(((ZZ3*)(Z632(C)))->_id);return R;}T2 ZA32(void){T2 R=0;T8 Z4W=Zo;R=sizeof(T8);return
+R;}void ZB32(Z78*C){((((T7*)((T7*)(ZgT))))->Zdc)=(ZGs(0));Zgt((T7*)(ZgT),((T3)'\050'));{Z78*C1=C;T0*b1=ZgT;ZC32(C1,b1);}Zgt((T7*)(ZgT),((T3)'\051'));
+ZgM((Z84*)(ZkH),ZgT);}void ZC32(Z78*C,T0*a1){Zgt(((T7*)a1),((T3)'T'));Z6t(Zi32(C),a1);}T6 ZD32(Z78*C,T0*a1){T6 R=0;R=((T6)(ZxT(((((ZY*)(((C)->ZFj)))->ZUb))[ZGs(0)],a1)));
+return R;}void ZE32(Z78*C,T81 a1,T0*a2){{T85*n=((T85*)Zh(sizeof(*n)));*n=M85;Zu81(n,ZiI,a1);(C->Zfe)=((T0*)n);}{ZY*n=((ZY*)Zh(sizeof(*n)));
+*n=Zoc;Z2y(n,(T2)(ZGs(1)),(T2)(ZGs(1)));(C->ZFj)=((T0*)n);}{ZY*C1=(ZY*)(((C)->ZFj));T0*b1=a2;T2 b2=(T2)(ZGs(1));(((C1)->ZUb))[(Z3)(((b2))-(((C1)->ZXb)))]=(b1);
+}ZWw((T7*)(ZvT),ZiI);Zgt((T7*)(ZvT),((T3)'\133'));Zmx((T7*)(ZvT),ZcT(a2));Zgt((T7*)(ZvT),((T3)'\135'));(C->ZSc)=(((void)((T27*)(ZF32()))),ZCG(ZvT));
+if(ZyW(a2)){(C->ZGj)=((T6)((ZnH(a2))==((void*)(a2))));}if(((C)->ZGj)){(C->ZVc)=((T0*)(C));}}void ZG32(T0*a1){{T0*b1=a1;Zmx((T7*)(Z2G),b1);
+}ZaG((T80*)(Z4G));}T0*Zc32(void){if(ZNM==0){ZNM=1;{{Zj8*n=((Zj8*)Zh(sizeof(*n)));*n=ZOk;ZMM=((T0*)n);}}}return ZMM;}void ZH32(Z78*C,T0*a1){
+Zmx(((T7*)a1),ZI32);ZJ32(C,a1);Zmx(((T7*)a1),ZK32);Zmx(((T7*)a1),Zk32(C));Zmx(((T7*)a1),ZL32);ZJ32(C,a1);Zmx(((T7*)a1),ZM32);}T0*ZF32(void){
+if(ZTH==0){ZTH=1;{{T27*n=((T27*)Zh(1));ZSH=((T0*)n);ZUH(ZVH);ZUH(ZWH);ZUH(ZXH);ZUH(ZYH);ZUH(ZZH);ZUH(Z_H);ZUH(Z0I);ZUH(Z1I);ZUH(Z2I);
+ZUH(Z3I);ZUH(Z4I);ZUH(Z5I);ZUH(Z6I);ZUH(Z7I);ZUH(Z8I);ZUH(Z9I);ZUH(ZaI);ZUH(ZbI);ZUH(ZcI);ZUH(ZdI);ZUH(ZeI);ZUH(ZfI);ZUH(ZgI);ZUH(ZhI);
+ZUH(ZiI);ZUH(ZjI);ZUH(ZkI);ZUH(ZlI);ZUH(ZmI);ZUH(ZnI);ZUH(ZoI);ZUH(ZpI);ZUH(ZqI);ZUH(ZrI);ZUH(ZsI);ZUH(ZtI);ZUH(ZuI);ZUH(ZvI);ZUH(ZwI);
+ZUH(ZxI);ZUH(ZyI);ZUH(ZzI);ZUH(ZAI);ZUH(ZBI);ZUH(ZCI);ZUH(ZDI);ZUH(ZEI);ZUH(ZFI);ZUH(ZGI);ZUH(ZHI);ZUH(ZII);ZUH(ZJI);ZUH(ZKI);ZUH(ZLI);
+ZUH(ZMI);ZUH(ZNI);ZUH(ZOI);ZUH(ZPI);ZUH(ZQI);ZUH(ZAG);ZUH(ZzG);ZUH(ZRI);ZUH(ZyG);ZUH(ZxG);ZUH(ZuG);ZUH(ZSI);ZUH(ZvG);ZUH(ZTI);ZUH(ZUI);
+ZUH(ZVI);ZUH(ZWI);ZUH(ZXI);ZUH(ZtG);ZUH(ZYI);ZUH(ZZI);ZUH(Z_I);ZUH(Z0J);ZUH(Z1J);ZUH(Z2J);ZUH(ZvH);ZUH(Z3J);ZUH(Z4J);ZUH(Z5J);ZUH(Z6J);
+ZUH(Z7J);ZUH(Z8J);ZUH(Z9J);ZUH(ZaJ);ZUH(ZbJ);ZUH(ZcJ);ZUH(ZdJ);ZUH(ZeJ);ZUH(ZfJ);ZUH(ZgJ);ZUH(ZhJ);ZUH(ZiJ);ZUH(ZjJ);ZUH(ZkJ);ZUH(ZlJ);
+ZUH(ZmJ);ZUH(ZnJ);ZUH(ZoJ);ZUH(ZpJ);ZUH(ZqJ);ZUH(ZrJ);ZUH(ZsJ);ZUH(ZtJ);ZUH(ZuJ);ZUH(ZvJ);ZUH(ZwJ);ZUH(ZxJ);ZUH(ZyJ);ZUH(ZzJ);ZUH(ZAJ);
+ZUH(ZBJ);ZUH(ZCJ);ZUH(ZDJ);ZUH(ZEJ);ZUH(ZFJ);ZUH(ZGJ);ZUH(ZHJ);ZUH(ZIJ);ZUH(ZJJ);ZUH(ZKJ);ZUH(ZLJ);ZUH(ZMJ);ZUH(ZNJ);ZUH(ZOJ);ZUH(ZwG);
+ZUH(ZPJ);ZUH(ZQJ);ZUH(ZRJ);ZUH(ZSJ);ZUH(ZTJ);ZUH(ZUJ);ZUH(ZVJ);ZUH(ZWJ);ZUH(ZXJ);ZUH(ZYJ);ZUH(ZZJ);ZUH(Z_J);ZUH(Z0K);ZUH(Z1K);ZUH(Z2K);
+ZUH(Z3K);ZUH(Z4K);ZUH(Z5K);ZUH(Z6K);ZUH(Z7K);ZUH(Z8K);ZUH(Z9K);ZUH(ZaK);ZUH(ZbK);ZUH(ZcK);ZUH(ZdK);ZUH(ZeK);ZUH(ZfK);ZUH(ZgK);ZUH(ZhK);
+ZUH(ZiK);ZUH(ZjK);ZUH(ZkK);ZUH(ZlK);ZUH(ZmK);ZUH(ZnK);ZUH(ZoK);ZUH(ZpK);ZUH(ZqK);ZUH(ZrK);ZUH(ZsK);ZUH(ZtK);ZUH(ZuK);ZUH(ZvK);ZUH(ZwK);
+ZUH(ZxK);ZUH(ZyK);ZUH(ZzK);ZUH(ZAK);ZUH(ZBK);ZUH(ZCK);ZUH(ZDK);ZUH(ZEK);ZUH(ZFK);ZUH(ZGK);ZUH(ZHK);ZUH(ZIK);ZUH(ZJK);ZUH(ZKK);ZUH(ZLK);
+ZUH(ZMK);ZUH(ZXH);ZUH(ZNK);ZUH(ZOK);ZUH(ZPK);ZUH(ZQK);ZUH(ZRK);ZUH(ZSK);ZUH(ZTK);ZUH(ZUK);ZUH(ZVK);ZUH(ZWK);ZUH(ZXK);ZUH(ZYK);ZUH(ZZK);
+}}}return ZSH;}T0*ZN32(Z78*C){T0*R=Zo;T0*ZKT=Zo;if((((C)->ZQc))!=((void*)(Zo))){R=((C)->ZQc);}else{ZKT=((C)->Zfe);if((ZKT)!=((void*)(Zo))){
+(C->ZQc)=ZLT(((T85*)ZKT));R=((C)->ZQc);}else{{T0*b1=Z1G(27,"Cannot find Base Class for ");Zmx((T7*)(Z2G),b1);}ZMT((T0*)C,Z0O);ZaG((T80*)(Z4G));
+}}return R;}void ZO32(Z78*C,T0*a1){Zgt(((T7*)a1),((T3)'\045'));Zgt(((T7*)a1),((T3)'E'));Z6t(Zi32(C),a1);Zgt(((T7*)a1),((T3)'\045'));}
+void ZP32(Z78*C){if((Z3)(((((T89*)(ZPM))->Zaf))>=(ZGs(2)))){ZQT((ZZ3*)(Z632(C)));}}T6 ZQ32(void){T6 R=0;return R;}T6 ZR32(Z78*C){T6 R=0;
+T0*ZST=Zo;ZST=Zo;R=((T6)((ZST)!=((void*)(Zo))));return R;}void ZS32(Z78*C){T0*ZJH=Zo;T2 ZVR=0;ZJH=Z632(C);ZVR=((((ZZ3*)ZJH))->_id);ZWw((T7*)(ZYR),ZT32);
+Zg32(C,ZYR);ZWw((T7*)(ZKR),ZU32);Zo32(C,ZKR);Zgt((T7*)(ZKR),((T3)'\175'));ZvS((Z84*)(ZkH),ZYR,ZKR);if((((Zj8*)(Zc32()))->ZMk)){ZWw((T7*)(ZYR),Z5T);
+Zgt((T7*)(ZYR),((T3)'\040'));ZJ32(C,ZYR);Z6T((Z84*)(ZkH),ZYR,((T3)'0'));}}void ZV32(Z78*C){T0*ZsW=Zo;T0*Z532=Zo;T2 ZVR=0;ZsW=(((((ZY*)(((C)->ZFj))))->ZUb))[ZGs(0)];
+Z532=Z_G(ZsW);ZVR=(((ZZ3*)(Z632(C)))->_id);ZWw((T7*)(ZYR),ZHR);Zgt((T7*)(ZYR),((T3)'\040'));Zo32(C,ZYR);Zmx((T7*)(ZYR),ZW32);Z6t(ZVR,ZYR);
+Zmx((T7*)(ZYR),ZX32);((((T7*)((T7*)(ZKR))))->Zdc)=(ZGs(0));Z432(C);ZdS((Z84*)(ZkH),ZYR,ZKR);((((T7*)((T7*)(ZYR))))->Zdc)=(ZGs(0));Zgt((T7*)(ZYR),((T3)'T'));
+Z6t(ZVR,ZYR);Zgt((T7*)(ZYR),((T3)'\040'));Zmx((T7*)(ZYR),ZwS);Z6t(ZVR,ZYR);Zmx((T7*)(ZYR),ZY32);ZWw((T7*)(ZKR),ZZ32);ZmW(ZsW,ZKR);Zmx((T7*)(ZKR),Z_32);
+if((((Zj8*)(Zc32()))->ZMk)){ZJ32(C,ZKR);Zmx((T7*)(ZKR),Z042);}Zmx((T7*)(ZKR),Z142);Zg32(C,ZKR);Zmx((T7*)(ZKR),Z242);Zg32(C,ZKR);Zmx((T7*)(ZKR),Z342);
+Zg32(C,ZKR);Zmx((T7*)(ZKR),Z442);Zg32(C,ZKR);Zmx((T7*)(ZKR),Z542);Zg32(C,ZKR);Zmx((T7*)(ZKR),Z642);Zg32(C,ZKR);Zmx((T7*)(ZKR),Z742);Zg32(C,ZKR);
+Zmx((T7*)(ZKR),Z842);Zg32(C,ZKR);Zmx((T7*)(ZKR),Z942);Z6t(ZVR,ZKR);Zmx((T7*)(ZKR),Za42);Z6t(ZVR,ZKR);Zmx((T7*)(ZKR),Zb42);Zg32(C,ZKR);
+Zmx((T7*)(ZKR),Zc42);ZdS((Z84*)(ZkH),ZYR,ZKR);}void Z932(Z78*C,T0*a1){T0*ZsW=Zo;ZsW=(((((ZY*)(((C)->ZFj))))->ZUb))[ZGs(0)];Zgt(((T7*)a1),((T3)'T'));
+if(ZbL(ZsW)){Zgt(((T7*)a1),((T3)'0'));Zgt(((T7*)a1),((T3)'\052'));}else{Z6t(ZEM(ZsW),a1);}Zgt(((T7*)a1),((T3)'\052'));}void Zd42(T0*a1){
+ZdU(a1,ZeU);ZdU(a1,ZV01);ZgU(a1,((T3)'\n'));}T6 Ze42(Z78*C,T0*a1){T6 R=0;R=((T6)((Z632(C))==((void*)(Z_G(a1)))));if(!(R)){ZiU((T0*)C,a1);
+}return R;}T0*Zf42(Z78*C){T0*R=Zo;{T81 Zow;if(!(((((*(Zow=Zg42(C),&Zow))).Zxb))==(ZGs(0)))){{T81 ZH81;R=ZkU(&((*(ZH81=Zg42(C),&ZH81))));
+}}}return R;}T0*Zh42(Z78*C,T0*a1){T0*R=Zo;T0*ZTO1=Zo;T0*ZUO1=Zo;T0*ZVO1=Zo;if(((C)->ZGj)){R=((T0*)(C));ZTO1=ZxP(((((ZY*)(((C)->ZFj)))->ZUb))[ZGs(0)],a1);
+Zz32(C);}else{ZTO1=((((ZY*)(((C)->ZFj)))->ZUb))[ZGs(0)];ZUO1=ZxP(ZTO1,a1);if((T6)(((ZUO1)==((void*)(Zo)))||((T6)(!(ZyW(ZUO1)))))){if((ZUO1)!=((void*)(Zo))){
+{T81 Zow;Z5G((*(Zow=ZrP(ZUO1),&Zow)));}}{T81 Zow;Z5G((*(Zow=ZrP(ZTO1),&Zow)));}ZG32(ZWO1);}ZUO1=ZnH(ZUO1);if((((C)->ZVc))==((void*)(Zo))){
+{T81 Zow;{Z78*n=((Z78*)Zh(sizeof(*n)));*n=ZFk;ZE32(n,(*(Zow=Zg42(C),&Zow)),ZUO1);(C->ZVc)=((T0*)n);}}Zz32((Z78*)(((C)->ZVc)));R=((T0*)(C));
+}else{ZVO1=((((ZY*)((((Z78*)(((C)->ZVc)))->ZFj)))->ZUb))[ZGs(0)];if((T6)(((ZUO1)==((void*)(ZVO1)))||((T6)((Z9G(ZUO1))==((void*)(Z9G(ZVO1))))))){
+R=((T0*)(C));}else{{T81 Zow;{Z78*n=((Z78*)Zh(sizeof(*n)));*n=ZFk;ZE32(n,(*(Zow=Zg42(C),&Zow)),ZUO1);R=((T0*)n);}}{Z78*n=((Z78*)Zh(sizeof(*n)));
+*n=ZFk;Zl32(n,((C)->ZQc),Z632(((Z78*)R)),((C)->Zfe),((C)->ZFj),((C)->ZSc),R);R=((T0*)n);}}}}return R;}T0*Zi42(Z78*C){T0*R=Zo;T0*ZuU=Zo;
+ZuU=((C)->Zfe);if((ZuU)!=((void*)(Zo))){R=ZLT(((T85*)ZuU));}return R;}T0*Z632(Z78*C){T0*R=Zo;if((((C)->ZRc))!=((void*)(Zo))){R=((C)->ZRc);
+}else if((((C)->ZVc))!=(Zo)){(C->ZRc)=ZyU(((C)->ZVc));R=((C)->ZRc);}return R;}void Zj42(Z78*C){T0*ZsW=Zo;Zgu1((ZZ3*)(Z_G(((((ZY*)(((C)->ZFj)))->ZUb))[ZGs(0)])));
+ZsW=ZnH((((((ZY*)(((C)->ZFj))))->ZUb))[ZGs(0)]);ZWw((T7*)(ZvT),Z_S);Z932(C,ZvT);Zgt((T7*)(ZvT),((T3)'T'));Z6t(Zi32(C),ZvT);Zmx((T7*)(ZvT),Zk42);
+Z6t(Zi32(C),ZvT);Zmx((T7*)(ZvT),Zl42);ZgM((Z84*)(ZkH),ZvT);}T81 Zg42(Z78*C){T81 R={Zo,Zo,0};R=(((T85*)(((C)->Zfe)))->ZCb);return R;}T0*Zm42(Z78*C,T0*a1){
+T0*R=Zo;T0*Zvg1=Zo;Zvg1=ZnH(a1);if(ZJG(Zvg1,((C)->ZVc))){R=Zvg1;}else if(Ze42((Z78*)(((C)->ZVc)),Zvg1)){R=((C)->ZVc);}else{R=Zj32();}
+((((T7*)((T7*)(Z2G))))->Zdc)=(ZGs(0));((((T82*)((T82*)(ZQG()))))->ZWb)=(ZGs(-1));return R;}void ZJ32(Z78*C,T0*a1){Zmx(((T7*)a1),ZEU);
+Z6t(Zi32(C),a1);}void Zn42(Z78*C,T0*a1){Zmx(((T7*)a1),ZwS);Z6t(Zi32(C),a1);Zgt(((T7*)a1),((T3)'\050'));Zgt(((T7*)a1),((T3)'\051'));}void
+Zo42(Zf8*C){if((((C)->ZFb))!=((void*)(Zo))){ZhH((Za3*)(((C)->ZFb)));}}void Zp42(Zf8*C){Z2Z((Z84*)(ZkH),((C)->Z3c),((C)->ZFb));Z3Z(((C)->Z3c));
+Z4Z((Z84*)(ZkH));}void Zq42(Zf8*C,T81 a1,T0*a2,T0*a3){(C->ZCb)=a1;(C->ZAd)=a2;(C->ZFb)=a3;}void Zr42(T0*a1){{T0*b1=a1;Zmx((T7*)(Z2G),b1);
+}ZaG((T80*)(Z4G));}T0*Zs42(Zf8*C,T0*a1){T0*R=Zo;T0*ZyL=Zo;T0*ZdZ=Zo;T0*ZeZ=Zo;ZyL=Z0X(a1);ZdZ=((((ZX4*)ZyL))->Zvb);ZeZ=((((T87*)ZdZ))->Zlg);
+if((ZeZ)==((void*)(Zo))){Z5G(((C)->ZCb));Zr42(Z1G(71,"Precursor call is allowed only when the enclosing routine is redefined."));}else{
+R=ZfZ(((Z7a*)ZeZ),(T0*)C,a1);}return R;}void Zt42(Zf8*C){if((((C)->ZFb))!=((void*)(Zo))){ZMH((Za3*)(((C)->ZFb)));}}void Zu42(Zf8*C,T0*a1){
+T0*ZKO=Zo;if((((C)->ZFb))!=((void*)(Zo))){ZKO=Z1H((Za3*)(((C)->ZFb)),a1);if((ZKO)==((void*)(Zo))){{T81 Zow;Z5G((*(Zow=Z2H((Za3*)(((C)->ZFb))),&Zow)));
+}{T0*b1=ZiZ;Zmx((T7*)(Z2G),b1);}ZaG((T80*)(Z4G));}else{(C->ZFb)=ZKO;}}ZpG(((C)->ZCb),((C)->ZFb),((C)->Z3c));}T0*Zv42(T0*a1,T0*a2){T0*R=Zo;
+{ZD8*n=((ZD8*)Zh(sizeof(*n)));*n=Zfn;ZkZ(n,(T2)((((T87*)(((((ZX4*)a2))->Zvb)))->_id)),a1);R=((T0*)n);}return R;}T0*Zw42(Zf8*C,T0*a1){
+T0*R=Zo;{Zp8*n=((Zp8*)Zh(sizeof(*n)));*n=Z2l;ZzR(n,(T0*)C,a1);R=((T0*)n);}return R;}T0*Zx42(Zf8*C,T0*a1){T0*R=Zo;T0*ZoZ=Zo;T0*ZpZ=Zo;
+T0*ZqZ=Zo;if((((C)->Z4c))==((void*)(Zo))){(C->Z4c)=a1;R=((T0*)(C));ZoZ=ZPH();if((ZiH(ZoZ))!=((void*)(Zo))){Z5G(((C)->ZCb));Zr42(Z1G(83,"Inside a function, a Precursor call must be a function call (not a procedure call)."));
+}ZpZ=Zs42(C,ZoZ);ZqZ=Zv42(((((ZQ7*)ZoZ))->Zpc),ZpZ);(C->Z3c)=ZjD(((ZR6*)((((ZZ3*)(Z_G(a1)))->Ztg))),ZqZ);if((((C)->Z3c))==((void*)(Zo))){
+{Zi7*n=((Zi7*)Zh(sizeof(*n)));*n=ZWj;ZQS1(n,a1,ZqZ,ZpZ);(C->Z3c)=((T0*)n);}}Zu42(C,a1);}else{{Zf8*n=((Zf8*)Zh(sizeof(*n)));*n=ZJk;Zq42(n,((C)->ZCb),((C)->ZAd),((C)->ZFb));
+R=((T0*)n);}R=Zx42(((Zf8*)R),a1);}return R;}void Zy42(Zf8*C){if((((C)->ZFb))!=((void*)(Zo))){ZGL((Za3*)(((C)->ZFb)));}}void Zz42(ZZ8*C){
+Z5G(((C)->ZCb));{T0*b1=Z1G(63,"A separate target must be an argument of the enclosing routine.");Zmx((T7*)(Z2G),b1);}ZaG((T80*)(Z4G));
+}void ZwL(ZZ8*C,T81 a1){(C->ZCb)=a1;{Zh8*n=((Zh8*)Zh(sizeof(*n)));*n=ZKk;ZD31(n,((C)->ZCb));(C->Zlc)=((T0*)n);}}T6 ZA42(T0*a1){T6 R=0;
+return R;}T0*ZB42(ZZ8*C){T0*R=Zo;if((((C)->Zlc))!=((void*)(Zo))){R=ZsO(((C)->Zlc));}return R;}void ZC42(Zl8*C){if((T6)((ZX01(((C)->Zlc)))&&((T6)(!(ZPX(((C)->Zlc))))))){
+ZdL((Z84*)(ZkH),((T3)'\052'));}Zge1((Z84*)(ZkH));}T6 ZD42(T0*a1){T6 R=0;return R;}void ZE42(Zl8*C,T0*a1){T0*ZjL=Zo;ZjL=ZnH(((C)->Zlc));
+if(ZbL(ZjL)){if(ZbL(a1)){ZgM((Z84*)(ZkH),ZOu1);Zge1((Z84*)(ZkH));}else{Zge1((Z84*)(ZkH));}}else if(ZbL(a1)){Zge1((Z84*)(ZkH));}else if(ZX01(ZjL)){
+if(!(ZPX(ZjL))){ZdL((Z84*)(ZkH),((T3)'\052'));}Zge1((Z84*)(ZkH));}else{Zge1((Z84*)(ZkH));}}void ZF42(Zl8*C){Z5G(((C)->ZCb));{T0*b1=Z1G(63,"A separate target must be an argument of the enclosing routine.");
+Zmx((T7*)(Z2G),b1);}ZaG((T80*)(Z4G));}void ZG42(Zl8*C){{T0*b1=ZAH;Zmx((T7*)(Z2G),b1);}Z5G(((C)->ZCb));Z3G((T80*)(Z4G));}T6 ZH42(T0*a1){
+T6 R=0;return R;}void ZI42(T0*a1){T6 Z8L=0;Z8L=((T6)(ZaL((Z84*)(ZkH),a1)));Zge1((Z84*)(ZkH));if(Z8L){ZgL((Z84*)(ZkH));}}T2 ZJ42(Zl8*C){
+T2 R=0;ZG42(C);return R;}T0*ZK42(Zl8*C,T0*a1){T0*R=Zo;if((((C)->Zlc))==((void*)(Zo))){(C->Zlc)=a1;R=((T0*)(C));}else{R=ZK42((Zl8*)(ZL42(C)),a1);
+}return R;}T0*ZM42(Zl8*C){T0*R=Zo;R=((((C)->ZCb)).Zvb);return R;}T0*ZL42(Zl8*C){T0*R=Zo;{Zl8*n=((Zl8*)Zh(sizeof(*n)));*n=ZPk;((((Zl8*)(n)))->ZCb)=(((C)->ZCb));
+R=((T0*)n);}return R;}T0*ZN42(Zn8*C,T0*a1,T0*a2){T0*R=Zo;{T81 Zow;Z5G((*(Zow=ZO42(C),&Zow)));}ZP42(((((ZD8*)a1))->ZCb),Z1G(42,"An attribute must not be undefined (VDUS)."));
+ZTN(((T87*)a2),a1);return R;}void ZP42(T81 a1,T0*a2){Z5G(a1);{T0*b1=a2;Zmx((T7*)(Z2G),b1);}Z3G((T80*)(Z4G));}T6 ZQ42(Zn8*C,T0*a1,T0*a2){
+T6 R=0;if((((C)->Zlc))!=((void*)(ZBL(a1)))){if((T6)(((((C)->Zlc))==((void*)(Zo)))||((T6)((ZBL(a1))==((void*)(Zo)))))){{T81 Zow;Z5G((*(Zow=ZVN(a1),&Zow)));
+}{T81 Zow;ZP42((*(Zow=ZO42(C),&Zow)),ZWN);}}}if((Zo)!=((void*)(ZXN(a1)))){{T81 Zow;Z5G((*(Zow=ZVN(a1),&Zow)));}{T81 Zow;ZP42((*(Zow=ZO42(C),&Zow)),ZYN);
+}}if(((((T80*)(Z4G))->ZEg))==(ZGs(0))){if((((C)->Zlc))!=((void*)(Zo))){if(!(ZZN(ZBL(a1),((C)->Zlc),a2,(T6)(0)))){{T0*b1=Z_N;Zmx((T7*)(Z2G),b1);
+}{T0*b1=Z9G(((((ZZ3*)a2))->Z4c));Zmx((T7*)(Z2G),b1);}{T0*b1=Z0O;Zmx((T7*)(Z2G),b1);}Z3G((T80*)(Z4G));}}}if(((((T80*)(Z4G))->ZEg))==(ZGs(0))){
+}R=((T6)(((((T80*)(Z4G))->ZEg))==(ZGs(0))));if(R){ZR42(C,a1);}return R;}void ZR42(Zn8*C,T0*a1){if((((T43*)(ZSG))->ZRk)){if((((C)->ZHb))==((void*)(Zo))){
+(C->ZHb)=Z2O(a1);}else if((Z2O(a1))==((void*)(Zo))){Z3O(a1,((C)->ZHb));}}}void ZS42(Zn8*C,T0*a1){T2 Zet=0;T0*Z5O=Zo;T0*Z6O=Zo;(C->Zvb)=(((((ZD8*)(Z7O((Zz8*)(((C)->Zkc)),ZGs(1))))->ZCb)).Zvb);
+Zet=ZGs(1);while(!((Z3)((Zet)>(Z8O((Zz8*)(((C)->Zkc))))))){Z5O=Z7O((Zz8*)(((C)->Zkc)),Zet);Z6O=Z3D(((Zp6*)a1),Z5O);if((Z6O)!=((void*)(Zo))){
+Z5O=((((Zz8*)(((((ZX4*)Z6O))->Zkc))))->ZGd);Z5G(((((ZD8*)Z5O))->ZCb));Z5G((((ZD8*)(Z7O((Zz8*)(((C)->Zkc)),Zet)))->ZCb));{T0*b1=Z1G(29,"Double definition of feature ");
+Zmx((T7*)(Z2G),b1);}{T0*b1=((((ZD8*)Z5O))->Zse);Zmx((T7*)(Z2G),b1);}{T0*b1=Z0O;Zmx((T7*)(Z2G),b1);}Z3G((T80*)(Z4G));}else{Z0D(((Zp6*)a1),(T0*)C,Z5O);
+}Zet=(Z3)(((Zet))+(ZGs(1)));}}T0*ZT42(Zn8*C,T0*a1,T0*a2){T0*R=Zo;T0*ZaO=Zo;Z5G(((((ZD8*)a1))->ZCb));ZaO=ZbO((Zz8*)(((C)->Zkc)),((((ZD8*)a1))->Zcn));
+if((ZaO)!=((void*)(Zo))){ZcO(((ZD8*)ZaO),a2);}((((T7*)((T7*)(Z2G))))->Zdc)=(ZGs(0));((((T82*)((T82*)(ZQG()))))->ZWb)=(ZGs(-1));R=ZN42(C,a1,a2);
+if((R)!=((void*)(Zo))){((((ZE3*)(((ZE3*)R))))->Zjc)=(((C)->Zjc));ZR42(C,R);}else{ZTN(((T87*)a2),a1);}return R;}void ZU42(Zn8*C,T0*a1,T0*a2){
+T2 Zet=0;T2 Z3x=0;T0*ZKX=Zo;((((Zn8*)(C)))->Zkc)=(a1);(C->Zlc)=a2;Zet=Z8O((Zz8*)(((C)->Zkc)));{ZU5*n=((ZU5*)Zh(sizeof(*n)));*n=ZZh;ZBC(n,Zet);
+(C->ZUg)=((T0*)n);}Z3x=ZGs(1);while(!((Zet)==(ZGs(0)))){ZdQ((Zh6*)(ZV42));{Zw1*n=((Zw1*)Zh(sizeof(*n)));*n=ZQl;ZMN(n,(T11)((((Zh6*)(ZV42))->Zde)),(((ZD8*)(Z7O((Zz8*)(((C)->Zkc)),Z3x)))->ZCb));
+ZKX=((T0*)n);}ZAC((ZU5*)(((C)->ZUg)),ZKX);Z3x=(Z3)(((Z3x))+(ZGs(1)));Zet=(Z3)(((Zet))-(ZGs(1)));}}T0*ZV42=Zo;T0*ZW42(Zn8*C,T0*a1,T0*a2){
+T0*R=Zo;T0*ZJH=Zo;ZJH=Z_G(a1);R=ZjD(((ZR6*)(((((ZZ3*)ZJH))->Ztg))),a2);if(Zo!=(R)){switch(((T0*)R)->id){case 583:break;default:R=Zo;}
+}if((R)==((void*)(Zo))){{ZC7*n=((ZC7*)Zh(sizeof(*n)));*n=Zak;ZfO(n,a1,a2,(T0*)C);R=((T0*)n);}}return R;}T6 ZX42(Zn8*C,T0*a1){T6 R=0;if((((C)->Zlc))==((void*)(Zo))){
+R=((T6)((ZBL(a1))!=((void*)(Zo))));}else{R=((T6)((ZBL(a1))==((void*)(Zo))));}if(R){{T0*b1=ZWN;Zmx((T7*)(Z2G),b1);}}else{R=((T6)((ZXN(a1))!=((void*)(Zo))));
+if(R){{T0*b1=ZYN;Zmx((T7*)(Z2G),b1);}}}ZR42(C,a1);return R;}T81 ZO42(Zn8*C){T81 R={Zo,Zo,0};R=(((ZD8*)(((((Zz8*)(((C)->Zkc))))->ZGd)))->ZCb);
+return R;}void ZY42(T81 a1,T0*a2){Z5G(a1);{T0*b1=a2;Zmx((T7*)(Z2G),b1);}Z3G((T80*)(Z4G));}void ZZ42(Zp8*C){ZcN1(((C)->Z1l));}void Z_42(Zp8*C,T0*a1,T2
+a2){ZFW(((ZX6*)a1),a2);Z6N1(((ZX6*)a1),((C)->Z1l),a2);ZbN1(((C)->Z1l),a1,a2);}void Z052(Zp8*C){ZgN1(((C)->Z1l));}T6 Z152(Zp8*C,T0*a1){
+T6 R=0;R=((T6)(ZhN1(((C)->Z1l),a1)));return R;}void ZzR(Zp8*C,T0*a1,T0*a2){(C->Z1l)=a1;(C->Zqd)=a2;}void Z252(Zp8*C){ZiN1(((C)->Z1l));
+}T6 Z352(Zp8*C){T6 R=0;R=((T6)(ZjN1(((C)->Z1l))));return R;}T6 Z452(Zp8*C){T6 R=0;R=((T6)(ZlN1(((C)->Z1l))));return R;}void Z552(Zp8*C,T0*a1){
+ZrN1(((C)->Z1l),a1);}T6 Z652(Zp8*C){T6 R=0;R=((T6)(ZtN1(((C)->Z1l))));return R;}T0*Z752(Zp8*C,T0*a1){T0*R=Zo;{Zp8*n=((Zp8*)Zh(sizeof(*n)));
+*n=Z2l;ZzR(n,(T0*)C,a1);R=((T0*)n);}return R;}T0*Z852(Zp8*C,T0*a1){T0*R=Zo;T0*Z952=Zo;Z952=ZzL1(((C)->Z1l),a1);if((Z952)==((void*)(Zo))){
+{T81 Zow;ZY42((*(Zow=ZdN1(((C)->Z1l)),&Zow)),Z1G(16,"Bad instruction."));}R=((T0*)(C));}else if((Z952)==((void*)(((C)->Z1l)))){R=((T0*)(C));
+}else{{Zp8*n=((Zp8*)Zh(sizeof(*n)));*n=Z2l;ZzR(n,Z952,((C)->Zqd));R=((T0*)n);}}return R;}void Za52(Zp8*C){ZfN1(((C)->Z1l));}T81 Zb52(Zp8*C){
+T81 R={Zo,Zo,0};{T81 Zow;R=(*(Zow=ZdN1(((C)->Z1l)),&Zow));}return R;}
 #ifdef __cplusplus
 }
 #endif

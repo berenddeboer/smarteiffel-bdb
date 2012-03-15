@@ -37,17 +37,26 @@ feature
       
    frozen to_runnable(ct: E_TYPE): like Current is
       local
-	 t: E_TYPE
+         t: E_TYPE
       do
          if current_type = Void then
-	    current_type := ct
+            current_type := ct
             check_writable(ct)
-	    if type /= Void then
-	       check_explicit_type
-	       t := type
-	    else
-	       t := writable.result_type
-	    end
+            if type /= Void then
+               check_explicit_type
+               t := type
+            else
+               t := writable.result_type
+               type := fix_type (t)
+               if t /= type then
+                  -- Special case. fix_type changed, store result in `type'
+                  -- We're actually converting an implicit to explicit creation here.
+                  t := type
+               else
+                  -- Type was not fixed. Stay with implicit style
+                  type := Void
+               end
+            end
             check_created_type(t)
             check_create_clause(t)
             Result := Current
@@ -192,7 +201,6 @@ feature
 	 else
 	    t := writable.result_type
 	 end
-	 t := t.run_type
          compile_to_jvm0(t)
 	 if run_feature /= Void then
 	    jvm.inside_create_instruction(run_feature,call)
@@ -231,6 +239,8 @@ feature {NONE}
          else
             writable := w
          end
+      ensure
+         writable.result_type.is_run_type
       end
 
    c2c_opening(t: E_TYPE) is

@@ -88,7 +88,7 @@ feature {EXPORT_LIST_VISITOR}
 
 feature {NONE}
 
-   items: array[EXPORT_ITEM]
+   items: ARRAY [EXPORT_ITEM]
 
    make(sp: like start_position; i: like items) is
       require

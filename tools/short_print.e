@@ -141,7 +141,7 @@ feature
          s: STRING; c: CHARACTER; i: INTEGER
       do
          s := once ""
-         s.clear
+         s.clear_count
          value.append_in(s)
          from
             i := 1

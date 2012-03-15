@@ -62,7 +62,7 @@ feature
       require
          unicode_string /= Void
       do
-         tmp_string.clear
+         tmp_string.clear_count
          unicode_string.utf8_encode_in(tmp_string)
          put_string(tmp_string)
       end
@@ -74,7 +74,7 @@ feature -- To write a number:
       require
          is_connected
       do
-         tmp_string.clear
+         tmp_string.clear_count
          i.append_in(tmp_string)
          put_string(tmp_string)
       end
@@ -84,7 +84,7 @@ feature -- To write a number:
       require
          is_connected
       do
-         tmp_string.clear
+         tmp_string.clear_count
          i.append_in_format(tmp_string,s)
          put_string(tmp_string)
       end
@@ -94,7 +94,7 @@ feature -- To write a number:
       require
          is_connected
       do
-         tmp_string.clear
+         tmp_string.clear_count
          r.append_in(tmp_string)
          put_string(tmp_string)
       end
@@ -107,7 +107,7 @@ feature -- To write a number:
          is_connected
          f >= 0
       do
-         tmp_string.clear
+         tmp_string.clear_count
          r.append_in_format(tmp_string,f)
          put_string(tmp_string)
       end
@@ -117,7 +117,7 @@ feature -- To write a number:
       require
          is_connected
       do
-         tmp_string.clear
+         tmp_string.clear_count
          d.append_in(tmp_string)
          put_string(tmp_string)
       end
@@ -130,7 +130,7 @@ feature -- To write a number:
          is_connected
          f >= 0
       do
-         tmp_string.clear
+         tmp_string.clear_count
          d.append_in_format(tmp_string,f)
          put_string(tmp_string)
       end
@@ -140,7 +140,7 @@ feature -- To write a number:
       require
          number /= Void
       do
-         tmp_string.clear
+         tmp_string.clear_count
          number.append_in(tmp_string)
          put_string(tmp_string)
       end
@@ -153,7 +153,7 @@ feature -- Other features:
       require
          is_connected
       do
-         tmp_string.clear
+         tmp_string.clear_count
          b.append_in(tmp_string)
          put_string(tmp_string)
       end
@@ -163,7 +163,7 @@ feature -- Other features:
       require
          is_connected
       do
-         tmp_string.clear
+         tmp_string.clear_count
          p.append_in(tmp_string)
          put_string(tmp_string)
       end
@@ -195,7 +195,7 @@ feature -- Other features:
    append_file(file_name: STRING) is
       require
          is_connected
-         file_exists(file_name)
+         ftools.is_readable(file_name)
       local
          c: CHARACTER
       do
@@ -217,6 +217,8 @@ feature -- Other features:
 	 -- delayed, flush writes buffered characters)
       deferred
       end
+
+   ftools: FILE_TOOLS
 
 feature {NONE}
 
@@ -242,5 +244,6 @@ feature {NONE}
          !!Result.make(512)
       end
 
+   
 end -- OUTPUT_STREAM
 

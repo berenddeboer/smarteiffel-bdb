@@ -46,13 +46,13 @@ feature {TYPE_INTEGER_VISITOR}
 
 feature
 
-   is_integer: BOOLEAN is true
+   is_integer: BOOLEAN is True
 
    is_boolean,
    is_character,
    is_real,
    is_double,
-   is_pointer: BOOLEAN is false
+   is_pointer: BOOLEAN is False
 
    is_integer_general: BOOLEAN is
       do
@@ -118,7 +118,7 @@ feature
 	    other_type_integer ?= other.run_type
             Result := c_sizeof <= other_type_integer.c_sizeof
          elseif other.is_double or else other.is_real then
-            Result := true
+            Result := True
          else
 	    Result := is_a_end_hook(other.run_type)
 	 end
@@ -132,7 +132,7 @@ feature
          Result := Current
          if base_class /= Void then
 	    if run_class = Void then
-	       check false end
+	       check False end
 	    end
 	 end
       end

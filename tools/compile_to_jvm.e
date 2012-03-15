@@ -180,7 +180,7 @@ feature {NONE}
 	     or else
 	     is_verbose_flag(arg))
 	  then
-	    Result := true
+	    Result := True
 	 end
       end
 

@@ -510,10 +510,10 @@ feature {NONE}
             else
                obuffer.prepend(wbuffer)
             end
-            wbuffer.clear
+            wbuffer.clear_count
          end
          out_string(obuffer)
-         obuffer.clear
+         obuffer.clear_count
       end
 
    out_string(s: STRING) is
@@ -577,7 +577,7 @@ feature {NONE}
    column: INTEGER
    output: TEXT_FILE_WRITE
 
-   symbols: DICTIONARY[STRING, STRING] is
+   symbols: HASHED_DICTIONARY[STRING, STRING] is
       once
          create Result.with_capacity(4096)
       end

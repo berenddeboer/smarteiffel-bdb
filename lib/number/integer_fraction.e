@@ -182,7 +182,7 @@ feature
       do
 	 if numerator < 0 then
 	    n := (-numerator).to_number
-	    negative := true
+	    negative := True
 	 else
 	    n := numerator.to_number
 	 end
@@ -322,7 +322,7 @@ feature {NUMBER}
 
    greater_with_large_negative_integer(other: LARGE_NEGATIVE_INTEGER): BOOLEAN is
       once
-	 Result := true
+	 Result := True
       end
 
    greater_with_small_fraction(other: INTEGER_FRACTION): BOOLEAN is

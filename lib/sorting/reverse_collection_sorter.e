@@ -51,7 +51,7 @@ feature
       do
          i := c.lower
          c_upper := c.upper
-         Result := true
+         Result := True
          if c_upper > i then
             from
                elt1 := c.item(i)
@@ -103,7 +103,7 @@ feature
 	    loop
 	       sedb_breakpoint
 	       if min = max then
-		  stop := true
+		  stop := True
 		  if element < c.item(min) then
 		     Result := min + 1
 		  else
@@ -225,12 +225,12 @@ feature
          from
             imax := c.upper
             imin := c.lower
-            modified := true
+            modified := True
          until
             not modified or else imin >= imax
          loop
             from
-               modified := false
+               modified := False
                i := imax
                imin := imin + 1
             until
@@ -238,13 +238,13 @@ feature
             loop
                if c.item(i) > c.item(i - 1) then
                   c.swap(i ,i - 1)
-                  modified := true
+                  modified := True
                end
                i := i - 1
             end
             if modified then
                from
-                  modified := false
+                  modified := False
                   i := imin
                   imax := imax - 1
                until
@@ -252,7 +252,7 @@ feature
                loop
                   if c.item(i + 1) > c.item(i) then
                      c.swap(i ,i + 1)
-                     modified := true
+                     modified := True
                   end
                   i := i + 1
                end

@@ -9,6 +9,9 @@ class EXAMPLE1
 --       run_it some_directory_path
 --
 
+inherit
+    ARGUMENTS
+
 creation make
 
 feature {NONE}

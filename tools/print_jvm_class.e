@@ -57,7 +57,7 @@ feature {PRINT_JVM_CLASS_VISITOR}
 
 feature {NONE}
 
-   bytes: FIXED_ARRAY[INTEGER] is
+   bytes: FAST_ARRAY[INTEGER] is
          -- All bytes of the class file.
       once
          !!Result.with_capacity(4096)
@@ -121,7 +121,7 @@ feature {NONE}
          byte, i, index: INTEGER
          s: STRING
          interface_idx: INTEGER
-         access_flags: BIT Integer_bits
+         access_flags: INTEGER
       do
 	 path := arg.twin
 	 if not path.has_suffix(once ".class") then
@@ -184,7 +184,7 @@ feature {NONE}
 	    until
 	       i >= constant_pool_count
 	    loop
-	       tmp_string.clear
+	       tmp_string.clear_count
 	       integer_to_hexa_in(i,tmp_string)
 	       tmp_string.extend(' ')
 	       extend_string(tmp_string,' ',6)
@@ -204,21 +204,21 @@ feature {NONE}
 	    io.put_string(once "Access flag: ")
 	    io.put_string(hexa2_at(index))
 	    io.put_character(' ')
-	    access_flags := bytes.item(index + 1).to_bit
-	    if (access_flags and 1B).to_boolean then
+	    access_flags := bytes.item(index + 1)
+	    if access_flags.bit_test (0) then
 	       io.put_string(once "public ")
 	    end
-	    if (access_flags and 10000B).to_boolean then
+	    if access_flags.bit_test (4) then
 	       io.put_string(once "final (no subclass)")
 	    end
-	    if (access_flags and 100000B).to_boolean then
+	    if access_flags.bit_test (5) then
 	       io.put_string(once "invokespecial (for superclass) ")
 	    end
-	    access_flags := bytes.item(index).to_bit
-	    if (access_flags and 10B).to_boolean then
+	    access_flags := bytes.item(index)
+	    if access_flags.bit_test (1) then
 	       io.put_string(once "interface ")
 	    end
-	    if (access_flags and 100B).to_boolean then
+	    if access_flags.bit_test (2) then
 	       io.put_string(once "abstract ")
 	    end
 	    io.put_new_line
@@ -494,7 +494,7 @@ feature {NONE} -- Basic stuff to view values:
             index > bytes.upper
          loop
             if fz_visible.is_empty then
-               tmp_string.clear
+               tmp_string.clear_count
                integer_to_hexa_in(index,tmp_string)
                tmp_string.extend(' ')
                extend_string(tmp_string,' ',9)
@@ -550,7 +550,7 @@ feature {NONE} -- Basic stuff to view values:
          max := index
          if (at > 0) and (min <= at) and (at <= max) then
             from
-               tmp_string.clear
+               tmp_string.clear_count
                extend_string(tmp_string,'_',left_margin)
                i := min
             until
@@ -563,8 +563,8 @@ feature {NONE} -- Basic stuff to view values:
             io.put_string(once "^^%N*** Error at this byte%N")
             io.put_string(once "Remainder of the class file :%N")
          end
-         visible.clear
-         hexadec.clear
+         visible.clear_count
+         hexadec.clear_count
       ensure
          visible.is_empty
          hexadec.is_empty
@@ -576,7 +576,7 @@ feature {NONE} -- Basic stuff to view values:
          tag, i2, length: INTEGER
          utf8: STRING
       do
-         tmp_string.clear
+         tmp_string.clear_count
          tmp_string.append(once "item #")
          i.append_in(tmp_string)
          extend_string(tmp_string,' ',8)
@@ -689,7 +689,7 @@ feature {NONE} -- Basic stuff to view values:
                io.put_string(once ": ")
                cp_info := constant_pool.item(class_idx)
                if cp_info.tag.code = 1 then
-                  tmp_string.clear
+                  tmp_string.clear_count
                   constant_pool.view_in(tmp_string,i)
                   io.put_string(tmp_string)
                else
@@ -721,7 +721,7 @@ feature {NONE} -- Basic stuff to view values:
                io.put_string(once " : %"")
                cp_info := constant_pool.item(string_idx)
                if cp_info.tag.code = 1 then
-                  tmp_string.clear
+                  tmp_string.clear_count
                   constant_pool.view_in(tmp_string,i)
                   io.put_string(tmp_string)
                   io.put_string(once "%"")
@@ -756,7 +756,7 @@ feature {NONE} -- Basic stuff to view values:
             if constant_pool.valid_index(name_idx) then
                cp_info := constant_pool.item(name_idx)
                if cp_info.tag.code = 1 then
-                  tmp_string.clear
+                  tmp_string.clear_count
                   constant_pool.view_in(tmp_string,name_idx)
                   io.put_string(tmp_string)
                   io.put_string(once " type: ")
@@ -764,7 +764,7 @@ feature {NONE} -- Basic stuff to view values:
                   if constant_pool.valid_index(type_idx) then
                      cp_info := constant_pool.item(type_idx)
                      if cp_info.tag.code = 1 then
-                        tmp_string.clear
+                        tmp_string.clear_count
                         constant_pool.view_in(tmp_string,type_idx)
                         io.put_string(tmp_string)
                      else
@@ -786,7 +786,7 @@ feature {NONE} -- Basic stuff to view values:
             Result := index + 5
          when Constant_utf8 then -- CONSTANT_Utf8 :
             io.put_string(once "utf8: %"")
-            tmp_string.clear
+            tmp_string.clear_count
             constant_pool.view_in(tmp_string,i)
             io.put_string(tmp_string)
             io.put_string(once "%"")
@@ -808,12 +808,12 @@ feature {NONE} -- Basic stuff to view values:
             if cp_info.tag.code = 7 then
                utf8_idx := u2_to_integer(cp_info.info)
                if constant_pool.valid_index(utf8_idx) then
-                  tmp_string.clear
+                  tmp_string.clear_count
                   constant_pool.view_in(tmp_string,class_idx)
                   io.put_string(tmp_string)
                   io.put_string(once " name_and_type: ")
                   if constant_pool.valid_index(name_and_type_idx) then
-                     tmp_string.clear
+                     tmp_string.clear_count
                      constant_pool.view_in(tmp_string,name_and_type_idx)
                      io.put_string(tmp_string)
                   else
@@ -837,33 +837,33 @@ feature {NONE} -- Basic stuff to view values:
       local
          access_flags_idx, name_idx: INTEGER
          descriptor_idx, field_attributes_count: INTEGER
-         access_flags: BIT Integer_bits
+         access_flags: INTEGER
       do
          access_flags_idx := index
          Result := index + 2
          io.put_string(once "access flags (")
          io.put_string(hexa2_at(access_flags_idx))
          io.put_string(once "): ")
-         access_flags := bytes.item(access_flags_idx + 1).to_bit
-         if (access_flags and 1B).to_boolean then
+         access_flags := bytes.item(access_flags_idx + 1)
+         if access_flags.bit_test (0) then
             io.put_string(once "public ")
          end
-         if (access_flags and 10B).to_boolean then
+         if access_flags.bit_test (1) then
             io.put_string(once "private ")
          end
-         if (access_flags and 100B).to_boolean then
+         if access_flags.bit_test (2) then
             io.put_string(once "protected ")
          end
-         if (access_flags and 1000B).to_boolean then
+         if access_flags.bit_test (3) then
             io.put_string(once "static ")
          end
-         if (access_flags and 10000B).to_boolean then
+         if access_flags.bit_test (4) then
             io.put_string(once "final ")
          end
-         if (access_flags and 1000000B).to_boolean then
+         if access_flags.bit_test (6) then
             io.put_string(once "volatile ")
          end
-         if (access_flags and 10000000B).to_boolean then
+         if access_flags.bit_test (7) then
             io.put_string(once "transient ")
          end
          io.put_new_line
@@ -871,14 +871,14 @@ feature {NONE} -- Basic stuff to view values:
          name_idx := u2_integer_at(Result)
          Result := Result + 2
          if constant_pool.valid_index(name_idx) then
-            tmp_string.clear
+            tmp_string.clear_count
             constant_pool.view_in(tmp_string,name_idx)
             io.put_string(tmp_string)
             descriptor_idx := u2_integer_at(Result)
             Result := Result + 2
             io.put_string(once " descriptor: ")
             if constant_pool.valid_index(descriptor_idx) then
-               tmp_string.clear
+               tmp_string.clear_count
                constant_pool.view_in(tmp_string,descriptor_idx)
                io.put_string(tmp_string)
                field_attributes_count := u2_integer_at(Result)
@@ -913,7 +913,7 @@ feature {NONE} -- Basic stuff to view values:
          attribute_name_idx := u2_integer_at(index)
          Result := index + 2
          io.put_string(once "Attribute Name: ")
-         tmp_string.clear
+         tmp_string.clear_count
          constant_pool.view_in(tmp_string,attribute_name_idx)
          io.put_string(tmp_string)
          attribute_name := tmp_string.twin
@@ -936,50 +936,50 @@ feature {NONE} -- Basic stuff to view values:
       local
          access_flags_idx, name_idx: INTEGER
          descriptor_idx, method_attributes_count: INTEGER
-         access_flags: BIT Integer_bits
+         access_flags: INTEGER
       do
          access_flags_idx := index
          Result := index + 2
          io.put_string(once "access flags (")
          io.put_string(hexa2_at(access_flags_idx))
          io.put_string(once "): ")
-         access_flags := bytes.item(access_flags_idx + 1).to_bit
-         if (access_flags and 1B).to_boolean then
+         access_flags := bytes.item(access_flags_idx + 1)
+         if access_flags.bit_test (0) then
             io.put_string(once "public ")
          end
-         if (access_flags and 10B).to_boolean then
+         if access_flags.bit_test (1) then
             io.put_string(once "private ")
          end
-         if (access_flags and 100B).to_boolean then
+         if access_flags.bit_test (2) then
             io.put_string(once "protected ")
          end
-         if (access_flags and 1000B).to_boolean then
+         if access_flags.bit_test (3) then
             io.put_string(once "static ")
          end
-         if (access_flags and 10000B).to_boolean then
+         if access_flags.bit_test (4) then
             io.put_string(once "final ")
          end
-         if (access_flags and 100000B).to_boolean then
+         if access_flags.bit_test (5) then
             io.put_string(once "synchronized ")
          end
-         access_flags := bytes.item(access_flags_idx).to_bit
-         if (access_flags and 1B).to_boolean then
+         access_flags := bytes.item(access_flags_idx)
+         if access_flags.bit_test (0) then
             io.put_string(once "native ")
          end
-         if (access_flags and 100B).to_boolean then
+         if access_flags.bit_test (2) then
             io.put_string(once "abstract ")
          end
          io.put_new_line
          name_idx := u2_integer_at(Result)
          Result := Result + 2
          io.put_string(once "Method name: ")
-         tmp_string.clear
+         tmp_string.clear_count
          constant_pool.view_in(tmp_string,name_idx)
          io.put_string(tmp_string)
          io.put_string(once " descriptor: ")
          descriptor_idx := u2_integer_at(Result)
          Result := Result + 2
-         tmp_string.clear
+         tmp_string.clear_count
          constant_pool.view_in(tmp_string,descriptor_idx)
          io.put_string(tmp_string)
          io.put_new_line
@@ -1052,7 +1052,7 @@ feature {NONE} -- Basic stuff to view values:
             if cp_info.tag = cp_idx_type then
                constant_pool.view_in(inst,cp_idx)
             else
-               tmp_string.clear
+               tmp_string.clear_count
                tmp_string.append(once "????%N")
                tmp_string.append(once "Invalid type entry in constant pool at: ")
                cp_idx.append_in(tmp_string)
@@ -1756,7 +1756,7 @@ feature {NONE} -- Basic stuff to view values:
             extend_string(tmp_string,' ',12)
             character_at(pc_idx).to_hexadecimal_in(tmp_string)
             io.put_string(tmp_string)
-            inst.clear
+            inst.clear_count
             pc_idx := print_one_instruction(pc_idx, pc_idx - start_idx)
             io.put_string(inst)
             io.put_new_line
@@ -1811,7 +1811,7 @@ feature {NONE} -- Basic stuff to view values:
 
    view_pc(offset, pc: INTEGER) is
       local
-         view: INTEGER; bits: BIT Integer_bits
+         view: INTEGER
       do
          if offset < ((2 ^ 15) - 1) then
             view := pc + offset

@@ -1,0 +1,73 @@
+
+                         Frequently Asked Questions
+
+   This is the "Frequently Asked Questions" for SmartEiffel Transitional.
+   General questions about SmartEiffel are answered at [1]the official
+   SmartEiffel FAQ
+
+   Table of contents
+
+   Q01: [2]What is SmartEiffel (transitional) compared to official
+   SmartEiffel?
+   Q02: [3]Is there a SmartEiffel (transitional) mailing list?
+   Q03: [4]How do I keep informed about SmartEiffel (transitional)?
+   Q04: [5]How can I help?
+
+   Questions and answers
+
+
+   Q01: What is SmartEiffel (transitional) compared to official
+   SmartEiffel?
+   A01: SmartEiffel (transitional) is a branch from official SmartEiffel.
+   They are separate projects, developed by separate teams. However, both
+   teams are communicated and share they work to avoid duplication of
+   effort.
+   SmartEiffel (transitional) is developed from SmartEiffel 1.1, and
+   intends to be 100% compatible with SmartEiffel 1.1, while allowing at
+   the same time to write code that can run in SmartEiffel 2.x.
+   If you want further information about official SmartEiffel, check
+   their [6]website.
+
+   Q02: Is there a SmartEiffel (transitional) mailing list?
+   A02: Yes. You can find details about it in the [7]project website.
+
+   Q03: How do I keep informed about SmartEiffel (transitional)?
+   A03: You can keep on eye on our [8]project website. We will keep news
+   there about general progress.
+   The [9]timeline that you can find there has automatically generated
+   information about detailed changes. Also, you can keep track of
+   development discussions at our [10]wiki and [11]mailing list.
+
+   Q04: How can I help?
+   A04: Glad you asked! We need help. Check our [12]How to Contribute
+   page, we keep some tasks there that you can help (even if you are not
+   developer). If you want to get your hands into the code visit our
+   [13]Get Involved page.
+   It's important for our project to get involved with the community, and
+   integrate other developers and their ideas.
+     _________________________________________________________________
+
+   Copyright © Daniel F MOISSET - [14]<dmoisset@except.com.ar> 
+   Last modified: Tue May 31 15:49:19 ART 2005
+   
+
+References
+
+   Visible links
+   1. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/SmartEiffelFAQ.html
+   2. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/SmartEiffelTransitionalFAQ.html#Q01
+   3. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/SmartEiffelTransitionalFAQ.html#Q02
+   4. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/SmartEiffelTransitionalFAQ.html#Q03
+   5. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/SmartEiffelTransitionalFAQ.html#Q04
+   6. http://smarteiffel.loria.fr/
+   7. https://opensvn.csie.org/traccgi/smarteiffel12/trac.cgi/wiki/MailingList
+   8. https://opensvn.csie.org/traccgi/smarteiffel12/trac.cgi/wiki/MailingList
+   9. https://opensvn.csie.org/traccgi/smarteiffel12/trac.cgi/timeline
+  10. https://opensvn.csie.org/traccgi/smarteiffel12/trac.cgi/wiki
+  11. https://opensvn.csie.org/traccgi/smarteiffel12/trac.cgi/wiki/MailingList
+  12. https://opensvn.csie.org/traccgi/smarteiffel12/trac.cgi/wiki/HowToContribute
+  13. https://opensvn.csie.org/traccgi/smarteiffel12/trac.cgi/wiki/GetInvolved
+  14. mailto:dmoisset@except.com.ar
+
+   Hidden links:
+  15. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/SmartEiffelFAQ.html#Q10

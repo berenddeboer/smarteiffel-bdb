@@ -323,6 +323,11 @@ feature
          Result := code_attribute.opcode_if_acmpeq
       end
 
+   jvm_to_reference is
+      do
+         check False end
+      end
+
 feature {E_AGENT, RUN_CLASS, TYPE_OF_AGENT}
 
    load_builtin_features is

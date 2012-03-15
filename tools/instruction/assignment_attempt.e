@@ -13,12 +13,12 @@
 -- MA 02111-1307, USA.
 --
 -- Copyright(C) 1994-2002: INRIA - LORIA (INRIA Lorraine) - ESIAL U.H.P.
---			   - University of Nancy 1 - FRANCE
+--                           - University of Nancy 1 - FRANCE
 -- Copyright(C) 2003:      INRIA - LORIA (INRIA Lorraine) - I.U.T. Charlemagne
---			   - University of Nancy 2 - FRANCE
+--                           - University of Nancy 2 - FRANCE
 --
---		 Dominique COLNET, Suzanne COLLIN, Olivier ZENDRA,
---			   Philippe RIBET, Cyril ADRIAN
+--                 Dominique COLNET, Suzanne COLLIN, Olivier ZENDRA,
+--                           Philippe RIBET, Cyril ADRIAN
 --
 -- http://SmartEiffel.loria.fr - SmartEiffel@loria.fr
 --
@@ -55,11 +55,11 @@ feature
    stupid_switch(run_time_set: RUN_TIME_SET): BOOLEAN is
       do
          if smart_eiffel.stupid_switch(left_side.result_type,
-				       run_time_set) 
-	  then
+                                       run_time_set) 
+          then
             if smart_eiffel.stupid_switch(right_side.result_type,
-					  run_time_set)
-	     then
+                                          run_time_set)
+             then
                if left_side.stupid_switch(run_time_set) then
                   if right_side.stupid_switch(run_time_set) then
                      Result := True
@@ -81,22 +81,22 @@ feature
 
    simplify_2(container: COMPOUND; index: INTEGER) is
       do
-	 right_side := right_side.simplify_2
+         right_side := right_side.simplify_2
       end
    
    collect_c_tmp is
       do
-	 right_side.collect_c_tmp
+         right_side.collect_c_tmp
       end
 
    compile_to_c is
       local
          run_time_set, run_time_set2: RUN_TIME_SET; i: INTEGER
       do
-	 if ace.no_check then
-	    cpp.put_trace_or_sedb_instruction(start_position)
-	 end
-	 cpp.put_string(once "/*AA*/")
+         if ace.no_check then
+            cpp.put_trace_or_sedb_instruction(start_position)
+         end
+         cpp.put_string(once "/*AA*/")
          if right_type.run_type.is_expanded then
             error_handler.add_position(start_position)
             fatal_error("Right-hand side expanded Not Yet Implemented.")
@@ -119,26 +119,26 @@ feature
                left_side.compile_to_c
                cpp.put_string(fz_30)
             end
-	 elseif run_time_set.count = 1 
-	    and then not run_time_set.first.is_tagged 
-	  then
-	    check
-	       ace.boost 
-	    end
+         elseif run_time_set.count = 1 
+            and then not run_time_set.first.is_tagged 
+          then
+            check
+               ace.boost 
+            end
             left_side.compile_to_c
             cpp.put_character('=')
-	    run_time_set2 := right_type.run_class.run_time_set
-	    if run_time_set2.count = 1 
-	       and then 
-	       run_time_set2.first = run_time_set.first
-	     then
-	       -- Only one and the good one.
-	    else
-	       cpp.put_string(fz_null)
-	       cpp.put_character(';')
-	    end
-	    right_side.compile_to_c
-	    cpp.put_string(fz_00)
+            run_time_set2 := right_type.run_class.run_time_set
+            if run_time_set2.count = 1 
+               and then 
+               run_time_set2.first = run_time_set.first
+             then
+               -- Only one and the good one.
+            else
+               cpp.put_string(fz_null)
+               cpp.put_character(';')
+            end
+            right_side.compile_to_c
+            cpp.put_string(fz_00)
          else -- General translation scheme:
             left_side.compile_to_c
             cpp.put_character('=')
@@ -149,29 +149,29 @@ feature
             cpp.put_string(once ";%Nif(NULL!=(")
             left_side.compile_to_c
             cpp.put_string(once ")){%N")
-	    if smart_eiffel.scoop
-	       and then not left_side.result_type.is_separate
-	       and then right_side.result_type.is_separate
-	     then
-	       cpp.put_string(once "se_subsystem_t* self = se_current_subsystem_thread();%N")
-	       cpp.put_string(once "if (get_subsystem(")
-	       left_side.compile_to_c
-	       cpp.put_string(once ", NULL) == self) {%N")
-	       left_side.compile_to_c
-	       cpp.put_string(once "=((sT0*)(")
-	       left_side.compile_to_c
-	       cpp.put_string(once "))->ref;%N}%N")
-	    end
-	    cpp.put_string(once "switch(((T0*)")
+            if smart_eiffel.scoop
+               and then not left_side.result_type.is_separate
+               and then right_side.result_type.is_separate
+             then
+               cpp.put_string(once "se_subsystem_t* self = se_current_subsystem_thread();%N")
+               cpp.put_string(once "if (get_subsystem(")
+               left_side.compile_to_c
+               cpp.put_string(once ", NULL) == self) {%N")
+               left_side.compile_to_c
+               cpp.put_string(once "=((sT0*)(")
+               left_side.compile_to_c
+               cpp.put_string(once "))->ref;%N}%N")
+            end
+            cpp.put_string(once "switch(((T0*)")
             left_side.compile_to_c
             cpp.put_string(once ")->")
             cpp.put_string(once "id){%N")
-	    from
+            from
                i := 1
             until
                i > run_time_set.count
             loop
-	       check run_time_set.item(i).is_tagged end
+               check run_time_set.item(i).is_tagged end
                cpp.put_string(once "case ")
                cpp.put_integer(run_time_set.item(i).id)
                cpp.put_character(':')
@@ -226,9 +226,9 @@ feature
 
    once_pre_computable: BOOLEAN is
       do
-	 if left_side.once_pre_computable then
-	    Result := right_side.once_pre_computable
-	 end
+         if left_side.once_pre_computable then
+            Result := right_side.once_pre_computable
+         end
       end
 
    start_position: POSITION is
@@ -238,69 +238,68 @@ feature
 
    to_runnable(ct: E_TYPE): like Current is
       local
-	 e: EXPRESSION; fatal_error_flag, warning_flag: BOOLEAN
+         e: EXPRESSION; vjrv_flag, warning_flag: BOOLEAN
       do
-	 if current_type = Void then
-	    current_type := ct
-	    e := left_side.to_runnable(ct)
+         if current_type = Void then
+            current_type := ct
+            e := left_side.to_runnable(ct)
             if e = Void then
-	       error_handler.add_position(left_side.start_position)
-	       error_handler.append(fz_blhsoa)
-	       error_handler.print_as_fatal_error
+               error_handler.add_position(left_side.start_position)
+               error_handler.append(fz_blhsoa)
+               error_handler.print_as_fatal_error
             end
-	    left_side := e
-	    e := right_side.to_runnable(ct)
-	    if e = Void then
-	       error_handler.add_position(right_side.start_position)
-	       error_handler.append(fz_brhsoa)
-	       error_handler.print_as_fatal_error
+            left_side := e
+            e := right_side.to_runnable(ct)
+            if e = Void then
+               error_handler.add_position(right_side.start_position)
+               error_handler.append(fz_brhsoa)
+               error_handler.print_as_fatal_error
             end
-	    right_side := e
+            right_side := e
             if not left_type.run_type.is_reference then
                error_handler.add_type(left_type.run_type,
-				      " is not a reference Type.")
+                                      " is not a reference Type.")
                error_handler.add_position(start_position)
-	       error_handler.append(" Invalid reverse assignment (VJRV).")
-	       error_handler.print_as_fatal_error
+               error_handler.append(" Invalid reverse assignment (VJRV).")
+               error_handler.print_as_fatal_error
             end
-	    if right_side.is_current then
-	       -- No check yet :-(
-	    elseif not left_type.run_type.is_a(right_type.run_type) then
-	       fatal_error_flag := True
-	    elseif right_type.run_type.is_a(left_type.run_type) then
-	       if not left_type.is_like_current and then
-		  not right_type.is_formal_generic and then
-		  not left_type.is_formal_generic
+            if right_side.is_current then
+               -- No check yet :-(
+            elseif not left_type.run_type.is_a(right_type.run_type) then
+               vjrv_flag := True
+            elseif right_type.run_type.is_a(left_type.run_type) then
+               if not left_type.is_like_current and then
+                  not right_type.is_formal_generic and then
+                  not left_type.is_formal_generic
                 then
-		  warning_flag := True
+                  warning_flag := True
                end
-	    else
-	       error_handler.cancel
+            else
+               error_handler.cancel
             end
-	    if fatal_error_flag then
-	       error_handler.add_position(start_position)
-	       error_handler.append(
-	       "Invalid assignment attempt. The left-hand side expression must %
-	       %conforms with the right-hand side. Note: the previous %
-	       %constraint is more strict than ETL is, but, the SmartEiffel team %
-	       %is convinced that this is better for your safety to enforce %
-	       %this extra constraint. If you cannot work around, feel free to %
-	       %post your problem in our mailing list. If you agree with us, %
-	       %feel free to help us to convince other people %
-	       %(Wed Mar 19 2003). D.Colnet.")
-	       error_handler.print_as_fatal_error
-	    end
-	    if warning_flag then
-	       error_handler.add_type(right_type," is a ")
-	       error_handler.add_type(left_type,
-	       ". Simple assignment is allowed (%"?=%" is not necessary).")
-	       error_handler.add_position(start_position)
-	       error_handler.print_as_warning
-	    end
-	    assignment_handler.assignment(right_side.start_position,
-					  right_side.result_type,
-					  left_type)
-	    Result := Current
+            if vjrv_flag then
+               error_handler.add_position(start_position)
+               error_handler.append(
+               "Strange assignment attempt. The left-hand side expression should %
+               %conform with the right-hand side (VJRV). Note: the previous %
+               %constraint is more strict than ETL is, but, the SmartEiffel team %
+               %is convinced that this is better for your safety to enforce %
+               %this extra constraint. This code will not work in SE 2.x; it is %
+               %accepted by SE 1.2 for compatibility with other compilers without %
+               %this constraint")
+               error_handler.print_as_warning
+            end
+            if warning_flag then
+               error_handler.add_type(right_type," is a ")
+               error_handler.add_type(left_type,
+               ". Simple assignment is allowed (%"?=%" is not necessary).")
+               error_handler.add_position(start_position)
+               error_handler.print_as_warning
+            end
+            assignment_handler.assignment(right_side.start_position,
+                                          right_side.result_type,
+                                          left_type)
+            Result := Current
          else
             create Result.make(left_side,right_side)
             Result := Result.to_runnable(ct)

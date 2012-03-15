@@ -65,11 +65,11 @@ feature
                when '_' then
                   short_print.hook_or("Ucomment","_")
                when '`' then
-                  open_quote := true
+                  open_quote := True
                   short_print.hook_or("op_quote","`")
                when '%'' then
                   if open_quote then
-                     open_quote := false
+                     open_quote := False
                      short_print.hook_or("cl_quote","'")
                   else
                      short_print.a_character(c)

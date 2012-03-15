@@ -75,7 +75,7 @@ feature {MANIFEST_STRING}
 	    ms2 := storage_alias.reference_at(ms)
 	    check ms2 /= ms end
 	    if ms2 = Void then
-	       header.clear
+	       header.clear_count
 	       ms.start_position.base_class.id.append_in(header)
 	       header.extend('_')
 	       ms.hash_code.append_in(header)
@@ -172,7 +172,7 @@ feature {SMART_EIFFEL}
       local
 	 i, j, upper: INTEGER; ms: MANIFEST_STRING; us: UNICODE_STRING
 	 storage: NATIVE_ARRAY[INTEGER_16]
-	 lsv: FIXED_ARRAY[INTEGER_16]; lsi: FIXED_ARRAY[INTEGER];
+	 lsv: FAST_ARRAY[INTEGER_16]; lsi: FAST_ARRAY[INTEGER];
       do
          if not string_at_run_time then
             cpp.put_string(
@@ -243,7 +243,7 @@ feature {SMART_EIFFEL}
 	    elseif ms.alias_link /= Void then
 	       header.copy(once "char*s")
 	       header.append(ms.alias_global)
-	       body.clear
+	       body.clear_count
 	       string_to_c_code(ms.to_string, body)
 	       cpp.put_extern5(header, body)
 	    end
@@ -298,7 +298,7 @@ feature {SMART_EIFFEL}
 	       function_count.append_in(header)
 	       header.append(fz_c_void_args)
 	       from
-		  body.clear
+		  body.clear_count
 		  if no_check and then se_ums /= Void then
 		     body.append(
 	          "[
@@ -348,7 +348,7 @@ feature {SMART_EIFFEL}
 	    end
 	    header.append("int32_t c,uint16_t*s,int32_t sc,int16_t*lsv,%
 			  %int32_t*lsi)")
-	    body.clear
+	    body.clear_count
 	    body.extend('T')
 	    id.append_in(body)
 	    body.append("*us;%N")
@@ -519,20 +519,20 @@ feature {JVM}
 
 feature {NONE}
 
-   once_variables: DICTIONARY[MANIFEST_STRING, STRING] is
+   once_variables: HASHED_DICTIONARY[MANIFEST_STRING, STRING] is
 	 -- To allocate different global variables names for each 
 	 -- "once" manifest string.
       once
          create Result.with_capacity(4096)
       end
 
-   storage_alias: DICTIONARY[MANIFEST_STRING, MANIFEST_STRING] is
+   storage_alias: HASHED_DICTIONARY[MANIFEST_STRING, MANIFEST_STRING] is
 	 -- For storage aliasing.
       once
          create Result.with_capacity(4096)
       end
 
-   storage_mangling: SET[STRING] is
+   storage_mangling: HASHED_SET[STRING] is
 	 -- For storage mangling.
       once
          create Result.with_capacity(4096)

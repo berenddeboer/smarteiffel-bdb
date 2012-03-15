@@ -27,9 +27,9 @@ creation make_from_fixed_array, make_smaller, make_from_large_product, make_from
 
 feature
 
-   is_positive: BOOLEAN is true
+   is_positive: BOOLEAN is True
 
-   is_negative: BOOLEAN is false
+   is_negative: BOOLEAN is False
 
    is_integer_value:BOOLEAN is
       local
@@ -90,7 +90,7 @@ feature {NUMBER}
    infix "@+" (other: INTEGER): NUMBER is
       local
 	 i, calcul:INTEGER
-	 tmp: FIXED_ARRAY[INTEGER]
+	 tmp: FAST_ARRAY[INTEGER]
       do
 	 if other = 0 then
 	    Result := Current
@@ -246,10 +246,10 @@ feature {NUMBER} -- division
 	    else
 	       if (other >= Base) then
 		  !LARGE_POSITIVE_INTEGER!den.make_smaller(other)
-		  !NUMBER_FRACTION!Result.make_simply(Current, den, true)
+		  !NUMBER_FRACTION!Result.make_simply(Current, den, True)
 	       elseif (other <= -Base) then
 		  !LARGE_POSITIVE_INTEGER!den.make_smaller(other)
-		  !NUMBER_FRACTION!Result.make_simply(Current, den, true)
+		  !NUMBER_FRACTION!Result.make_simply(Current, den, True)
 	       else
 		  !SMALL_INTEGER!den.make(other.abs)
 		  !NUMBER_FRACTION!Result.make_simply(Current, den, (other < 0))
@@ -378,7 +378,7 @@ feature {NUMBER} -- inverse
 	 num: ABSTRACT_INTEGER
       do
 	 num ?= one
-	 !NUMBER_FRACTION!Result.make_simply(num, Current, false)
+	 !NUMBER_FRACTION!Result.make_simply(num, Current, False)
       end
 
 
@@ -445,7 +445,7 @@ feature -- comparisons with DOUBLE
    infix "#>" (other: DOUBLE): BOOLEAN is
       do
 	 if other <= Base then
-	    Result := true
+	    Result := True
 	 else
 	    Result := to_double > other
 	 end
@@ -454,7 +454,7 @@ feature -- comparisons with DOUBLE
    infix "#>=" (other: DOUBLE): BOOLEAN is
       do
 	 if other <= Base then
-	    Result := true
+	    Result := True
 	 else
 	    Result := to_double >= other
 	 end
@@ -485,12 +485,12 @@ feature {NUMBER}
 
    greater_with_large_negative_integer(other: LARGE_NEGATIVE_INTEGER): BOOLEAN is
       once
-	 Result := true
+	 Result := True
       end
 
    greater_with_small_fraction (other: INTEGER_FRACTION): BOOLEAN is
       once
-	 Result := true
+	 Result := True
       end
 
    greater_with_large_fraction (other: NUMBER_FRACTION): BOOLEAN is

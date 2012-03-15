@@ -271,6 +271,10 @@ feature {AGENT_ARGS}
 		     if oat1.is_reference then
 			match := oat2.is_reference
 		     elseif oat1.is_a(oat2) then
+		        -- expanded types only match when they are the same...
+		        -- Note that this means that INTEGER does not match ANY
+		        -- This is based on SE 2.x behaviour (dmoisset, August 21 2005)
+		        match := oat1.run_time_mark = oat2.run_time_mark
 		     else
 			error_handler.cancel
 			match := False
@@ -343,20 +347,20 @@ feature {AGENT_POOL_VISITOR}
 
 feature {NONE}
 
-   agent_set: SET[E_AGENT]
+   agent_set: HASHED_SET[E_AGENT]
 	 -- The collection of already encountered agent (see `register'). 
    
-   agent_call_set: SET[AGENT_ARGS] is
+   agent_call_set: HASHED_SET[AGENT_ARGS] is
       once
 	 create Result.make
       end
 
-   missing_call_set: SET[AGENT_ARGS] is
+   missing_call_set: HASHED_SET[AGENT_ARGS] is
       once
 	 create Result.make
       end
 
-   agent_definition_set: SET[STRING] is
+   agent_definition_set: HASHED_SET[STRING] is
       once
 	 create Result.make
       end

@@ -279,7 +279,7 @@ feature
    need_c_struct: BOOLEAN is
       do
 	 if run_class.is_tagged then
-            Result := true
+            Result := True
          else
             Result := run_class.writable_attributes /= Void
          end
@@ -426,7 +426,7 @@ feature {RUN_CLASS}
       do
          cp := constant_pool
          name_idx := cp.idx_utf8(as_item)
-         tmp_string.clear
+         tmp_string.clear_count
          expanded_type.jvm_descriptor_in(tmp_string)
          descriptor := cp.idx_utf8(tmp_string)
          field_info.add(1,name_idx,descriptor)
@@ -490,7 +490,7 @@ feature {NONE}
          cp := constant_pool
          c := run_class.jvm_constant_pool_index
          n := cp.idx_utf8(as_item)
-         tmp_string.clear
+         tmp_string.clear_count
          expanded_type.jvm_descriptor_in(tmp_string)
          t := cp.idx_utf8(tmp_string)
          Result := cp.idx_fieldref5(c,n,t)

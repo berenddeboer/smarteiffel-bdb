@@ -37,7 +37,7 @@ feature
 
    precedence: INTEGER is 10
 
-   left_brackets: BOOLEAN is false
+   left_brackets: BOOLEAN is False
 
    isa_dca_inline_argument: INTEGER is 0
 

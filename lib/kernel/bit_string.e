@@ -19,13 +19,11 @@
 class BIT_STRING
    --
    -- Long and very long bit sequences.
-   -- As for the primitive expanded BIT_N type, an INTEGER index can be
-   -- used to access each bit of the sequence.
-   -- As for BIT_N class, the leftmost bit has index 1 and the
-   -- rightmost bit has index `count'.
+   -- An INTEGER index can be used to access each bit of the sequence.
+   -- The leftmost bit has index 1 and the rightmost bit has index `count'.
    --
    -- For short bit sequences (less or equal to 32 or 64), also
-   -- consider to use basic BIT_N type.
+   -- consider using the basic INTEGER_N type.
    --
 
 inherit
@@ -38,7 +36,7 @@ creation make, from_string
 
 feature {BIT_STRING}
 
-   storage: FIXED_ARRAY[BIT Integer_bits]
+   storage: FAST_ARRAY[INTEGER]
          -- The `storage' area. Bits are stored in the usual way (as
          -- they are printed). Padding of the `last' word is done
          -- using 0 on the left.
@@ -97,16 +95,10 @@ feature
       require
 	 valid_index(idx)
       local
-	 stor_slice: BIT Integer_bits
-	 padding: INTEGER
+	 stor_slice: INTEGER
       do
-	 if idx \\ Integer_bits = 0 then
-	    padding := -1
-	 else
-	    padding := 0
-	 end
-	 stor_slice := storage.item(idx // Integer_bits + padding )
-	 Result := stor_slice.item(Integer_bits - ((idx - 1) \\ Integer_bits))
+	 stor_slice := storage.item ((idx-1) // Integer_bits)
+	 Result := stor_slice.bit_test (((idx - 1) \\ Integer_bits).to_integer_8)
       end
 
    put(value: BOOLEAN; idx: INTEGER) is
@@ -128,17 +120,11 @@ feature
       require
 	 valid_index(idx)
       local
-	 stor_slice: BIT Integer_bits
-	 padding: INTEGER
+	 stor_slice: INTEGER
       do
-	 if idx \\ Integer_bits = 0 then
-	    padding := -1
-	 else
-	    padding := 0
-	 end
-	 stor_slice:=storage.item(idx // Integer_bits + padding)
-	 stor_slice.put_1(Integer_bits - ((idx - 1) \\ Integer_bits))
-	 storage.put(stor_slice,idx // Integer_bits + padding)
+	 stor_slice := storage.item((idx-1) // Integer_bits)
+	             | (mask_1 |<< ((idx-1) \\ Integer_bits).to_integer_8)
+	 storage.put(stor_slice, (idx-1) // Integer_bits)
       ensure
 	 item(idx)
       end
@@ -148,17 +134,11 @@ feature
       require
 	 valid_index(idx)
       local
-	 stor_slice: BIT Integer_bits
-	 padding: INTEGER
+	 stor_slice: INTEGER
       do
-	 if idx \\ Integer_bits = 0 then
-	    padding := -1
-	 else
-	    padding := 0
-	 end
-	 stor_slice:=storage.item(idx // Integer_bits + padding)
-	 stor_slice.put_0(Integer_bits - ((idx - 1) \\ Integer_bits))
-	 storage.put(stor_slice,idx // Integer_bits + padding)
+	 stor_slice := storage.item((idx-1) // Integer_bits)
+	             & ~(mask_1 |<< ((idx-1) \\ Integer_bits).to_integer_8)
+	 storage.put(stor_slice, (idx-1) // Integer_bits)
       ensure
 	 not item(idx)
       end
@@ -190,8 +170,7 @@ feature --  Rotating and shifting:
 	 n >= 0
       local
 	 i: INTEGER
-	 prec, oprec: BIT Integer_bits
-	 mask: BIT Integer_bits
+	 prec, oprec: INTEGER
       do
 	 if n >= count then
 	    clear_all
@@ -200,18 +179,17 @@ feature --  Rotating and shifting:
 	    shift_left_by(n - Integer_bits + 1)
 	 else
 	    from
-	       i := storage.upper
-	       mask := (not mask) |>> (Integer_bits - n)
-	    variant
-	       storage.lower + i
+	       i := storage.lower
 	    until
-	       i < storage.lower
+	       i > storage.upper
 	    loop
-	       prec := (storage.item(i) and mask) |<< (Integer_bits-n)
-               storage.put( (storage.item(i) |>> n) or oprec  , i)
+	       prec := storage.item (i) |>>> (Integer_bits-n).to_integer_8
+	       storage.put( (storage.item(i) |<< n.to_integer_8) | oprec  , i)
 	       oprec := prec
-	       i := i - 1
+	       i := i + 1
 	    end
+	    storage.put (storage.item (storage.upper) &
+	        (mask_all |>>> (Integer_bits-n).to_integer_8 ), storage.upper)
 	 end
       end
 
@@ -222,8 +200,7 @@ feature --  Rotating and shifting:
 	 n >= 0
       local
 	 i: INTEGER
-	 oprec, prec: BIT Integer_bits
-	 mask: BIT Integer_bits
+	 oprec, prec: INTEGER
       do
 	 if n >= count then
 	    clear_all
@@ -232,24 +209,15 @@ feature --  Rotating and shifting:
 	    shift_right_by(n - Integer_bits + 1)
 	 else
 	    from
-	       i := storage.lower
-	       mask := (not mask) |<< (Integer_bits - n)
-	    variant
-               storage.upper - i
+	       i := storage.upper
 	    until
-               i > storage.upper
+               i < storage.lower
 	    loop
-               prec := (storage.item(i) and mask) |>> (Integer_bits - n)
-	       storage.put((storage.item(i) |<< n) or oprec, i)
+               prec := storage.item(i) |<< (Integer_bits - n).to_integer_8
+	       storage.put((storage.item(i) |>>> n.to_integer_8) | oprec, i)
 	       oprec := prec
-	       i := i + 1
+	       i := i - 1
 	    end
-	    i := i - 1
-            mask := mask xor mask
-	    mask := not mask
-	    mask := mask |<< (count \\ Integer_bits)
-	    mask := storage.item(i) and mask
-	    storage.put(storage.item(i) xor mask, i)
 	 end
       end
 
@@ -461,7 +429,7 @@ feature --  Bitwise Logical Operators:
 	 until
 	    i > storage.upper
 	 loop
-	    storage.put((storage.item(i) and other.storage.item(i)), i)
+	    storage.put((storage.item(i) & other.storage.item(i)), i)
 	    i := i + 1
 	 end
       end
@@ -472,21 +440,21 @@ feature --  Bitwise Logical Operators:
 	 count = other.count
       local
 	 i: INTEGER
-         word, mask: BIT Integer_bits
+         word, mask: INTEGER
       do
          from
              i := storage.upper
          until
              i < 0
          loop
-             word := storage.item(i) implies other.storage.item(i)
+             word := ~storage.item(i) | other.storage.item(i)
              storage.put(word,i)
              i := i - 1
 	 end
 	 if (count \\ Integer_bits) /= 0 then
-	     mask := (not mask) |>> (Integer_bits - (count \\ Integer_bits))
+	     mask := (~mask) |>>> (Integer_bits - (count \\ Integer_bits)).to_integer_8
 	     i := storage.upper
-	     storage.put(storage.last and mask,i)
+	     storage.put(storage.item (i) & mask,i)
 	 end
       end
 
@@ -504,7 +472,7 @@ feature --  Bitwise Logical Operators:
 	 until
 	    i > storage.upper
 	 loop
-	    storage.put((storage.item(i) or other.storage.item(i)), i)
+	    storage.put((storage.item(i) | other.storage.item(i)), i)
 	    i := i + 1
 	 end
       end
@@ -523,7 +491,7 @@ feature --  Bitwise Logical Operators:
 	 until
 	    i > storage.upper
 	 loop
-	    storage.put((storage.item(i) xor other.storage.item(i)), i)
+	    storage.put((storage.item(i).bit_xor (other.storage.item(i))), i)
 	    i := i + 1
 	 end
       end
@@ -532,33 +500,20 @@ feature --  Bitwise Logical Operators:
          -- Invert Current bit-per-bit.
       local
 	 i: INTEGER
-	 mask: BIT Integer_bits
+	 mask: INTEGER
       do
-	 if count \\ Integer_bits = 0 then
-	    from
-	       i := storage.lower
-	    variant
-	       storage.upper - i
-	    until
-	       i > storage.upper
-	    loop
-	       storage.put(not storage.item(i), i)
-	       i := i + 1
-	    end
-	 else
-	    from
-	       i := storage.lower
-	    variant
-	       storage.upper -1 - i
-	    until
-	       i > storage.upper - 1
-	    loop
-	       storage.put(not storage.item(i), i)
-	       i := i + 1
-	    end
-	    mask := (not mask) |>> (Integer_bits - (count \\ Integer_bits))
-	    storage.put(not storage.item(i) and mask, i)
+	 from
+	    i := storage.lower
+	 variant
+	    storage.upper - i
+	 until
+	    i > storage.upper
+	 loop
+	    storage.put(~storage.item(i), i)
+	    i := i + 1
 	 end
+	 mask := (~mask) |>>> (Integer_bits - (count \\ Integer_bits)).to_integer_8
+	 storage.put(~storage.item(storage.upper) & mask, storage.upper)
       end
 
 feature -- Conversions:
@@ -581,22 +536,8 @@ feature -- Conversions:
          -- No sign-extension when `count' < `Integer_bits'.
       require
 	 count <= Integer_bits
-      local
-	 temp: BIT Integer_bits
-	 i: INTEGER
       do
-	 from
-	    i := 1
-	 variant
-	    count - i
-	 until
-	    i > count
-	 loop
-	    temp.put(storage.item(storage.upper).item(Integer_bits - count + i),
-		     Integer_bits - i + 1)
-	    i := i + 1
-	 end
-	 Result := temp.to_integer
+	  Result := storage.last
       end
 
 feature -- Others:
@@ -619,7 +560,7 @@ feature -- Others:
 	 --  Are all bits set to 1 ?
       local
 	 i: INTEGER
-	 last_word, mask: BIT Integer_bits
+	 mask: INTEGER
       do
 	 from
 	    Result := true
@@ -627,14 +568,14 @@ feature -- Others:
 	 until
 	    i < 0 or else not Result
 	 loop
-	    Result := storage.item(i).all_set
+	    Result := ~storage.item(i) = 0
 	    i := i - 1
 	 end
 	 if Result then
 	    if count \\ Integer_bits = 0 then
-	       Result := storage.last.all_set
+	       Result := ~storage.last = 0
 	    else
-	       mask := (not mask) |>> (Integer_bits - (count \\ Integer_bits))
+	       mask := mask_all |>>> (Integer_bits - (count \\ Integer_bits)).to_integer_8
 	       Result := storage.last = mask
 	    end
 	 end
@@ -643,11 +584,11 @@ feature -- Others:
    set_all is
 	 -- Set all bits to 1
       local
-	 mask: BIT Integer_bits
+	 mask: INTEGER
       do
-	 storage.set_all_with((-1).to_bit)
+	 storage.set_all_with(mask_all)
 	 if count \\ Integer_bits /= 0 then
-	    mask := (not mask) |>> (Integer_bits - (count \\ Integer_bits))
+	    mask := (~mask) |>>> (Integer_bits - (count \\ Integer_bits)).to_integer_8
 	    storage.put(mask, storage.upper)
 	 end
       ensure
@@ -722,6 +663,12 @@ feature -- Others:
       ensure
          count = old count
       end
+
+feature {NONE} -- Utility constants
+
+    mask_0: INTEGER is 0
+    mask_1: INTEGER is 1
+    mask_all: INTEGER is -1
 
 invariant
 

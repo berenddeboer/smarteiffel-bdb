@@ -18,3 +18,15 @@
 
 EIF_INTEGER basic_fstat_st_size(EIF_POINTER path);
 EIF_INTEGER_64 basic_fstat_st_mtime(EIF_POINTER path);
+EIF_BOOLEAN basic_fstat_st_all (EIF_POINTER path,
+                         EIF_INTEGER_32 *dev,
+                         EIF_INTEGER_64 *inode,
+                         EIF_INTEGER_32 *mode,
+                         EIF_INTEGER_32 *nlink,
+                         EIF_INTEGER_32 *uid,
+                         EIF_INTEGER_32 *gid,
+                         EIF_INTEGER_64 *size,
+                         EIF_INTEGER *atime,
+                         EIF_INTEGER *ctime,
+                         EIF_INTEGER *mtime
+                          );

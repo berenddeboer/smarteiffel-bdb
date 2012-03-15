@@ -166,7 +166,7 @@ feature {RUN_CLASS}
          c_code.append(once "%",1};%N")
          cpp.put_string(c_code)
          -- The function :
-         c_code.clear
+         c_code.clear_count
          c_code.extend('T')
          id.append_in(c_code)
          c_code.extend('*')

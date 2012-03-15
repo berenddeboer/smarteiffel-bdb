@@ -35,9 +35,6 @@ class ACE
 
 inherit
    PARSER
-      redefine
-         accept
-      end
    ASSERTION_LEVEL_NUMBERING
 
 feature
@@ -85,7 +82,7 @@ feature
          Result := root_procedure_name_memory
       end
 
-   root_class_names: FIXED_ARRAY[STRING] is
+   root_class_names: FAST_ARRAY[STRING] is
          -- All the class names given on the command line
       once
          create Result.with_capacity(1)
@@ -482,7 +479,7 @@ feature {SMART_EIFFEL}
             echo.w_put_string("Unable to find file for class %"")
             echo.w_put_string(name)
             echo.w_put_string("%". ")
-            buffer.clear
+            buffer.clear_count
             view_in(buffer)
             echo.w_put_string(buffer)
          end
@@ -864,7 +861,7 @@ feature {NONE}
          stop: BOOLEAN; p: POSITION; envar, value, cl: STRING; c, l: INTEGER
       do
          Result := buffer
-         Result.clear
+         Result.clear_count
          if skip1('%"') then
             from -- Manifest string notation:
                p := pos(start_line,start_column)
@@ -1387,7 +1384,7 @@ feature {NONE}
          !!Result.make(256)
       end
 
-   cluster_list: FIXED_ARRAY[CLUSTER] is
+   cluster_list: FAST_ARRAY[CLUSTER] is
       once
          !!Result.with_capacity(64)
       end

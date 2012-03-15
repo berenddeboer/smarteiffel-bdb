@@ -162,7 +162,7 @@ feature
          Result := target.verify_scoop(allowed) or else Result
          if allowed /= Void then
             if allowed.verify_scoop(target) then
-               Result := true
+               Result := True
             end
          elseif target.result_type.is_separate and then
 	    not target.is_current
@@ -191,9 +191,24 @@ feature {NONE}
          end
       end
 
+   balancing_rule_features: HASHED_SET [STRING] is
+      once
+         create Result.make
+         Result.add (as_plus)
+         Result.add (as_minus)
+         Result.add (as_muls)
+         Result.add (as_is_equal)
+         Result.add (as_lt)
+         Result.add (as_le)
+         Result.add (as_gt)
+         Result.add (as_ge)
+         Result.add (string_aliaser.item (once "max"))
+         Result.add (string_aliaser.item (once "min"))
+      end
+
    basic_conversion(t: like target;
 		    target_type, argument_type: E_TYPE): EXPRESSION is
-	 -- Automatic conversion for binary features.
+	 -- Automatic target conversion for binary features.
       require
 	 t.result_type = target_type
 	 argument_type /= Void
@@ -209,6 +224,20 @@ feature {NONE}
 		  if target_type.is_a(argument_type) then
 		     Result :=
 			assignment_handler.implicit_cast(t, argument_type)
+			if Result /= t and then
+			   not balancing_rule_features.has (feature_name.to_string) then
+			   -- Target is being implicitly casted
+			   -- And the balancing rule does not apply to this feature
+			   error_handler.add_position (t.start_position)
+			   error_handler.append (once "This target, of type ")
+			   error_handler.append (target_type_rtm)
+			   error_handler.append (once " is being implicitely converted to type ")
+			   error_handler.append (argument_type_rtm)
+			   error_handler.append (once ". Implicit target conversions will not %
+			                              %be done by SE2, so this code will change %
+			                              %its semantic.")
+			   error_handler.print_as_warning
+			end
 		  else
 		     error_handler.cancel
 		  end
@@ -226,7 +255,9 @@ feature {NONE}
 	 rf4: RUN_FEATURE_4
       do
 	 rf4 ?= rf
-	 if rf4 /= Void then
+	 if
+	    rf4 /= Void and then smart_eiffel.same_base_feature (rf4, rf4.run_class.run_time_set)
+	 then
 	    Result := rf4.value
 	 end
 	 if Result = Void then

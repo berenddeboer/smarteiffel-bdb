@@ -53,7 +53,7 @@ feature
 
    is_integer_value: BOOLEAN is
       do
-	 Result := true
+	 Result := True
       end
 
    to_integer: INTEGER is
@@ -395,7 +395,7 @@ feature {NUMBER}
 
    greater_with_large_negative_integer(other: LARGE_NEGATIVE_INTEGER): BOOLEAN is
       do
-	 Result := true
+	 Result := True
       end
 
    greater_with_small_fraction(other: INTEGER_FRACTION): BOOLEAN is

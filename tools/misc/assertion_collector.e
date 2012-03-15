@@ -67,7 +67,7 @@ feature {RUN_CLASS}
       require
          ct /= Void
       local
-         r: FIXED_ARRAY[ASSERTION]; position: POSITION
+         r: FAST_ARRAY[ASSERTION]; position: POSITION
       do
          r := runnable(collector, ct, Void, '_')
          if r /= Void then
@@ -115,7 +115,7 @@ feature {BASE_CLASS}
          ct = rf.current_type
       local
          i, c: INTEGER; sp: POSITION; bc, bc1, bc2: BASE_CLASS; a: ASSERTION
-	 r, r2: FIXED_ARRAY[ASSERTION]; er, er1, er2: E_REQUIRE
+	 r, r2: FAST_ARRAY[ASSERTION]; er, er1, er2: E_REQUIRE
       do
 	 -- Checking require/require else:
 	 c := require_collector.count
@@ -216,7 +216,7 @@ feature {BASE_CLASS}
       require
          ct = rf.current_type
       local
-         r: FIXED_ARRAY[ASSERTION]; position: POSITION
+         r: FAST_ARRAY[ASSERTION]; position: POSITION
 	 c: INTEGER; ee1, ee2: E_ENSURE; bc1, bc2: BASE_CLASS
       do
 	 -- Checking ensure/ensure then:
@@ -299,8 +299,8 @@ feature {BASE_CLASS}
 
 feature {ASSERTION_LIST}
 
-   runnable(collected: FIXED_ARRAY[ASSERTION]; ct: E_TYPE; for: RUN_FEATURE
-            assertion_check_tag: CHARACTER): FIXED_ARRAY[ASSERTION] is
+   runnable(collected: FAST_ARRAY[ASSERTION]; ct: E_TYPE; for: RUN_FEATURE
+            assertion_check_tag: CHARACTER): FAST_ARRAY[ASSERTION] is
          -- Produce a runnable `collected'.
       require
          for /= Void implies ct = for.current_type
@@ -329,17 +329,17 @@ feature {ASSERTION_LIST}
 
 feature {NONE}
    
-   collector: FIXED_ARRAY[ASSERTION] is
+   collector: FAST_ARRAY[ASSERTION] is
       once
          create Result.with_capacity(12)
       end
 
-   require_collector: FIXED_ARRAY[E_REQUIRE] is
+   require_collector: FAST_ARRAY[E_REQUIRE] is
       once
          create Result.with_capacity(12)
       end
 
-   ensure_collector: FIXED_ARRAY[E_ENSURE] is
+   ensure_collector: FAST_ARRAY[E_ENSURE] is
       once
          create Result.with_capacity(12)
       end

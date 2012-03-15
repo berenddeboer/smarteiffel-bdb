@@ -85,7 +85,7 @@ feature
 		  unicode_string.extend(65533)
 		  if first_error = Void then
 		     first_error := once ""
-		     first_error.clear
+		     first_error.clear_count
 		     if i <= maxi then
 			first_error.append(once "Invalid byte in UTF-8 %
 						 %sequence. This character is %
@@ -119,7 +119,7 @@ feature
 		  unicode_string.extend(65533)
 		  if first_error = Void then
 		     first_error := once ""
-		     first_error.clear
+		     first_error.clear_count
 		     first_error.append(once "Invalid unicode value: 0x")
 		     v.to_hexadecimal_in(first_error)
 		     first_error.append(once ". Please check unicode charts.")

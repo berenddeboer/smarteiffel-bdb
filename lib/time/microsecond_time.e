@@ -24,23 +24,28 @@ expanded class MICROSECOND_TIME
 inherit
    TIME --year, month, day, hour and seconds access.
       export {NONE}to_microsecond_time
-      redefine update, is_equal, infix "<", elapsed_seconds
+      redefine
+         update, is_equal, infix "<", elapsed_seconds,
+         is_local_time, is_universal_time, year, month, day , hour, minute, second,
+         week_day, year_day, is_summer_time_used, to_microsecond_time, set,
+         set_universal_time, set_local_time
       end
+
 feature
    microsecond: INTEGER
          -- Extra information in number of microseconds in range 0 .. 999999.
-	 -- Note that the accuracy is system dependant.
+         -- Note that the accuracy is system dependant.
+
+   time: TIME is
+         -- The normal TIME with second accuracy.
+      do
+         Result.set_time_memory(time_memory)
+      end
 
    to_time: TIME is
+      obsolete "Use simply the `time' feature"
       do
-	 Result.set_time_memory(time_memory)
-      ensure
-	 Result.year = year
-	 Result.month = month
-	 Result.day = day
-	 Result.hour = hour
-	 Result.minute = minute
-	 Result.second = second
+         Result := time
       end
 
 feature -- Setting:
@@ -51,6 +56,13 @@ feature -- Setting:
          basic_microsecond_update
          time_memory := basic_microsecond_time
 	 microsecond := basic_microsecond_microsecond
+      end
+
+   set_time (t: like time) is
+      do
+         time_memory := t.time_memory
+      ensure
+         time = t
       end
 
    set_microsecond(microsec: INTEGER) is
@@ -131,6 +143,98 @@ feature
       ensure then
 	 Result implies (elapsed_seconds(other) > 0)
       end
+
+feature -- Obsolete from 1.1
+
+   is_local_time: BOOLEAN is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.is_local_time"
+   do
+      Result := Precursor
+   end
+
+   is_universal_time: BOOLEAN is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.is_universal_time"
+   do
+      Result := Precursor
+   end
+   
+   year: INTEGER is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.year"
+   do
+      Result := Precursor
+   end
+
+   month: INTEGER is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.month"
+   do
+      Result := Precursor
+   end
+
+   day: INTEGER is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.day"
+   do
+      Result := Precursor
+   end
+
+   hour: INTEGER is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.hour"
+   do
+      Result := Precursor
+   end
+
+   minute: INTEGER is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.minute"
+   do
+      Result := Precursor
+   end
+
+   second: INTEGER is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.second"
+   do
+      Result := Precursor
+   end
+
+   week_day: INTEGER is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.week_day"
+   do
+      Result := Precursor
+   end
+
+   year_day: INTEGER is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.year_day"
+   do
+      Result := Precursor
+   end
+
+   is_summer_time_used: BOOLEAN is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use time.is_summer_time_used"
+   do
+      Result := Precursor
+   end
+         
+   to_microsecond_time: MICROSECOND_TIME is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Anyway, this feature in MICROSECOND_TIME is redundant."
+   do
+       Result := Current
+   end   
+   
+   set (a_year, a_month, a_day, a_hour, a_min, sec: INTEGER): BOOLEAN is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use set_time"
+   do
+       Result := Precursor (a_year, a_month, a_day, a_hour, a_min, sec)
+   end
+   
+   set_universal_time is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use set_time"
+   do
+       Precursor
+   end
+   
+   set_local_time is
+      obsolete "In SE2, MICROSECOND_TIME will not have TIME features. Use set_time"
+   do
+       Precursor
+   end
 
 feature {NONE}
 

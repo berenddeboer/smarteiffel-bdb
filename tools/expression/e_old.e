@@ -275,7 +275,7 @@ feature {RUN_FEATURE}
       do
          name := local_c_name
          t := result_type.run_type
-         tmp_string.clear
+         tmp_string.clear_count
          t.c_type_for_argument_in(tmp_string)
          tmp_string.extend(' ')
          tmp_string.append(name)
@@ -324,7 +324,7 @@ feature {NONE}
 	 suffix: INTEGER
       do
          if local_c_name_memory = Void then
-            tmp_string.clear
+            tmp_string.clear_count
             tmp_string.extend('o')
             start_position.base_class.id.append_in(tmp_string)
             tmp_string.extend('_')
@@ -347,7 +347,7 @@ feature {NONE}
          !!Result.make(12)
       end
 
-   vaol_check_memory: MEMO[E_OLD] is
+   vaol_check_memory: REFERENCE[E_OLD] is
       once
          !!Result
       end

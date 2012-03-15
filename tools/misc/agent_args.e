@@ -25,8 +25,8 @@
 class AGENT_ARGS
 
 inherit
-   GLOBALS
-   VISITABLE
+   GLOBALS redefine is_equal end
+   VISITABLE redefine is_equal end
    HASHABLE redefine is_equal end
 
 creation {AGENT_POOL} make
@@ -57,7 +57,7 @@ feature {AGENT_POOL}
 	 boost: BOOLEAN
       do
 	 boost := c_define_agent_launcher_heading(once "(live)")
-	 buffer.clear
+	 buffer.clear_count
          if not boost then
             buffer.append(
             once "[
@@ -90,7 +90,7 @@ feature {AGENT_POOL}
 	 boost: BOOLEAN
       do
 	 boost := c_define_agent_launcher_heading(once "(missing)")
-	 buffer.clear
+	 buffer.clear_count
 	 if not boost then
 	    buffer.append("error0(%"Missing agent.%",NULL);%N")
 	 end
@@ -311,7 +311,7 @@ feature {NONE}
 	 echo.put_string(signature)
 	 echo.put_string(once "%N")
 	 boost := ace.boost
-	 buffer.clear
+	 buffer.clear_count
 	 if result_type = Void then
 	    buffer.append(fz_void)
 	 else

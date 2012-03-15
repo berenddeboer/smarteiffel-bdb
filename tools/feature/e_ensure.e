@@ -33,7 +33,7 @@ creation with, make_runnable
 
 feature
 
-   is_require: BOOLEAN is false
+   is_require: BOOLEAN is False
 
    is_ensure_then: BOOLEAN
 

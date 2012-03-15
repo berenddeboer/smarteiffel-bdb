@@ -362,7 +362,7 @@ feature
 
 feature {FAKE_TUPLE}
 
-   list: FIXED_ARRAY[EXPRESSION]
+   list: FAST_ARRAY[EXPRESSION]
          -- Void or elements in the manifest array.
 
    debug_info: STRING

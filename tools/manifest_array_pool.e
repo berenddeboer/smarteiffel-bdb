@@ -40,7 +40,7 @@ feature {MANIFEST_ARRAY_POOL_VISITOR}
 
 feature {NONE}
 
-   manifest_array_types: DICTIONARY[E_TYPE,INTEGER] is
+   manifest_array_types: HASHED_DICTIONARY[E_TYPE,INTEGER] is
          -- Gives the type for all kind of used MANIFEST_ARRAY.
       once
          !!Result.make
@@ -110,7 +110,7 @@ feature {NONE}
          ma_id.append_in(header)
          header.append(once "(int argc,...)")
          -- Prepare body :
-         body.clear
+         body.clear_count
          body.extend('T')
          ma_id.append_in(body)
          body.append(once "*m;%N%

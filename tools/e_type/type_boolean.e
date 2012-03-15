@@ -36,17 +36,17 @@ feature
 
    id: INTEGER is 6
 
-   is_boolean: BOOLEAN is true
+   is_boolean: BOOLEAN is True
 
    is_integer,
    is_character,
    is_pointer,
    is_real,
-   is_double: BOOLEAN is false
+   is_double: BOOLEAN is False
    
    c_sizeof: INTEGER is
       do
-         Result := (true).object_size
+         Result := (True).object_size
       end
 
    smallest_ancestor(other: E_TYPE): E_TYPE is
@@ -64,7 +64,7 @@ feature
    is_a(other: E_TYPE): BOOLEAN is
       do
          if other.is_boolean then
-            Result := true
+            Result := True
          else
 	    Result := is_a_end_hook(other.run_type)
          end
@@ -194,7 +194,7 @@ feature {NONE}
       once
          if base_class /= Void then
 	    if run_class = Void then
-	       check false end
+	       check False end
 	    end
 	 end
       end

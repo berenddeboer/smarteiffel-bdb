@@ -41,7 +41,7 @@ feature {NONE}
 
    string_pool: TUPLE_STRING_POOL
 
-   headers: FIXED_ARRAY[STRING] is
+   headers: FAST_ARRAY[STRING] is
       once
          create Result.with_capacity(4)
       end
@@ -50,7 +50,7 @@ feature {NONE}
       require
          ei /= Void
       local
-         wl: WHEN_LIST; lw: FIXED_ARRAY[E_WHEN]
+         wl: WHEN_LIST; lw: FAST_ARRAY[E_WHEN]
          val: ARRAY[WHEN_ITEM]; i, j, n: INTEGER
          wi1: WHEN_ITEM_1; s: STRING
          ms: MANIFEST_STRING
@@ -259,7 +259,7 @@ feature
                   cpp.put_string(once "\n")
                when 0..8, 11, 12, 14..31 then
                   octal := once ""
-                  octal.clear
+                  octal.clear_count
                   cur_char.code.to_integer_8.to_octal_in(octal)
                   cpp.put_character('\')
                   cpp.put_string(octal)
@@ -537,17 +537,17 @@ feature
 
 feature {NONE}
 
-   jvm_state_points: FIXED_ARRAY[INTEGER] is
+   jvm_state_points: FAST_ARRAY[INTEGER] is
       once
          create Result.with_capacity(4)
       end
 
-   jvm_char_points: FIXED_ARRAY[INTEGER] is
+   jvm_char_points: FAST_ARRAY[INTEGER] is
       once
          create Result.with_capacity(4)
       end
 
-   jvm_char_values: FIXED_ARRAY[INTEGER] is
+   jvm_char_values: FAST_ARRAY[INTEGER] is
       once
          create Result.with_capacity(4)
       end

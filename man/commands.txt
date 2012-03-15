@@ -1,4 +1,5 @@
-   Tools Documentation
+
+                            Tools Documentation
 
    install
 
@@ -6,24 +7,24 @@
 
    compile
 
-   Starting  from an Eiffel source program, generates the corresponding C
+   Starting from an Eiffel source program, generates the corresponding C
    code and then the executable. This is probably the command you want to
    use. [2]More about compile here.
 
    compile_to_c
 
-   The  Eiffel  to  C  compiler  itself.  You  do not generally invoke it
+   The Eiffel to C compiler itself. You do not generally invoke it
    explicitly. [3]More about compile_to_c here.
 
    compile_to_jvm
 
-   The  Eiffel to Java byte-code compiler. Starting from an Eiffel source
-   program,  generates  the  corresponding  .class  files.  [4]More about
+   The Eiffel to Java byte-code compiler. Starting from an Eiffel source
+   program, generates the corresponding .class files. [4]More about
    compile_to_jvm here.
 
    short
 
-   Eiffel  interface  extraction  tool.  Can generate documentation using
+   Eiffel interface extraction tool. Can generate documentation using
    different formats (ASCII, HTML, etc.) [5]More about short here.
 
    pretty
@@ -32,7 +33,7 @@
 
    finder
 
-   Used   to   find   Eiffel   source   files  according  to  the  system
+   Used to find Eiffel source files according to the system
    configuration. [7]More about finder here.
 
    clean
@@ -41,25 +42,25 @@
 
    print_jvm_class
 
-   Java  byte-code  disassembler  and  pretty  printer.  We  find it more
+   Java byte-code disassembler and pretty printer. We find it more
    convenient than javap. [9]More about print_jvm_class here.
 
                                    [Line]
              Copyright © Dominique COLNET and Suzanne COLLIN -
                          [10]<SmartEiffel@loria.fr>
                 Last modified: Tue Feb 11 10:56:27 CET 2003
-                         [11][ToQiL9mALLb2vPg7kuA]
+                         [11][ToQiL9mALLb2vPg7kuA] 
 
 References
 
-   1. file://localhost/users/miro/colnet/SmartEiffel/man/install.html
-   2. file://localhost/users/miro/colnet/SmartEiffel/man/compile.html
-   3. file://localhost/users/miro/colnet/SmartEiffel/man/compile_to_c.html
-   4. file://localhost/users/miro/colnet/SmartEiffel/man/compile_to_jvm.html
-   5. file://localhost/users/miro/colnet/SmartEiffel/man/short.html
-   6. file://localhost/users/miro/colnet/SmartEiffel/man/pretty.html
-   7. file://localhost/users/miro/colnet/SmartEiffel/man/finder.html
-   8. file://localhost/users/miro/colnet/SmartEiffel/man/clean.html
-   9. file://localhost/users/miro/colnet/SmartEiffel/man/print_jvm_class.html
+   1. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/install.html
+   2. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/compile.html
+   3. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/compile_to_c.html
+   4. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/compile_to_jvm.html
+   5. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/short.html
+   6. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/pretty.html
+   7. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/finder.html
+   8. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/clean.html
+   9. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/print_jvm_class.html
   10. mailto:SmartEiffel@loria.fr
   11. http://v1.nedstatbasic.net/stats?ABrwUAQw/ToQiL9mALLb2vPg7kuA

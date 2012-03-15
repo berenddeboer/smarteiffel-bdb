@@ -2,7 +2,8 @@ class PYRAMID2
    --
    -- Run faster than pyramid.e
    --
-inherit ANY redefine print_on end;
+inherit
+    ARGUMENTS redefine print_on end;
 
 creation make
 
@@ -47,7 +48,7 @@ feature {NONE}
    put(value, line, column: INTEGER) is
          -- Updtate `pyramid' and `used'.
       do
-         used.put(true,value);
+         used.put(True,value);
          pyramid.put(value,line,column);
       end;
 
@@ -55,7 +56,7 @@ feature {NONE}
          -- Updtate `pyramid' and `used'.
       do
          if pyramid.item(line,column) /= 0 then
-            used.put(false,pyramid.item(line,column));
+            used.put(False,pyramid.item(line,column));
             pyramid.put(0,line,column);
          end;
       end;
@@ -66,7 +67,7 @@ feature {NONE}
          nb, i: INTEGER;
       do
          if column > pyramid.upper1 then
-            Result := true;
+            Result := True;
          else
             from
                nb := used.upper
@@ -103,7 +104,7 @@ feature {NONE}
          loop
             v := (pyramid.item(i-1,col-1)-pyramid.item(i-1,col)).abs
             if used.item(v) then
-               Result := true;
+               Result := True;
             else
                put(v,i,col);
                i := i + 1;
@@ -117,7 +118,7 @@ feature {NONE}
                remove(i,col);
                i := i-1;
             end;
-            Result := false;
+            Result := False;
          else
             Result := solution(col+1);
          end;

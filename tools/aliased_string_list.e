@@ -32,6 +32,7 @@ feature {NONE}
    -- Hard-coded class names:
    as_any:              STRING is "ANY"
    as_array:            STRING is "ARRAY"
+   as_arguments:        STRING is "ARGUMENTS"
    as_bit:              STRING is "BIT"
    as_bit_n:            STRING is "BIT_N"
    as_boolean:          STRING is "BOOLEAN"
@@ -225,7 +226,6 @@ feature {NONE}
    as_with_capacity:              STRING is "with_capacity"
 
    -- Other names:
-   as_arguments:                STRING is "arguments"
    as_current:                  STRING is "Current"
    as_native_array_character:   STRING is "NATIVE_ARRAY[CHARACTER]"
    as_last_result:              STRING is "last_result"

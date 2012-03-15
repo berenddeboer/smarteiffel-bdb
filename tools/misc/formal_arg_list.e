@@ -45,7 +45,7 @@ feature
          i, j, column, wrap_limit: INTEGER; buffer: STRING; c: CHARACTER
       do
 	 buffer := once "........................"
-	 buffer.clear
+	 buffer.clear_count
 	 -- Fill the `buffer' first:
          from
 	    i := list.lower
@@ -165,7 +165,7 @@ feature
                t1 := type(i)
                t2 := other.type(i)
                if not assignment_handler.redefinition(t2, t1, rc, True) then
-                  Result := false
+                  Result := False
                   error_handler.print_as_error
                   error_handler.add_position(t1.start_position)
                   error_handler.add_position(t2.start_position)
@@ -253,7 +253,7 @@ feature {RUN_FEATURE}
          t: E_TYPE
          i, n: INTEGER
       do
-         tmp_string.clear
+         tmp_string.clear_count
          cpp.put_character('{')
          from
             i := 1
@@ -376,7 +376,7 @@ feature {RUN_FEATURE_3}
             i > count
          loop
             t := type(i).run_type
-            tmp_string.clear
+            tmp_string.clear_count
             t.c_type_for_argument_in(tmp_string)
             tmp_string.extend(' ')
             cpp.put_string(tmp_string)

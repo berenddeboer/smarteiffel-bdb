@@ -83,7 +83,7 @@ feature {NONE}
 		  if drop_comments then
 		     if line = parser_buffer.count then
 			cc := end_of_text
-			stop := true
+			stop := True
 		     else
 			line := line + 1
 			column := 1
@@ -98,7 +98,7 @@ feature {NONE}
 		     from
 			sp := pos(line,column - 1)
 			next_char
-			lcs.clear
+			lcs.clear_count
 		     until
 			cc = '%N'
 		     loop
@@ -114,10 +114,10 @@ feature {NONE}
 	       else
 		  cc := '-'
 		  column := column - 1
-		  stop := true
+		  stop := True
 	       end
 	    else
-	       stop := true
+	       stop := True
 	    end
 	 end
       end
@@ -157,6 +157,7 @@ feature {NONE}
 	 not keyword.has('%N')
       local
 	 c, i, j: INTEGER
+	 bad_case: BOOLEAN
       do
 	 i := column
 	 c := keyword.count
@@ -168,10 +169,15 @@ feature {NONE}
 	    until
 	       c <= 0
 	    loop
-	       if current_line.item(i).same_as(keyword.item(j)) then
+	       if current_line.item(i) = keyword.item(j) then
 		  i := i + 1
 		  j := j + 1
 		  c := c - 1
+	       elseif current_line.item(i).same_as (keyword.item(j)) then
+		  i := i + 1
+		  j := j + 1
+		  c := c - 1
+		  bad_case := True
 	       else
 		  c := -1
 	       end
@@ -179,7 +185,7 @@ feature {NONE}
 	 end
 	 if c = 0 then
 	    if i > current_line.count then
-	       Result := true
+	       Result := True
 	       cc := '%N'
 	       column := i
 	       skip_comments
@@ -187,18 +193,27 @@ feature {NONE}
 	       inspect
 		  current_line.item(i)
 	       when ' ','%T','-' then
-		  Result := true
+		  Result := True
 		  cc := current_line.item(i)
 		  column := i
 		  skip_comments
 	       when 'a'..'z','A'..'Z','0'..'9','_' then
 	       else
-		  Result := true
+		  Result := True
 		  cc := current_line.item(i)
 		  column := i
 	       end
 	    end
 	 end
+         if Result and bad_case and keyword /= fz_reference then
+            error_handler.add_position (pos (start_line, start_column))
+            error_handler.append (
+               once "Wrong case for keyword, this will not work in SE 2.2. %
+               %You should capitalize: '")
+            error_handler.append(keyword)
+            error_handler.append("'")
+            error_handler.print_as_warning
+         end
       end
 
    skip1(char: CHARACTER): BOOLEAN is
@@ -206,7 +221,7 @@ feature {NONE}
 	 if char = cc then
 	    start_line := line
 	    start_column := column
-	    Result := true
+	    Result := True
 	    next_char
 	    skip_comments
 	 end

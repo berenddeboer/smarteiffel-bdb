@@ -28,6 +28,10 @@ expanded class STRING_COMMAND_LINE
 --
 inherit
    COMMAND_LINE_TOOLS
+       undefine
+           ace_file_mode,
+           unknown_flag_exit
+       end -- Avoid conformance problems with Current
 
 feature {STRING_COMMAND_LINE_VISITOR}
 
@@ -103,7 +107,7 @@ feature {NONE}
          loop
             up := up + 1
          end
-         option_buffer.clear
+         option_buffer.clear_count
          if up > command_line_buffer.count then
             from
                i := low
@@ -113,7 +117,7 @@ feature {NONE}
                option_buffer.extend(command_line_buffer.item(i))
                i := i + 1
             end
-            command_line_buffer.clear
+            command_line_buffer.clear_count
          else
             from
                i := low
@@ -141,5 +145,14 @@ feature {NONE}
       once
          Result := "string_command_line" -- must be changed by the tools which use the STRING_COMMAND_LINE
       end
+
+   valid_argument_for_ace_mode: STRING is ""
+
+   command_line_help_summary: STRING is ""
+   
+   is_valid_argument_for_ace_mode (arg: STRING): BOOLEAN is
+   do
+       Result := True
+   end
 
 end

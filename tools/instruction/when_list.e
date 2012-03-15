@@ -351,7 +351,7 @@ feature {E_INSPECT,WHEN_LIST,MANIFEST_STRING_INSPECTOR}
          i: INTEGER
       do
 	 from
-	    Result := true
+	    Result := True
 	    i := list.upper
 	 until
 	    not Result or else i < list.lower
@@ -402,7 +402,7 @@ feature {E_INSPECT}
 
 feature {WHEN_LIST, MANIFEST_STRING_INSPECTOR}
 
-   list: FIXED_ARRAY[E_WHEN]
+   list: FAST_ARRAY[E_WHEN]
 
 feature {WHEN_LIST_VISITOR}
 

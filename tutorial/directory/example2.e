@@ -24,7 +24,7 @@ feature {}
          -- subdirectories
       local
          i: INTEGER
-         a: FIXED_ARRAY[STRING]
+         a: FAST_ARRAY[STRING]
          filename: STRING
          path: STRING
       do

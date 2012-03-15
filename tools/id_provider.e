@@ -106,7 +106,7 @@ feature {POSITION}
 
 feature {NONE}
 
-   id_memory: DICTIONARY[INTEGER_16,STRING] is
+   id_memory: HASHED_DICTIONARY[INTEGER_16,STRING] is
       once
          create Result.with_capacity(2048)
       end
@@ -119,7 +119,9 @@ feature {NONE}
          id_memory.put(2,as_integer_32)
          id_memory.put(3,as_character)
          id_memory.put(4,as_real)
+         id_memory.put(4,as_real_32) -- Alias
          id_memory.put(5,as_double)
+         id_memory.put(5,as_real_64) -- Alias
          id_memory.put(6,as_boolean)
          id_memory.put(7,as_string)
          id_memory.put(8,as_pointer)
@@ -174,7 +176,7 @@ feature {NONE}
 		     id := id * 10 + cc.decimal_value
 		  when '%"' then
 		     type_name := temporary_type_name
-		     type_name.clear
+		     type_name.clear_count
 		     state := 3
 		  when ' ', '%T' then
 		     state := 2
@@ -186,7 +188,7 @@ feature {NONE}
 		     cc
 		  when '%"' then
 		     type_name := temporary_type_name
-		     type_name.clear
+		     type_name.clear_count
 		     state := 3
 		  when ' ', '%T', '%N', '%R' then
 		  else

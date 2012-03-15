@@ -193,7 +193,7 @@ feature
       require
 	 on_c
       do
-	 tmp_string.clear
+	 tmp_string.clear_count
 	 manifest_string_pool.string_to_c_code(s, tmp_string)
 	 out_c.put_string(tmp_string)
       end
@@ -432,7 +432,7 @@ feature
       do
 	 swap_on_c
 	 -- Declare eiffel_root_object :
-	 tmp_string.clear
+	 tmp_string.clear_count
 	 tmp_string.extend('T')
 	 rf3.run_class.id.append_in(tmp_string)
 	 tmp_string.append(once "*eiffel_root_object")
@@ -539,7 +539,7 @@ feature {SMART_EIFFEL}
 	 echo.put_character('%N')
 	 end
 
-   customize_runtime(sys_runtime_basic: SET[STRING]) is
+   customize_runtime(sys_runtime_basic: HASHED_SET[STRING]) is
       require
 	 sys_runtime_basic /= Void
       local
@@ -735,7 +735,7 @@ feature
 	    stack_args.item(top).compile_to_c_ith(fal, index)
 	 when C_scoop_unwrapper then
 	    unwrap_buffer := once "                "
-	    unwrap_buffer.clear
+	    unwrap_buffer.clear_count
 	    unwrap_buffer.append(once "((Tw")
 	    stack_rf.item(top).id.append_in(unwrap_buffer)
 	    stack_rf.item(top).name.mapping_c_in(unwrap_buffer)
@@ -1314,8 +1314,11 @@ feature -- Printing Current, local or argument :
       local
 	 level: INTEGER
       do
+	 out_c.put_character('_')
+	 out_c.put_character('l')
+	 out_c.put_character('_')
 	 from
-	    level := inline_level + 1
+	    level := inline_level
 	 until
 	    level = 0
 	 loop
@@ -1389,7 +1392,7 @@ feature
 
    macro_def(str: STRING; id: INTEGER) is
       do
-	 tmp_string.clear
+	 tmp_string.clear_count
 	 tmp_string.extend('#')
 	 tmp_string.append(fz_define)
 	 tmp_string.extend(' ')
@@ -1555,7 +1558,7 @@ feature {COMPOUND, ASSERTION_LIST, E_LOOP, RUN_CLASS, CREATE_TOOLS}
 	 i: INTEGER; t: E_TYPE
       do
 	 from
-	    tmp_string.clear
+	    tmp_string.clear_count
 	    tmp_string.extend('{')
 	    i := se_tmp_list.upper
 	 until
@@ -1723,10 +1726,10 @@ feature {BIT_CONSTANT}
 	    until
 	       i < 0
 	    loop
-	       tmp_string.clear
+	       tmp_string.clear_count
 	       bc := bit_constant_pool.item(i)
 	       type_bit := bc.result_type
-	       tmp_string.clear
+	       tmp_string.clear_count
 	       type_bit.c_type_for_argument_in(tmp_string)
 	       tmp_string.extend(' ')
 	       tmp_string.append(fz_se_bit_constant)
@@ -1844,6 +1847,8 @@ feature {RUN_FEATURE_2}
 
 feature {NONE}
 
+   ftools: FILE_TOOLS
+
    stupid_switch(up_rf: RUN_FEATURE): BOOLEAN is
       require
 	 smart_eiffel.is_ready
@@ -1883,7 +1888,7 @@ feature {NONE}
 	 end
       end
 
-   c_plus_plus: FIXED_ARRAY[NATIVE_C_PLUS_PLUS]
+   c_plus_plus: FAST_ARRAY[NATIVE_C_PLUS_PLUS]
 
    begin_c_linkage (output: TEXT_FILE_WRITE) is
 		 -- Begin wrap for C linkage
@@ -1991,7 +1996,7 @@ feature {NONE}
 	 end
       end
 
-   c_inline_h_mem: FIXED_ARRAY[STRING] is
+   c_inline_h_mem: FAST_ARRAY[STRING] is
       once
 	 !!Result.with_capacity(4)
       end
@@ -2495,8 +2500,8 @@ feature {NONE}
 	 tmp_path.copy(c_path)
 	 tmp_path.remove_last(2)
 	 tmp_path.append(system_tools.object_suffix)
-	 if file_exists(tmp_path) then
-	    if file_exists(c_path) then
+	 if ftools.is_readable(tmp_path) then
+	    if ftools.is_readable(c_path) then
 	       c_path.put('d', c_path.count)
 	    else
 	       echo.file_removing(tmp_path)
@@ -2507,7 +2512,7 @@ feature {NONE}
 
    path_c_in(str: STRING; number: INTEGER) is
       do
-	 str.clear
+	 str.clear_count
 	 str.append(path_h)
 	 str.remove_last(2)
 	 number.append_in(str)
@@ -2533,8 +2538,8 @@ feature {NONE}
 	    path_c_in(tmp_path, i)
 	    tmp_string.copy(tmp_path)
 	    tmp_string.put('d', tmp_string.count)
-	    if file_exists(tmp_string) then
-	       if file_tools.same_files(tmp_path, tmp_string) then
+	    if ftools.is_readable(tmp_string) then
+	       if ftools.same_files(tmp_path, tmp_string) then
 		  echo.put_string(fz_01)
 		  echo.put_string(tmp_path)
 		  echo.put_string(once "%" not changed.%N")
@@ -2561,7 +2566,7 @@ feature {NONE}
 	 end
 	 executable_name := ace.executable_name
 	 if no_change and then executable_name /= Void then
-	    no_change := file_exists(executable_name)
+	    no_change := ftools.is_readable(executable_name)
 	 else
 	    no_change := False
 	 end
@@ -2645,7 +2650,7 @@ feature {NONE}
 	 when C_scoop_unwrapper then
 	    mem_id := stack_rf.item(top).id
 	    unwrap_buffer := once "                "
-	    unwrap_buffer.clear
+	    unwrap_buffer.clear_count
             unwrap_buffer.append(once "((T")
             mem_id.append_in(unwrap_buffer)
             unwrap_buffer.append(once "*)((Tw")
@@ -2701,7 +2706,7 @@ feature {NONE}
          end
 	 if ace.no_check then
 	    out_c.put_string(once "se_frame_descriptor root={%"<system root>%",1,0,%"")
-	    tmp_string.clear
+	    tmp_string.clear_count
 	    ct.c_frame_descriptor_in(tmp_string)
 	    out_c.put_string(tmp_string)
 	    out_c.put_string(once "%",1};%N%
@@ -2735,13 +2740,13 @@ feature {NONE}
 	 system_tools.put_c_main_function_exit(out_c)
       end
 
-   bit_constant_pool: FIXED_ARRAY[BIT_CONSTANT]
+   bit_constant_pool: FAST_ARRAY[BIT_CONSTANT]
 
    fz_se_bit_constant: STRING is "se_bit_constant"
 
    se_tmp_level: INTEGER
 
-   se_tmp_list: FIXED_ARRAY[E_TYPE] is
+   se_tmp_list: FAST_ARRAY[E_TYPE] is
       once
 	 create Result.with_capacity(4)
       end
@@ -2767,7 +2772,7 @@ feature {NONE}
 	 bunch_size := new_bunch_size
       end
 
-   include_memory: SET[STRING]
+   include_memory: HASHED_SET[STRING]
 
    put_position_comment_on(output: TEXT_FILE_WRITE; p: POSITION) is
       local

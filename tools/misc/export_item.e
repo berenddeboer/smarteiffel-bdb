@@ -78,7 +78,7 @@ feature
    affect(fn: FEATURE_NAME): BOOLEAN is
       do
          if for_all then
-            Result := true
+            Result := True
          else
             Result := list.has(fn)
          end

@@ -130,13 +130,13 @@ feature -- Skipping separators:
          from until stop
          loop
             if end_of_input then
-               stop := true
+               stop := True
             else
                inspect
                   last_character
                when '%N', '%R' then
                   read_character
-                  stop := true
+                  stop := True
                else
                   read_character
                end
@@ -177,7 +177,7 @@ feature -- To read one number at a time:
                   last_integer := last_character.value
                   state := 2
                elseif last_character = '-' then
-                  sign := true
+                  sign := True
                   state := 1
                elseif last_character = '+' then
                   state := 1
@@ -271,7 +271,7 @@ feature -- To read one number at a time:
                   last_string.add_last(last_character)
                   state := 2
                elseif last_character = '-' then
-                  sign := true
+                  sign := True
                   state := 1
                elseif last_character = '+' then
                   state := 1
@@ -355,7 +355,7 @@ feature -- To read one line or one word at a time:
 	 is_connected
          not end_of_input
       do
-         last_string.clear
+         last_string.clear_count
          read_line_in(last_string)
       end
 
@@ -374,7 +374,7 @@ feature -- To read one line or one word at a time:
             read_character
          end
          from
-            last_string.clear
+            last_string.clear_count
          until
             end_of_input or else
             last_character.is_separator
@@ -398,7 +398,7 @@ feature -- To read one line or one word at a time:
          loop
             read_character
             if end_of_input or else last_character = '%N' then
-               stop := true
+               stop := True
             else
                last_string.extend(last_character)
             end

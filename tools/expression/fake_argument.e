@@ -152,7 +152,7 @@ feature
          Result := standard_compile_to_jvm_into(dest)
       end
 
-   jvm_assign is
+   jvm_assign, jvm_assign_creation is
       do
          check False end
       end
@@ -160,6 +160,11 @@ feature
    compile_target_to_jvm is
       do
          compile_to_jvm
+      end
+
+   extra_bracket_flag: BOOLEAN is
+      do
+	 check False end
       end
 
    pretty_print is

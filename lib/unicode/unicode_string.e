@@ -393,7 +393,7 @@ feature -- Testing and Conversion:
 	 -- with UTF-8 format.
          -- Note: see also `utf8_encode_in' to save memory.
       do
-	 tmp_buffer.clear
+	 tmp_buffer.clear_count
 	 utf8_encode_in(tmp_buffer)
          Result := tmp_buffer.twin
       end
@@ -678,7 +678,7 @@ feature -- Modification:
          s_not_void: s /= Void
       local
          s_count, needed_capacity, new_capacity, i: INTEGER
-	 indexes: FIXED_ARRAY[INTEGER]
+	 indexes: FAST_ARRAY[INTEGER]
       do
 	 s_count := s.count
          needed_capacity := count + s_count
@@ -1354,8 +1354,8 @@ feature -- Other features:
       local
 	 i: INTEGER
 	 c: like storage
-	 lsi: FIXED_ARRAY[INTEGER]
-	 lsv: FIXED_ARRAY[INTEGER_16]
+	 lsi: FAST_ARRAY[INTEGER]
+	 lsv: FAST_ARRAY[INTEGER_16]
       do
 	 create Result.make(end_index - start_index + 1)
 	 Result.set_count(end_index - start_index + 1)
@@ -1624,10 +1624,10 @@ feature -- Other features:
 
 feature {UNICODE_STRING, UNICODE_STRING_HANDLER}
 
-   low_surrogate_indexes: FIXED_ARRAY[INTEGER]
+   low_surrogate_indexes: FAST_ARRAY[INTEGER]
 	 -- user indexes (starting at 1)
    
-   low_surrogate_values: FIXED_ARRAY[INTEGER_16]
+   low_surrogate_values: FAST_ARRAY[INTEGER_16]
 	 -- low surrogate value is stored without 0xDC00 part and 
 	 -- endianness dependant !
 
@@ -1744,7 +1744,7 @@ feature {NONE}
 	 loop
 	    --***TODO: array copy may be improved using 
 	    --NATIVE_ARRAY.copy_from. Need to force new upper value 
-	    --in FIXED_ARRAY.
+	    --in FAST_ARRAY.
 	    low_surrogate_indexes.add_last(lsi.item(i))
 	    low_surrogate_values.add_last(lsv.item(i))
 	    i := i + 1

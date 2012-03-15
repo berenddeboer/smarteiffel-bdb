@@ -37,7 +37,7 @@ feature {CECIL_POOL}
 	 -- Parse the corresponding `path' file.
       local
 	 tuple: TUPLE[STRING, RUN_FEATURE]; rt: E_TYPE; type_tuple: TYPE_TUPLE
-	 aux: FIXED_ARRAY[TUPLE[E_TYPE, FEATURE_NAME]]
+	 aux: FAST_ARRAY[TUPLE[E_TYPE, FEATURE_NAME]]
          fn: FEATURE_NAME; void_rf, rf: RUN_FEATURE; i: INTEGER; rc: RUN_CLASS
       do
 	 create entries.with_capacity(4)
@@ -157,7 +157,7 @@ feature {NONE}
 	 -- The name of the include file to be generated (ie. first
 	 -- information inside file `path'.
 
-   entries: FIXED_ARRAY[TUPLE[STRING, RUN_FEATURE]]
+   entries: FAST_ARRAY[TUPLE[STRING, RUN_FEATURE]]
 	 -- List of user's `entries'. For each TUPLE entry `first' is the C 
 	 -- user's name and `second' the corresponding Eiffel feature.
 

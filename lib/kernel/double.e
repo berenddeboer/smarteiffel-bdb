@@ -152,7 +152,7 @@ feature
    to_string: STRING is
          -- Convert the DOUBLE into a new allocated STRING.
          -- As ANSI C, the default number of digit for the
-         -- fractionnal part is 6.
+         -- fractional part is 6.
          -- Note: see `append_in' to save memory.
       do
          create Result.make(16)
@@ -171,7 +171,7 @@ feature
 
    to_string_format(f: INTEGER): STRING is
          -- Convert the DOUBLE into a new allocated STRING including
-         -- only `f' digits in fractionnal part.
+         -- only `f' digits in fractional part.
          -- Note: see `append_in_format' to save memory.
       require
          f >= 0
@@ -182,7 +182,7 @@ feature
 
    append_in_format(str: STRING; f: INTEGER) is
          -- Same as `append_in' but produce `f' digit of
-         -- the fractionnal part.
+         -- the fractional part.
       require
          str /= Void
          f >= 0
@@ -339,7 +339,7 @@ feature {NONE}
    basic_sprintf_double(buffer: NATIVE_ARRAY[CHARACTER];
 			f: INTEGER; d: DOUBLE) is
          -- Put in the `buffer' a viewable version of Current with
-         -- `f' digit of the fractionnal part. Assume the `buffer' is
+         -- `f' digit of the fractional part. Assume the `buffer' is
          -- large enougth.
       require
          f >= 0

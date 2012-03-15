@@ -43,7 +43,7 @@ feature {NONE}
 	 if io.last_string.is_empty then
 	    Result := default_answer;
 	 elseif io.last_string.first = 'y' then
-	    Result := true;
+	    Result := True;
 	 elseif io.last_string.first = 'n' then
 	 else
 	    Result := yes_or_no(question,default_answer);
@@ -68,7 +68,7 @@ feature
             io.put_integer(day);
             io.put_new_line;
             display;
-            fed_up := yes_or_no("Exit spread_illness",false);
+            fed_up := yes_or_no("Exit spread_illness",False);
             day := day + 1;
             next_day
          end;
@@ -80,7 +80,7 @@ feature
          i, j, ill_state: INTEGER;
          ok: BOOLEAN;
       do
-         if yes_or_no("Default First World",true) then
+         if yes_or_no("Default First World",True) then
             !!world1.from_model(
               <<<<0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0>>,
                 <<0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0>>,
@@ -117,7 +117,7 @@ feature
                   j > world1.upper2
                loop
                   from
-                     ok := false;
+                     ok := False;
                   until
                      ok
                   loop
@@ -135,17 +135,17 @@ feature
                            io.put_string(error_msg)
                         else
                            world1.put(empty,i,j);
-                           ok := true
+                           ok := True
                         end
                      when 'H','h' then
                         if io.last_string.count /= 1 then
                            io.put_string(error_msg)
                         else
                            world1.put(healthy,i,j);
-                           ok := true
+                           ok := True
                         end
                      when 'I','i' then
-                        ok := true;
+                        ok := True;
                         io.flush;
                         io.read_integer;
                         ill_state := io.last_integer;

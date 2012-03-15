@@ -418,10 +418,10 @@ feature -- Comparison:
 	 i: INTEGER
       do
 	 if Current = other then
-	    Result := true
+	    Result := True
 	 elseif count <= other.count then
 	    from
-	       Result := true
+	       Result := True
 	       i := 1
 	    until
 	       not Result or else i > count
@@ -442,7 +442,7 @@ feature -- Comparison:
 	 i: INTEGER
       do
 	 if Current /= other then
-	    Result := true
+	    Result := True
 	    i := 1
 	    if count <= other.count then
 	       from until
@@ -469,10 +469,10 @@ feature -- Comparison:
 	 i: INTEGER
       do
 	 if Current = other then
-	    Result := true
+	    Result := True
 	 elseif count = other.count then
 	    from
-	       Result := true
+	       Result := True
 	       i := 1
 	    until
 	       not Result or else i > count
@@ -546,7 +546,7 @@ feature -- Agents based features:
 	 i: INTEGER
       do
 	 from
-	    Result := true
+	    Result := True
 	    i := lower
 	 until
 	    not Result or else i > upper

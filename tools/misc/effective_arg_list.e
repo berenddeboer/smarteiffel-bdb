@@ -39,7 +39,7 @@ feature {EFFECTIVE_ARG_LIST}
 
    first_one: EXPRESSION
 
-   remainder: FIXED_ARRAY[EXPRESSION]
+   remainder: FAST_ARRAY[EXPRESSION]
          -- Corresponding list of actual arguments.
 
 feature

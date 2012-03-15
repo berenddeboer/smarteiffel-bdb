@@ -40,7 +40,7 @@ feature {LOOP_INVARIANT_VISITOR}
 
 feature
 
-   is_require: BOOLEAN is false
+   is_require: BOOLEAN is False
 
    name: STRING is "invariant"
 

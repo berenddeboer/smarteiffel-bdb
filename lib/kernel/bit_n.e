@@ -46,6 +46,11 @@ expanded class BIT_N
 --
 -- Also consider class BIT_STRING for very long bit sequences.
 --
+
+obsolete
+    "The BIT types will not be supported in SE2. Use INTEGER or BIT_STRING if you %
+    %need bit operations."
+
 inherit
    ANY
       redefine out_in_tagged_out_memory, fill_tagged_out_memory

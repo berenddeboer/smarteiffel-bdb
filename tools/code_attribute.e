@@ -1067,7 +1067,7 @@ feature
 
 feature {MANIFEST_STRING_INSPECTOR}
 
-   opcode_tableswitch(lower, upper: INTEGER; points: FIXED_ARRAY[INTEGER]): INTEGER is
+   opcode_tableswitch(lower, upper: INTEGER; points: FAST_ARRAY[INTEGER]): INTEGER is
       require
          points /= Void
          upper > lower
@@ -1090,7 +1090,7 @@ feature {MANIFEST_STRING_INSPECTOR}
          end
       end
 
-   opcode_lookupswitch(values: FIXED_ARRAY[INTEGER]; points: FIXED_ARRAY[INTEGER]): INTEGER is
+   opcode_lookupswitch(values: FAST_ARRAY[INTEGER]; points: FAST_ARRAY[INTEGER]): INTEGER is
          -- THE `values' ARRAY WILL BE SORTED!
       require
          points /= Void
@@ -1118,7 +1118,7 @@ feature {MANIFEST_STRING_INSPECTOR}
          --values_sorted: (create {COLLECTION_SORTER[INTEGER]}).is_sorted(values)
       end
 
-   resolve_tableswitch_branch(opcode_pc: INTEGER; points: FIXED_ARRAY[INTEGER]; index: INTEGER) is
+   resolve_tableswitch_branch(opcode_pc: INTEGER; points: FAST_ARRAY[INTEGER]; index: INTEGER) is
       require
          points.valid_index(index)
          item(opcode_pc) = 170
@@ -1128,7 +1128,7 @@ feature {MANIFEST_STRING_INSPECTOR}
          resolve_u4_branch(points.item(index), opcode_pc)
       end
 
-   resolve_lookupswitch_branch(opcode_pc: INTEGER; points: FIXED_ARRAY[INTEGER]; index: INTEGER) is
+   resolve_lookupswitch_branch(opcode_pc: INTEGER; points: FAST_ARRAY[INTEGER]; index: INTEGER) is
       require
          points.valid_index(index)
          item(opcode_pc) = 171
@@ -1616,7 +1616,7 @@ feature
       require
          next_branch_array_index >= 0
       local
-         fai: FIXED_ARRAY[INTEGER]
+         fai: FAST_ARRAY[INTEGER]
       do
          branch_array.item(next_branch_array_index).clear
          Result := next_branch_array_index
@@ -1643,9 +1643,9 @@ feature
          branch_array.item(index).has(point)
       end
       
-   branch_array: FIXED_ARRAY[FIXED_ARRAY[INTEGER]] is
+   branch_array: FAST_ARRAY[FAST_ARRAY[INTEGER]] is
       local
-         fai: FIXED_ARRAY[INTEGER]
+         fai: FAST_ARRAY[INTEGER]
       once
          !!Result.with_capacity(4)
          create fai.with_capacity(16)
@@ -1663,7 +1663,7 @@ feature
          resolve_with(branch_array.item(index))
       end
 
-   resolve_with(points: FIXED_ARRAY[INTEGER]) is
+   resolve_with(points: FAST_ARRAY[INTEGER]) is
       local
          i: INTEGER
       do
@@ -1738,7 +1738,7 @@ feature {NONE}
          cp: like constant_pool
       do
          cp := constant_pool
-         tmp_string.clear
+         tmp_string.clear_count
          i.append_in(tmp_string)
          idx := cp.idx_string(tmp_string)
          opcode_ldc(idx)
@@ -1899,7 +1899,7 @@ feature {COMPOUND}
             cp := constant_pool
             ct.jvm_push_local(0)
             push_position(p)
-            tmp_string.clear
+            tmp_string.clear_count
             tmp_string.extend('(')
             if ct.is_basic_eiffel_expanded then
                ct.jvm_descriptor_in(tmp_string)
@@ -1955,7 +1955,7 @@ feature {CODE_ATTRIBUTE_VISITOR}
 
 feature {NONE}
 
-   code: FIXED_ARRAY[INTEGER] is
+   code: FAST_ARRAY[INTEGER] is
       once
          !!Result.with_capacity(1024)
       end

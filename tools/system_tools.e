@@ -40,6 +40,13 @@ inherit
 
 creation make, install
 
+feature
+
+   init_singleton is
+         -- Make sure that the singleton is initialized
+      once
+      end
+
 feature {SYSTEM_TOOLS_VISITOR}
 
    accept(visitor: SYSTEM_TOOLS_VISITOR) is
@@ -150,7 +157,7 @@ feature {INSTALL,C_MODE}
    make is
       local
          serc: STRING
-         paths: FIXED_ARRAY[STRING]
+         paths: FAST_ARRAY[STRING]
          i: INTEGER
          found, msg: BOOLEAN
       do
@@ -168,7 +175,7 @@ feature {INSTALL,C_MODE}
             found or else i > paths.upper or else paths.item(i).is_empty
          loop
             serc := paths.item(i)
-            if file_tools.is_readable(serc) then
+            if ftools.is_readable(serc) then
                seconf := serc
                new_config
                found := True
@@ -270,7 +277,7 @@ feature {NONE}
          system_name /= Void
       end
 
-   all_configfile_paths_buffer: FIXED_ARRAY[STRING] is
+   all_configfile_paths_buffer: FAST_ARRAY[STRING] is
       once
          create Result.with_capacity(4)
       end
@@ -342,7 +349,7 @@ feature {INSTALL}
          Result := s.get_environment_variable(once "USERPROFILE")
       end
 
-   all_configfile_paths: FIXED_ARRAY[STRING] is
+   all_configfile_paths: FAST_ARRAY[STRING] is
       local
          i: INTEGER
          s, home: STRING
@@ -369,17 +376,17 @@ feature {INSTALL}
                if home /= Void then
                   if Result.upper >= i then
                      Result.item(i).copy(home)
-                     Result.item(i).append(once "/.serc")
+                     Result.item(i).append(once "/.serc12")
                   else
                      create s.copy(home)
-                     s.append(once "/.serc")
+                     s.append(once "/.serc12")
                      Result.add_last(s)
                   end
                   i := i + 1
                end
-               if file_exists(once "/sys/rc") then
+               if ftools.is_readable(once "/sys/rc") then
                   set_system_name(elate_system)
-                  s := once "/lang/eiffel/.serc"
+                  s := once "/lang/eiffel/.serc12"
                   if Result.upper >= i then
                      Result.item(i).copy(s)
                   else
@@ -387,7 +394,7 @@ feature {INSTALL}
                   end
                   i := i + 1
                end
-               s := once "/etc/serc"
+               s := once "/etc/serc12"
                if Result.upper >= i then
                   Result.item(i).copy(s)
                else
@@ -436,7 +443,7 @@ feature {INSTALL}
          until
             i > Result.upper
          loop
-            Result.item(i).clear
+            Result.item(i).clear_count
             i := i + 1
          end
       end
@@ -666,11 +673,11 @@ feature
          -- suffix: ".cpp", ".cc", or ".C".
       do
          if path.has_suffix(c_plus_plus_suffix) then
-            Result := true
+            Result := True
          elseif path.has_suffix(once ".cc") then
-            Result := true
+            Result := True
          elseif path.has_suffix(once ".C") then
-            Result := true
+            Result := True
          end
       end
 
@@ -972,7 +979,7 @@ feature {ACE, COMMAND_LINE_TOOLS}
             %more information in file: %"")
          echo.w_put_string(tmp_path)
          echo.w_put_string(
-            "%".%NYou can also have a look at http://SmartEiffel.loria.fr%N")
+            "%".%NYou can also have a look at http://opensvn.csie.org/traccgi/smarteiffel12%N")
          die_with_code(exit_failure_code)
       end
 
@@ -1091,7 +1098,7 @@ feature {ACE, COMPILE_TO_C, STRING_COMMAND_LINE}
 
    set_no_strip is
       do
-         no_strip := true
+         no_strip := True
       end
 
 feature {ACE,C_PRETTY_PRINTER,INSTALL}
@@ -1247,7 +1254,7 @@ feature {C_PRETTY_PRINTER,INSTALL}
          -- Where c_file_name is the name of one slice.
       do
 	 Result := once "...This is a local once buffer..."
-         Result.clear
+         Result.clear_count
          check_c_plus_plus
          if c_compiler = gcc or else c_compiler = gpp then
             Result.append(c_compiler_path)
@@ -1287,7 +1294,7 @@ feature {C_PRETTY_PRINTER,INSTALL}
             append_token(Result,c_file_name)
          elseif c_compiler = sas_c then
             Result.append(c_compiler_path)
-            append_token(Result,sas_c_compiler_options(true))
+            append_token(Result,sas_c_compiler_options(True))
             append_token(Result,c_compiler_options)
             append_token(Result,external_header_path)
             append_token(Result,c_file_name)
@@ -1340,7 +1347,7 @@ feature {C_PRETTY_PRINTER,INSTALL}
          script, lst: TEXT_FILE_WRITE; i: INTEGER; name: STRING
       do
 	 Result := once "...This is a local once buffer..."
-         Result.clear
+         Result.clear_count
          check_c_plus_plus
          if c_compiler = gcc or else c_compiler = gpp then
             Result.append(c_linker_path)
@@ -1443,7 +1450,7 @@ feature {C_PRETTY_PRINTER,INSTALL}
             add_lib_math
          elseif c_compiler = sas_c then
             Result.append(c_linker_path)
-            --*** CAD: ?? append_token(Result,sas_c_compiler_options(true))
+            --*** CAD: ?? append_token(Result,sas_c_compiler_options(True))
             --*** CAD: ?? append_token(Result,c_compiler_options)
             append_token(Result,external_header_path)
             append_token(Result,c_linker_options)
@@ -1513,7 +1520,7 @@ feature {C_PRETTY_PRINTER,INSTALL}
             create script.make
             echo.tfw_connect(script,once "linkit.com")
             script.put_string(once "$ link/exe=")
-            Result.clear
+            Result.clear_count
             add_executable_name(Result)
             script.put_string(Result)
             script.put_character(' ')
@@ -1531,7 +1538,7 @@ feature {C_PRETTY_PRINTER,INSTALL}
             script.put_integer(i)
             script.put_character('%N')
             script.disconnect
-            Result.clear
+            Result.clear_count
             Result.append(once "@linkit.com%Ndelete linkit.com;")
          elseif c_compiler = tcc then
             Result.append(c_linker_path)
@@ -1551,7 +1558,7 @@ feature {C_PRETTY_PRINTER,INSTALL}
          c_file_name.has_suffix(once ".c")
       do
 	 Result := "...This is a local once buffer..."
-         Result.clear
+         Result.clear_count
          check_c_plus_plus
          if c_compiler = gcc or else c_compiler = gpp then
             Result.append(c_compiler_path)
@@ -1635,7 +1642,7 @@ feature {C_PRETTY_PRINTER,INSTALL}
             add_lib_math
          elseif c_compiler = sas_c then
             Result.append(c_compiler_path)
-            append_token(Result,sas_c_compiler_options(false))
+            append_token(Result,sas_c_compiler_options(False))
             append_token(Result,c_compiler_options)
             append_token(Result,external_header_path)
             append_token(Result,external_lib_path)
@@ -1720,10 +1727,12 @@ feature {C_PRETTY_PRINTER,INSTALL}
 
 feature {NONE} -- SAS/c support functions:
 
+   ftools: FILE_TOOLS
+
    Scoptions_exists: BOOLEAN is
          -- Is there a file "SCOPTIONS" in the current directory?
       once
-         Result := file_tools.is_readable(once "SCOPTIONS")
+         Result := ftools.is_readable(once "SCOPTIONS")
       end
 
    sas_c_compiler_options(split: BOOLEAN): STRING is
@@ -1965,8 +1974,8 @@ feature {NONE}
          Result := not is_absolute(path)
       end
 
-   is_win_like: reference BOOLEAN
-   is_unix_like: reference BOOLEAN
+   is_win_like: REFERENCE [BOOLEAN]
+   is_unix_like: REFERENCE [BOOLEAN]
 
    set_likes is
          -- Just speed up repeated tests on system by setting `is_win_like'
@@ -1976,8 +1985,10 @@ feature {NONE}
       do
          if is_win_like = Void then
             s := system_name
-            is_win_like := (s = windows_system or else s = dos_system or else s = os2_system)
-            is_unix_like := (s = unix_system or else s = cygwin_system or else s = elate_system or else s = beos_system)
+            create is_win_like
+            is_win_like.set_item (s = windows_system or else s = dos_system or else s = os2_system)
+            create is_unix_like
+            is_unix_like.set_item (s = unix_system or else s = cygwin_system or else s = elate_system or else s = beos_system)
          end
       end
 
@@ -2133,7 +2144,7 @@ feature {SYSTEM_TOOLS_VISITOR}
                                  Result := True
                               else
                                  basic_directory.compute_file_path_with(p, resolve_path)
-                                 if not basic_directory.last_entry.is_empty and then file_tools.is_readable(basic_directory.last_entry) then
+                                 if not basic_directory.last_entry.is_empty and then ftools.is_readable(basic_directory.last_entry) then
                                     ok := True
                                  else
                                     err := True
@@ -2191,7 +2202,7 @@ feature {SYSTEM_TOOLS_VISITOR}
                      Result := True
                   else
                      basic_directory.compute_file_path_with(resolve_directory.path, p)
-                     if file_tools.is_readable(basic_directory.last_entry) then
+                     if ftools.is_readable(basic_directory.last_entry) then
                         resolve_path.copy(basic_directory.last_entry)
                      else
                         basic_directory.compute_subdirectory_with(resolve_directory.path, p)
@@ -2221,7 +2232,7 @@ feature {SYSTEM_TOOLS_VISITOR}
             error_handler.append(current_loadpath_path)
             error_handler.extend('.')
             error_handler.print_as_warning
-            resolve_path.clear
+            resolve_path.clear_count
          end
 
          debug
@@ -2262,7 +2273,7 @@ feature {SYSTEM_TOOLS_VISITOR}
          elseif s = elate_system then
             letter_code := 'U'
          else
-            check false end
+            check False end
          end
          if s /= Void then
             basic_directory.notation.put(letter_code,1)
@@ -2294,7 +2305,7 @@ feature {SYSTEM_TOOLS_VISITOR}
       end
 
    loadpath_read(path: STRING; level: INTEGER; is_config_loadpath: BOOLEAN): BOOLEAN is
-         -- Returns `true' if the file was effectively read
+         -- Returns `True' if the file was effectively read
       local
          file: TEXT_FILE_READ
          buffer, b: STRING
@@ -2366,7 +2377,7 @@ feature {SYSTEM_TOOLS_VISITOR}
       do
          if not external_c_files.is_empty then
             c_files := external_c_files.split
-            external_c_files.clear
+            external_c_files.clear_count
             if c_files /= Void then
                from
                   i := c_files.lower
@@ -2436,7 +2447,7 @@ feature {C_PRETTY_PRINTER, INSTALL}
                                once "Optimize OptimizerTime")
 	       end
 	    else
-	       c_compiler_options.clear
+	       c_compiler_options.clear_count
 	       c_linker_options.copy(once "Link")
 	       if not Scoptions_exists then
 		  append_token(c_linker_options, once "SmallCode SmallData")
@@ -2460,7 +2471,7 @@ feature {C_PRETTY_PRINTER, INSTALL}
 	 elseif open_vms_cc = c_compiler then
 	 elseif tcc = c_compiler then
 	 else
-	    check false end
+	    check False end
 	 end
       end
 
@@ -2706,7 +2717,7 @@ feature {NONE}
             if ini_parser.section_has(c_mode, fz_conf_compiler_options) then
                c_mode_compiler_options.copy(ini_parser.section_item(c_mode, fz_conf_compiler_options))
             else
-               c_mode_compiler_options.clear
+               c_mode_compiler_options.clear_count
             end
 
             if ini_parser.section_has(c_mode, fz_conf_linker_options) then
@@ -2832,14 +2843,14 @@ feature {ACE}
          external_libs.add_last(extlib)
       end
 
-   external_libs: FIXED_ARRAY[STRING] is
+   external_libs: FAST_ARRAY[STRING] is
          -- The external libs before being added to the `external_lib' (before
          -- the compiler is known, no such addition can take place)
       once
          create Result.with_capacity(2)
       end
 
-   external_lib_paths: FIXED_ARRAY[STRING] is
+   external_lib_paths: FAST_ARRAY[STRING] is
          -- The external lib paths before being added to the
          -- `external_lib_path' (before the compiler is known, no such
          -- addition can take place)
@@ -3024,9 +3035,9 @@ feature {NONE}
       do
          if max.in_range(3,99) then
             if unix_system = system_name then
-               short_command := true
+               short_command := True
             elseif cygwin_system = system_name then
-               short_command := true
+               short_command := True
             end
          end
          if short_command then
@@ -3112,7 +3123,7 @@ feature {NONE}
       require
          not path.is_empty
       do
-         token_buffer.clear
+         token_buffer.clear_count
          -- everybody likes the Unix way
          if path.item (1) /= '-' then
             token_buffer.copy(once "-I")
@@ -3129,7 +3140,7 @@ feature {NONE}
       require
          not lib.is_empty
       do
-         token_buffer.clear
+         token_buffer.clear_count
          check compiler_list.fast_has(c_compiler) or else c_plus_plus_compiler_list.fast_has(c_compiler) end
          if c_compiler = lcc_win32 or else c_compiler = cl
 	    or else c_compiler = bcc32 then
@@ -3157,7 +3168,7 @@ feature {NONE}
       do
 	 -- lcc_win32 doesn't support paths, do nothing in that case
          if c_compiler /= lcc_win32 then
-	    token_buffer.clear
+	    token_buffer.clear_count
 	    if c_compiler = cl then
 	       if path.has_prefix(l_flag) then
 		  path.remove_prefix(l_flag)
@@ -3256,9 +3267,9 @@ feature {NONE} -- Strings:
 
 feature {SYSTEM_TOOLS_VISITOR}
 
-   extra_loadpath_files: FIXED_ARRAY[STRING]
+   extra_loadpath_files: FAST_ARRAY[STRING]
 
-   config_loadpath_files: FIXED_ARRAY[STRING]
+   config_loadpath_files: FAST_ARRAY[STRING]
 
 feature {NONE} -- Buffers:
 
@@ -3287,7 +3298,7 @@ feature {NONE} -- Buffers:
          create Result.make(16)
       end
 
-   clp_save_buffer: FIXED_ARRAY[STRING] is
+   clp_save_buffer: FAST_ARRAY[STRING] is
       once
          create Result.with_capacity(5)
          Result.add_last("")
@@ -3297,7 +3308,7 @@ feature {NONE} -- Buffers:
          Result.add_last("")
       end
 
-   clp_save_counter: MEMO[INTEGER] is
+   clp_save_counter: REFERENCE[INTEGER] is
       once
          create Result
       end
@@ -3321,7 +3332,7 @@ feature {NONE} -- Buffers:
          clp_save_counter.set_item(counter)
       end
 
-   lrf_save_buffer: FIXED_ARRAY[TEXT_FILE_READ] is
+   lrf_save_buffer: FAST_ARRAY[TEXT_FILE_READ] is
       once
          create Result.with_capacity(5)
          Result.add_last(create {TEXT_FILE_READ}.make)
@@ -3331,7 +3342,7 @@ feature {NONE} -- Buffers:
          Result.add_last(create {TEXT_FILE_READ}.make)
       end
 
-   lrf_save_counter: MEMO[INTEGER] is
+   lrf_save_counter: REFERENCE[INTEGER] is
       once
          create Result
          Result.set_item(-1)

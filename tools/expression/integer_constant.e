@@ -119,7 +119,7 @@ feature
 	 buffer: STRING
       do
 	 buffer := string_buffer
-	 buffer.clear
+	 buffer.clear_count
 	 append_in(buffer)
          Result := buffer.twin
       end

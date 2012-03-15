@@ -1,0 +1,43 @@
+
+   Support -- Donations -- Post-cards
+
+   The SmartEiffel (transitional) team is not offering support, not
+   receiving donations at this time.
+   However, the official smartEiffel team does; you can contact them at
+   [1]http://smarteiffel.loria.fr.
+
+   SmartEiffel (transitional) FAQ
+
+   The SmartEiffel (transitional) FAQ [2]click here.
+
+   Commands documentation
+
+   To browse documentation of all commands of SmartEiffel [3]click here.
+
+   Miscellaneous
+
+   More information about the generated C code [4]here.
+   More information about calling C code from Eiffel [5]here.
+   More information about calling Eiffel code from C code [6]here.
+   More information about system configuration [7]here.
+   More information about the history of SmartEiffel [8]here.
+   More information about a lot of people [9]here.
+
+                                   [Line]
+             Copyright © Dominique COLNET and Suzanne COLLIN -
+                         [10]<SmartEiffel@loria.fr>
+        Modified by Daniel F MOISSET for SmartEiffel (transitional)
+                Last modified: Tue May 31 15:49:19 ART 2005
+
+References
+
+   1. http://smarteiffel.loria.fr/
+   2. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/SmartEiffelTransitionalFAQ.html
+   3. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/commands.html
+   4. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/c_code.html
+   5. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/external.html
+   6. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/cecil.html
+   7. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/man/system.html
+   8. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/misc/HISTORY.html
+   9. file://localhost/home/dmoisset/src/SmartEiffel/release/SmartEiffel12/misc/THANKS.html
+  10. mailto:SmartEiffel@loria.fr

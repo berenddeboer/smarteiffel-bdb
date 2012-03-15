@@ -37,7 +37,7 @@ feature
 
    is_generic,
    is_expanded
-   : BOOLEAN is true
+   : BOOLEAN is True
 
    is_separate,
    is_reference,
@@ -298,7 +298,7 @@ feature
       local
          idx: INTEGER
       do
-         tmp_string.clear
+         tmp_string.clear_count
          jvm_target_descriptor_in(tmp_string)
          idx := constant_pool.idx_class2(tmp_string)
          code_attribute.opcode_anewarray(idx)
@@ -359,7 +359,7 @@ feature
 
 feature {RUN_CLASS, E_TYPE}
 
-   need_gc_mark_function: BOOLEAN is true
+   need_gc_mark_function: BOOLEAN is True
 
    just_before_gc_mark_in(c_code: STRING) is
       do
@@ -427,11 +427,11 @@ feature {RUN_CLASS, E_TYPE}
          header.append(once "(T")
          rcid.append_in(header)
          header.append(once " o)")
-         body.clear
+         body.clear_count
          gc_mark
          cpp.put_c_function(header,body)
          -- --------------------------------- Definiton for newXXX :
-         header.clear
+         header.clear_count
          header.extend('T')
          rcid.append_in(header)
          header.extend(' ')

@@ -26,7 +26,7 @@ class NATIVE_SMART_EIFFEL
 
 inherit NATIVE
 
-creation make, default_create
+creation make, default_creation
 
 feature
 
@@ -211,7 +211,7 @@ feature
                   :0);
                      ]")
 	 elseif as_is_deep_equal = name then
-	    body.clear
+	    body.clear_count
 	    rf8.run_class.is_deep_equal_in(body)
 	    cpp.put_string(body)
 	 end
@@ -294,7 +294,7 @@ feature
                      once "error0(%"Invalid deep_twin.%",NULL);")
 	       end
 	    else
-	       body.clear
+	       body.clear_count
 	       rf8.run_class.deep_twin_in(body)
 	       rf8.c_define_with_body(body)
 	    end
@@ -313,7 +313,7 @@ feature
                      once "error0(%"Invalid is_deep_equal.%",NULL);")
 	       end
 	    else
-	       body.clear
+	       body.clear_count
 	       rf8.run_class.is_deep_equal_in(body)
 	       rf8.c_define_with_body(body)
             end
@@ -321,7 +321,7 @@ feature
             if as_calloc = name then
                elt_type := ct.generic_list.item(1).run_type
                if expanded_initializer(elt_type) then
-                  body.clear
+                  body.clear_count
                   body.append(once "R=")
                   if gc_handler.is_off then
                      body.append(once "se_malloc(sizeof(T")
@@ -517,10 +517,14 @@ feature
 	 elseif as_se_argc = name then
 	    cpp.put_string(as_se_argc)
 	 elseif as_se_argv = name then
-	    cpp.put_string(once "((T0*)se_string(se_argv[_i]))")
+	    cpp.put_string(once "((T0*)se_string(se_argv[_l_i]))")
 	 elseif as_native_array = bcn then
 	    c_mapping_native_array_function(rf8,name)
-	 elseif as_real = bcn or else as_double = bcn then
+	 elseif
+	    as_real = bcn or else as_double = bcn or else 
+	    as_real_32 = bcn or else as_real_64 = bcn or else
+	    as_real_general = bcn
+	 then
 	    c_mapping_real_double(ct, name, rf8.arg_count)
 	 elseif as_boolean = bcn then
 	    if as_implies = name then
@@ -733,7 +737,7 @@ feature
             jvm.push_target
          elseif is_integer(ct) then
             jvm_mapping_integer_function(rf8,name)
-         elseif as_real = bcn then
+         elseif as_real = bcn or as_real_32 = bcn then
             jvm_mapping_real_function(rf8,name)
          elseif as_double = bcn then
             jvm_mapping_double_function(rf8,name)
@@ -1005,7 +1009,7 @@ feature {NONE}
             space := - jvm.push_arguments
          end
          prototype := once "(....)."
-         prototype.clear
+         prototype.clear_count
          prototype.extend('(')
          if fal /= Void then
             fal.jvm_descriptor_in(prototype)
@@ -1065,16 +1069,16 @@ feature {NONE}
             Result.append(once "SmartEiffel")
             from
                i := 1
-               capitalize := true
+               capitalize := True
             until
                i > n
             loop
                c := name.item(i)
                if c = '_' then
-                  capitalize := true
+                  capitalize := True
                elseif capitalize then
                   Result.extend(c.to_upper)
-                  capitalize := false
+                  capitalize := False
                else
                   Result.extend(c)
                end
@@ -2066,19 +2070,19 @@ feature {NONE}
          type_bit ?= rf7.current_type
          if as_put_0 = n then
             if type_bit.is_c_unsigned_ptr then
-               body.clear
+               body.clear_count
                body_long_bit_put01(type_bit,'&','~','1')
                rf7.c_define_with_body(body)
             end
          elseif as_put_1 = n then
             if type_bit.is_c_unsigned_ptr then
-               body.clear
+               body.clear_count
                body_long_bit_put01(type_bit,'|',' ','1')
                rf7.c_define_with_body(body)
             end
          elseif as_put = n then
             if type_bit.is_c_unsigned_ptr then
-               body.clear
+               body.clear_count
                body.append(once "if(a1)%N")
                body_long_bit_put01(type_bit,'|',' ','2')
                body.append(fz_else)
@@ -2666,7 +2670,7 @@ feature {NONE}
 	 end
       end
 
-   default_create is
+   default_creation is
       do
       end
 

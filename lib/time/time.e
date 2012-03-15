@@ -143,7 +143,7 @@ feature -- Setting:
          tm := basic_time_mktime(a_year, a_month, a_day, a_hour, a_min, sec)
          if tm /= -1 then
             time_memory := tm
-            Result := true
+            Result := True
          end
       end
 
@@ -230,7 +230,7 @@ feature {TIME, TIME_IN_SOME_LANGUAGE}
 
 feature {NONE}
 
-   time_mode_memo: MEMO[INTEGER] is
+   time_mode_memo: REFERENCE [INTEGER] is
          -- The global default `time_mode' memory.
       once
          !!Result

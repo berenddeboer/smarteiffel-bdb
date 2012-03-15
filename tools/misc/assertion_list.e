@@ -52,7 +52,7 @@ feature
 
 feature {ASSERTION_LIST, E_CHECK, E_FEATURE}
 
-   list: FIXED_ARRAY[ASSERTION]
+   list: FAST_ARRAY[ASSERTION]
 
 feature
 
@@ -112,7 +112,7 @@ feature {NONE}
       do
          from
             i := list.upper
-            Result := true
+            Result := True
          until
             not Result or else i < list.lower
          loop
@@ -165,7 +165,7 @@ feature
                if assertion.is_guard then
                   if not flag_set then
                      c_set_flag
-                     flag_set := true
+                     flag_set := True
                   end
                   c_compile_assertion(assertion)
                end
@@ -308,9 +308,9 @@ feature
                i > list.upper
             loop
                if pretty_printer.zen_mode and i = list.upper then
-                  pretty_printer.set_semi_colon_flag(false)
+                  pretty_printer.set_semi_colon_flag(False)
                else
-                  pretty_printer.set_semi_colon_flag(true)
+                  pretty_printer.set_semi_colon_flag(True)
                end
                pretty_printer.indent
                list.item(i).pretty_print
@@ -330,7 +330,7 @@ feature
 
 feature {E_FEATURE, RUN_CLASS, ASSERTION_COLLECTOR}
 
-   add_into(collector: FIXED_ARRAY[ASSERTION]) is
+   add_into(collector: FAST_ARRAY[ASSERTION]) is
       local
          i: INTEGER; a: ASSERTION
       do
@@ -351,7 +351,7 @@ feature {E_FEATURE, RUN_CLASS, ASSERTION_COLLECTOR}
 
 feature {NONE}
 
-   failure: FIXED_ARRAY[INTEGER] is
+   failure: FAST_ARRAY[INTEGER] is
       once
          !!Result.with_capacity(12)
       end

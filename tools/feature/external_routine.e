@@ -36,7 +36,7 @@ feature
 
    alias_string: STRING
 
-   is_deferred: BOOLEAN is false
+   is_deferred: BOOLEAN is False
 
    frozen set_rescue_compound(c: COMPOUND) is
       do

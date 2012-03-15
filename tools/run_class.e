@@ -29,9 +29,9 @@ class RUN_CLASS
 
 inherit
    HASHABLE redefine is_equal end
-   GLOBALS
-   VISITABLE
-   ASSERTION_LEVEL_NUMBERING
+   GLOBALS redefine is_equal end
+   VISITABLE redefine is_equal end
+   ASSERTION_LEVEL_NUMBERING redefine is_equal end
 
 creation {SMART_EIFFEL} make
 
@@ -112,7 +112,7 @@ feature {EFFECTIVE_ARG_LIST, RUN_CLASS, RUN_FEATURE}
 
 feature {RUN_CLASS,E_STRIP}
 
-   feature_dictionary: DICTIONARY[RUN_FEATURE,FEATURE_NAME]
+   feature_dictionary: HASHED_DICTIONARY[RUN_FEATURE,FEATURE_NAME]
          -- Access to the runnable version of a feature.
 
 feature {NONE}
@@ -383,7 +383,7 @@ feature {RUN_CLASS}
          ca.opcode_invokespecial(idx,-1)
          ca.opcode_dup_x1
          ca.opcode_swap
-         tmp_string.clear
+         tmp_string.clear_count
          exp_type.jvm_descriptor_in(tmp_string)
          idx := cp.idx_fieldref3(fully_qualified_name,as_item,tmp_string)
          ca.opcode_putfield(idx,-2)
@@ -556,7 +556,7 @@ feature {E_TYPE}
 	 wa: like writable_attributes; rf2: RUN_FEATURE_2
       do
          body := c_code_buffer
-         body.clear
+         body.clear_count
          ct := current_type
          tmp_string.copy(once "void se_prinT")
          id.append_in(tmp_string)
@@ -1681,7 +1681,7 @@ feature {SMART_EIFFEL}
                end
                t := ct.generic_list.first
                s := "                "
-               s.clear
+               s.clear_count
                t.c_type_for_result_in(s)
                cpp.put_string(once "*id=")
                cpp.put_integer(t.id)
@@ -1904,7 +1904,7 @@ feature {SMART_EIFFEL,RUN_CLASS}
 
 feature {RUN_CLASS}
 
-   actual_clients: FIXED_ARRAY[RUN_CLASS]
+   actual_clients: FAST_ARRAY[RUN_CLASS]
 
 feature {CREATE_TOOLS,RUN_FEATURE}
 
@@ -1952,12 +1952,12 @@ feature
 
 feature
 
-   wa_buf: FIXED_ARRAY[RUN_FEATURE_2] is
+   wa_buf: FAST_ARRAY[RUN_FEATURE_2] is
       once
          !!Result.with_capacity(24)
       end
 
-   wa_cyclic_buf: FIXED_ARRAY[RUN_FEATURE_2] is
+   wa_cyclic_buf: FAST_ARRAY[RUN_FEATURE_2] is
       once
          !!Result.with_capacity(24)
       end
@@ -2047,7 +2047,7 @@ feature -- Some useful JVM opcode:
          ct := current_type
          if ct.is_basic_eiffel_expanded then
          elseif ct.is_native_array then
-            tmp_string.clear
+            tmp_string.clear_count
             ct.jvm_target_descriptor_in(tmp_string)
             idx := constant_pool.idx_class2(tmp_string)
             code_attribute.opcode_checkcast(idx)
@@ -2174,7 +2174,7 @@ feature {PROC_CALL_1, CALL_1_C}
    
 feature {NONE}
 
-   create_function_list: FIXED_ARRAY[RUN_FEATURE]
+   create_function_list: FAST_ARRAY[RUN_FEATURE]
 
    create_function_define(rf: RUN_FEATURE) is
       require
@@ -2185,7 +2185,7 @@ feature {NONE}
       do
 	 boost := ace.boost
 	 header := c_code_buffer
-	 header.clear
+	 header.clear_count
 	 if current_type.is_reference then
 	    current_type.c_type_for_target_in(header)
 	 else
@@ -2218,7 +2218,7 @@ feature {NONE}
 	 cpp.put_c_heading(header)
 	 --
 	 body := c_code_buffer
-	 body.clear
+	 body.clear_count
 	 if current_type.is_reference then
 	    current_type.c_type_for_target_in(body)
 	 else
@@ -2295,7 +2295,7 @@ feature {NONE}
          end
       end
 
-   wa_cycle: FIXED_ARRAY[RUN_FEATURE_2] is
+   wa_cycle: FAST_ARRAY[RUN_FEATURE_2] is
       once
          create Result.with_capacity(24)
       end

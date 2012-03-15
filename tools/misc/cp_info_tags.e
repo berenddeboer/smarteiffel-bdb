@@ -109,7 +109,7 @@ feature {NONE}
          utf8 /= Void
          utf8 /= string
       do
-         utf8.clear
+         utf8.clear_count
          append_u2(utf8,string.count)
          utf8.append(string)
       ensure

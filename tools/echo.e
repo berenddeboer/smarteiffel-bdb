@@ -102,14 +102,14 @@ feature  -- To echo some additional information (echo is only done
       require
          path /= Void
       do
-         if file_exists(path) then
+         if ftools.is_readable(path) then
             put_string(once "Removing %"")
             put_string(path)
             put_string(fz_b0)
-            remove_file(path)
+            ftools.delete(path)
          end
       ensure
-         may_fail: true or not file_exists(path)
+         may_fail: True or not ftools.is_readable(path)
       end
 
    file_renaming(old_path, new_path: STRING) is
@@ -122,7 +122,7 @@ feature  -- To echo some additional information (echo is only done
          put_string(once "%" as %"")
          put_string(new_path)
          put_string(fz_b0)
-         rename_file(old_path,new_path)
+         ftools.rename_to(old_path,new_path)
       end
 
    tfw_connect(tfw: TEXT_FILE_WRITE; path: STRING) is
@@ -345,17 +345,19 @@ feature {ACE,COMMAND_LINE_TOOLS}
 
    set_verbose is
       do
-         verbose := true
+         verbose := True
       end
 
 feature {ACE_CHECK}
 
    unset_verbose is
       do
-         verbose := false
+         verbose := False
       end
 
 feature {NONE}
+
+   ftools: FILE_TOOLS
 
    fz_smalleiffel:             STRING is "SmallEiffel"
 

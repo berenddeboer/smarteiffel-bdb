@@ -40,7 +40,7 @@ feature {E_REQUIRE_VISITOR}
 
 feature
 
-   is_require: BOOLEAN is true
+   is_require: BOOLEAN is True
 
    is_require_else: BOOLEAN
 

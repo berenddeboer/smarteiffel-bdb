@@ -1,7 +1,7 @@
 class EXAMPLE5
 --
 -- There is also a `for_all' routine in COLLECTION (i.e. ARRAY,
--- FIXED_ARRAY, LINKED_LIST, TWO_WAY_LINKED_LIST).
+-- FAST_ARRAY, LINKED_LIST, TWO_WAY_LINKED_LIST).
 -- You can watch the result using sedb, the SmartEiffel DeBugger.
 --
 

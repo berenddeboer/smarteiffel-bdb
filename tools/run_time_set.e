@@ -109,11 +109,11 @@ feature {RUN_CLASS}
 
 feature {RUN_TIME_SET}
 
-   set: SET[RUN_CLASS]
+   set: HASHED_SET[RUN_CLASS]
 	 -- The set of possible RUN_CLASSes which are all `at_run_time' and 
 	 -- that can be held by a variable of the `owner' type.
 
-   sorted: FIXED_ARRAY[RUN_CLASS]
+   sorted: FAST_ARRAY[RUN_CLASS]
 	 -- Same `set' of RUN_CLASSes, but sorted by increasing id. 
 
 feature {ASSIGNMENT_HANDLER, GRAPH_NODE}

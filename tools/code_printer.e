@@ -101,7 +101,7 @@ feature {NONE} -- Context stacks:
    top: INTEGER
          -- Index for top of followings stacks.
 
-   stack_code: FIXED_ARRAY[INTEGER] is
+   stack_code: FAST_ARRAY[INTEGER] is
          -- The indicating stack. It contains only one
          -- of the following unique code.
       once
@@ -163,32 +163,32 @@ feature {NONE} -- Context stacks:
          -- For the introspection features
 
    -- Contents of stacks depends on `stack_code'.
-   stack_rf: FIXED_ARRAY[RUN_FEATURE] is
+   stack_rf: FAST_ARRAY[RUN_FEATURE] is
       once
          create Result.make(stack_first_size)
       end
 
-   stack_target: FIXED_ARRAY[EXPRESSION] is
+   stack_target: FAST_ARRAY[EXPRESSION] is
       once
          create Result.make(stack_first_size)
       end
 
-   stack_args: FIXED_ARRAY[EFFECTIVE_ARG_LIST] is
+   stack_args: FAST_ARRAY[EFFECTIVE_ARG_LIST] is
       once
          create Result.make(stack_first_size)
       end
 
-   stack_static_rf: FIXED_ARRAY[RUN_FEATURE] is
+   stack_static_rf: FAST_ARRAY[RUN_FEATURE] is
       once
          create Result.make(stack_first_size)
       end
 
-   stack_cpc: FIXED_ARRAY[CALL_PROC_CALL] is
+   stack_cpc: FAST_ARRAY[CALL_PROC_CALL] is
       once
          create Result.make(stack_first_size)
       end
 
-   stack_string: FIXED_ARRAY[STRING] is
+   stack_string: FAST_ARRAY[STRING] is
       once
          create Result.make(stack_first_size)
       end
@@ -243,7 +243,7 @@ feature {NONE}
          i: INTEGER
          rf: RUN_FEATURE
          rtm: STRING
-         rtma: FIXED_ARRAY[STRING]
+         rtma: FAST_ARRAY[STRING]
       do
          error_handler.append("Infinite inlining loop (bad recursion ??). ")
          from

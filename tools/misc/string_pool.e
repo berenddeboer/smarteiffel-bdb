@@ -189,14 +189,14 @@ feature {NONE} -- At initialization time:
             maxstate := 0
             newstate := unknown_state
             defstate := headers.upper
-            again := true
+            again := True
             i := 1
          until
             not again
          loop
-            again := false
+            again := False
             from
-               next_c := true
+               next_c := True
                j := headers.lower
             until
                j > headers.upper
@@ -214,15 +214,15 @@ feature {NONE} -- At initialization time:
                end
                if oldstate /= transition_memory.item(j) then
                   oldstate := transition_memory.item(j)
-                  next_c := true
+                  next_c := True
                end
                if i > s.count then
-                  next_c := true
+                  next_c := True
                else
                   check
                      transition_memory.item(j) /= j
                   end
-                  again := true
+                  again := True
                   k := s.item(i)
                   if i = s.count then
                      check
@@ -235,7 +235,7 @@ feature {NONE} -- At initialization time:
                      newstate := defstate
                      c := k
                   end
-                  next_c := false
+                  next_c := False
                   check
                      newstate /= unknown_state
                   end
@@ -271,14 +271,14 @@ feature {NONE} -- At initialization time:
          defstate := headers.upper
 
          from
-            again := true
+            again := True
             i := 1
          until
             not again
          loop
-            again := false
+            again := False
             from
-               next_c := true
+               next_c := True
                j := headers.lower
             until
                j > headers.upper
@@ -292,15 +292,15 @@ feature {NONE} -- At initialization time:
                end
                if oldstate /= transition_memory.item(j) then
                   oldstate := transition_memory.item(j)
-                  next_c := true
+                  next_c := True
                end
                if i > s.count then
-                  next_c := true
+                  next_c := True
                else
                   check
                      transition_memory.item(j) /= j
                   end
-                  again := true
+                  again := True
                   k := s.item(i)
                   if i = s.count then
                      check
@@ -315,7 +315,7 @@ feature {NONE} -- At initialization time:
                      c := k
                      set_state(newstate, oldstate, k)
                   end
-                  next_c := false
+                  next_c := False
                   check
                      newstate /= unknown_state
                   end
@@ -422,15 +422,15 @@ feature {NONE}
    last_match: INTEGER
    last_external_match: INTEGER
 
-   tag_state: DICTIONARY[INTEGER, INTEGER] -- internal => external states
+   tag_state: HASHED_DICTIONARY[INTEGER, INTEGER] -- internal => external states
 
 feature {NONE}
 
    unknown_state: INTEGER is -1
 
-   headers: FIXED_ARRAY[STRING]
+   headers: FAST_ARRAY[STRING]
 
-   transition_memory: FIXED_ARRAY[INTEGER] is
+   transition_memory: FAST_ARRAY[INTEGER] is
       once
          create Result.with_capacity(4)
       end

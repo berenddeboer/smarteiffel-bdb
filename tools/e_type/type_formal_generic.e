@@ -43,12 +43,12 @@ feature
    run_time_mark: STRING
 	 -- The corresponding one of `run_type'.
 
-   is_formal_generic: BOOLEAN is true
+   is_formal_generic: BOOLEAN is True
 
    is_anchored,
    is_like_current,
    is_like_argument,
-   is_like_feature: BOOLEAN is false
+   is_like_feature: BOOLEAN is False
 
    actual_reference(destination: E_TYPE): E_TYPE is
       do

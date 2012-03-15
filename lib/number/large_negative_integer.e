@@ -27,9 +27,9 @@ creation make_from_fixed_array, make_smaller, make_from_large_product, make_from
 
 feature
 
-   is_positive: BOOLEAN is false
+   is_positive: BOOLEAN is False
 
-   is_negative: BOOLEAN is true
+   is_negative: BOOLEAN is True
 
    is_integer_value:BOOLEAN is
       local
@@ -66,7 +66,7 @@ feature
       local
 	 oth: NUMBER
 	 i, calcul:INTEGER
-	 tmp: FIXED_ARRAY[INTEGER]
+	 tmp: FAST_ARRAY[INTEGER]
 	 transit: INTEGER
       do
 	 if other = 0 then
@@ -344,7 +344,7 @@ feature {NUMBER} -- inverse
       do
 	 den ?= abs
 	 num ?= one
-	 !NUMBER_FRACTION!Result.make_simply(num, den, true)
+	 !NUMBER_FRACTION!Result.make_simply(num, den, True)
       end
 
 
@@ -395,7 +395,7 @@ feature -- Comparisons with DOUBLE
    infix "#<" (other: DOUBLE): BOOLEAN is
       do
 	 if other >= -Base then
-	    Result := true
+	    Result := True
 	 else
 	    Result := to_double < other
 	 end
@@ -404,7 +404,7 @@ feature -- Comparisons with DOUBLE
    infix "#<=" (other: DOUBLE): BOOLEAN is
       do
 	 if other >= -Base then
-	    Result := true
+	    Result := True
 	 else
 	    Result := to_double <= other
 	 end

@@ -46,11 +46,11 @@ feature
 
    ensure_assertion: E_ENSURE
 
-   is_deferred: BOOLEAN is false
+   is_deferred: BOOLEAN is False
 
-   is_once_procedure: BOOLEAN is false
+   is_once_procedure: BOOLEAN is False
 
-   is_once_function: BOOLEAN is true
+   is_once_function: BOOLEAN is True
 
    afd_check is
       do
@@ -153,7 +153,7 @@ feature {ADDRESS_OF}
       do
          if ace.boost then
             if use_current then
-               mapping_name(false)
+               mapping_name(False)
             else
                address_of_c_mapping_wrapper
             end

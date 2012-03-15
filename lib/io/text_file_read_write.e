@@ -45,12 +45,13 @@ feature
 	 -- beginning of the file.
       local
          s: POINTER; tfw: TEXT_FILE_WRITE
+         f: FILE_TOOLS
       do
-         if not file_exists(new_path) then
+         if not f.is_readable(new_path) then
             create tfw.connect_to(new_path)
             tfw.disconnect
          end
-         check file_exists(new_path) end
+         check f.is_readable(new_path) end
          s := basic_io_text_file_read_write_open(new_path.to_external)
          if s.is_not_null then
             stream := s
@@ -63,12 +64,13 @@ feature
 	 -- exist. The stream is positioned at the end of the file.
       local
          s: POINTER; tfw: TEXT_FILE_WRITE
+         f: FILE_TOOLS
       do
-         if not file_exists(new_path) then
+         if not f.is_readable(new_path) then
             create tfw.connect_to(new_path)
             tfw.disconnect
          end
-         check file_exists(new_path) end
+         check f.is_readable(new_path) end
          s := basic_io_text_file_read_write_append(new_path.to_external)
          if s.is_not_null then
             stream := s

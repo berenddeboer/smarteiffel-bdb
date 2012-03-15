@@ -238,7 +238,7 @@ feature -- Looking and searching some value:
          end
          Result := cache_node.key
       ensure
-         equal(at(Result),v)
+         safe_equal(at(Result),v)
       end
 
    fast_key_at(v: V): K is
@@ -427,22 +427,22 @@ feature
 	 i: INTEGER
       do
          if Current = other then
-            Result := true
+            Result := True
          elseif count = other.count then
 	    from
-	       Result := true
+	       Result := True
 	       i := 1
 	    until
 	       not Result or else i > count
 	    loop
 	       if other.has(key(i)) then
 		  if other.at(key(i)) /= item(i) then
-		     Result := false
+		     Result := False
 		  else
 		     i := i + 1
 		  end
 	       else
-		  Result := false
+		  Result := False
 	       end
 	    end
          end
@@ -458,10 +458,10 @@ feature
          k: K
       do
          if Current = other then
-            Result := true
+            Result := True
          elseif count = other.count then
 	    from
-	       Result := true
+	       Result := True
 	       i := 1
 	    until
 	       not Result or else i > count
@@ -469,12 +469,12 @@ feature
 	       k := key(i)
 	       if other.has(k) then
 		  if not safe_equal(other.at(k),item(i)) then
-		     Result := false
+		     Result := False
 		  else
 		     i := i + 1
 		  end
 	       else
-		  Result := false
+		  Result := False
 	       end
 	    end
          end
@@ -524,7 +524,7 @@ feature -- Agents based features:
 	 i: INTEGER; v: V; k: K
       do
 	 from
-	    Result := true
+	    Result := True
 	    i := lower
 	 until
 	    not Result or else i > upper

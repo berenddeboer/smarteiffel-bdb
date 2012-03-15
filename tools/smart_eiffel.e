@@ -37,10 +37,13 @@ feature
 
    copyright: STRING is "[
       SmartEiffel The GNU Eiffel Compiler, Eiffel tools and libraries
-      Release 1.1 Release (Monday June 16th 2003) [Charlemagne]
+      Release 1.2r7 transitional Release (Sunday April 2nd 2006)
+      This is an unofficial release. Check http://SmartEiffel.loria.fr for
+      the official SmartEiffel
       Copyright (C), 1994-2003 - INRIA - LORIA - UHP - Nancy 2 - FRANCE
-      D.COLNET, S.COLLIN, O.ZENDRA, P.RIBET, C.ADRIAN - SmartEiffel@loria.fr
-      http://SmartEiffel.loria.fr
+      D.COLNET, S.COLLIN, O.ZENDRA, P.RIBET, C.ADRIAN 
+      Copyright (C) 2005-2006 D.F.MOISSET - smarteiffel@except.com.ar
+      http://opensvn.csie.org/traccgi/smarteiffel12
 
       ]"
 
@@ -513,7 +516,7 @@ feature
 
 feature {NONE}
 
-   base_class_dictionary: DICTIONARY[BASE_CLASS,CLASS_NAME] is
+   base_class_dictionary: HASHED_DICTIONARY[BASE_CLASS,CLASS_NAME] is
          -- When looking for a BASE_CLASS using the name of the base class
          -- (ie. FOO[BAR] is stored at key "FOO").
       once
@@ -535,7 +538,7 @@ feature
 
 feature {GC_HANDLER}
 
-   get_run_class_map: FIXED_ARRAY[RUN_CLASS] is
+   get_run_class_map: FAST_ARRAY[RUN_CLASS] is
       do
 	 check
 	    run_class_map.count = run_class_dictionary.count
@@ -545,7 +548,7 @@ feature {GC_HANDLER}
 
 feature {RUN_CLASS}
 
-   run_class_dictionary: DICTIONARY[RUN_CLASS,STRING] is
+   run_class_dictionary: HASHED_DICTIONARY[RUN_CLASS,STRING] is
       once
          !!Result.with_capacity(2048)
       end
@@ -636,13 +639,13 @@ feature -- To add more Context for some `to_runnable' :
 
 feature {NONE}
 
-   run_feature_stack: FIXED_ARRAY[RUN_FEATURE] is
+   run_feature_stack: FAST_ARRAY[RUN_FEATURE] is
 	 -- The top-most one gives the current analysis context.
       once
          !!Result.with_capacity(50)
       end
 
-   run_class_map: FIXED_ARRAY[RUN_CLASS] is
+   run_class_map: FAST_ARRAY[RUN_CLASS] is
       once
 	 create Result.with_capacity(2048)
       end
@@ -759,7 +762,7 @@ feature {RUN_FEATURE_9}
 
 feature {NONE}
 
-   rf9_memory: FIXED_ARRAY[RUN_FEATURE_9] is
+   rf9_memory: FAST_ARRAY[RUN_FEATURE_9] is
       once
          !!Result.with_capacity(1024)
       end
@@ -1220,7 +1223,7 @@ feature {SMART_EIFFEL_VISITOR}
 
 feature {NONE}
 
-   sys_runtime_basic: SET[STRING] is
+   sys_runtime_basic: HASHED_SET[STRING] is
          -- Actually used packages of SmartEiffel/sys/runtime.
          -- For example: basic_directory, basic_time, basic_*, etc.
       once
@@ -1478,7 +1481,7 @@ feature {NONE}
          !!Result.make(128)
       end
 
-   registered_for_c_define: FIXED_ARRAY[RUN_FEATURE_3] is
+   registered_for_c_define: FAST_ARRAY[RUN_FEATURE_3] is
       once
          !!Result.with_capacity(512)
       end
@@ -1579,7 +1582,7 @@ feature {NONE}
 	 echo.put_string(once ")]%N")
       end
 
-   reference_integer_set: SET[RUN_CLASS]
+   reference_integer_set: HASHED_SET[RUN_CLASS]
 
    singleton_memory: SMART_EIFFEL is
       once
