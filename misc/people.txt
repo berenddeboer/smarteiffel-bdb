@@ -1,0 +1,115 @@
+   People
+
+   The SmartEiffel Team
+
+   The  SmartEiffel  Team  is an informal group of people in the [1]LORIA
+   lab   of  Nancy,  France,  gathered  around  the  development  of  new
+   compilation   techniques   for  object-oriented  languages  and  their
+   implementation in SmartEiffel, The GNU Eiffel compiler.
+
+   [o]
+       [2]Dominique COLNET
+              Professor at the University of Nancy 2 (I.U.T. Charlemagne).
+              Leader of the SmartEiffel project.
+
+       Dominique COLNET is the one who initiated the SmartEiffel project in
+       Summer 1994. His goal was to create an inexpensive, bug-free advanced
+       Eiffel compiler, unlike those already available on the market.
+       He has been the head of this project as well as its key designer and
+       implementor since then. (See the [3]history page for more information
+       on the chronology of the SmartEiffel project).
+   [o]
+       Suzanne COLLIN
+              Assistant Professor at the University Henri Poincaré of Nancy.
+
+       Suzanne COLLIN has been working on SmartEiffel from the very
+       beginning, taking a major part in conceptual and design discussions
+       and decisions.
+       She also provided the invaluable point of view of a user of
+       object-oriented languages working in the field of image processing and
+       augmented reality.
+       She also gave Dominique three beautiful children :)
+   [o]
+       [4]Olivier ZENDRA
+              Researcher at INRIA-Lorraine / LORIA. Got his PhD "Translation
+              and global optimisation in class languages" working on the
+              SmartEiffel project.
+
+       He started working during most of his spare time with Dominique on
+       SmallEiffel in late 1994 - early 1995. He had many important
+       conceptual and technical discussions with Dominique about languages,
+       typing, ANSI C, Java byte-code, garbage collection, etc. and worked on
+       the first bootstrap. He also tries to maintain the SmartEiffel Web
+       site. He joined the ECOO research team in late 1997 to work almost
+       full-time for his PhD on SmallEiffel, which he got with highest
+       honours in late 2000.
+   [o]
+       Philippe RIBET
+              Developer on the SmartEiffel project.
+
+       He started working on SmallEiffel before the first public release and
+       never stop to use and debug the compiler (mainly the library). He made
+       the first port on non-UNIX system: MS-DOS. He joined the SmallEiffel
+       team in summer 2001, working full-time on the project. The main aim is
+       to develop the graphic library. He worked on other aspects like SCOOP
+       for example.
+   [o]
+       [5]Cyril ADRIAN
+              Developer on the SmartEiffel project.
+
+       Like Philippe, he started working on SmallEiffel before it was brought
+       to the public. Having learnt Eiffel at school, he never stopped using
+       SmallEiffel and now SmartEiffel. He joined the SmartEiffel team in
+       summer 2002, working on the project in his free time. He developed a
+       new installer, added the [6]Acyclic Visitor design pattern, and worked
+       on the first implementation of SCOOP.
+
+   Former but Still Active Team Members
+
+   [o]
+       Philippe COUCAUD
+              Master Thesis about garbage collection in OO languages.
+              Currently working in industry.
+
+       After being a student of Dominique, and in charge of the
+       Macintosh-ready versions of SmallEiffel during his free-time since
+       1996, Philippe joined the SmallEiffel team of the ECOO research team
+       between February and September 1998 for his Master thesis. He worked
+       more especially on the garbage collector.
+
+   Other Contributors
+
+   Many people have contributed to SmartEiffel, The GNU Eiffel Compiler.
+
+   The  first  of  them, in chronological order, are the computer science
+   students  of  the  University  Henri  Poincaré  of Nancy, France. They
+   tested  and  bench-marked it, providing very useful information in the
+   early days of SmartEiffel.
+
+   Then,  many people, either working in computer engineering or computer
+   science,  or  simply  users  working  in various academic and business
+   fields,  took  part  in the process of improving SmartEiffel. Since it
+   became  The  GNU  Eiffel Compiler, in early 1998, even more people are
+   helping its development.
+
+   We want to thank all these people who help us in this great adventure.
+   Although  it  is  not  possible  to  mention them all, here is a short
+   [7]list of the most important contributors.
+
+                                   [Line]
+             Copyright © Dominique COLNET and Suzanne COLLIN -
+                         [8]<SmartEiffel@loria.fr>
+                Last modified: Wed Apr 16 16:18:32 CEST 2003
+                   [9][n?id=ABrwaAGnb7Qqzb1bbWK0dJuyN30w]
+
+References
+
+   1. http://www.loria.fr/
+   2. http://www.loria.fr/~colnet
+   3. file://localhost/users/miro/colnet/SmartEiffel/misc/HISTORY.html
+   4. http://www.loria.fr/~zendra
+   5. http://www.advogato.org/person/cadrian/
+   6. http://c2.com/cgi/wiki?AcyclicVisitor
+   7. file://localhost/users/miro/colnet/SmartEiffel/misc/THANKS.html
+   8. mailto:SmartEiffel@loria.fr
+   9. http://v1.nedstatbasic.net/stats?ABrwaAGnb7Qqzb1bbWK0dJuyN30w

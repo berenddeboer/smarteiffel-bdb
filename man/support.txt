@@ -1,0 +1,94 @@
+   Support
+
+   Premium Support and Consulting
+
+   Basically,  SmartEiffel The GNU Eiffel compiler does not come with any
+   warranty  or  support.  However,  if you do want a an extended support
+   and/or  a  warranty (e.g. guaranteed response to fix a bug that annoys
+   you), it is available on a contract basis.
+
+   On-site support is available for:
+     * Training
+
+     * Eiffel programming
+     * Object-oriented design
+     * Object-oriented technologies
+     * Computer languages
+     * Compiler technology and implementation
+     * ...
+
+     Consulting
+     * Audit
+     * Work specific to your project
+     * ...
+
+   Off-site support is available for:
+     * Enhancement
+     * Bug fix
+     * Technical support assistance
+     * ...
+
+   Corporations  interested  in  any  of  these  should [1]contact us for
+   further information.
+
+   The SmartEiffel FAQ
+
+   The  first  place  you  should  look at when you have a question about
+   SmartEiffel  is  [2]the  SmartEiffel  FAQ. We try to keep it short but
+   precise  in order to maximise its usefulness. Please tell us if you do
+   feel something important is really missing.
+
+   If you have questions which are related to Eiffel, but not specific to
+   SmartEiffel, you are likely to find your answer in our [3]Eiffel links
+   page.
+
+   The SmartEiffel Mailing List
+
+   The  SmartEiffel  FAQ  is  complemented  by the [4]SmartEiffel mailing
+   list.
+   Whenever one of your questions related to SmartEiffel was not answered
+   by the SmartEiffel FAQ, you are welcome to ask it in the mailing list.
+
+   Donations
+
+   Donations  of  money are also accepted. If you use SmartEiffel at work
+   to  do  your  job  or  for  teaching,  perhaps  you  would consider it
+   appropriate  for  your  company  (or  for  your  university) to make a
+   donation. Contact [5]colnet@loria.fr or use traditional mail with:
+          Dominique Colnet
+          INRIA Lorraine - LORIA
+          615 Rue du Jardin Botanique
+          BP 101
+          54602 VILLERS-LÈS-NANCY CEDEX
+          FRANCE
+
+   Money Donations History (latest donation first):
+
+                    Date                         Amount
+        December, 2000               5000 French F (about US $ 625 )
+        Friday June 2^th, 2000       US $ 100
+        Tuesday September 1^st, 1998 US $ 100
+
+   Miscellaneous Donations Status:
+     * T-shirts: 0
+     * Post-cards: 10
+     * Mugs: 4 (all broken at arrival!)
+     * Hand-made Mugs: 1
+     * Hand-made apple-cake: 1
+     * Unidentified objects: 0
+
+   [Line]
+   Copyright    ©    Dominique    COLNET    and    Suzanne    COLLIN    -
+   [6]<SmartEiffel@loria.fr>
+   Last modified: Tue Feb 11 12:30:00 CET 2003
+   [7][QKZesQ]
+
+References
+
+   1. mailto:colnet@loria.fr
+   2. file://localhost/users/miro/colnet/SmartEiffel/man/SmartEiffelFAQ.html
+   3. http://SmartEiffel.loria.fr/general/resources.html
+   4. http://SmartEiffel.loria.fr/support/mailing-list.html
+   5. mailto:colnet@loria.fr
+   6. mailto:SmartEiffel@loria.fr
+   7. http://v1.nedstatbasic.net/stats?ABrwYgNX5dg0IUs05ahlG/QKZesQ

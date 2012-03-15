@@ -1,0 +1,248 @@
+<!-- Title = the 'compile_to_jvm' command -->
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE>
+<CENTER><FONT COLOR="#FFFFFF" SIZE=+3><B>The <TT>compile_to_jvm</TT> Command</B></FONT></CENTER>
+</TD>
+</TR>
+</TABLE>
+
+<BR><BR><BR>
+
+The <TT>compile_to_jvm</TT> command is the SmartEiffel Java byte code
+generator for the Java Virtual Machine.
+There are
+two invocation modes: <I>traditional</I> and <I>ACE</I>.  In traditional mode, a
+variety of compiler options can be specified on the command line.  In
+ACE mode, these options are not permitted; it is presumed that the
+required compiler options are listed in the ACE file.
+<P><TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Usage</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<FONT COLOR="#FF00FF"><B>Traditional mode</B></FONT>
+<BR>
+<TT>compile_to_jvm [options] &lt;RootClass&gt; [&lt;RootProcedure&gt;]</TT>
+<P>
+<P>
+<FONT COLOR="#FF00FF"><B>ACE mode</B></FONT>
+<BR>
+<TT>compile_to_jvm [general_options]
+ &lt;ACEfile.ace&gt;</TT>
+<P>
+In traditional mode, the <TT>compile_to_jvm</TT> command must be given at
+least one argument to indicate
+the starting execution point of the system.
+Thus your program will start in <I>&lt;RootProcedure&gt;</I> of <I>&lt;RootClass&gt;</I>.
+The default <I>&lt;RootProcedure&gt;</I> is <I>make</I>.
+</P><P>
+In ACE mode, the name of the ACE file must end with the <TT>.ace</TT>
+suffix.  For examples of how to use ACE files, have a look in the
+<TT>SmartEiffel/tutorial/ace</TT> directory.
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Load Path for Eiffel Source Files</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<TT>compile_to_jvm</TT> uses the technique described in the
+documentation for the
+<A HREF="finder.html"><TT>finder</TT></A> command to locate the Eiffel source files it
+tries to compile.  Note that what actually happens depends on the
+invocation mode (traditional or ACE).
+</P>
+
+
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">General Options</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<DL COMPACT>
+<DT>
+<I>-help</I>:<BR>
+<DD>
+Display a brief summary of the command-line syntax and a complete
+list of compiler options.
+<BR><BR>
+<DT>
+<I>-verbose</I>:<BR><DD>
+ Print system information during the compilation (full path of 
+   files loaded, type inference score, removed files, etc.).
+<BR><BR>
+
+<DT>
+<I>-version</I>:<BR><DD>
+Display the version number of the SmartEiffel release you're using.
+</DL>
+<BR><BR>
+
+<DT>
+<I>-loadpath &lt;loadpath_file&gt;</I>:<BR><DD>
+Adds a loadpath file for class lookup. See details
+in the <A HREF="finder.html"><TT>finder man page</TT></A>.
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Options to Select Eiffel
+Compilation Modes (traditional mode only)</FONT></TD>
+</TR>
+</TABLE>
+<P>
+As with the <TT>compile_to_c</TT> command, there are 8 different compilation
+modes: <I>-boost</I>, <I>-no_check</I>, <I>-require_check</I>,
+<I>-ensure_check</I>, <I>-invariant_check</I>, <I>-loop_check</I>,
+<I>-all_check</I> and <I>-debug_check</I>.<BR>
+These options have the same meaning as with <TT>compile_to_c</TT>. See  
+the <A HREF="compile_to_c.html">compile_to_c</A>
+documentation for details.
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Other Options (traditional
+mode only)</FONT></TD>
+</TR>
+</TABLE>
+<P>
+
+<DL COMPACT><DT>
+<I>-o &lt;output_name&gt;</I>:<BR>
+<DD>
+Place the main output in <I>&lt;output_name&gt;</I>.class
+   and other class files in the directory <I>&lt;output_name&gt;</I>.
+   When this option is absent, the default is <I>&lt;Root-Class&gt;</I>.
+<BR><BR>
+<DT>
+<I>-no_style_warning</I>:<BR><DD>
+Suppress output for warning messages related to the non-respecting of standard Eiffel 
+style guidelines (for example, <CODE>ItEm</CODE> will not trigger a warning).
+<BR><BR>
+
+
+<DT>
+<I>-case_insensitive</I>:<BR><DD>
+Switch case-insensitive mode on.
+<BR> 
+For example,
+when this mode is selected, the Eiffel parser considers that the
+following identifiers refer to the same feature: <CODE>item</CODE>, <CODE>ITEM</CODE>, 
+<CODE>ItEm</CODE>, ...
+<BR><BR>
+
+<DT>
+<I>-no_warning</I>:<BR>
+<DD>
+Suppress output for all warning messages. (Error messages
+are still printed.)
+<BR><BR>
+
+<!-- <DT>
+     <I>-cecil &lt;cecil_file&gt;</I>:<BR><DD>
+    Allow some Eiffel features to be called
+   from Java (see the
+   <A HREF="cecil.html"><code>cecil</code></A>
+   file for details). To call Java functions/macros
+   from Eiffel see the 
+   <A HREF="external.html"><code>external</code></A>
+   file.
+   <BR><BR>
+-->
+
+
+
+</DL>
+</P>
+
+
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">The <code>SmartEiffelRuntime.java</code> class</FONT></TD>
+</TR>
+</TABLE>
+<P>
+The <code>SmartEiffelRuntime.java</code> class implements some low-level
+external features.
+This file is in the directory <code>SmartEiffel/sys/runtime</code>.
+The file <code>SmartEiffelRuntime.class</code> must be present to execute
+the Java byte-code generated by the <TT>compile_to_jvm</TT> command.
+Don't forget to add this class to your Java <TT>CLASSPATH</TT> system
+environment variable.
+You can also copy the file <code>SmartEiffelRuntime.class</code> to some
+appropriate directory.
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Examples</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<FONT COLOR="#FF00FF"><B>Example 1</B></FONT>
+<BR>
+
+   When SmartEiffel is correctly installed, you can type
+   the following command to test the hello world program :
+<DL COMPACT><DT><DD><TT>
+      compile_to_jvm hello_world
+</TT></DL>
+   Then, in order to execute the Java byte code produced, you can
+   use the command:
+<DL COMPACT><DT><DD><TT>
+      java hello_world
+</TT></DL>
+</P><P>
+<FONT COLOR="#FF00FF"><B>Example 2</B></FONT>
+<BR>
+   As for the <TT>compile_to_c</TT> command you can add the option <I>-boost</I> to omit
+   all assertion checking:
+<DL COMPACT><DT><DD><TT>
+      compile_to_jvm -boost hello_world
+</TT></DL>
+</P><P>
+<FONT COLOR="#FF00FF"><B>Example 3</B></FONT>
+<BR>
+   To change the name of the generated main class, you have to add the
+   -o option:
+<DL COMPACT><DT><DD><TT>
+      compile_to_jvm -boost -o out hello_world
+</TT></DL>
+   Then, you can run the Java byte code with:
+<DL COMPACT><DT><DD><TT>
+      java out
+</TT></DL>
+   Note that the name used for the class files directory is also
+   changed (this directory is also named <TT>out</TT>).
+</P><P>
+<FONT COLOR="#FF00FF"><B>Example 4</B></FONT>
+<BR>
+   Finally, the <I>-verbose</I> option may be useful to check which files
+   are loaded, which files are created, or to fix some installation
+   problem:
+<DL COMPACT><DT><DD><TT>
+      compile_to_jvm -verbose hello_world
+</TT></DL>
+</P>
+
+<!-- BL START -->
+<!-- BL1 START -->
+<CENTER>
+<IMG SRC="se-line.gif" ALT="[Line]">
+<BR>
+<FONT SIZE="-1"><I>
+Copyright &copy; Dominique COLNET and Suzanne COLLIN -
+<A HREF="mailto:SmartEiffel@loria.fr">&lt;SmartEiffel@loria.fr&gt;</A>
+<BR>
+<!-- hhmts start -->
+Last modified: Tue Feb 11 12:14:05 CET 2003
+<!-- hhmts end -->
+<BR>
+</I></FONT><BR></CENTER>

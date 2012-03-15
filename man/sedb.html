@@ -1,0 +1,318 @@
+<!-- Title = SmartEiffel debugger -->
+<center><p><img src="../images/worker.gif" alt="[Line]"><br>
+<b>This page is not finished yet</b></p></center>
+
+<table border="0" cellspacing="5" cellpadding="5" cols="1" width="100%" bgcolor="#3366FF">
+<tr>
+<td>
+<center><font color="#FFFFFF" size="+3"><b>About the SmartEiffel Debugger</b></font></center>
+</td>
+</tr>
+</table>
+
+<p>
+The SmartEiffel debugger is an <i>embedded debugger</i>. It means that to use
+it, you must compile your application with the special command option
+<tt>-sedb</tt>. The generated executable is then equipped with the debugger,
+you just have to start it as you would without it.
+</p>
+
+<p>
+The debugger offers many powerful commands, that let you look into the guts of
+your program:
+</p>
+
+<ul>
+<li>commands that control <a href="#execution">the execution</a>,</li>
+<li>commands that set or reset <a href="#breakpoints">breakpoints</a>,</li>
+<li>commands that allow to <a href="#data-display">display data</a>,</li>
+<li>and some <a href="#other">other commands<a>.</li>
+</ul>
+
+<table border="0" cols="1" width="100%" bgcolor="#3366FF">
+<tr>
+<td><font color="#FFFFFF" size="+2">
+<a name="generated-type-ids">Execution commands</a></font></td>
+</tr>
+</table>
+
+Those commands are meant to make your program advance; either walk step by
+step, or by greater strides, or run until its end.
+
+Whatever command you choose, the program will run at most to the next
+breakpoint (<a href="#breakpoints">see below</a>) or till you press
+<tt>^C</tt>.
+
+The available commands are:
+
+<blockquote>
+<table width="100%" border="1">
+<tbody>
+<tr>
+<td valign="top" align="center" width="5%">s</td>
+<td>
+Make a single step; if it involves entering into another routine (it's a
+feature call), then so be it.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">n</td>
+<td>
+Make a single step, without entering into any other routine (it means that a
+feature call is seen as a single step).
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">f</td>
+<td>
+Stride to the end of the current routine.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">c</td>
+<td>
+Run till the next breakpoint, or till the end.
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+<table border="0" cols="1" width="100%" bgcolor="#3366FF">
+<tr>
+<td><font color="#FFFFFF" size="+2">
+<a name="generated-type-ids">Breakpoints</a></font></td>
+</tr>
+</table>
+
+Note that the breakpoints in the code (marked by the pseudo-instruction
+<tt>sedb_breakpoint</tt>) are heeded; they work as manually-added breakpoints.
+
+Here are the commands to manage manually-added breakpoints:
+
+<blockquote>
+<table width="100%" border="1">
+<tbody>
+<tr>
+<td valign="top" align="center" width="5%">b</td>
+<td>
+Add a breakpoint. There are many possibilities, among which you can choose a
+subset to define. All the criteria you choose must be met for the breakpoint
+to be activated.
+<p>
+The possible criteria are described below.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">B</td>
+<td>
+Display all the manually-added breakpoints.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">-&nbsp;<i>&lt;num&gt;</i></td>
+<td>
+Removes the breakpoint designed by its number (you can see that number by the
+'B' command).
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+
+<p>
+When setting a breakpoint, the possible criteria are:
+
+<ul>
+<li>
+<b>Name indication</b>: The name information of the debugging stack contains
+information about the name of the routine called as well as the base class
+where this routine is defined. The name indication of the breakpoint can be
+any substring to be searched within the name information of the stack. For
+example, if the name indication is "item", the execution would stop in feature
+<tt>item</tt> of <tt>STRING</tt> but also in feature <tt>item</tt> of
+<tt>ARRAY</tt>, in feature <tt>item</tt> of <tt>DICTIONARY</tt>, etc.  If the
+name indication is "item STRING", execution would stop only in routine
+<tt>item</tt> defined in class </tt>STRING. Also note that the name indication
+can be any substring. For example, if the name indication is "is_", the
+execution would stop in <tt>is_empty</tt>, <tt>is_integer</tt>,
+<tt>is_real</tt>, etc. As another example, if the name indication is "STRI",
+the execution would stop at any place in classes <tt>STRING</tt>,
+<tt>ARRAY[STRING]</tt>, <tt>DICTIONARY[STRING,FOO]</tt>, etc.  Finally, also
+note that the "invariant" string is used when the execution is in the <i>class
+invariant</i> of some class, hence allowing you to spot all class invariant
+execution.
+</li>
+<li>
+<b>File indication</b>: If you want to stop each time the execution reaches
+the <tt>string.e</tt> file class, it can be achieved easily by setting the
+file indication to "string.e".  Because the file name indication is applied on
+the whole path of the file, the file indication allows you to filter more than
+a simple file name. For example, if the file indication is "lib/kernel", the
+execution would stop each time execution reaches some code in the
+<tt>kernel</tt> cluster of the SmartEiffel library.
+</li>
+<li>
+<b>Line range</b>: The line range information allows you to select the line
+range to be considered.  For example, to stop each time execution reaches line
+12 or 13 in some file, just enter [12,13] as a line range.
+</li>
+<li>
+<b>Stack limit</b>: The stack limit condition allows you to watch the stack
+size during execution. (This is useful to debug bad recursive calls.) For
+example, a stack limit of 10 would stop the execution as soon as the stack
+size reaches this 10 limit. The automatic incrementation option causes the
+stack-limit to be incremented each time the corresponding breakpoint
+matches. A breakpoint composed only of a single stack limit condition is a
+perfect watch dog of stack memory consumption.
+</li>
+</ul>
+
+Here is how <tt>sedb_breakpoint</tt> works:
+<p>
+The feature <tt>sedb_breakpoint</tt> defined in class <tt>GENERAL</tt> can be
+used to set a breakpoint directly in your Eiffel source file. Keep in mind
+that you must recompile your system each time some Eiffel source file is
+modified. Thus each time you add a <tt>sedb_breakpoint</tt> call to some
+Eiffel source file you must recompile your code first. Also note that a
+<tt>sedb_breakpoint</tt> is always enabled even when the corresponding source
+file is not traced (see ACE file mode).
+</p>
+
+<table border="0" cols="1" width="100%" bgcolor="#3366FF">
+<tr>
+<td><font color="#FFFFFF" size="+2">
+<a name="generated-type-ids">Data display</a></font></td>
+</tr>
+</table>
+
+<p>
+The following commands allow you to look at the data of your program:
+</p>
+
+<blockquote>
+<table width="100%" border="1">
+<tbody>
+<tr>
+<td valign="top" align="center" width="5%">e&nbsp;<i>&lt;exp&gt;</i></td>
+<td>
+Evaluates and displays the result of an expression. <b>Note that</b> currently
+only object attributes can be displayed (general Eiffel expression are not
+supported).
+<p>
+What you can do is:
+<ul>
+<li>display either Current or any local variable or parameter of the current
+routine;</li>
+<li>display any attribute of the above objects, using the standard Eiffel
+dotted expression (e.g. <tt>e&nbsp;my_string.count</tt>);</li>
+<li>display any element of a <tt>NATIVE_ARRAY</tt>, using a special notation:
+a dot followed by the offset of the object you want to display
+(e.g. <tt>e&nbsp;my_string.storage.4</tt>);</li>
+<li>recursively string dotted expressions (like in the above example, or even
+more complex expressions).</li>
+</ul>
+<i>Note:</i> the 'e' command is available since SmartEiffel&nbsp;1.1&nbsp;beta&nbsp;3.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">.</td>
+<td>
+Display the current frame.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">u</td>
+<td>
+Up in the stack (go to the caller). Note that the 'e' expressions follow the
+"current frame" (you can display Current and so on of <i>that</i> frame).
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">d</td>
+<td>
+Down in the stack (go back to the callee). Note that the 'e' expressions follow the
+"current frame" (you can display Current and so on of <i>that</i> frame).
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">S</td>
+<td>
+Display the whole stack (compact mode or not).
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+<table border="0" cols="1" width="100%" bgcolor="#3366FF">
+<tr>
+<td><font color="#FFFFFF" size="+2">
+<a name="generated-type-ids">Other commands</a></font></td>
+</tr>
+</table>
+
+<blockquote>
+<table width="100%" border="1">
+<tbody>
+<tr>
+<td valign="top" align="center" width="5%">q</td>
+<td>
+Quits the debugger (the program will be stopped). You can use 'Q' to bypass
+the confirmation.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">h</td>
+<td>
+Display some help. You can follow that 'h' by a second letter to have help on
+the following topics:
+<ul>
+<li><b>a</b>: all topics</li>
+<li><b>e</b>: "executing" topic</li>
+<li><b>b</b>: "breakpoints" topic</li>
+<li><b>d</b>: "data-display" topic</li>
+<li><b>m</b>: "miscellaneous" topic</li>
+</ul>
+<i>Note:</i> you can use '?' instead of 'h'.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">H</td>
+<td>
+Display some more help. Answer "yes" at each question if you want details.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">G</td>
+<td>
+Run the Garbage Collector.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%">T</td>
+<td>
+Switch to the <tt>trace.se</tt> file mode.
+</td>
+</tr>
+<tr>
+<td valign="top" align="center" width="5%"><i>Enter</i></td>
+<td>
+Repeat the last command.
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+<center><p><img src="../images/se-line.gif" alt="[Line]" height="16" width="550">
+<br>
+<i><font size="-1">Copyright &copy; Dominique COLNET and Suzanne COLLIN -
+<a href="mailto:SmartEiffel@loria.fr">&lt;SmartEiffel@loria.fr&gt;</a> <br>
+<!-- hhmts start -->
+Last modified: Thu May  1 17:58:51 CEST 2003
+<!-- hhmts end -->
+<br>
+</font></i><br></p></center>
+

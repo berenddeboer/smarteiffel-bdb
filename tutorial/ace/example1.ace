@@ -1,0 +1,28 @@
+-- An ACE file can avoid using command arguments to compile some system.
+-- ACE means Assembly of Classes in Eiffel.
+--
+-- To launch the compilation with this ACE file, just type:
+-- 
+--               compile example1.ace
+--
+-- This is a very simple example with very small ACE file:
+--
+system 
+    hello -- is the name for the executable
+
+root
+    HELLO_WORLD: "make"
+    -- To indicate that the execution will start in procedure "make" of 
+    -- class HELLO_WORLD.
+
+cluster
+	-- In this simple example, a cluster is a simple directory path. 
+        -- The compiler will only search Eiffel source code in the following
+        -- clusters. The order is important, because the first one is the good 
+        -- one. Also note that one may only use the / character as the
+	-- directory separator:
+	"${SmartEiffelDirectory}tutorial";
+	"${SmartEiffelDirectory}lib/kernel";
+	"${SmartEiffelDirectory}lib/io"; 
+
+end

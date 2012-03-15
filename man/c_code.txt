@@ -1,0 +1,342 @@
+   About the Generated C Code
+
+   People  who  want  or  have  to code part of their applications and/or
+   libraries  in C should really limit themselves to the clean interfaces
+   provided  by [1]Cecil or the [2]external mechanism. This page mentions
+   some facts you should be aware of before you start.
+
+   Generated Type Identifiers
+
+   First   and  above  all,  SmartEiffel  generates  one  unique  numeric
+   identifier  for each living type[3]1 present in the Eiffel code. A lot
+   of symbols in the generated C code depend on that identifier.
+
+   Don't  depend  on  those identifiers! The mangling table is only valid
+   for  one  specific  compilation  of  one specific application with one
+   specific compiler version and specific libraries...
+
+   If xyz is the identifier, then:
+     * The type of an Eiffel object is Txyz;
+     * The  corresponding structure is Sxyz; in that structure, the names
+       of  the  attributes  are prefixed with an underscore (there may be
+       some  other fields, usually the first being id used by SmartEiffel
+       for bookkeeping);
+     * Each reference type can be cast in T0 (but some reference type may
+       not have the id field):
+
+typedef int Tid;
+typedef struct S0 T0;
+struct S0{Tid id;};
+
+     * Each method is named rxyzmethodname();
+     * Each prefix method is named rxyz_px_methodname();
+     * Each infix method is named rxyz_ix_methodname();
+     * Each late-binding method is named Xxyzmethodname();
+     * The creation procedures (which exist only if the Garbage Collector
+       is used) are named newxyz().
+     * The  model for objects of type xyz are named Mxyz. Models are used
+       for initialisation. Example:
+
+T132 M132={132,NULL,NULL,0,0,NULL,0,0,0,0,0,0,0,0,0,NULL};
+...
+{T132*n=((T132*)se_malloc(sizeof(*n)));
+*n=M132;
+r132make(n);
+...
+
+   Some  characters  in  method names such as "<" or "+" will be replaced
+   with relative ASCII number written as decimal.
+
+   For example: STRING has the indentifier 7[4]2. Then:
+     * The object type is T7
+
+typedef struct S7 T7;
+
+     * The structure may be defined in S7
+
+struct S7{Tid id;T9 _storage;T2 _count;T2 _capacity;};
+
+     * The append is defined like this:
+
+void r7append(se_dump_stack*caller,T7* C,T0* a1);
+
+       (more on the dump stack below)
+
+   When you compile your application, you can find those identifiers in a
+   file  name after the name of the root class, suffixed by .id; the file
+   is  structured in entries, each entry being separated from others by a
+   hash character ('#'). This file looks like this:
+
+4 "REAL"
+#
+12 "HELLO_WORLD"
+class-path: "./hello_world.e"
+class-name: HELLO_WORLD
+parent-count: 0
+c-type: T12 reference: yes
+ref-status: live id-field: yes
+run-time-set-count: 1
+run-time-set:
+        HELLO_WORLD (12)
+#
+9 "NATIVE_ARRAY[CHARACTER]"
+class-path: "/lib/se/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 26
+c-type: T9 reference: no
+#
+21 "COMPARABLE"
+class-path: "/lib/se/lib/kernel/comparable.e"
+class-name: COMPARABLE
+parent-count: 1 parents: 13
+#
+. . .
+
+   You must not depend on the indentifiers values. Indeed, when computing
+   an  identifier,  collisions  may occur, and affect this process. Thus,
+   the  number  (and name) corresponding to each type depends not only on
+   the  type name, but also on the order in which they are compiled. That
+   is,  on  the application and libraries compiled... They also depend on
+   the  compilation  mode  used,  and  the version of the compiler you're
+   using.  So  what  is  T145  now  may  become  T234  the  next time you
+   compile...[5]3
+
+   Consequently,  do not, ever, rely on the type numbers in the generated
+   C  code,  because  they are not constant! (Except for a few ones which
+   have  a fixed, hard-coded name). So don't bother writing in your own C
+   code  things  such  as  new123  or  T456,  because  the  only thing we
+   guarantee in this case is that your code shall break someday.
+
+   The Naming Convention
+
+   The previous chapter explains how method names are generated. r7append
+   prototype  presented  above  as void r7append(se_dump_stack*caller,T7*
+   C,T0* a1); shows Current and argument cases. Rules are as follow:
+     * Current   is   named   C   when   given   as   parameter   to  the
+       procedure/function.  This  parameter  may be omitted if Current is
+       not  used.  In  some  cases (when inlining is done in boost mode),
+       Current is copied in local variables named C1, C2...
+     * Arguments are named a1, a2...
+     * Inside functions, a local variable named R is defined. This is the
+       Result value.
+     * Local  variables  names  are Eiffel names prefixed with underscore
+       character.
+
+   The Mangling Table
+
+   OK,  so  now  you  understand why you cannot use type numbers, but you
+   still want to know what those things in the mangling table mean. :-)
+
+   First,  a  big  caveat.  Although it hasn't changed a lot and has been
+   very  stable  for  quite  some time now, the mangling table coding may
+   change  in the future! We currently have no plans to change it, and we
+   prefer  keeping  it  the  way  it is. But once again, we do not commit
+   ourselves to the current representation.
+
+   Let's  look  again at the extract of a .id file. The shown part covers
+   quite all the possible cases:
+
+4 "REAL"
+#
+12 "HELLO_WORLD"
+class-path: "./hello_world.e"
+class-name: HELLO_WORLD
+parent-count: 0
+c-type: T12 reference: yes
+ref-status: live id-field: yes
+run-time-set-count: 1
+run-time-set:
+        HELLO_WORLD (12)
+#
+9 "NATIVE_ARRAY[CHARACTER]"
+class-path: "/lib/se/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 26
+c-type: T9 reference: no
+#
+21 "COMPARABLE"
+class-path: "/lib/se/lib/kernel/comparable.e"
+class-name: COMPARABLE
+parent-count: 1 parents: 13
+#
+. . .
+
+   There  is  one  entry per type (live or not); each entry spans on many
+   lines and finished by a hash symbol ('#').
+
+   Each  entry  comprises  many  informations. All of them are not always
+   present  (in that case, they have default values). Only the first line
+   is compulsory.
+
+   The first line contains the type number, and its name (as would return
+   generating_type).
+
+   The  next lines contain different fields, marked as a keyword, a colon
+   and a value. There may be one or more fields on one line. Those fields
+   are:
+
+   class-path The path to the file containing the source of the class.
+   May be omitted if the class has no associated file (e.g., TUPLE or
+   PROCEDURE).
+   class-name The name of the class, as would return generator.
+   parent-count The number of parents.
+   parents On the same line as parent-count if the latter is not null; it
+   gives the parent class identifiers.
+   c-type The C type, usually in the form Txyz. If omitted, the class has
+   no runnable type.
+   In that case, the following fields do not appear either.
+   reference On the same line as c-type, yes for a reference type or no
+   for an expanded type.
+   ref-status Either live for a living type (i.e. whether instances of
+   this type are ever created at run-time), or dead otherwise.
+   id-field On the same line as ref-status, yes if the id field is in the
+   generated C structure (as its first element), no otherwise. This field
+   is present if one of these confitions is true:
+     * some late binding may occur on targets of that type,
+     * or the struct may be accessed by external or Cecil code.
+
+   Note that a lot of calls are statically computed; the type inference
+   algorithm used in SmartEiffel increases the number of such types that
+   don't need the id field.
+   run-time-set-count  The  number  of  concrete, live descendants of the
+   type  (including  itself).  It  is  thus  the  number  of items in the
+   run-time-set below.
+   run-time-set  Contains  the live heirs with their identifier. There is
+   one such class per line.
+
+   The Dump Stack
+
+   When not in boost mode, a stack is managed by the SmartEiffel runtime.
+   This stack can be displayed when an exception not caught is raised. It
+   is also used by the debugger ([6]sedb).
+
+   Technically, the SmartEiffel stack is built upon the native (C) stack.
+   It  is  a se_dump_stack[7]4 usually allocated on the stack. It is made
+   up of several parts:
+     * a  frame  descriptor,  of  type se_frame_descriptor[8]4 which is a
+       static  description of the feature: run type, does it use Current,
+       number  and  type  of the locals (parameters and local variables),
+       and an anti-recursion flag (when testing contracts);
+     * a pointer to Current (i.e. either a pointer to an expanded object,
+       or  a  pointer  to  a  reference object, it being a pointer to the
+       object  itself).  That's  why  the  type  of  the current field is
+       Void**.  This  field  will  be  NULL if Current is not used by the
+       feature;
+     * the position (used mainly by [9]sedb);
+     * a  pointer  to  the  caller (i.e. the se_dump_stack of the calling
+       function);
+     * a pointer to the exception origin: if not NULL, it means that this
+       se_dump_stack  is  not in the stack, but was malloc'ed to preserve
+       the exception stack trace;
+     * an array of locals (with double indirection as for Current), hence
+       the type void***.
+
+   One  macro  handles the linking and unlinking of the dump stack frames
+   by  setting the caller field of the dump stack top, then changing that
+   top.
+     * Normally,  the  dump  stack  top  is  a  global  se_dst defined in
+       SmartEiffel/sys/runtime/no_check.c.  The  set_dump_stack_top  just
+       affects the given argument to se_dst.
+     * In SCOOP mode, things are a bit different since each processor has
+       its own stack. set_dump_stack_top has two arguments: the processor
+       and the new dump stack top.
+
+   The Basic Subsystem
+
+   That "basic" subsystem is used by SmartEiffel libraries to provide, at
+   the same time, facility of extension and independance from the backend
+   (C, Java).
+
+   Features  named basic_something and declared as external "SmartEiffel"
+   are handled by the basic subsystem.
+
+   The naming scheme is thus:
+feature
+
+   basic_topic_my_feature(args) is
+      external "SmartEiffel"
+      end
+
+   The   C   backend[10]5   will   then   search  for  basic_topic.c  and
+   basic_topic.h  (those found will be included in good place, one in the
+   generated  .c,  other  in  the  .h).  In those files, a function (or a
+   macro)   must  be  named  basic_topic_my_feature()  (like  the  Eiffel
+   feature),  and  accept  the  same  arguments as its Eiffel counterpart
+   (that is, written the C way). Current is never passed.
+
+   Indeed  this  is  a  kind  of  "plugin"  system  for  the  SmartEiffel
+   libraries. Some extensions may be foreseen in the future.
+
+   For some examples, one may look at BASIC_DIRECTORY and so on.
+
+   Notes
+
+   [11]1
+
+     There  is  a bijection between the number and the name of the type,
+     including  its parameters in the case of generic types. (My_Feature
+     details about this in our [12]research papers).
+
+   [13]2
+
+     There  are  some  identifiers  that are reserved for "basic" types.
+     They are:
+     * 0 is the type any other can cast to;
+     * 1 is INTEGER_8;
+     * 2 is INTEGER_32;
+     * 3 is CHARACTER;
+     * 4 is REAL;
+     * 5 is DOUBLE;
+     * 6 is BOOLEAN;
+     * 7 is STRING;
+     * 8 is POINTER;
+     * 9 is NATIVE_ARRAY[CHARACTER] (used by STRING);
+     * 10 is INTEGER_16;
+     * 11 is INTEGER_64.
+
+     The  root  class of the system will then have the 12. Don't rely on
+     that, though (before all those INTEGERs revolution, it was 11).
+
+   [14]3
+
+     The  compiler  will  do  its  best  not  to  change the identifiers
+     uselessly.  The  .id  file  is  loaded  at  the  beginning  of  the
+     compilation  process,  and saved again at its end. But clean erases
+     that file.
+
+   [15]4
+
+     You   may   find   the   definition  of  those  structures  in  the
+     SmartEiffel/sys/runtime/c/no_check.h file.
+
+   [16]5
+
+     The   Java   backend   is   similar.   It   looks   for  the  class
+     fr.loria.SmartEiffelBasicTopic     and    the    static    function
+     basic_topic_my_feature()  with the arguments quite similar to the C
+     ones.
+
+                                   [Line]
+             Copyright © Dominique COLNET and Suzanne COLLIN -
+                         [17]<SmartEiffel@loria.fr>
+                Last modified: Thu Jun 12 10:50:08 CEST 2003
+
+References
+
+   1. file://localhost/users/miro/colnet/SmartEiffel/man/cecil.html
+   2. file://localhost/users/miro/colnet/SmartEiffel/man/external.html
+   3. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#note1
+   4. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#note2
+   5. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#note3
+   6. file://localhost/users/miro/colnet/SmartEiffel/man/sedb.html
+   7. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#note4
+   8. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#note4
+   9. file://localhost/users/miro/colnet/SmartEiffel/man/sedb.html
+  10. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#note5
+  11. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#ref_note1
+  12. file://localhost/users/miro/colnet/SmartEiffel/papers/papers.html
+  13. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#ref_note2
+  14. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#ref_note3
+  15. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#ref_note4
+  16. file://localhost/users/miro/colnet/SmartEiffel/man/c_code.html#ref_note5
+  17. mailto:SmartEiffel@loria.fr

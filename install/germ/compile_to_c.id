@@ -1,0 +1,5317 @@
+357 "CHECK_INVARIANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/check_invariant.e"
+class-name: CHECK_INVARIANT
+parent-count: 1 parents: 214 
+c-type: T357 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CHECK_INVARIANT (357)
+#
+497 "FIXED_ARRAY[E_OLD]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T497 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[E_OLD] (497)
+#
+368 "DICTIONARY_NODE[INTEGER,CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T368 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[INTEGER,CLASS_NAME] (368)
+#
+150 "FEATURE_NAME" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/feature_name.e"
+class-name: FEATURE_NAME
+parent-count: 4 parents: 23 25 89 81 
+c-type: T150 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	FEATURE_NAME (150)
+#
+198 "FORMAL_GENERIC_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/formal_generic_list.e"
+class-name: FORMAL_GENERIC_LIST
+parent-count: 2 parents: 15 14 
+c-type: T198 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FORMAL_GENERIC_LIST (198)
+#
+299 "INSTRUCTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction.e"
+class-name: INSTRUCTION
+parent-count: 2 parents: 15 14 
+c-type: T299 reference: yes
+ref-status: dead 
+run-time-set-count: 16
+run-time-set:
+	PROC_CALL_0 (301)
+	PROC_CALL_1 (302)
+	PROC_CALL_N (303)
+	PRECURSOR_INSTRUCTION (311)
+	E_CHECK (356)
+	E_DEBUG (358)
+	IFTHENELSE (359)
+	INSTRUCTION_WITH_COMMENT (370)
+	E_RETRY (377)
+	E_INSPECT (378)
+	E_LOOP (392)
+	CREATE_INSTRUCTION (393)
+	ASSIGNMENT (394)
+	ASSIGNMENT_ATTEMPT (395)
+	OLD_CREATION (396)
+	AGENT_INSTRUCTION (585)
+#
+406 "E_PROCEDURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/e_procedure.e"
+class-name: E_PROCEDURE
+parent-count: 1 parents: 405 
+c-type: T406 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_PROCEDURE (406)
+#
+4 "REAL" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/real.e"
+class-name: REAL
+parent-count: 2 parents: 24 23 
+c-type: T4 reference: no
+#
+129 "SET[GRAPH_NODE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set.e"
+class-name: SET
+parent-count: 1 parents: 18 
+c-type: T129 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET[GRAPH_NODE] (129)
+#
+412 "ARRAY[DECLARATION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T412 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 2
+run-time-set:
+	ARRAY[DECLARATION] (412)
+	ARRAY[DECLARATION_1] (553)
+#
+115 "PARENT_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/parent_list.e"
+class-name: PARENT_LIST
+parent-count: 2 parents: 15 14 
+c-type: T115 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	PARENT_LIST (115)
+#
+513 "SET[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set.e"
+class-name: SET
+parent-count: 1 parents: 18 
+c-type: T513 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET[STRING] (513)
+#
+557 "UTF8_PARSER" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/unicode/utf8_parser.e"
+class-name: UTF8_PARSER
+parent-count: 1 parents: 39 
+c-type: T557 reference: no
+#
+58 "STD_ERROR" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/std_error.e"
+class-name: STD_ERROR
+parent-count: 1 parents: 38 
+c-type: T58 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	STD_ERROR (58)
+#
+37 "STD_OUTPUT" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/std_output.e"
+class-name: STD_OUTPUT
+parent-count: 1 parents: 38 
+c-type: T37 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	STD_OUTPUT (37)
+#
+88 "MANIFEST_STRING" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/manifest_string.e"
+class-name: MANIFEST_STRING
+parent-count: 2 parents: 89 25 
+c-type: T88 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	MANIFEST_STRING (88)
+#
+220 "ARRAYED_COLLECTION[EXPRESSION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T220 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+520 "DICTIONARY[MANIFEST_STRING,MANIFEST_STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T520 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[MANIFEST_STRING,MANIFEST_STRING] (520)
+#
+283 "TYPE_PROCEDURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_procedure.e"
+class-name: TYPE_PROCEDURE
+parent-count: 1 parents: 284 
+c-type: T283 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_PROCEDURE (283)
+#
+441 "NATIVE_ARRAY[SET_NODE[GRAPH_NODE]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T441 reference: no
+#
+417 "ARRAYED_COLLECTION[LOCAL_ARGUMENT1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T417 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+98 "TEXT_FILE_WRITE" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/text_file_write.e"
+class-name: TEXT_FILE_WRITE
+parent-count: 3 parents: 38 99 43 
+c-type: T98 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 2
+run-time-set:
+	TEXT_FILE_WRITE (98)
+	C_COMPACTOR (132)
+#
+144 "E_FEATURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/e_feature.e"
+class-name: E_FEATURE
+parent-count: 1 parents: 15 
+c-type: T144 reference: yes
+ref-status: dead 
+run-time-set-count: 17
+run-time-set:
+	EXTERNAL_PROCEDURE (149)
+	EXTERNAL_FUNCTION (152)
+	CST_ATT_UNIQUE (338)
+	CST_ATT_BOOLEAN (344)
+	CST_ATT_CHARACTER (345)
+	CST_ATT_STRING (346)
+	CST_ATT_BIT (350)
+	CST_ATT_REAL (351)
+	CST_ATT_DOUBLE (352)
+	CST_ATT_INTEGER (353)
+	DEFERRED_PROCEDURE (398)
+	DEFERRED_FUNCTION (400)
+	E_PROCEDURE (406)
+	E_FUNCTION (407)
+	ONCE_PROCEDURE (409)
+	ONCE_FUNCTION (410)
+	WRITABLE_ATTRIBUTE (420)
+#
+143 "E_ROUTINE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/e_routine.e"
+class-name: E_ROUTINE
+parent-count: 1 parents: 144 
+c-type: T143 reference: yes
+ref-status: dead 
+run-time-set-count: 8
+run-time-set:
+	EXTERNAL_PROCEDURE (149)
+	EXTERNAL_FUNCTION (152)
+	DEFERRED_PROCEDURE (398)
+	DEFERRED_FUNCTION (400)
+	E_PROCEDURE (406)
+	E_FUNCTION (407)
+	ONCE_PROCEDURE (409)
+	ONCE_FUNCTION (410)
+#
+142 "EXTERNAL_ROUTINE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/external_routine.e"
+class-name: EXTERNAL_ROUTINE
+parent-count: 1 parents: 143 
+c-type: T142 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	EXTERNAL_PROCEDURE (149)
+	EXTERNAL_FUNCTION (152)
+#
+526 "FIXED_ARRAY[RUN_FEATURE_9]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T526 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[RUN_FEATURE_9] (526)
+#
+308 "BIT_CONSTANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/bit_constant.e"
+class-name: BIT_CONSTANT
+parent-count: 1 parents: 89 
+c-type: T308 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	BIT_CONSTANT (308)
+#
+174 "DICTIONARY_NODE[BOOLEAN,BASE_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T174 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[BOOLEAN,BASE_CLASS] (174)
+#
+336 "NATIVE_ARRAY[CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T336 reference: no
+#
+487 "FIXED_ARRAY[RUN_FEATURE_3]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T487 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[RUN_FEATURE_3] (487)
+#
+485 "ARRAYED_COLLECTION[ADDRESS_OF]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T485 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+558 "FIXED_ARRAY[RUN_FEATURE_2]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T558 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[RUN_FEATURE_2] (558)
+#
+243 "CALL_0" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_0.e"
+class-name: CALL_0
+parent-count: 1 parents: 227 
+c-type: T243 reference: yes
+ref-status: dead 
+run-time-set-count: 5
+run-time-set:
+	CALL_PREFIX_FREEOP (241)
+	CALL_PREFIX_NOT (244)
+	CALL_PREFIX_PLUS (250)
+	CALL_PREFIX_MINUS (251)
+	CALL_0_C (254)
+#
+202 "FEATURE_CLAUSE_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/feature_clause_list.e"
+class-name: FEATURE_CLAUSE_LIST
+parent-count: 2 parents: 15 14 
+c-type: T202 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FEATURE_CLAUSE_LIST (202)
+#
+171 "DICTIONARY_NODE[DICTIONARY[FEATURE_NAME,BASE_CLASS],FEATURE_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T171 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[DICTIONARY[FEATURE_NAME,BASE_CLASS],FEATURE_NAME] (171)
+#
+226 "CALL_1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_1.e"
+class-name: CALL_1
+parent-count: 1 parents: 227 
+#
+231 "CALL_INFIX_OR_ELSE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_or_else.e"
+class-name: CALL_INFIX_OR_ELSE
+parent-count: 1 parents: 224 
+c-type: T231 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_OR_ELSE (231)
+#
+123 "EIFFEL_PARSER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/eiffel_parser.e"
+class-name: EIFFEL_PARSER
+parent-count: 1 parents: 54 
+c-type: T123 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	EIFFEL_PARSER (123)
+#
+50 "ARRAYED_COLLECTION" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+#
+325 "CALL_INFIX_POWER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_power.e"
+class-name: CALL_INFIX_POWER
+parent-count: 1 parents: 224 
+c-type: T325 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_POWER (325)
+#
+256 "CALL_N" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_n.e"
+class-name: CALL_N
+parent-count: 1 parents: 227 
+c-type: T256 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_N (256)
+#
+190 "FIXED_ARRAY[FEATURE_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T190 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[FEATURE_NAME] (190)
+#
+560 "DICTIONARY_NODE[ANY,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T560 reference: yes
+ref-status: dead 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[STRING,STRING] (35)
+#
+363 "NATIVE_ARRAY[INSTRUCTION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T363 reference: no
+#
+181 "NATIVE_ARRAY[CLUSTER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T181 reference: no
+#
+99 "MEMORY" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/memory.e"
+class-name: MEMORY
+parent-count: 0
+#
+67 "DICTIONARY_NODE[ORDERED_DICTIONARY[STRING,STRING],STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T67 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[ORDERED_DICTIONARY[STRING,STRING],STRING] (67)
+#
+515 "NATIVE_ARRAY[SET_NODE[STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T515 reference: no
+#
+26 "STRING_ALIASER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/string_aliaser.e"
+class-name: STRING_ALIASER
+parent-count: 2 parents: 15 14 
+c-type: T26 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	STRING_ALIASER (26)
+#
+328 "CALL_INFIX_NEQ" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_neq.e"
+class-name: CALL_INFIX_NEQ
+parent-count: 1 parents: 327 
+c-type: T328 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_NEQ (328)
+#
+10 "INTEGER_16" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/integer_16.e"
+class-name: INTEGER_16
+parent-count: 1 parents: 22 
+c-type: T10 reference: no
+#
+96 "NATIVE_ARRAY[INTEGER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T96 reference: no
+#
+2 "INTEGER_32" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/integer_32.e"
+class-name: INTEGER_32
+parent-count: 1 parents: 2 
+#
+491 "ARRAYED_COLLECTION[BOOLEAN]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T491 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+11 "INTEGER_64" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/integer_64.e"
+class-name: INTEGER_64
+parent-count: 1 parents: 22 
+c-type: T11 reference: no
+#
+445 "NATIVE_ARRAY[TUPLE[POSITION,E_TYPE]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T445 reference: no
+#
+402 "NATIVE_SMART_EIFFEL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/native_smart_eiffel.e"
+class-name: NATIVE_SMART_EIFFEL
+parent-count: 1 parents: 136 
+c-type: T402 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	NATIVE_SMART_EIFFEL (402)
+#
+245 "REAL_CONSTANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/real_constant.e"
+class-name: REAL_CONSTANT
+parent-count: 1 parents: 246 
+c-type: T245 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	REAL_CONSTANT (245)
+#
+250 "CALL_PREFIX_PLUS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_prefix_plus.e"
+class-name: CALL_PREFIX_PLUS
+parent-count: 1 parents: 242 
+c-type: T250 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_PREFIX_PLUS (250)
+#
+350 "CST_ATT_BIT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/cst_att_bit.e"
+class-name: CST_ATT_BIT
+parent-count: 1 parents: 339 
+c-type: T350 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CST_ATT_BIT (350)
+#
+404 "NATIVE_JAVA" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/native_java.e"
+class-name: NATIVE_JAVA
+parent-count: 2 parents: 136 16 
+c-type: T404 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	NATIVE_JAVA (404)
+#
+195 "FIXED_ARRAY[RENAME_PAIR]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T195 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[RENAME_PAIR] (195)
+#
+449 "AGENT_ARGS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/agent_args.e"
+class-name: AGENT_ARGS
+parent-count: 3 parents: 15 14 25 
+c-type: T449 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	AGENT_ARGS (449)
+#
+407 "E_FUNCTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/e_function.e"
+class-name: E_FUNCTION
+parent-count: 1 parents: 405 
+c-type: T407 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_FUNCTION (407)
+#
+127 "DICTIONARY_NODE[GRAPH_NODE,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T127 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[GRAPH_NODE,STRING] (127)
+#
+109 "COLLECTION[RUN_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/collection.e"
+class-name: COLLECTION
+parent-count: 1 parents: 29 
+c-type: T109 reference: yes
+ref-status: dead 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[RUN_CLASS] (103)
+#
+287 "TYPE_GENERIC" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_generic.e"
+class-name: TYPE_GENERIC
+parent-count: 1 parents: 101 
+c-type: T287 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_GENERIC (287)
+#
+200 "ARRAYED_COLLECTION[BASE_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T200 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+21 "STRING_COMMAND_LINE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/string_command_line.e"
+class-name: STRING_COMMAND_LINE
+parent-count: 1 parents: 13 
+c-type: T21 reference: no
+#
+391 "LOOP_INVARIANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/loop_invariant.e"
+class-name: LOOP_INVARIANT
+parent-count: 1 parents: 214 
+c-type: T391 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	LOOP_INVARIANT (391)
+#
+65 "ORDERED_DICTIONARY[ORDERED_DICTIONARY[STRING,STRING],STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/ordered_dictionary.e"
+class-name: ORDERED_DICTIONARY
+parent-count: 2 parents: 27 14 
+c-type: T65 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ORDERED_DICTIONARY[ORDERED_DICTIONARY[STRING,STRING],STRING] (65)
+#
+322 "NATIVE_ARRAY[LOCAL_NAME1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T322 reference: no
+#
+187 "FIXED_ARRAY[CREATION_CLAUSE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T187 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[CREATION_CLAUSE] (187)
+#
+394 "ASSIGNMENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/assignment.e"
+class-name: ASSIGNMENT
+parent-count: 1 parents: 299 
+c-type: T394 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ASSIGNMENT (394)
+#
+79 "NATIVE_ARRAY[POSITION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T79 reference: no
+#
+512 "NATIVE_ARRAY[TUPLE[STRING,RUN_FEATURE]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T512 reference: no
+#
+467 "FIXED_ARRAY[EFFECTIVE_ARG_LIST]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T467 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[EFFECTIVE_ARG_LIST] (467)
+#
+399 "E_REQUIRE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/e_require.e"
+class-name: E_REQUIRE
+parent-count: 1 parents: 214 
+c-type: T399 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	E_REQUIRE (399)
+#
+475 "NATIVE_ARRAY[DICTIONARY_NODE[E_TYPE,INTEGER]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T475 reference: no
+#
+74 "ARRAY[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T74 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[STRING] (74)
+#
+212 "FIXED_ARRAY[ASSERTION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T212 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[ASSERTION] (212)
+#
+479 "NATIVE_ARRAY[ONCE_FUNCTION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T479 reference: no
+#
+451 "SET_NODE[AGENT_ARGS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set_node.e"
+class-name: SET_NODE
+parent-count: 0
+c-type: T451 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET_NODE[AGENT_ARGS] (451)
+#
+113 "SET_NODE[RUN_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set_node.e"
+class-name: SET_NODE
+parent-count: 0
+c-type: T113 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET_NODE[RUN_CLASS] (113)
+#
+532 "DICTIONARY_NODE[E_TYPE,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T532 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[E_TYPE,STRING] (532)
+#
+527 "ARRAYED_COLLECTION[RUN_FEATURE_9]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T527 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+44 "INPUT_STREAM" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/input_stream.e"
+class-name: INPUT_STREAM
+parent-count: 1 parents: 39 
+#
+168 "NATIVE_ARRAY[RUN_FEATURE_2]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T168 reference: no
+#
+489 "NATIVE_ARRAY[RUN_FEATURE_3]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T489 reference: no
+#
+236 "CALL_INFIX_DIV" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_div.e"
+class-name: CALL_INFIX_DIV
+parent-count: 1 parents: 224 
+c-type: T236 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_DIV (236)
+#
+471 "NATIVE_ARRAY[DICTIONARY_NODE[FEATURE_NAME,BASE_CLASS]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T471 reference: no
+#
+488 "ARRAYED_COLLECTION[RUN_FEATURE_3]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T488 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+167 "ARRAYED_COLLECTION[RUN_FEATURE_2]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T167 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+528 "NATIVE_ARRAY[RUN_FEATURE_9]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T528 reference: no
+#
+249 "INTEGER_CONSTANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/integer_constant.e"
+class-name: INTEGER_CONSTANT
+parent-count: 1 parents: 246 
+c-type: T249 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	INTEGER_CONSTANT (249)
+#
+262 "OPEN_OPERAND" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/open_operand.e"
+class-name: OPEN_OPERAND
+parent-count: 1 parents: 89 
+c-type: T262 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	OPEN_OPERAND (262)
+#
+546 "IMPLICIT_CAST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/implicit_cast.e"
+class-name: IMPLICIT_CAST
+parent-count: 1 parents: 89 
+c-type: T546 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	IMPLICIT_CAST (546)
+#
+225 "CALL_INFIX" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix.e"
+class-name: CALL_INFIX
+parent-count: 1 parents: 226 
+c-type: T225 reference: yes
+ref-status: dead 
+run-time-set-count: 6
+run-time-set:
+	CALL_INFIX_EQ (326)
+	CALL_INFIX_NEQ (328)
+	CALL_INFIX_LE (329)
+	CALL_INFIX_GE (330)
+	CALL_INFIX_LT (331)
+	CALL_INFIX_GT (332)
+#
+192 "ARRAYED_COLLECTION[FEATURE_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T192 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+462 "ARRAYED_COLLECTION[RUN_FEATURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T462 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+510 "FAKE_ARGUMENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/fake_argument.e"
+class-name: FAKE_ARGUMENT
+parent-count: 1 parents: 89 
+c-type: T510 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	FAKE_ARGUMENT (510)
+#
+38 "OUTPUT_STREAM" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/output_stream.e"
+class-name: OUTPUT_STREAM
+parent-count: 0
+#
+566 "MANIFEST_STRING_INSPECTOR" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/manifest_string_inspector.e"
+class-name: MANIFEST_STRING_INSPECTOR
+parent-count: 1 parents: 15 
+c-type: T566 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	MANIFEST_STRING_INSPECTOR (566)
+#
+5 "DOUBLE" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/double.e"
+class-name: DOUBLE
+parent-count: 2 parents: 24 23 
+c-type: T5 reference: no
+#
+232 "CALL_INFIX_AND" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_and.e"
+class-name: CALL_INFIX_AND
+parent-count: 1 parents: 224 
+c-type: T232 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_AND (232)
+#
+2 "INTEGER" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/integer.e"
+class-name: INTEGER
+parent-count: 1 parents: 22 
+c-type: T2 reference: no
+#
+71 "DICTIONARY[ANY,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T71 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	DICTIONARY[STRING,STRING] (30)
+	ORDERED_DICTIONARY[STRING,STRING] (66)
+#
+53 "INI_PARSER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/ini_parser.e"
+class-name: INI_PARSER
+parent-count: 1 parents: 54 
+c-type: T53 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	INI_PARSER (53)
+#
+90 "UNICODE_STRING" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/unicode/unicode_string.e"
+class-name: UNICODE_STRING
+parent-count: 2 parents: 25 23 
+c-type: T90 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	UNICODE_STRING (90)
+#
+392 "E_LOOP" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/e_loop.e"
+class-name: E_LOOP
+parent-count: 1 parents: 299 
+c-type: T392 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_LOOP (392)
+#
+306 "E_FALSE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/e_false.e"
+class-name: E_FALSE
+parent-count: 1 parents: 304 
+c-type: T306 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_FALSE (306)
+#
+466 "NATIVE_ARRAY[CALL_PROC_CALL]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T466 reference: no
+#
+362 "ARRAYED_COLLECTION[INSTRUCTION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T362 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+369 "NATIVE_ARRAY[DICTIONARY_NODE[INTEGER,CLASS_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T369 reference: no
+#
+166 "ARRAY[RUN_FEATURE_2]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T166 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[RUN_FEATURE_2] (166)
+#
+276 "TYPE_DOUBLE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_double.e"
+class-name: TYPE_DOUBLE
+parent-count: 1 parents: 248 
+c-type: T276 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_DOUBLE (276)
+#
+158 "ARGUMENT_NAME" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/argument_name.e"
+class-name: ARGUMENT_NAME
+parent-count: 1 parents: 156 
+c-type: T158 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	ARGUMENT_NAME1 (157)
+	ARGUMENT_NAME2 (263)
+#
+179 "FIXED_ARRAY[CLUSTER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T179 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[CLUSTER] (179)
+#
+420 "WRITABLE_ATTRIBUTE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/writable_attribute.e"
+class-name: WRITABLE_ATTRIBUTE
+parent-count: 1 parents: 340 
+c-type: T420 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	WRITABLE_ATTRIBUTE (420)
+#
+386 "ARRAYED_COLLECTION[WHEN_ITEM]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T386 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+55 "reference BOOLEAN" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/boolean.e"
+class-name: BOOLEAN
+parent-count: 1 parents: 18 
+c-type: T55 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	reference BOOLEAN (55)
+#
+291 "TYPE_BIT_1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_bit_1.e"
+class-name: TYPE_BIT_1
+parent-count: 1 parents: 292 
+c-type: T291 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_BIT_1 (291)
+#
+293 "TYPE_BIT_2" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_bit_2.e"
+class-name: TYPE_BIT_2
+parent-count: 1 parents: 292 
+c-type: T293 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_BIT_2 (293)
+#
+94 "FIXED_ARRAY[INTEGER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T94 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[INTEGER] (94)
+#
+19 "PLATFORM" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/platform.e"
+class-name: PLATFORM
+parent-count: 1 parents: 20 
+#
+473 "DICTIONARY[E_TYPE,INTEGER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T473 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[E_TYPE,INTEGER] (473)
+#
+128 "NATIVE_ARRAY[DICTIONARY_NODE[GRAPH_NODE,STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T128 reference: no
+#
+97 "DIRECTORY" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/directory.e"
+class-name: DIRECTORY
+parent-count: 0
+c-type: T97 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DIRECTORY (97)
+#
+29 "SAFE_EQUAL" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/safe_equal.e"
+class-name: SAFE_EQUAL
+parent-count: 0
+#
+323 "IMPLICIT_CURRENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/implicit_current.e"
+class-name: IMPLICIT_CURRENT
+parent-count: 1 parents: 260 
+c-type: T323 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	IMPLICIT_CURRENT (323)
+#
+521 "DICTIONARY_NODE[MANIFEST_STRING,MANIFEST_STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T521 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[MANIFEST_STRING,MANIFEST_STRING] (521)
+#
+193 "NATIVE_ARRAY[FEATURE_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T193 reference: no
+#
+400 "DEFERRED_FUNCTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/deferred_function.e"
+class-name: DEFERRED_FUNCTION
+parent-count: 1 parents: 397 
+c-type: T400 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	DEFERRED_FUNCTION (400)
+#
+72 "PARSER_BUFFER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/parser_buffer.e"
+class-name: PARSER_BUFFER
+parent-count: 2 parents: 15 14 
+c-type: T72 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	PARSER_BUFFER (72)
+#
+30 "DICTIONARY[STRING,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T30 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 2
+run-time-set:
+	DICTIONARY[STRING,STRING] (30)
+	ORDERED_DICTIONARY[STRING,STRING] (66)
+#
+151 "FEATURE_NAME_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/feature_name_list.e"
+class-name: FEATURE_NAME_LIST
+parent-count: 2 parents: 15 14 
+c-type: T151 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FEATURE_NAME_LIST (151)
+#
+321 "ARRAYED_COLLECTION[LOCAL_NAME1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T321 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+433 "NATIVE_ARRAY[DICTIONARY_NODE[RUN_FEATURE,FEATURE_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T433 reference: no
+#
+522 "NATIVE_ARRAY[DICTIONARY_NODE[MANIFEST_STRING,MANIFEST_STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T522 reference: no
+#
+335 "ARRAYED_COLLECTION[CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T335 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+320 "ARRAY[LOCAL_NAME1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T320 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[LOCAL_NAME1] (320)
+#
+217 "NATIVE_ARRAY[ASSERTION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T217 reference: no
+#
+296 "TYPE_FORMAL_GENERIC" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_formal_generic.e"
+class-name: TYPE_FORMAL_GENERIC
+parent-count: 1 parents: 101 
+c-type: T296 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_FORMAL_GENERIC (296)
+#
+267 "TYPE_LIKE_ARGUMENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_like_argument.e"
+class-name: TYPE_LIKE_ARGUMENT
+parent-count: 1 parents: 265 
+c-type: T267 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_LIKE_ARGUMENT (267)
+#
+139 "NATIVE_ARRAY[NATIVE_C_PLUS_PLUS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T139 reference: no
+#
+370 "INSTRUCTION_WITH_COMMENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/instruction_with_comment.e"
+class-name: INSTRUCTION_WITH_COMMENT
+parent-count: 1 parents: 299 
+c-type: T370 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	INSTRUCTION_WITH_COMMENT (370)
+#
+298 "NATIVE_ARRAY[FORMAL_GENERIC_ARG]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T298 reference: no
+#
+338 "CST_ATT_UNIQUE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/cst_att_unique.e"
+class-name: CST_ATT_UNIQUE
+parent-count: 1 parents: 339 
+c-type: T338 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CST_ATT_UNIQUE (338)
+#
+41 "SMART_EIFFEL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/smart_eiffel.e"
+class-name: SMART_EIFFEL
+parent-count: 2 parents: 15 14 
+c-type: T41 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SMART_EIFFEL (41)
+#
+259 "WRITTEN_CURRENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/written_current.e"
+class-name: WRITTEN_CURRENT
+parent-count: 1 parents: 260 
+c-type: T259 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	WRITTEN_CURRENT (259)
+#
+468 "ARRAYED_COLLECTION[EFFECTIVE_ARG_LIST]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T468 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+164 "GC_HANDLER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/gc_handler.e"
+class-name: GC_HANDLER
+parent-count: 2 parents: 15 14 
+c-type: T164 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	GC_HANDLER (164)
+#
+274 "TYPE_BOOLEAN" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_boolean.e"
+class-name: TYPE_BOOLEAN
+parent-count: 1 parents: 248 
+c-type: T274 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_BOOLEAN (274)
+#
+311 "PRECURSOR_INSTRUCTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/precursor_instruction.e"
+class-name: PRECURSOR_INSTRUCTION
+parent-count: 2 parents: 310 299 
+c-type: T311 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	PRECURSOR_INSTRUCTION (311)
+#
+482 "NATIVE_ARRAY[DICTIONARY_NODE[MANIFEST_STRING,STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T482 reference: no
+#
+57 "BASIC_DIRECTORY" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/basic_directory.e"
+class-name: BASIC_DIRECTORY
+parent-count: 0
+c-type: T57 reference: no
+#
+214 "ASSERTION_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/assertion_list.e"
+class-name: ASSERTION_LIST
+parent-count: 2 parents: 15 14 
+#
+574 "DICTIONARY[INTEGER,INTEGER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T574 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[INTEGER,INTEGER] (574)
+#
+578 "LINK[TUPLE[CHARACTER,INTEGER]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/link.e"
+class-name: LINK
+parent-count: 0
+c-type: T578 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	LINK[TUPLE[CHARACTER,INTEGER]] (578)
+#
+91 "FIXED_ARRAY[INTEGER_16]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T91 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[INTEGER_16] (91)
+#
+536 "FIXED_ARRAY[E_ENSURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T536 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[E_ENSURE] (536)
+#
+273 "TYPE_NATIVE_ARRAY" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_native_array.e"
+class-name: TYPE_NATIVE_ARRAY
+parent-count: 1 parents: 101 
+c-type: T273 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_NATIVE_ARRAY (273)
+#
+349 "NATIVE_ARRAY[MANIFEST_STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T349 reference: no
+#
+438 "DICTIONARY_NODE[TUPLE[E_TYPE,E_TYPE],STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T438 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[TUPLE[E_TYPE,E_TYPE],STRING] (438)
+#
+294 "FORMAL_GENERIC_ARG" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/formal_generic_arg.e"
+class-name: FORMAL_GENERIC_ARG
+parent-count: 2 parents: 15 14 
+c-type: T294 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FORMAL_GENERIC_ARG (294)
+#
+434 "FIXED_ARRAY[BIT_CONSTANT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T434 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[BIT_CONSTANT] (434)
+#
+511 "ARRAYED_COLLECTION[TUPLE[STRING,RUN_FEATURE]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T511 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+495 "ARRAYED_COLLECTION[E_REQUIRE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T495 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+205 "ARRAYED_COLLECTION[FEATURE_CLAUSE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T205 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+563 "ITERATOR_ON_COLLECTION[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/iterator/iterator_on_collection.e"
+class-name: ITERATOR_ON_COLLECTION
+parent-count: 1 parents: 62 
+c-type: T563 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ITERATOR_ON_COLLECTION[STRING] (563)
+#
+427 "INDEX_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/index_list.e"
+class-name: INDEX_LIST
+parent-count: 2 parents: 15 14 
+c-type: T427 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	INDEX_LIST (427)
+#
+403 "NATIVE_C" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/native_c.e"
+class-name: NATIVE_C
+parent-count: 1 parents: 136 
+c-type: T403 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	NATIVE_C (403)
+#
+9 "NATIVE_ARRAY[CHARACTER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T9 reference: no
+#
+525 "RUN_FEATURE_9" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_9.e"
+class-name: RUN_FEATURE_9
+parent-count: 1 parents: 141 
+c-type: T525 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_9 (525)
+#
+140 "RUN_FEATURE_8" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_8.e"
+class-name: RUN_FEATURE_8
+parent-count: 1 parents: 141 
+c-type: T140 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_8 (140)
+#
+148 "RUN_FEATURE_7" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_7.e"
+class-name: RUN_FEATURE_7
+parent-count: 1 parents: 141 
+c-type: T148 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_7 (148)
+#
+502 "RUN_FEATURE_6" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_6.e"
+class-name: RUN_FEATURE_6
+parent-count: 1 parents: 141 
+c-type: T502 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_6 (502)
+#
+28 "TUPLE" 
+class-path: "TUPLE"
+class-name: TUPLE
+parent-count: 0
+#
+564 "RUN_FEATURE_5" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_5.e"
+class-name: RUN_FEATURE_5
+parent-count: 1 parents: 141 
+c-type: T564 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_5 (564)
+#
+565 "RUN_FEATURE_4" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_4.e"
+class-name: RUN_FEATURE_4
+parent-count: 1 parents: 141 
+c-type: T565 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_4 (565)
+#
+435 "RUN_FEATURE_3" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_3.e"
+class-name: RUN_FEATURE_3
+parent-count: 1 parents: 141 
+c-type: T435 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_3 (435)
+#
+177 "DICTIONARY_NODE[E_FEATURE,FEATURE_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T177 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[E_FEATURE,FEATURE_NAME] (177)
+#
+165 "RUN_FEATURE_2" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_2.e"
+class-name: RUN_FEATURE_2
+parent-count: 1 parents: 141 
+c-type: T165 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_2 (165)
+#
+556 "RUN_FEATURE_1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_1.e"
+class-name: RUN_FEATURE_1
+parent-count: 1 parents: 141 
+c-type: T556 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_1 (556)
+#
+348 "ARRAYED_COLLECTION[MANIFEST_STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T348 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+278 "TYPE_POINTER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_pointer.e"
+class-name: TYPE_POINTER
+parent-count: 1 parents: 248 
+c-type: T278 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_POINTER (278)
+#
+337 "TMP_FEATURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/tmp_feature.e"
+class-name: TMP_FEATURE
+parent-count: 2 parents: 15 14 
+c-type: T337 reference: no
+#
+282 "TYPE_TUPLE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_tuple.e"
+class-name: TYPE_TUPLE
+parent-count: 1 parents: 101 
+c-type: T282 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_TUPLE (282)
+#
+63 "ITERATOR[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/iterator/iterator.e"
+class-name: ITERATOR
+parent-count: 0
+c-type: T63 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	ITERATOR_ON_DICTIONARY_KEYS[STRING] (70)
+	ITERATOR_ON_COLLECTION[STRING] (563)
+#
+238 "CALL_INFIX_INT_DIV" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_int_div.e"
+class-name: CALL_INFIX_INT_DIV
+parent-count: 1 parents: 224 
+c-type: T238 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_INT_DIV (238)
+#
+122 "NATIVE_ARRAY[DICTIONARY_NODE[BASE_CLASS,CLASS_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T122 reference: no
+#
+257 "E_RESULT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/e_result.e"
+class-name: E_RESULT
+parent-count: 1 parents: 89 
+c-type: T257 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_RESULT (257)
+#
+285 "TYPE_FUNCTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_function.e"
+class-name: TYPE_FUNCTION
+parent-count: 1 parents: 284 
+c-type: T285 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_FUNCTION (285)
+#
+152 "EXTERNAL_FUNCTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/external_function.e"
+class-name: EXTERNAL_FUNCTION
+parent-count: 1 parents: 142 
+c-type: T152 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	EXTERNAL_FUNCTION (152)
+#
+584 "RUN_FEATURE_10" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_10.e"
+class-name: RUN_FEATURE_10
+parent-count: 1 parents: 141 
+c-type: T584 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_10 (584)
+#
+550 "RUN_FEATURE_11" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature/run_feature_11.e"
+class-name: RUN_FEATURE_11
+parent-count: 1 parents: 141 
+c-type: T550 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	RUN_FEATURE_11 (550)
+#
+478 "ARRAYED_COLLECTION[ONCE_FUNCTION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T478 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+318 "LOCAL_NAME" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/local_name.e"
+class-name: LOCAL_NAME
+parent-count: 1 parents: 156 
+#
+410 "ONCE_FUNCTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/once_function.e"
+class-name: ONCE_FUNCTION
+parent-count: 1 parents: 408 
+c-type: T410 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ONCE_FUNCTION (410)
+#
+382 "ARRAYED_COLLECTION[E_WHEN]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T382 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+580 "ARRAYED_COLLECTION[LINKED_LIST[TUPLE[CHARACTER,INTEGER]]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T580 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+73 "ARRAY" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+#
+251 "CALL_PREFIX_MINUS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_prefix_minus.e"
+class-name: CALL_PREFIX_MINUS
+parent-count: 1 parents: 242 
+c-type: T251 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_PREFIX_MINUS (251)
+#
+470 "DICTIONARY_NODE[FEATURE_NAME,BASE_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T470 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[FEATURE_NAME,BASE_CLASS] (470)
+#
+426 "INDEX_CLAUSE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/index_clause.e"
+class-name: INDEX_CLAUSE
+parent-count: 2 parents: 15 14 
+c-type: T426 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	INDEX_CLAUSE (426)
+#
+270 "TYPE_ARRAY" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_array.e"
+class-name: TYPE_ARRAY
+parent-count: 1 parents: 101 
+c-type: T270 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_ARRAY (270)
+#
+275 "TYPE_CHARACTER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_character.e"
+class-name: TYPE_CHARACTER
+parent-count: 1 parents: 248 
+c-type: T275 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_CHARACTER (275)
+#
+506 "DICTIONARY_NODE[CECIL_FILE,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T506 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[CECIL_FILE,STRING] (506)
+#
+24 "NUMERIC" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/numeric.e"
+class-name: NUMERIC
+parent-count: 1 parents: 25 
+c-type: T24 reference: yes
+ref-status: dead 
+run-time-set-count: 1
+run-time-set:
+	reference DOUBLE (133)
+#
+197 "NATIVE_ARRAY[RENAME_PAIR]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T197 reference: no
+#
+464 "FIXED_ARRAY[CALL_PROC_CALL]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T464 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[CALL_PROC_CALL] (464)
+#
+397 "DEFERRED_ROUTINE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/deferred_routine.e"
+class-name: DEFERRED_ROUTINE
+parent-count: 1 parents: 143 
+c-type: T397 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	DEFERRED_PROCEDURE (398)
+	DEFERRED_FUNCTION (400)
+#
+182 "SET[CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set.e"
+class-name: SET
+parent-count: 1 parents: 18 
+c-type: T182 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET[CLASS_NAME] (182)
+#
+78 "ARRAYED_COLLECTION[POSITION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T78 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+280 "TYPE_NONE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_none.e"
+class-name: TYPE_NONE
+parent-count: 1 parents: 101 
+c-type: T280 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_NONE (280)
+#
+355 "COMPOUND" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/compound.e"
+class-name: COMPOUND
+parent-count: 2 parents: 15 14 
+c-type: T355 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	COMPOUND (355)
+#
+7 "STRING" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/string.e"
+class-name: STRING
+parent-count: 2 parents: 25 23 
+c-type: T7 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	STRING (7)
+#
+315 "E_AGENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/e_agent.e"
+class-name: E_AGENT
+parent-count: 2 parents: 89 25 
+c-type: T315 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_AGENT (315)
+#
+401 "MINI_BUFFER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/mini_buffer.e"
+class-name: MINI_BUFFER
+parent-count: 2 parents: 15 14 
+c-type: T401 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	MINI_BUFFER (401)
+#
+301 "PROC_CALL_0" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/proc_call_0.e"
+class-name: PROC_CALL_0
+parent-count: 1 parents: 300 
+c-type: T301 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	PROC_CALL_0 (301)
+#
+538 "NATIVE_ARRAY[E_ENSURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T538 reference: no
+#
+302 "PROC_CALL_1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/proc_call_1.e"
+class-name: PROC_CALL_1
+parent-count: 1 parents: 300 
+c-type: T302 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	PROC_CALL_1 (302)
+#
+32 "DICTIONARY_NODE" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+#
+303 "PROC_CALL_N" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/proc_call_n.e"
+class-name: PROC_CALL_N
+parent-count: 1 parents: 300 
+c-type: T303 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	PROC_CALL_N (303)
+#
+286 "TYPE_CLASS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_class.e"
+class-name: TYPE_CLASS
+parent-count: 1 parents: 101 
+c-type: T286 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_CLASS (286)
+#
+341 "FIXED_ARRAY[INTEGER_CONSTANT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T341 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[INTEGER_CONSTANT] (341)
+#
+80 "CLASS_NAME" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/class_name.e"
+class-name: CLASS_NAME
+parent-count: 2 parents: 81 25 
+c-type: T80 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CLASS_NAME (80)
+#
+70 "ITERATOR_ON_DICTIONARY_KEYS[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/iterator/iterator_on_dictionary_keys.e"
+class-name: ITERATOR_ON_DICTIONARY_KEYS
+parent-count: 1 parents: 62 
+c-type: T70 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ITERATOR_ON_DICTIONARY_KEYS[STRING] (70)
+#
+452 "NATIVE_ARRAY[SET_NODE[AGENT_ARGS]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T452 reference: no
+#
+281 "TYPE_STRING" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_string.e"
+class-name: TYPE_STRING
+parent-count: 1 parents: 101 
+c-type: T281 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_STRING (281)
+#
+414 "NATIVE_ARRAY[DECLARATION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T414 reference: no
+#
+459 "UNICODE_STRING_HANDLER" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/unicode/unicode_string_handler.e"
+class-name: UNICODE_STRING_HANDLER
+parent-count: 0
+#
+210 "NATIVE_ARRAY[E_FEATURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T210 reference: no
+#
+227 "CALL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call.e"
+class-name: CALL
+parent-count: 2 parents: 228 89 
+c-type: T227 reference: yes
+ref-status: dead 
+run-time-set-count: 27
+run-time-set:
+	CALL_INFIX_IMPLIES (223)
+	CALL_INFIX_XOR (229)
+	CALL_INFIX_OR (230)
+	CALL_INFIX_OR_ELSE (231)
+	CALL_INFIX_AND (232)
+	CALL_INFIX_AND_THEN (233)
+	CALL_INFIX_MINUS (234)
+	CALL_INFIX_PLUS (235)
+	CALL_INFIX_DIV (236)
+	CALL_INFIX_INT_REM (237)
+	CALL_INFIX_INT_DIV (238)
+	CALL_INFIX_TIMES (239)
+	CALL_INFIX_FREEOP (240)
+	CALL_PREFIX_FREEOP (241)
+	CALL_PREFIX_NOT (244)
+	CALL_PREFIX_PLUS (250)
+	CALL_PREFIX_MINUS (251)
+	CALL_0_C (254)
+	CALL_1_C (255)
+	CALL_N (256)
+	CALL_INFIX_POWER (325)
+	CALL_INFIX_EQ (326)
+	CALL_INFIX_NEQ (328)
+	CALL_INFIX_LE (329)
+	CALL_INFIX_GE (330)
+	CALL_INFIX_LT (331)
+	CALL_INFIX_GT (332)
+#
+180 "ARRAYED_COLLECTION[CLUSTER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T180 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+457 "NATIVE_ARRAY[DICTIONARY_NODE[DICTIONARY[RUN_FEATURE,FEATURE_NAME],STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T457 reference: no
+#
+503 "CECIL_POOL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/cecil_pool.e"
+class-name: CECIL_POOL
+parent-count: 2 parents: 15 14 
+c-type: T503 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CECIL_POOL (503)
+#
+436 "TUPLE[E_TYPE,E_TYPE]" 
+class-path: "TUPLE"
+class-name: TUPLE
+parent-count: 0
+c-type: T436 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	TUPLE[E_TYPE,E_TYPE] (436)
+#
+95 "ARRAYED_COLLECTION[INTEGER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T95 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+184 "NATIVE_ARRAY[SET_NODE[CLASS_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T184 reference: no
+#
+146 "ARRAYED_COLLECTION[EXTERNAL_ROUTINE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T146 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+153 "FORMAL_ARG_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/formal_arg_list.e"
+class-name: FORMAL_ARG_LIST
+parent-count: 1 parents: 154 
+c-type: T153 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	FORMAL_ARG_LIST (153)
+#
+237 "CALL_INFIX_INT_REM" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_int_rem.e"
+class-name: CALL_INFIX_INT_REM
+parent-count: 1 parents: 224 
+c-type: T237 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_INT_REM (237)
+#
+178 "NATIVE_ARRAY[DICTIONARY_NODE[E_FEATURE,FEATURE_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T178 reference: no
+#
+134 "COLLECTION[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/collection.e"
+class-name: COLLECTION
+parent-count: 1 parents: 29 
+c-type: T134 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	FIXED_ARRAY[STRING] (52)
+	ARRAY[STRING] (74)
+#
+12 "COMPILE_TO_C" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/compile_to_c.e"
+class-name: COMPILE_TO_C
+parent-count: 1 parents: 13 
+c-type: T12 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	COMPILE_TO_C (12)
+#
+215 "TAG_NAME" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/tag_name.e"
+class-name: TAG_NAME
+parent-count: 2 parents: 15 14 
+c-type: T215 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	TAG_NAME (215)
+#
+253 "EFFECTIVE_ARG_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/effective_arg_list.e"
+class-name: EFFECTIVE_ARG_LIST
+parent-count: 2 parents: 15 14 
+c-type: T253 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	EFFECTIVE_ARG_LIST (253)
+#
+189 "NATIVE_ARRAY[CREATION_CLAUSE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T189 reference: no
+#
+367 "DICTIONARY[INTEGER,CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T367 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[INTEGER,CLASS_NAME] (367)
+#
+211 "ASSERTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/assertion.e"
+class-name: ASSERTION
+parent-count: 2 parents: 15 14 
+c-type: T211 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ASSERTION (211)
+#
+247 "TYPE_REAL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_real.e"
+class-name: TYPE_REAL
+parent-count: 1 parents: 248 
+c-type: T247 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_REAL (247)
+#
+456 "DICTIONARY_NODE[DICTIONARY[RUN_FEATURE,FEATURE_NAME],STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T456 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[DICTIONARY[RUN_FEATURE,FEATURE_NAME],STRING] (456)
+#
+524 "ASSERTION_COLLECTOR" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/assertion_collector.e"
+class-name: ASSERTION_COLLECTOR
+parent-count: 2 parents: 15 14 
+c-type: T524 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ASSERTION_COLLECTOR (524)
+#
+477 "FIXED_ARRAY[ONCE_FUNCTION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T477 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[ONCE_FUNCTION] (477)
+#
+162 "COUNTER" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/counter.e"
+class-name: COUNTER
+parent-count: 0
+c-type: T162 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	COUNTER (162)
+#
+554 "ARRAYED_COLLECTION[DECLARATION_1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T554 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+132 "C_COMPACTOR" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/c_compactor.e"
+class-name: C_COMPACTOR
+parent-count: 3 parents: 15 14 98 
+c-type: T132 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	C_COMPACTOR (132)
+#
+431 "DICTIONARY[RUN_FEATURE,FEATURE_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T431 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[RUN_FEATURE,FEATURE_NAME] (431)
+#
+371 "IFTHEN" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/ifthen.e"
+class-name: IFTHEN
+parent-count: 1 parents: 360 
+c-type: T371 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	IFTHEN (371)
+#
+116 "PARENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/parent.e"
+class-name: PARENT
+parent-count: 2 parents: 15 14 
+c-type: T116 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	PARENT (116)
+#
+213 "CLASS_INVARIANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/class_invariant.e"
+class-name: CLASS_INVARIANT
+parent-count: 1 parents: 214 
+c-type: T213 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CLASS_INVARIANT (213)
+#
+46 "DICTIONARY_NODE[INTEGER_16,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T46 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[INTEGER_16,STRING] (46)
+#
+447 "NATIVE_ARRAY[BIT_CONSTANT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T447 reference: no
+#
+570 "LINKED_LIST[TUPLE[CHARACTER,INTEGER]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/linked_list.e"
+class-name: LINKED_LIST
+parent-count: 1 parents: 569 
+c-type: T570 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	LINKED_LIST[TUPLE[CHARACTER,INTEGER]] (570)
+#
+172 "NATIVE_ARRAY[DICTIONARY_NODE[DICTIONARY[FEATURE_NAME,BASE_CLASS],FEATURE_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T172 reference: no
+#
+48 "SYSTEM_TOOLS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/system_tools.e"
+class-name: SYSTEM_TOOLS
+parent-count: 2 parents: 15 14 
+c-type: T48 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SYSTEM_TOOLS (48)
+#
+188 "ARRAYED_COLLECTION[CREATION_CLAUSE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T188 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+87 "TMP_NAME" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/tmp_name.e"
+class-name: TMP_NAME
+parent-count: 2 parents: 15 14 
+c-type: T87 reference: no
+#
+472 "MANIFEST_ARRAY_POOL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/manifest_array_pool.e"
+class-name: MANIFEST_ARRAY_POOL
+parent-count: 2 parents: 15 14 
+c-type: T472 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	MANIFEST_ARRAY_POOL (472)
+#
+439 "NATIVE_ARRAY[DICTIONARY_NODE[TUPLE[E_TYPE,E_TYPE],STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T439 reference: no
+#
+196 "ARRAYED_COLLECTION[RENAME_PAIR]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T196 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+104 "ARRAYED_COLLECTION[RUN_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T104 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+124 "ASSIGNMENT_HANDLER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/assignment_handler.e"
+class-name: ASSIGNMENT_HANDLER
+parent-count: 2 parents: 15 14 
+c-type: T124 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ASSIGNMENT_HANDLER (124)
+#
+444 "ARRAYED_COLLECTION[TUPLE[POSITION,E_TYPE]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T444 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+289 "TYPE_SEPARATE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_separate.e"
+class-name: TYPE_SEPARATE
+parent-count: 1 parents: 101 
+c-type: T289 reference: yes
+ref-status: dead 
+run-time-set-count: 1
+run-time-set:
+	TYPE_THREAD (290)
+#
+219 "MANIFEST_ARRAY" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/manifest_array.e"
+class-name: MANIFEST_ARRAY
+parent-count: 1 parents: 89 
+c-type: T219 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	MANIFEST_ARRAY (219)
+#
+312 "FAKE_TARGET" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/fake_target.e"
+class-name: FAKE_TARGET
+parent-count: 1 parents: 89 
+c-type: T312 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	FAKE_TARGET (312)
+#
+553 "ARRAY[DECLARATION_1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T553 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[DECLARATION_1] (553)
+#
+421 "EXPORT_ITEM" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/export_item.e"
+class-name: EXPORT_ITEM
+parent-count: 2 parents: 15 14 
+c-type: T421 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	EXPORT_ITEM (421)
+#
+440 "SET_NODE[GRAPH_NODE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set_node.e"
+class-name: SET_NODE
+parent-count: 0
+c-type: T440 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET_NODE[GRAPH_NODE] (440)
+#
+59 "NATIVE_ARRAY[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T59 reference: no
+#
+461 "FIXED_ARRAY[RUN_FEATURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T461 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[RUN_FEATURE] (461)
+#
+69 "ITERATOR_ON_DICTIONARY_KEYS" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/iterator/iterator_on_dictionary_keys.e"
+class-name: ITERATOR_ON_DICTIONARY_KEYS
+parent-count: 1 parents: 62 
+#
+581 "NATIVE_ARRAY[LINKED_LIST[TUPLE[CHARACTER,INTEGER]]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T581 reference: no
+#
+42 "TEXT_FILE_READ" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/text_file_read.e"
+class-name: TEXT_FILE_READ
+parent-count: 2 parents: 44 43 
+c-type: T42 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	TEXT_FILE_READ (42)
+#
+271 "ARRAYED_COLLECTION[E_TYPE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T271 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+203 "FEATURE_CLAUSE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/feature_clause.e"
+class-name: FEATURE_CLAUSE
+parent-count: 2 parents: 15 14 
+c-type: T203 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FEATURE_CLAUSE (203)
+#
+430 "NATIVE_ARRAY[INDEX_CLAUSE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T430 reference: no
+#
+345 "CST_ATT_CHARACTER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/cst_att_character.e"
+class-name: CST_ATT_CHARACTER
+parent-count: 1 parents: 339 
+c-type: T345 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CST_ATT_CHARACTER (345)
+#
+569 "LINKED_COLLECTION" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/linked_collection.e"
+class-name: LINKED_COLLECTION
+parent-count: 1 parents: 51 
+#
+191 "RENAME_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/rename_list.e"
+class-name: RENAME_LIST
+parent-count: 2 parents: 15 14 
+c-type: T191 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	RENAME_LIST (191)
+#
+288 "TYPE_EXPANDED" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_expanded.e"
+class-name: TYPE_EXPANDED
+parent-count: 1 parents: 101 
+c-type: T288 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_EXPANDED (288)
+#
+36 "ECHO" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/echo.e"
+class-name: ECHO
+parent-count: 2 parents: 15 14 
+c-type: T36 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ECHO (36)
+#
+498 "ARRAYED_COLLECTION[E_OLD]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T498 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+60 "SYSTEM" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/system.e"
+class-name: SYSTEM
+parent-count: 1 parents: 18 
+c-type: T60 reference: no
+#
+52 "FIXED_ARRAY[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T52 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[STRING] (52)
+#
+395 "ASSIGNMENT_ATTEMPT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/assignment_attempt.e"
+class-name: ASSIGNMENT_ATTEMPT
+parent-count: 1 parents: 299 
+c-type: T395 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ASSIGNMENT_ATTEMPT (395)
+#
+383 "NATIVE_ARRAY[E_WHEN]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T383 reference: no
+#
+121 "DICTIONARY_NODE[BASE_CLASS,CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T121 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[BASE_CLASS,CLASS_NAME] (121)
+#
+100 "RUN_CLASS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_class.e"
+class-name: RUN_CLASS
+parent-count: 4 parents: 25 15 14 83 
+c-type: T100 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	RUN_CLASS (100)
+#
+533 "NATIVE_ARRAY[DICTIONARY_NODE[E_TYPE,STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T533 reference: no
+#
+413 "ARRAYED_COLLECTION[DECLARATION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T413 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+541 "MEMO[INTEGER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/memo.e"
+class-name: MEMO
+parent-count: 0
+c-type: T541 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	MEMO[INTEGER] (541)
+#
+16 "FROZEN_STRING_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/frozen_string_list.e"
+class-name: FROZEN_STRING_LIST
+parent-count: 0
+#
+481 "DICTIONARY_NODE[MANIFEST_STRING,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T481 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[MANIFEST_STRING,STRING] (481)
+#
+17 "ALIASED_STRING_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/aliased_string_list.e"
+class-name: ALIASED_STRING_LIST
+parent-count: 0
+#
+77 "FIXED_ARRAY[POSITION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T77 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[POSITION] (77)
+#
+353 "CST_ATT_INTEGER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/cst_att_integer.e"
+class-name: CST_ATT_INTEGER
+parent-count: 1 parents: 339 
+c-type: T353 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CST_ATT_INTEGER (353)
+#
+235 "CALL_INFIX_PLUS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_plus.e"
+class-name: CALL_INFIX_PLUS
+parent-count: 1 parents: 224 
+c-type: T235 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_PLUS (235)
+#
+93 "NATIVE_ARRAY[INTEGER_16]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T93 reference: no
+#
+543 "ARRAYED_COLLECTION[TEXT_FILE_READ]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T543 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+222 "TUPLE_EXPRESSION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/tuple_expression.e"
+class-name: TUPLE_EXPRESSION
+parent-count: 1 parents: 89 
+c-type: T222 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TUPLE_EXPRESSION (222)
+#
+126 "DICTIONARY[GRAPH_NODE,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T126 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[GRAPH_NODE,STRING] (126)
+#
+422 "EXPORT_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/export_list.e"
+class-name: EXPORT_LIST
+parent-count: 2 parents: 15 14 
+c-type: T422 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	EXPORT_LIST (422)
+#
+136 "NATIVE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/native.e"
+class-name: NATIVE
+parent-count: 1 parents: 15 
+c-type: T136 reference: yes
+ref-status: dead 
+run-time-set-count: 4
+run-time-set:
+	NATIVE_C_PLUS_PLUS (135)
+	NATIVE_SMART_EIFFEL (402)
+	NATIVE_C (403)
+	NATIVE_JAVA (404)
+#
+490 "ARRAY[BOOLEAN]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T490 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[BOOLEAN] (490)
+#
+279 "TYPE_INTEGER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_integer.e"
+class-name: TYPE_INTEGER
+parent-count: 1 parents: 248 
+c-type: T279 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_INTEGER (279)
+#
+428 "ARRAY[INDEX_CLAUSE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T428 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[INDEX_CLAUSE] (428)
+#
+381 "FIXED_ARRAY[E_WHEN]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T381 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[E_WHEN] (381)
+#
+458 "MANIFEST_STRING_POOL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/manifest_string_pool.e"
+class-name: MANIFEST_STRING_POOL
+parent-count: 4 parents: 15 14 39 459 
+c-type: T458 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	MANIFEST_STRING_POOL (458)
+#
+54 "PARSER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/parser.e"
+class-name: PARSER
+parent-count: 2 parents: 15 14 
+#
+14 "VISITABLE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/visitable.e"
+class-name: VISITABLE
+parent-count: 0
+#
+173 "DICTIONARY[BOOLEAN,BASE_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T173 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[BOOLEAN,BASE_CLASS] (173)
+#
+423 "ARRAY[EXPORT_ITEM]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T423 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[EXPORT_ITEM] (423)
+#
+409 "ONCE_PROCEDURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/once_procedure.e"
+class-name: ONCE_PROCEDURE
+parent-count: 1 parents: 408 
+c-type: T409 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ONCE_PROCEDURE (409)
+#
+359 "IFTHENELSE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/ifthenelse.e"
+class-name: IFTHENELSE
+parent-count: 2 parents: 299 360 
+c-type: T359 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	IFTHENELSE (359)
+#
+474 "DICTIONARY_NODE[E_TYPE,INTEGER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T474 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[E_TYPE,INTEGER] (474)
+#
+305 "E_TRUE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/e_true.e"
+class-name: E_TRUE
+parent-count: 1 parents: 304 
+c-type: T305 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_TRUE (305)
+#
+314 "CREATE_TOOLS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/create_tools.e"
+class-name: CREATE_TOOLS
+parent-count: 2 parents: 15 14 
+#
+149 "EXTERNAL_PROCEDURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/external_procedure.e"
+class-name: EXTERNAL_PROCEDURE
+parent-count: 1 parents: 142 
+c-type: T149 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	EXTERNAL_PROCEDURE (149)
+#
+27 "DICTIONARY" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+#
+544 "NATIVE_ARRAY[TEXT_FILE_READ]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T544 reference: no
+#
+539 "FIXED_ARRAY[E_REQUIRE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T539 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[E_REQUIRE] (539)
+#
+393 "CREATE_INSTRUCTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/create_instruction.e"
+class-name: CREATE_INSTRUCTION
+parent-count: 2 parents: 314 299 
+c-type: T393 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CREATE_INSTRUCTION (393)
+#
+176 "DICTIONARY[E_FEATURE,FEATURE_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T176 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[E_FEATURE,FEATURE_NAME] (176)
+#
+206 "NATIVE_ARRAY[FEATURE_CLAUSE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T206 reference: no
+#
+194 "RENAME_PAIR" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/rename_pair.e"
+class-name: RENAME_PAIR
+parent-count: 2 parents: 15 14 
+c-type: T194 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	RENAME_PAIR (194)
+#
+264 "TYPE_LIKE_FEATURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_like_feature.e"
+class-name: TYPE_LIKE_FEATURE
+parent-count: 1 parents: 265 
+c-type: T264 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_LIKE_FEATURE (264)
+#
+170 "DICTIONARY[FEATURE_NAME,BASE_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T170 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[FEATURE_NAME,BASE_CLASS] (170)
+#
+379 "E_WHEN" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/e_when.e"
+class-name: E_WHEN
+parent-count: 1 parents: 15 
+c-type: T379 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	E_WHEN (379)
+#
+480 "DICTIONARY[MANIFEST_STRING,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T480 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[MANIFEST_STRING,STRING] (480)
+#
+13 "COMMAND_LINE_TOOLS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/command_line_tools.e"
+class-name: COMMAND_LINE_TOOLS
+parent-count: 2 parents: 15 14 
+c-type: T13 reference: yes
+ref-status: dead 
+run-time-set-count: 1
+run-time-set:
+	COMPILE_TO_C (12)
+#
+579 "FIXED_ARRAY[LINKED_LIST[TUPLE[CHARACTER,INTEGER]]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T579 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[LINKED_LIST[TUPLE[CHARACTER,INTEGER]]] (579)
+#
+43 "FILE" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/file.e"
+class-name: FILE
+parent-count: 0
+#
+307 "CHARACTER_CONSTANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/character_constant.e"
+class-name: CHARACTER_CONSTANT
+parent-count: 1 parents: 246 
+c-type: T307 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CHARACTER_CONSTANT (307)
+#
+545 "MEMO[E_OLD]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/memo.e"
+class-name: MEMO
+parent-count: 0
+c-type: T545 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	MEMO[E_OLD] (545)
+#
+33 "NATIVE_ARRAY" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+#
+85 "CLUSTER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/cluster.e"
+class-name: CLUSTER
+parent-count: 3 parents: 15 14 83 
+c-type: T85 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CLUSTER (85)
+#
+75 "ERROR_HANDLER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/error_handler.e"
+class-name: ERROR_HANDLER
+parent-count: 2 parents: 15 14 
+c-type: T75 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ERROR_HANDLER (75)
+#
+239 "CALL_INFIX_TIMES" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_times.e"
+class-name: CALL_INFIX_TIMES
+parent-count: 1 parents: 224 
+c-type: T239 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_TIMES (239)
+#
+258 "E_VOID" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/e_void.e"
+class-name: E_VOID
+parent-count: 1 parents: 89 
+c-type: T258 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_VOID (258)
+#
+64 "ORDERED_DICTIONARY" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/ordered_dictionary.e"
+class-name: ORDERED_DICTIONARY
+parent-count: 2 parents: 27 14 
+#
+376 "EXPRESSION_WITH_COMMENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/expression_with_comment.e"
+class-name: EXPRESSION_WITH_COMMENT
+parent-count: 1 parents: 89 
+c-type: T376 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	EXPRESSION_WITH_COMMENT (376)
+#
+537 "ARRAYED_COLLECTION[E_ENSURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T537 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+101 "E_TYPE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type.e"
+class-name: E_TYPE
+parent-count: 2 parents: 15 14 
+c-type: T101 reference: yes
+ref-status: dead 
+run-time-set-count: 25
+run-time-set:
+	TYPE_REAL (247)
+	TYPE_LIKE_FEATURE (264)
+	TYPE_LIKE_CURRENT (266)
+	TYPE_LIKE_ARGUMENT (267)
+	TYPE_ANY (269)
+	TYPE_ARRAY (270)
+	TYPE_NATIVE_ARRAY (273)
+	TYPE_BOOLEAN (274)
+	TYPE_CHARACTER (275)
+	TYPE_DOUBLE (276)
+	TYPE_REFERENCE (277)
+	TYPE_POINTER (278)
+	TYPE_INTEGER (279)
+	TYPE_NONE (280)
+	TYPE_STRING (281)
+	TYPE_TUPLE (282)
+	TYPE_PROCEDURE (283)
+	TYPE_FUNCTION (285)
+	TYPE_CLASS (286)
+	TYPE_GENERIC (287)
+	TYPE_EXPANDED (288)
+	TYPE_THREAD (290)
+	TYPE_BIT_1 (291)
+	TYPE_BIT_2 (293)
+	TYPE_FORMAL_GENERIC (296)
+#
+551 "AGENT_EXPRESSION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/agent_expression.e"
+class-name: AGENT_EXPRESSION
+parent-count: 2 parents: 228 89 
+c-type: T551 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	AGENT_EXPRESSION (551)
+#
+340 "ATTRIBUTE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/attribute.e"
+class-name: ATTRIBUTE
+parent-count: 1 parents: 144 
+#
+310 "PRECURSOR_CALL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/precursor_call.e"
+class-name: PRECURSOR_CALL
+parent-count: 2 parents: 15 14 
+c-type: T310 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	PRECURSOR_EXPRESSION (309)
+	PRECURSOR_INSTRUCTION (311)
+#
+82 "BASE_CLASS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/base_class.e"
+class-name: BASE_CLASS
+parent-count: 4 parents: 25 15 83 14 
+c-type: T82 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	BASE_CLASS (82)
+#
+218 "FIXED_ARRAY[EXPRESSION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T218 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[EXPRESSION] (218)
+#
+300 "PROC_CALL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/proc_call.e"
+class-name: PROC_CALL
+parent-count: 2 parents: 228 299 
+c-type: T300 reference: yes
+ref-status: dead 
+run-time-set-count: 3
+run-time-set:
+	PROC_CALL_0 (301)
+	PROC_CALL_1 (302)
+	PROC_CALL_N (303)
+#
+319 "LOCAL_NAME1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/local_name1.e"
+class-name: LOCAL_NAME1
+parent-count: 2 parents: 155 318 
+c-type: T319 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	LOCAL_NAME1 (319)
+#
+317 "LOCAL_NAME2" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/local_name2.e"
+class-name: LOCAL_NAME2
+parent-count: 1 parents: 318 
+c-type: T317 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	LOCAL_NAME2 (317)
+#
+261 "ADDRESS_OF" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/address_of.e"
+class-name: ADDRESS_OF
+parent-count: 1 parents: 89 
+c-type: T261 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ADDRESS_OF (261)
+#
+509 "FIXED_ARRAY[TUPLE[STRING,RUN_FEATURE]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T509 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[TUPLE[STRING,RUN_FEATURE]] (509)
+#
+108 "NATIVE_ARRAY[DICTIONARY_NODE[RUN_CLASS,STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T108 reference: no
+#
+89 "EXPRESSION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression.e"
+class-name: EXPRESSION
+parent-count: 2 parents: 15 14 
+c-type: T89 reference: yes
+ref-status: dead 
+run-time-set-count: 58
+run-time-set:
+	MANIFEST_STRING (88)
+	FEATURE_NAME (150)
+	ARGUMENT_NAME1 (157)
+	MANIFEST_ARRAY (219)
+	TUPLE_EXPRESSION (222)
+	CALL_INFIX_IMPLIES (223)
+	CALL_INFIX_XOR (229)
+	CALL_INFIX_OR (230)
+	CALL_INFIX_OR_ELSE (231)
+	CALL_INFIX_AND (232)
+	CALL_INFIX_AND_THEN (233)
+	CALL_INFIX_MINUS (234)
+	CALL_INFIX_PLUS (235)
+	CALL_INFIX_DIV (236)
+	CALL_INFIX_INT_REM (237)
+	CALL_INFIX_INT_DIV (238)
+	CALL_INFIX_TIMES (239)
+	CALL_INFIX_FREEOP (240)
+	CALL_PREFIX_FREEOP (241)
+	CALL_PREFIX_NOT (244)
+	REAL_CONSTANT (245)
+	INTEGER_CONSTANT (249)
+	CALL_PREFIX_PLUS (250)
+	CALL_PREFIX_MINUS (251)
+	E_STRIP (252)
+	CALL_0_C (254)
+	CALL_1_C (255)
+	CALL_N (256)
+	E_RESULT (257)
+	E_VOID (258)
+	WRITTEN_CURRENT (259)
+	ADDRESS_OF (261)
+	OPEN_OPERAND (262)
+	ARGUMENT_NAME2 (263)
+	E_TRUE (305)
+	E_FALSE (306)
+	CHARACTER_CONSTANT (307)
+	BIT_CONSTANT (308)
+	PRECURSOR_EXPRESSION (309)
+	FAKE_TARGET (312)
+	CREATE_EXPRESSION (313)
+	E_AGENT (315)
+	LOCAL_NAME2 (317)
+	LOCAL_NAME1 (319)
+	IMPLICIT_CURRENT (323)
+	E_OLD (324)
+	CALL_INFIX_POWER (325)
+	CALL_INFIX_EQ (326)
+	CALL_INFIX_NEQ (328)
+	CALL_INFIX_LE (329)
+	CALL_INFIX_GE (330)
+	CALL_INFIX_LT (331)
+	CALL_INFIX_GT (332)
+	EXPRESSION_WITH_COMMENT (376)
+	FAKE_ARGUMENT (510)
+	IMPLICIT_CAST (546)
+	AGENT_EXPRESSION (551)
+	FAKE_TUPLE (552)
+#
+137 "FIXED_ARRAY[NATIVE_C_PLUS_PLUS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T137 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[NATIVE_C_PLUS_PLUS] (137)
+#
+265 "TYPE_ANCHORED" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_anchored.e"
+class-name: TYPE_ANCHORED
+parent-count: 1 parents: 101 
+#
+35 "DICTIONARY_NODE[STRING,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T35 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[STRING,STRING] (35)
+#
+112 "SET_NODE" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set_node.e"
+class-name: SET_NODE
+parent-count: 0
+#
+453 "SWITCH_COLLECTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/switch_collection.e"
+class-name: SWITCH_COLLECTION
+parent-count: 2 parents: 15 14 
+c-type: T453 reference: no
+#
+484 "FIXED_ARRAY[ADDRESS_OF]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T484 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[ADDRESS_OF] (484)
+#
+374 "ARRAYED_COLLECTION[IFTHEN]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T374 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+252 "E_STRIP" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/e_strip.e"
+class-name: E_STRIP
+parent-count: 1 parents: 89 
+c-type: T252 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_STRIP (252)
+#
+118 "ARRAYED_COLLECTION[PARENT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T118 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+519 "E_AGENT_CALL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/e_agent_call.e"
+class-name: E_AGENT_CALL
+parent-count: 1 parents: 228 
+c-type: T519 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_AGENT_CALL (519)
+#
+501 "EXCEPTIONS_HANDLER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/exceptions_handler.e"
+class-name: EXCEPTIONS_HANDLER
+parent-count: 2 parents: 15 14 
+c-type: T501 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	EXCEPTIONS_HANDLER (501)
+#
+562 "ITERATOR_ON_COLLECTION" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/iterator/iterator_on_collection.e"
+class-name: ITERATOR_ON_COLLECTION
+parent-count: 1 parents: 62 
+#
+130 "C_PRETTY_PRINTER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/c_pretty_printer.e"
+class-name: C_PRETTY_PRINTER
+parent-count: 1 parents: 131 
+c-type: T130 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	C_PRETTY_PRINTER (130)
+#
+125 "GRAPH_NODE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/graph_node.e"
+class-name: GRAPH_NODE
+parent-count: 3 parents: 15 14 25 
+c-type: T125 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	GRAPH_NODE (125)
+#
+365 "DICTIONARY_NODE[FIXED_ARRAY[STRING],CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T365 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[FIXED_ARRAY[STRING],CLASS_NAME] (365)
+#
+39 "STRING_HANDLER" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/string_handler.e"
+class-name: STRING_HANDLER
+parent-count: 0
+#
+324 "E_OLD" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/e_old.e"
+class-name: E_OLD
+parent-count: 1 parents: 89 
+c-type: T324 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_OLD (324)
+#
+86 "COMMENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/comment.e"
+class-name: COMMENT
+parent-count: 2 parents: 15 14 
+c-type: T86 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	COMMENT (86)
+#
+272 "NATIVE_ARRAY[E_TYPE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T272 reference: no
+#
+84 "ACE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/ace.e"
+class-name: ACE
+parent-count: 2 parents: 54 83 
+c-type: T84 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ACE (84)
+#
+105 "NATIVE_ARRAY[RUN_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T105 reference: no
+#
+548 "ARRAYED_COLLECTION[OPEN_OPERAND]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T548 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+351 "CST_ATT_REAL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/cst_att_real.e"
+class-name: CST_ATT_REAL
+parent-count: 1 parents: 339 
+c-type: T351 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CST_ATT_REAL (351)
+#
+500 "ARRAY[RUN_FEATURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T500 reference: yes
+ref-status: dead 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[RUN_FEATURE_2] (166)
+#
+583 "COLLECTION_SORTER[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/sorting/collection_sorter.e"
+class-name: COLLECTION_SORTER
+parent-count: 0
+c-type: T583 reference: no
+#
+360 "IF_GLOBALS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/if_globals.e"
+class-name: IF_GLOBALS
+parent-count: 1 parents: 15 
+#
+49 "FIXED_ARRAY" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+#
+483 "ADDRESS_OF_POOL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/address_of_pool.e"
+class-name: ADDRESS_OF_POOL
+parent-count: 2 parents: 15 14 
+c-type: T483 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ADDRESS_OF_POOL (483)
+#
+454 "SWITCH" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/switch.e"
+class-name: SWITCH
+parent-count: 2 parents: 15 14 
+c-type: T454 reference: no
+#
+432 "DICTIONARY_NODE[RUN_FEATURE,FEATURE_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T432 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[RUN_FEATURE,FEATURE_NAME] (432)
+#
+248 "TYPE_BASIC_EIFFEL_EXPANDED" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_basic_eiffel_expanded.e"
+class-name: TYPE_BASIC_EIFFEL_EXPANDED
+parent-count: 1 parents: 101 
+#
+460 "FIXED_ARRAY[E_TYPE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T460 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[E_TYPE] (460)
+#
+18 "ANY" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/any.e"
+class-name: ANY
+parent-count: 1 parents: 19 
+c-type: T18 reference: yes
+ref-status: dead 
+run-time-set-count: 1
+run-time-set:
+	STRING (7)
+#
+199 "FIXED_ARRAY[BASE_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T199 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[BASE_CLASS] (199)
+#
+106 "DICTIONARY[RUN_CLASS,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T106 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[RUN_CLASS,STRING] (106)
+#
+567 "TUPLE[CHARACTER,INTEGER]" 
+class-path: "TUPLE"
+class-name: TUPLE
+parent-count: 0
+c-type: T567 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	TUPLE[CHARACTER,INTEGER] (567)
+#
+62 "ITERATOR" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/iterator/iterator.e"
+class-name: ITERATOR
+parent-count: 0
+#
+246 "BASE_TYPE_CONSTANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/base_type_constant.e"
+class-name: BASE_TYPE_CONSTANT
+parent-count: 1 parents: 89 
+c-type: T246 reference: yes
+ref-status: dead 
+run-time-set-count: 5
+run-time-set:
+	REAL_CONSTANT (245)
+	INTEGER_CONSTANT (249)
+	E_TRUE (305)
+	E_FALSE (306)
+	CHARACTER_CONSTANT (307)
+#
+366 "NATIVE_ARRAY[DICTIONARY_NODE[FIXED_ARRAY[STRING],CLASS_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T366 reference: no
+#
+505 "DICTIONARY[CECIL_FILE,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T505 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[CECIL_FILE,STRING] (505)
+#
+437 "DICTIONARY[TUPLE[E_TYPE,E_TYPE],STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T437 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[TUPLE[E_TYPE,E_TYPE],STRING] (437)
+#
+92 "ARRAYED_COLLECTION[INTEGER_16]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T92 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+463 "NATIVE_ARRAY[RUN_FEATURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T463 reference: no
+#
+415 "DECLARATION_GROUP" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/declaration_group.e"
+class-name: DECLARATION_GROUP
+parent-count: 1 parents: 411 
+c-type: T415 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	DECLARATION_GROUP (415)
+#
+304 "BOOLEAN_CONSTANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/boolean_constant.e"
+class-name: BOOLEAN_CONSTANT
+parent-count: 1 parents: 246 
+c-type: T304 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	E_TRUE (305)
+	E_FALSE (306)
+#
+448 "AGENT_POOL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/agent_pool.e"
+class-name: AGENT_POOL
+parent-count: 2 parents: 15 14 
+c-type: T448 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	AGENT_POOL (448)
+#
+450 "SET[AGENT_ARGS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set.e"
+class-name: SET
+parent-count: 1 parents: 18 
+c-type: T450 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET[AGENT_ARGS] (450)
+#
+147 "NATIVE_ARRAY[EXTERNAL_ROUTINE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T147 reference: no
+#
+398 "DEFERRED_PROCEDURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/deferred_procedure.e"
+class-name: DEFERRED_PROCEDURE
+parent-count: 1 parents: 397 
+c-type: T398 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	DEFERRED_PROCEDURE (398)
+#
+133 "reference DOUBLE" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/double.e"
+class-name: DOUBLE
+parent-count: 2 parents: 24 23 
+c-type: T133 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	reference DOUBLE (133)
+#
+209 "ARRAYED_COLLECTION[E_FEATURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T209 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+244 "CALL_PREFIX_NOT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_prefix_not.e"
+class-name: CALL_PREFIX_NOT
+parent-count: 1 parents: 242 
+c-type: T244 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_PREFIX_NOT (244)
+#
+549 "NATIVE_ARRAY[OPEN_OPERAND]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T549 reference: no
+#
+499 "NATIVE_ARRAY[E_OLD]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T499 reference: no
+#
+45 "DICTIONARY[INTEGER_16,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T45 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[INTEGER_16,STRING] (45)
+#
+103 "FIXED_ARRAY[RUN_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T103 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[RUN_CLASS] (103)
+#
+241 "CALL_PREFIX_FREEOP" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_prefix_freeop.e"
+class-name: CALL_PREFIX_FREEOP
+parent-count: 1 parents: 242 
+c-type: T241 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_PREFIX_FREEOP (241)
+#
+154 "DECLARATION_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/declaration_list.e"
+class-name: DECLARATION_LIST
+parent-count: 2 parents: 15 14 
+c-type: T154 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	FORMAL_ARG_LIST (153)
+	LOCAL_VAR_LIST (316)
+#
+333 "CLASS_NAME_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/class_name_list.e"
+class-name: CLASS_NAME_LIST
+parent-count: 2 parents: 15 14 
+c-type: T333 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CLASS_NAME_LIST (333)
+#
+418 "NATIVE_ARRAY[LOCAL_ARGUMENT1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T418 reference: no
+#
+508 "TUPLE[STRING,RUN_FEATURE]" 
+class-path: "TUPLE"
+class-name: TUPLE
+parent-count: 0
+c-type: T508 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	TUPLE[STRING,RUN_FEATURE] (508)
+#
+575 "DICTIONARY_NODE[INTEGER,INTEGER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T575 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[INTEGER,INTEGER] (575)
+#
+34 "NATIVE_ARRAY[DICTIONARY_NODE[STRING,STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T34 reference: no
+#
+223 "CALL_INFIX_IMPLIES" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_implies.e"
+class-name: CALL_INFIX_IMPLIES
+parent-count: 1 parents: 224 
+c-type: T223 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_IMPLIES (223)
+#
+157 "ARGUMENT_NAME1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/argument_name1.e"
+class-name: ARGUMENT_NAME1
+parent-count: 2 parents: 155 158 
+c-type: T157 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ARGUMENT_NAME1 (157)
+#
+263 "ARGUMENT_NAME2" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/argument_name2.e"
+class-name: ARGUMENT_NAME2
+parent-count: 1 parents: 158 
+c-type: T263 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ARGUMENT_NAME2 (263)
+#
+242 "CALL_PREFIX" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_prefix.e"
+class-name: CALL_PREFIX
+parent-count: 1 parents: 243 
+#
+384 "WHEN_ITEM" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/when_item.e"
+class-name: WHEN_ITEM
+parent-count: 1 parents: 15 
+c-type: T384 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	WHEN_ITEM_1 (388)
+	WHEN_ITEM_2 (389)
+#
+378 "E_INSPECT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/e_inspect.e"
+class-name: E_INSPECT
+parent-count: 1 parents: 299 
+c-type: T378 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_INSPECT (378)
+#
+138 "ARRAYED_COLLECTION[NATIVE_C_PLUS_PLUS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T138 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+297 "ARRAYED_COLLECTION[FORMAL_GENERIC_ARG]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T297 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+228 "CALL_PROC_CALL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_proc_call.e"
+class-name: CALL_PROC_CALL
+parent-count: 1 parents: 15 
+c-type: T228 reference: yes
+ref-status: dead 
+run-time-set-count: 32
+run-time-set:
+	CALL_INFIX_IMPLIES (223)
+	CALL_INFIX_XOR (229)
+	CALL_INFIX_OR (230)
+	CALL_INFIX_OR_ELSE (231)
+	CALL_INFIX_AND (232)
+	CALL_INFIX_AND_THEN (233)
+	CALL_INFIX_MINUS (234)
+	CALL_INFIX_PLUS (235)
+	CALL_INFIX_DIV (236)
+	CALL_INFIX_INT_REM (237)
+	CALL_INFIX_INT_DIV (238)
+	CALL_INFIX_TIMES (239)
+	CALL_INFIX_FREEOP (240)
+	CALL_PREFIX_FREEOP (241)
+	CALL_PREFIX_NOT (244)
+	CALL_PREFIX_PLUS (250)
+	CALL_PREFIX_MINUS (251)
+	CALL_0_C (254)
+	CALL_1_C (255)
+	CALL_N (256)
+	PROC_CALL_0 (301)
+	PROC_CALL_1 (302)
+	PROC_CALL_N (303)
+	CALL_INFIX_POWER (325)
+	CALL_INFIX_EQ (326)
+	CALL_INFIX_NEQ (328)
+	CALL_INFIX_LE (329)
+	CALL_INFIX_GE (330)
+	CALL_INFIX_LT (331)
+	CALL_INFIX_GT (332)
+	E_AGENT_CALL (519)
+	AGENT_EXPRESSION (551)
+#
+31 "HASH_TABLE_SIZE" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/hash_table_size.e"
+class-name: HASH_TABLE_SIZE
+parent-count: 0
+c-type: T31 reference: no
+#
+316 "LOCAL_VAR_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/local_var_list.e"
+class-name: LOCAL_VAR_LIST
+parent-count: 1 parents: 154 
+c-type: T316 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	LOCAL_VAR_LIST (316)
+#
+292 "TYPE_BIT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_bit.e"
+class-name: TYPE_BIT
+parent-count: 1 parents: 101 
+c-type: T292 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	TYPE_BIT_1 (291)
+	TYPE_BIT_2 (293)
+#
+469 "NATIVE_ARRAY[EFFECTIVE_ARG_LIST]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T469 reference: no
+#
+269 "TYPE_ANY" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_any.e"
+class-name: TYPE_ANY
+parent-count: 1 parents: 101 
+c-type: T269 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_ANY (269)
+#
+20 "GENERAL" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/general.e"
+class-name: GENERAL
+parent-count: 0
+#
+523 "COUNTER63" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/counter63.e"
+class-name: COUNTER63
+parent-count: 2 parents: 15 14 
+c-type: T523 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	COUNTER63 (523)
+#
+531 "DICTIONARY[E_TYPE,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T531 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[E_TYPE,STRING] (531)
+#
+364 "DICTIONARY[FIXED_ARRAY[STRING],CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T364 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[FIXED_ARRAY[STRING],CLASS_NAME] (364)
+#
+102 "RUN_TIME_SET" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_time_set.e"
+class-name: RUN_TIME_SET
+parent-count: 2 parents: 15 14 
+c-type: T102 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	RUN_TIME_SET (102)
+#
+47 "NATIVE_ARRAY[DICTIONARY_NODE[INTEGER_16,STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T47 reference: no
+#
+175 "NATIVE_ARRAY[DICTIONARY_NODE[BOOLEAN,BASE_CLASS]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T175 reference: no
+#
+230 "CALL_INFIX_OR" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_or.e"
+class-name: CALL_INFIX_OR
+parent-count: 1 parents: 224 
+c-type: T230 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_OR (230)
+#
+346 "CST_ATT_STRING" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/cst_att_string.e"
+class-name: CST_ATT_STRING
+parent-count: 1 parents: 339 
+c-type: T346 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CST_ATT_STRING (346)
+#
+492 "NATIVE_ARRAY[BOOLEAN]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T492 reference: no
+#
+344 "CST_ATT_BOOLEAN" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/cst_att_boolean.e"
+class-name: CST_ATT_BOOLEAN
+parent-count: 1 parents: 339 
+c-type: T344 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CST_ATT_BOOLEAN (344)
+#
+342 "ARRAYED_COLLECTION[INTEGER_CONSTANT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T342 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+396 "OLD_CREATION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/old_creation.e"
+class-name: OLD_CREATION
+parent-count: 1 parents: 393 
+c-type: T396 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	OLD_CREATION (396)
+#
+169 "DICTIONARY[DICTIONARY[FEATURE_NAME,BASE_CLASS],FEATURE_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T169 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[DICTIONARY[FEATURE_NAME,BASE_CLASS],FEATURE_NAME] (169)
+#
+331 "CALL_INFIX_LT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_lt.e"
+class-name: CALL_INFIX_LT
+parent-count: 1 parents: 224 
+c-type: T331 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_LT (331)
+#
+442 "TUPLE[POSITION,E_TYPE]" 
+class-path: "TUPLE"
+class-name: TUPLE
+parent-count: 0
+c-type: T442 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	TUPLE[POSITION,E_TYPE] (442)
+#
+329 "CALL_INFIX_LE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_le.e"
+class-name: CALL_INFIX_LE
+parent-count: 1 parents: 224 
+c-type: T329 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_LE (329)
+#
+120 "DICTIONARY[BASE_CLASS,CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T120 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[BASE_CLASS,CLASS_NAME] (120)
+#
+332 "CALL_INFIX_GT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_gt.e"
+class-name: CALL_INFIX_GT
+parent-count: 1 parents: 224 
+c-type: T332 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_GT (332)
+#
+356 "E_CHECK" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/e_check.e"
+class-name: E_CHECK
+parent-count: 1 parents: 299 
+c-type: T356 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_CHECK (356)
+#
+326 "CALL_INFIX_EQ" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_eq.e"
+class-name: CALL_INFIX_EQ
+parent-count: 1 parents: 327 
+c-type: T326 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_EQ (326)
+#
+330 "CALL_INFIX_GE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_ge.e"
+class-name: CALL_INFIX_GE
+parent-count: 1 parents: 224 
+c-type: T330 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_GE (330)
+#
+183 "SET_NODE[CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set_node.e"
+class-name: SET_NODE
+parent-count: 0
+c-type: T183 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET_NODE[CLASS_NAME] (183)
+#
+114 "NATIVE_ARRAY[SET_NODE[RUN_CLASS]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T114 reference: no
+#
+145 "FIXED_ARRAY[EXTERNAL_ROUTINE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T145 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[EXTERNAL_ROUTINE] (145)
+#
+380 "WHEN_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/when_list.e"
+class-name: WHEN_LIST
+parent-count: 1 parents: 15 
+c-type: T380 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	WHEN_LIST (380)
+#
+160 "ARRAYED_COLLECTION[ARGUMENT_NAME1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T160 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+23 "COMPARABLE" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/comparable.e"
+class-name: COMPARABLE
+parent-count: 1 parents: 18 
+#
+110 "SET" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set.e"
+class-name: SET
+parent-count: 1 parents: 18 
+#
+372 "IFTHENLIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/ifthenlist.e"
+class-name: IFTHENLIST
+parent-count: 1 parents: 360 
+c-type: T372 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	IFTHENLIST (372)
+#
+334 "FIXED_ARRAY[CLASS_NAME]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T334 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[CLASS_NAME] (334)
+#
+375 "NATIVE_ARRAY[IFTHEN]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T375 reference: no
+#
+1 "INTEGER_8" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/integer_8.e"
+class-name: INTEGER_8
+parent-count: 1 parents: 22 
+c-type: T1 reference: no
+#
+119 "NATIVE_ARRAY[PARENT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T119 reference: no
+#
+204 "FIXED_ARRAY[FEATURE_CLAUSE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T204 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[FEATURE_CLAUSE] (204)
+#
+266 "TYPE_LIKE_CURRENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_like_current.e"
+class-name: TYPE_LIKE_CURRENT
+parent-count: 1 parents: 265 
+c-type: T266 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_LIKE_CURRENT (266)
+#
+385 "ARRAY[WHEN_ITEM]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T385 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[WHEN_ITEM] (385)
+#
+159 "ARRAY[ARGUMENT_NAME1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T159 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[ARGUMENT_NAME1] (159)
+#
+40 "ID_PROVIDER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/id_provider.e"
+class-name: ID_PROVIDER
+parent-count: 2 parents: 15 14 
+c-type: T40 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ID_PROVIDER (40)
+#
+529 "TUPLE[E_TYPE,FEATURE_NAME]" 
+class-path: "TUPLE"
+class-name: TUPLE
+parent-count: 0
+c-type: T529 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	TUPLE[E_TYPE,FEATURE_NAME] (529)
+#
+530 "FIXED_ARRAY[TUPLE[E_TYPE,FEATURE_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T530 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[TUPLE[E_TYPE,FEATURE_NAME]] (530)
+#
+313 "CREATE_EXPRESSION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/create_expression.e"
+class-name: CREATE_EXPRESSION
+parent-count: 2 parents: 314 89 
+c-type: T313 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CREATE_EXPRESSION (313)
+#
+577 "LINK" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/link.e"
+class-name: LINK
+parent-count: 0
+#
+3 "CHARACTER" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/character.e"
+class-name: CHARACTER
+parent-count: 2 parents: 25 23 
+c-type: T3 reference: no
+#
+425 "NATIVE_ARRAY[EXPORT_ITEM]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T425 reference: no
+#
+496 "NATIVE_ARRAY[E_REQUIRE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T496 reference: no
+#
+455 "DICTIONARY[DICTIONARY[RUN_FEATURE,FEATURE_NAME],STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary.e"
+class-name: DICTIONARY
+parent-count: 1 parents: 29 
+c-type: T455 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY[DICTIONARY[RUN_FEATURE,FEATURE_NAME],STRING] (455)
+#
+582 "COLLECTION_SORTER" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/sorting/collection_sorter.e"
+class-name: COLLECTION_SORTER
+parent-count: 0
+#
+309 "PRECURSOR_EXPRESSION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/precursor_expression.e"
+class-name: PRECURSOR_EXPRESSION
+parent-count: 2 parents: 310 89 
+c-type: T309 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	PRECURSOR_EXPRESSION (309)
+#
+15 "GLOBALS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/globals.e"
+class-name: GLOBALS
+parent-count: 2 parents: 17 16 
+#
+476 "ONCE_ROUTINE_POOL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/once_routine_pool.e"
+class-name: ONCE_ROUTINE_POOL
+parent-count: 2 parents: 15 14 
+c-type: T476 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ONCE_ROUTINE_POOL (476)
+#
+568 "LINKED_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/linked_list.e"
+class-name: LINKED_LIST
+parent-count: 1 parents: 569 
+#
+540 "MEMO" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/memo.e"
+class-name: MEMO
+parent-count: 0
+#
+571 "ARRAY[INTEGER]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T571 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[INTEGER] (571)
+#
+81 "NAME" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/name.e"
+class-name: NAME
+parent-count: 2 parents: 15 14 
+#
+373 "FIXED_ARRAY[IFTHEN]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T373 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[IFTHEN] (373)
+#
+339 "CST_ATT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/cst_att.e"
+class-name: CST_ATT
+parent-count: 1 parents: 340 
+c-type: T339 reference: yes
+ref-status: dead 
+run-time-set-count: 8
+run-time-set:
+	CST_ATT_UNIQUE (338)
+	CST_ATT_BOOLEAN (344)
+	CST_ATT_CHARACTER (345)
+	CST_ATT_STRING (346)
+	CST_ATT_BIT (350)
+	CST_ATT_REAL (351)
+	CST_ATT_DOUBLE (352)
+	CST_ATT_INTEGER (353)
+#
+117 "FIXED_ARRAY[PARENT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T117 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[PARENT] (117)
+#
+284 "TYPE_OF_AGENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_of_agent.e"
+class-name: TYPE_OF_AGENT
+parent-count: 1 parents: 101 
+c-type: T284 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	TYPE_PROCEDURE (283)
+	TYPE_FUNCTION (285)
+#
+233 "CALL_INFIX_AND_THEN" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_and_then.e"
+class-name: CALL_INFIX_AND_THEN
+parent-count: 1 parents: 224 
+c-type: T233 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_AND_THEN (233)
+#
+514 "SET_NODE[STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set_node.e"
+class-name: SET_NODE
+parent-count: 0
+c-type: T514 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET_NODE[STRING] (514)
+#
+361 "FIXED_ARRAY[INSTRUCTION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T361 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[INSTRUCTION] (361)
+#
+221 "NATIVE_ARRAY[EXPRESSION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T221 reference: no
+#
+186 "CREATION_CLAUSE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/creation_clause.e"
+class-name: CREATION_CLAUSE
+parent-count: 2 parents: 15 14 
+c-type: T186 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CREATION_CLAUSE (186)
+#
+107 "DICTIONARY_NODE[RUN_CLASS,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/dictionary_node.e"
+class-name: DICTIONARY_NODE
+parent-count: 0
+c-type: T107 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	DICTIONARY_NODE[RUN_CLASS,STRING] (107)
+#
+377 "E_RETRY" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/e_retry.e"
+class-name: E_RETRY
+parent-count: 1 parents: 299 
+c-type: T377 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_RETRY (377)
+#
+254 "CALL_0_C" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_0_c.e"
+class-name: CALL_0_C
+parent-count: 1 parents: 243 
+c-type: T254 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_0_C (254)
+#
+216 "ARRAYED_COLLECTION[ASSERTION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T216 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+390 "LOOP_VARIANT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/loop_variant.e"
+class-name: LOOP_VARIANT
+parent-count: 1 parents: 15 
+c-type: T390 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	LOOP_VARIANT (390)
+#
+255 "CALL_1_C" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_1_c.e"
+class-name: CALL_1_C
+parent-count: 1 parents: 226 
+c-type: T255 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_1_C (255)
+#
+111 "SET[RUN_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set.e"
+class-name: SET
+parent-count: 1 parents: 18 
+c-type: T111 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET[RUN_CLASS] (111)
+#
+358 "E_DEBUG" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/e_debug.e"
+class-name: E_DEBUG
+parent-count: 1 parents: 299 
+c-type: T358 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	E_DEBUG (358)
+#
+465 "ARRAYED_COLLECTION[CALL_PROC_CALL]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T465 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+68 "NATIVE_ARRAY[DICTIONARY_NODE[ORDERED_DICTIONARY[STRING,STRING],STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T68 reference: no
+#
+547 "FIXED_ARRAY[OPEN_OPERAND]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T547 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[OPEN_OPERAND] (547)
+#
+277 "TYPE_REFERENCE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_reference.e"
+class-name: TYPE_REFERENCE
+parent-count: 1 parents: 101 
+c-type: T277 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_REFERENCE (277)
+#
+507 "NATIVE_ARRAY[DICTIONARY_NODE[CECIL_FILE,STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T507 reference: no
+#
+486 "NATIVE_ARRAY[ADDRESS_OF]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T486 reference: no
+#
+405 "EFFECTIVE_ROUTINE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/effective_routine.e"
+class-name: EFFECTIVE_ROUTINE
+parent-count: 1 parents: 143 
+c-type: T405 reference: yes
+ref-status: dead 
+run-time-set-count: 4
+run-time-set:
+	E_PROCEDURE (406)
+	E_FUNCTION (407)
+	ONCE_PROCEDURE (409)
+	ONCE_FUNCTION (410)
+#
+534 "ARRAYED_COLLECTION[TUPLE[E_TYPE,FEATURE_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T534 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+494 "ARRAY[E_REQUIRE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T494 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[E_REQUIRE] (494)
+#
+552 "FAKE_TUPLE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/fake_tuple.e"
+class-name: FAKE_TUPLE
+parent-count: 1 parents: 89 
+c-type: T552 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	FAKE_TUPLE (552)
+#
+141 "RUN_FEATURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/run_feature.e"
+class-name: RUN_FEATURE
+parent-count: 3 parents: 15 14 83 
+c-type: T141 reference: yes
+ref-status: dead 
+run-time-set-count: 11
+run-time-set:
+	RUN_FEATURE_8 (140)
+	RUN_FEATURE_7 (148)
+	RUN_FEATURE_2 (165)
+	RUN_FEATURE_3 (435)
+	RUN_FEATURE_6 (502)
+	RUN_FEATURE_9 (525)
+	RUN_FEATURE_11 (550)
+	RUN_FEATURE_1 (556)
+	RUN_FEATURE_5 (564)
+	RUN_FEATURE_4 (565)
+	RUN_FEATURE_10 (584)
+#
+535 "NATIVE_ARRAY[TUPLE[E_TYPE,FEATURE_NAME]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T535 reference: no
+#
+387 "NATIVE_ARRAY[WHEN_ITEM]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T387 reference: no
+#
+343 "NATIVE_ARRAY[INTEGER_CONSTANT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T343 reference: no
+#
+429 "ARRAYED_COLLECTION[INDEX_CLAUSE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T429 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+576 "NATIVE_ARRAY[DICTIONARY_NODE[INTEGER,INTEGER]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T576 reference: no
+#
+555 "NATIVE_ARRAY[DECLARATION_1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T555 reference: no
+#
+517 "SET_NODE[E_AGENT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set_node.e"
+class-name: SET_NODE
+parent-count: 0
+c-type: T517 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET_NODE[E_AGENT] (517)
+#
+224 "CALL_INFIX1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix1.e"
+class-name: CALL_INFIX1
+parent-count: 1 parents: 225 
+#
+327 "CALL_INFIX2" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix2.e"
+class-name: CALL_INFIX2
+parent-count: 1 parents: 225 
+c-type: T327 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	CALL_INFIX_EQ (326)
+	CALL_INFIX_NEQ (328)
+#
+185 "CREATION_CLAUSE_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/creation_clause_list.e"
+class-name: CREATION_CLAUSE_LIST
+parent-count: 2 parents: 15 14 
+c-type: T185 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CREATION_CLAUSE_LIST (185)
+#
+388 "WHEN_ITEM_1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/when_item_1.e"
+class-name: WHEN_ITEM_1
+parent-count: 1 parents: 384 
+c-type: T388 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	WHEN_ITEM_1 (388)
+#
+389 "WHEN_ITEM_2" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/when_item_2.e"
+class-name: WHEN_ITEM_2
+parent-count: 1 parents: 384 
+c-type: T389 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	WHEN_ITEM_2 (389)
+#
+161 "NATIVE_ARRAY[ARGUMENT_NAME1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T161 reference: no
+#
+290 "TYPE_THREAD" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/e_type/type_thread.e"
+class-name: TYPE_THREAD
+parent-count: 1 parents: 289 
+c-type: T290 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	TYPE_THREAD (290)
+#
+518 "NATIVE_ARRAY[SET_NODE[E_AGENT]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T518 reference: no
+#
+585 "AGENT_INSTRUCTION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/instruction/agent_instruction.e"
+class-name: AGENT_INSTRUCTION
+parent-count: 2 parents: 228 299 
+c-type: T585 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	AGENT_INSTRUCTION (585)
+#
+135 "NATIVE_C_PLUS_PLUS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/native_c_plus_plus.e"
+class-name: NATIVE_C_PLUS_PLUS
+parent-count: 1 parents: 136 
+c-type: T135 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	NATIVE_C_PLUS_PLUS (135)
+#
+83 "ASSERTION_LEVEL_NUMBERING" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/assertion_level_numbering.e"
+class-name: ASSERTION_LEVEL_NUMBERING
+parent-count: 2 parents: 15 14 
+#
+25 "HASHABLE" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/hashable.e"
+class-name: HASHABLE
+parent-count: 0
+#
+6 "BOOLEAN" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/boolean.e"
+class-name: BOOLEAN
+parent-count: 1 parents: 18 
+c-type: T6 reference: no
+#
+408 "ONCE_ROUTINE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/once_routine.e"
+class-name: ONCE_ROUTINE
+parent-count: 1 parents: 405 
+c-type: T408 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	ONCE_PROCEDURE (409)
+	ONCE_FUNCTION (410)
+#
+22 "INTEGER_GENERAL" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/integer_general.e"
+class-name: INTEGER_GENERAL
+parent-count: 2 parents: 24 23 
+#
+443 "FIXED_ARRAY[TUPLE[POSITION,E_TYPE]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T443 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[TUPLE[POSITION,E_TYPE]] (443)
+#
+201 "NATIVE_ARRAY[BASE_CLASS]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T201 reference: no
+#
+572 "TUPLE_STRING_POOL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/tuple_string_pool.e"
+class-name: TUPLE_STRING_POOL
+parent-count: 1 parents: 573 
+c-type: T572 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	TUPLE_STRING_POOL (572)
+#
+66 "ORDERED_DICTIONARY[STRING,STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/ordered_dictionary.e"
+class-name: ORDERED_DICTIONARY
+parent-count: 2 parents: 27 14 
+c-type: T66 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	ORDERED_DICTIONARY[STRING,STRING] (66)
+#
+559 "SAFE_EQUAL[POSITION]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/safe_equal.e"
+class-name: SAFE_EQUAL
+parent-count: 0
+c-type: T559 reference: no
+#
+504 "CECIL_FILE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/cecil_file.e"
+class-name: CECIL_FILE
+parent-count: 2 parents: 15 14 
+c-type: T504 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CECIL_FILE (504)
+#
+260 "ABSTRACT_CURRENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/abstract_current.e"
+class-name: ABSTRACT_CURRENT
+parent-count: 1 parents: 89 
+#
+354 "E_ENSURE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/e_ensure.e"
+class-name: E_ENSURE
+parent-count: 1 parents: 214 
+c-type: T354 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	E_ENSURE (354)
+#
+424 "ARRAYED_COLLECTION[EXPORT_ITEM]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T424 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+419 "DECLARATION_1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/declaration_1.e"
+class-name: DECLARATION_1
+parent-count: 1 parents: 411 
+c-type: T419 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	DECLARATION_1 (419)
+#
+268 "ARRAY[E_TYPE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T268 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[E_TYPE] (268)
+#
+411 "DECLARATION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/declaration.e"
+class-name: DECLARATION
+parent-count: 2 parents: 15 14 
+c-type: T411 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	DECLARATION_GROUP (415)
+	DECLARATION_1 (419)
+#
+352 "CST_ATT_DOUBLE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/cst_att_double.e"
+class-name: CST_ATT_DOUBLE
+parent-count: 1 parents: 339 
+c-type: T352 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CST_ATT_DOUBLE (352)
+#
+0 "NONE" 
+#
+61 "FILE_TOOLS" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/file_tools.e"
+class-name: FILE_TOOLS
+parent-count: 0
+c-type: T61 reference: no
+#
+8 "POINTER" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/pointer.e"
+class-name: POINTER
+parent-count: 2 parents: 25 39 
+c-type: T8 reference: no
+#
+516 "SET[E_AGENT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/set.e"
+class-name: SET
+parent-count: 1 parents: 18 
+c-type: T516 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SET[E_AGENT] (516)
+#
+561 "NATIVE_ARRAY[DICTIONARY_NODE[ANY,STRING]]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/native_array.e"
+class-name: NATIVE_ARRAY
+parent-count: 1 parents: 29 
+c-type: T561 reference: no
+#
+155 "LOCAL_ARGUMENT1" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/local_argument1.e"
+class-name: LOCAL_ARGUMENT1
+parent-count: 1 parents: 156 
+c-type: T155 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	ARGUMENT_NAME1 (157)
+	LOCAL_NAME1 (319)
+#
+234 "CALL_INFIX_MINUS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_minus.e"
+class-name: CALL_INFIX_MINUS
+parent-count: 1 parents: 224 
+c-type: T234 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_MINUS (234)
+#
+163 "SEPARATE_TOOLS" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/separate_tools.e"
+class-name: SEPARATE_TOOLS
+parent-count: 2 parents: 15 14 
+c-type: T163 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	SEPARATE_TOOLS (163)
+#
+446 "ARRAYED_COLLECTION[BIT_CONSTANT]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/arrayed_collection.e"
+class-name: ARRAYED_COLLECTION
+parent-count: 1 parents: 51 
+c-type: T446 reference: yes
+ref-status: dead 
+run-time-set-count: 0
+#
+347 "FIXED_ARRAY[MANIFEST_STRING]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T347 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[MANIFEST_STRING] (347)
+#
+493 "RUN_REQUIRE" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/feature/run_require.e"
+class-name: RUN_REQUIRE
+parent-count: 1 parents: 15 
+c-type: T493 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	RUN_REQUIRE (493)
+#
+542 "FIXED_ARRAY[TEXT_FILE_READ]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T542 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[TEXT_FILE_READ] (542)
+#
+240 "CALL_INFIX_FREEOP" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_freeop.e"
+class-name: CALL_INFIX_FREEOP
+parent-count: 1 parents: 224 
+c-type: T240 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_FREEOP (240)
+#
+156 "LOCAL_ARGUMENT" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/local_argument.e"
+class-name: LOCAL_ARGUMENT
+parent-count: 2 parents: 81 89 
+#
+131 "CODE_PRINTER" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/code_printer.e"
+class-name: CODE_PRINTER
+parent-count: 2 parents: 15 14 
+#
+51 "COLLECTION" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/collection.e"
+class-name: COLLECTION
+parent-count: 1 parents: 29 
+#
+416 "ARRAY[LOCAL_ARGUMENT1]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T416 reference: yes
+ref-status: dead 
+run-time-set-count: 2
+run-time-set:
+	ARRAY[ARGUMENT_NAME1] (159)
+	ARRAY[LOCAL_NAME1] (320)
+#
+229 "CALL_INFIX_XOR" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/expression/call_infix_xor.e"
+class-name: CALL_INFIX_XOR
+parent-count: 1 parents: 224 
+c-type: T229 reference: yes
+ref-status: live id-field: yes 
+run-time-set-count: 1
+run-time-set:
+	CALL_INFIX_XOR (229)
+#
+207 "FIXED_ARRAY[E_FEATURE]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/base/fixed_array.e"
+class-name: FIXED_ARRAY
+parent-count: 1 parents: 50 
+c-type: T207 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	FIXED_ARRAY[E_FEATURE] (207)
+#
+208 "CLIENT_LIST" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/client_list.e"
+class-name: CLIENT_LIST
+parent-count: 2 parents: 15 14 
+c-type: T208 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	CLIENT_LIST (208)
+#
+56 "STD_INPUT_OUTPUT" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/io/std_input_output.e"
+class-name: STD_INPUT_OUTPUT
+parent-count: 2 parents: 44 38 
+c-type: T56 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	STD_INPUT_OUTPUT (56)
+#
+295 "ARRAY[FORMAL_GENERIC_ARG]" 
+class-path: "/users/miro/colnet/SmartEiffel/lib/kernel/array.e"
+class-name: ARRAY
+parent-count: 1 parents: 50 
+c-type: T295 reference: yes
+ref-status: live id-field: no 
+run-time-set-count: 1
+run-time-set:
+	ARRAY[FORMAL_GENERIC_ARG] (295)
+#
+76 "POSITION" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/position.e"
+class-name: POSITION
+parent-count: 2 parents: 15 14 
+c-type: T76 reference: no
+#
+573 "STRING_POOL" 
+class-path: "/users/miro/colnet/SmartEiffel/tools/misc/string_pool.e"
+class-name: STRING_POOL
+parent-count: 2 parents: 15 14 
+#

@@ -1,0 +1,69 @@
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+ INSTRUCTIONS ON HOW TO INSTALL SMARTEIFFEL ON YOUR COMPUTER      15-JUN-2003
+อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+
+
+INTRODUCTION:
+-------------
+
+In order to install SmartEiffel under OS/2, you need:
+
+- the emx/gcc package installed on your harddisk.
+You may find it on ftp.cdrom.com (/pub/os2/emx), or on any mirror.
+
+- an OS/2 HPFS partition
+
+
+PRELIMINARY TASKS:
+------------------
+
+If you have an older version of SmallEiffel/SmartEiffel installed, please
+remove it, or rename the old SmartEiffel directory.
+
+
+INSTALLATION:
+-------------
+
+1: Extract the file SExxxOS2.ZIP in your root directory.
+Don't use pkunzip. Most of the files come with long names, so you'd
+better using unzip (use the version for OS/2, you can get it on
+ftp.cdrom.com too)
+  c:
+  cd \
+  unzip SExxxOS2
+
+2: Edit your config.sys, and add the following line:
+  SET SMARTEIFFEL=C:\SMARTEIFFEL\SYS\SYSTEM.SE
+(of course, if you have decided to install it in another directory,
+replace the path by the correct one, but this is not recommended)
+Add C:\SMARTEIFFEL\BIN to your path line.
+
+3: In the directory EMX\BIN, you should find a binary named strip.exe,
+delete it or rename it to strip.old .
+Create a file named strip.cmd containing the line:
+@emxbind -qs %1
+
+4: Reboot your machine. In order to get values set for the path and the
+SMARTEIFFEL variable.
+
+5: Compile install.c (found in SMARTEIFFEL directory) and run it.
+
+That's all.
+
+
+UPGRADING YOUR VERSION:
+-----------------------
+Since SmartEiffel is still under development, you may want to
+get the lastest version. All informations available on:
+http://SmartEiffel.loria.fr/index.html
+
+
+GETTING LOST?:
+--------------
+
+For more information, please feel free to e-mail at:
+Andre.Doherty@scinfo.u-nancy.fr
+or on SmartEiffel mailing list:
+http://SmartEiffel.loria.fr/support/mailing-list.html
+
+

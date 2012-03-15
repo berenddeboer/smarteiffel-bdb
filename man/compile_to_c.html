@@ -1,0 +1,425 @@
+<!-- Title = the 'compile_to_c' command -->
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE>
+<CENTER><FONT COLOR="#FFFFFF" SIZE=+3><B>The <TT>compile_to_c</TT> Command</B></FONT></CENTER>
+</TD>
+</TR>
+</TABLE>
+
+<BR><BR><BR>
+
+The <TT>compile_to_c</TT> command is the SmartEiffel ANSI C code generator.
+Usually this command is called automatically by the
+<A HREF="compile.html"><TT>compile</TT></A>
+command but you can use it separately to produce C code.
+There are
+two invocation modes: <I>traditional</I> and <I>ACE</I>.  In traditional mode, a
+variety of compiler options can be specified on the command line.  In
+ACE mode, these options are not permitted; it is presumed that the
+required compiler options are listed in the ACE file.
+<P><TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Usage</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<FONT COLOR="#FF00FF"><B>Traditional mode</B></FONT>
+<BR>
+<TT>compile_to_c [options] &lt;RootClass&gt; [&lt;RootProcedure&gt;]
+<BR>
+&nbsp;&nbsp;[*.c] [*.o] [-l*] [other options for C compiler/linker]</TT>
+<P>
+<P>
+<FONT COLOR="#FF00FF"><B>ACE mode</B></FONT>
+<BR>
+<TT>compile_to_c [general_options]
+ &lt;ACEfile.ace&gt;</TT>
+<P>
+In traditional mode, the <TT>compile_to_c</TT> command must be given at
+least one argument to indicate
+the starting execution point of the system.
+Thus your program will start in <I>&lt;RootProcedure&gt;</I> of <I>&lt;RootClass&gt;</I>.
+The default <I>&lt;RootProcedure&gt;</I> is <I>make</I>.
+</P><P>
+In ACE mode, the name of the ACE file must end with the <TT>.ace</TT>
+suffix.  For examples of how to use ACE files, have a look in the
+<TT>SmartEiffel/tutorial/ace</TT> directory.
+</P><P>
+The <TT>compile_to_c</TT> command produces all the required C files as
+well as a script file. The name of this script file depends on
+the operating system used (*.make on Unix or *.BAT on DOS, for 
+example).
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Load Path for Eiffel Source
+Files</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<TT>compile_to_c</TT> uses the technique described in the documentation for the
+<A HREF="finder.html"><TT>finder</TT></A> command to locate the Eiffel source files it
+tries to compile.  Note that what actually happens depends on the
+invocation mode (traditional or ACE).
+</P>
+
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">General Compiler Options</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<DL COMPACT>
+<DT>
+<I>-help</I>:<BR>
+<DD>
+Display a brief summary of the command-line syntax and a complete
+list of compiler options.
+<BR><BR>
+<DT>
+<I>-verbose</I>:<BR><DD>
+ Print system information during the compilation (full path of 
+   files loaded, type inference score, removed files, etc.).
+<BR><BR>
+
+<DT>
+<I>-version</I>:<BR><DD>
+Display the version number of the SmartEiffel release you're using.
+<BR><BR>
+
+<DT>
+<I>-o &lt;output_name&gt;</I>:<BR><DD>
+ Name the executable file <TT>output_name</TT>.
+<BR>
+This has the same meaning as the <I>-o option</I> of many C compilers. 
+<BR><BR>
+
+<DT>
+<I>-loadpath &lt;loadpath_file&gt;</I>:<BR><DD>
+Adds a loadpath file for class lookup. See details
+in the <A HREF="finder.html"><TT>finder man page</TT></A>.
+
+
+</DL>
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Options to Select Eiffel Compilation Modes (traditional mode only)</FONT></TD>
+</TR>
+</TABLE>
+<P>
+There are eight compilation modes given by the following
+option names: <I>-debug_check -all_check -loop_check -invariant_check 
+-ensure_check -require_check -no_check</I> and <I>-boost</I>.
+These options do change the generated C code (various assertions
+levels). 
+Only one mode can be selected for the whole system.
+Mode <I>-all_check</I> is the default.
+<DL COMPACT>
+<DT>
+<I>-boost</I>:<BR><DD>
+Compilation mode with the highest level of optimisations. 
+<BR> 
+   There are
+   no target existence tests and no system-level validity checking.
+   Some routines are inlined. No code is generated to get an execution
+   trace in case of failure. No assertions are checked.
+<BR><BR>
+<DT>
+<I>-no_check</I>:<BR><DD>
+Compilation mode in which no Eiffel assertions are checked.
+<BR>
+   Target existence tests are performed. Some code is generated
+   for system-level validity checking, and to produce an execution
+   trace. (An execution stack is managed.)
+<BR>
+   There is no inlining and no assertion checking.
+<BR><BR>
+<DT>
+<I>-require_check</I>:<BR><DD>
+Compilation mode in which Eiffel preconditions
+   are checked. 
+<BR>
+The generated code is similar to that of the previous mode, 
+   but also includes code to test preconditions (require clauses).
+<BR><BR>
+<DT>
+<I>-ensure_check</I>:<BR><DD>
+The generated code is similar to that of the previous mode, 
+   but also includes code to test postconditions (ensure clauses).
+<BR><BR>
+<DT>
+<I>-invariant_check</I>:<BR><DD>
+The generated code is similar to that of the previous mode, 
+   but also includes code to test class invariants.
+<BR><BR>
+<DT>
+<I>-loop_check</I>:<BR><DD>
+The generated code is similar to that of the previous mode, 
+   but also includes code to test loop variants and loop invariants.
+<BR><BR>
+<DT>
+<I>-all_check</I>:<BR><DD>
+The default mode. The generated code is similar to that of the
+   previous mode, but also includes code to execute the instructions
+   given in "check" blocks.
+<BR><BR>
+<DT>
+<I>-debug_check</I>:<BR><DD>
+The generated code is similar to that of the previous mode, 
+   but also includes code to execute the instructions given in "debug"
+   blocks. 
+   All debugs are checked regardless of the optional string key.
+</DL>
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Warnings Levels</FONT></TD> 
+</TR>
+</TABLE>
+<P>
+These options affect the compilation process, but do not change the
+generated C code.
+
+<DL COMPACT>
+
+<DT>
+<I>-no_style_warning</I>:<BR><DD>
+Suppress output for warning messages related to the non-respecting of
+standard Eiffel
+style guidelines (for example, <CODE>ItEm</CODE> will not trigger a warning).
+<BR><BR>
+
+
+<DT>
+<I>-case_insensitive</I>:<BR><DD>
+Switch case-insensitive mode on.
+<BR> 
+For example, when this mode is selected, the Eiffel parser considers
+that the following identifiers refer to the same feature:
+<CODE>item</CODE>, <CODE>ITEM</CODE>,  
+<CODE>ItEm</CODE>, ...
+<BR><BR>
+
+<DT>
+<I>-no_warning</I>:<BR><DD>
+Suppress output for all warning messages. (Error messages
+are still printed.)
+<BR><BR>
+
+</DL>
+</P>
+
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Advanced Compiler Options
+(traditional mode only)</FONT></TD> 
+</TR>
+</TABLE>
+<P>
+These options affect the compilation process, but generally do not change the
+generated C code (the exception being <I>-c_mode</I>).
+
+<DL COMPACT>
+
+<DT>
+<I>-cc &lt;c_compiler&gt;</I>:<BR><DD>
+Call <I>&lt;c_compiler&gt;</I> instead of the default C compiler.
+   Check the <TT>READ_ME</TT> file in the <TT>SmartEiffel/sys</TT> directory to see
+   how to set the default C compiler, as well as the default linker. <EM>This option
+   is incompatible with&nbsp;</EM>-c_mode.
+<BR><BR>
+
+<DT>
+<I>-c_mode &lt;C_mode&gt;</I>:<BR><DD> Uses the given
+<I>&lt;C_mode&gt;</I> to determine some C compilation parameters: the C
+compiler to use, its options, and maybe some extra options for SmartEiffel to
+use (which may change the generated code). See the <A
+HREF="install.html#CMODES"><TT>install</TT></A> command for more details about
+<EM>C modes</EM>.
+<BR><BR>
+
+<DT>
+<I>-compact</I>:<BR><DD> Generates a much more compact C code.
+<BR><BR>
+
+
+<DT>
+<I>-no_split</I>:<BR><DD>
+ Produce only one C file for the whole Eiffel system. 
+<BR>
+   This may enable the C compiler to inline more function calls. This option
+   is useful only to finalise an application (the incremental C 
+   compiling mode is switched off with <I>-no_split</I>).
+<BR><BR>
+
+<DT>
+<I>-no_strip</I>:<BR><DD>
+ Do not remove symbol information from the generated executable file.
+<BR>
+  This option is useful mainly when you need to debug at C code level.
+<BR><BR>
+
+
+<DT>
+<A NAME="high_memory_compiler"><I>-high_memory_compiler</I>:</A><BR><DD>
+Allow the compiler to use more memory at compile time (caching, bigger
+buffers, etc.). Compilation is likely to be quicker, <B>if</B> you have
+enough memory (RAM, not disk!)...
+<BR><BR>
+
+
+</DL>
+
+</P>
+
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Advanced Options Affecting the
+Generated C Code (traditional mode only)</FONT></TD>
+</TR>
+</TABLE>
+<P>
+
+<DL COMPACT>
+
+
+<DT>
+<I>-no_gc</I>:<BR><DD>
+No Garbage Collector. 
+<BR> 
+When this option is selected, no GC is produced 
+and (at least) one actual malloc is performed for each object creation.
+This option is useful when one prefers to use another GC provided 
+by an external library (such as the Boehm-Demers-Weiser
+conservative GC), or when no GC is needed.
+Without the <I>-no_gc</I> flag, SmartEiffel computes a customised GC for
+each system.
+<BR>
+It is important to remember that some architecture-dependent code may be
+required for the proper operation of the GC (see the
+file <TT>SmartEiffel/sys/gc</TT> for details). 
+<BR><BR>
+
+<DT>
+<I>-gc_info</I>:<BR><DD>
+Garbage Collector status information.
+<BR> 
+When this option is selected, the GC produced also contains code to display
+some status information.
+<BR><BR>
+
+
+<DT>
+<I>-cecil &lt;cecil_file&gt;</I>:<BR><DD>
+ Allow some Eiffel features to be called
+   from C (see the
+   <A HREF="cecil.html"><code>cecil</code></A>
+   file for details). To call C functions/macros
+   from Eiffel see the 
+   <A HREF="external.html"><code>external</code></A>
+   file.
+<BR><BR>
+
+<DT>
+<I>-no_main</I>:<BR><DD>
+ Don't generate a C <TT>main()</TT> function: thus, the root procedure is not
+ started. This is useful when one prefers to start execution from outside 
+ before calling Eiffel routines via the cecil interface.
+ Before calling the first Eiffel routine one has to call once a predefined
+ C function in order to initialise internal runtime information for the 
+ Eiffel world (see the example 
+ in the directory <TT>SmartEiffel/tutorial/cecil/example7</TT> for details).
+<BR><BR>
+
+
+
+<DT>
+<A NAME="sedb"><I>-sedb</I>:</A><BR><DD>
+This option adds the SmartEiffel DeBugger into your
+executable system. (The debugger is embedded.)
+Thus, to debug your Eiffel system, just recompile your system with 
+the <I>-sedb</I> flag and run the executable as usual. 
+The very first screen gives you access to the on-line documentation
+and the debugger is waiting for your first command.
+<BR>
+The <TT>sedb</TT> debugger features step by step execution, 
+navigation into the run-time stack,
+multi-conditions breakpoints,
+garbage collector invocation and profiling support.
+<BR>
+When profiling support is activated (see command <TT>T</TT> of
+<TT>sedb</TT>), a "trace.se" file is generated at execution time.
+When one interactively chooses the generation of this trace 
+file, a (usually huge) "trace.se" file is created in the 
+launch directory which shows the code the program is executing: 
+which line, which column, in which Eiffel source file.
+Because all classes are traced, "trace.se" is a huge file even for 
+a small program.
+<BR>
+Feature <I>GENERAL.trace_switch</I> allows trace generation to be
+turned on/off dynamically. At run time, if the argument of
+<I>trace_switch</I> is true, trace printing is switched on. 
+(Conversely, false means switch off trace printing.) 
+<BR>
+The <I>-sedb</I> option is not effective in conjunction 
+with <I>-boost</I>. Using <I>-sedb</I> with <I>-boost</I> has the 
+same effect as using <I>-sedb</I> with <I>-no_check</I>.
+<BR><BR>
+
+<DT>
+<A NAME="manifest_string_trace"><I>-manifest_string_trace</I>:</A><BR><DD>
+This option adds some extra code into the executable in order 
+to track non-once manifest string allocations.
+The default behaviour is to print an information message each time a 
+non-once manifest string is allocated at runtime.
+The message also indicates the position of the corresponding 
+manifest string in the Eiffel source file.
+This default behaviour can be adapted to your needs by modifying 
+the <TT>SmartEiffel/sys/runtime/manifest_string_trace.c</TT> file.
+<BR><BR>
+
+<DT>
+<I>-wedit</I>:<BR><DD>
+Add Wedit support.
+<BR> 
+When this option is used, the generated C code includes
+some support for the Wedit debugger.
+<BR><BR>
+
+</DL>
+</P>
+
+
+
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Options Passed to the C Compiler</FONT></TD>
+</TR>
+</TABLE>
+<P>
+Any remaining options, *.c files, *.o files, -l* libraries, C optimisations options... are passed to the C compiler/linker. They do not affect the Eiffel to C
+compilation process.
+</P>
+
+
+<CENTER>
+<IMG SRC="se-line.gif" ALT="[Line]">
+<BR>
+<FONT SIZE="-1"><I>
+Copyright &copy; Dominique COLNET and Suzanne COLLIN -
+<A HREF="mailto:SmartEiffel@loria.fr">&lt;SmartEiffel@loria.fr&gt;</A>
+<BR>
+<!-- hhmts start -->
+Last modified: Tue Feb 11 12:13:11 CET 2003
+<!-- hhmts end -->
+<BR>
+</I></FONT><BR></CENTER>

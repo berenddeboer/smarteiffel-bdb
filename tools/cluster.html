@@ -1,0 +1,102 @@
+  <html>
+    <head></head>
+    <body>
+      <p>
+	The tools suite. This cluster contains all the main classes
+	used to implement the following tools:
+      </p>
+      <ul>
+	<li><a href="../../man/clean.html">clean</a></li>
+	<li><a href="../../man/compile.html">compile</a></li>
+	<li><a href="../../man/compile_to_c.html">compile_to_c</a></li>
+	<li><a href="../../man/compile_to_jvm.html">compile_to_jvm</a></li>
+	<li><a href="../../man/finder.html">finder</a></li>
+	<li><a href="../../man/pretty.html">pretty</a></li>
+	<li><a href="../../man/short.html">short</a></li>
+      </ul>
+      <p>
+	This cluster also provides many utilities used by the tools:
+      </p>
+      <ul>
+	<li>
+	  <a href="ace.html">ACE</a> and <a
+	  href="cluster.html">CLUSTER</a> provide for LACE features.
+	</li>
+	<li>
+	  <a href="base_class.html">BASE_CLASS</a> represents a
+	  syntactic class, i.e. a tree of objects directly derived from
+	  a source by the <a href="eiffel_parser.html">Eiffel
+	  parser</a>.
+	</li>
+	<li>
+	  <a href="e_feature.html">E_FEATURE</a> is the interface of
+	  the <a href="summary_tools@feature.html">feature</a>
+	  component. It represents a syntactic feature (attribute,
+	  command, query, once feature and so on) i.e. a tree of
+	  objects directly derived from a source by the <a
+	  href="eiffel_parser.html">Eiffel parser</a>.
+	</li>
+	<li>
+	  <a href="e_type.html">E_TYPE</a> is the interface of the <a
+	  href="summary_tools@e_type.html">e_type</a> component. It
+	  represents an Eiffel type.
+	</li>
+	<li>
+	  <a href="expression.html">EXPRESSION</a> is the interface of
+	  the <a href="summary_tools@expression.html">expression</a>
+	  component. It represents an Eiffel expression, i.e. a
+	  syntactic construction having a result type.
+	</li>
+	<li>
+	  <a href="globals.html">GLOBALS</a> allows the tools to share
+	  singletons:
+	  <ul>
+	    <li><a href="address_of_pool.html">address_of_pool</a></li>
+	    <li><a href="ace.html">ace</a></li>
+	    <li><a href="assignment_handler.html">assignment_handler</a></li>
+	    <li><a href="constant_pool.html">constant_pool</a></li>
+	    <li><a href="c_pretty_printer.html">cpp</a></li>
+	    <li><a href="echo.html">echo</a></li>
+	    <li><a href="eiffel_parser.html">eiffel_parser</a></li>
+	    <li><a href="error_handler.html">error_handler</a></li>
+	    <li><a href="frozen_string_list.html">frozen_string_list</a></li>
+	    <li><a href="gc_handler.html">gc_handler</a></li>
+	    <li><a href="id_provider.html">id_provider</a></li>
+	    <li><a href="jvm.html">jvm</a></li>
+	    <li><a href="manifest_array_pool.html">manifest_array_pool</a></li>
+	    <li><a href="method_info.html">method_info</a></li>
+	    <li><a href="once_manifest_string_pool.html">once_manifest_string_pool</a></li>
+	    <li><a href="once_routine_pool.html">once_routine_pool</a></li>
+	    <li><a href="pretty_printer.html">pretty_printer</a></li>
+	    <li><a href="smart_eiffel.html">smart_eiffel</a></li>
+	    <li><a href="string_aliaser.html">string_aliaser</a></li>
+	    <li><a href="switch_collection.html">switch_collection</a></li>
+	    <li><a href="system_tools.html">system_tools</a></li>
+	  </ul>
+	</li>
+	<li>
+	  <a href="instruction.html">INSTRUCTION</a> is the interface
+	  of the <a
+	  href="summary_tools@instruction.html">instruction</a>
+	  component. It represents an Eiffel instruction.
+	</li>
+	<li>
+	  <a href="run_class.html">RUN_CLASS</a> represents a live
+	  class, i.e. one to which some objects are assigned (either
+	  via creation, assignment or feature call). For example,
+	  <b>ARRAY[INTEGER]</b> and <b>ARRAY[STRING]</b> are two
+	  different <a href="run_class.html">RUN_CLASS</a>es sharing
+	  the same <a href="base_class.html">BASE_CLASS</a>.
+	</li>
+	<li>
+	  <a href="run_feature.html">RUN_FEATURE</a> represents a live
+	  feature, i.e. a callable feature tailored for some
+	  particular <a href="run_class.html">RUN_CLASS</a>.
+	</li>
+	<li>
+	  <a href="smart_eiffel.html">SMART_EIFFEL</a> manages the
+	  compilation process.
+	</li>
+      </ul>
+    </body>
+  </html>

@@ -1,0 +1,30 @@
+c_compiler_type: vpcc
+cpp_compiler_type: vpcc
+
+[boost]
+c_compiler_options: -O2
+cpp_compiler_options: -O2
+
+[no_check]
+c_compiler_options: -O1
+cpp_compiler_options: -O1
+
+[require_check]
+
+[ensure_check]
+
+[invariant_check]
+
+[loop_check]
+
+[all_check]
+
+[debug_check]
+smarteiffel_options: -no_strip
+c_compiler_options: -g
+cpp_compiler_options: -g
+
+[release]
+smarteiffel_options: -no_split -compact
+c_compiler_options: -O3
+cpp_compiler_options: -O3

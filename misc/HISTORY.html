@@ -1,0 +1,1897 @@
+<!-- Title = history of changes -->
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE>
+<CENTER><FONT COLOR="#FFFFFF" SIZE=+3><B>History of Changes</B></FONT></CENTER>
+</TD>
+</TR>
+</TABLE>
+<BR>&nbsp;
+Latest version first. 
+<BR>&nbsp;
+<BR>&nbsp;
+
+
+
+<A NAME="1.1"></A>
+<B>Release 1.1 [Charlemagne] - Monday June 16<SUP>th</SUP>, 2003</B>
+<UL TYPE="circle">
+
+<LI>
+Thoroughly changed the <B>configuration handling</B>. The new scheme is more
+complete, and much more flexible.
+  <UL>
+
+    <LI>
+    Along with the configuration, wrote a <B>new-generation installer</B>.
+    This tool is also more complete, but also really user-oriented: the
+    simplest way to use it is to keep your finger on the &lt;Enter&gt; key.
+    For more informations about installation and all new configuration
+    capabilities, please have a look to
+    <A HREF="../man/install.html">install page</A>.
+    </LI>
+
+    <LI>
+    Added the <TT>-c_mode</TT> option, in conjunction with the new
+    configuration handling.
+    </LI>
+
+    <LI>
+    Added a <TT>-loadpath</TT> flag to read an extra loadpath.
+    </LI>
+  </UL>
+</LI>
+
+<LI>
+A new tool, <B>class_check</B>, allows to check the syntax and local semantics
+of one or many classes. The whole class is staticaly checked whereas
+compilation using a test program does not fully check unused features.
+Note that checking many files at a time is much faster than
+checking all the files separately.
+</LI>
+
+<LI>
+Added a small <B>expression evaluator</B> to sedb. One can now display the
+attributes of the objects on the stack. Be sure to read the "more-help"
+section on data display (for once functions, the result is unavailable
+if it has not yet been called).
+</LI>
+
+<LI>
+<B>The optimizer was rewritten</B> to be more thorough. It now works with both
+C and Java backends, and does a far better job than the old optimizer.
+</LI>
+
+<LI>
+Implemented <B>inspect on STRINGs</B>.
+</LI>
+
+<LI>
+Added require clause to operators in integer_general. We can now do <B>safe
+computing with integers</B>, just like we do safe access to arrays with bound
+checking!
+</LI>
+
+<LI>
+Pretty significantly updated.
+</LI>
+
+<LI>
+The <B>C files produced</B> by the compiler now should work on any platform,
+<B>even with the GC turned on</B>.
+</LI>
+
+<LI>
+Added <B>Unicode support</B> in STRINGs (see the 
+<TT>SmartEiffel/tutorial/unicode</TT> and 
+<TT>SmartEiffel/lib/unicode</TT> directories).
+</LI>
+
+<LI>
+Added new abstract class FILE and new features in class DIRECTORY.
+</LI>
+
+<LI>
+Added <B>hexadecimal notation</B> for INTEGER constants, 
+CHARACTER constants and
+inside manifest STRINGs as well. See the example in file
+<TT>SmartEiffel/tutorial/hexadecimal.e</TT> for more information.
+</LI>
+
+<LI>
+Added agent facilities on STRING and UNICODE_STRING (warning,
+those facilities are non-standard extensions).
+</LI>
+
+<LI>
+<B><EM>Visitor</EM> pattern</B> support was added (yes, the design pattern).
+Beware, it's currently alpha code. You can play with it, but don't use it for
+production code yet. Expect it to change somewhat in the next releases.
+There will be examples (later!) of how to use this pattern to add new plugin
+tools in SmartEiffel.
+</LI>
+
+<LI>
+Moved the <TT>bin_c</TT> directory to <TT>install/germ</TT>.
+</LI>
+
+<LI>Reorganized the <TT>SmartEiffel/sys/runtime</TT> directory:
+   <UL>
+      <LI>
+      Clearly separated C and Java backend helpers
+      </LI>
+
+      <LI>
+      Split <TT>SmartEiffelRuntime.java</TT> in smaller chunks. 
+      To use programs built with compile_to_jvm, add the 
+      <TT>SmartEiffel/sys/runtime/java/smarteiffel.jar</TT> file to
+      your CLASSPATH
+      </LI>
+
+   </UL>
+</LI>
+
+<LI>
+Added the <TT>-compact</TT> option which produces much more compact C code.
+</LI>
+
+<LI>
+<TT>same_type</TT> from GENERAL is now obsolete. Use <TT>same_dynamic_type</TT> instead.
+</LI>
+
+<LI>
+Obsoleted operators <TT>"and"</TT>, <TT>"or"</TT>, <TT>"xor"</TT> and
+<TT>"not"</TT> for INTEGERs, and added prefix operator <TT>"~"</TT>. 
+</LI>
+
+<LI>
+MEMORY.allocated_bytes is more accurate.
+</LI>
+
+<LI>
+Generated object files are now removed before calling C compiler.
+</LI>
+
+<LI>
+Various bug fixes and improvements (see details in the
+<A
+HREF="http://SmartEiffel.loria.fr/support/bug_report.html">SmartZilla</A>
+bug tracker). 
+</LI>
+
+
+</UL><!------------------------------------------------------->
+
+
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
+
+
+
+<A NAME="1.0"></A>
+<B>Release 1.0 - Friday December 6<SUP>th</SUP>, 2002</B>
+
+<P>
+This is the very first release with the name <B>SmartEiffel</B>!<BR>
+(<A HREF="HISTORY.html#SmallEiffel">Previous releases</A> 
+were named Sma<B>ll</B>Eiffel.)
+</P>
+
+<P>
+The main changes between SmallEiffel -0.74 and SmartEiffel 1.0 are:
+</P>
+
+<UL TYPE="circle">
+
+<LI>
+Name changed from SmallEiffel to Sma<B>rt</B>Eiffel!
+</LI>
+<LI>
+Version numbering: now, versions are numbered from 1.0 beta 1 upward
+</LI>
+
+<LI>
+The new and significantly updated web site for SmartEiffel is  <A
+HREF="http://SmartEiffel.loria.fr"><TT>http://SmartEiffel.loria.fr</TT></A>. 
+(The web site for the former SmallEiffel remains, but is 
+not updated any more).
+</LI>
+
+
+<LI>
+The new <B>Reference</B> keyword is now implemented.
+Use <TT>reference&nbsp;INTEGER</TT> instead of <TT>INTEGER_REF</TT>.
+<TT>INTEGER_REF</TT> will become obsolete.
+</LI>
+
+
+<LI>
+The new <B>INTEGER_GENERAL, INTEGER_8, INTEGER_16, INTEGER_32, INTEGER_64</B>
+types are now implemented.
+</LI>
+
+
+<LI>
+After long discussions, we have decided to stick to our decision for 
+the type of integer constants (as an example, 127 is of type INTEGER_8 
+and 128 is of type INTEGER_16 and so on). Actually, we think that this
+is the most consistent choice. We also noticed that it does not break 
+a lot of code. The only one exception seems to be the manifest array
+&lt;&lt;&gt;&gt; notation. For this latest point, we are going to propose 
+to ECMA a new notation which allows the creation of any kind of
+collection and which removes this INTEGER_* problem. Sorry for
+the inconvenience and stay tuned :)
+</LI>
+
+
+<LI>
+64-bit architectures supported.
+</LI>
+
+
+<LI>
+Internal improvements in the type system (better C code produced)
+</LI>
+
+
+<LI>
+Buffered I/O. You may get big improvements on programs performing 
+lots of file reading or writing (STD_INPUT and STD_OUTPUT are also buffered).
+</LI>
+
+
+<LI>
+The <TT>short</TT> command now has the "-client" option 
+(see <A HREF="../man/short.html">short command manual</A> for more details).
+</LI>
+
+
+
+<LI>
+The "tcc" C compiler is now supported, use release 0.9.14 or better
+(see <A HREF="http://www.tinycc.org/"><TT>http://www.tinycc.org</TT></A>).
+Always using <TT>-no_split</TT> is probably a good choice.
+</LI>
+
+
+
+<LI>
+New bug reporting tool. Now you can see all known bugs and their state. Allways refers to the <A HREF="http://SmartEiffel.loria.fr/support/bug_report.html">bug report page</A> on SmartEiffel site.
+</LI>
+
+
+<LI>
+As suggested on our mailing list, there are now two new classes in 
+order to remove some definitions from GENERAL (see class MATH_CONSTANTS
+and class CHARACTER_CONSTANTS).
+</LI>
+
+
+<LI>
+As asked recently on our mailing list, the new notation for free 
+operators is now implemented. Even if our implementation is quite
+close to the new and upcoming ETL, it does not follow it exactely. 
+Sorry. In order to avoid parsing problems we decided for example 
+to reject &gt;&gt; as a possible free operator. We also decided to accept 
+more free operators to remain compatible with the old syntax (as an 
+example, there are a lot of such operators in gobo).
+<B>Note:</B> free operators must not include letters nor digits.
+</LI>
+
+
+<LI>
+Type mark must now follow the <TT>Precursor</TT> keyword.
+</LI>
+
+
+<LI>
+Fixed the bug recently reported by Wolfgang Jansen. (Well isolated
+bug report, thanks!) This bug was related to expanded objects and the
+twin feature.
+</LI>
+
+
+<LI>
+Fixed the -manifest_string_trace bug recently reported by Alexis 
+Saettler. (Well isolated bug as well, thanks!)
+</LI>
+
+
+<LI>
+Relaxed the redefinition rule for like Current (a brand new decision
+just made during the very last 18th Nov. 2002 ECMA meeting). In a
+few words, the new rules now allow you to redefine a "like Current" type
+mark into some hard-coded type mark (e.g. "FOO").
+Note that we think this new rule significantly improves things for
+is_equal (which should be of interest for the NICE group members).
+So we applied it in our NUMBER library implementation of is_equal
+(like Current is now changed to NUMBER) and changed the postcondition 
+of is_equal in GENERAL (ensure assertion relaxed to no longer call 
+standard_is_equal).
+</LI>
+
+
+<LI>
+If you're using lcc-win32 as a C compiler with SmartEiffel, a bug was
+present in lcc that caused problems with our new release. Jacob Navia 
+was kind enough to fix it and provide a new version dated Friday,
+29-Nov-2002. So please use the most recent version of lcc-win32 from 
+<A HREF="http://www.cs.virginia.edu/~lcc-win32/"><TT>http://www.cs.virginia.edu/~lcc-win32/</TT></A>
+</LI>
+
+
+<LI>
+New Cygwin directory notation is now supported. Recent Cygwin systems will be
+automatically detected while install.
+</LI>
+
+<LI>
+Other "secret" goodies maturing in the source code, which should be 
+available in a future release. If you're curious, you may want to 
+hunt them down to see what's going on.
+</LI>
+
+
+<LI>
+Improved internal lab process to more easily provide professional 
+support contracts (see <A HREF="http://SmartEiffel.loria.fr/support/support.html#premium">premium support</A> for 
+more details).
+</LI>
+
+<LI>
+New functions in COLLECTION_SORTER classes using dichotomic search.
+</LI>
+
+<LI>
+GC support for the Elate system updated.
+</LI>
+
+
+<LI>
+Various bug fixes and improvements.
+</LI>
+
+
+
+
+</UL>
+
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
+
+<BR>
+
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE>
+<CENTER><FONT COLOR="#FFFFFF" SIZE=+3><B><A NAME="SmallEiffel"></A>SmallEiffel History of Changes</B></FONT></CENTER>
+</TD>
+</TR>
+</TABLE>
+<BR>
+From this point, history is relative to the previous
+<B>SmallEiffel</B> project. Here, version numbering is negative
+(from -0.99 to -0.74). Changes are listed in reverse chronological order, the
+oldest one being at the bottom of the page.
+<BR>
+<BR>
+
+<A NAME="-0.74"></A>
+<B>Release - 0.74 - Tuesday May 7<SUP>th</SUP>, 2002</B>
+<UL TYPE="circle">
+
+<LI>
+The new <B>agent</B> mechanism is now implemented.
+See <TT>tutorial/agent</TT> directory for examples.
+</LI>
+
+<LI>
+Added <B>agent</B> based features in class COLLECTION, ARRAY,
+FIXED_ARRAY, LINKED_LIST, TWO_WAY_LINKED_LIST, DICTIONARY, and SET.
+Names and signatures comes from ETL: actually, <TT>do_all</TT>, 
+<TT>for_all</TT> and <TT>exists</TT>. 
+</LI>
+
+<LI>
+The new <B>create</B> instruction/expression is now fully implemented 
+and correctly pretty-printed. The new <TT>default_create</TT> 
+feature mechanism is also implemented.
+</LI>
+
+<LI>
+The new manifest string notation for <B>verbatim manifest string</B> 
+is now implemented as well as the new optional <B>once</B> keyword
+which may precede the manifest string itself.
+See also the new 
+<A HREF="../man/compile_to_c.html#manifest_string_trace">
+<TT>-manifest_string_trace</TT></A> flag documentation to track 
+non-once manifest strings creations.
+</LI>
+
+<LI>
+Added examples for the new <B>TUPLE type</B> in directory 
+<TT>tutorial/tuple</TT>.
+</LI>
+
+<LI>
+Added many new features in class MEMORY to tune the garbage collector.
+Those features may be useful for <B>embedded applications</B>.
+(See <TT>tutorial/memory</TT> for examples.)
+</LI>
+
+<LI>
+The external C interface is now compatible with the new ETL
+definition.
+(See directory <TT>tutorial/external/C</TT> for examples.)
+</LI>
+
+<LI>
+Added flag 
+<A HREF="../man/compile_to_c.html#high_memory_compiler">
+<TT>-high_memory_compiler</TT></A> to <TT>compile_to_c</TT>.
+</LI>
+
+<LI>
+The new name of class BASIC_TIME is now simply TIME (the old class 
+is still there and tagged with the obsolete keyword). 
+Added two new classes in SmallEiffel/lib/time: CLOCK and
+MICROSECOND_TIME.
+(See <TT>tutorial/time</TT> for examples.)
+</LI>
+
+<LI>
+Added class BINARY_FILE_READ, class BINARY_FILE_WRITE and class
+BINARY_FILE_READ_WRITE. 
+Class STD_FILE_READ is renamed TEXT_FILE_READ.
+Class STD_FILE_WRITE is renamed TEXT_FILE_WRITE.
+Class STD_FILE_READ_WRITE is renamed TEXT_FILE_READ_WRITE.
+Old class are obsoleted.
+</LI>
+
+<LI>
+Added feature <TT>connect_append_to</TT> both in class 
+TEXT_FILE_WRITE and BINARY_FILE_WRITE. 
+</LI>
+
+<LI>
+Added a new class called <B>SYSTEM</B> which contains various 
+system features: <TT>execute_command</TT>, 
+<TT>get_environment_variable</TT>, 
+<TT>set_environment_variable</TT>, etc.
+By the way, the old <TT>system</TT> feature of class GENERAL
+as well as the old <TT>get_environment_variable</TT> of
+class GENERAL are now obsolete. 
+</LI>
+
+<LI>
+Added feature <TT>size_of</TT> and feature <TT>last_change_of</TT> in 
+class FILE_TOOLS (see also <TT>tutorial/basic_time</TT> for examples).
+</LI>
+
+<LI>
+Added feature <TT>append_decimal_in</TT> and feature
+<TT>to_decimal</TT> in class NUMBER as well as a new example 
+the <TT>tutorial/number</TT> directory.
+</LI>
+
+<LI>
+Added feature <TT>add</TT> both in class COLLECTION_SORTER and 
+in class REVERSE_COLLECTION_SORTER.
+</LI>
+
+<LI>
+Added feature <TT>reference_at</TT> in class DICTIONARY.
+</LI>
+
+<LI>
+Added feature <TT>infix "+"</TT> in class 
+POINTER. 
+</LI>
+
+<LI>
+Various bug fixes and improvements.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<A NAME="-0.75"></A>
+<B>Release - 0.75 - Thursday July 16<SUP>th</SUP>, 2001</B>
+<UL TYPE="circle">
+
+<LI>
+Added <B>ACE file support</B> (ACE stands for Assembly of Classes in Eiffel).
+The most important advantage is that assertion level checking can
+now be selected differently for each class.
+This is also true for the runtime trace mechanism
+(<A HREF="../man/compile_to_c.html#trace"><TT>-trace</TT></A>).
+In ACE file mode you have to provide a special *.ace file to drive
+the compiler. 
+See <TT>tutorial/ace</TT> directory for examples.
+Note that the traditional command line mode will continue to be 
+supported.
+</LI>
+
+<LI>
+There is now a powerful <B>Eiffel level debugger</B> with on-line 
+help documentation.
+This debugger features step by step execution, 
+navigation into the run-time stack,
+multi-conditions breakpoints,
+garbage collector invocation, profiling support, etc..
+To use <B>sedb</B> (SmallEiffel DeBugger), just add the 
+<A HREF="../man/compile_to_c.html#trace"><TT>-trace</TT></A>
+flag in your traditional command line of compilation or 
+activate the <TT>trace</TT> mode in your ACE file.
+</LI>
+
+<LI>
+Added a traditional <B><TT>-help</TT></B> flag for all commands to
+print a summary of available options.
+</LI>
+
+<LI>
+In <B>ACE files</B> as well as in 
+"<A HREF="../man/system.html#loadpath"><CODE>loadpath.se</CODE></A>"
+files the <CODE>${SmallEiffelDirectory}</CODE> environment variable is
+automatically defined using the value of the
+<CODE>${SmallEiffel}</CODE> environment variable.
+</LI>
+
+<LI>
+Full compatibility with the new ELKS'2001 STRING class.
+Most modifications are simple renamings which are automatically
+pointed out by <code>obsolete</code> warnings.
+For obvious uniformity reasons, some other classes of the library
+have also been modified (ARRAY, LINKED_LIST, DICTIONARY, etc.).
+As an example, <TT>nb_occurrences</TT> of ARRAY is now obsolete 
+and the <code>obsolete</code> warning tells you that <TT>occurrences</TT>
+is the new name to be used.
+This work is still a work in progress. 
+Please, contact Arno Wagner (in charge of the STRING class
+modification) on our <A HREF="http://SmartEiffel.loria.fr/support/mailing-list.html">mailing list</A>.
+</LI>
+
+<LI>
+The new <B>TUPLE type</B> is now implemented.
+</LI>
+
+<LI>
+Added class TIME_IN_GERMAN to handle <B>date and time</B> in German.
+See <TT>tutorial/basic_time</TT> for examples.
+</LI>
+
+<LI>
+Feature <TT>is_equal</TT> of class COMPARABLE is now ELKS 
+compatible.
+</LI>
+
+<LI>
+Added feature <TT>internal_key</TT> in class DICTIONARY.
+</LI>
+
+<LI>
+Various bug fixes and improvements.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<A NAME="-0.76"></A>
+<B>Release - 0.76 - Saturday November 11<SUP>th</SUP>, 2000</B>
+<UL TYPE="circle">
+
+<LI>
+Full compatibility with the new ELKS'2000 ARRAY class.
+Most modifications are simple renamings which are automatically
+pointed out by <code>obsolete</code> warnings.
+For obvious uniformity reasons, some other classes of the library
+have also been modified. As an example, <TT>empty</TT> is always 
+replaced with <TT>is_empty</TT> in all classes.
+The name <TT>all_cleared</TT> is always replaced with 
+<TT>all_default</TT>.
+The most difficult problem is due to the fact that <TT>is_equal</TT>
+in ARRAY  no longer uses the elements <TT>is_equal</TT> to compare them,
+but the basic '=' infix operator.
+For uniformity reasons, this has also been done for all
+COLLECTIONs as well as class DICTIONARY.
+</LI>
+
+<LI>
+Added feature <TT>is_equal_map</TT> for all COLLECTIONs (ARRAY, 
+FIXED_ARRAY, LINKED_LIST, TWO_WAY_LINKED_LIST) and for class 
+DICTIONARY.
+This is the replacement for the old implementation of 
+<TT>is_equal</TT> (ie. <TT>is_equal_map</TT> use
+<TT>is_equal</TT> to compare elements).
+</LI>
+
+<LI>
+Added feature <TT>reindex</TT> in class ARRAY.
+</LI>
+
+<LI>
+Added a brand new class SET[E->HASHABLE].
+</LI>
+
+<LI>
+Added support for the Elate (Amiga) system as well as the vpcc C
+compiler.
+</LI>
+
+<LI>
+Added support for the QNX real time operating system.
+</LI>
+
+<LI>
+For feature <B><TT>dispose</TT></B> of class MEMORY (as well
+as redefinitions), the class invariant is no longer triggered.
+</LI>
+
+<LI>
+Added features <TT>atan2</TT> and <TT>pow</TT> both in class REAL and 
+DOUBLE.
+</LI>
+
+<LI>
+Internal implementation of BASIC_TIME revisited (using now a double
+for memorization).
+</LI>
+
+<LI>
+Implementation of class DICTIONARY completely revisited.
+Also added features <TT>add</TT>,  <TT>item_map_in</TT> and
+<TT>key_map_in</TT> in the new class DICTIONARY.
+</LI>
+
+<LI>
+Added feature <TT>reverse</TT> in class COLLECTION (thus, this feature
+is available for all subclasses of COLLECTION (i.e. ARRAY,
+FIXED_ARRAY, LINKED_LIST and TWO_WAY_LINKED_LIST).
+</LI>
+
+<LI>
+Various bug fixes and improvements.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<A NAME="-0.77"></A>
+<B>Release - 0.77 - Saturday February 12<SUP>th</SUP>, 2000</B>
+<UL TYPE="circle">
+
+<LI>
+Added in directory SmallEiffel the new 
+<TT><A HREF="../man/install.html">install</A></TT>
+command (class
+<B><code>install.e</code></B> with a precompiled 
+<B><code>install.exe</code></B> for Windows).
+This <code>install.e</code> class is the code for the installer of the 
+SmallEiffel distribution it comes with, and is designed to be as
+portable as possible. 
+This <B>automatic installation program</B> has already been tested for 
+Windows/lcc-win32, Windows/bcc32, Linux/gcc, Solaris/gcc, 
+DEC-Alpha/gcc and FreeBSD/gcc, ... 
+<BR>
+To install SmallEiffel under some UNIX like system, just type 
+<code>make</code> in the SmallEiffel directory.
+<BR>
+To install SmallEiffel under Windows, just run
+<B><code>install.exe</code></B>.
+<BR>
+On other systems, C compile and run the <B><code>install.c</code></B>
+file.
+</LI>
+
+<LI>
+Added <B>C++ externals</B> support (creation of C++ objects, deletion
+of C++ objects, member function calls, static function calls etc.).
+See <TT>tutorial/external/C++</TT> for examples.
+</LI>
+
+<LI>
+Added  <B>NUMBER library</B>, for infinite precision and infinitely large
+numbers. 
+See <TT>tutorial/number</TT> for examples. 
+</LI>
+
+<LI>
+Added <B>ITERATOR library</B>, for external iterators on data structures. 
+See <TT>tutorial/iterator</TT> for examples.
+</LI>
+
+<LI>
+Added class BASIC_DIRECTORY and class DIRECTORY to handle in a
+portable way <B>directories</B> as well as system path notations.
+See <TT>tutorial/basic_directory</TT> for examples. This class is also 
+implemented for Java bytecode (command
+<TT><A HREF="../man/compile_to_jvm.html">compile_to_jvm</A></TT>).
+</LI>
+
+<LI>
+Added class BASIC_TIME, TIME_IN_FRENCH TIME_IN_ENGLISH and 
+TIME_IN_ITALIAN to handle <B>date and time</B>.
+See <TT>tutorial/basic_time</TT> for examples.
+Low level routines for Java byte-code are not yet implemented 
+If you have some time to do this, you just have to add the 
+missing Java code in <TT>sys/runtime/SmallEiffelRuntime.java</TT> (please
+contribute your work on the SmallEiffel mailing list).
+</LI>
+
+<LI>
+Added class BIT_STRING for very large bit sequences, with reference 
+semantics.
+</LI>
+
+<LI>
+Features <TT>deep_clone</TT> and <TT>deep_equal</TT> of 
+class GENERAL are now implemented for the C compilation mode (does
+not work yet with <TT>compile_to_jvm</TT>).
+</LI>
+
+<LI>
+Added feature <TT>skip_remainder_of_line</TT> and feature 
+<TT>reach_and_skip</TT> in class INPUT_STREAM. 
+Warning: in order to be consistent with other features, the behavior
+of features <TT>skip_separators</TT> and 
+<TT>skip_separators_using</TT> has changed.
+</LI>
+
+<LI>
+Added feature <TT>to_hexadecimal</TT> and feature 
+<TT>to_hexadecimal_in</TT> in class INTEGER. 
+</LI>
+
+<LI>
+<B>Improved incremental recompilation</B> of the generated C code (also 
+fixed a very old bug in incrementality).
+</LI>
+
+<LI>
+Exceptions handling: the <TT>default_rescue</TT> feature is now
+supported.
+</LI>
+
+<LI>
+Various bug fixes and improvements (type inference score increased, ...).
+</LI>
+
+</UL><!------------------------------------------------------->
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<A NAME="-0.78"></A>
+<B>Release - 0.78 - Saturday June 05<SUP>th</SUP>, 1999.</B>
+<UL TYPE="circle">
+
+<LI>
+New <B><TT>-html2</TT></B> flag for command <TT>short</TT> generates a colorized 
+HTML short form for classes. 
+</LI>
+
+<LI>
+The garbage collector now takes into account feature <B><TT>dispose</TT></B> 
+of class MEMORY for reference objects. 
+</LI>
+
+<LI>
+<B>Obsolete classes</B> (<code>obsolete</code> keyword) now supported.
+</LI>
+
+
+<LI>
+<B>Assertion tags</B> are now displayed when an assertion fails.
+</LI>
+
+
+<LI>
+Added <B>environment variable in loadpath files</B>. Syntax: <CODE>${SOME_VAR}</CODE>
+</LI>
+
+<LI>
+Added the <B><TT>-no_style_warning</TT></B> flag to suppress warnings when 
+the recommended styles guidelines for Eiffel are not strictly followed.
+</LI>
+
+<LI>
+Added the <B><TT>-version</TT></B> flag to show SmallEiffel's version.
+</LI>
+
+<LI>
+Enhanced ease of use with and adaptability to various C compilers
+(SYSTEM_TOOLS). Files <TT>compiler.<I>system</I></TT>,
+<TT>linker.<I>system</I></TT> and <TT>o_suffix.<I>system</I></TT> are
+now obsolete and replaced by a unique file <TT>compiler.se</TT> common 
+to all systems. See the <A HREF="../man/system.html">System configuration
+page </A> for more information.
+</LI>
+
+<LI>
+Class LINKED_LIST now replaces  obsolete class LINK_LIST (simple renaming).<BR>
+Class TWO_WAY_LINKED_LIST now replaces  obsolete class LINK2_LIST
+(simple renaming).<BR> 
+</LI>
+
+<LI>
+Fixed "implicit renaming" bug.
+</LI>
+
+<LI>
+Cleaned all source code of tabulations at beginning of line (made 
+code look ugly when using an editor whose tabs were not 8).
+</LI>
+
+<LI>
+Some new ELKS'95 features implemented. 
+</LI>
+ 
+<LI>
+Validity rule VEEN fixed.
+</LI>
+
+<LI>
+Added class COLLECTION_SORTER and REVERSE_COLLECTION_SORTER to the library.
+</LI>
+
+<LI>
+Fixed file renaming portability bug (".d files bug").
+</LI>
+
+<LI>
+Validity rule VCFG.1 is now enforced.
+</LI>
+
+<LI>
+Validity rule VAPE is now enforced.
+</LI>
+
+<LI>
+Classes mentioned in a cecil.se file are now automatically made live. 
+Makes it easier to link with external libraries.
+</LI>
+
+<LI>
+Various other bug fixes.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<A NAME="-0.79"></A>
+<B>Release - 0.79 - Tuesday December 22<SUP>nd</SUP>, 1998.</B>
+<UL TYPE="circle">
+
+<LI>
+The new Eiffel construct <B><TT>Precursor</TT></B> as described OOSC2 is
+now implemented.
+</LI>
+
+<LI>
+The Eiffel expression <B><TT>strip</TT></B> is now implemented.
+</LI>
+
+<LI>
+Nested loadpath files now allowed.
+</LI>
+
+<LI>
+Extended anchored definition to accept infix and prefix feature names. 
+For example, this kind of declaration is now accepted : 
+<TT>&nbsp;&nbsp;&nbsp;&nbsp; foo: like infix "+"</TT>.
+</LI>
+
+<LI>
+Classes COLLECTION2, ARRAY2 and FIXED_ARRAY2 of <TT>lib/base</TT> completely
+revisited.
+</LI>
+
+<LI>
+Fixed a bug related to calls of the form f.g.h; on expanded objects.
+</LI>
+
+<LI>
+Fixed a bug related to inheritance of generic classes.
+</LI>
+
+<LI>
+Fixed bugs related to assertions checking in case of exceptions
+(rescue clause, retry). Improved cycle detection in assertions.
+</LI>
+
+<LI>
+Fixed bug in GC related to recycling of "monsters" (very large 
+resizable objets).
+</LI>
+
+<LI>
+Fixed an incredible bug in the implementation of the <TT>like Current</TT> 
+type mark. ;-).
+</LI>
+
+<LI>
+Fixed many others bugs (<TT>$</TT> operator, GC for alpha DEC, ...).
+</LI>
+
+<LI>
+System customization file for the BeOS system added in the <code>"sys"</code>
+sub-directory (more on 
+<A HREF="../man/system.html">system customization</A>).
+</LI>
+
+<LI>
+Contents of the environment variable <I>SmallEiffel</I> must be now
+set with the absolute path of the file <code>"system.se"</code> which is
+in the sub-directory <code>"sys"</code> of the installation directory.
+<BR>
+Under a UNIX-like system, the value of the <I>SmallEiffel</I> 
+environment variable may be for example:
+<code>/usr/lib/SmallEiffel/sys/system.se</code>
+<BR>Commands are also more robust when this environment variable 
+contains non-alphanumeric characters.
+</LI>
+
+<LI>
+No more ensure assertion in GENERAL.<TT>get_environment_variable</TT>.
+</LI>
+
+<LI>
+Commands <TT><A HREF="../man/compile_to_jvm.html">compile_to_jvm</A></TT>
+and  <TT><A HREF="../man/print_jvm_class.html">print_jvm_class</A></TT>
+completely revisited. Java byte-code can be now used with the 
+<B><TT>-verify</TT> Java option</B>).
+</LI>
+
+<LI>
+Validity rule VDRD.6 is now enforced.
+</LI>
+
+<LI>
+Balancing rule (automatic promotion) for INTEGER, DOUBLE and REAL is now implemented.
+</LI>
+
+<LI>
+Recursive once routines now work correctly.
+</LI>
+
+<LI>
+Unmodified generated C files are not touched anymore.
+</LI>
+
+<LI>
+Assertions correctly checked for all external C routines.
+</LI>
+
+<LI>
+Exception handling now works when an exception occurs in external C code.
+</LI>
+
+<LI>
+Cleaned the compiler and decreased its memory footprint.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<A NAME="-0.80"></A>
+<B>Release - 0.80 - Thursday July 9<SUP>th</SUP>, 1998.</B>
+<UL TYPE="circle">
+
+<LI>
+<B>Exception handling</B> implemented. Class EXCEPTIONS added 
+in <TT>lib/kernel</TT>. 
+</LI>
+
+<LI>
+Execution trace stack implementation completely revisited:
+more comprehensive information is now available, and the overhead 
+incurred by this stack is greatly reduced (executables are about 
+3 times faster when running in <TT>-all_check</TT> mode).
+</LI>
+
+<LI>
+Added option <TT>-no_main</TT> in command 
+<A HREF="../man/compile_to_c.html"><TT>compile_to_c</TT></A>
+to avoid generation of the C main function. This is useful when one
+wants to start execution from outside before calling some Eiffel routines
+via the <A HREF="../man/cecil.html"><TT>cecil</TT></A> interface.
+</LI>
+
+<LI>
+Behavior of compilation flag <A HREF="../man/compile_to_c.html#trace">
+<TT>-trace</TT></A> of command 
+<TT>compile_to_c</TT> changed to allow step-by-step execution 
+(embryo of Eiffel source code debugger).
+</LI>
+
+<LI>
+Feature ARRAY.<TT>resize</TT> completely revisited (added two 
+features in class NATIVE_ARRAY: <TT>clear</TT> and <TT>move</TT>).
+</LI>
+
+<LI>
+Garbage Collector optimized (the GC should be more agressive and some 
+benchmarks are included in directory
+<TT>SmallEiffel/misc/benchmarks/gc/*/bench.e</TT>).
+</LI>
+
+<LI>
+Associativity of infix operator "^" is now correctly handled.
+</LI>
+
+<LI>
+Fixed bugs in PLATFORM for <TT>Minimum_double</TT>, <TT>Minimum_real</TT>
+and <TT>Minimum_character_code</TT>.
+</LI>
+
+<LI>
+Fixed some others bugs about export rules, about expanded objects with expanded
+attributes.
+</LI>
+
+<LI>
+Fixed bugs in <TT>pretty</TT>.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.81 - Thursday April 9<SUP>th</SUP>, 1998</B>
+<UL TYPE="circle">
+
+<LI>
+First finalized version of the <B>garbage collector</B>. Currently supported 
+architectures are SPARC Solaris, HP-UX, Linux, MacOS, Windows 95 and NT
+(see file
+<TT>SmallEiffel/sys/gc</TT> for details).
+Added flag <TT>-no_gc</TT> to suppress the GC (see 
+<TT><A HREF="../man/compile_to_c.html">man/compile_to_c</A></TT>).
+</LI>
+
+<LI>
+Changed the default for the generation of C code. Now, the C code and 
+object files are kept by default. (This previously required using option
+<TT>-c_code</TT>, which becomes obsolete.) 
+<BR>
+Added flag <TT>-clean</TT> which removes all the C and object files of the system.
+(This corresponds to the old default behavior.)
+</LI>
+
+<LI>
+Fixed a bug related to buffered input under Windows/MS VC.
+</LI>
+
+<LI>
+Fixed a bug in <TT>misc/INSTALL.SH</TT> script.
+</LI>
+
+<LI>
+Added require <code>is_connected</code> for all features
+<code>put_*</code> of class OUTPUT_STREAM.
+</LI>
+
+<LI>
+Fixed a bug in command 
+<TT><A HREF="../man/short.html">short</A></TT> (require/ensure 
+assertion of deferred routines are now printed).
+</LI>
+
+<LI>
+Added one useful hook for mode -html1 in command  
+<TT><A HREF="../man/short.html">short</A></TT> (see hook <code>Mcn</code>).
+</LI>
+
+<LI>
+Added directory <TT>SmallEiffel/sys/runtime</TT> which contains the C runtime.
+</LI>
+
+<LI>
+Fixed a bug about instanciation of class ANY itself (not so common !).
+</LI>
+
+<LI>
+Fixed a bug about inlining of operator <TT>$</TT>.
+</LI>
+
+
+<LI>
+Fixed a bug about cyclic anchored definitions.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.82 - Friday January 16<SUP>th</SUP>, 1998</B></LI>
+<UL TYPE="circle">
+
+<LI>
+Became the <B>official GNU Eiffel compiler</B>.
+</LI>
+
+<LI>
+Added first HTML mode to command <TT><A HREF="../man/short.html">short</A></TT>.
+Flag <TT>-html1</TT>. Thanks to Matthias Klause.
+</LI>
+
+<LI>
+Fixed bugs in command <TT><A HREF="../man/pretty.html">pretty</A></TT>.
+</LI>
+
+<LI>
+It is now possible to rename/redefine <TT>external</TT> "SmallEiffel" features.
+</LI>
+
+<LI>
+Files <TT>*.hlp</TT> of directory SmallEiffel/man no longer exists. All
+the documentation is now in <TT>*.html</TT> files plus corresponding automatically
+generated <TT>*.txt</TT> files.
+</LI>
+
+<LI>
+Manifest arrays creation has been optimized.
+</LI>
+
+<LI>
+Validity rule VHRC.2 is now enforced.
+</LI>
+
+<LI>
+Fixed bugs about <TT>export</TT> clause.
+</LI>
+
+<LI>
+Feature GENERAL.<TT>hash_code</TT> no longer exists. Added ELKS class HASHABLE
+in order to be compatible with others compilers/libraries.
+</LI>
+
+<LI>
+Fixed a bug in pre-computed once functions.
+</LI>
+
+<LI>
+Fixed a bug in REAL/DOUBLE keybord input.
+</LI>
+
+<LI>
+Reintroduced left hand side cast in C code for better performances (allowed
+by the C ANSI standard).
+</LI>
+
+<LI>
+Obsolete features (obsolete keyword) now generate a Warning.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.83 - Friday September 19<SUP>th</SUP>, 1997</B>
+<UL TYPE="circle">
+
+<LI>
+Added command <TT>short</TT> to the distribution.
+</LI>
+
+<LI>
+Added directory <TT>contrib</TT> in the distribution. This directory contains
+some scripts to use <TT>gdb</TT> as source level debugger for SmallEiffel.
+</LI>
+
+<LI>
+Added flag <TT>-no_warning</TT> to commands: <TT>compile_to_c</TT>, <TT>pretty</TT>,
+and <TT>compile_to_jvm</TT>.
+</LI>
+
+<LI>
+Added flag <TT>-case_insensitive</TT> to command <TT>compile_to_c</TT>.
+</LI>
+
+<LI>
+Fixed a bug for inherit/select.
+</LI>
+
+<LI>
+Fixed a bug for some pre-computed once function.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.84 - Monday August 18<SUP>th</SUP>, 1997</B>
+<UL TYPE="circle">
+
+<LI>
+Class BIT is now implemented in Java bytecode (command <TT>compile_to_jvm</TT>).
+</LI>
+
+<LI>
+Added external specification to call Java code (when using <TT>compile_to_jvm</TT>).
+</LI>
+
+<LI>
+To fit on a single 3.5 inches disk, unsplitted C code for large commands
+(<TT>compile_to_c</TT> and <TT>compile_to_jvm</TT>) is no longer in the
+distribution as well as the old <TT>lib_test</TT> directory.
+</LI>
+
+<LI>
+Changed the algorithm to load classes in order to allow upper case letters
+in files names (priority is always given to lower case file names).
+</LI>
+
+<LI>
+Added STRING.<TT>substring_index</TT> (from ELKS written by Fridtjof SIEBERT).
+</LI>
+
+<LI>
+Added one more file in SmallEiffel/sys/ directory in order to customize
+object files suffix (thus, using Borland C compiler on Windows is now possible).
+</LI>
+
+<LI>
+Changed the behavior of <TT>end_of_input</TT> of INPUT_STREAM (this flag
+is true _after_ last character has been read).
+</LI>
+
+<LI>
+Fixed a bug in manifest arrays (mixed objects including Void).
+</LI>
+
+<LI>
+Fixed a bug dealing with some statically computed expressions.
+</LI>
+
+<LI>
+Fixed a bug in repeated inheritance.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.85 - Thursday July 3<SUP>rd</SUP>, 1997</B>
+<UL TYPE="circle">
+
+<LI>
+First beta-release of commands <TT>compile_to_jvm</TT> and 
+<TT>print_jvm_class</TT>!
+</LI>
+
+<LI>
+The new name for class C_ARRAY is now NATIVE_ARRAY (because it works both
+with Java and C). The old C_ARRAY name is temporarily accepted with a warning
+from the compiler.
+</LI>
+
+<LI>
+For readability and to avoid confusion with Java names, external tags have
+changed (see for new names in 
+<TT><A HREF="../man/external.html">man/external</A></TT> file). 
+Old names are temporarily accepted with a warning giving the new
+name to use.
+</LI>
+
+<LI>
+Added feature <TT>to_hexadecimal</TT> and feature <TT>to_hexadecimal_in</TT>
+in class CHARACTER.
+</LI>
+
+<LI>
+Feature <TT>io</TT>, <TT>std_input</TT>, <TT>std_output</TT> and <TT>std_error</TT>
+of class GENERAL are no longer frozen.
+</LI>
+
+<LI>
+Some changes in STD_FILE_READ for features <TT>read_integer</TT>, <TT>read_double</TT>
+and <TT>read_real</TT> (added comments, precondition and solved the problem
+with the trailing separator).
+</LI>
+
+<LI>
+Feature <TT>die_with_code</TT> of GENERAL now accepts any INTEGER code
+(not just predefined <TT>exit_success_code</TT> and <TT>exit_failure_code</TT>).
+</LI>
+
+<LI>
+Fixed a bug in STRING. The following expression is now true: <TT>("a%/0/b").count
+= 3</TT>
+<BR>Just try this on your favorite Eiffel compiler ;-)
+</LI>
+
+<LI>
+Many changes in basic input/output in order to be compatible with Java:
+No more class STD_FILE (the name is now free for an ELKS implementation).
+Two new classes: INPUT_STREAM and OUTPUT_STREAM.
+</LI>
+
+<LI>
+Feature <TT>unread_character</TT> of class INPUT_STREAM is now implemented
+in Eiffel.
+</LI>
+
+<LI>
+Added OUTPUT_STREAM.<TT>put_pointer</TT> to view a POINTER.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.86 - Sunday April 13<SUP>th</SUP>, 1997</B>
+<UL TYPE="circle">
+
+<LI>
+All reported bugs at this time have been fixed.
+</LI>
+
+<LI>
+Added flag <TT>-verbose</TT> to commands: <TT>compile</TT>, <TT>compile_to_c</TT>
+and <TT>clean</TT>. When this new flag is not present, commands now work
+silently unless some error (or warning) occurs.
+</LI>
+
+<LI>
+Features BOOLEAN.<TT>infix "or"</TT> and BOOLEAN.<TT>infix "and"</TT> are
+now written in pure Eiffel. As a consequence, it is very important for
+the SmallEiffel programmer to make the distinction between BOOLEAN.<TT>infix
+"and then"</TT> and BOOLEAN.<TT>infix "and"</TT> (respectively for BOOLEAN.<TT>infix
+"or else"</TT> and BOOLEAN.<TT>infix "or"</TT>). When left-hand-side argument
+produces no side effect, the semi-strict operator (BOOLEAN.<TT>infix"and
+then"/"or else"</TT>) may run faster.
+</LI>
+
+<LI>
+Fixed REAL.<TT>sin</TT> (the old one was calling <TT>sqrt</TT> :-).
+</LI>
+
+<LI>
+Fixed a bug in INTEGER.<TT>append_in</TT> (you can now print 
+<TT>Minimum_integer</TT>).
+</LI>
+
+<LI>
+Added feature <TT>in_range</TT> in class COMPARABLE.
+</LI>
+
+<LI>
+Result type of REAL.<TT>infix "^"</TT> is now DOUBLE for ELKS compatibility.
+</LI>
+
+<LI>
+Feature <TT>remove</TT> is now implemented in all subclasses of COLLECTION
+(i.e. ARRAY, FIXED_ARRAY, LINK_LIST and LINK2_LIST).
+</LI>
+
+<LI>
+Added feature <TT>add</TT> for all subclasses of COLLECTION.
+</LI>
+
+<LI>
+Conversion DOUBLE/STRING : ANSI C <TT>sscanf</TT> and <TT>sprintf</TT>
+is now used to avoid loss of precision.
+</LI>
+
+<LI>
+Added some more class invariant code generation when compiling in <TT>-invariant_check
+mode</TT>. Class invariant is now also checked before exit of a routine.
+</LI>
+
+<LI>
+Added feature <TT>file_tools</TT> in class GENERAL to ease access to class
+FILE_TOOLS.
+</LI>
+
+<LI>
+Changed printing format for basic *_REF classes. For example, instruction
+<TT>print(1);</TT> now prints <TT>1</TT>.
+</LI>
+
+<LI>
+Feature <TT>truncated_to_integer</TT> of DOUBLE is now ELKS compatible
+(added feature <TT>rounded</TT> in class DOUBLE to replace the old <TT>truncated_to_integer</TT>).
+Same changes in class REAL.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.87 - Tuesday January 7<SUP>th</SUP>, 1997</B>
+<UL TYPE="circle">
+
+<LI>
+Added a new flag <TT>-trace</TT> to ease debug (see 
+<TT><A HREF="../man/compile_to_c.html">man/compile_to_c</A></TT>
+file).
+</LI>
+
+<LI>
+More inlining at Eiffel level (<TT>-boost</TT> mode only).
+</LI>
+
+<LI>
+Class BIT_N completely revisited. It may be as fast as C.
+</LI>
+
+<LI>
+Added class C_ARRAY[E] to deal directly with C arrays at Eiffel level.
+Thus there are no more external "CSE" or c_inline_c in classes 
+STRING/ARRAY/FIXED_ARRAY (only full Eiffel). 
+Eiffel code is nice and STRING/ARRAY/FIXED_ARRAY may
+run faster.
+</LI>
+
+<LI>
+Fixed a bug in STD_FILE_READ.read_double.
+</LI>
+
+<LI>
+Ordering of C output to increase gcc inlining.
+</LI>
+
+<LI>
+According to <A HREF="../man/compile_to_c.html"><TT>man/compile_to_c</TT>)</A>
+, flag <TT>-debug_check</TT> now works (debug instructions are no longer
+generated in mode <TT>-all_check</TT>).
+</LI>
+
+<LI>
+Unused local variables removed at Eiffel level (warning added for <TT>-debug_check</TT>
+mode only).
+</LI>
+
+<LI>
+Default class ANY now inherits PLATFORM (as in ETL).
+</LI>
+
+<LI>
+Fixed a bug in floating-point constants.
+</LI>
+
+<LI>
+Added directory <TT>sys</TT> to customize default C compiler, default C
+linker and default loading path.
+</LI>
+
+<LI>
+Fixed some bugs with outside expanded types.
+</LI>
+
+<LI>
+Fixed a bug with rename/select.
+</LI>
+
+<LI>
+Redefinition of once routine is now allowed.
+</LI>
+
+<LI>
+Feature GENERAL.<TT>conforms_to</TT> is now implemented.
+</LI>
+
+<LI>
+Rule VFFD.7 is now enforced.
+</LI>
+
+<LI>
+Feature <TT>force</TT> implemented for all COLLECTION.
+</LI>
+
+<LI>
+Added conversions features CHARACTER.<TT>to_bit</TT>, INTEGER.<TT>to_bit</TT>,
+BIT_N.<TT>to_character</TT> and BIT_N.<TT>to_integer</TT>.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.88 - Wednesday October 30<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Fixed bugs dealing with inherit/rename/select.
+</LI>
+
+<LI>
+Added warning for missing colon in actual arguments list.
+</LI>
+
+<LI>
+Warning : INSTALL procedure has changed and you have to set manually the
+default loading path (see misc/INSTALL for details).
+</LI>
+
+<LI>
+Added some VMS customization.
+</LI>
+
+<LI>
+Fixed bugs when printing run-time stack.
+</LI>
+
+<LI>
+Warning added for missing colon in actual parameter list.
+</LI>
+
+<LI>
+Added <TT>flush</TT> in class STD_FILE_WRITE.
+</LI>
+
+<LI>
+No more left hand side cast in C code (because some C compilers don't like
+them).
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.89 - Sunday September 15<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Calling Eiffel from C is now implemented (see 
+<A HREF="../man/cecil.html"><TT>man/cecil</TT>)</A>
+file).
+</LI>
+
+<LI>
+Object creation uses C <TT>calloc</TT> instead <TT>malloc</TT>+<TT>memset</TT>.
+</LI>
+
+<LI>
+Object creation is inlined.
+</LI>
+
+<LI>
+ARRAY/FIXED_ARRAY <TT>put</TT> and <TT>item</TT> are now inlined (<TT>-boost</TT>
+only).
+</LI>
+
+<LI>
+Added feature <TT>capacity</TT> and <TT>resize</TT> in FIXED_ARRAY.
+</LI>
+
+<LI>
+Added some classes in std_lib: LINK2_LIST (two way linked list), COLLECTION2
+(deferred), ARRAYED_COLLECTION (deferred), LINKED_COLLECTION (deferred)
+and FIXED_ARRAY2 in std_lib.
+</LI>
+
+<LI>
+More user's routines are inlined (<TT>-boost</TT> only).
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.90 - Friday August 23<SUP>rd</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Added random number generator library (SmallEiffel/lib_rand).
+</LI>
+
+<LI>
+Added checking of assertions for external "CSE" features.
+</LI>
+
+<LI>
+Anchoring on expanded types are now allowed.
+</LI>
+
+<LI>
+Multiple level of anchoring definition allowed.
+</LI>
+
+<LI>
+Fixed a bug in STRING.<TT>from_external</TT>.
+</LI>
+
+<LI>
+Fixed a bug with mixed rename/redefine.
+</LI>
+
+<LI>
+Inheritance loop detection.
+</LI>
+
+<LI>
+Anchoring loop detection.
+</LI>
+
+<LI>
+Fixed a bug with renaming infix/prefix.
+</LI>
+
+<LI>
+Command <TT>clean</TT> also use the make suffix.
+</LI>
+
+<LI>
+Added ELKS95 <TT>sign</TT> in INTEGER/REAL/DOUBLE.
+</LI>
+
+<LI>
+Feature <TT>make</TT> is the default root feature name for <TT>compile</TT>.
+</LI>
+
+<LI>
+Optimized ARRAY.<TT>add_last</TT> and STRING.<TT>extend</TT>.
+</LI>
+
+<LI>
+Changed STRING.<TT>out</TT> (no more enclosing %" printed).
+</LI>
+
+<LI>
+Remove warning gcc messages for 64 bit machines (alpha/DEC).
+</LI>
+
+<LI>
+Added option <TT>-no_split</TT> for a better finalization (see 
+<A HREF="../man/compile_to_c.html"><TT>man/compile_to_c</TT>)</A>
+file).
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.91 - Wednesday July 24<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Incremental C compiling mode implemented (see option <TT>-c_code</TT> in
+help file <A HREF="../man/compile.html"><TT>man/compile</TT>)</A> .
+</LI>
+
+<LI>
+Added command <TT>clean</TT> in help file 
+<TT><A HREF="../man/clean.html">man/clean</A></TT>.
+</LI>
+
+<LI>
+Added class FILE_TOOLS.
+</LI>
+
+<LI>
+No more empty C struct in generated C code (to avoid problems with Microsoft
+Windows C compiler).
+</LI>
+
+<LI>
+Fixed one more bug with conformance rule VNCG.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.92 - Saturday July 20<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Fixed some more bugs with conformance rule VNCG.
+</LI>
+
+<LI>
+Added math functions in DOUBLE/REAL (<TT>sin</TT>, <TT>cos</TT>, <TT>tan</TT>,
+<TT>asin</TT>, <TT>acos</TT>, <TT>atan</TT>, ... ANSI C names).
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.93 - Thursday July 18<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Fixed some more bugs with conformance rule VNCG.
+</LI>
+
+<LI>
+Type BIT is now implemented.
+</LI>
+
+<LI>
+Added ELKS 95 STRING.<TT>left_adjust</TT> and STRING.<TT>right_adjust</TT>.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.94 - Friday July 5<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Fixed some bugs with conformance rule VNCG.
+</LI>
+
+<LI>
+Static expressions are used to detect pre-computable once routines.
+</LI>
+
+<LI>
+Added features <TT>to_external</TT> and <TT>from_external</TT> both in
+classes ARRAY and FIXED_ARRAY.
+</LI>
+
+<LI>
+Fixed a bug for inheritance of ARRAY or FIXED_ARRAY.
+</LI>
+
+<LI>
+Contents of end of class comment checked.
+</LI>
+
+<LI>
+Added documentation file for external calls (see help file 
+<TT><A HREF="../man/external.html">man/external</A></TT>
+).
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.95 - Thursday May 30<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+It is now possible to inherit ARRAY.
+</LI>
+
+<LI>
+It is now possible to inherit STRING.
+</LI>
+
+<LI>
+Flag <TT>-cc</TT> of <TT>compile_to_c</TT> has changed.
+</LI>
+
+<LI>
+The PLATFORM class is now conform to ELKS95.
+</LI>
+
+<LI>
+Added feature <TT>twin</TT> (like the one of TowerEiffel) in GENERAL.
+</LI>
+
+<LI>
+Added features <TT>to_external</TT> and <TT>from_external</TT> in class
+STRING.
+</LI>
+
+<LI>
+Fixed some bugs in once pre-computed routines.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.96 - Friday May 10<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Internal renaming to suppress some warning messages and for a smooth 
+integration with C++ software.
+</LI>
+
+<LI>
+DOS and Macintosh better portability.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.97 - Thursday May 2<SUP>nd</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Inside of compiler cleaned.
+</LI>
+
+<LI>
+Pre-Computing of some once functions.
+</LI>
+
+<LI>
+Added class COLLECTION, LINK_LIST and FIXED_ARRAY in <TT>lib/base</TT>.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.98 - Friday March 15<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+Command <TT>pretty</TT> added.
+</LI>
+
+<LI>
+Implements Eiffel <TT>expanded</TT> clause.
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 0.99 - Saturday February 17<SUP>th</SUP>, 1996</B>
+<UL TYPE="circle">
+
+<LI>
+The first version available on the net. Before being made available, the
+very first SmallEiffel had been tested since September 1995 by students
+of the University Henri Poincar&eacute;
+</LI>
+
+</UL><!------------------------------------------------------->
+
+
+
+<CENTER><IMG SRC="../man/old-se-line.gif" ALT="[Line]" ></CENTER>
+<B>Release - 1.00 - July 1995</B>
+<UL TYPE="circle">
+
+<LI>
+The very first bootstrap. SmallEiffel is born.
+</LI>
+
+</UL>
+<BR>&nbsp;
+<CENTER><IMG SRC="../man/se-line.gif" ALT="[Line]" ></CENTER>
+<CENTER><I><FONT SIZE=-1>Copyright &copy; Dominique COLNET and Suzanne
+COLLIN - <A HREF="mailto:SmartEiffel@loria.fr">&lt;SmartEiffel@loria.fr></A><BR>
+<!-- hhmts start -->
+Last modified: Mon Jun 16 11:30:54 CEST 2003
+<!-- hhmts end -->
+</FONT></I>
+<BR>
+<!-- Begin Nedstat Basic code -->
+<!-- Title: History -->
+<!-- URL: http://SmartEiffel.loria.fr -->
+<script language="JavaScript" src="http://m1.nedstatbasic.net/basic.js">
+</script>
+<script language="JavaScript">
+<!--
+  nedstatbasic("ABwgmwjZZHW6U7ZYPFgDYclNL7MQ", 0);
+// -->
+</script>
+<noscript>
+<a target="_blank" href="http://v1.nedstatbasic.net/stats?ABwgmwjZZHW6U7ZYPFgDYclNL7MQ"><img
+src="http://m1.nedstatbasic.net/n?id=ABwgmwjZZHW6U7ZYPFgDYclNL7MQ"
+border="0" nosave width="18" height="18"></a>
+</noscript>
+<!-- End Nedstat Basic code -->
+</CENTER>
+

@@ -1,0 +1,279 @@
+-- This is the READ_ME file of SmartEiffel --
+
+1. - What is SmartEiffel ? -
+SmartEiffel is an Eiffel compiler for the Eiffel language defined 
+by Bertrand Meyer. SmartEiffel is the GNU Eiffel Compiler. SmartEiffel also
+features many Eiffel tools and a very large library of classes: collections,
+dictionaries, linked lists, sets and many other data structures, portable
+input output facilities, iterators, number computation, sorting, etc. 
+Tools of SmartEiffel (i.e. compile, short, pretty, compile_to_c, finder, 
+compile_to_jvm, print_jvm_class and install) are free software distributed 
+under the terms of the GNU General Public License (GPL) as published by the
+Free Software Foundation. General interest classes of the library (i.e. all
+classes of directory "SmartEiffel/lib") are not under GPL: they are free 
+and you can do what you want with them. As an example, you can sell any 
+executable software produced with the SmartEiffel compiler if this software 
+does not use classes of directory "SmartEiffel/tools". For more information
+about commercial applications written in SmartEiffel, please read the file
+SmartEiffelFAQ included in the man directory of this distribution.
+
+You can download the latest official version of SmartEiffel at:
+
+   http://SmartEiffel.loria.fr
+
+2. - Brief Description of SmartEiffel -
+
+It is intended to be a complete, though small and very fast, free Eiffel
+compiler. It is available for a very wide range of platforms: GNU/Linux,
+GNU/Hurd, FreeBSD, BSD/OS, NetBSD, OpenBSD, HP-UX, IRIX, XENIX, Solaris,
+DOS, OS2, WINDOWS NT/95/2000, Macintosh, NeXT, Amiga, AmigaDE/Elate, BeOS,
+QNX, VMS, etc. Actually, SmartEiffel should run on any platform for which
+an ANSI C compiler exists.
+
+The current distribution includes an Eiffel to C compiler, an Eiffel to 
+Java bytecode compiler, a debogger, a documentation tool, a pretty printer 
+and various other tools. 
+
+SmartEiffel is the result of a research project of the LORIA, a joint
+computer science research center in Nancy, France. It has been developed
+by Dominique Colnet and the SmartEiffel group.
+
+This project began in 1994, and since the very first public release in 
+September 1995, SmartEiffel has been used worldwide by increasingly 
+numerous individuals and Universities. 
+
+3. - Contents of the SmartEiffel directory -
+
+3.1. - man directory - 
+Miscellaneous help files. If you don't have outside connection to our WEB
+site at http://SmartEiffel.loria.fr, you can browse the man directory using
+the index.html file of this man directory. Actually, this directory also
+contains generated simple text files (i.e. *.txt files). There is a
+SmartEiffelFAQ and documentation for all commands of SmartEiffel. Do not
+forget to read the "support.txt" file too. (If you don't have enough money
+to support the SmartEiffel project, please, just send me a postcard. It is
+really important for us to receive this kind of feedback).
+
+3.2. - bin directory -
+The place where executable files will be put by the installation process.
+
+3.3. - tutorial directory - 
+Some demonstrations and examples in Eiffel.
+
+3.4. - lib directory and sub-directories -
+The lib directory contains general interest classes which are not under GPL.
+This directory contains only non-GPL files. You are free to do what you want
+with those files, but WITHOUT ANY WARRANTY; without even the implied 
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. You can 
+modify it as you want, provided the header is kept unaltered when some 
+source file is provided. You are allowed to redistribute it and sell it, 
+alone or as a part of another product or executable.
+
+3.4.1. - lib/kernel directory -
+The kernel classes set of class includes very low level classes like
+string.e, integer.e, character.e, real.e, boolean.e and double.e for 
+example. Because class array.e is closely linked with the Eiffel definition, 
+this class as well as collection.e and native_array.e are also in this
+kernel directory.
+
+3.4.2. - lib/base directory - 
+Various kinds of collections (fixed_array.e, linked_list.e,
+two_way_linked_list.e). Hash table (dictionary.e). Sets (set.e).
+
+3.4.3. - lib/io directory - 
+Input output facilities to manipulate file as well as directories.
+
+3.4.4. - lib/iterator directory - 
+Most collection-like classes can be traversed using the iterator.e abstract
+class. All implementations of our iterator.e class are stored in this 
+directory. Also have a look in the SmartEiffel/tutorial directory for 
+examples.
+
+3.4.5. - lib/random directory - 
+Random numbers generation. See also the SmartEiffel/tutorial directory for
+examples.
+
+3.4.6. - lib/number directory - 
+The arbitrary precision NUMBER library. This library is useful for handling
+very large numbers (i.e. greater than the one of the architecture). See
+also the SmartEiffel/tutorial directory for examples.
+
+3.4.7. - lib/time directory - 
+Classes to manipulate date and time in various language (french, english,
+german, italian, etc.).
+
+3.4.8. - lib/sorting directory - 
+Classes to sort collections.
+
+3.5. - tools directory - 
+The Eiffel source code of all SmartEiffel tools (commands 'compile', 
+'compile_to_c', 'pretty', 'short', 'compile_to_jvm', 'print_jvm_class',
+`ace_check' ...). All files of this directory are closely related to
+our Eiffel compilation tools. Please note that all files of this 
+"tools" are under GPL license.
+
+3.6. - bin_c directory -
+The generated C code of command compile_to_c in -boost mode without GC
+support. Those generated C files are used during the installation process
+to bootstrap the compiler and tools.
+
+3.7. - short directory -
+This directory contains various available output format descriptions for 
+the `short' command. See also the short command documentation in the man
+directory.
+
+3.8. - sys directory -
+System information. This directory also contains hand written C code to
+customize the runtime. (See also file system.txt of the man directory for
+more information about this sys directory.)
+ 
+3.9. - misc directory -
+Miscellaneous files. Information about the history of the project is in
+file HISTORY.txt. Credits are in file THANKS.txt. Also have a look at the 
+WeNeedFeedBack.txt file too.
+
+3.10. - contrib directory - 
+Useful software not written by the SmartEiffel team.
+
+4. - Installation -
+
+4.1. - General information -
+The "install" command is the installation program for SmartEiffel The GNU
+Eiffel Compiler. This command (class install.e) is entirely written in
+Eiffel and is the recommended way to install SmartEiffel The GNU Eiffel
+Compiler.
+
+The install.e source code is in SmartEiffel/tools directory,
+the generated C code install.c is in the SmartEiffel directory.
+Other pre-compiled files are in SmartEiffel/install/germ, they are provided
+to have a first eiffel compiler. This compiler will be used to compile
+the eiffel compiler from eiffel source code. Then all other tools
+can be compiled.
+
+The very first step in installing SmartEiffel is to unpack the SmartEiffel
+directory somewhere on disk. The next step is to compile the install.c
+file, then to run it from the SmartEiffel directory. 
+The install command will do the rest of the work and will try to report
+possible problems.
+
+4.2. - Installation on GNU/Linux/gcc -
+Choose some place on the disk to unpack the se.tgz archive:
+    cd InstallationDirectory; tar xzvf se.tgz
+Update your .bashrc file (or equivalent) with the following two lines:
+    export PATH=your/installation/directory/SmartEiffel/bin:$PATH
+Then, in a freshly created shell window, just type:
+    cd your/installation/directory; cd SmartEiffel; make all
+
+4.3. - Installation on UNIX like platforms -
+If you are under some UNIX (including GNU/Linux) system, and if you 
+prefer to use a csh like shell.
+Chose some place on the disk to unpack the se.tgz archive:
+    cd InstallationDirectory; gunzip se.tgz ; tar xvf se.tar
+Update your .cshrc (or equivalent) file with the following two lines:
+    setenv PATH your/installation/directory/SmartEiffel/bin:$PATH
+Then, in a freshly created shell window, just type:
+    cd your/installation/directory; cd SmartEiffel; make interactive
+Actually, the Makefile which is in the SmartEiffel directory automatically
+compiles and launches the install command in -interactive mode. Thus, you
+will be asked for the C compiler you prefer to use.
+
+4.4. - Installation on Windows98/NT/2000 -
+If you are using a Windows system, a precompiled install.exe is 
+available too in the SmartEiffel directory, you just have to run it. 
+
+4.5. - Installation on Amiga VP on Elate -
+Thanks to Joe Kiniry <kiniry@acm.org> and Rudi Chiarito
+<rudi@amiga.com>, SmartEiffel also work on the Amiga VP on the Elate
+platform from Tao Group. If you have problems or questions about
+SmartEiffel on Amiga VP/Elate, please contact Joe Kiniry
+<kiniry@acm.org> first.
+
+IMPORTANT: The AmigaDE/Elate 1.3 release has some bugs in the vpcc
+compiler, particularly in the optimizer. This release builds properly
+with any optimization you like, but when building Eiffel programs in
+general you'll have to try different optimization flags to see what
+works for your particular situation. In general, you can compile
+programs with any optimization you like if you use -boost (that is, if
+you do *not* want to have any checks enabled). If you need to run
+with checks, or run in the debugger, compile with -O0 only. The
+default configuration (compiler.se in the pre-build Elate binary of
+SmartEiffel 1.1) ships with -O0 as the default.
+
+4.5.1. - How do I install the pre-built SmartEiffel from the
+         AmigaDev.net, KindSoftware.com, or SmartEiffel web sites? -
+
+Change directory to the root of your Amiga file-system and unpack the
+full gzipped tar file. E.g.
+   cd /; tar xzf SmartEiffel-1.1-Elate-1.3.tgz
+You can set a shell variable called "SmartEiffel" to location of
+"system.se" file in the install (default location for Elate system is
+/lang/eiffel/.serc). Thus, typically, the following line
+goes in your shell startup file (/etc/shell.rc):
+   set SmartEiffel /lang/SmartEiffel-1.1/sys/system.se
+If you are going to leave the Eiffel executables where they sit after
+the build, you should add /lang/SmartEiffel-1.1/bin to shell.path in
+your shell startup. E.g.: New contents for /etc/shell.rc:
+   # Pathnames
+   set shell.path $shell.path /lang/SmartEiffel-1.1/bin
+   # SmartEiffel
+   set SmartEiffel /lang/SmartEiffel-1.1/sys/system.se
+
+Otherwise, consider using the "cpt" tool to move all binaries in
+/lang/SmartEiffel-1.1/bin to /app/stdio or /lang/eiffel.
+
+The new naming convention for the install has been chosen so that
+multiple version of the SmartEiffel compiler can be easily supported.
+
+4.5.2. - What do you need to know to build SmartEiffel on Amiga VP on Elate? -
+
+If you are building your own release (i.e. you downloaded the source
+from the Loria web site), you install SmartEiffel on AmigaDE/Elate
+just like on all other systems; follow the install directions that
+come with the package, using AmigaDE/Elate conventions, and you are
+all set.
+
+You must have the cpt ("copy tool") tool installed to build
+SmartEiffel. The build process initially writes executables in the
+bin_c directory. They are then moved later in the build process to
+the bin directory.
+
+The cpt tool can currently be obtained from the Amiga Support Network
+<http://www.amigadev.net/>. The cpt tool was written by Jesse
+McClusky.
+
+As usual, you must have the aforementioned shell variable
+"SmartEiffel" set correctly before building. To build from scratch,
+just type "make elate".
+
+4.5.3. - What is known to work and not work on Amiga VP Elate? -
+
+All the compiler tools work correctly, including compiling to JVM
+code.
+
+The Elate garbage collector is robust but does not properly compile
+and link with all optimizer switches. As mentioned above, there are
+several known bugs in vpcc on AmigaDE/Elate. Follow the directions
+above and you should be able to get garbage collection working with
+any Eiffel program on AmigaDE/Elate.
+
+I have tested all inter-language feature call variants (Eiffel code to
+C and C++, C and C++ from Eiffel, Java to and from Eiffel) and all of
+these work great under the AmigaDE/Elate!
+Problems? Questions? Drop me a line.
+  Joseph Kiniry <kiniry@acm.org> http://www.kindsoftware.com/
+
+4.6. - Installation on other systems -
+On other systems, the very first step for installation is to C compile 
+the install.c file in order to run it.
+
+
+5. - Bug Reports -
+Thank in advance for bug reports. Don't forget to have a look first in the
+misc/NOT_YET_IMPLEMENTED.txt file. Please, try to isolate the bug as much 
+as possible. The best is to be able to create a single file, as small a
+possible (which includes the bug).
+Please report the bug in our mailing list or in our bug tracking system.
+For more information about bug reporting:
+http://SmartEiffel.loria.fr/support/bug_report.html
+
+6 Juny 2003. D.Colnet - SmartEiffel@loria.fr

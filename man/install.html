@@ -1,0 +1,400 @@
+<!-- Title = the 'install' command -->
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE>
+<CENTER><FONT COLOR="#FFFFFF" SIZE=+3><B>The <TT>install</TT> Command</B></FONT></CENTER>
+</TD>
+</TR>
+</TABLE>
+
+<BR><BR><BR>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Usage</FONT></TD>
+</TR>
+</TABLE>
+
+<P>
+The <TT>install</TT> command is the installation program for SmartEiffel
+The GNU Eiffel Compiler.
+<BR>
+This command does not support any option.
+<BR>
+This command (class <TT>install.e</TT>) is written entirely in Eiffel
+and is the one recommended for installing SmartEiffel The GNU Eiffel Compiler.
+</P><P>
+The <TT>install.e</TT> source code as well as the generated C code
+<TT>install.c</TT> are in the SmartEiffel directory.
+
+</P><P>
+The very first step in installing SmartEiffel is to unpack the 
+SmartEiffel directory somewhere on disk.
+The second step (not mandatory) is to set the <TT>SmartEiffel</TT> environment 
+variable to the full path leading to the
+<TT>SmartEiffel/sys/system.se</TT> file.
+The last step is to compile the <TT>install.c</TT> file (it is pre-compiled for Windows) and to run it 
+from the SmartEiffel directory.
+
+</P><P>
+For Unix, Elate and OpenVMS people, a <TT>Makefile</TT> is also provided, that does just that. Look at the
+comments in the <TT>Makefile</TT> itself for details.
+
+</P><P>
+The install command will do the rest of the work and will try to report 
+possible problems.
+See the examples below.
+
+</P><P> See also at <A HREF="#USEINSTALL">the end of the page</A> for more
+details on how to use the interactive installer.
+
+<BR><BR>
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Example for UNIX</FONT></TD>
+</TR>
+</TABLE>
+<P>
+As an example, we assume below that we want to install SmartEiffel in 
+the directory <TT>/foo/SmartEiffel/</TT>.
+If you are using <TT>bash</TT>, add the following two lines to your
+<TT>.bashrc</TT> file:<BR>
+<BLOCKQUOTE><P><TT>
+export SmartEiffel=/foo/SmartEiffel/sys/system.se<BR>
+export PATH=/foo/SmartEiffel/bin:$PATH<BR>
+</TT></P></BLOCKQUOTE>
+If you are using <TT>csh</TT> or <TT>tcsh</TT>, add the following two
+lines to your <TT>.cshrc</TT> file:<BR>
+<BLOCKQUOTE><P><TT>
+setenv SmartEiffel /foo/SmartEiffel/sys/system.se<BR>
+setenv PATH /foo/SmartEiffel/bin:$PATH<BR>
+</TT></P></BLOCKQUOTE>
+
+Don't forget to open a new terminal window in order to take into
+account the new settings of the <TT>SmartEiffel</TT> and 
+<TT>PATH</TT> variables.
+Then, in this new terminal window, just type the following commands:
+<BLOCKQUOTE><P><TT>
+cd /foo<BR>
+gunzip se.tgz (or bunzip2 se.tar.bz2)<BR>
+tar xvf se.tar<BR>
+cd SmartEiffel<BR>
+make<BR>
+</TT></P></BLOCKQUOTE>
+
+You now just have to wait for the compiler installation to complete.
+Actually, it may take some time because all of the tools are recompiled from
+scratch using the Eiffel source code of SmartEiffel itself.
+</P><P>
+If you want to use the menus (as explained <A HREF="#USEINSTALL">below</A>), you should consider typing <TT>make&nbsp;interactive</TT>
+instead of just <TT>make</TT>. If your system has no gcc installed,
+compile <TT>install.c</TT> yourself and run it.
+</P>
+
+<BR><BR>
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Example for Windows</FONT></TD>
+</TR>
+</TABLE>
+<P>
+The first step under Windows is to get a C compiler working on your
+computer.
+If you don't already have a C compiler installed, we recommend
+the LCC-Win32 compiler (a free C compiler system for Windows by
+Jacob Navia,
+<A HREF="http://www.cs.virginia.edu/~lcc-win32/"><TT>http://www.cs.virginia.edu/~lcc-win32/</TT></A> or 
+<A HREF="http://www.q-software-solutions.com/lccwin32/"><TT>http://www.q-software-solutions.com/lccwin32/</TT></A>).
+
+</P><P>
+At this point, it is assumed you have a C compiler installed.
+Further, we assume below that we want to install SmartEiffel in 
+the <TT>C:\SmartEiffel</TT> directory.
+
+</P><P>
+The last step is to open an explorer window, go to <TT>C:\SmartEiffel</TT>,
+and double-click INSTALL.EXE.
+
+</P><P>
+You now go along the menu options (as described <A HREF="#USEINSTALL">below</A>), then you have to wait
+for the compiler installation to complete.  Actually, it may take some time
+because all of the tools are recompiled from scratch using the Eiffel source
+code of SmartEiffel itself.
+
+</P>
+
+<BR><BR>
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Example for Other Systems</FONT></TD>
+</TR>
+</TABLE>
+<P>
+For <B>elate and OpenVMS systems</B>, you can use <TT>make&nbsp;elate</TT> or
+<TT>make&nbsp;openvms</TT>.<BR>
+On <B>other systems</B>, the very first step for installation is to compile
+the <TT>install.c</TT> file in order to run it.
+
+</P>
+
+<A NAME="USEINSTALL"></A>
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Using the installer</FONT></TD>
+</TR>
+</TABLE>
+
+<P>
+
+The installer helps you install SmartEiffel in the smartest way possible: yours :)
+
+</P><P>
+
+Except when using the plain <TT>make</TT> on Unix/Linux (which just picks
+default options and goes ahead), the installer asks help from you to install
+SmartEiffel. Of course, in many cases, the installer is <EM>Smart</EM> enough
+to choose good default values; those values are but defaults, though. It's up
+to you to tune them, or go along with them.
+
+</P><P>
+
+The install process is split in six phases, each of which is accessed
+<EM>via</EM> an entry in the main menu. The first three concern tuning the
+configuration; the rest deals with the installation itself.
+
+</P><P>
+
+Note that when a phase completes gracefully, the default option is to do the
+next one. Of course, you can skip phases, or go back to some, at your
+convenience (indeed, it's a <EM>menu</EM>) :) Also note that if the installer
+successfully computes acceptable default values, the first default value will
+be to verify the configuration (phase&nbsp;3).
+
+</P><P>
+
+Furthermore, if SmartEiffel finds a valid configuration file (either at a
+default place or because you provided it <EM>via</EM> the <TT>SmartEiffel</TT>
+environment variable), the first default value will be to <EM>start the
+installation!</EM> You've been warned...
+
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF"><FONT SIZE="+1">1: General configuration</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<P>
+This phase can be automatically computed.
+</P>
+<P>
+In that first phase, you are asked to provide:
+</P>
+<UL TYPE="circle">
+
+<LI>
+The operating system SmartEiffel is to be installed on (generally the one
+you're currently running...); </LI>
+
+<LI>
+The path to the configuration file (a good idea is to accept the default;
+otherwise, you will always have to set the <TT>SmartEiffel</TT> environment
+variable); </LI>
+
+<LI>
+Various paths pointing to parts of the SmartEiffel installation:
+  <UL>
+  <LI>the path to the binaries,</LI>
+  <LI>the path to the <TT>sys</TT> directory,</LI>
+  <LI>the path to the <TT>short</TT> directory;</LI>
+  </UL>
+</LI>
+
+<LI>
+Default loadpath files: it is a sub-menu that lets you see, add, and remove
+default loadpath files. Remember that all those loadpaths will be read at each
+compilation; keep your hand light! (more about that in the <A
+HREF="finder.html#LOADPATH">finder man page</A>) </LI>
+
+</UL>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF"><FONT SIZE="+1">2: C modes configuration</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<P>
+This phase can be automatically computed.
+</P>
+<P>
+In that menu you can add and modify C modes. Removing them are not allowed; be
+careful if you add a new one. Default C modes are provided, one for each
+assertion level.
+</P>
+
+<P>
+<A NAME="CMODES"></A>
+Each C mode lets you set the following values:
+</P>
+
+<UL TYPE="circle">
+
+<LI>
+The C compiler type. The currently supported lists are:
+<blockquote>
+  <table border="0" cols="1" width="100%">
+  <tr>
+    <td valign="top" width="15%"><b>gcc</b></td>
+    <td align="justify">The <a href="http://gcc.gnu.org/" target="_blank">G<font size="-2">NU</font> Compiler Collection</a>; specifically, the C/C++ compiler.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>lcc-win32</b></td>
+    <td align="justify">The <a href="http://www.cs.virginia.edu/~lcc-win32/" target="_blank">C compiler</a> developed by Jacob Navia.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>tcc</b></td>
+    <td align="justify">The <a href="http://fabrice.bellard.free.fr/tcc/" target="_blank">Tiny C Compiler</a>, developed by Fabrice Bellard.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>wcl386</b></td>
+    <td align="justify">The <a href="http://www.openwatcom.org/" target="_blank">Open Watcom C/C++ compiler</a>.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>bcc32</b></td>
+    <td align="justify">The <a href="http://www.borland.com/products/downloads/download_cbuilder.html#" target="_blank">Borland C/C++ compiler</a> (needs free registration).</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>cc-unix</b></td>
+    <td align="justify">The vanilla Unix C compiler. There are as many flavours of <code>cc</code> as of Unix... This one is generic; if some specific support is needed, please file an enhancement request in <a href="../support/bug_report.html">SmartZilla</a>.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>cc-openvms</b></td>
+    <td align="justify">The Open VMS C compiler.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>vpcc</b></td>
+    <td align="justify">The Elate C compiler.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>cl</b></td>
+    <td align="justify">The Microsoft C/C++ compiler.</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>sas_c</b></td>
+    <td align="justify">?</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>dice</b></td>
+    <td align="justify">?</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>vbcc</b></td>
+    <td align="justify">?</td>
+  </tr>
+  <tr>
+    <td valign="top" width="15%"><b>ccc</b></td>
+    <td align="justify">?</td>
+  </tr>
+  </table>
+</blockquote>
+</LI>
+
+<LI>
+The C compiler path (e.g. for gcc, you can use <TT>/usr/bin/gcc-2.7.2</TT>)
+</LI>
+
+<LI>
+The C compiler options (e.g. for gcc, <TT>-ggdb3&nbsp;-fomit-frame-pointers</TT>)
+</LI>
+
+<LI>
+The C linker path (e.g. for lcc, <TT>lcclnk</TT>)
+</LI>
+
+<LI>
+The C linker options (e.g. <TT>-lmylib</TT>)
+</LI>
+
+<LI>
+The SmartEiffel extra options for this mode. Only a subset of the command line
+options are recognised. Those are:
+  <UL>
+    <LI><I>-no_gc</I></LI>
+    <LI><I>-no_strip</I></LI>
+    <LI><I>-no_split</I></LI>
+    <LI><I>-sedb</I></LI>
+    <LI><I>-wedit</I></LI>
+    <LI><I>-compact</I></LI>
+  </UL>
+</LI>
+
+</UL>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF"><FONT SIZE="+1">3: Verification</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<P>
+This phase is skipped by default if the previous two were automatically computed.
+</P>
+<P>
+In that phase, all the options you chose are displayed again, as a verification.
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF"><FONT SIZE="+1">4: Writing the configuration file</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<P>
+In that phase, the configuration file is written to the place you chose in phase one.
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF"><FONT SIZE="+1">5: Installing SmartEiffel itself</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<P>
+This is the most important phase! Indeed, now the installer can compile the SmartEiffel tools.
+</P>
+
+<P>
+Just before starting the compilation, you are asked with which C mode the
+tools should be compiled. It is not always useful, except if you're in a hurry
+(not a good idea, that) :)
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF"><FONT SIZE="+1">6: Exit!</FONT></FONT></TD>
+</TR>
+</TABLE>
+
+<P>
+If you successfully installed SmartEiffel, then you can exit the installer and
+enjoy your new Eiffel compiler.
+</P>
+
+<!-- BL START -->
+<!-- BL1 START -->
+<CENTER>
+<IMG SRC="se-line.gif" ALT="[Line]">
+<BR>
+<FONT SIZE="-1"><I>
+Copyright &copy; Dominique COLNET and Suzanne COLLIN -
+<A HREF="mailto:SmartEiffel@loria.fr">&lt;SmartEiffel@loria.fr&gt;</A>
+<BR>
+<!-- hhmts start -->
+Last modified: Tue Feb 11 12:16:03 CET 2003
+<!-- hhmts end -->
+<BR>
+
+
+</I></FONT><BR></CENTER>

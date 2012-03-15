@@ -1,0 +1,27 @@
+Begin3
+Title:          SmartEiffel The GNU Eiffel Compiler Tools and Libraries
+Version:        1.1
+Entered-date:   16JUN2003
+Description:    Eiffel toolbox including an Eiffel to C compiler, an Eiffel 
+		to Java	bytecode compiler, an Eiffel pretty printer, a Java
+                bytecode viewer, commands short, finder, class_check,
+		ace_check and a	large set of Eiffel classes.
+Keywords:       SmartEiffel The GNU Eiffel Compiler Tools and Libraries 
+Author:         colnet@loria.fr (Dominique COLNET)
+Maintained-by:  SmartEiffel@loria.fr (The SmartEiffel Team)
+Primary-site:	ftp://ftp.loria.fr/pub/loria/SmartEiffel
+		1580845 se.tgz
+		1105    se.lsm
+		12870   READ_ME
+Alternate-site: metalab.unc.edu /pub/Linux/devel/lang/eiffel
+		1580845 se-1.1.tar.gz
+		1089     se-1.1.lsm
+Original-site:  ftp.loria.fr /pub/loria/SmartEiffel
+		1580845 se.tgz
+		1105    se.lsm
+		12870   READ_ME
+Platforms:      SmartEiffel is already portable on UNIX, Linux, GNU Hurd,
+                BSD, HP-UX, IRIX, XENIX, Solaris, DOS, OS2, WINDOWS NT/95,
+		QNX, Macintosh, NeXT, Amiga, OpenVMS and BeOS.
+Copying-policy: GPL
+End

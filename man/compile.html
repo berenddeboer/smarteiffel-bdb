@@ -1,0 +1,181 @@
+<!-- Title = the 'compile' command -->
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE>
+<CENTER><FONT COLOR="#FFFFFF" SIZE=+3><B>The <TT>compile</TT> Command</B></FONT></CENTER>
+</TD>
+</TR>
+</TABLE>
+
+<BR><BR><BR>
+
+The <TT>compile</TT> command is the SmartEiffel compiler.  There are
+two invocation modes: <I>traditional</I> and <I>ACE</I>.  In
+traditional mode, a 
+variety of compiler options can be specified on the command line.  In
+ACE mode, these options are not permitted; it is presumed that the
+required compiler options are listed in the ACE file.
+<P><TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Usage</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<FONT COLOR="#FF00FF"><B>Traditional mode</B></FONT>
+<BR>
+<TT>compile [general_options] 
+[<A HREF="compile_to_c.html">compile_to_c_options</A>]
+<BR>
+&nbsp;&nbsp;&lt;RootClass&gt; 
+[&lt;RootProcedure&gt;]</TT>
+<P>
+<P>
+<FONT COLOR="#FF00FF"><B>ACE mode</B></FONT>
+<BR>
+<TT>compile [general_options]
+ &lt;ACEfile.ace&gt;</TT>
+<P>
+In ACE mode, the name of the ACE file must end with the <TT>.ace</TT>
+suffix.  For examples of how to use ACE files, have a look in the
+<TT>SmartEiffel/tutorial/ace</TT> directory.
+<P>
+Source code is in Eiffel and target code is in ANSI C.
+</P><P>
+The <TT>compile</TT> command executes in two major steps:
+<TABLE BORDER="0"><TR><TD VALIGN="top">
+<FONT COLOR="#FF00FF"><B>Step&nbsp;1&nbsp;-</B></FONT></TD><TD>the
+<TT>compile_to_c</TT> command is called to produce various
+           C files (*.h and *.c). A script file is also produced
+           by <TT>compile_to_c</TT>. The name of the script file
+           is also printed by <TT>compile_to_c</TT> (*.make on
+           Unix or *.BAT on DOS, for example). 
+</TD></TR><TR><TD VALIGN="top">
+<FONT COLOR="#FF00FF"><B>Step&nbsp;2&nbsp;-</B></FONT></TD><TD>The script file produced during
+           step 1 is run, launching the C compilation(s) and linking of 
+           all the C files produced during the previous step.
+</TD></TR>
+</TABLE>
+</P><P>
+Thus, the <TT>compile</TT> command is a simple launcher used to
+call the <A HREF="compile_to_c.html"><TT>compile_to_c</TT></A> command, 
+the C compiler, and the linker in sequence.
+</P><P>
+Like the <TT>compile_to_c</TT> command, the <TT>compile</TT> command must have at least 
+one argument to indicate the starting execution point of the system.
+Thus execution will start in <I>&lt;RootProcedure&gt;</I> of <I>&lt;RootClass&gt;</I>.
+The default <I>&lt;RootProcedure&gt;</I> is <I>make</I>.
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">General Options</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<DL COMPACT>
+<DT>
+<I>-clean</I>:<BR>
+<DD> By default, the generated C files and object files are retained from one invocation 
+   of the <TT>compile</TT> command
+   to another. This enables incremental C compilation, since only the 
+   C files which have been modified since the last invocation of 
+   the <TT>compile</TT> command will be recompiled. Because the Eiffel 
+   to C compilation performed by SmartEiffel is generally much faster
+   than the C compilation itself, incremental C compilation saves time.
+   However, there are situations where you want to get rid of all 
+   the previously generated C  and object files, to start afresh.
+<BR>
+   The <I>-clean</I> option removes the C files, object files and some other
+   previously generated files, by 
+   invoking the <TT>clean</TT> command at the end of the compilation.
+<BR><BR>
+
+<DT>
+<I>-help</I>:<BR>
+<DD>
+Display a brief summary of the command-line syntax and a complete
+list of compiler options.
+<BR><BR>
+
+<DT>
+<I>-verbose</I>:<BR>
+<DD>
+Displays (a lot of) useful information during the compilation (full path of 
+   loaded files, type inference score, generated files, etc.).
+<BR><BR>
+
+<DT>
+<I>-version</I>:<BR>
+<DD>
+Display the version number of the SmartEiffel release you're using.
+</DL>
+</P>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Examples of Traditional Mode</FONT></TD>
+</TR>
+</TABLE>
+
+<P>
+<FONT COLOR="#FF00FF"><B>Example 1</B></FONT>
+<BR>
+   When SmartEiffel is correctly installed, you can type 
+   the following command to test the "hello world" program:
+<DL COMPACT><DT><DD><TT>
+      compile hello_world
+</TT></DL>
+
+   The compiler should tell you what's wrong or should compile
+   Eiffel source files telling you the full path used to load
+   the Eiffel source code.
+<BR>
+   Under UNIX, the executable file is named "a.out" by default.
+</P><P>
+
+<FONT COLOR="#FF00FF"><B>Example 2</B></FONT>
+<BR>
+   Type the following command to finalise the hello_world simple 
+   program:
+<DL COMPACT><DT><DD><TT>
+      compile -boost -no_split -O3 hello_world
+</TT></DL>
+
+   Note that the <I>-O3</I> option is passed to the C compiler (see the manual
+   of your C compiler). The <I>-boost</I> and <I>-no_split</I> options
+   are passed to the
+<A HREF="compile_to_c.html"><code>compile_to_c</code></A> command. 
+   This is usually the best way to finalise your application.
+<BR><BR>
+   Only one C file is produced (option <I>-no_split</I>).
+</P><P>
+<FONT COLOR="#FF00FF"><B>Example 3</B></FONT>
+<BR>
+   To compile a big project (class PROJECT) with C file splitting and
+   require assertions checked:
+<DL COMPACT><DT><DD><TT>
+      compile -require_check project
+</TT></DL>
+   The very first time, all C files are produced and compiled. 
+   Then, if you type the same command after some changes in the 
+   Eiffel source files, all C files are also produced from scratch.
+   If there are only minor changes in the generated 
+   C files, only modified ones are passed to the C compiler
+   (previous object files have been saved). 
+<BR>
+</P>
+
+<!-- BL START -->
+<!-- BL1 START -->
+<CENTER>
+<IMG SRC="se-line.gif" ALT="[Line]">
+<BR>
+<FONT SIZE="-1"><I>
+Copyright &copy; Dominique COLNET and Suzanne COLLIN -
+<A HREF="mailto:SmartEiffel@loria.fr">&lt;SmartEiffel@loria.fr&gt;</A>
+<BR>
+<!-- hhmts start -->
+Last modified: Tue Feb 11 12:12:27 CET 2003
+<!-- hhmts end -->
+<BR>
+</I></FONT><BR></CENTER>

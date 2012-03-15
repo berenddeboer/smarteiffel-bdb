@@ -1,0 +1,47 @@
+c_compiler_type: lcc-win32
+cpp_compiler_type: none
+
+[boost]
+c_compiler_path: lcc
+c_compiler_options: -O
+c_linker_path: lcclnk
+c_linker_options:
+
+[no_check]
+c_compiler_path: lcc
+c_compiler_options: -O
+c_linker_path: lcclnk
+c_linker_options:
+
+[require_check]
+c_compiler_path: lcc
+c_linker_path: lcclnk
+
+[ensure_check]
+c_compiler_path: lcc
+c_linker_path: lcclnk
+
+[invariant_check]
+c_compiler_path: lcc
+c_linker_path: lcclnk
+
+[loop_check]
+c_compiler_path: lcc
+c_linker_path: lcclnk
+
+[all_check]
+c_compiler_path: lcc
+c_linker_path: lcclnk
+
+[debug_check]
+c_compiler_path: lcc
+c_compiler_options: -g2
+c_linker_path: lcclnk
+smarteiffel_options: -no_strip
+
+[release]
+c_compiler_path: lcc
+c_compiler_options: -O
+c_linker_path: lcclnk
+c_linker_options:
+smarteiffel_options: -no_split -compact

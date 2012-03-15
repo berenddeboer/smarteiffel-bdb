@@ -1,0 +1,21 @@
+c_compiler_type: OpenVMS_CC
+
+[boost]
+
+[no_check]
+
+[require_check]
+
+[ensure_check]
+
+[invariant_check]
+
+[loop_check]
+
+[all_check]
+
+[debug_check]
+smarteiffel_options: -no_strip
+
+[release]
+smarteiffel_options: -no_split -compact

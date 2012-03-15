@@ -1,0 +1,31 @@
+#!/app/stdio/shell
+
+# Run all the 'collection*' benchmarks
+
+set -- oldpath $sys.cwd
+find -name {*_bench.e} | while {read file} {
+	set -- pathname ${!lit ${file} !sel {} {*/} {*}}
+	set -- filename ${!lit ${file} !sel {?'/} {*} {}}
+	set -- base ${!cmd {basename $filename .e} !s lr ${!ch 10}} 
+	cd ${pathname}
+	compile -clean ${base} make -no_split -boost -O3
+	echo ${pathname}${base}.e: 
+	run -t ./${base}
+        rm -f ${base}.00
+        cd $oldpath
+} 
+
+# Run all the 'gc' benchmarks
+
+find gc -name {*bench.e} | while {read file} {
+	set -- pathname ${!lit ${file} !sel {} {*/} {*}}
+	set -- filename ${!lit ${file} !sel {?'/} {*} {}}
+	set -- base ${!cmd {basename $filename .e} !s lr ${!ch 10}} 
+	cd ${pathname}
+	compile -clean ${base} make -no_split -boost -O3
+	echo ${pathname}${base}.e: 
+	run -t ./${base}
+        rm -f ${base}.00
+        cd $oldpath
+} 
+

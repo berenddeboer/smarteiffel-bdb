@@ -1,0 +1,40 @@
+c_compiler_type: gcc
+cpp_compiler_type: g++
+
+[boost]
+c_compiler_options: -pipe -O2
+cpp_compiler_options: -pipe -O2
+
+[no_check]
+c_compiler_options: -pipe -O1
+cpp_compiler_options: -pipe -O1
+
+[require_check]
+c_compiler_options: -pipe
+cpp_compiler_options: -pipe
+
+[ensure_check]
+c_compiler_options: -pipe
+cpp_compiler_options: -pipe
+
+[invariant_check]
+c_compiler_options: -pipe
+cpp_compiler_options: -pipe
+
+[loop_check]
+c_compiler_options: -pipe
+cpp_compiler_options: -pipe
+
+[all_check]
+c_compiler_options: -pipe
+cpp_compiler_options: -pipe
+
+[debug_check]
+c_compiler_options: -pipe -g
+cpp_compiler_options: -pipe -g
+smarteiffel_options: -no_strip
+
+[release]
+c_compiler_options: -pipe -O3 -fomit-frame-pointer
+cpp_compiler_options: -pipe -O3 -fomit-frame-pointer
+smarteiffel_options: -no_split -compact

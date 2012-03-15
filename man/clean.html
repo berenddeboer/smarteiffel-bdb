@@ -1,0 +1,108 @@
+<!-- Title = calling Eiffel from C -->
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE>
+<CENTER><FONT COLOR="#FFFFFF" SIZE=+3><B>The <TT>clean</TT> Command</B></FONT></CENTER>
+</TD>
+</TR>
+</TABLE>
+
+<BR><BR><BR>
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Usage</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<TT>clean [options] &lt;Root-class&gt; ...</TT>
+</P><P>
+Command <TT>clean</TT> removes all intermediate files produced by
+previous <TT>compile</TT> or <TT>compile_to_c</TT>.
+<BR>
+Names (<I>&lt;Root-class&gt;</I> ...) can have the Eiffel suffix, no suffix
+at all, or the suffix used for SmartEiffel command files on 
+your system (.make on UNIX or .BAT on DOS for example).
+</P>
+
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Options</FONT></TD>
+</TR>
+</TABLE>
+<P>
+
+<DL COMPACT>
+
+
+<DT>
+<I>-help</I>:<BR>
+<DD>
+Display a brief summary of the command-line syntax and a complete
+list of <TT>finder</TT> options.
+<BR><BR>
+
+<DT>
+<I>-verbose</I>:<BR>
+<DD>
+ Print system information during the compilation (full path of 
+   loaded files, type inference score, removed files, etc.).
+<BR><BR>
+
+<DT>
+<I>-version</I>:<BR>
+<DD>
+Show the number of the version of SmartEiffel you're using.
+<BR><BR>
+
+</DL>
+
+
+<TABLE BORDER=0 COLS=1 WIDTH="100%" BGCOLOR="#3366FF" NOSAVE >
+<TR NOSAVE>
+<TD NOSAVE><FONT COLOR="#FFFFFF" SIZE="+2">Examples</FONT></TD>
+</TR>
+</TABLE>
+<P>
+<FONT COLOR="#FF00FF"><B>Example 1</B></FONT>
+<BR>
+   To remove intermediate files produced for the HELLO_WORLD 
+   program. 
+<TABLE BORDER="0">
+<TR><TD>
+   Type:</TD><TD><TT>clean hello_world </TT>
+</TD></TR><TR><TD>
+   You can also type:</TD><TD><TT>clean hello_world.e</TT>
+</TD></TR><TR><TD>
+   or you can also type:</TD><TD><TT>clean HELLO_WORLD</TT>
+</TD></TR><TR><TD>
+   on Unix, you can type:</TD><TD><TT>clean hello_world.make</TT>
+</TD></TR><TR><TD>
+   on DOS, you can do:</TD><TD><TT>clean hello_world.BAT</TT>
+</TD></TR>
+</TABLE>
+</P><P>
+<FONT COLOR="#FF00FF"><B>Example 2</B></FONT>
+<BR>
+   Under Unix or DOS, remove all intermediates files in the
+   current directory : <TT>clean *.e</TT>
+<BR>
+   If the root class file is not in the current directory,
+   you can type (for Unix) : <TT>clean *.make </TT>
+</P><P>
+Option <I>-verbose</I> can be used to see which files are removed.
+</P>
+
+<CENTER>
+<IMG SRC="se-line.gif" ALT="[Line]">
+<BR>
+<FONT SIZE="-1"><I>
+Copyright &copy; Dominique COLNET and Suzanne COLLIN -
+<A HREF="mailto:SmartEiffel@loria.fr">&lt;SmartEiffel@loria.fr&gt;</A>
+<BR>
+<!-- hhmts start -->
+Last modified: Tue Feb 11 12:11:33 CET 2003
+<!-- hhmts end -->
+<BR>
+</I></FONT><BR></CENTER>

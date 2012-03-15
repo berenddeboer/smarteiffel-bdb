@@ -1,0 +1,224 @@
+   The install Command
+
+   Usage
+
+   The  install  command  is the installation program for SmartEiffel The
+   GNU Eiffel Compiler.
+   This command does not support any option.
+   This  command  (class  install.e) is written entirely in Eiffel and is
+   the   one  recommended  for  installing  SmartEiffel  The  GNU  Eiffel
+   Compiler.
+
+   The  install.e  source  code as well as the generated C code install.c
+   are in the SmartEiffel directory.
+
+   The  very  first  step  in  installing  SmartEiffel  is  to unpack the
+   SmartEiffel   directory  somewhere  on  disk.  The  second  step  (not
+   mandatory)  is to set the SmartEiffel environment variable to the full
+   path  leading  to the SmartEiffel/sys/system.se file. The last step is
+   to  compile the install.c file (it is pre-compiled for Windows) and to
+   run it from the SmartEiffel directory.
+
+   For  Unix, Elate and OpenVMS people, a Makefile is also provided, that
+   does  just  that.  Look  at  the  comments  in the Makefile itself for
+   details.
+
+   The  install  command  will  do  the  rest of the work and will try to
+   report possible problems. See the examples below.
+
+   See  also at [1]the end of the page for more details on how to use the
+   interactive installer.
+
+   Example for UNIX
+
+   As  an example, we assume below that we want to install SmartEiffel in
+   the  directory  /foo/SmartEiffel/.  If  you  are  using  bash, add the
+   following two lines to your .bashrc file:
+
+     export SmartEiffel=/foo/SmartEiffel/sys/system.se
+     export PATH=/foo/SmartEiffel/bin:$PATH
+
+   If  you  are  using  csh  or tcsh, add the following two lines to your
+   .cshrc file:
+
+     setenv SmartEiffel /foo/SmartEiffel/sys/system.se
+     setenv PATH /foo/SmartEiffel/bin:$PATH
+
+   Don't  forget  to  open  a  new  terminal window in order to take into
+   account  the new settings of the SmartEiffel and PATH variables. Then,
+   in this new terminal window, just type the following commands:
+
+     cd /foo
+     gunzip se.tgz (or bunzip2 se.tar.bz2)
+     tar xvf se.tar
+     cd SmartEiffel
+     make
+
+   You  now  just have to wait for the compiler installation to complete.
+   Actually,  it  may  take  some  time  because  all  of  the  tools are
+   recompiled  from  scratch  using the Eiffel source code of SmartEiffel
+   itself.
+
+   If  you  want  to  use  the  menus (as explained [2]below), you should
+   consider  typing make interactive instead of just make. If your system
+   has no gcc installed, compile install.c yourself and run it.
+
+   Example for Windows
+
+   The  first  step  under Windows is to get a C compiler working on your
+   computer.  If  you  don't  already  have  a  C  compiler installed, we
+   recommend the LCC-Win32 compiler (a free C compiler system for Windows
+   by    Jacob    Navia,   [3]http://www.cs.virginia.edu/~lcc-win32/   or
+   [4]http://www.q-software-solutions.com/lccwin32/).
+
+   At this point, it is assumed you have a C compiler installed. Further,
+   we   assume   below  that  we  want  to  install  SmartEiffel  in  the
+   C:\SmartEiffel directory.
+
+   The last step is to open an explorer window, go to C:\SmartEiffel, and
+   double-click INSTALL.EXE.
+
+   You  now  go  along the menu options (as described [5]below), then you
+   have  to  wait for the compiler installation to complete. Actually, it
+   may  take  some  time  because  all  of  the tools are recompiled from
+   scratch using the Eiffel source code of SmartEiffel itself.
+
+   Example for Other Systems
+
+   For elate and OpenVMS systems, you can use make elate or make openvms.
+   On  other  systems, the very first step for installation is to compile
+   the install.c file in order to run it.
+
+   Using the installer
+
+   The  installer  helps  you  install  SmartEiffel  in  the smartest way
+   possible: yours :)
+
+   Except  when  using  the  plain  make  on Unix/Linux (which just picks
+   default  options  and goes ahead), the installer asks help from you to
+   install  SmartEiffel. Of course, in many cases, the installer is Smart
+   enough  to  choose good default values; those values are but defaults,
+   though. It's up to you to tune them, or go along with them.
+
+   The  install process is split in six phases, each of which is accessed
+   via  an  entry  in  the  main menu. The first three concern tuning the
+   configuration; the rest deals with the installation itself.
+
+   Note  that when a phase completes gracefully, the default option is to
+   do  the  next one. Of course, you can skip phases, or go back to some,
+   at  your  convenience  (indeed,  it's a menu) :) Also note that if the
+   installer  successfully  computes acceptable default values, the first
+   default value will be to verify the configuration (phase 3).
+
+   Furthermore,  if  SmartEiffel finds a valid configuration file (either
+   at  a  default  place  or  because you provided it via the SmartEiffel
+   environment  variable),  the  first default value will be to start the
+   installation! You've been warned...
+
+   1: General configuration
+
+   This phase can be automatically computed.
+
+   In that first phase, you are asked to provide:
+     * The  operating system SmartEiffel is to be installed on (generally
+       the one you're currently running...);
+     * The  path  to the configuration file (a good idea is to accept the
+       default;  otherwise,  you  will always have to set the SmartEiffel
+       environment variable);
+     * Various paths pointing to parts of the SmartEiffel installation:
+          + the path to the binaries,
+          + the path to the sys directory,
+          + the path to the short directory;
+     * Default  loadpath  files: it is a sub-menu that lets you see, add,
+       and  remove  default  loadpath  files.  Remember  that  all  those
+       loadpaths  will be read at each compilation; keep your hand light!
+       (more about that in the [6]finder man page)
+
+   2: C modes configuration
+
+   This phase can be automatically computed.
+
+   In  that  menu  you  can add and modify C modes. Removing them are not
+   allowed;  be  careful  if  you  add  a  new  one.  Default C modes are
+   provided, one for each assertion level.
+
+   Each C mode lets you set the following values:
+     * The C compiler type. The currently supported lists are:
+
+   gcc The [7]GNU Compiler Collection; specifically, the C/C++ compiler.
+   lcc-win32 The [8]C compiler developed by Jacob Navia.
+   tcc The [9]Tiny C Compiler, developed by Fabrice Bellard.
+   wcl386 The [10]Open Watcom C/C++ compiler.
+   bcc32 The [11]Borland C/C++ compiler (needs free registration).
+   cc-unix The vanilla Unix C compiler. There are as many flavours of cc
+   as of Unix... This one is generic; if some specific support is needed,
+   please file an enhancement request in [12]SmartZilla.
+   cc-openvms The Open VMS C compiler.
+   vpcc The Elate C compiler.
+   cl The Microsoft C/C++ compiler.
+   sas_c ?
+   dice ?
+   vbcc ?
+   ccc ?
+
+     * The C compiler path (e.g. for gcc, you can use /usr/bin/gcc-2.7.2)
+     * The C compiler options (e.g. for gcc,
+       -ggdb3 -fomit-frame-pointers)
+     * The C linker path (e.g. for lcc, lcclnk)
+     * The C linker options (e.g. -lmylib)
+     * The  SmartEiffel extra options for this mode. Only a subset of the
+       command line options are recognised. Those are:
+          + -no_gc
+          + -no_strip
+          + -no_split
+          + -sedb
+          + -wedit
+          + -compact
+
+   3: Verification
+
+   This   phase   is   skipped  by  default  if  the  previous  two  were
+   automatically computed.
+
+   In  that  phase,  all  the options you chose are displayed again, as a
+   verification.
+
+   4: Writing the configuration file
+
+   In  that  phase,  the  configuration  file is written to the place you
+   chose in phase one.
+
+   5: Installing SmartEiffel itself
+
+   This  is  the  most  important  phase!  Indeed,  now the installer can
+   compile the SmartEiffel tools.
+
+   Just  before starting the compilation, you are asked with which C mode
+   the  tools  should  be  compiled.  It  is not always useful, except if
+   you're in a hurry (not a good idea, that) :)
+
+   6: Exit!
+
+   If  you  successfully  installed  SmartEiffel,  then  you can exit the
+   installer and enjoy your new Eiffel compiler.
+
+                                   [Line]
+             Copyright © Dominique COLNET and Suzanne COLLIN -
+                         [13]<SmartEiffel@loria.fr>
+                Last modified: Tue Feb 11 12:16:03 CET 2003
+
+References
+
+   1. file://localhost/users/miro/colnet/SmartEiffel/man/install.html#USEINSTALL
+   2. file://localhost/users/miro/colnet/SmartEiffel/man/install.html#USEINSTALL
+   3. http://www.cs.virginia.edu/~lcc-win32/
+   4. http://www.q-software-solutions.com/lccwin32/
+   5. file://localhost/users/miro/colnet/SmartEiffel/man/install.html#USEINSTALL
+   6. file://localhost/users/miro/colnet/SmartEiffel/man/finder.html#LOADPATH
+   7. http://gcc.gnu.org/
+   8. http://www.cs.virginia.edu/~lcc-win32/
+   9. http://fabrice.bellard.free.fr/tcc/
+  10. http://www.openwatcom.org/
+  11. http://www.borland.com/products/downloads/download_cbuilder.html
+  12. file://localhost/users/miro/colnet/SmartEiffel/support/bug_report.html
+  13. mailto:SmartEiffel@loria.fr
