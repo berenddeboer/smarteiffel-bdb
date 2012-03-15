@@ -224,20 +224,6 @@ feature {NONE}
 		  if target_type.is_a(argument_type) then
 		     Result :=
 			assignment_handler.implicit_cast(t, argument_type)
-			if Result /= t and then
-			   not balancing_rule_features.has (feature_name.to_string) then
-			   -- Target is being implicitly casted
-			   -- And the balancing rule does not apply to this feature
-			   error_handler.add_position (t.start_position)
-			   error_handler.append (once "This target, of type ")
-			   error_handler.append (target_type_rtm)
-			   error_handler.append (once " is being implicitely converted to type ")
-			   error_handler.append (argument_type_rtm)
-			   error_handler.append (once ". Implicit target conversions will not %
-			                              %be done by SE2, so this code will change %
-			                              %its semantic.")
-			   error_handler.print_as_warning
-			end
 		  else
 		     error_handler.cancel
 		  end

@@ -119,16 +119,7 @@ feature {BASE_CLASS}
       do
 	 -- Checking require/require else:
 	 c := require_collector.count
-	 if c = 1 then
-	    er1 :=  require_collector.first
-	    if er1.is_require_else then
-	       error_handler.append(once
-	          "Keyword %"require else%" replaced with %"require%". %
-		  %(There is no inherited require assertion here.)")
-	       error_handler.add_position(er1.start_position)
-	       error_handler.print_as_warning
-	    end
-	 elseif c > 1 then
+	 if c > 1 then
 	    from
 	       c := require_collector.upper
 	       er2 := require_collector.item(c)
@@ -221,16 +212,7 @@ feature {BASE_CLASS}
       do
 	 -- Checking ensure/ensure then:
 	 c := ensure_collector.count
-	 if c = 1 then
-	    ee1 :=  ensure_collector.first
-	    if ee1.is_ensure_then then
-	       error_handler.append(once
-	          "Keyword %"ensure then%" replaced with %"ensure%". %
-		  %(There is no inherited ensure assertion here.)")
-	       error_handler.add_position(ee1.start_position)
-	       error_handler.print_as_warning
-	    end
-	 elseif c > 1 then
+	 if c > 1 then
 	    from
 	       c := ensure_collector.upper
 	       ee2 := ensure_collector.item(c)

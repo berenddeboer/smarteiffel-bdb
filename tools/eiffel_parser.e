@@ -174,17 +174,11 @@ feature {ACE, COMMAND_LINE_TOOLS}
       do
          case_insensitive := True
          string_aliaser.case_insensitive_notify
-         error_handler.append (once "The -case_insensitive flag is deprecated %
-         %and will be removed in version 2.2")
-         error_handler.print_as_warning
       end
 
    set_no_style_warning is
       do
          no_style_warning := True
-         error_handler.append (once "Style warnings disabled. Note that some of %
-         %these will be fatal errors in version 2.2")
-         error_handler.print_as_warning
       end
 
 feature {CECIL_FILE}

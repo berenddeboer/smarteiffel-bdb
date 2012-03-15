@@ -205,15 +205,6 @@ feature {NONE}
 	       end
 	    end
 	 end
-         if Result and bad_case and keyword /= fz_reference then
-            error_handler.add_position (pos (start_line, start_column))
-            error_handler.append (
-               once "Wrong case for keyword, this will not work in SE 2.2. %
-               %You should capitalize: '")
-            error_handler.append(keyword)
-            error_handler.append("'")
-            error_handler.print_as_warning
-         end
       end
 
    skip1(char: CHARACTER): BOOLEAN is

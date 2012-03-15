@@ -64,35 +64,8 @@ feature
    rescue_compound: COMPOUND is do end
 
    afd_check is
-      local
-         i: INTEGER
-         t: E_TYPE
-         nc: NATIVE_C; ncpp: NATIVE_C_PLUS_PLUS; nj: NATIVE_JAVA
       do
          routine_afd_check
-         -- Check for non-portable argument types
-         nc ?= base_feature.native
-         ncpp ?= base_feature.native
-         nj ?= base_feature.native
-         if arguments /= Void and (nc /= Void or ncpp /= Void or nj /= Void) then
-            from i := arguments.count until i < 1 loop
-               t := arguments.type (i)
-               if t.is_real and then t.written_mark = as_real then
-                  error_handler.add_position (t.start_position)
-                  error_handler.append ("You should not use REAL as argument for external %
-                                        %routines. The size of REAL will change for SE 2.x to %
-                                        %64-bits, producing linking problems. Use REAL_32 instead.")
-                  error_handler.print_as_warning
-               elseif t.is_double and then t.written_mark = as_double then
-                  error_handler.add_position (t.start_position)
-                  error_handler.append ("You should not use DOUBLE as argument for external %
-                                        %routines. DOUBLE will be deprecated in SE 2.x for %
-                                        %REAL. Use REAL_64 instead.")
-                  error_handler.print_as_warning
-               end
-               i := i - 1
-            end
-         end
       end
 
    simplify_2 is

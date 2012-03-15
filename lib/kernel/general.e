@@ -303,7 +303,6 @@ feature -- Basic operations:
 
    frozen do_nothing is
          -- Execute a null action.
-      obsolete "This feature will not be exported in SE2. Avoid qualified calls."
       do
       end
 
